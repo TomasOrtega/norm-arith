@@ -24,9 +24,10 @@ These are candidate benchmarks, not claims that the starter already replaces the
 For each example, record the mathlib revision, theorem, original proof, replacement,
 and elapsed time or heartbeats. Compile both versions in the same checkout.
 
-Compare with a short manual proof and current `bound`, `grind`, and existing lemmas.
-Show a benefit from discovering decompositions, beyond renaming existing automation.
-Retain the examples that expose that benefit as regression tests.
+Compare existing mathlib proofs directly with the `norm_arith` replacements.
+Follow [EVALUATION.md](EVALUATION.md) for candidate selection, proof-line counting,
+and affected-file compilation measurements. Retain useful replacements as
+regression tests.
 
 ## 3. Discuss scope, then prepare a small PR
 

@@ -1,0 +1,1346 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "setup": [
+    {
+      "label": "tactic-rebuild",
+      "seconds": 5.184549958998105,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/tactic-rebuild"
+    },
+    {
+      "label": "module-Mathlib.Analysis.Convex.Uniform",
+      "seconds": 1.1642267080023885,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/module-Mathlib.Analysis.Convex.Uniform"
+    },
+    {
+      "label": "module-Mathlib.Analysis.Calculus.FDeriv.Measurable",
+      "seconds": 1.3825501659885049,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/module-Mathlib.Analysis.Calculus.FDeriv.Measurable"
+    },
+    {
+      "label": "module-Mathlib.Analysis.Analytic.Basic",
+      "seconds": 1.1779464590072166,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/module-Mathlib.Analysis.Analytic.Basic"
+    },
+    {
+      "label": "added-import-NormArith",
+      "seconds": 1.1087862079730257,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/added-import-NormArith"
+    },
+    {
+      "label": "environment",
+      "seconds": 0.7336730830138549,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/environment"
+    },
+    {
+      "label": "lean-prefix",
+      "seconds": 0.7203596670005936,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/lean-prefix"
+    },
+    {
+      "label": "lean-version",
+      "seconds": 0.02391058299690485,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/lean-version"
+    },
+    {
+      "label": "lake-version",
+      "seconds": 0.03493500000331551,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/setup/lake-version"
+    }
+  ],
+  "measurements": [
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.4501098339969758,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.878765832982026,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.68028787500225,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 2.3525403329986148,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 5.046997916011605,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "warmup",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.48396004200913,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/warmup/000/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2959142079926096,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.673347042000387,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.373251499986509,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.649830208014464,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.873513957980322,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 0,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.459319790999871,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/000/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.6677619170222897,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.890686458005803,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.4986188339826185,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.3612794170039706,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.6506551670026965,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 1,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.338029625010677,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/001/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2673272079846356,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.4993919589906,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.114934249984799,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.7018363339884672,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.794928749994142,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 2,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.334697957994649,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/002/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.5154664580186363,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.710168958001304,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.172824707988184,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.3108300830062944,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.523276666004676,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 3,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.162809750007,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/003/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.3032510000048205,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.490099874994485,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.250809999997728,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.5503647910081781,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.684988167020492,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 4,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.210198667016812,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/004/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.553098125004908,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.683694875013316,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.187239291000878,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2942380839958787,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.287702041998273,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 5,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.0326584999857005,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/005/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2602997079957277,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.289207541994983,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.020979332999559,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.5011883749975823,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.687959874980152,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 6,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.306498999998439,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/006/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.5622466249915306,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.68506091600284,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.137153583986219,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2960000000020955,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.328106250002747,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 7,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.007657666981686,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/007/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2569752499985043,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.298012082988862,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 4.99840775001212,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/original/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.4985285000002477,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.702209249982843,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 8,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.1961172920127865,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/008/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.5373814159829635,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/replacement/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.658351709018461,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/replacement/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "replacement",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 5.120629082986852,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/replacement/logs/Mathlib/Analysis/Analytic/Basic"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "seconds": 1.2788876249978784,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/original/logs/Mathlib/Analysis/Convex/Uniform"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "seconds": 4.314374292007415,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/original/logs/Mathlib/Analysis/Calculus/FDeriv/Measurable"
+    },
+    {
+      "phase": "measured",
+      "pair": 9,
+      "variant": "original",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "seconds": 4.994205291994149,
+      "returncode": 0,
+      "timed_out": false,
+      "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-optimized/runs/measured/009/original/logs/Mathlib/Analysis/Analytic/Basic"
+    }
+  ],
+  "provenance": {
+    "created_at_utc": "2026-10-20T15:00:40.493957+00:00",
+    "manifest_sha256": "b240953708b89feaa5522b0d6d196fe6c733084679cae9cbe9c9b362fa71ad4e",
+    "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+    "project_revision": "e5b88e157bca97a3e1b4a84783014432330ed618",
+    "toolchain": "leanprover/lean4:v4.36.0-rc1",
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "cpu": "arm",
+    "cpu_count": 14,
+    "threads": 1,
+    "repetitions": 10,
+    "warmups": 1,
+    "python_version": "3.15.0",
+    "harness_sha256": "e11f74b51f6f4897fa97c0823f407226ab5bb055191a98fda82f5e4cd05fb81d",
+    "project_lean_sources": {
+      "NormArith/Certificate.lean": "93c74d7de5add3d06944461a4d1b1883f4e263bb313987aa904bac3694cf5a70",
+      "NormArith/Search.lean": "46a8746dde778e5b1522c7c1534dfc518ab0dbd52a758da49c76819ee4e2303d",
+      "NormArith/Tactic.lean": "a158fba3d992be49e60cc51c2ef93cf28d245772138aa90ddbd3c5b110e9ae7c",
+      "NormArith.lean": "3e21896ccac8fb1d5c04e9a9903a2079a045ef3230bc784d23a02821b2a12c67",
+      "NormArithTest/Certificate.lean": "5e81953d0f55bcf07cb7fc3014bb7b891f41b04050c9044fd48125fdc78d78c2",
+      "NormArithTest/Search.lean": "9d656d3469d33f539c3b2de133a11064a28daf413345f51f2a33dd25e148a6cd",
+      "NormArithTest/Tactic.lean": "0b765c9bac11c26fbb69740bb7ebc1d1d25c2c8608859369daa2e46a0defa964",
+      "NormArithTest.lean": "57895353631627fd924569dbfa6cee2f45e93958b7359c730c1aa653887181bb"
+    },
+    "project_lake_manifest_sha256": "c7862fd0c1362ddb73b91d454d3b6d9405feb6024b4b50f5f4a3aa1bc0acfc82",
+    "project_lakefile_sha256": "11a0de8a324414aea318a5eb28e8808ed3b20d91675323d3bc1367c8dc6789c7",
+    "proposed_patch_sha256": "0b491e5eed5b8c696cb859decce3b240fce4077c407c6f9196a531603aaab97b",
+    "tactic_implementation_code_lines": 295,
+    "lean_version": "Lean (version 4.36.0-rc1, arm64-apple-darwin24.6.0, commit c9afcddf514a6772bd4d649f7cfc04eff0b9f15e, Release)",
+    "lake_version": "Lake version 5.0.0-src+c9afcdd (Lean version 4.36.0-rc1)",
+    "lean_environment": {
+      "PATH": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Cli/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/bin:/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin:/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/bin:/Users/to1717/.elan/bin:/Users/to1717/.local/bin:/Users/to1717/.elan/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/TeX/texbin:/opt/homebrew/bin:/Users/to1717/.local/bin:/Users/to1717/.codex/tmp/arg0/codex-arg0uzRjkU:/Users/to1717/.elan/bin:/opt/homebrew/sbin:/Users/to1717/.docker/bin:/Users/to1717/.vscode/extensions/openai.chatgpt-26.1007.21434-darwin-arm64/bin/macos-aarch64:/Users/to1717/.docker/bin",
+      "LEAN_PATH": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Cli/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/lean:/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/lean:/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean",
+      "LEAN_SYSROOT": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1",
+      "LEAN_SRC_PATH": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Cli:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Cli:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib:/Users/to1717/Documents/GitHub/norm-arith:/Users/to1717/Documents/GitHub/norm-arith:/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/src/lean/lake",
+      "DYLD_LIBRARY_PATH": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean:/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib:/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Cli/.lake/build/lib"
+    }
+  },
+  "manifest": {
+    "schema_version": 1,
+    "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+    "selection_status": "frozen",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "source_sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+        "imports": [
+          "NormArith"
+        ],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "source_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+        "imports": [
+          "NormArith"
+        ],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "source_sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+        "imports": [
+          "NormArith"
+        ],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Analysis/CStarAlgebra/Module/Defs.lean",
+        "source_sha256": "5d499490eae14c59c995c580bdd91e9bd90ad03ee1b52c1e59b3e0e7ebdc5e52",
+        "imports": [],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/Rademacher.lean",
+        "source_sha256": "2679ec11bb4578d4ed0fbc935145aa41a663aa12acf6a779a95c40f3c4d9a351",
+        "imports": [],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "source_sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+        "imports": [],
+        "helpers": []
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+        "source_sha256": "0f10e5afeb80809192b023486b09e98939d0a6bd0920ab3882bddb41a715d947",
+        "imports": [],
+        "helpers": []
+      }
+    ],
+    "candidates": [
+      {
+        "id": "uniform-upper",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "status": "replace",
+        "reason": "Compiled replacement: combine the three existing bounds without spelling out the additive decomposition.",
+        "start_line": 91,
+        "end_line": 97,
+        "original_sha256": "882f9b9044d304c16c5262ca8674f4604a06c3ba906b620ce36270b4200cb4f3",
+        "replacement": "    ‖x + y‖ ≤ 2 - δ + δ' + δ' := by\n      norm_arith [h (h₁ _ hx') (h₁ _ hy') hxy', h₂ _ hx hx'.le, h₂ _ hy hy'.le]\n"
+      },
+      {
+        "id": "uniform-lower",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "status": "unsupported",
+        "reason": "Reviewed only: the current goal has a difference of norms on the left, outside the initial norm-upper-bound interface.",
+        "start_line": 86,
+        "end_line": 89,
+        "original_sha256": "cb6b95704f511b1584099510dc88a87abf41f78f17a37b7592ac42caf10dfcbd"
+      },
+      {
+        "id": "fderiv-telescope",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "replace",
+        "reason": "Compiled replacement: telescope three supplied differences over a general normed scalar field.",
+        "start_line": 259,
+        "end_line": 266,
+        "original_sha256": "6e6fdde8b2689e639bd930ef9bdd48a379f1d496434e985d34bfeb09fca2bb5c",
+        "replacement": "    norm_arith [J1, J2, J3]\n"
+      },
+      {
+        "id": "right-deriv-telescope",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "RightDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "replace",
+        "reason": "Compiled replacement: telescope three supplied differences in the right-derivative proof.",
+        "start_line": 588,
+        "end_line": 595,
+        "original_sha256": "085e4831de0f9dd92c28d87b10473dd51d897a724c0faa53aa43c0fee45088cb",
+        "replacement": "    norm_arith [J1, J2, J3]\n"
+      },
+      {
+        "id": "fderiv-param",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.isOpen_A_with_param",
+        "status": "replace",
+        "reason": "Compiled replacement: retain explicitly prepared distance bounds and replace the additive triangle argument.",
+        "start_line": 835,
+        "end_line": 851,
+        "original_sha256": "6c724f557171a1329ca5075b81c5d5f0a10ef014400c9d4d044935c40c3c22e9",
+        "replacement": "  have hz' : ‖f a' z - f a z‖ ≤ ε := by\n    rw [← dist_eq_norm]\n    exact (hu (a', z) ha'x'.1 (mem_closedBall.2 dzx)).le\n  have hy' : ‖f a' y - f a y‖ ≤ ε := by\n    rw [← dist_eq_norm]\n    exact (hu (a', y) ha'x'.1 (mem_closedBall.2 dyx)).le\n  calc\n  ‖f a' z - f a' y - (L z - L y)‖ ≤ ε + ε + b := by\n    norm_arith [hz', hy', hb y (mem_closedBall.2 dyx) z (mem_closedBall.2 dzx)]\n"
+      },
+      {
+        "id": "fderiv-map",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.mem_A_of_differentiable",
+        "status": "unsupported",
+        "reason": "Reviewed only: target and source applications of the derivative require map_sub normalization; this trial keeps algebraic-map preprocessing outside the tactic.",
+        "start_line": 163,
+        "end_line": 170,
+        "original_sha256": "d6563d8b15409c53324db615f3cb9e4e3f38442e6f3a8f0f91b3e60b53dc1db8"
+      },
+      {
+        "id": "right-deriv-symbolic",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "RightDerivMeasurableAux.mem_A_of_differentiable",
+        "status": "unsupported",
+        "reason": "Reviewed only: discovering the decomposition requires distributing a symbolic scalar across subtraction; symbolic scalar normalization is deferred.",
+        "start_line": 491,
+        "end_line": 501,
+        "original_sha256": "8effdcda6d5ea37730b9b1d75b3b2b8e3fdb929161df4b1478705661dd899e5b"
+      },
+      {
+        "id": "fderiv-operator",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "unsupported",
+        "reason": "Reviewed only: needs application of an operator-norm bound to a vector; that is not a norm-vector source bound until prepared explicitly.",
+        "start_line": 337,
+        "end_line": 341,
+        "original_sha256": "520fe44ef6337ef1b16cf3ccb5910af0ce0b6b664c17bc0fa201b7ccce14c9d1"
+      },
+      {
+        "id": "strong-law-sums",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "declaration": "strong_law_ae_of_measurable",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: needs finite-sum distribution and a symbolic inverse-scalar norm estimate before additive decomposition; not attempted in this pilot.",
+        "start_line": 761,
+        "end_line": 779,
+        "original_sha256": "f1ca8c7b4d0fdb276520c10b67fc9c55e4a47b8d2aa2fbc935fa1c31b769934d"
+      },
+      {
+        "id": "analytic-partial-sums",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "declaration": "HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod",
+        "status": "replace",
+        "reason": "Compiled trial: count the finite-sum unfolding/splitting preparation, then combine three existing bounds. Explicit z and y avoid projection-valued inferred arguments.",
+        "start_line": 654,
+        "end_line": 670,
+        "original_sha256": "bebdd7b272969e2624b9a6ac43cc9cd5e3681840ab74775a3b83f93d9a0409f1",
+        "replacement": "  calc\n  ‖p.partialSum n z - p.partialSum n y‖ ≤ ε / 4 + ε / 4 + ε / 4 := by\n    simp only [FormalMultilinearSeries.partialSum] at hz ⊢\n    simp only [← sum_range_add_sum_Ico _ hkn]\n    norm_arith [hz.le, I z h'z, I y yr']\n"
+      },
+      {
+        "id": "cstar-before-normed-instance",
+        "path": "Mathlib/Analysis/CStarAlgebra/Module/Defs.lean",
+        "declaration": "CStarModule.norm_triangle",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: proves a squared-norm inequality while constructing the normed-group instance, outside the initial norm-upper-bound interface.",
+        "start_line": 250,
+        "end_line": 255,
+        "original_sha256": "f1f992e1ceddd81444a6a2e84e60d0d1260c52919ca16c1e92653dd73a9da9e7"
+      },
+      {
+        "id": "rademacher-symbolic-prep",
+        "path": "Mathlib/Analysis/Calculus/Rademacher.lean",
+        "declaration": "hasFDerivAt_of_hasLineDerivAt_of_closure",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: symbolic scalar and Lipschitz/operator bounds need explicit preparation; retained for later expansion rather than extending the frozen pilot ad hoc.",
+        "start_line": 296,
+        "end_line": 311,
+        "original_sha256": "7142f83df94fc7eecc5b31c4afc6c18a74c9ffb52d917406d68c60629ea77c0b"
+      },
+      {
+        "id": "mean-value-additive",
+        "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+        "declaration": "Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le'",
+        "status": "unchanged",
+        "reason": "Initial source-hint and typed-bound attempts failed to find a decomposition after map_sub left the source and target in syntactically different forms. Adding an explicit change compiled, but takes five proof lines, equal to the existing proof, plus a new import. Keep the original.",
+        "start_line": 536,
+        "end_line": 540,
+        "original_sha256": "43d58359ad2ab6982d5f9b6be5d5f608cb2f2bc10403f6a4427d98a83be94390",
+        "trial_replacement": "  have hg' : ‖f y - φ y - (f x - φ x)‖ ≤ C * ‖y - x‖ :=\n    Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le hg bound hs xs ys\n  simp only [map_sub]\n  change ‖f y - f x - (φ y - φ x)‖ ≤ C * ‖y - x‖\n  norm_arith [hg']\n",
+        "trial_outcome": {
+          "compiled": true,
+          "proof_lines_before": 5,
+          "proof_lines_after": 5,
+          "counted_additional_imports": 1,
+          "initial_attempts": "Both show-hint and typed-bound variants reached norm_arith but failed with no decomposition; an explicit change made the atomic representations match."
+        }
+      },
+      {
+        "id": "direct-triangle-no-saving",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.norm_sub_le_of_mem_A",
+        "status": "unchanged",
+        "reason": "Reviewed only: the existing direct norm_sub_le proof already takes one line; explicitly supplying both reflexive norm bounds to norm_arith provides no line reduction. No replacement was compiled.",
+        "start_line": 183,
+        "end_line": 183,
+        "original_sha256": "0ceaedd36358faa115f3b2d9455f9bd2956239074e4b22618e1119a2b1d34fd0"
+      }
+    ],
+    "freeze_basis": "All five replacements compiled in complete pinned mathlib files before headline timing. The frozen set contains fourteen reviewed candidates across seven catalogued files and three affected files."
+  },
+  "selection_status": "frozen",
+  "accounting": {
+    "candidate_count": 14,
+    "candidate_status_counts": {
+      "replace": 5,
+      "unsupported": 7,
+      "unchanged": 2
+    },
+    "proposed_replacements": 5,
+    "original_proof_lines": 57,
+    "replacement_proof_lines": 18,
+    "added_helper_lines": 0,
+    "added_import_lines": 3,
+    "candidates": [
+      {
+        "id": "uniform-upper",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "status": "replace",
+        "reason": "Compiled replacement: combine the three existing bounds without spelling out the additive decomposition.",
+        "start_line": 91,
+        "end_line": 97,
+        "original_sha256": "882f9b9044d304c16c5262ca8674f4604a06c3ba906b620ce36270b4200cb4f3",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 2
+      },
+      {
+        "id": "uniform-lower",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "status": "unsupported",
+        "reason": "Reviewed only: the current goal has a difference of norms on the left, outside the initial norm-upper-bound interface.",
+        "start_line": 86,
+        "end_line": 89,
+        "original_sha256": "cb6b95704f511b1584099510dc88a87abf41f78f17a37b7592ac42caf10dfcbd",
+        "original_proof_lines": 4
+      },
+      {
+        "id": "fderiv-telescope",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "replace",
+        "reason": "Compiled replacement: telescope three supplied differences over a general normed scalar field.",
+        "start_line": 259,
+        "end_line": 266,
+        "original_sha256": "6e6fdde8b2689e639bd930ef9bdd48a379f1d496434e985d34bfeb09fca2bb5c",
+        "original_proof_lines": 8,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "right-deriv-telescope",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "RightDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "replace",
+        "reason": "Compiled replacement: telescope three supplied differences in the right-derivative proof.",
+        "start_line": 588,
+        "end_line": 595,
+        "original_sha256": "085e4831de0f9dd92c28d87b10473dd51d897a724c0faa53aa43c0fee45088cb",
+        "original_proof_lines": 8,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "fderiv-param",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.isOpen_A_with_param",
+        "status": "replace",
+        "reason": "Compiled replacement: retain explicitly prepared distance bounds and replace the additive triangle argument.",
+        "start_line": 835,
+        "end_line": 851,
+        "original_sha256": "6c724f557171a1329ca5075b81c5d5f0a10ef014400c9d4d044935c40c3c22e9",
+        "original_proof_lines": 17,
+        "replacement_proof_lines": 9
+      },
+      {
+        "id": "fderiv-map",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.mem_A_of_differentiable",
+        "status": "unsupported",
+        "reason": "Reviewed only: target and source applications of the derivative require map_sub normalization; this trial keeps algebraic-map preprocessing outside the tactic.",
+        "start_line": 163,
+        "end_line": 170,
+        "original_sha256": "d6563d8b15409c53324db615f3cb9e4e3f38442e6f3a8f0f91b3e60b53dc1db8",
+        "original_proof_lines": 8
+      },
+      {
+        "id": "right-deriv-symbolic",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "RightDerivMeasurableAux.mem_A_of_differentiable",
+        "status": "unsupported",
+        "reason": "Reviewed only: discovering the decomposition requires distributing a symbolic scalar across subtraction; symbolic scalar normalization is deferred.",
+        "start_line": 491,
+        "end_line": 501,
+        "original_sha256": "8effdcda6d5ea37730b9b1d75b3b2b8e3fdb929161df4b1478705661dd899e5b",
+        "original_proof_lines": 11
+      },
+      {
+        "id": "fderiv-operator",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+        "status": "unsupported",
+        "reason": "Reviewed only: needs application of an operator-norm bound to a vector; that is not a norm-vector source bound until prepared explicitly.",
+        "start_line": 337,
+        "end_line": 341,
+        "original_sha256": "520fe44ef6337ef1b16cf3ccb5910af0ce0b6b664c17bc0fa201b7ccce14c9d1",
+        "original_proof_lines": 5
+      },
+      {
+        "id": "direct-triangle-no-saving",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "declaration": "FDerivMeasurableAux.norm_sub_le_of_mem_A",
+        "status": "unchanged",
+        "reason": "Reviewed only: the existing direct norm_sub_le proof already takes one line; explicitly supplying both reflexive norm bounds to norm_arith provides no line reduction. No replacement was compiled.",
+        "start_line": 183,
+        "end_line": 183,
+        "original_sha256": "0ceaedd36358faa115f3b2d9455f9bd2956239074e4b22618e1119a2b1d34fd0",
+        "original_proof_lines": 1
+      },
+      {
+        "id": "analytic-partial-sums",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "declaration": "HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod",
+        "status": "replace",
+        "reason": "Compiled trial: count the finite-sum unfolding/splitting preparation, then combine three existing bounds. Explicit z and y avoid projection-valued inferred arguments.",
+        "start_line": 654,
+        "end_line": 670,
+        "original_sha256": "bebdd7b272969e2624b9a6ac43cc9cd5e3681840ab74775a3b83f93d9a0409f1",
+        "original_proof_lines": 17,
+        "replacement_proof_lines": 5
+      },
+      {
+        "id": "cstar-before-normed-instance",
+        "path": "Mathlib/Analysis/CStarAlgebra/Module/Defs.lean",
+        "declaration": "CStarModule.norm_triangle",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: proves a squared-norm inequality while constructing the normed-group instance, outside the initial norm-upper-bound interface.",
+        "start_line": 250,
+        "end_line": 255,
+        "original_sha256": "f1f992e1ceddd81444a6a2e84e60d0d1260c52919ca16c1e92653dd73a9da9e7",
+        "original_proof_lines": 6
+      },
+      {
+        "id": "rademacher-symbolic-prep",
+        "path": "Mathlib/Analysis/Calculus/Rademacher.lean",
+        "declaration": "hasFDerivAt_of_hasLineDerivAt_of_closure",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: symbolic scalar and Lipschitz/operator bounds need explicit preparation; retained for later expansion rather than extending the frozen pilot ad hoc.",
+        "start_line": 296,
+        "end_line": 311,
+        "original_sha256": "7142f83df94fc7eecc5b31c4afc6c18a74c9ffb52d917406d68c60629ea77c0b",
+        "original_proof_lines": 16
+      },
+      {
+        "id": "strong-law-sums",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "declaration": "strong_law_ae_of_measurable",
+        "status": "unsupported",
+        "reason": "Reviewed mathlib-wide discovery hit: needs finite-sum distribution and a symbolic inverse-scalar norm estimate before additive decomposition; not attempted in this pilot.",
+        "start_line": 761,
+        "end_line": 779,
+        "original_sha256": "f1ca8c7b4d0fdb276520c10b67fc9c55e4a47b8d2aa2fbc935fa1c31b769934d",
+        "original_proof_lines": 19
+      },
+      {
+        "id": "mean-value-additive",
+        "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+        "declaration": "Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le'",
+        "status": "unchanged",
+        "reason": "Initial source-hint and typed-bound attempts failed to find a decomposition after map_sub left the source and target in syntactically different forms. Adding an explicit change compiled, but takes five proof lines, equal to the existing proof, plus a new import. Keep the original.",
+        "start_line": 536,
+        "end_line": 540,
+        "original_sha256": "43d58359ad2ab6982d5f9b6be5d5f608cb2f2bc10403f6a4427d98a83be94390",
+        "trial_replacement": "  have hg' : ‖f y - φ y - (f x - φ x)‖ ≤ C * ‖y - x‖ :=\n    Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le hg bound hs xs ys\n  simp only [map_sub]\n  change ‖f y - f x - (φ y - φ x)‖ ≤ C * ‖y - x‖\n  norm_arith [hg']\n",
+        "trial_outcome": {
+          "compiled": true,
+          "proof_lines_before": 5,
+          "proof_lines_after": 5,
+          "counted_additional_imports": 1,
+          "initial_attempts": "Both show-hint and typed-bound variants reached norm_arith but failed with no decomposition; an explicit change made the atomic representations match."
+        },
+        "original_proof_lines": 5
+      }
+    ],
+    "net_proof_lines_saved": 39,
+    "net_lines_saved_including_imports": 36
+  },
+  "tactic_artifact_invalidation": [
+    ".lake/build/lib/lean/NormArith",
+    ".lake/build/lib/lean/NormArith.ilean",
+    ".lake/build/lib/lean/NormArith.ilean.hash",
+    ".lake/build/lib/lean/NormArith.ir",
+    ".lake/build/lib/lean/NormArith.ir.hash",
+    ".lake/build/lib/lean/NormArith.ir.sig",
+    ".lake/build/lib/lean/NormArith.ir.sig.hash",
+    ".lake/build/lib/lean/NormArith.olean",
+    ".lake/build/lib/lean/NormArith.olean.hash",
+    ".lake/build/lib/lean/NormArith.olean.private",
+    ".lake/build/lib/lean/NormArith.olean.private.hash",
+    ".lake/build/lib/lean/NormArith.olean.server",
+    ".lake/build/lib/lean/NormArith.olean.server.hash",
+    ".lake/build/lib/lean/NormArith.trace",
+    ".lake/build/ir/NormArith",
+    ".lake/build/ir/NormArith.c",
+    ".lake/build/ir/NormArith.c.hash",
+    ".lake/build/ir/NormArith.setup.json"
+  ],
+  "compilation_order": [
+    "Mathlib/Analysis/Convex/Uniform.lean",
+    "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+    "Mathlib/Analysis/Analytic/Basic.lean"
+  ],
+  "summary": {
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "original": {
+          "median_seconds": 1.2950761459942441,
+          "min_seconds": 1.2569752499985043,
+          "max_seconds": 1.3612794170039706,
+          "seconds": [
+            1.2959142079926096,
+            1.3612794170039706,
+            1.2673272079846356,
+            1.3108300830062944,
+            1.3032510000048205,
+            1.2942380839958787,
+            1.2602997079957277,
+            1.2960000000020955,
+            1.2569752499985043,
+            1.2788876249978784
+          ]
+        },
+        "replacement": {
+          "median_seconds": 1.551731458006543,
+          "min_seconds": 1.4985285000002477,
+          "max_seconds": 1.7018363339884672,
+          "seconds": [
+            1.649830208014464,
+            1.6677619170222897,
+            1.7018363339884672,
+            1.5154664580186363,
+            1.5503647910081781,
+            1.553098125004908,
+            1.5011883749975823,
+            1.5622466249915306,
+            1.4985285000002477,
+            1.5373814159829635
+          ]
+        },
+        "speedup": 0.834600690288244
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "original": {
+          "median_seconds": 4.409103062498616,
+          "min_seconds": 4.287702041998273,
+          "max_seconds": 4.673347042000387,
+          "seconds": [
+            4.673347042000387,
+            4.6506551670026965,
+            4.4993919589906,
+            4.523276666004676,
+            4.490099874994485,
+            4.287702041998273,
+            4.289207541994983,
+            4.328106250002747,
+            4.298012082988862,
+            4.314374292007415
+          ]
+        },
+        "replacement": {
+          "median_seconds": 4.695084562481497,
+          "min_seconds": 4.658351709018461,
+          "max_seconds": 4.890686458005803,
+          "seconds": [
+            4.873513957980322,
+            4.890686458005803,
+            4.794928749994142,
+            4.710168958001304,
+            4.684988167020492,
+            4.683694875013316,
+            4.687959874980152,
+            4.68506091600284,
+            4.702209249982843,
+            4.658351709018461
+          ]
+        },
+        "speedup": 0.9390891694969321
+      },
+      {
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "original": {
+          "median_seconds": 5.07379637498525,
+          "min_seconds": 4.994205291994149,
+          "max_seconds": 5.373251499986509,
+          "seconds": [
+            5.373251499986509,
+            5.338029625010677,
+            5.114934249984799,
+            5.162809750007,
+            5.250809999997728,
+            5.0326584999857005,
+            5.020979332999559,
+            5.007657666981686,
+            4.99840775001212,
+            4.994205291994149
+          ]
+        },
+        "replacement": {
+          "median_seconds": 5.203157979514799,
+          "min_seconds": 5.120629082986852,
+          "max_seconds": 5.4986188339826185,
+          "seconds": [
+            5.459319790999871,
+            5.4986188339826185,
+            5.334697957994649,
+            5.172824707988184,
+            5.210198667016812,
+            5.187239291000878,
+            5.306498999998439,
+            5.137153583986219,
+            5.1961172920127865,
+            5.120629082986852
+          ]
+        },
+        "speedup": 0.9751378672262393
+      }
+    ],
+    "aggregate": {
+      "original": {
+        "median_seconds": 10.756708666973282,
+        "min_seconds": 10.553395082999486,
+        "max_seconds": 11.349964209017344,
+        "seconds": [
+          11.342512749979505,
+          11.349964209017344,
+          10.881653416960035,
+          10.99691649901797,
+          11.044160874997033,
+          10.614598625979852,
+          10.57048658299027,
+          10.631763916986529,
+          10.553395082999486,
+          10.587467208999442
+        ]
+      },
+      "replacement": {
+        "median_seconds": 11.434791958032292,
+        "min_seconds": 11.316362207988277,
+        "max_seconds": 12.057067209010711,
+        "seconds": [
+          11.982663956994656,
+          12.057067209010711,
+          11.831463041977258,
+          11.398460124008125,
+          11.445551625045482,
+          11.424032291019103,
+          11.495647249976173,
+          11.38446112498059,
+          11.396855041995877,
+          11.316362207988277
+        ]
+      },
+      "speedup": 0.940699988810667
+    }
+  }
+}

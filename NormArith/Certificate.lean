@@ -36,6 +36,12 @@ theorem bound_add {x y : E} {a b : ℝ}
 theorem bound_neg {x : E} {a : ℝ} (hx : ‖x‖ ≤ a) : ‖-x‖ ≤ a := by
   simpa only [norm_neg] using hx
 
+/-- Repeated addition scales a bound without a scalar-field structure. -/
+theorem bound_nsmul (n : ℕ) {x : E} {b : ℝ}
+    (hx : ‖x‖ ≤ b) : ‖n • x‖ ≤ n * b :=
+  (norm_nsmul_le (n := n)).trans
+    (mul_le_mul_of_nonneg_left hx (Nat.cast_nonneg n))
+
 /-- A difference is bounded by the sum of the two supplied bounds. -/
 theorem bound_sub {x y : E} {a b : ℝ}
     (hx : ‖x‖ ≤ a) (hy : ‖y‖ ≤ b) : ‖x - y‖ ≤ a + b := by

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "frozen",
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "source_sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "source_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "source_sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/CStarAlgebra/Module/Defs.lean",
+      "source_sha256": "5d499490eae14c59c995c580bdd91e9bd90ad03ee1b52c1e59b3e0e7ebdc5e52",
+      "imports": [],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/Rademacher.lean",
+      "source_sha256": "2679ec11bb4578d4ed0fbc935145aa41a663aa12acf6a779a95c40f3c4d9a351",
+      "imports": [],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Probability/StrongLaw.lean",
+      "source_sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+      "imports": [],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+      "source_sha256": "0f10e5afeb80809192b023486b09e98939d0a6bd0920ab3882bddb41a715d947",
+      "imports": [],
+      "helpers": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "uniform-upper",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+      "status": "replace",
+      "reason": "Compiled replacement: combine the three existing bounds without spelling out the additive decomposition.",
+      "start_line": 91,
+      "end_line": 97,
+      "original_sha256": "882f9b9044d304c16c5262ca8674f4604a06c3ba906b620ce36270b4200cb4f3",
+      "replacement": "    ‖x + y‖ ≤ 2 - δ + δ' + δ' := by\n      norm_arith [h (h₁ _ hx') (h₁ _ hy') hxy', h₂ _ hx hx'.le, h₂ _ hy hy'.le]\n"
+    },
+    {
+      "id": "uniform-lower",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+      "status": "unsupported",
+      "reason": "Reviewed only: the current goal has a difference of norms on the left, outside the initial norm-upper-bound interface.",
+      "start_line": 86,
+      "end_line": 89,
+      "original_sha256": "cb6b95704f511b1584099510dc88a87abf41f78f17a37b7592ac42caf10dfcbd"
+    },
+    {
+      "id": "fderiv-telescope",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+      "status": "replace",
+      "reason": "Compiled replacement: telescope three supplied differences over a general normed scalar field.",
+      "start_line": 259,
+      "end_line": 266,
+      "original_sha256": "6e6fdde8b2689e639bd930ef9bdd48a379f1d496434e985d34bfeb09fca2bb5c",
+      "replacement": "    norm_arith [J1, J2, J3]\n"
+    },
+    {
+      "id": "right-deriv-telescope",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "RightDerivMeasurableAux.D_subset_differentiable_set",
+      "status": "replace",
+      "reason": "Compiled replacement: telescope three supplied differences in the right-derivative proof.",
+      "start_line": 588,
+      "end_line": 595,
+      "original_sha256": "085e4831de0f9dd92c28d87b10473dd51d897a724c0faa53aa43c0fee45088cb",
+      "replacement": "    norm_arith [J1, J2, J3]\n"
+    },
+    {
+      "id": "fderiv-param",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.isOpen_A_with_param",
+      "status": "replace",
+      "reason": "Compiled replacement: retain explicitly prepared distance bounds and replace the additive triangle argument.",
+      "start_line": 835,
+      "end_line": 851,
+      "original_sha256": "6c724f557171a1329ca5075b81c5d5f0a10ef014400c9d4d044935c40c3c22e9",
+      "replacement": "  have hz' : ‖f a' z - f a z‖ ≤ ε := by\n    rw [← dist_eq_norm]\n    exact (hu (a', z) ha'x'.1 (mem_closedBall.2 dzx)).le\n  have hy' : ‖f a' y - f a y‖ ≤ ε := by\n    rw [← dist_eq_norm]\n    exact (hu (a', y) ha'x'.1 (mem_closedBall.2 dyx)).le\n  calc\n  ‖f a' z - f a' y - (L z - L y)‖ ≤ ε + ε + b := by\n    norm_arith [hz', hy', hb y (mem_closedBall.2 dyx) z (mem_closedBall.2 dzx)]\n"
+    },
+    {
+      "id": "fderiv-map",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.mem_A_of_differentiable",
+      "status": "unsupported",
+      "reason": "Reviewed only: target and source applications of the derivative require map_sub normalization; this trial keeps algebraic-map preprocessing outside the tactic.",
+      "start_line": 163,
+      "end_line": 170,
+      "original_sha256": "d6563d8b15409c53324db615f3cb9e4e3f38442e6f3a8f0f91b3e60b53dc1db8"
+    },
+    {
+      "id": "right-deriv-symbolic",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "RightDerivMeasurableAux.mem_A_of_differentiable",
+      "status": "unsupported",
+      "reason": "Reviewed only: discovering the decomposition requires distributing a symbolic scalar across subtraction; symbolic scalar normalization is deferred.",
+      "start_line": 491,
+      "end_line": 501,
+      "original_sha256": "8effdcda6d5ea37730b9b1d75b3b2b8e3fdb929161df4b1478705661dd899e5b"
+    },
+    {
+      "id": "fderiv-operator",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.D_subset_differentiable_set",
+      "status": "unsupported",
+      "reason": "Reviewed only: needs application of an operator-norm bound to a vector; that is not a norm-vector source bound until prepared explicitly.",
+      "start_line": 337,
+      "end_line": 341,
+      "original_sha256": "520fe44ef6337ef1b16cf3ccb5910af0ce0b6b664c17bc0fa201b7ccce14c9d1"
+    },
+    {
+      "id": "strong-law-sums",
+      "path": "Mathlib/Probability/StrongLaw.lean",
+      "declaration": "strong_law_ae_of_measurable",
+      "status": "unsupported",
+      "reason": "Reviewed mathlib-wide discovery hit: needs finite-sum distribution and a symbolic inverse-scalar norm estimate before additive decomposition; not attempted in this pilot.",
+      "start_line": 761,
+      "end_line": 779,
+      "original_sha256": "f1ca8c7b4d0fdb276520c10b67fc9c55e4a47b8d2aa2fbc935fa1c31b769934d"
+    },
+    {
+      "id": "analytic-partial-sums",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "declaration": "HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod",
+      "status": "replace",
+      "reason": "Compiled trial: count the finite-sum unfolding/splitting preparation, then combine three existing bounds. Explicit z and y avoid projection-valued inferred arguments.",
+      "start_line": 654,
+      "end_line": 670,
+      "original_sha256": "bebdd7b272969e2624b9a6ac43cc9cd5e3681840ab74775a3b83f93d9a0409f1",
+      "replacement": "  calc\n  ‖p.partialSum n z - p.partialSum n y‖ ≤ ε / 4 + ε / 4 + ε / 4 := by\n    simp only [FormalMultilinearSeries.partialSum] at hz ⊢\n    simp only [← sum_range_add_sum_Ico _ hkn]\n    norm_arith [hz.le, I z h'z, I y yr']\n"
+    },
+    {
+      "id": "cstar-before-normed-instance",
+      "path": "Mathlib/Analysis/CStarAlgebra/Module/Defs.lean",
+      "declaration": "CStarModule.norm_triangle",
+      "status": "unsupported",
+      "reason": "Reviewed mathlib-wide discovery hit: proves a squared-norm inequality while constructing the normed-group instance, outside the initial norm-upper-bound interface.",
+      "start_line": 250,
+      "end_line": 255,
+      "original_sha256": "f1f992e1ceddd81444a6a2e84e60d0d1260c52919ca16c1e92653dd73a9da9e7"
+    },
+    {
+      "id": "rademacher-symbolic-prep",
+      "path": "Mathlib/Analysis/Calculus/Rademacher.lean",
+      "declaration": "hasFDerivAt_of_hasLineDerivAt_of_closure",
+      "status": "unsupported",
+      "reason": "Reviewed mathlib-wide discovery hit: symbolic scalar and Lipschitz/operator bounds need explicit preparation; retained for later expansion rather than extending the frozen pilot ad hoc.",
+      "start_line": 296,
+      "end_line": 311,
+      "original_sha256": "7142f83df94fc7eecc5b31c4afc6c18a74c9ffb52d917406d68c60629ea77c0b"
+    },
+    {
+      "id": "mean-value-additive",
+      "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+      "declaration": "Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le'",
+      "status": "unchanged",
+      "reason": "Initial source-hint and typed-bound attempts failed to find a decomposition after map_sub left the source and target in syntactically different forms. Adding an explicit change compiled, but takes five proof lines, equal to the existing proof, plus a new import. Keep the original.",
+      "start_line": 536,
+      "end_line": 540,
+      "original_sha256": "43d58359ad2ab6982d5f9b6be5d5f608cb2f2bc10403f6a4427d98a83be94390",
+      "trial_replacement": "  have hg' : ‖f y - φ y - (f x - φ x)‖ ≤ C * ‖y - x‖ :=\n    Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le hg bound hs xs ys\n  simp only [map_sub]\n  change ‖f y - f x - (φ y - φ x)‖ ≤ C * ‖y - x‖\n  norm_arith [hg']\n",
+      "trial_outcome": {
+        "compiled": true,
+        "proof_lines_before": 5,
+        "proof_lines_after": 5,
+        "counted_additional_imports": 1,
+        "initial_attempts": "Both show-hint and typed-bound variants reached norm_arith but failed with no decomposition; an explicit change made the atomic representations match."
+      }
+    },
+    {
+      "id": "direct-triangle-no-saving",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.norm_sub_le_of_mem_A",
+      "status": "unchanged",
+      "reason": "Reviewed only: the existing direct norm_sub_le proof already takes one line; explicitly supplying both reflexive norm bounds to norm_arith provides no line reduction. No replacement was compiled.",
+      "start_line": 183,
+      "end_line": 183,
+      "original_sha256": "0ceaedd36358faa115f3b2d9455f9bd2956239074e4b22618e1119a2b1d34fd0"
+    }
+  ],
+  "freeze_basis": "All five replacements compiled in complete pinned mathlib files before headline timing. The frozen set contains fourteen reviewed candidates across seven catalogued files and three affected files."
+}

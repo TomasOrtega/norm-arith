@@ -1,2 +1,4 @@
 # cache and other artifacts produced by Lean's Lake build tool
 .lake/
+__pycache__/
+*.py[cod]

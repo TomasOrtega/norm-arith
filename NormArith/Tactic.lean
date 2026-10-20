@@ -17,6 +17,9 @@ certificate, then uses `norm_num` and `linarith` for scalar arithmetic.
 
 `norm_arith?` additionally prints the successful vector decomposition.
 
+Integral decompositions need only a seminormed additive commutative group;
+fractional coefficients use real scalar multiplication.
+
 This is deliberately a small, incomplete prototype. It searches subsets of at
 most three of the first twelve supplied bounds, with 128 subset attempts and
 16 candidate results. It does not implement Isabelle's full vertex enumeration.
@@ -110,6 +113,18 @@ private def ratSyntax (q : Rat) : TacticM (TSyntax `term) := do
   let denominator : TSyntax `term := ⟨Syntax.mkNumLit (toString q.den)⟩
   `((($numerator : ℝ) / ($denominator : ℝ)))
 
+private def scaleSource (coefficient : Rat) (vector proof : TSyntax `term) :
+    TacticM (TSyntax `term × TSyntax `term) := do
+  if coefficient.den == 1 then
+    let magnitude : TSyntax `term := ⟨Syntax.mkNumLit (toString coefficient.num.natAbs)⟩
+    let multiple ← `(($magnitude : ℕ) • $vector)
+    let bound ← `(NormArith.bound_nsmul $magnitude $proof)
+    if coefficient.num < 0 then
+      return (← `(-$multiple), ← `(NormArith.bound_neg $bound))
+    return (multiple, bound)
+  let c ← ratSyntax coefficient
+  return (← `($c • $vector), ← `(NormArith.bound_smul $c $proof))
+
 private def proveCandidate (sources : Array Source) (target : Expr)
     (coefficients : Array Rat) (explain : Bool) : TacticM Unit := do
   let space ← Term.exprToSyntax (← inferType target)
@@ -119,24 +134,25 @@ private def proveCandidate (sources : Array Source) (target : Expr)
   for i in [:sources.size] do
     let coefficient := coefficients[i]!
     if coefficient != 0 then
-      let c ← ratSyntax coefficient
       let v ← Term.exprToSyntax sources[i]!.vector
       let h ← Term.exprToSyntax sources[i]!.proof
-      combination ← `($c • $v + $combination)
-      proof ← `(NormArith.bound_add (NormArith.bound_smul $c $h) $proof)
+      let (multiple, bound) ← scaleSource coefficient v h
+      combination ← `($multiple + $combination)
+      proof ← `(NormArith.bound_add $bound $proof)
   let certificate := mkIdent (← mkFreshUserName `norm_arith_bound)
   let identity := mkIdent (← mkFreshUserName `norm_arith_identity)
   let combinationExpr ← Term.elabTermAndSynthesize combination (some (← inferType target))
   evalTactic (← `(tactic| (
     have $identity : $targetStx = $combination := by module
     have $certificate := NormArith.bound_of_eq $identity $proof
-    norm_num at $certificate:ident <;> norm_num <;> linarith)))
+    norm_num at $certificate:ident <;> norm_num <;>
+      first | linarith only [$certificate:ident] | linarith)))
   if explain then
     logInfo m!"norm_arith decomposition: {target} = {combinationExpr}"
 
 private def run (hypotheses : Array (TSyntax `term)) (explain : Bool) : TacticM Unit :=
   withoutRecover <| withMainContext do
-    let goal ← instantiateMVars (← getMainTarget)
+    let goal := (← instantiateMVars (← getMainTarget)).consumeMData
     unless goal.isAppOf ``LE.le do
       throwError "norm_arith expects a goal of the form ‖w‖ ≤ B"
     let some (lhs, _) := lastTwo? goal | throwError "expected a norm inequality"

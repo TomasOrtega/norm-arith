@@ -4,6 +4,42 @@ import NormArith
 
 /-! Integration tests and examples. Every successful example is checked by Lean. -/
 
+-- Nested proof elaboration can annotate an otherwise ordinary norm goal.
+example {E : Type*} [SeminormedAddCommGroup E] (x y : E) (a b : ℝ)
+    (hx : ‖x‖ ≤ a) (hy : ‖y‖ ≤ b) : ‖x + y‖ ≤ a + b := no_implicit_lambda% (by
+  norm_arith [hx, hy])
+
+section
+
+variable {E : Type*} [SeminormedAddCommGroup E]
+
+-- Telescoping bounds need no scalar structure.
+example (w x y z : E) (a b c : ℝ)
+    (h₁ : ‖w - x‖ ≤ a) (h₂ : ‖x - y‖ ≤ b) (h₃ : ‖y - z‖ ≤ c) :
+    ‖w - z‖ ≤ a + b + c := by
+  norm_arith [h₁, h₂, h₃]
+
+-- Signed integer coefficients contribute their magnitudes.
+example (x y : E) (a b : ℝ) (hxy : ‖x + y‖ ≤ a) (hy : ‖y‖ ≤ b) :
+    ‖x + x + x + y‖ ≤ 3 * a + 2 * b := by
+  fail_if_success
+    have : ‖x + x + x + y‖ ≤ 3 * a - 2 * b := by norm_arith [hxy, hy]
+  norm_arith [hxy, hy]
+
+example (x : E) : ‖x - x‖ ≤ 0 := by
+  norm_arith []
+
+-- A failed scalar bound must restore the state before another candidate.
+example (x y : E) (a b c : ℝ)
+    (_hx : ‖x‖ ≤ c) (hxy : ‖x + y‖ ≤ a) (hy : ‖y‖ ≤ b) : ‖x‖ ≤ a + b := by
+  norm_arith [_hx, hxy, hy]
+
+-- Scalar hypotheses outside the supplied bounds remain available.
+example (x : E) (a b : ℝ) (hx : ‖x‖ ≤ a) (hab : a ≤ b) : ‖x‖ ≤ b := by
+  norm_arith [hx]
+
+end
+
 section
 
 variable {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
