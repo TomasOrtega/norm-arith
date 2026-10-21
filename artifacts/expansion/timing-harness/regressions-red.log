@@ -1,0 +1,32 @@
+FEF
+======================================================================
+ERROR: test_each_measured_compilation_records_its_fresh_output_hashes (scripts.test_benchmark.MeasurementTests.test_each_measured_compilation_records_its_fresh_output_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_benchmark.py", line 146, in test_each_measured_compilation_records_its_fresh_output_hashes
+    self.assertEqual(row["compilation_status"], "verified")
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'compilation_status'
+
+======================================================================
+FAIL: test_interrupted_measurement_reaps_its_compiler_process_group (scripts.test_benchmark.MeasurementTests.test_interrupted_measurement_reaps_its_compiler_process_group)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_benchmark.py", line 118, in test_interrupted_measurement_reaps_its_compiler_process_group
+    self.assertFalse(alive, "interrupted harness left its compiler alive")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : interrupted harness left its compiler alive
+
+======================================================================
+FAIL: test_resolved_calibration_binds_actual_compiler_executable_bytes (scripts.test_benchmark.MeasurementTests.test_resolved_calibration_binds_actual_compiler_executable_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_benchmark.py", line 159, in test_resolved_calibration_binds_actual_compiler_executable_bytes
+    with self.assertRaisesRegex(benchmark.BenchmarkError, "resolved runtime"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BenchmarkError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.567s
+
+FAILED (failures=2, errors=1)

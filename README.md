@@ -1,70 +1,8 @@
 # norm-arith
 
-A small, working Lean prototype for the step **“add and subtract the right
-vectors, then apply the triangle inequality.”** It is a starting point for a
-mathlib contribution, with an exact search engine, proved certificate lemmas,
-and integration tests.
-
-**Status:** bounded rational-decomposition search, not a complete port of
-Isabelle's `norm` method. The code is an independent implementation informed by
-that strategy. The remaining porting and contribution work is described below.
-
-## Run it
-
-With Git and [elan](https://github.com/leanprover/elan) installed, run from this
-checkout:
-
-```bash
-lake exe cache get Mathlib.Analysis.Normed.Module.Basic \
-  Mathlib.Tactic.Module Mathlib.Tactic.Linarith Mathlib.Tactic.NormNum
-lake build --wfail
-```
-
-Lean is selected by `lean-toolchain`. The toolchain and dependencies download on
-first use. `lake build` checks both libraries, including every test file.
-
-The project pins Lean **4.36.0-rc1** and mathlib commit
-`2f3c7c8a8949b04a32f9303f59163acffb766996` (16 October 2026).
-The checked-in `lake-manifest.json` pins transitive dependencies as well.
-
-## Validation
-
-The pinned project passes `lake build --wfail`. Its 44 checks comprise 22 exact
-arithmetic and search checks, 3 certificate examples, and 19 tactic examples,
-including expected failures and recovery from an unsuccessful candidate.
-The benchmark harness has a separate Python regression suite:
-
-```sh
-python3 -m unittest discover -s scripts
-```
-
-## Mathlib evaluation
-
-Five compiled replacements shorten 57 proof lines to 18 at the pinned mathlib
-revision: 39 fewer proof lines, or 36 fewer lines after charging three imports.
-The patch is local and has not been merged into mathlib. Tactic implementation
-and evaluation tooling are separate from these proof savings.
-
-In ten paired runs with one Lean thread, the affected files compiled in 10.757 s
-before and 11.435 s after: **6.3% slower**. A compilation-speedup claim is not
-supported by these measurements.
-
-See [the results](benchmarks/RESULTS.md) for compilation measurements and
-[the selection ledger](benchmarks/SELECTION.md) for unsuccessful and deferred
-candidates. To reproduce the evaluation:
-
-```sh
-lake exe cache get Mathlib.Analysis.Convex.Uniform \
-  Mathlib.Analysis.Calculus.FDeriv.Measurable Mathlib.Analysis.Analytic.Basic \
-  Mathlib.Tactic.Module Mathlib.Tactic.Linarith Mathlib.Tactic.NormNum
-python3 scripts/benchmark.py benchmarks/candidates.json \
-  --output .lake/reproduction --rebuild-tactic --threads 1
-```
-
-The output directory must be empty. [Harness documentation](scripts/README.md)
-describes the measured work, raw artifacts, and manifest format.
-
-## Try the tactic
+A Lean tactic for norm estimates whose useful vector decomposition is hidden.
+Search proposes rational coefficients; Lean checks the vector identity and norm
+certificate before exact scalar arithmetic closes the goal.
 
 ```lean
 module
@@ -73,78 +11,143 @@ import NormArith
 
 example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
     (x y : E) (a b : ℝ)
-    (h₁ : ‖x + (2 : ℝ) • y‖ ≤ a)
-    (h₂ : ‖(3 : ℝ) • x - y‖ ≤ b) :
-    ‖x + y‖ ≤ (4 * a + b) / 7 := by
-  norm_arith [h₁, h₂]
+    (h₁ : ‖x + y‖ ≤ a) (h₂ : ‖x - y‖ ≤ b) :
+    ‖x‖ ≤ (a + b) / 2 := by
+  norm_arith
+
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
+    (x y : E) : ‖x‖ - ‖y‖ ≤ ‖x - y‖ := by
+  norm_arith
 ```
 
-The search finds `x + y = (4/7) • (x + 2 • y) + (1/7) • (3 • x - y)`.
-Use `norm_arith? [h₁, h₂]` to print the successful decomposition.
-It prints an identity, not a replacement tactic script.
+Use `norm_arith [facts]` to select norm facts explicitly. Local scalar
+comparisons remain available. Omitted norm or distance premises are excluded
+when specializing quantified facts. `norm_arith?` reports successful search.
 
-The three-source approximation example also works:
+## Build and check
 
-```lean
-example {E : Type*} [SeminormedAddCommGroup E]
-    (x y x' y' : E) (a b M : ℝ)
-    (hx : ‖x - x'‖ ≤ a) (hy : ‖y - y'‖ ≤ b)
-    (hM : ‖x' + y'‖ ≤ M) :
-    ‖x + y‖ ≤ M + a + b := by
-  norm_arith [hx, hy, hM]
+With [elan](https://github.com/leanprover/elan) installed:
+
+```sh
+lake exe cache get
+lake build --wfail
+python3 -m unittest discover -s scripts
 ```
 
-All supplied facts must have the shape `‖v‖ ≤ b`, and the goal must have the
-shape `‖w‖ ≤ B`. Supply strict bounds as `h.le` when a weak bound suffices.
-For bounds written directly in the goal, pass facts such as `le_refl ‖x‖`.
+The project pins Lean **4.36.0-rc1** and mathlib commit
+`2f3c7c8a8949b04a32f9303f59163acffb766996`.
+`lake-manifest.json` also pins transitive dependencies.
+The Lean checks cover exact search, certificate lemmas, successful proofs,
+expected failures, and all six paper examples.
+The library enables native metaprogram compilation. Its first native build can
+also compile and link mathlib's native library; retain that setup cost separately
+from warm file-compilation measurements.
 
-## Where to work
+## Supported fragment
+
+The real-space core recognizes rational vector combinations and affine real
+comparisons involving norms. It handles `≤`, `<`, `=`, distances, and local
+vector equalities. Vector expressions that it cannot normalize remain opaque
+atoms. Recognized rational scalar syntax uses real scalar multiplication, such
+as `(2 : ℝ) • x`.
+
+Structural certificates and a short decomposition search run first. The
+reference fallback enumerates independent supports among every observed norm
+argument, through the exact column rank. Its default per-target limits are
+10000 subset attempts and 10000 results. Exhaustion is unknown. The paper proves
+completeness of the mathematical reduction; it does not claim that a bounded
+program always completes the enumeration.
+
+Integer certificates also work in seminormed additive commutative groups.
+A bounded signed-pair search supplies some dependent integer decompositions.
+This extension has weaker guarantees; real homogeneity must not be assumed for
+an arbitrary group. A separate upper-bound extension accepts opaque scalar
+right sides. Products of norms and normalization of variable vector coefficients
+are outside the complete real core.
+
+Fact processing projects conjunctions, supplies real norm and min/max order
+bounds, and specializes local quantified norm estimates. Specialization uses
+observed vector terms and checked local, conjunction, or scalar-linear premises.
+A fixed rewrite set normalizes distances, balls, closed balls, and the four
+bounded interval types. It preserves scalar let names used as opaque products.
+This heuristic permits at most 12 templates, 12 binders per template, 32 observed
+vectors, 32 new bounds, and 128 attempts with at most 8 additive patterns each.
+Premise construction has depth 4. Explicit-fact alias filtering conservatively
+excludes expressions beyond depth 8 or 256 visited nodes.
+
+A separate metric extension uses distance nonnegativity, symmetry, self-distance,
+and triangle inequalities in pseudometric spaces. It collects at most 8 points total
+from the goal and selected comparisons, then checks scalar consequences with
+`linarith`. Space instances and recognized comparisons determine routing. If a
+metric attempt fails, it restores the proof state and continues through the norm
+pipeline. Both extensions are bounded heuristics; the paper's real-core theorem
+is unchanged.
+
+Norm decompositions use the same certificate builder and proved lemmas; the
+metric path uses proved distance lemmas and checked scalar arithmetic.
+No additional axioms, `sorry`, `unsafe`, or `native_decide` are used in the tactic.
+
+## Paper and evaluation
+
+The [paper source and build instructions](paper/README.md) produce a short
+NeurIPS workshop-style PDF, with checked Lean examples and technical appendices.
+The [paper plan](docs/PAPER-PLAN.md) states the agreed scope and success criteria.
+
+Expansion work has a [verified local patch](benchmarks/expansion/README.md)
+that saves **310 net code lines** across **87 replacements in 46 files**.
+The original proof blocks use 582 code lines; replacements use 226, and 46
+added imports are charged. The final targeted follow-up processed 885 files:
+875 completed, ten remain incomplete, and 158 isolated proposals were checked.
+The patch combines census proposals with replacements composed outside the census.
+AI coding agents helped develop and review the source edits.
+Forty predeclared paired measurements give a **1.072× speedup** in warm Lean
+compilation across all 46 affected files, with a conditional 95% block-BCa
+interval of **1.067–1.081×**. Mean pass time decreases from **131.19 to 122.33
+seconds**, including tactic search, imports, and fresh compiler outputs.
+Seven files became slower and remain in the aggregate.
+The interval assumes independent, representative four-pair blocks. Machine
+conditions were observed through snapshots; ordinary background activity was
+uncontrolled. Native-library setup is recorded separately.
+
+The historical local mathlib patch has **16 replacements in 10 files**. It removes
+**41 net code lines**: 67 proof lines become 16, with 10 added imports and no
+helpers. The census processed all 8,637 tracked files; 27 file outcomes remain
+incomplete. These are local patch savings; the patch has not merged into mathlib.
+
+For that historical patch, forty predeclared paired measurements give a **1.105× speedup** in warm Lean
+compilation of the affected files (95% block-bootstrap interval
+**1.095–1.112×**). Mean pass time decreases from 34.82 to 31.51 seconds. Timing
+includes tactic search and every affected file. It includes the effect of native
+imports; cold native-build cost was not fully recorded. The interval assumes
+independent, representative timing blocks.
+
+See [the current source results and scope](benchmarks/expansion/RESULTS.md),
+[the historical results](benchmarks/FINAL-RESULTS.md),
+[the expanded paper](paper/output/pdf/paper.pdf), and
+[harness documentation](scripts/README.md). The
+[earlier prototype pilot](benchmarks/RESULTS.md) remains archived: it saved
+36 net lines and compiled 6.3% slower. It uses an earlier implementation and
+workload.
+
+The release keeps compact evidence and checked compressed transports in Git.
+Deep raw census and intermediate verification archives remain local and are
+Git-ignored; see [evidence packaging](docs/CENSUS-ARCHIVE.md).
+
+## Project files
 
 | File | Role |
 | --- | --- |
-| `NormArith/Search.lean` | Exact rational Gauss–Jordan elimination and bounded subset search |
-| `NormArith/Certificate.lean` | Proved lemmas for scaling, addition, and finite certificates |
-| `NormArith/Tactic.lean` | Read expressions, search, check vector identities, and finish scalar arithmetic |
-| `NormArithTest/` | Algorithm tests, certificate tests, successful proofs, and expected failures |
-| `benchmarks/` | Pinned mathlib candidates, discovery results, and proof replacements |
-| `scripts/benchmark.py` | Source-checked patch generation and paired full-file compilation |
-| `docs/UPSTREAM.md` | Concrete route from this prototype to a mathlib PR |
-| `docs/REFERENCES.md` | Isabelle, mathlib APIs, and potential real-proof benchmarks |
+| `NormArith/Search.lean` | Exact rational elimination, short search, and finite reference enumeration |
+| `NormArith/Certificate.lean` | Proved norm-certificate lemmas |
+| `NormArith/Metric.lean` | Checked distance constraints on a bounded set of points |
+| `NormArith/Tactic.lean` | Recognition, local facts, normalization, search, and checked proof construction |
+| `NormArithTest/` | Search, certificate, integration, and paper checks |
+| `benchmarks/` | Final result summary and archived prototype measurements |
+| `artifacts/` | Validated census archives, timing evidence, and independent checks |
+| `scripts/` | Census and paired full-file measurement tools |
+| `paper/` | LaTeX, bibliography, generated evidence, language audit, and PDF build |
+| `docs/adr/` | Scope and evaluation decisions |
 
-The search proposes coefficients. The frontend checks the corresponding identity
-with `module`, applies the proved certificate lemmas, and closes scalar arithmetic
-with `norm_num` and `linarith`. Failed candidates restore the proof state.
-No additional axioms, `sorry`, `unsafe`, or `native_decide` are used.
-
-## Scope and next milestones
-
-Vector addition, subtraction, negation, zero, and rational **real** scalar
-expressions are recognized. Write `(2 : ℝ) • x`, not a natural-number scalar,
-when you want scalar normalization. Other expressions are opaque atoms.
-Integral decomposition coefficients use repeated addition and negation, requiring
-only a seminormed additive commutative group. Fractional coefficients require a
-real normed-space structure.
-Reducible aliases and `let` definitions are not automatically unfolded.
-Strict goals, normed-algebra products, symbolic scalar coefficients, and discovery
-of new source bounds are outside the initial scope.
-
-Search examines at most the first 12 supplied bounds, subsets of size at most 3,
-128 subsets total, and 16 candidate results. Limits are in `Search.Config`.
-Bounds are considered in the supplied order. The procedure is intentionally
-incomplete, and it can miss a proof even when a suitable decomposition exists.
-
-Suggested next steps:
-
-1. Expand the documented mathlib candidate search and test more proof replacements.
-2. Improve normalization, search limits, and diagnostics as those examples require.
-3. Investigate compilation costs using the recorded affected-file measurements.
-4. Discuss the measured result with mathlib contributors, then prepare a focused PR.
-
-See [PLAN.md](docs/PLAN.md) for the agreed initial scope and implementation plan,
-and [EVALUATION.md](docs/EVALUATION.md) for measurement and reporting rules.
-
-See [UPSTREAM.md](docs/UPSTREAM.md) for placement, review, and AI-assistance policy.
-This starter was generated with ChatGPT. Understand and review the code before
-contributing it, disclose the assistance, and write community comments yourself.
-
-License: Apache-2.0. Isabelle ML code is not bundled.
+[UPSTREAM.md](docs/UPSTREAM.md) describes the route to a mathlib contribution.
+This is an independent implementation informed by existing norm-arithmetic
+methods; Isabelle ML code is not bundled. License: Apache-2.0.

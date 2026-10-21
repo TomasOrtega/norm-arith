@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "nonmeasurement_environment_checks_passed",
+  "checked_at_utc": "2026-10-21T14:01:21.519998+00:00",
+  "toolchain": "leanprover/lean4:v4.36.0-rc1",
+  "lean_version": "Lean (version 4.36.0-rc1, arm64-apple-darwin24.6.0, commit c9afcddf514a6772bd4d649f7cfc04eff0b9f15e, Release)",
+  "lake_version": "Lake version 5.0.0-src+c9afcdd (Lean version 4.36.0-rc1)",
+  "python_version": "3.15.0",
+  "cpu_count": 14,
+  "available_disk_bytes": 339657957376,
+  "executables": {
+    "lean": {
+      "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/bin/lean",
+      "bytes": 49968,
+      "sha256": "a4c5d3dfc1672faf014e59bd17724035259ff0d22a4ffbdf5a75e142f564817e"
+    },
+    "lake": {
+      "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/bin/lake",
+      "bytes": 51664,
+      "sha256": "a0e516de0ba03a26cb90c80f06666022ef9de3f0943f8b26e9b902d229b43ebe"
+    },
+    "python": {
+      "path": "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/bin/python3.15",
+      "bytes": 34640,
+      "sha256": "1955899cb535256cfa477d926d016819e52e747984722c44f76e39a4950fee0e"
+    },
+    "lake_launcher": {
+      "path": "/Users/to1717/.elan/bin/lake",
+      "bytes": 5536320,
+      "sha256": "8754858b6549a9b06f4a019e7145a5e1e19f933983734388920a10781a7537db"
+    }
+  },
+  "native_libraries": {
+    ".lake/build/lib/libnorm_x2darith_NormArith.dylib": {
+      "bytes": 719744,
+      "sha256": "65203ed3255e063384c4c7dd93ab99c72b0c835d650884ef24ef09ac6823201e"
+    }
+  },
+  "measurement_started": false,
+  "waiting_for": [
+    "final_selection_and_combined_verification",
+    "root_QUIET_START"
+  ]
+}

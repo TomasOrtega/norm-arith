@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "block_pairs": 4,
+  "rationale": "Retain the predeclared default of four adjacent paired passes per block and 40 confirmatory pairs. The speed-level-blinded 24-pair pilot has paired-log-ratio autocorrelations 0.083, 0.011, 0.144, and 0.036 at lags one through four, without sustained positive dependence. The four-pair block lag-one value 0.323 is based on only six pilot blocks; the eight-pair estimates use only three and do not establish better independence. The measurement agent recommended eight-pair blocks as a conservative response to that persistence and differential half-run drift; the owner and independent blinded reviewer retained the default because doubling block length does not cure nonstationarity. Observed half-run relative duration changes were -0.024688148540579435 for original and -0.0070313826804246915 for replacement, with paired-log-ratio change -0.017481542895687582. The interval remains conditional on independent representative blocks. All files and samples are retained; no speed level, confidence interval, significance, or pilot absolute duration was inspected for this decision.",
+  "pilot_report": {
+    "path": "pilot/report.json",
+    "sha256": "a32ddd4b7b5122d78f5f53b5c30ce2722ddda67600ce19d2f684c5f909d712d5"
+  },
+  "pilot_measurements": {
+    "path": "pilot/measurements.jsonl",
+    "sha256": "3a45cf89869d1fb0ec4edbba452f19362aa1802ddda6b85dad8c63236e8aafb0"
+  },
+  "speed_level_blinded": true,
+  "review_inputs": {
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021/pilot-calibration-review.json": "8a35cf50f394aaebbc32ef398a9e186e0e2380b0ac549655d760be538d656332"
+  },
+  "review_source_sha256": "f0af353f37a997aed661c30664cab3b5084dfcc201d3c0b0fbadcc5bb40ca191",
+  "predeclared_confirmatory_pairs": 40
+}

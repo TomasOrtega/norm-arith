@@ -1,0 +1,13 @@
+{
+  "tactic_implementation_code_lines": 847,
+  "census_implementation_code_lines": 470,
+  "scope": "Implementation cost recorded separately from the Mathlib proof patch; no whole-repository line reduction claim.",
+  "source_sha256": {
+    "NormArith.lean": "3e21896ccac8fb1d5c04e9a9903a2079a045ef3230bc784d23a02821b2a12c67",
+    "NormArith/Census.lean": "3759e281a3a6dd72a248dc79599ce3977b614389174a56d7c4f8f679cd7c1dc6",
+    "NormArith/Certificate.lean": "3d944608f71ee05fda46c2347488e72d37e2635d578f84ce412177a22b42c516",
+    "NormArith/Metric.lean": "4987a96a314ef53daa83868c5a772e133899efbb81b80e9d88792581629deb0f",
+    "NormArith/Search.lean": "10cc53acad6c6670000e78621ebff2a90613373228aad93663cb1b589ad1f358",
+    "NormArith/Tactic.lean": "27b311a82a893e3857b0d4bdeffbe8bb8b0ae323580f284d171f8d2e1e9d18ba"
+  }
+}

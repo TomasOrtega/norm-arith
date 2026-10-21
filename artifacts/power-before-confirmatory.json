@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-10-20T22:48:06.567978+00:00",
+  "power_source": "AC Power",
+  "battery_percent": 92,
+  "low_power_mode": 0,
+  "final_verifier_inputs_and_outputs_unchanged": true,
+  "pilot_complete_pairs": 24,
+  "next_confirmatory_pairs": 40
+}

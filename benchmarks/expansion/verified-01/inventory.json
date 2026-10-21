@@ -1,0 +1,7 @@
+{
+  "selection-summary.json": "6ef39fdc7632a729d13267ad1fc4c1a7b37d01bd16613f12cd47f0b71ee40aea",
+  "verification-receipt.json": "5bea6b73b73c15842d359d6e19d1e269131d072b2d625b9e3468e9b0a3f5e16e",
+  "manifest.json": "4df3827339d1bc152a59bb714311ba0c4b97d8d850b62255cb3062284f2ce806",
+  "selection.jsonl": "3991974f96ef05c001e312115a7a70b8bfc3bc2ddadf9d9cce16dc14429bead0",
+  "mathlib.patch": "144dd660cd914935e0e30a77895979efc6985c98882f7e3c8439eafc16fe7411"
+}

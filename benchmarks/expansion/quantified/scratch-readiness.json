@@ -1,0 +1,35 @@
+{
+  "status": "scratch-correctness-checks-green",
+  "source_sha256": "b90e74ffe45b812a28f74945ab8b2b173f40b4a58aabf9793fef1c8eebcb212d",
+  "candidate_tactic_sha256": "0d10c0764ef192b5872c95b130aecf1e42569027fa96a0452ce159b611586571",
+  "regression_count": 26,
+  "production_changed": false,
+  "scope": "Bounded quantified norm-bound specialization with checked exact/And/scalar-linear premises. Not quantified completeness. Scratch interpreter correctness only; no native speed claim.",
+  "caps": {
+    "templates": 12,
+    "forall_binders": 12,
+    "observed_vectors": 32,
+    "new_facts": 32,
+    "attempts": 128,
+    "patterns_per_attempt": 8,
+    "pattern_additive_depth": 8,
+    "premise_And_depth": 4,
+    "alias_depth": 8,
+    "alias_nodes": 256
+  },
+  "red_logs": [
+    "quantified-red.log",
+    "quantified-additive-control-red.log",
+    "quantified-distance-control-red.log",
+    "quantified-alias-instance-red.log",
+    "quantified-ordinary-ball-red.log",
+    "quantified-variable-bound-red.log"
+  ],
+  "green_log": "quantified-variable-bound-green.log",
+  "whole_file_report": "corpus/report.json",
+  "source_paths": [
+    "Tactic.candidate.lean",
+    "Expansion.candidate.lean"
+  ],
+  "review_patch": "quantified-production.patch"
+}

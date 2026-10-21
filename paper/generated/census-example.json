@@ -1,0 +1,28 @@
+{
+  "status": "selected_combined_source_verified",
+  "candidate_id": "manual-strong-law-sums",
+  "path": "Mathlib/Probability/StrongLaw.lean",
+  "declaration": "ProbabilityTheory.strong_law_ae_of_measurable",
+  "fragment": null,
+  "source_lines": [
+    760,
+    780
+  ],
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "census_protocol_hash": null,
+  "targeted_protocol_hash": "d90d187d8f3a82f59408935a743830a52cb26451cd2a799813bb86e37b0e1975",
+  "combined_patch_sha256": "d9489b95183ca8f1dc693abc4355c2ff897cc5726f6f56ebaa48d58cb46b7bef",
+  "original_sha256": "2e35cadb09cea58a6e4afe592db6fb4c0bdb33f1416b82a1a08434f5120819d4",
+  "replacement_sha256": "d71a59dcd4bfd6947d153725762e012ea28f0a546986164bca2ec91272474a4c",
+  "original_file_sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+  "replacement_file_sha256": "9f8f6164f85ad2cb8f02fa5bb4daa890dcd8668093f3e7a833d2a4b102b8c7c6",
+  "compiler_artifact_sha256": {
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.c": "e0fe9bafd124543e4ff7b1d18da244627bb6812d19a56caf72df0cab90917359",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.ilean": "b1adb0a9c8cfed16925c5e4694f69925dc786bc35cae15287eb05bb5e56262af",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.ir": "e7bf6f3e3e6d7fa0ae4d146076fc0968cedf74025f8100ac6a123aaf2ea105bc",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.ir.sig": "d4af3dd51a2ab9494f1e08e9a5fd72e906667ede829207db4e9b681c1c0f78eb",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.olean": "bb5eefecf01e2674aad8a600da5b8c880c21d98d2ba77539670dce6480a4c1f6",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.olean.private": "ac4f5c3bf80ddf3f5ddc0cd967391d2be4a2a62c35a121c6a7cd2a00f4ac5816",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-09/artifacts/Mathlib/Probability/StrongLaw.olean.server": "fca2176cd0eb768fe94ccd656d881985edd93d08a5e371cbf6b6042a481b7624"
+  }
+}

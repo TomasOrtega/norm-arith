@@ -1,0 +1,2 @@
+NormArithTest/Expansion.lean:202:2: error: norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete
+NormArithTest/Expansion.lean:207:2: error: norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete

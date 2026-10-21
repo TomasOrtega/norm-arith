@@ -1,0 +1,16 @@
+E
+======================================================================
+ERROR: test_portable_default_needs_no_lean_source_or_lake (test_build.PortableBuildTests.test_portable_default_needs_no_lean_source_or_lake)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_build.py", line 33, in test_portable_default_needs_no_lean_source_or_lake
+    build.main()
+    ~~~~~~~~~~^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/build.py", line 136, in main
+    raise SystemExit("NormArithTest/Paper.lean is required for a checked build")
+SystemExit: NormArithTest/Paper.lean is required for a checked build
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)

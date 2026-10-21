@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_zero_exit_validation_failure_cannot_enter_paired_totals (scripts.test_benchmark.ConfirmatoryTests.test_zero_exit_validation_failure_cannot_enter_paired_totals)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_benchmark.py", line 383, in test_zero_exit_validation_failure_cannot_enter_paired_totals
+    with self.assertRaisesRegex(benchmark.BenchmarkError, "failed"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: BenchmarkError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

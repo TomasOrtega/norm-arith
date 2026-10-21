@@ -1,0 +1,79 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 32,
+    "no_line_saving_untried": 28,
+    "success": 1
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 32,
+      "no_line_saving_untried": 28,
+      "success": 1
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 18,
+    "eligible": 61,
+    "errors": 0,
+    "normGoals": 279,
+    "outsideBody": 0,
+    "proofNodes": 1225,
+    "synthetic": 0,
+    "tacticNodes": 1539,
+    "termNodes": 5729,
+    "unlocatedNodes": 3656,
+    "unresolved": 2
+  },
+  "directory": "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01",
+  "eligible_observations": 61,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/events.jsonl": "0b9997f30bec1d16a856c6f6bf251562640e03bfe61e2411cd54b6fbe46808a1",
+    "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/proposals.jsonl": "4794f8654bad3b0c47b3033e1898410fb86cde8d8d280dc93131952b4cd536f5",
+    "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/request.json": "5fb2b2afaffdd21aaeb2f8e4b284064fea64bdbf7ad2d7be3a7b18a13520cb56",
+    "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral.json.gz": "168c88a8ec2a5288d5ab84bd56ef3da65c86433266972287e85e226dd3e877ea",
+    "setups/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral.metadata.json": "b294a63ad5fe4d18b7d2b9a3799e843734bd26218f353c7c809e357436f2de9e",
+    "setups/batch-a641e4c6bd06e6d6.metadata.json": "61e9ef37122b201adb81ad8b2e315e093c95ed7372581472e677f7a61a6017f8"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 6.964977625000756,
+    "peak_rss_bytes": 3738075136,
+    "returncode": 0,
+    "system_seconds": 2.046836,
+    "timed_out": false,
+    "user_seconds": 4.39064
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.SpecialFunctions.FrullaniIntegral",
+  "original_eligible_fragment_counts": {
+    "core": 61
+  },
+  "original_observation_fragment_counts": {
+    "core": 101,
+    "outside_fragment": 178
+  },
+  "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+  "proposal_file": "files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-a641e4c6bd06e6d6.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "f4138826a7d3e7b9e763defa952f8149afa788ec22664759d3277b601564b627",
+    "timed_out": false
+  },
+  "setup_sha256": "f4138826a7d3e7b9e763defa952f8149afa788ec22664759d3277b601564b627",
+  "source_sha256": "201735278f26a2dc9e7567524ffdb276428830f6f8008cca0e6cd3ff1f5b8fa9",
+  "status": "complete",
+  "successful_proposals": 1
+}

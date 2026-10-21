@@ -1,0 +1,83 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 11,
+    "no_line_saving_untried": 105
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 9,
+      "no_line_saving_untried": 77
+    },
+    "upper_bound_extension": {
+      "failed": 2,
+      "no_line_saving_untried": 28
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 57,
+    "eligible": 116,
+    "errors": 0,
+    "normGoals": 417,
+    "outsideBody": 0,
+    "proofNodes": 4700,
+    "synthetic": 0,
+    "tacticNodes": 4934,
+    "termNodes": 20271,
+    "unlocatedNodes": 9394,
+    "unresolved": 52
+  },
+  "directory": "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01",
+  "eligible_observations": 116,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/events.jsonl": "084e4e3b566039343befcd2371db47e1648eb6df57fd1e309089a4679504a046",
+    "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/request.json": "29b07e5a58a481eb7fe41fe803a8ce1ec91713d168c968f10f2fddc13814bc61",
+    "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Function.Jacobian.json.gz": "6e1cbda74581b7a265bbdc60c04cfc597fef607072f2ed66ca3e851b8fa04629",
+    "setups/Mathlib.MeasureTheory.Function.Jacobian.metadata.json": "b12a002816134ea15e66c51f6746fc1e86b46e04a9a48b33a3abb6f139cd2c86",
+    "setups/batch-499d3fe0d2b14018.metadata.json": "ecac92010d33128d341a069524e86060c1773b0e7326fde8e6df2d4ac8627fb9"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 12.234980124980211,
+    "peak_rss_bytes": 4197695488,
+    "returncode": 0,
+    "system_seconds": 1.615025,
+    "timed_out": false,
+    "user_seconds": 10.440098
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.MeasureTheory.Function.Jacobian",
+  "original_eligible_fragment_counts": {
+    "core": 86,
+    "upper_bound_extension": 30
+  },
+  "original_observation_fragment_counts": {
+    "core": 121,
+    "outside_fragment": 243,
+    "upper_bound_extension": 53
+  },
+  "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-499d3fe0d2b14018.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "a4f42261c15181a39e36928af28b8fa29f0bef23c2ee4b1ea508739cb054fb8b",
+    "timed_out": false
+  },
+  "setup_sha256": "a4f42261c15181a39e36928af28b8fa29f0bef23c2ee4b1ea508739cb054fb8b",
+  "source_sha256": "b8c17cd35ce102bbe761d2289fd2c94c8ddaa7e557a466bb2640b4c13e79bea0",
+  "status": "complete",
+  "successful_proposals": 0
+}

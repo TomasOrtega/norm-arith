@@ -1,0 +1,18 @@
+{
+  "affected_files": 43,
+  "discovery_scope": "targeted_followup_885_selected_875_complete_10_incomplete_not_full_coverage",
+  "every_raw_archive_member_reopened_and_rehashed": true,
+  "evidence_stage": "intermediate_source_verified_expanded_patch_untimed",
+  "fresh_artifacts_rehashed": 301,
+  "independent_audit_stage_override": "No override: another targeted discovery pass is still running.",
+  "net_code_lines_saved": 304,
+  "patch_sha256": "aaf99c9ba066023cf538091d8c72647654e4f2a56d2787c8b7ad5f38ae4d23c5",
+  "raw_verification_archive_bytes": 31967890,
+  "raw_verification_archive_sha256": "a6843c7fee3a1ef51a6e95b809838966dd08d3212870a736845ff773e3cd265d",
+  "raw_verification_members": 924,
+  "schema_version": 1,
+  "selected_replacements": 82,
+  "status": "independently_verified_expanded_patch",
+  "targeted_discovery_archive": "artifacts/expansion/discovery-v3-archive/archive.json",
+  "timing_status": "untimed_expansion_preserved_baseline_speed_not_transferable"
+}

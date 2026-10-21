@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-10-21T03:40:29.089851+00:00",
+  "action": "Stop intermediate discovery and terminate only the active Condensed.Light.Sequence extraction after repeated prior timeout",
+  "reason": "Original census exhausted 1800s on the same file before any observations; the intermediate run has processed all906 first-tier files. Quantified and metric extensions are ready for the next run. Preserve all completed files and incomplete outcomes; do not present this run as completed census.",
+  "active_request": "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Condensed.Light.Sequence/attempt-02/request.json",
+  "next_scope": "Files with original observed norm or distance goals; retain old incomplete-file ledger separately."
+}

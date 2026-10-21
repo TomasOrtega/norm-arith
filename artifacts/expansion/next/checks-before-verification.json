@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-10-21T13:50:59.109228+00:00",
+  "lean_command": "lake build --wfail NormArith NormArithTest norm_arith_census",
+  "lean_status": "passed",
+  "python_command": "python3 -m unittest discover -s scripts",
+  "python_tests_run": 109,
+  "python_tests_skipped": 3,
+  "python_status": "passed",
+  "logs": {
+    "artifacts/expansion/next/norm-arith-next-python-tests.log": {
+      "sha256": "3c228e2c750a7272f8f2b0df3d6458e8ccc7f96497ce571dd5856190b728fc39"
+    },
+    "artifacts/expansion/next/norm-arith-next-production-green.log": {
+      "sha256": "8ee1a1a6920c4dd6efc004455275f95d1b8400199971dc8933717eadb47f9853"
+    }
+  },
+  "note": "Pre-verification checks; no timing claim."
+}

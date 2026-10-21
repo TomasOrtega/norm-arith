@@ -1,0 +1,91 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 22,
+    "no_line_saving_untried": 86,
+    "success": 1
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 3,
+      "no_line_saving_untried": 16
+    },
+    "core": {
+      "failed": 4,
+      "no_line_saving_untried": 58,
+      "success": 1
+    },
+    "upper_bound_extension": {
+      "failed": 15,
+      "no_line_saving_untried": 12
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 96,
+    "eligible": 109,
+    "errors": 0,
+    "normGoals": 485,
+    "outsideBody": 0,
+    "proofNodes": 4544,
+    "synthetic": 0,
+    "tacticNodes": 4584,
+    "termNodes": 15000,
+    "unlocatedNodes": 7768,
+    "unresolved": 33
+  },
+  "directory": "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01",
+  "eligible_observations": 109,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/events.jsonl": "cf99bc650362867ea516cba37af8b6d25cca1b5f5c345e3396951cd94895aa3c",
+    "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/proposals.jsonl": "303c36bf89a6ecde4ce24902f69523395717b99c428fb3afc01e4a3ec4d90d5a",
+    "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/request.json": "3af637abd3ac3e0ca6ffe70dd063fc3b31db2751e75ebcd0d32dd3ec6dc2f6ec",
+    "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass.json.gz": "88685706188d2a9aa21a0cf142a11328ddd7cfb45f05f4dd609df34c3c70590b",
+    "setups/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass.metadata.json": "774cd1994b92b1a97b986e512cc825bc0a231a523d623fd96695184adc7d4cb6",
+    "setups/batch-a641e4c6bd06e6d6.metadata.json": "61e9ef37122b201adb81ad8b2e315e093c95ed7372581472e677f7a61a6017f8"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 25.894942541985074,
+    "peak_rss_bytes": 4021649408,
+    "returncode": 0,
+    "system_seconds": 1.8986159999999999,
+    "timed_out": false,
+    "user_seconds": 23.109048
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 19,
+    "core": 63,
+    "upper_bound_extension": 27
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 24,
+    "core": 95,
+    "outside_fragment": 306,
+    "upper_bound_extension": 60
+  },
+  "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+  "proposal_file": "files/Mathlib.Analysis.SpecialFunctions.Elliptic.Weierstrass/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-a641e4c6bd06e6d6.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "5abc5abbbbf3abee600415d34048e825bb926333191244fd0b933d6412f6a6ff",
+    "timed_out": false
+  },
+  "setup_sha256": "5abc5abbbbf3abee600415d34048e825bb926333191244fd0b933d6412f6a6ff",
+  "source_sha256": "9c4d9e0afc86a5d8f750aa8fd9b7b578897a1f7126b1f4de34faa504aad95dff",
+  "status": "complete",
+  "successful_proposals": 1
+}

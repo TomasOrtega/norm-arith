@@ -1,0 +1,88 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 5,
+    "no_line_saving_untried": 19
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 3,
+      "no_line_saving_untried": 14
+    },
+    "core": {
+      "failed": 1,
+      "no_line_saving_untried": 5
+    },
+    "upper_bound_extension": {
+      "failed": 1
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 19,
+    "eligible": 24,
+    "errors": 0,
+    "normGoals": 149,
+    "outsideBody": 0,
+    "proofNodes": 900,
+    "synthetic": 0,
+    "tacticNodes": 1086,
+    "termNodes": 3189,
+    "unlocatedNodes": 1619,
+    "unresolved": 6
+  },
+  "directory": "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01",
+  "eligible_observations": 24,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/events.jsonl": "b697086438225a1d746a763237051ee02644eb36fd4add62586c26039228bda0",
+    "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/request.json": "571d61a67acee99a3638ed4bb53b334249be81cb14f603f5ed64d8788d4a1910",
+    "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.Asymptotics.SpecificAsymptotics.json.gz": "d8653434602610e52e9564dc2d3849044045be40d9ad0696ce4e4550c5dc8f76",
+    "setups/Mathlib.Analysis.Asymptotics.SpecificAsymptotics.metadata.json": "34366c69ac034ea9e2ca2af20424d92a693e4b2e1b041b25cd54c339025afdad",
+    "setups/batch-9edcfb34e07595a8.metadata.json": "66932c32a3f0d645938f39cc084d45d4d34c0b1311e6a419340e415b1fbcc9e0"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 4.5338489589921664,
+    "peak_rss_bytes": 3217883136,
+    "returncode": 0,
+    "system_seconds": 1.670828,
+    "timed_out": false,
+    "user_seconds": 2.629385
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.Asymptotics.SpecificAsymptotics",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 17,
+    "core": 6,
+    "upper_bound_extension": 1
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 28,
+    "core": 9,
+    "outside_fragment": 111,
+    "upper_bound_extension": 1
+  },
+  "path": "Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean",
+  "proposal_file": "files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-9edcfb34e07595a8.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "801fd7bb96de038128cf0a54fb7499e9388ba490ffca6b21048cb769b353c0e1",
+    "timed_out": false
+  },
+  "setup_sha256": "801fd7bb96de038128cf0a54fb7499e9388ba490ffca6b21048cb769b353c0e1",
+  "source_sha256": "c0757881f43471ea4bb41d6b0c2355ab88270dd24d2d84436cf38cb4f6058b71",
+  "status": "complete",
+  "successful_proposals": 0
+}

@@ -1,0 +1,79 @@
+{
+  "attempt": 2,
+  "attempt_status_counts": {
+    "failed": 4,
+    "no_line_saving_untried": 33,
+    "success": 2
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 4,
+      "no_line_saving_untried": 33,
+      "success": 2
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 132,
+    "eligible": 39,
+    "errors": 0,
+    "normGoals": 705,
+    "outsideBody": 0,
+    "proofNodes": 3394,
+    "synthetic": 0,
+    "tacticNodes": 5265,
+    "termNodes": 13657,
+    "unlocatedNodes": 8724,
+    "unresolved": 16
+  },
+  "directory": "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02",
+  "eligible_observations": 39,
+  "evidence_sha256": {
+    "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/events.jsonl": "b128d64152f5ba313c43293d201ca4f8e26f2f0a6fe1054f09c646864b61c14c",
+    "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/proposals.jsonl": "69c2503c7d75f97d7140fb18fe781b0e1fbf6336b5d0b5d8fdd7c4135a678d3c",
+    "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/request.json": "9c0f107b838483750f0e450904906db9b3a20b43576804efd780da6138bd1613",
+    "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Topology.MetricSpace.GromovHausdorff.json.gz": "9188e9a10f05f57e493cbdbeb48de1015c791b7b7de60f76fdb300ff26d102d7",
+    "setups/Mathlib.Topology.MetricSpace.GromovHausdorff.metadata.json": "89a49761b71278f6988e509cce92128b51d8ea6ed29385b23e16ee8a8dc3d4f4",
+    "setups/batch-8054d2827785f0a8.metadata.json": "137233ded33ca8f7dd0e1dfa3d2725ca4056ae068157676647e2514e873aa14d"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/request.json"
+    ],
+    "elapsed_seconds": 16.37936775002163,
+    "peak_rss_bytes": 5655265280,
+    "returncode": 0,
+    "system_seconds": 1.591234,
+    "timed_out": false,
+    "user_seconds": 14.697859
+  },
+  "limits": {
+    "file_timeout_seconds": 1800,
+    "memory_mb": 8192
+  },
+  "module": "Mathlib.Topology.MetricSpace.GromovHausdorff",
+  "original_eligible_fragment_counts": {
+    "core": 39
+  },
+  "original_observation_fragment_counts": {
+    "core": 61,
+    "outside_fragment": 644
+  },
+  "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+  "proposal_file": "files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/proposals.jsonl",
+  "resource_tier": 2,
+  "setup": {
+    "batch": "setups/batch-8054d2827785f0a8.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "31bb9826982ed11a5a096673e02f123c59be2f2217f05753b27fbfb3f240d03e",
+    "timed_out": false
+  },
+  "setup_sha256": "31bb9826982ed11a5a096673e02f123c59be2f2217f05753b27fbfb3f240d03e",
+  "source_sha256": "38c553041fc37267e7cc43df230f07410a8b89da42d7191354403ac4b3efb990",
+  "status": "complete",
+  "successful_proposals": 2
+}

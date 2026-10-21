@@ -1,7 +1,38 @@
 # Research paper plan
 
-Status: scope interview. This extends the completed prototype evaluation; no new
-paper results or broader tactic guarantees have been established.
+Status: expanded study and paper complete. The release has a four-page main body,
+references, and technical appendices. The decisions below remain the design
+record. The independently verified final expansion saves 310 net lines
+in 46 files. Final targeted discovery completed with 875 complete files and ten
+explicit gaps. The expanded implementation and workload are frozen. The 24-pair
+pilot and 40-pair confirmation finished. The block choice was fixed from blinded
+diagnostics. Mean warm affected-file compilation time decreases from 131.19 to
+122.33 seconds: a 1.0724× ratio, with conditional 95% block-BCa interval
+[1.0669, 1.0814]. All 46 files and 40 pairs remain in the result, including seven
+slower files. The interval assumes independent, representative four-pair blocks;
+machine snapshots do not establish continuous performance conditions.
+
+The final manuscript has six Lean-checked examples, a current STE contextual
+review with declared exceptions, and a successful all-page visual review. The
+default offline build restores its checked evidence and reproduces all 17
+rendered pages without the original checkout or a Lean build. The
+[release receipt](../paper/output/release.json) and
+[independent claims review](../artifacts/expansion/final-review/final-claims.json)
+bind the completed paper to its evidence.
+
+The completed historical patch has 16 replacements in 10 files and saves 41 net code
+lines. Forty paired measurements give a 1.1051× warm affected-file compilation
+speedup, with a conditional 95% interval of [1.0953, 1.1124]. The census processed
+all 8,637 tracked files and records 27 incomplete outcomes. One affected file
+became slower and remains in the aggregate.
+
+The [historical paper archive](../artifacts/paper-baseline-41line/README.md) and
+[historical results](../benchmarks/FINAL-RESULTS.md) preserve that completed work.
+Independent line/statistics audits and a clean portable rebuild passed for that
+historical study. Its manuscript has a complete STE review with declared
+mathematical and research exceptions. Its timing includes native-import effects;
+cold native-build cost was not fully recorded. The current
+[LaTeX and rebuild instructions](../paper/README.md) target the expansion.
 
 ## Requested outcome
 
@@ -15,7 +46,7 @@ proof-line accounting.
 - Proof blocks decrease from 57 to 18 nonblank, noncomment lines: 39 fewer proof
   lines, or 36 after charging new imports.
 - Final paired measurements show 6.3% slower affected-file Lean compilation.
-- The current tactic uses explicit bounds, bounded rational decomposition search,
+- The prototype uses explicit bounds, bounded rational decomposition search,
   additive certificates, and real-scalar certificates for fractional coefficients.
 - Existing mathlib proofs remain the evaluation baseline. Preparation and helpers
   count toward replacement size; implementation costs are separate.
@@ -55,6 +86,9 @@ See [the measured results](../benchmarks/RESULTS.md).
 - Select the final combined patch by correctness and total net line reduction,
   with a deterministic overlap rule. Include every resulting affected file in
   the aggregate timing, including regressions.
+- Count normally formatted source. Fixed replacements use lines of at most
+  100 Unicode characters; wrapping a proof adds a charged line. Verify the
+  combined patch's source style before freezing the timing workload.
 - Require Lean-checked normalization and certificate soundness, plus a
   mathematical completeness proof in the paper. End-to-end Lean formalization
   of search completeness is outside the first paper's required deliverables.
@@ -95,10 +129,9 @@ sets the theorem and formalization obligations.
 [ADR-0008](adr/0008-normalized-core-and-shared-certificates.md) records the solver
 architecture.
 
-## Decisions to resolve next
+## Confirmed manuscript target and implementation
 
-Confirm the consolidated scope with a proposed four-page main body in the
-NeurIPS workshop style. The
+Use a four-page main body in the NeurIPS workshop style. The
 [MATH-AI 2026 call](https://mathai-2026.github.io/cfp/)
 uses four content pages, excluding references and supplementary material. Keep
 the main argument, theorem statements and proof sketch, and decisive evaluation

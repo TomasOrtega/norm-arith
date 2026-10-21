@@ -1,0 +1,77 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 2,
+    "no_line_saving_untried": 5
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 2,
+      "no_line_saving_untried": 5
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 8,
+    "eligible": 7,
+    "errors": 0,
+    "normGoals": 68,
+    "outsideBody": 0,
+    "proofNodes": 707,
+    "synthetic": 0,
+    "tacticNodes": 1302,
+    "termNodes": 1957,
+    "unlocatedNodes": 1670,
+    "unresolved": 8
+  },
+  "directory": "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01",
+  "eligible_observations": 7,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/events.jsonl": "feb9ab2053a6f56a6e2ea052294fa74770d0afaea11155ff0ad7eb5bb78634b0",
+    "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/request.json": "29b807b213df09caff897bc5a0a2f439a6895b546e99a923bbc8eceec29dee9d",
+    "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Measure.IntegralCharFun.json.gz": "c4676ad4d7beb77be26d6487fbb1a8025b8611fc1e723556e832d777e7e81950",
+    "setups/Mathlib.MeasureTheory.Measure.IntegralCharFun.metadata.json": "51f41fd459b36a6be5f3f139fe9fbd6268f879a3d3dc9fc862231146e8985278",
+    "setups/batch-6d47b72bfb559d77.metadata.json": "fb9a0588282eeb52c7b5922e5ab62765a3352f6ed72d47eb34039f59a02bba80"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 4.1739091250055935,
+    "peak_rss_bytes": 3709321216,
+    "returncode": 0,
+    "system_seconds": 1.453497,
+    "timed_out": false,
+    "user_seconds": 2.579388
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.MeasureTheory.Measure.IntegralCharFun",
+  "original_eligible_fragment_counts": {
+    "core": 7
+  },
+  "original_observation_fragment_counts": {
+    "core": 13,
+    "outside_fragment": 55
+  },
+  "path": "Mathlib/MeasureTheory/Measure/IntegralCharFun.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-6d47b72bfb559d77.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "6b2f35f047d4a2293ac097a29796fec96c7452aa3a27677d4f4136ab0d77a4e9",
+    "timed_out": false
+  },
+  "setup_sha256": "6b2f35f047d4a2293ac097a29796fec96c7452aa3a27677d4f4136ab0d77a4e9",
+  "source_sha256": "95ff5e7f8870ec039479aceab2c3709c5b02052942f2512bcc17f4228c5dd200",
+  "status": "complete",
+  "successful_proposals": 0
+}

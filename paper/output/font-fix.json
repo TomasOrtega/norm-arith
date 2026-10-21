@@ -1,0 +1,27 @@
+{
+  "change": "Explicit regular, bold, italic, and bold-italic files for TeX Gyre Termes, TeX Gyre Heros, and JuliaMono.",
+  "regression": {
+    "red_status": "fail",
+    "red_missing_faces": [
+      "JuliaMono-Bold",
+      "JuliaMono-BoldItalic",
+      "JuliaMono-RegularItalic",
+      "TeXGyreHeros-Bold",
+      "TeXGyreHeros-BoldItalic",
+      "TeXGyreHeros-Italic",
+      "TeXGyreTermes-Bold",
+      "TeXGyreTermes-BoldItalic",
+      "TeXGyreTermes-Italic"
+    ],
+    "red_font_warning_count": 10,
+    "green_status": "pass",
+    "green_embedded_face_count": 12,
+    "green_font_warning_count": 0
+  },
+  "strict_validation": "The strict layout check rejects the saved real red font log and accepts the green integration and full-paper logs.",
+  "lean_validation": "Existing successful Lean check matches source and implementation hashes; no Lean command was run for this font-only rebuild.",
+  "pdf_sha256": "7ef24b1445e07d1346a52b75317231d24dd171bf7dac899d3f734984ec17af1d",
+  "main_pages": 3,
+  "total_pages_reviewed": 9,
+  "language_corpus_sha256": "98d8739b3cc99ae57908ce1f8a247bf3c1862a01435c0b9ed2671d917e253d06"
+}

@@ -1,0 +1,4 @@
+{
+  "metric-bounded-closed-ball": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this.",
+  "metric-diameter-closed-ball": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this."
+}

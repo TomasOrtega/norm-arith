@@ -1,0 +1,83 @@
+{
+  "attempt": 2,
+  "attempt_status_counts": {
+    "failed": 30,
+    "no_line_saving_untried": 176
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 5,
+      "no_line_saving_untried": 6
+    },
+    "core": {
+      "failed": 25,
+      "no_line_saving_untried": 170
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 130,
+    "eligible": 206,
+    "errors": 0,
+    "normGoals": 693,
+    "outsideBody": 0,
+    "proofNodes": 1669,
+    "synthetic": 0,
+    "tacticNodes": 2706,
+    "termNodes": 8328,
+    "unlocatedNodes": 5207,
+    "unresolved": 225
+  },
+  "directory": "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02",
+  "eligible_observations": 206,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/events.jsonl": "a070e080a9aa6630e39403a4a7cb3c0c2ffee4662dafc0b6e06576340a320e2f",
+    "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/request.json": "17f3d18f0275605d3b7fcd014b54961c1ed8e2d164a113a37b797f0cef47e431",
+    "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace.json.gz": "26bcd8901ec632914d5fe6a647bbf816f6fdf8ad88a86acf972d36f1e5f67818",
+    "setups/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace.metadata.json": "1535f5816529c4a003b00f8bedebdfc037c1d64328c19b3d2afccbb0c5370200",
+    "setups/batch-160e4c04d23898ab.metadata.json": "dfc121d96569c478763a6b87ee98e7756bbe9a210802d5fe73f1ab01c5117605"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/request.json"
+    ],
+    "elapsed_seconds": 10.235860167013016,
+    "peak_rss_bytes": 5149163520,
+    "returncode": 0,
+    "system_seconds": 1.653065,
+    "timed_out": false,
+    "user_seconds": 7.455637
+  },
+  "limits": {
+    "file_timeout_seconds": 1800,
+    "memory_mb": 8192
+  },
+  "module": "Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 11,
+    "core": 195
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 32,
+    "core": 359,
+    "outside_fragment": 302
+  },
+  "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace/attempt-02/proposals.jsonl",
+  "resource_tier": 2,
+  "setup": {
+    "batch": "setups/batch-160e4c04d23898ab.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "7da392cd8b9f5deaa89025f2f3a83610a56c728b5b798bcd65d60d40d46ff886",
+    "timed_out": false
+  },
+  "setup_sha256": "7da392cd8b9f5deaa89025f2f3a83610a56c728b5b798bcd65d60d40d46ff886",
+  "source_sha256": "dee90a5d3d51c2acedd4eaad4184c11e10ca2c2d6fe5827abb5f3301edfb2bad",
+  "status": "complete",
+  "successful_proposals": 0
+}

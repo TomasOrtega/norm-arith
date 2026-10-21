@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "verified_and_frozen",
+  "frozen_at_utc": "2026-10-20T23:47:28.175723+00:00",
+  "only_changed_field": "selection_status",
+  "verified_manifest_sha256": "5a9d04bcab0156a937ecbe4de7021ec697537069245c7567b40f345ed9543417",
+  "frozen_manifest_sha256": "63a285300df917604e480674aa41993e5e1109c376182c3f7943c30a4acc40e6",
+  "verification_report_sha256": "58b0765c47b48d1dc81758703b1492a0a68a2936ae633e9c60200247d8b9c77f",
+  "patch_sha256": "7b28986c3dd602fdf9dbb412175ac8266bcc30b0f3674624b8eaa06bcb523a52",
+  "files": 10,
+  "compiled_artifacts": 70,
+  "input_count": 10995,
+  "accounting": {
+    "candidate_count": 40,
+    "candidate_status_counts": {
+      "replace": 16,
+      "unchanged": 24
+    },
+    "proposed_replacements": 16,
+    "original_proof_lines": 67,
+    "replacement_proof_lines": 16,
+    "added_helper_lines": 0,
+    "added_import_lines": 10,
+    "net_proof_lines_saved": 51,
+    "net_lines_saved_including_imports": 41
+  }
+}

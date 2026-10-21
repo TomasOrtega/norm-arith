@@ -1,0 +1,85 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 101,
+    "no_line_saving_untried": 326,
+    "success": 2
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 50,
+      "no_line_saving_untried": 180,
+      "success": 2
+    },
+    "upper_bound_extension": {
+      "failed": 51,
+      "no_line_saving_untried": 146
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 223,
+    "eligible": 429,
+    "errors": 0,
+    "normGoals": 1282,
+    "outsideBody": 8,
+    "proofNodes": 2587,
+    "synthetic": 0,
+    "tacticNodes": 2580,
+    "termNodes": 31929,
+    "unlocatedNodes": 7567,
+    "unresolved": 121
+  },
+  "directory": "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01",
+  "eligible_observations": 429,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/events.jsonl": "d32f4e2d8408440f8f306ca97ca80089b11d326be474f14e416d3d10c9b87688",
+    "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/proposals.jsonl": "a5eab92e7af9fd8011d442583320ffdd8c4a762d2d96d707d8c8a8bff0249657",
+    "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/request.json": "0e77f304815987be88e9d3a30059be442aedfdaafdde316e07d651731ea00080",
+    "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.Normed.Module.Multilinear.Basic.json.gz": "331bc16db7b9150bd68ca8d16281601f9c43444557a000e1d75c20e4ec4a7a5b",
+    "setups/Mathlib.Analysis.Normed.Module.Multilinear.Basic.metadata.json": "d31cb88e8fe32ee9b09af5f57f6338824163054850fc65b72c74a10b06818ddc",
+    "setups/batch-7e159461316fb195.metadata.json": "d221416c3c9c7a7caf7b646a4681aa3520510ad1dcb81f21f71592854aa65f55"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 26.451727042003768,
+    "peak_rss_bytes": 2880585728,
+    "returncode": 0,
+    "system_seconds": 2.070881,
+    "timed_out": false,
+    "user_seconds": 23.93914
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.Normed.Module.Multilinear.Basic",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 232,
+    "upper_bound_extension": 197
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 345,
+    "outside_fragment": 638,
+    "upper_bound_extension": 299
+  },
+  "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+  "proposal_file": "files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-7e159461316fb195.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "31c31190aaa48ebbe020154e436de135227241bba702bfec0240a3f87f043925",
+    "timed_out": false
+  },
+  "setup_sha256": "31c31190aaa48ebbe020154e436de135227241bba702bfec0240a3f87f043925",
+  "source_sha256": "72bcb044cb13410220bdd0c73916db1c6a9abbe14cb3bd4982cf14c38d62258c",
+  "status": "complete",
+  "successful_proposals": 2
+}

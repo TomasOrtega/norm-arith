@@ -1,0 +1,8 @@
+{
+  "inputs": {
+    "artifacts/expansion/source-exclusions-05.json": "010268d6a81761960bfe2609feaae7caf50f53899c9e160310d12dfd1c0dd579",
+    "artifacts/expansion/source-exclusions-06.json": "b4d47daed6ebd858b5895740308f2721a98c7904ba227eda34b968cae3bee7c1"
+  },
+  "output_sha256": "db83c25aea68f5a016689522f91229ceaa0f26ae5e0a3e0523f20c2189b365f1",
+  "excluded_candidates": 3
+}

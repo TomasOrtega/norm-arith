@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "retained_pre_pilot_test_log_verified",
+  "packaged_at_utc": "2026-10-21T01:14:56.979693+00:00",
+  "test_command": "python3 artifacts/test_verify_style_statistics.py",
+  "test_count": 5,
+  "log": {
+    "path": "artifacts/style-statistics-tests.log",
+    "sha256": "bcedfe4ca1b5e06e0dd1cd203fccb6515c6ca301f4b658819beef94f37ccd9de"
+  },
+  "checker": {
+    "path": "artifacts/verify_style_statistics.py",
+    "sha256": "7b8e242ffd215bf117bc4e49ac671498d171670a6099ab155d00754277b314fa",
+    "bytes": 13453
+  },
+  "test_source": {
+    "path": "artifacts/test_verify_style_statistics.py",
+    "sha256": "3f5a9057e11a01f7fe6d278a4ac87383bc4d03781950bda18d7c9b398e453e09",
+    "bytes": 7910
+  },
+  "source_hash_comparison": "Current checker and test bytes equal the source hashes recorded at pre-pilot readiness.",
+  "scope": "Retains the successful synthetic test run performed before the pilot. No tests rerun during final packaging; this receipt is not a new execution log.",
+  "coverage": [
+    "block lengths2/4/8 known mean ratio and block totals",
+    "symmetric whole-block jackknife acceleration",
+    "complete synthetic command-line cases",
+    "required and mismatched block argument",
+    "coherent missing/duplicate/order/report-tamper/failed-record rejection"
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "scope": "Human proof-clarity review, not combined source verification or timing evidence.",
+  "selection_manifest": ".lake/expansion-combined-selection-07/manifest.json",
+  "selection_manifest_sha256": "a72f1b725bfaf827bb3a8e4db50570be915788ba4a85cc0fbf8c1449685ea617",
+  "previous_manifest": ".lake/expansion-combined-selection-05/manifest.json",
+  "previous_manifest_sha256": "f5159eb13b461273b407721b1887667e44c435f66eeac3e7baa7449fd6daa0a9",
+  "selected_fragments": 74,
+  "selected_files": 40,
+  "newly_reviewed_count": 24,
+  "newly_reviewed": [
+    {
+      "id": "census-eb23be19fdb828e64d98",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "declaration": "HasFPowerSeriesWithinOnBall.uniform_geometric_approx'",
+      "start_line": 693,
+      "end_line": 694,
+      "fragment": "additive_group_extension",
+      "original_sha256": "2dbb056ffbe639a3d0674db7edbf9ac01abe4fdb4ff9d602760726fc4bd20a97"
+    },
+    {
+      "id": "census-6969ddf685f8ea1379a0",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "declaration": "HasFPowerSeriesWithinOnBall.tendstoUniformlyOn",
+      "start_line": 913,
+      "end_line": 914,
+      "fragment": "additive_group_extension",
+      "original_sha256": "158bc0da17e5ae4fc2afb239c82103a864086f37c3358dbceeb7fc1b0ca0c6b3"
+    },
+    {
+      "id": "census-8dfb227ac69d5d06085b",
+      "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+      "declaration": "ExistsContDiffBumpBase.y_eq_one_of_mem_closedBall",
+      "start_line": 346,
+      "end_line": 347,
+      "fragment": "core",
+      "original_sha256": "cb498564de41d92d826ddccd9a16c5b36313b8290c686f1f8b623999b362803d"
+    },
+    {
+      "id": "census-dbdc9337c5954073c21c",
+      "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+      "declaration": "ExistsContDiffBumpBase.y_eq_zero_of_notMem_ball",
+      "start_line": 367,
+      "end_line": 368,
+      "fragment": "core",
+      "original_sha256": "b8e0fd1a6dc808f73bd70c473889ace1330fcbf1f115f170ae54edeaf5fb62f7"
+    },
+    {
+      "id": "census-74952700efbab8848cc8",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "FDerivMeasurableAux.le_of_mem_A",
+      "start_line": 151,
+      "end_line": 152,
+      "fragment": "additive_group_extension",
+      "original_sha256": "73e14f52c568f5eff57eae333d9349a9f21a61fd36cc4719f5af1a845dbfd2b5"
+    },
+    {
+      "id": "census-af003beeddf517183039",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "declaration": "RightDerivMeasurableAux.le_of_mem_A",
+      "start_line": 479,
+      "end_line": 480,
+      "fragment": "core",
+      "original_sha256": "9735a21a68bbd8550fc3cb4a6f9552857027d9ef78413eac2bfb68b994708d40"
+    },
+    {
+      "id": "census-ed86ff388cea32dec3bb",
+      "path": "Mathlib/Analysis/Complex/OpenMapping.lean",
+      "declaration": "DiffContOnCl.ball_subset_image_closedBall",
+      "start_line": 63,
+      "end_line": 65,
+      "fragment": "core",
+      "original_sha256": "e885aa03b2c04841d6a845c901acfcc0eab2626ee232f5719ea4e1fd380ac825"
+    },
+    {
+      "id": "census-d38e66ff11800533b907",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "declaration": "exists_forall_closed_ball_dist_add_le_two_sub",
+      "start_line": 82,
+      "end_line": 85,
+      "fragment": "core",
+      "original_sha256": "1b5d5071a871eabefd49149477cf236df6f0c7c03a32c24c8aab739aeb1f5291"
+    },
+    {
+      "id": "census-c7076f2af6cecd2f0fac",
+      "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+      "declaration": "LinearMap.subset_bipolar",
+      "start_line": 118,
+      "end_line": 120,
+      "fragment": "additive_group_extension",
+      "original_sha256": "136f8017052f0e114b06ca3b98d4e2417f4b041743d0c3ef6ca069a002ddad1e"
+    },
+    {
+      "id": "census-ef477bfa7aaf9bbbdb41",
+      "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+      "declaration": "upperHemicontinuous_spectrum",
+      "start_line": 831,
+      "end_line": 833,
+      "fragment": "additive_group_extension",
+      "original_sha256": "5e7b2bd4b2754aa0cc6bef1c333a951d5a20ab7c666d94d72d8a593afa9ea178"
+    },
+    {
+      "id": "census-b5a153970170d2ff315a",
+      "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+      "declaration": "ContinuousLinearMap.exists_preimage_norm_le",
+      "start_line": 175,
+      "end_line": 176,
+      "fragment": "additive_group_extension",
+      "original_sha256": "d487491cc3890e3a81462df8c451ced3a1ca3b8cb0939b71fdf309fe487bfdd8"
+    },
+    {
+      "id": "census-08f34ca0fd1e0235cb33",
+      "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+      "declaration": "Frullani.tendsto_integral_inv_smul_atTop",
+      "start_line": 172,
+      "end_line": 174,
+      "fragment": "core",
+      "original_sha256": "c417a52a04d62b81fa21f2c3f5322dbd0cc74b05fc4855ec449e8befcebb896c"
+    },
+    {
+      "id": "census-45dc93a2fd89dd30ae84",
+      "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+      "declaration": "MeasureTheory.tendstoInDistribution_of_tendstoInMeasure_sub",
+      "start_line": 237,
+      "end_line": 238,
+      "fragment": "core",
+      "original_sha256": "0ab9b4c78ecc8aa351fdd585ab7404faa34c7b4d1aab80f9effc657a0a53836b"
+    },
+    {
+      "id": "census-e55431279d2ae67a6bed",
+      "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+      "declaration": "MeasureTheory.tendstoInDistribution_of_tendstoInMeasure_sub",
+      "start_line": 268,
+      "end_line": 269,
+      "fragment": "core",
+      "original_sha256": "7a55af8594f6c1d1ff9009b1428cb9dafeacc1666d013d6223e8e978c197c83b"
+    },
+    {
+      "id": "census-f808bb0e45ac7e6c6b13",
+      "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+      "declaration": "ApproximatesLinearOn.norm_fderiv_sub_le",
+      "start_line": 512,
+      "end_line": 515,
+      "fragment": "core",
+      "original_sha256": "7f041eddf7d56fc6d32695ebba7ebc95ea7e409872fc27d321a51e499230b2f3"
+    },
+    {
+      "id": "census-08ebd118dcbb57c281a7",
+      "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+      "declaration": "integrableOn_peak_smul_of_integrableOn_of_tendsto",
+      "start_line": 85,
+      "end_line": 86,
+      "fragment": "core",
+      "original_sha256": "8ce08360e4ac64de55efe03623d5d3922fdb6c7891d8887d10f543f1b6e3eb4d"
+    },
+    {
+      "id": "census-8c00023751962a1dea11",
+      "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+      "declaration": "tendsto_setIntegral_peak_smul_of_integrableOn_of_tendsto_aux",
+      "start_line": 142,
+      "end_line": 143,
+      "fragment": "core",
+      "original_sha256": "20349d4be975e0dff278d94e4614b443d762be26652fcb0a66a912a9fa625620"
+    },
+    {
+      "id": "census-9a1046d2bbe06ec82398",
+      "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+      "declaration": "instBoundedMul",
+      "start_line": 229,
+      "end_line": 232,
+      "fragment": "additive_group_extension",
+      "original_sha256": "dc1c9eed67e79627f2223ce93199b6e3be4527dc637df700cee53b5319df6efc"
+    },
+    {
+      "id": "census-4e0b8b585c644634133b",
+      "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+      "declaration": "BoundedContinuousFunction.dist_le_two_norm'",
+      "start_line": 76,
+      "end_line": 79,
+      "fragment": "additive_group_extension",
+      "original_sha256": "4444dfe7432e276f59bc09ed971a18e7b648f0abc65a6b167d055d1822ad4f2d"
+    },
+    {
+      "id": "census-e401e74ffffc29859015",
+      "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+      "declaration": "Metric.Sigma.dist_triangle",
+      "start_line": 357,
+      "end_line": 360,
+      "fragment": "metric_extension",
+      "original_sha256": "8198b82bc094d3d72fa4422d64b9f0cd3f798895d7c0d321f5a0f8e15725803c"
+    },
+    {
+      "id": "census-2d162277da34cfa04d1b",
+      "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+      "declaration": "Metric.Sigma.dist_triangle",
+      "start_line": 363,
+      "end_line": 367,
+      "fragment": "metric_extension",
+      "original_sha256": "d25cf09fc33a56bdb6fb4d6becff4396fab67626e8c4cbf3fa28c81dbb1273b0"
+    },
+    {
+      "id": "census-f58f99f4509a73484e57",
+      "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+      "declaration": "Metric.Sigma.dist_triangle",
+      "start_line": 370,
+      "end_line": 374,
+      "fragment": "metric_extension",
+      "original_sha256": "fc4d75f88f33574eaf655ff330ff67d99196b24c42c102aea9616df804d9cb08"
+    },
+    {
+      "id": "census-bab3521d94f384e15b19",
+      "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+      "declaration": "Metric.Sigma.dist_triangle",
+      "start_line": 376,
+      "end_line": 380,
+      "fragment": "metric_extension",
+      "original_sha256": "fed2267cfcbc735e160193e1f0eff9d883d03a52366ace4ab697deaa0dd4a118"
+    },
+    {
+      "id": "census-8c1b0d1b4bf6f83d106e",
+      "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+      "declaration": "GromovHausdorff.totallyBounded",
+      "start_line": 751,
+      "end_line": 752,
+      "fragment": "core",
+      "original_sha256": "612191cb5b9db6d407fce146313e2b4922c16c7141e079e1bde172a37c61b994"
+    }
+  ],
+  "removed_ids": [
+    "metric-bounded-closed-ball",
+    "metric-diameter-closed-ball",
+    "metric-contracting-tail"
+  ],
+  "combined_verification_status": "Pending at review time; do not claim proposed savings as verified."
+}

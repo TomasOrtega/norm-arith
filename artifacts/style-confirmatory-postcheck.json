@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "checked_at_utc": "2026-10-21T01:12:10.388309+00:00",
+  "inputs": 10995,
+  "artifacts": 70,
+  "confirmatory_status": "complete",
+  "raw_records": 820,
+  "failed_records": 0,
+  "confirmatory_report_sha256": "47a880408f7e21d88a460e21ba46912ae7313a090651c3967d1ed6b57143e260",
+  "measurements_sha256": "14bcbe9fffe556c033401f01d27c1c4a86393b52a68b3088a3018b381447f691",
+  "analysis_plan_sha256": "aee90122ff3fa8ef6d3e0ef577a019b5708f6ed648478e2774d7559ed6ddb83b"
+}

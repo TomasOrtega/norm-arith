@@ -1,0 +1,67 @@
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/Asymptotics/Arith.lean", "status": "augmented_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/Asymptotics/Ring.lean", "status": "augmented_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/Calculus/ContDiff/Bounds.lean", "status": "process_failed"}
+{"id": "census-fdb41ac9b4c815a99891", "key": "tactic:40580:40799:HasFDerivAt.le_of_lip':749537783", "outcome": "selected", "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean", "proof_lines_saved": 3}
+{"id": "census-819232156975e35cf266", "key": "tactic:14316:14340:FDerivMeasurableAux.D_subset_differentiable_set:4175821282", "outcome": "overlap", "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean", "proof_lines_saved": 1}
+{"id": "census-a429d71bf590c6127d51", "key": "tactic:14188:14616:FDerivMeasurableAux.D_subset_differentiable_set:1558316478", "outcome": "selected", "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean", "proof_lines_saved": 7}
+{"id": "census-9ff87ecc6576329ba611", "key": "tactic:31535:31559:RightDerivMeasurableAux.D_subset_differentiable_set:1349602057", "outcome": "overlap", "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean", "proof_lines_saved": 1}
+{"id": "census-8a4d89209614c4d8d0fa", "key": "tactic:31658:31699:RightDerivMeasurableAux.D_subset_differentiable_set:3933342732", "outcome": "overlap", "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean", "proof_lines_saved": 1}
+{"id": "census-4c327df7dc57c1d46bf2", "key": "tactic:31407:31814:RightDerivMeasurableAux.D_subset_differentiable_set:3349495999", "outcome": "selected", "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean", "proof_lines_saved": 7}
+{"id": "census-47da7b64893ee9548a5e", "key": "tactic:16989:17042:Complex.affine_of_mapsTo_ball_of_norm_dslope_eq_div:3035751510", "outcome": "import_cost_offsets_savings", "path": "Mathlib/Analysis/Complex/Schwarz.lean", "proof_lines_saved": 1}
+{"id": "census-fbff310ddb8a96f48b9d", "key": "tactic:7019:7052:ValueDistribution.abs_characteristic_sub_characteristic_shift_le:2163638339", "outcome": "import_cost_offsets_savings", "path": "Mathlib/Analysis/Complex/ValueDistribution/FirstMainTheorem.lean", "proof_lines_saved": 1}
+{"id": "census-099e2a0a0556ffcaa7a5", "key": "tactic:4276:4346:Real.exists_sum_posLog_inv_norm_sub_le:188498965", "outcome": "no_line_saving", "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean", "proof_lines_saved": 0}
+{"id": "census-4f9699997f4efef660c2", "key": "tactic:2476:2576:exists_forall_closed_ball_dist_add_le_two_sub:3340191643", "outcome": "selected", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 1}
+{"id": "census-563e98222ab7cb930923", "key": "tactic:2631:2726:exists_forall_closed_ball_dist_add_le_two_sub:1180042162", "outcome": "selected", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 1}
+{"id": "census-959eef239a944ceef03a", "key": "tactic:3797:3973:exists_forall_closed_ball_dist_add_le_two_sub:417253855", "outcome": "overlap", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 2}
+{"id": "census-2b4787caf258aeac9d58", "key": "tactic:3786:3973:exists_forall_closed_ball_dist_add_le_two_sub:417253855", "outcome": "selected", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 3}
+{"id": "census-365486330c7ccec0d2e5", "key": "tactic:4057:4208:exists_forall_closed_ball_dist_add_le_two_sub:3229884188", "outcome": "overlap", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 2}
+{"id": "census-11e8193fb56cafcc1fbf", "key": "tactic:4048:4208:exists_forall_closed_ball_dist_add_le_two_sub:3229884188", "outcome": "selected", "path": "Mathlib/Analysis/Convex/Uniform.lean", "proof_lines_saved": 3}
+{"id": "census-06203216115f6bfc46ff", "key": "tactic:8017:8048:Orientation.rightAngleRotationAux\u2082:3079190895", "outcome": "import_cost_offsets_savings", "path": "Mathlib/Analysis/InnerProductSpace/TwoDim.lean", "proof_lines_saved": 1}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/LocallyConvex/Basic.lean", "status": "augmented_elaboration_failed"}
+{"id": "census-231affeecd5b66b76176", "key": "tactic:3592:3653:Polynomial.exists_roots_norm_sub_lt_of_norm_coeff_sub_lt:563516723", "outcome": "overlap", "path": "Mathlib/Analysis/Normed/Field/Approximation.lean", "proof_lines_saved": 1}
+{"id": "census-12b57160bcea7a870439", "key": "tactic:3585:3653:Polynomial.exists_roots_norm_sub_lt_of_norm_coeff_sub_lt:563516723", "outcome": "selected", "path": "Mathlib/Analysis/Normed/Field/Approximation.lean", "proof_lines_saved": 2}
+{"id": "census-3d6edc1e69f812b029b6", "key": "tactic:11830:11923:MultilinearMap.norm_image_sub_le_of_bound':3622010074", "outcome": "overlap", "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean", "proof_lines_saved": 1}
+{"id": "census-e908bdddd792fe4b8a6f", "key": "tactic:11817:11923:MultilinearMap.norm_image_sub_le_of_bound':3622010074", "outcome": "selected", "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean", "proof_lines_saved": 2}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/Normed/Module/PiTensorProduct/InjectiveSeminorm.lean", "status": "process_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Analysis/Normed/Module/Seminorm/Basic.lean", "status": "augmented_elaboration_failed"}
+{"id": "census-c6946b9a9cdb3d7376d7", "key": "tactic:10996:11011:ContinuousLinearMap.isOpenMap:1633655553", "outcome": "import_cost_offsets_savings", "path": "Mathlib/Analysis/Normed/Operator/Banach.lean", "proof_lines_saved": 1}
+{"id": "census-9b431fc4b1fad2a4ed32", "key": "tactic:5221:5253:NormedRing.inverse_one_sub_nth_order:76536248", "outcome": "no_line_saving", "path": "Mathlib/Analysis/Normed/Ring/Units.lean", "proof_lines_saved": 0}
+{"id": "census-1f286b5f295bf39ceb2a", "key": "tactic:5642:5655:circleAverage_log_norm_sub_const\u2081:673814916", "outcome": "import_cost_offsets_savings", "path": "Mathlib/Analysis/SpecialFunctions/Integrals/PosLog.lean", "proof_lines_saved": 1}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Combinatorics/Graph/Lattice.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Combinatorics/SimpleGraph/Clique.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Combinatorics/SimpleGraph/Walk/Operations.lean", "status": "partial_extraction"}
+{"id": "census-f2a529d4be7e2fcf8442", "key": "tactic:19359:19509:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:2632405885", "outcome": "overlap", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 3}
+{"id": "census-7ab24a3d1c1a64823204", "key": "tactic:19338:19509:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:2632405885", "outcome": "selected", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 4}
+{"id": "census-8fe009ad164aa007c803", "key": "tactic:20078:20225:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:1410316273", "outcome": "overlap", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 3}
+{"id": "census-50b4bc912cae9ebdcb4d", "key": "tactic:20057:20225:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:1410316273", "outcome": "selected", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 4}
+{"id": "census-ccd4775f389311dd6223", "key": "tactic:20601:20690:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:1997907253", "outcome": "overlap", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 2}
+{"id": "census-41051f4aa53c86a8bee8", "key": "tactic:20582:20690:AkraBazziRecurrence.GrowsPolynomially.add_isLittleO:1997907253", "outcome": "selected", "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean", "proof_lines_saved": 3}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Computability/NFA.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Condensed/Light/Sequence.lean", "status": "file_timeout"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Data/Fin/Tuple/Basic.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Data/Finset/Attr.lean", "status": "original_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Data/Set/Sups.lean", "status": "partial_extraction"}
+{"id": "census-389606a0b9d53bf09210", "key": "tactic:8246:8305:_private.Mathlib.MeasureTheory.Constructions.HaarToSphere.0.MeasureTheory.Measure.ball_subset_sector_of_small_epsilon:851670659", "outcome": "import_cost_offsets_savings", "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean", "proof_lines_saved": 1}
+{"id": "census-4468072bd08412d1d24d", "key": "tactic:28759:28889:MeasureTheory.integrable_of_norm_sub_le:433663410", "outcome": "selected", "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean", "proof_lines_saved": 2}
+{"id": "census-6cc028cff5430bb880af", "key": "tactic:24425:24577:intervalIntegral.continuousAt_parametric_primitive_of_dominated:125820555", "outcome": "selected", "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean", "proof_lines_saved": 2}
+{"outcome": "extraction_incomplete", "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral/AbsolutelyContinuousFun.lean", "status": "partial_extraction"}
+{"id": "census-bb80813423b649df518c", "key": "term:2547:2645:Real.integrable_of_summable_norm_Icc:3600473777", "outcome": "import_cost_offsets_savings", "path": "Mathlib/MeasureTheory/Measure/Lebesgue/Integral.lean", "proof_lines_saved": 1}
+{"id": "census-72e0a50a3d3be93fe84a", "key": "term:2546:2646:Real.integrable_of_summable_norm_Icc:3600473777", "outcome": "import_cost_offsets_savings", "path": "Mathlib/MeasureTheory/Measure/Lebesgue/Integral.lean", "proof_lines_saved": 1}
+{"id": "census-9883861a4cacf4580e36", "key": "tactic:30613:30904:MeasureTheory.Lp.SecondCountableTopology:2774536050", "outcome": "overlap", "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean", "proof_lines_saved": 4}
+{"id": "census-0a929bc475d43a2c14ab", "key": "tactic:30463:30904:MeasureTheory.Lp.SecondCountableTopology:2774536050", "outcome": "selected", "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean", "proof_lines_saved": 5}
+{"id": "census-8189925c0a373c48637c", "key": "tactic:13694:13732:_private.Mathlib.NumberTheory.Padics.Hensel.0.newton_seq_dist_aux:137704396", "outcome": "no_line_saving", "path": "Mathlib/NumberTheory/Padics/Hensel.lean", "proof_lines_saved": 0}
+{"id": "census-684e02d6145c2966f757", "key": "tactic:18560:18598:_private.Mathlib.NumberTheory.Padics.Hensel.0.newton_seq_dist_to_a:2592762446", "outcome": "import_cost_offsets_savings", "path": "Mathlib/NumberTheory/Padics/Hensel.lean", "proof_lines_saved": 1}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Probability/Distributions/Gaussian/HasGaussianLaw/Independence.lean", "status": "process_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/RingTheory/DividedPowers/Padic.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/RingTheory/Localization/FractionRing.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/Bound/Init.lean", "status": "original_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/Continuity/Init.lean", "status": "original_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/FieldSimp/Discharger.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/Finiteness/Attr.lean", "status": "original_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/Positivity/Core.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Tactic/SetLike.lean", "status": "original_elaboration_failed"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Topology/DiscreteSubset.lean", "status": "partial_extraction"}
+{"id": "census-5a083393dce781bdbdeb", "key": "tactic:13924:13954:GromovHausdorff.hausdorffDist_optimal:686846012", "outcome": "overlap", "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean", "proof_lines_saved": 1}
+{"id": "census-15b9748861652a3366b3", "key": "tactic:13911:13954:GromovHausdorff.hausdorffDist_optimal:686846012", "outcome": "selected", "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean", "proof_lines_saved": 2}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Topology/Order/IntermediateValue.lean", "status": "partial_extraction"}
+{"outcome": "extraction_incomplete", "path": "Mathlib/Topology/Order/IsLUB.lean", "status": "partial_extraction"}

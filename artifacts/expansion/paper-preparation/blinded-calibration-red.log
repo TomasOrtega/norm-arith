@@ -1,0 +1,167 @@
+EEEEEEEEE
+======================================================================
+ERROR: test_both_predeclared_designs_need_no_unblinded_diagnostics (test_calibration_metadata.BlindedCalibrationTests.test_both_predeclared_designs_need_no_unblinded_diagnostics) (block_pairs=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 76, in test_both_predeclared_designs_need_no_unblinded_diagnostics
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_both_predeclared_designs_need_no_unblinded_diagnostics (test_calibration_metadata.BlindedCalibrationTests.test_both_predeclared_designs_need_no_unblinded_diagnostics) (block_pairs=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 76, in test_both_predeclared_designs_need_no_unblinded_diagnostics
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x1080e6400>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x1083ad900>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x108406350>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x10839f690>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x1090ec880>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_changed_blinding_lineage_or_design_is_rejected (test_calibration_metadata.BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected) (mutation=<function BlindedCalibrationTests.test_changed_blinding_lineage_or_design_is_rejected.<locals>.<lambda> at 0x1090ecca0>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 122, in test_changed_blinding_lineage_or_design_is_rejected
+    self.generate(config, evidence, output)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+======================================================================
+ERROR: test_copied_metadata_works_after_live_inputs_are_removed (test_calibration_metadata.BlindedCalibrationTests.test_copied_metadata_works_after_live_inputs_are_removed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 96, in test_copied_metadata_works_after_live_inputs_are_removed
+    self.generate(config, evidence, output, inputs)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_calibration_metadata.py", line 68, in generate
+    return generate.metadata_data(config, evidence, inputs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in metadata_data
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/generate.py", line 431, in <genexpr>
+    review, diagnostic, decision = (values[key] for key in ["calibration_review", "pilot_diagnostics", "calibration_decision"])
+                                    ~~~~~~^^^^^
+KeyError: 'pilot_diagnostics'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.024s
+
+FAILED (errors=9)

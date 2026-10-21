@@ -1,0 +1,19 @@
+F
+======================================================================
+FAIL: test_record_uses_current_utc_review_date (test_audit.ReviewRecordTests.test_record_uses_current_utc_review_date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_audit.py", line 23, in test_record_uses_current_utc_review_date
+    self.assertEqual(record["date"], datetime.now(timezone.utc).date().isoformat())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2026-10-20' != '2026-10-21'
+- 2026-10-20
+?          ^
++ 2026-10-21
+?          ^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

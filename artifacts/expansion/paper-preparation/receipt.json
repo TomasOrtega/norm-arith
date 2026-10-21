@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "stage": "premeasurement_expanded_paper_preparation",
+  "recorded_at_utc": "2026-10-21T14:15:01.870211+00:00",
+  "paper_tests": 55,
+  "tests_status": "passed",
+  "examples": 6,
+  "example_check": "fresh direct Lean compilation; warningAsError=true; no native rebuild",
+  "draft_main_pages": 4,
+  "draft_layout_log_issues": [],
+  "final_evidence_pending": true,
+  "final_language_review_pending_generated_results": true,
+  "source_sha256": {
+    "NormArithTest/Paper.lean": "b9d395d00eab4b34b906726ae30211438aa83b763555e29937f95af02b7293b5",
+    "paper/audit.py": "da391a6026b24bfec59741464b136a0faee898fffb09e352960acfd751701413",
+    "paper/build.py": "30d8ee33029ca7ed4621d7898adce88acdf1de33e92a1ffadec943f67e103c82",
+    "paper/evidence.py": "50ca4d3866f8e5d9f19325729b312b7a7cbcc21d66da48a807b58f673c081810",
+    "paper/evidence_transport.py": "c713bbcc167f0e1054c77da493c4d31df8bab21360eb4873646a4e1b294f3225",
+    "paper/expansion.py": "0c1737fc7aebf467c4fb5a66e68063a01ace9ebd7696b7b01b6af0b2683966ed",
+    "paper/generate.py": "76f380cedc198d4eb3eb1f46a8f8dc1299f2b809dbe4e86aa89802bae6e5032c",
+    "paper/test_audit.py": "5e4c3d30b179f2021307d4a198a5e8b152583a33208dd52a873884fbcb59a95f",
+    "paper/test_composed_evidence.py": "1d98cf35eaac9cfd63f3e42f970cd4e621bb109c76926aff3983b0fb9d2b8b26",
+    "paper/test_evidence.py": "b480844a05004feaa9892da119908404dbb007e4596d8fb284d546fd7fdc89d3",
+    "paper/test_expansion.py": "de4eff0e13734a7a03bfdc271b9a2dd6b0909d5a8767e8326a942b52b82e46f6",
+    "paper/test_fonts.py": "a14fabf9154d6845328022c6bf9acd6e8bd38eb16aba5bbc48151f64135f1b2c",
+    "paper/test_transport.py": "4d59b43f6e138ed5f99a8507a2a552a64de5db55c470240c991185429898c54b",
+    "paper/paper.tex": "1a4d991fe83b4f74c5c715de03b41c509f18ea965fa7158da0dae8af8202cc18",
+    "paper/appendix.tex": "e9ae965ad18c3c60611ebe39cf2ac31b13dd6df6424ed6ff42144cdb8f9fa84e",
+    "paper/vocabulary-review.tsv": "b50e4d870cfd5c1d09e7bb88f7bf64a40b24cc432912d221ff582d0d7f6fb341",
+    "paper/README.md": "b78e3a374ed3cf41f0579e19a7e2412683f2bff19b0edf05255f10b006de24c7"
+  },
+  "receipts": {
+    "paper-tests.log": "dee8f301b2d279a03ede38794469f22a1ad9182d68a5838d07ae26157a0a071f",
+    "review-date-red.log": "432902091cc1962ed60d751898be8828440c99ad9871fdb1bb996ac6d475e6d4",
+    "review-date-green.log": "c346f1228fe88f4ab3cb336ffa610dc3a34ec7c7bb7d05df7a1c222f2d928881",
+    "lean-check.json": "f19e1cc8e05b606236a5b10de72606f357a2735523ce091672eced36a50008a3",
+    "lean-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "draft-validation.json": "b6e9615d48101f6f1d8ee847f96dbd963780419a45d91a54eed5a52468bd6960",
+    "draft-build.log": "c7190e9396718d7d186a643b2165ca22dea2120bcdcc6160ad1346c73c2c9f69"
+  },
+  "draft_pdf_sha256": "42b0780ae6b8719fb7e88c47407580f77e8652ade8b780c765b33db72efe4b33"
+}

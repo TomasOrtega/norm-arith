@@ -26,6 +26,36 @@ structure Config where
   maxResults : Nat := 16
   deriving Inhabited, Repr
 
+/-- Resource limits for the finite reference enumeration. -/
+structure ReferenceConfig where
+  /-- Support systems examined after the full-system rank/span check. -/
+  maxSubsets : Nat := 10000
+  /-- Maximum number of distinct coefficient arrays retained. -/
+  maxResults : Nat := 10000
+  deriving Inhabited, Repr
+
+/-- The resource that prevented a complete reference enumeration. -/
+inductive ReferenceLimit where
+  | subsets
+  | results
+  deriving Inhabited, Repr, BEq
+
+/-- Distinguish complete results, incomplete results, and malformed input. -/
+inductive ReferenceStatus where
+  | complete
+  | exhausted (limit : ReferenceLimit)
+  | invalidDimensions
+  deriving Inhabited, Repr, BEq
+
+/-- `complete` means no independent-support proposal was omitted. -/
+structure ReferenceResult where
+  coefficients : Array (Array Rat) := #[]
+  rank : Nat := 0
+  /-- Does not include the initial full-system rank/span check. -/
+  attempts : Nat := 0
+  status : ReferenceStatus := .complete
+  deriving Inhabited, Repr
+
 /-- Check a proposed decomposition by exact rational arithmetic. -/
 def isDecomposition (sources : Array (Array Rat)) (target coefficients : Array Rat) : Bool :=
   Id.run do
@@ -39,13 +69,17 @@ def isDecomposition (sources : Array (Array Rat)) (target coefficients : Array R
         return false
     return true
 
+private structure SystemResult where
+  rank : Nat
+  solution? : Option (Array Rat)
+
 /-- Solve the selected rectangular system by Gauss--Jordan elimination.
 
-Free variables are set to zero. Inconsistent systems return `none`; dependent
-columns are allowed. The output is indexed by `selected`, not by all sources.
+Free variables are set to zero. Inconsistent systems have no solution; dependent
+columns are allowed. The solution is indexed by `selected`, not by all sources.
 -/
 private def solve (sources : Array (Array Rat)) (target : Array Rat)
-    (selected : Array Nat) : Option (Array Rat) := Id.run do
+    (selected : Array Nat) : SystemResult := Id.run do
   let width := selected.size
   let mut matrix : Array (Array Rat) := #[]
   for row in [:target.size] do
@@ -77,11 +111,11 @@ private def solve (sources : Array (Array Rat)) (target : Array Rat)
       pivotRow := pivotRow + 1
   for row in matrix do
     if (row.take width).all (· == 0) && row[width]! != 0 then
-      return none
+      return { rank := pivots.size, solution? := none }
   let mut solution : Array Rat := Array.replicate width 0
   for pivot in pivots do
     solution := solution.set! pivot.2 matrix[pivot.1]![width]!
-  return some solution
+  return { rank := pivots.size, solution? := some solution }
 
 /-- The next increasing subset of the same size, in lexicographic order. -/
 private def nextSubset? (count : Nat) (selected : Array Nat) : Option (Array Nat) := Id.run do
@@ -121,7 +155,7 @@ def decompositions (sources : Array (Array Rat)) (target : Array Rat)
         return results
       let some selected := selected? | break
       attempts := attempts + 1
-      if let some solution := solve sources target selected then
+      if let some solution := (solve sources target selected).solution? then
         let mut coefficients := zero
         for index in [:selected.size] do
           coefficients := coefficients.set! selected[index]! solution[index]!
@@ -129,5 +163,50 @@ def decompositions (sources : Array (Array Rat)) (target : Array Rat)
           results := results.push coefficients
       selected? := nextSubset? count selected
   return results
+
+/-- Enumerate every rational decomposition with linearly independent support.
+
+Supports are tried in increasing size, then lexicographic order, through the
+column rank of `sources`. These are the signed basic solutions needed for real
+absolute-convex-hull constraints. They are not a complete integer search for
+arbitrary additive groups. Every proposal is checked by exact arithmetic;
+clients must still construct Lean proofs.
+
+Budget exhaustion retains sound proposals but reports an incomplete enumeration.
+The zero target has only the empty-support proposal. Dimension mismatches are
+reported explicitly rather than mistaken for a completed empty search.
+-/
+def referenceDecompositions (sources : Array (Array Rat)) (target : Array Rat)
+    (config : ReferenceConfig := {}) : ReferenceResult := Id.run do
+  if sources.any (fun v => v.size != target.size) then
+    return { status := .invalidDimensions }
+  let zero : Array Rat := Array.replicate sources.size 0
+  let whole := solve sources target (List.range sources.size).toArray
+  let rank := whole.rank
+  if whole.solution?.isNone then
+    return { rank }
+  if target.all (· == 0) then
+    if config.maxResults == 0 then
+      return { rank, status := .exhausted .results }
+    return { coefficients := #[zero], rank }
+  let mut result : ReferenceResult := { rank }
+  for support in [1:rank + 1] do
+    let mut selected? := some (List.range support).toArray
+    while let some selected := selected? do
+      if result.attempts >= config.maxSubsets then
+        return { result with status := .exhausted .subsets }
+      result := { result with attempts := result.attempts + 1 }
+      let solved := solve sources target selected
+      if solved.rank == selected.size then
+        if let some solution := solved.solution? then
+          let mut coefficients := zero
+          for index in [:selected.size] do
+            coefficients := coefficients.set! selected[index]! solution[index]!
+          if isDecomposition sources target coefficients && !result.coefficients.contains coefficients then
+            if result.coefficients.size >= config.maxResults then
+              return { result with status := .exhausted .results }
+            result := { result with coefficients := result.coefficients.push coefficients }
+      selected? := nextSubset? sources.size selected
+  return result
 
 end NormArith.Search

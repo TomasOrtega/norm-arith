@@ -1,0 +1,858 @@
+{
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Analytic.Basic/attempt-01/events.jsonl": {
+    "sha256": "94377bb6d6d5faac6417b2fe8cb2cd8b8a805258a123b922da06bdf0de7e10a9",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Analytic.Basic/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Analytic.Basic/result.json": {
+    "sha256": "366c927baa9df8ff8d4b3c2331ae538bce82d7237f21ae30f8e624fe6c7b2f15",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Analytic.Basic/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Asymptotics.AsymptoticEquivalent/attempt-01/events.jsonl": {
+    "sha256": "477be36142489aa21c48f00829d155494256fb96081d0af0b7b29e3cd11b412d",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Asymptotics.AsymptoticEquivalent/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Asymptotics.AsymptoticEquivalent/result.json": {
+    "sha256": "c26ebb8512ad4b5f69325085e67e94867a6b41c1f7d1fe7fc97538ab1c2f6845",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Asymptotics.AsymptoticEquivalent/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/events.jsonl": {
+    "sha256": "b697086438225a1d746a763237051ee02644eb36fd4add62586c26039228bda0",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/result.json": {
+    "sha256": "9c87bab1adc8c3075cc818268620869b8318767e372caada4fd71fde11ece400",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Asymptotics.SpecificAsymptotics/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Basic/attempt-01/events.jsonl": {
+    "sha256": "79a60df044431000d47a1bacacf636036732c132adccea8e60950fab5d9e5a07",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Basic/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Basic/result.json": {
+    "sha256": "9f58fae7fb4771ab1062d3121525ca5231a8abc00ec011cbbb5697ba2569594c",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Basic/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/attempt-02/events.jsonl": {
+    "sha256": "7817f33c680caa77970728bac20c55884a54e4ab180ec225cad425121e9dfd2f",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/attempt-02/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/result.json": {
+    "sha256": "6538cde48197009d4a744bc1ee3f4b156031425d0d8d2204a99174ccdeed3c4e",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Complex.OpenMapping/attempt-01/events.jsonl": {
+    "sha256": "f3294d77bfebe47957f559f238f9e94ce7b1ad6007a5b79cc6110f59c996e284",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Complex.OpenMapping/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Complex.OpenMapping/result.json": {
+    "sha256": "7edcf2dfbaef27db8594f5eea3da6158b1a9409c3266cf2a94a9064da41f2132",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Complex.OpenMapping/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Convex.Uniform/attempt-01/events.jsonl": {
+    "sha256": "c0141d16982598c3945eed11203f74ba8cef43d4fca6c2ed48b041e05db7804f",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Convex.Uniform/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Convex.Uniform/result.json": {
+    "sha256": "8d1ec549ecbf7fa478948821f2341c23ca9527509afac5cd8fdc3f7a8b3398ac",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Convex.Uniform/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/events.jsonl": {
+    "sha256": "bedd47c381cbce6252e31adddb59925695c892623bc0746f48eef281a0269e68",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.LocallyConvex.Polar/result.json": {
+    "sha256": "5769c3f78562a591b7b4a7240ea5f9c174898caded8ef414ae2f8483748144b9",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.LocallyConvex.Polar/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Algebra.Unitization/attempt-01/events.jsonl": {
+    "sha256": "2a1c30d1d784e669595f7f91d469d8e96f97aea34c78201bf2d6643fe94f091f",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Algebra.Unitization/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Algebra.Unitization/result.json": {
+    "sha256": "77217bbfdd784ab7b080c52ac1780cd231edc7667518357c127337d99f586020",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Algebra.Unitization/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Field.Approximation/attempt-01/events.jsonl": {
+    "sha256": "15d3aafabb796d57d8d89f5aae1c623932342d34161bb5c2d292188c651f9ea9",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Field.Approximation/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Field.Approximation/result.json": {
+    "sha256": "9b27e8b869cb6e60dacc9829c1db1a48d9adb04a395f8e9077dfe28e3b7d56a1",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Field.Approximation/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Group.ControlledClosure/attempt-01/events.jsonl": {
+    "sha256": "d2effa636e243d8743fc1186bbf4e837ed886b21f7b957d235ddd3fce932d813",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Group.ControlledClosure/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Group.ControlledClosure/result.json": {
+    "sha256": "b4dc3cdff63f98e1b2689cad34ab53d3425f64fdf78932a591a21c223a9a38f3",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Group.ControlledClosure/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.MStructure/attempt-01/events.jsonl": {
+    "sha256": "0d3ccad2b7e2c5027b8706068e21a5e7ae6074d2f4b9c06305423afe8242b95d",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Module.MStructure/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.MStructure/result.json": {
+    "sha256": "7a66ea32cd4c254cdbcf7c86979ca86500814d5681fbea8a328dbd38400f3ba4",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Module.MStructure/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/events.jsonl": {
+    "sha256": "d32f4e2d8408440f8f306ca97ca80089b11d326be474f14e416d3d10c9b87688",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/result.json": {
+    "sha256": "5e04330d02403b84e3c5f0d49ab1b604248ea18ed0722d7d7d13971c43728ba9",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Module.Multilinear.Basic/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Operator.Banach/attempt-01/events.jsonl": {
+    "sha256": "7e76fab7b51b2f46b00ee22531b9fc77911a16768221736a9146e16c5bede3d7",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Operator.Banach/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.Normed.Operator.Banach/result.json": {
+    "sha256": "e5fbfeba57c75f32f46e0bcc2bcfae180367126758dc67ed0a84f201df3c41bd",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.Normed.Operator.Banach/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Complex.LogBounds/attempt-01/events.jsonl": {
+    "sha256": "e3b1afb0caace7c2cc10d539e53674f6b722559f70ea8eac0652555fb723f9b1",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Complex.LogBounds/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Complex.LogBounds/result.json": {
+    "sha256": "d31dde4a3467db15e26dfead186c1730515ecf7849932e53c7a16f623fe5bd74",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Complex.LogBounds/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Exp/attempt-01/events.jsonl": {
+    "sha256": "d194fd259ea1c6a43f41b1847bf4ebf92177074002308aa93b4b6dfe34a15099",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Exp/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Exp/result.json": {
+    "sha256": "a9e0b38cc2343a71ac8c1aae7a7ea878ae24d17760360ba4ad9ff884c025e499",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Analysis.SpecialFunctions.Exp/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Computability.AkraBazzi.GrowsPolynomially/attempt-01/events.jsonl": {
+    "sha256": "16771974f8b0c2112cea7ca02c7a22f23bbd4dcbf41fead8e5a7243ac889b3aa",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Computability.AkraBazzi.GrowsPolynomially/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Computability.AkraBazzi.GrowsPolynomially/result.json": {
+    "sha256": "ccaed482cd9a33cbfc72b94500874eca9fcf7d28384a5840b1b72d883442a450",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Computability.AkraBazzi.GrowsPolynomially/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/events.jsonl": {
+    "sha256": "084e4e3b566039343befcd2371db47e1648eb6df57fd1e309089a4679504a046",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Function.Jacobian/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Function.Jacobian/result.json": {
+    "sha256": "c8a165131125915b44a32c38caef9771358dfaea4cc71cc26f1b5fc385254615",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Function.Jacobian/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Function.L1Space.Integrable/attempt-01/events.jsonl": {
+    "sha256": "121cf8e860f072996b3bf84d82f1784e6182f5537f977c44f5969a42e659d3ef",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Function.L1Space.Integrable/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Function.L1Space.Integrable/result.json": {
+    "sha256": "ae841ed325686921f7e8d968b69d5b0179d4c5aa0bdf2cf4afdf81b673db17a8",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Function.L1Space.Integrable/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/events.jsonl": {
+    "sha256": "57233bace33d28e1cb939164fc1250c7020628a715a2b1f3f1b0f5d102a56394",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.DominatedConvergence/result.json": {
+    "sha256": "c66138e00c6ac1c603060d45c27d2f5a8a69bb6b4a89332e9d319ba1a1d02ed2",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Integral.DominatedConvergence/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/events.jsonl": {
+    "sha256": "fb62c0e42eaffb90728d9b10d873dd92ed5a03b05970e47cae7e653838fba55d",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/result.json": {
+    "sha256": "3bdb2c7030c444cdc03490f6fc68c20123135caa5a688ae8b1a3e9bc641e677e",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/events.jsonl": {
+    "sha256": "feb9ab2053a6f56a6e2ea052294fa74770d0afaea11155ff0ad7eb5bb78634b0",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Measure.IntegralCharFun/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.IntegralCharFun/result.json": {
+    "sha256": "1f53d061ea01dbc866c6f08a1b8c91f651c5f034ebaaf9e5ba6ca53d22c65231",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Measure.IntegralCharFun/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.SeparableMeasure/attempt-01/events.jsonl": {
+    "sha256": "c391d22e6ef3d0fc0dfcb9226e98e48d30569a94281b0c4dc832265a2ad5b90d",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Measure.SeparableMeasure/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.SeparableMeasure/result.json": {
+    "sha256": "479bae3de4f14f11e474b91c73f0aa7345afae52ca9e166d663cfa6b2e3982b2",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.MeasureTheory.Measure.SeparableMeasure/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Probability.StrongLaw/attempt-01/events.jsonl": {
+    "sha256": "fc872536fcf25bc2456a6f9fd76a00723a8dc64159028da74be0df7420377391",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Probability.StrongLaw/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Probability.StrongLaw/result.json": {
+    "sha256": "27d5d701d4c97d79af62c296fcdf337259c0929a543e817bf8a2ecd4b6880c98",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Probability.StrongLaw/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/events.jsonl": {
+    "sha256": "e16a326958a08237340eabac8b2dcc00dcedf5cc2fe2ee5293a2d58a881e2122",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.Bornology.BoundedOperation/result.json": {
+    "sha256": "3a1639097f9b2618b6312d644552badbb497aa803841984fa0155059991f3cdc",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.Bornology.BoundedOperation/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.ArzelaAscoli/attempt-01/events.jsonl": {
+    "sha256": "e1fce55c0dad49dc98e6c010f7b443fad59383ffade748211d452b43702ff9a2",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.ArzelaAscoli/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.ArzelaAscoli/result.json": {
+    "sha256": "f68742247b6322e504ad1298815af77b2dafc7abc8d19e8208d8396bdace3ea1",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.ArzelaAscoli/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Basic/attempt-01/events.jsonl": {
+    "sha256": "221a76e621166ad6292f07d81740786a7c14f94b0a37b2770f9691950c915ee5",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Basic/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Basic/result.json": {
+    "sha256": "6ffc77dd62e94991ed9690cf4cb27810fd9eaef9e6bf9d178cb9f2c2ec674675",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Basic/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Normed/attempt-01/events.jsonl": {
+    "sha256": "2fb1534abfb1e68e66e1a401c1b18b0110baadfb04823d9b3afc119990d01673",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Normed/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Normed/result.json": {
+    "sha256": "5a127d2b38888a8cb4fe21abeb365668f4808dae0b3d1a806883d7ad0ab70fb3",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.ContinuousMap.Bounded.Normed/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Gluing/attempt-01/events.jsonl": {
+    "sha256": "a05449190456ca15e93f6f54f113e3748ffb1824abe8f63ea144722a94a8ac4f",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Gluing/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Gluing/result.json": {
+    "sha256": "1ab81a30fda6da80882ba54575665766d015c3d9f5856d8e86e7de48d1d15aa1",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Gluing/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/events.jsonl": {
+    "sha256": "b128d64152f5ba313c43293d201ca4f8e26f2f0a6fe1054f09c646864b61c14c",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/result.json": {
+    "sha256": "3e63236ac37300e7d078114c21215d086c62617ed47d524141d8b2648de18a52",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Kuratowski/attempt-01/events.jsonl": {
+    "sha256": "d525f4bd95e84f5c6a5323cee0cbe8a4dff01fccc28eb36ad1f48c0c2893acbe",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Kuratowski/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Kuratowski/result.json": {
+    "sha256": "59b0ee3fd4e93e43c6a877623cc05eb5c1d0342643bbf5c51859707da3d1027f",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Kuratowski/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.PiNat/attempt-01/events.jsonl": {
+    "sha256": "521ff24d31412cefc8edbbada8ba1730ec9c3aa22a44387e9111cdec584e6bd4",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.PiNat/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.PiNat/result.json": {
+    "sha256": "881a58133597dd8d117fa43b8e1f0416435529940b223741c388e6652165a77d",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.PiNat/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Polish/attempt-01/events.jsonl": {
+    "sha256": "4fb7dd447821565bd7d27ec4d4ad744ac29db74616f569f80d4a695f03b00a10",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Polish/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Polish/result.json": {
+    "sha256": "7b8d0abcd0c92a53b3aca9d1ceaceaae5d00bd66b0c471a50779d15072b97520",
+    "snapshot": "body-census/census-full-v3/files/Mathlib.Topology.MetricSpace.Polish/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/manifest.json": {
+    "sha256": "e03cd54a6998dd2c18b2c7b723891da5357170a5f23380748c32ad6a1dfa8fd2",
+    "snapshot": "body-census/census-full-v3/manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/00.json": {
+    "sha256": "63a285300df917604e480674aa41993e5e1109c376182c3f7943c30a4acc40e6",
+    "snapshot": "inputs/00.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/01.json": {
+    "sha256": "2b975b5cf57065a7afd8057c44b8a6bddea8b5e21ffd286d284c35711b2f1c4d",
+    "snapshot": "inputs/01.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/02.json": {
+    "sha256": "b4954e093369e14383fed31f629467ca6662037fbc12407b2fd554b52395b86c",
+    "snapshot": "inputs/02.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/03.json": {
+    "sha256": "79792038475f86259aa1b5263e2721f36016cb6fbc5ea0120ea5d2cb79a302b7",
+    "snapshot": "inputs/03.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/04.json": {
+    "sha256": "1e610689fd86d752251f1eed4f7fa25b601a038418004ce46e6698211227850a",
+    "snapshot": "inputs/04.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/05.json": {
+    "sha256": "71c7fac392be12f6c4476bf33b5cde07e5132de4b98ac10ff5c4fe0fab14d7c2",
+    "snapshot": "inputs/05.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/inputs/06.json": {
+    "sha256": "03b9dc6676fe2c75f9ac500f8d99baf3af1dc73846ad4463e3603af0c55de0bd",
+    "snapshot": "inputs/06.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/selection.jsonl": {
+    "sha256": "e5822551635f773d291acde35345dd9b466be253cf44a482b81a7cf2f10d861f",
+    "snapshot": "selection.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-selection-07/summary.json": {
+    "sha256": "cfa2933719ca0224ebec666dbba74e4469a9eb54bc72ef42bf57a22d515b7276",
+    "snapshot": "selection-summary.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/input-manifest.json": {
+    "sha256": "a72f1b725bfaf827bb3a8e4db50570be915788ba4a85cc0fbf8c1449685ea617",
+    "snapshot": "input-manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/manifest.json": {
+    "sha256": "c6dbf7eda2dd428a654ee0382a27315a67151b08063daf52c02d8363230a024e",
+    "snapshot": "manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/mathlib.patch": {
+    "sha256": "65bc4fb9466432097becdf3e77e2db368dc8014da34e0a1cae4a51c49633d183",
+    "snapshot": "mathlib.patch"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Analytic/Basic.lean": {
+    "sha256": "ba5fa3b5737c6e510cacd99f9cb395f0125f2866f391206b3df5f415a0106aed",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Analytic/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean": {
+    "sha256": "6058fc5118b04316f6f9b9b76e5585f96a6b10588b8f3ba437c1b116833303e3",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean": {
+    "sha256": "88b211e104ae82f6de98bc406e83df88ff30b4e90f991eb8df6c03e04995babe",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean": {
+    "sha256": "97a5742a1ef971a54c07bcef9e3fea691f52b8dca71f3671646b1e6d94b9cca3",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Calculus/FDeriv/Basic.lean": {
+    "sha256": "6570ab828566bf052576fef0a2b8b7c3bce769616bca8673518d87aa81accd6d",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Calculus/FDeriv/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Calculus/FDeriv/Measurable.lean": {
+    "sha256": "0eb4d2dec6f7d597db6de5bfdb329cd312ff3b9cbb1b33510984129c0ebb672f",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Calculus/FDeriv/Measurable.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Complex/OpenMapping.lean": {
+    "sha256": "20a9c2c61663724f838293c8b882b68e2243aebfaf0e05dcd5a56a30c14a7dc5",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Complex/OpenMapping.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Convex/Uniform.lean": {
+    "sha256": "6053020c6bac44e3760f049e3726b9f40923eca31c34a4267427cb96f0b48769",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Convex/Uniform.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean": {
+    "sha256": "6d22eb70ffc19b8d7a220923b4bbf67fddf85aab4db45a853e7c877d623c35ca",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/LocallyConvex/Polar.lean": {
+    "sha256": "86db26063fd41341f58d955421cb1028a2221043286af7863b9cad6f2f7c93c6",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/LocallyConvex/Polar.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Algebra/Spectrum.lean": {
+    "sha256": "51dcb2060a55907db1475b2b925d787c1a7a413c9e601df29d5d71bd6a4a7672",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Algebra/Spectrum.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Algebra/Unitization.lean": {
+    "sha256": "d859186b07a84fc0c2f885fa5981d4e97c2912c1d047200b9dcfa345cdede2b9",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Algebra/Unitization.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Field/Approximation.lean": {
+    "sha256": "665d37edc37b777439e321111f044e25e8ee5ff912ca5e7ed694319bd756a9b8",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Field/Approximation.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Group/ControlledClosure.lean": {
+    "sha256": "d2c134bf33d281ac61b4f60bedf0b77d57159c02ffac29b239d7d9ee5f0ab59f",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Group/ControlledClosure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Module/MStructure.lean": {
+    "sha256": "1aceb0dc675dbc79cc679e00f54a0d86b8faa4e622c15bfebd679f143e034c8d",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Module/MStructure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean": {
+    "sha256": "4e5c84aba26624fb1e148f4a33e77235d2db57422e97680e5ebfa580ebf15b5c",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/Normed/Operator/Banach.lean": {
+    "sha256": "276674c2833b62a9f654a2f273cfed09df24debbe3c555c463e9d310963cf84a",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/Normed/Operator/Banach.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean": {
+    "sha256": "e690200a4d8a0d6e8dd30fee8863624232b0e8d49ce0d52be8b5ab88217d675e",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/SpecialFunctions/Exp.lean": {
+    "sha256": "dd73a7db22136534fac62420fdb1751fcb0634811d206bc0ecbf580fa65139a4",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/SpecialFunctions/Exp.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean": {
+    "sha256": "cd59b712933b324ad7ace4c973b421c06f5ac4e452e43dc3586f6459b1839735",
+    "snapshot": "mathlib-patched/Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean": {
+    "sha256": "1670e195ea2b55f1020682812bc78acf5d22fafed1ee4ba0189401a3b1553f7b",
+    "snapshot": "mathlib-patched/Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean": {
+    "sha256": "b666577c1377b4076250800d7ec672c78c4f24f6ea3d0a6013478c5542a11715",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean": {
+    "sha256": "09005fef9816934817f6f75faddc406e01d19ab137ec71d8a43518b08d0d771d",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Function/Jacobian.lean": {
+    "sha256": "3c6bb1dbb9a5f8a191cf7cd4447a0666abd03f6c704d601e33eaae1f51b651c1",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Function/Jacobian.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Function/L1Space/Integrable.lean": {
+    "sha256": "8068241d23c005401e42b29c4ac5d6b978155d5ab1cd005161c2edb57b67672c",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Function/L1Space/Integrable.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Integral/DominatedConvergence.lean": {
+    "sha256": "011490a038a7b659a09c0d0e93c40d5eefd35e5416394a2848fcd78642e61b51",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Integral/DominatedConvergence.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean": {
+    "sha256": "7a958a20818cd83d2a7097a31d33cc95fd1c5646b7ef1fa3c605a768e5603ef4",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Integral/PeakFunction.lean": {
+    "sha256": "ce263bb549052c1db72f3d753957e33a4816ad140fcf52e1d106aaa62fd57e53",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Integral/PeakFunction.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Measure/IntegralCharFun.lean": {
+    "sha256": "cf114cac78de00e680ff497d75320310cfd5f8645ad9466dd5b3f443b1b2961d",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Measure/IntegralCharFun.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/MeasureTheory/Measure/SeparableMeasure.lean": {
+    "sha256": "4d96a4d40f65ae84f918b99ab85c6274e679eb6cad75792537d3bc24bb5baa90",
+    "snapshot": "mathlib-patched/Mathlib/MeasureTheory/Measure/SeparableMeasure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Probability/StrongLaw.lean": {
+    "sha256": "9f8f6164f85ad2cb8f02fa5bb4daa890dcd8668093f3e7a833d2a4b102b8c7c6",
+    "snapshot": "mathlib-patched/Mathlib/Probability/StrongLaw.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/Bornology/BoundedOperation.lean": {
+    "sha256": "f47633876680e9f30c4cb693528ed81dda7707a0bbd0d5971a15cd1e7e08b1cf",
+    "snapshot": "mathlib-patched/Mathlib/Topology/Bornology/BoundedOperation.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean": {
+    "sha256": "b51a527fd7a2824683c34edc4d5487c8e345f37a42c5e71ec0ed20d1f1890963",
+    "snapshot": "mathlib-patched/Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/ContinuousMap/Bounded/Basic.lean": {
+    "sha256": "b3ead19a231690e673bec0dfece68c5f607c3e554128dcd117c5b256c977ff4e",
+    "snapshot": "mathlib-patched/Mathlib/Topology/ContinuousMap/Bounded/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/ContinuousMap/Bounded/Normed.lean": {
+    "sha256": "2b1328c2f67bba54e9b5755c0759489d09500bc1b9b081249ad7e2a5e3c7cd53",
+    "snapshot": "mathlib-patched/Mathlib/Topology/ContinuousMap/Bounded/Normed.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/MetricSpace/Gluing.lean": {
+    "sha256": "a1589e18d22b45fdd8b604fcfc43c5759fc7e77701b2f29c6c942c8bfffc09aa",
+    "snapshot": "mathlib-patched/Mathlib/Topology/MetricSpace/Gluing.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/MetricSpace/GromovHausdorff.lean": {
+    "sha256": "41793333e820fd6a95cce987c0b1ea45ad726903fa27c89b20fb0fb9d6ed34a9",
+    "snapshot": "mathlib-patched/Mathlib/Topology/MetricSpace/GromovHausdorff.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/MetricSpace/Kuratowski.lean": {
+    "sha256": "61e93afd72938ebbdf079fbec593644dccad39a1d2bcce0589421ef905bfd7c4",
+    "snapshot": "mathlib-patched/Mathlib/Topology/MetricSpace/Kuratowski.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/MetricSpace/PiNat.lean": {
+    "sha256": "2f144a9bfaaa903573e6a03caf838f2f66a72090d5b2135f53f47caed26c86e8",
+    "snapshot": "mathlib-patched/Mathlib/Topology/MetricSpace/PiNat.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/sources/Mathlib/Topology/MetricSpace/Polish.lean": {
+    "sha256": "f883631a22a1dc696d6cf35c56ca9c9770e82b588cff969a6396a816d2e6ffcf",
+    "snapshot": "mathlib-patched/Mathlib/Topology/MetricSpace/Polish.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-07/verification.json": {
+    "sha256": "dea6616f6c041a547f6daa1785c89c97c5325499580b131e70148f37d26a3ce4",
+    "snapshot": "verification-receipt.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension/attempt-01/events.jsonl": {
+    "sha256": "2c2e9a652412ae7d15dd24ac42d7c96cd2c72f344e9d427a1992b9e3acf50b21",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension/result.json": {
+    "sha256": "8283aff96ae6885344d9063d0603163ff4b53a88321a941bde416c1e2f53897e",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Fourier.RiemannLebesgueLemma/attempt-01/events.jsonl": {
+    "sha256": "b9f114b908796c3d3bee5914599704ad72f17667079b7a09ad52d5981fe2b919",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Fourier.RiemannLebesgueLemma/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Fourier.RiemannLebesgueLemma/result.json": {
+    "sha256": "f2395aa3d5fb01ac59b4fceafb0de85fadf9a46e5371bd04c9bb444a6fc40181",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Fourier.RiemannLebesgueLemma/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/events.jsonl": {
+    "sha256": "5d56078a71d0adbb5063c457f5f8f52ca11c8c9de02c804fcb19591ea759851d",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Normed.Algebra.Spectrum/result.json": {
+    "sha256": "46683f8d6702d7eac58fabf15bc0463f2254d8fd59d3e8eca602656d2c4a2cca",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.Normed.Algebra.Spectrum/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/events.jsonl": {
+    "sha256": "0b9997f30bec1d16a856c6f6bf251562640e03bfe61e2411cd54b6fbe46808a1",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/result.json": {
+    "sha256": "9e652e256c96c0f44514be49664ca024c830d57d76c8ab230843c489ce10878f",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.Analysis.SpecialFunctions.FrullaniIntegral/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.AEEqOfIntegral/attempt-01/events.jsonl": {
+    "sha256": "e33008d74af42992eb8d14c812ef131bfdd5417d6fde180cead413af568f36eb",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.AEEqOfIntegral/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.AEEqOfIntegral/result.json": {
+    "sha256": "bc146551799b0d030820e7cb82c7da221daaf24edbf1c00d8858428ca2f137ef",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.AEEqOfIntegral/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.ConvergenceInDistribution/attempt-01/events.jsonl": {
+    "sha256": "f1027290074f0c2d022ca443fa9cb5f97380d5910e8e59ae98b88f7409002c10",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.ConvergenceInDistribution/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.ConvergenceInDistribution/result.json": {
+    "sha256": "5c661e6f2d7211b9335a119f00a8a1b1e2d7008cad118a8278998bd03bfface7",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Function.ConvergenceInDistribution/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Integral.PeakFunction/attempt-01/events.jsonl": {
+    "sha256": "06f77ea16082f939a22d74a28dda17a29e8eacac8c6938239919a4b8d9ba2580",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Integral.PeakFunction/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.MeasureTheory.Integral.PeakFunction/result.json": {
+    "sha256": "ed52451d10b16f1604f217bbdf10972951b2b83c1b17f08d8445f06f245010c9",
+    "snapshot": "body-census/expansion-discovery-v2/files/Mathlib.MeasureTheory.Integral.PeakFunction/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/manifest.json": {
+    "sha256": "b6027acee80462215d9d8b031cd1d603fb106260fcb3a85473e0e69256a8185c",
+    "snapshot": "body-census/expansion-discovery-v2/manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/events.jsonl": {
+    "sha256": "e1586b93365cd3d9d287e06ca96b38c750a2622974fe276326dc26de011dc57f",
+    "snapshot": "body-census/expansion-discovery-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/attempt-02/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/result.json": {
+    "sha256": "4885a6d219864c4e420709138ccc3997ff67261f696899b149a8f16156a837cb",
+    "snapshot": "body-census/expansion-discovery-v3/files/Mathlib.Topology.MetricSpace.GromovHausdorff/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v3/manifest.json": {
+    "sha256": "85ee1fc807a049e295f84d66249f5f6708d98a8901a04eb7db3dbb6a7c1dbefb",
+    "snapshot": "body-census/expansion-discovery-v3/manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Analytic.Basic/attempt-01/events.jsonl": {
+    "sha256": "162d2d5304a6bc51f40cbcb51b73b7baec2a3fa6ae69385d8d3ce68bf74dca8e",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Analytic.Basic/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Analytic.Basic/result.json": {
+    "sha256": "5fa32573361f3c5f0c6df3ea88a5998cacee08aa586585e127e5cc31cc4bc6b5",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Analytic.Basic/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/attempt-01/events.jsonl": {
+    "sha256": "9a80091be9ee564f299607b62cc89e7ae01154e72f31168a2200a70ba1b1f630",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/result.json": {
+    "sha256": "d59dfaf0c1648caa47327e709c499074ddc239732ac680147663286c321f392f",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Normed.Operator.Banach/attempt-01/events.jsonl": {
+    "sha256": "5f94afc42047244c9115fb08b7db436e05e1faee1478cbf161987df9b46adbca",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Normed.Operator.Banach/attempt-01/events.jsonl"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Normed.Operator.Banach/result.json": {
+    "sha256": "8c9a528272a217ba31d3a8de6a2e579a296517d482919bd3cd1ca65b283d220f",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/files/Mathlib.Analysis.Normed.Operator.Banach/result.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-preprocessing-calibration-01/manifest.json": {
+    "sha256": "66e0abcac243bdf5805bbcbe228c8e3ca5e266c5868b84f5d6098db95df8f139",
+    "snapshot": "body-census/expansion-preprocessing-calibration-01/manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Analytic/Basic.lean": {
+    "sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Analytic/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean": {
+    "sha256": "b19d877d99aa8a306fe9e258afb576b3861d69b5ffc8c1d8b475926e73a7f123",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean": {
+    "sha256": "c0757881f43471ea4bb41d6b0c2355ab88270dd24d2d84436cf38cb4f6058b71",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean": {
+    "sha256": "8dc79594ff8a3617145908f5f7c6d250a2055a8a5d9901c5ad853b8868aca74d",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Calculus/FDeriv/Basic.lean": {
+    "sha256": "ec95a9dadc68ab0164909db152763d4581c73cb36282914bcc195acb85a7a690",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Calculus/FDeriv/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Calculus/FDeriv/Measurable.lean": {
+    "sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Calculus/FDeriv/Measurable.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Complex/OpenMapping.lean": {
+    "sha256": "4f0ea804ca4e7180e60d0e875c1c93fd9d55f5be06c97b8cc849d0103936b617",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Complex/OpenMapping.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Convex/Uniform.lean": {
+    "sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Convex/Uniform.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean": {
+    "sha256": "176bad9d2b863f82dffa40593465525c5cff3c24e2aeae9c2b92b5b2fcd56353",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/LocallyConvex/Polar.lean": {
+    "sha256": "c3256080e8f156ccbd984e5fc41f5f046a979dcec1f5e6e8c8f5992948e16aa2",
+    "snapshot": "mathlib-original/Mathlib/Analysis/LocallyConvex/Polar.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Algebra/Spectrum.lean": {
+    "sha256": "11182f0ab43174531c8e2fa228dd965caa15efa7dcc40f0eb3a80f9ace015872",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Algebra/Spectrum.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Algebra/Unitization.lean": {
+    "sha256": "05cf9a20ff6d867d36c62089862c0542a92f903d96da287ebfe1e67eb94da645",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Algebra/Unitization.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Field/Approximation.lean": {
+    "sha256": "b30ad3dac8d319b5532feafa16d18025682036f35b21d5c4d70a2fbfa31c3e3a",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Field/Approximation.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Group/ControlledClosure.lean": {
+    "sha256": "049a49caaecc9a181c463302cfea209f0e47552d564e1835c2c1ad5072044b9e",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Group/ControlledClosure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Module/MStructure.lean": {
+    "sha256": "0aff6fc60bc52f7b93aa644fc6aa15fd230ab264dc94a19642ffe0a20aac6c73",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Module/MStructure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean": {
+    "sha256": "72bcb044cb13410220bdd0c73916db1c6a9abbe14cb3bd4982cf14c38d62258c",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Normed/Operator/Banach.lean": {
+    "sha256": "b4241bc2e2606cebfd3121899adc9a581e4a272b49413d515b1d97958734d6db",
+    "snapshot": "mathlib-original/Mathlib/Analysis/Normed/Operator/Banach.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean": {
+    "sha256": "d3711d5d5b528b8d1733d531d5ae78bc77d13a68079a7243af3251abc48380f7",
+    "snapshot": "mathlib-original/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/Exp.lean": {
+    "sha256": "1dcb27b9ea4dbfea015fd97196f0cb6ac294633be79590dba8af8685d11b03e8",
+    "snapshot": "mathlib-original/Mathlib/Analysis/SpecialFunctions/Exp.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean": {
+    "sha256": "201735278f26a2dc9e7567524ffdb276428830f6f8008cca0e6cd3ff1f5b8fa9",
+    "snapshot": "mathlib-original/Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean": {
+    "sha256": "9d06e0a2e00e47cb5ba35463c8f9f331c1579523655c81717f5a4211b4f5f370",
+    "snapshot": "mathlib-original/Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean": {
+    "sha256": "08afb977f9b8574ffdb0a8e3c3b442ad32394f1bdf4f9117bbaa1bb57edccfc3",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean": {
+    "sha256": "5e4dfb2c3b0a5a5748403c4ce7841da18df4e918e0beca624941c7c7ab613994",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Function/Jacobian.lean": {
+    "sha256": "b8c17cd35ce102bbe761d2289fd2c94c8ddaa7e557a466bb2640b4c13e79bea0",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Function/Jacobian.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Function/L1Space/Integrable.lean": {
+    "sha256": "d80e3495465030c1accca450935e4bfafcfe31d9b695e17f23ee9cfcea537759",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Function/L1Space/Integrable.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/DominatedConvergence.lean": {
+    "sha256": "56394aacfe591230d26a1d93641f2a1d3e3a3eae4fcfe772775533a1da295833",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Integral/DominatedConvergence.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean": {
+    "sha256": "a584aa4f50c25890a6c0583d584ae8216fd517ba5725efdd7804e25501c68c64",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Integral/PeakFunction.lean": {
+    "sha256": "c3d7196bd029c4e123dd43a7cae1a1d07cb65675603dfffdcdf5e5b844861d98",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Integral/PeakFunction.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/IntegralCharFun.lean": {
+    "sha256": "95ff5e7f8870ec039479aceab2c3709c5b02052942f2512bcc17f4228c5dd200",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Measure/IntegralCharFun.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/SeparableMeasure.lean": {
+    "sha256": "d8a7bb02d53ee246528183aaf579406d98e2f1a207578110c9649a140727f224",
+    "snapshot": "mathlib-original/Mathlib/MeasureTheory/Measure/SeparableMeasure.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Probability/StrongLaw.lean": {
+    "sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+    "snapshot": "mathlib-original/Mathlib/Probability/StrongLaw.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/Bornology/BoundedOperation.lean": {
+    "sha256": "fff7b7d4394f011fc875c576d259f3651fbad8083c8a51ab2d22fcbb89a47c4c",
+    "snapshot": "mathlib-original/Mathlib/Topology/Bornology/BoundedOperation.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean": {
+    "sha256": "fbeca6ed0689a68fb94229ffb5e9a7d97df8808c81b60c182a205629552f392b",
+    "snapshot": "mathlib-original/Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/ContinuousMap/Bounded/Basic.lean": {
+    "sha256": "db859cb320b918a0aff952cceefced83c37b728a4ed7d95df20480e243a1fe53",
+    "snapshot": "mathlib-original/Mathlib/Topology/ContinuousMap/Bounded/Basic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/ContinuousMap/Bounded/Normed.lean": {
+    "sha256": "f538bd984303ce5fdf14803442dc2b2a333d8c16df172fdc89a75ba3061cc8ac",
+    "snapshot": "mathlib-original/Mathlib/Topology/ContinuousMap/Bounded/Normed.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/Gluing.lean": {
+    "sha256": "46715ae1e627b66ffc8c40fa183f95810d831575aa1ae24ed32d0de93af3ec0b",
+    "snapshot": "mathlib-original/Mathlib/Topology/MetricSpace/Gluing.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/GromovHausdorff.lean": {
+    "sha256": "38c553041fc37267e7cc43df230f07410a8b89da42d7191354403ac4b3efb990",
+    "snapshot": "mathlib-original/Mathlib/Topology/MetricSpace/GromovHausdorff.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/Kuratowski.lean": {
+    "sha256": "8534fa708785e4d1b8cf9ac77bd3e800bbd110345a1f6045654925935b1f7f0a",
+    "snapshot": "mathlib-original/Mathlib/Topology/MetricSpace/Kuratowski.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/PiNat.lean": {
+    "sha256": "2bc708387c7e1c649d157dee0f38c3c34c83bfe3ae259430f8b99846608cd61b",
+    "snapshot": "mathlib-original/Mathlib/Topology/MetricSpace/PiNat.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Topology/MetricSpace/Polish.lean": {
+    "sha256": "71c9682ea53f194d1587fbd41695e35cc7fb8f51b1503f695ba4adfb15c52059",
+    "snapshot": "mathlib-original/Mathlib/Topology/MetricSpace/Polish.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith.lean": {
+    "sha256": "3e21896ccac8fb1d5c04e9a9903a2079a045ef3230bc784d23a02821b2a12c67",
+    "snapshot": "frozen-project/NormArith.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith/Census.lean": {
+    "sha256": "3759e281a3a6dd72a248dc79599ce3977b614389174a56d7c4f8f679cd7c1dc6",
+    "snapshot": "frozen-project/NormArith/Census.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith/Certificate.lean": {
+    "sha256": "3d944608f71ee05fda46c2347488e72d37e2635d578f84ce412177a22b42c516",
+    "snapshot": "frozen-project/NormArith/Certificate.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith/Metric.lean": {
+    "sha256": "4987a96a314ef53daa83868c5a772e133899efbb81b80e9d88792581629deb0f",
+    "snapshot": "frozen-project/NormArith/Metric.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith/Search.lean": {
+    "sha256": "10cc53acad6c6670000e78621ebff2a90613373228aad93663cb1b589ad1f358",
+    "snapshot": "frozen-project/NormArith/Search.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArith/Tactic.lean": {
+    "sha256": "27b311a82a893e3857b0d4bdeffbe8bb8b0ae323580f284d171f8d2e1e9d18ba",
+    "snapshot": "frozen-project/NormArith/Tactic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest.lean": {
+    "sha256": "0e3e85ffcc066bd576f91dd133c320a6087c59d39bcce50472764d100cbb056a",
+    "snapshot": "frozen-project/NormArithTest.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Certificate.lean": {
+    "sha256": "5e81953d0f55bcf07cb7fc3014bb7b891f41b04050c9044fd48125fdc78d78c2",
+    "snapshot": "frozen-project/NormArithTest/Certificate.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Core.lean": {
+    "sha256": "1c72d547629481b51c4c1fce9626d11e22f890ee3b51eecb32747b278bde1572",
+    "snapshot": "frozen-project/NormArithTest/Core.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Expansion.lean": {
+    "sha256": "45507445b612e80fabfc069e6d5e0558f981e98c3ee4dd8c70a60a47f82ff891",
+    "snapshot": "frozen-project/NormArithTest/Expansion.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Metric.lean": {
+    "sha256": "6509dd0e51d8893bb27e2b012d3959e26d40f7523c28932f05c8e31d6dcb0ba5",
+    "snapshot": "frozen-project/NormArithTest/Metric.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Paper.lean": {
+    "sha256": "976597ac5319a8f0041ec25723834e1fb9dec40a213fbde598ee339b45c835b8",
+    "snapshot": "frozen-project/NormArithTest/Paper.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Search.lean": {
+    "sha256": "63aad953ee5a92cc75c99c1df6ff1ff9c0bc43e3509f8117fdcfc125dcd4d1ea",
+    "snapshot": "frozen-project/NormArithTest/Search.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/NormArithTest/Tactic.lean": {
+    "sha256": "0b765c9bac11c26fbb69740bb7ebc1d1d25c2c8608859369daa2e46a0defa964",
+    "snapshot": "frozen-project/NormArithTest/Tactic.lean"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/archive_targeted.py": {
+    "sha256": "a7d2208ef7d6dfd6208009ee380ae253840152d18b5794e0ed49c08282dc0d6d",
+    "snapshot": "audit-tools/archive_targeted.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/implementation-costs-v3.json": {
+    "sha256": "d1f7fb95b10e04b7eef7862536c929e5738acea8451b0c58afcba72d3e72599e",
+    "snapshot": "implementation-costs.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/preserve_verified.py": {
+    "sha256": "d49fca3f01969182d5577685bd179c14f0ea5ea880510ccde27be1b6b0f382be",
+    "snapshot": "audit-tools/preserve_verified.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/recount_combined.py": {
+    "sha256": "c327e40c6bb4dd8572c6d82aeed324ef78ad55bffb0c9a2df182a46558a84d41",
+    "snapshot": "audit-tools/recount_combined.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/artifacts/independent-line-count.py": {
+    "sha256": "7b6c94c03283203735a157930892ef64a06a162b398519102d6b78c172b26863",
+    "snapshot": "audit-tools/independent-line-count.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/lake-manifest.json": {
+    "sha256": "c7862fd0c1362ddb73b91d454d3b6d9405feb6024b4b50f5f4a3aa1bc0acfc82",
+    "snapshot": "frozen-project/lake-manifest.json"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/lakefile.toml": {
+    "sha256": "5142d800556c20e3fe733eb5797f2d52e1c736019752c5b4bfc2f9d9fd0c1930",
+    "snapshot": "frozen-project/lakefile.toml"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/lean-toolchain": {
+    "sha256": "d581a24b57a4ae9e0b2132ca8ac7cc3ac336a9fc2751fe6b29414e2d434d54c4",
+    "snapshot": "frozen-project/lean-toolchain"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/archive_census.py": {
+    "sha256": "b8d7aa473c3dad11b93e69331f61d712c4446ac6866f819f088b32ee04d8b26a",
+    "snapshot": "audit-tools/archive_census.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/benchmark.py": {
+    "sha256": "9243321cf906cfbe18f4e84a01977b8a1590be798bfcf683b9207693a4e120f2",
+    "snapshot": "frozen-project/scripts/benchmark.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/census.py": {
+    "sha256": "675b61bd48e202b151c14728acc7c7b4b1a68622cf640370b492b3937e0946fd",
+    "snapshot": "frozen-project/scripts/census.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/select_census.py": {
+    "sha256": "24436dc1b76b9291bab93ddca9ea00dbea9ca259e585fcf3b1a5decd056bc7e8",
+    "snapshot": "frozen-project/scripts/select_census.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/select_expansion.py": {
+    "sha256": "321f35ab4e365301c92bf00de5ad0120a1df02a0c3a6947e326bd583b04f8a93",
+    "snapshot": "frozen-project/scripts/select_expansion.py"
+  },
+  "/Users/to1717/Documents/GitHub/norm-arith/scripts/verify_selection.py": {
+    "sha256": "d121b7b91bcf696f6241b1c7c6e1cf7b8ae6f2fdd568361fb035b90910a55c6d",
+    "snapshot": "frozen-project/scripts/verify_selection.py"
+  },
+  "artifacts/expansion/combined-07-audit.json": {
+    "sha256": "eb6a954e737ab641106ab9c2744cb8510220b0c6107be9e4f378a7342619a90a",
+    "snapshot": "independent-audit.json"
+  }
+}

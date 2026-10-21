@@ -1,0 +1,41 @@
+.F....E.....F
+======================================================================
+ERROR: test_wrapped_replacement_preserves_the_recorded_proof_and_body (test_verify_selection.ProofSpanTests.test_wrapped_replacement_preserves_the_recorded_proof_and_body)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_verify_selection.py", line 39, in test_wrapped_replacement_preserves_the_recorded_proof_and_body
+    verify_selection.validate_proof_spans(manifest, mathlib)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/verify_selection.py", line 66, in validate_proof_spans
+    raise BenchmarkError(f"replacement changes source outside the recorded proof span: {candidate['id']}")
+benchmark.BenchmarkError: replacement changes source outside the recorded proof span: census-c7a309b8abe24c2c0581
+
+======================================================================
+FAIL: test_long_line_warning_rejects_fresh_outputs_and_blocks_dependents (test_verify_selection.CompilationTests.test_long_line_warning_rejects_fresh_outputs_and_blocks_dependents)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_verify_selection.py", line 196, in test_long_line_warning_rejects_fresh_outputs_and_blocks_dependents
+    self.assertEqual([row["status"] for row in rows], ["failed", "blocked_dependency"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['verified', 'verified'] != ['failed', 'blocked_dependency']
+
+First differing element 0:
+'verified'
+'failed'
+
+- ['verified', 'verified']
++ ['failed', 'blocked_dependency']
+
+======================================================================
+FAIL: test_long_line_warning_cannot_emit_a_verified_manifest (test_verify_selection.VerificationRunTests.test_long_line_warning_cannot_emit_a_verified_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_verify_selection.py", line 384, in test_long_line_warning_cannot_emit_a_verified_manifest
+    self.assertEqual(code, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.763s
+
+FAILED (failures=2, errors=1)

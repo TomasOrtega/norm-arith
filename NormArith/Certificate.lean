@@ -52,6 +52,9 @@ theorem bound_of_eq {x y : E} {a : ℝ}
     (hxy : x = y) (hy : ‖y‖ ≤ a) : ‖x‖ ≤ a := by
   simpa only [hxy] using hy
 
+theorem norm_sub_of_eq {x y : E} (h : x = y) : ‖x - y‖ = (0 : ℝ) := by
+  simp only [h, sub_self, norm_zero]
+
 /-- The finite-sum form of the same certificate check. -/
 theorem bound_sum {ι : Type*} (s : Finset ι) {v : ι → E} {b : ι → ℝ}
     (h : ∀ i ∈ s, ‖v i‖ ≤ b i) : ‖∑ i ∈ s, v i‖ ≤ ∑ i ∈ s, b i :=

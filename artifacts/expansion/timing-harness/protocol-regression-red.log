@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_protocol_hash_changes_when_input_fingerprinting_changes (scripts.test_benchmark.FrozenPlanTests.test_protocol_hash_changes_when_input_fingerprinting_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_benchmark.py", line 480, in test_protocol_hash_changes_when_input_fingerprinting_changes
+    self.assertNotEqual(benchmark.measurement_protocol_sha256(), original)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '873d91e84a497b823771f793656c2ff05add338ae7ec36eaf5ba91459d6d359b' == '873d91e84a497b823771f793656c2ff05add338ae7ec36eaf5ba91459d6d359b'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

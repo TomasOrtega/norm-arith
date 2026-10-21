@@ -1,0 +1,826 @@
+{
+  "status": "read_only_diagnosis_index",
+  "source_run": ".lake/census-full-v3",
+  "attempt_status_counts": {
+    "no_line_saving_untried": 17663,
+    "failed": 2753,
+    "augmented_elaboration_failed": 15,
+    "success": 40,
+    "import_cycle": 54,
+    "context_unmatched": 4
+  },
+  "original_observation_eligibility_reason_counts": {
+    "multi_goal_tactic": 33468,
+    "tactic_token": 11702,
+    "eligible": 20628,
+    "outside_fragment": 57027,
+    "outside_decl_body": 448
+  },
+  "multiline_original_goal_eligible_reason_counts": {
+    "multi_goal_tactic": 1091,
+    "eligible": 2948,
+    "outside_decl_body": 11
+  },
+  "failure_exact_messages": [
+    {
+      "count": 1989,
+      "message": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "count": 708,
+      "message": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "count": 50,
+      "message": "norm_arith expects a real linear comparison with recognized norm or distance facts"
+    },
+    {
+      "count": 3,
+      "message": "Unknown constant `_private.Mathlib.Topology.MetricSpace.GromovHausdorff.0.GromovHausdorff.hausdorffDist_optimal.match_1_1`"
+    },
+    {
+      "count": 2,
+      "message": "ring failed, ring expressions not equal\n𝕜 : Type u_1\nE : Type u_2\nF : Type u_3\ninst✝⁴ : NontriviallyNormedField 𝕜\ninst✝³ : NormedAddCommGroup E\ninst✝² : NormedSpace 𝕜 E\ninst✝¹ : NormedAddCommGroup F\ninst✝ : NormedSpace 𝕜 F\nf : E → F\np : FormalMultilinearSeries 𝕜 E F\ns : Set E\nx : E\nr : ℝ≥0∞\ny : E\nhf : HasFPowerSeriesWithinOnBall f p s x r\nhy : y ∈ Metric.eball 0 r\nh'y : x + y ∈ insert x s\nA✝ : Filter.Tendsto (fun z ↦ p.partialSum z.1 y) (Filter.atTop ×ˢ 𝓝 y) (𝓝 (f (x + y)))\nε : ℝ\nεpos : ε > 0\nr' : ℝ≥0\nyr' : ‖y‖₊ < r'\nr'r : ↑r' < r\nyr'_2 : ‖y‖ < ↑r'\nS : Summable fun n ↦ ‖p n‖ * ↑r' ^ n\nk : ℕ\nhk : ∑' (n : ℕ), ‖p (n + k)‖ * ↑r' ^ (n + k) < ε / 4\nA : ∀ᶠ (z : ℕ × E) in Filter.atTop ×ˢ 𝓝 y, dist (p.partialSum k z.2) (p.partialSum k y) < ε / 4\nB : ∀ᶠ (z : ℕ × E) in Filter.atTop ×ˢ 𝓝 y, ‖z.2‖₊ < r'\nC : ∀ᶠ (z : ℕ × E) in Filter.atTop ×ˢ 𝓝 y, k ≤ z.1\nn : ℕ\nz : E\nh'z : ‖(n, z).2‖₊ < r'\nhkn : k ≤ (n, z).1\nhz : ‖p.partialSum k z - p.partialSum k y‖ < ε / 4\nI : ∀ (w : E), ‖w‖₊ < r' → ‖∑ i ∈ Finset.Ico k n, (p i) fun x ↦ w‖ ≤ ε / 4\n⊢ 1 = 0"
+    },
+    {
+      "count": 1,
+      "message": "failed to synthesize\n  Norm (E → G)\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command."
+    }
+  ],
+  "observed_tactic_sequence_syntax": {
+    "Lean.Parser.Tactic.rwSeq": 3454,
+    "Lean.calcTactic": 368,
+    "Lean.Parser.Tactic.tacticSeq1Indented": 4129,
+    "Lean.calc": 182,
+    "Mathlib.Tactic.GRewrite.grwSeq": 198,
+    "Mathlib.Tactic.DepRewrite.depRwSeq": 2,
+    "Lean.Parser.Tactic.tacticSeqBracketed": 21
+  },
+  "term_syntax_counts": {
+    "ident": 27080,
+    "Lean.Parser.Term.app": 14081,
+    "Lean.Parser.Term.paren": 5741,
+    "Lean.Parser.Term.fun": 2502,
+    "Lean.Parser.Term.identProj": 2051,
+    "Lean.Parser.Term.syntheticHole": 1875,
+    "Lean.Parser.Tactic.rcasesPat.tuple": 1428,
+    "Lean.Parser.Term.anonymousCtor": 909,
+    "Lean.Parser.Term.proj": 818,
+    "«term_<|_»": 664,
+    "Lean.Parser.Term.hole": 242,
+    "Lean.calc": 182,
+    "Lean.Parser.Term.subst": 143,
+    "Lean.Parser.Term.pipeProj": 128,
+    "obtain": 113,
+    "Lean.Parser.Term.dotIdent": 103,
+    "Lean.Parser.Term.let": 71,
+    "Mathlib.Tactic.TermCongr.termCongr": 66,
+    "Lean.Parser.Tactic.rcasesPatMed": 52,
+    "Lean.Parser.Term.show": 50,
+    "Lean.Parser.Term.typeAscription": 34,
+    "Lean.modCast": 28,
+    "Lean.Parser.Term.have": 20,
+    "Lean.Parser.Tactic.rcasesPat.paren": 16,
+    "Lean.Parser.Tactic.rcasesPat.clear": 15,
+    "Lean.Parser.Tactic.rcasesPatLo": 13,
+    "num": 12,
+    "Mathlib.Tactic.TFAE.Parser.tfaeType": 8,
+    "termDepIfThenElse": 7,
+    "Lean.Parser.Term.byTactic": 7,
+    "Lean.Parser.Term.haveI": 4,
+    "Lean.Parser.Term.suffices": 4,
+    "Lean.Parser.Term.letI": 3,
+    "«term‹_›»": 3,
+    "«term_∘_»": 2,
+    "to_additive": 2,
+    "Lean.Parser.Term.explicit": 2,
+    "Lean.Parser.Term.match": 1,
+    "Lean.Parser.Tactic.rintroPat.binder": 1,
+    "rcases": 1
+  },
+  "largest_failed_spans": [
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 117,
+      "end_line": 220,
+      "nonblank_source_lines": 104,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 119,
+      "end_line": 220,
+      "nonblank_source_lines": 102,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Fourier/FourierTransformDeriv.lean",
+      "start_line": 348,
+      "end_line": 427,
+      "nonblank_source_lines": 79,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖iteratedFDeriv ℝ k (fun v ↦ fourierPowSMulRight L f v n) v‖ ≤ (2 * π) ^ n * (2 * ↑n + 2) ^ k * ‖L‖ ^ n * C",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Fourier/FourierTransformDeriv.lean",
+      "start_line": 360,
+      "end_line": 427,
+      "nonblank_source_lines": 68,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖iteratedFDeriv ℝ k (fun v ↦ fourierPowSMulRight L f v n) v‖ ≤ (2 * π) ^ n * (2 * ↑n + 2) ^ k * ‖L‖ ^ n * C",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/DivergenceTheorem.lean",
+      "start_line": 72,
+      "end_line": 135,
+      "nonblank_source_lines": 64,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖(∏ j, (I.upper j - I.lower j)) • f' (Pi.single i 1) -\n      (integral (I.face i) ⊥ (f ∘ i.insertNth (I.upper i)) BoxAdditiveMap.volume -\n        integral (I.face i) ⊥ (f ∘ i.insertNth (I.lower i)) BoxAdditiveMap.volume)‖ ≤\n  2 * ε * ↑c * ∏ j, (I.upper j - I.lower j)",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/DivergenceTheorem.lean",
+      "start_line": 74,
+      "end_line": 135,
+      "nonblank_source_lines": 62,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖(∏ j, (I.upper j - I.lower j)) • f' (Pi.single i 1) -\n      (integral (I.face i) ⊥ (f ∘ i.insertNth (I.upper i)) BoxAdditiveMap.volume -\n        integral (I.face i) ⊥ (f ∘ i.insertNth (I.lower i)) BoxAdditiveMap.volume)‖ ≤\n  2 * ε * ↑c * ∏ j, (I.upper j - I.lower j)",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 69,
+      "end_line": 127,
+      "nonblank_source_lines": 59,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z - f c‖ ≤ R₂ * (‖z - c‖ / R₁) ^ (n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 684,
+      "end_line": 741,
+      "nonblank_source_lines": 58,
+      "syntax_kind": "Lean.Parser.Tactic.classical",
+      "goal": "‖∑ J ∈ (π₁.toPrepartition ⊓ π₂.toPrepartition).boxes,\n      μ.toBoxAdditive J •\n        (f ((π₁.infPrepartition π₂.toPrepartition).tag J) - f ((π₂.infPrepartition π₁.toPrepartition).tag J))‖ ≤\n  ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 685,
+      "end_line": 741,
+      "nonblank_source_lines": 57,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖∑ J ∈ (π₁.toPrepartition ⊓ π₂.toPrepartition).boxes,\n      μ.toBoxAdditive J •\n        (f ((π₁.infPrepartition π₂.toPrepartition).tag J) - f ((π₂.infPrepartition π₁.toPrepartition).tag J))‖ ≤\n  ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 650,
+      "end_line": 705,
+      "nonblank_source_lines": 56,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 72,
+      "end_line": 127,
+      "nonblank_source_lines": 56,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z - f c‖ ≤ R₂ * (‖z - c‖ / R₁) ^ (n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 348,
+      "end_line": 399,
+      "nonblank_source_lines": 52,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 654,
+      "end_line": 705,
+      "nonblank_source_lines": 52,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+      "start_line": 399,
+      "end_line": 450,
+      "nonblank_source_lines": 52,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "1 - δ ≤ ‖(2 / ‖a.c i‖) • a.c i - (2 / ‖a.c j‖) • a.c j‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+      "start_line": 400,
+      "end_line": 450,
+      "nonblank_source_lines": 51,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "1 - δ ≤ ‖(2 / ‖a.c i‖) • a.c i - (2 / ‖a.c j‖) • a.c j‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 350,
+      "end_line": 399,
+      "nonblank_source_lines": 50,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z‖ ≤ C",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+      "start_line": 346,
+      "end_line": 394,
+      "nonblank_source_lines": 49,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "1 - δ ≤ ‖a.c i - (2 / ‖a.c j‖) • a.c j‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+      "start_line": 347,
+      "end_line": 394,
+      "nonblank_source_lines": 48,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "1 - δ ≤ ‖a.c i - (2 / ‖a.c j‖) • a.c j‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Polynomial/MahlerMeasure.lean",
+      "start_line": 363,
+      "end_line": 408,
+      "nonblank_source_lines": 46,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖p.coeff n‖ ≤ ↑(p.natDegree.choose n) * p.mahlerMeasure",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/NumberTheory/LSeries/SumCoeff.lean",
+      "start_line": 294,
+      "end_line": 339,
+      "nonblank_source_lines": 46,
+      "syntax_kind": "Lean.calcTactic",
+      "goal": "‖(↑s - 1) * LSeries f ↑s - ↑s * l‖ ≤ (s - 1) * s * C + s * ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Polynomial/MahlerMeasure.lean",
+      "start_line": 364,
+      "end_line": 408,
+      "nonblank_source_lines": 45,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖p.coeff n‖ ≤ ↑(p.natDegree.choose n) * p.mahlerMeasure",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+      "start_line": 567,
+      "end_line": 611,
+      "nonblank_source_lines": 45,
+      "syntax_kind": "Lean.calcTactic",
+      "goal": "‖∫ (t : ℝ) in a₀..s, f p t ∂μ - ∫ (t : ℝ) in a₀..b₀, f q t ∂μ‖ < ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 530,
+      "end_line": 570,
+      "nonblank_source_lines": 41,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "dist (integralSum f vol π) (∑ J ∈ π₀.boxes, integral J l f vol) ≤ ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 532,
+      "end_line": 570,
+      "nonblank_source_lines": 39,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "dist (integralSum f vol π) (∑ J ∈ π₀.boxes, integral J l f vol) ≤ ε",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Hadamard.lean",
+      "start_line": 487,
+      "end_line": 522,
+      "nonblank_source_lines": 36,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z‖ ≤ a ^ (1 - z.re) * b ^ z.re",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Hadamard.lean",
+      "start_line": 488,
+      "end_line": 522,
+      "nonblank_source_lines": 35,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z‖ ≤ a ^ (1 - z.re) * b ^ z.re",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 149,
+      "end_line": 183,
+      "nonblank_source_lines": 35,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "dist (f z) (f c) ≤ R₂ * (dist z c / R₁) ^ (n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Lp/lpHolder.lean",
+      "start_line": 211,
+      "end_line": 245,
+      "nonblank_source_lines": 35,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖((holderₗ r B hBK) e) f‖ ≤ ↑K * ‖e‖ * ‖f‖",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 209,
+      "end_line": 243,
+      "nonblank_source_lines": 35,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f m₁ - f m₂‖ ≤ C * ∑ i, ∏ j, if j = i then ‖m₁ i - m₂ i‖ else max ‖m₁ j‖ ‖m₂ j‖",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+      "start_line": 142,
+      "end_line": 176,
+      "nonblank_source_lines": 35,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖log (1 + z) - logTaylor (n + 1) z‖ ≤ ‖z‖ ^ (n + 1) * (1 - ‖z‖)⁻¹ / (↑n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "start_line": 773,
+      "end_line": 806,
+      "nonblank_source_lines": 34,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "dist ((f ⋆[L, μ] g) x₀) (∫ (t : G), (L (f t)) z₀ ∂μ) ≤ (‖L‖ * ∫ (x : G), ‖f x‖ ∂μ) * ε",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Lp/lpHolder.lean",
+      "start_line": 212,
+      "end_line": 245,
+      "nonblank_source_lines": 34,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖((holderₗ r B hBK) e) f‖ ≤ ↑K * ‖e‖ * ‖f‖",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 210,
+      "end_line": 243,
+      "nonblank_source_lines": 34,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f m₁ - f m₂‖ ≤ C * ∑ i, ∏ j, if j = i then ‖m₁ i - m₂ i‖ else max ‖m₁ j‖ ‖m₂ j‖",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+      "start_line": 143,
+      "end_line": 176,
+      "nonblank_source_lines": 34,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖log (1 + z) - logTaylor (n + 1) z‖ ≤ ‖z‖ ^ (n + 1) * (1 - ‖z‖)⁻¹ / (↑n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Gaussian/FourierTransform.lean",
+      "start_line": 72,
+      "end_line": 105,
+      "nonblank_source_lines": 34,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖verticalIntegral b c T‖ ≤ 2 * |c| * rexp (-(b.re * T ^ 2 - 2 * |b.im| * |c| * T - b.re * c ^ 2))",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Hadamard.lean",
+      "start_line": 430,
+      "end_line": 462,
+      "nonblank_source_lines": 33,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖f z‖ ≤ ‖interpStrip f z‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 151,
+      "end_line": 183,
+      "nonblank_source_lines": 33,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "dist (f z) (f c) ≤ R₂ * (dist z c / R₁) ^ (n + 1)",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "start_line": 774,
+      "end_line": 806,
+      "nonblank_source_lines": 33,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "dist ((f ⋆[L, μ] g) x₀) (∫ (t : G), (L (f t)) z₀ ∂μ) ≤ (‖L‖ * ∫ (x : G), ‖f x‖ ∂μ) * ε",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Exponential.lean",
+      "start_line": 408,
+      "end_line": 439,
+      "nonblank_source_lines": 32,
+      "syntax_kind": "Lean.Parser.Term.byTactic",
+      "goal": "‖cexp x - ∑ m ∈ range n, x ^ m / ↑m.factorial‖ ≤ ‖x‖ ^ n / ↑n.factorial * 2",
+      "error": "norm_arith: unknown (the opaque upper-bound extension found no certificate)"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Hadamard.lean",
+      "start_line": 431,
+      "end_line": 462,
+      "nonblank_source_lines": 32,
+      "syntax_kind": "Lean.Parser.Tactic.tacticSeq1Indented",
+      "goal": "‖f z‖ ≤ ‖interpStrip f z‖",
+      "error": "norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete"
+    }
+  ],
+  "largest_excluded_multiline_spans": [
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 210,
+      "end_line": 241,
+      "nonblank_source_lines": 32,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖f m₁ - f m₂‖ ≤ C * ∑ i, ∏ j, if j = i then ‖m₁ i - m₂ i‖ else max ‖m₁ j‖ ‖m₂ j‖"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 695,
+      "end_line": 721,
+      "nonblank_source_lines": 27,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖∑ x ∈ B \\ B',\n      μ.toBoxAdditive x •\n        (f ((π₁.infPrepartition π₂.toPrepartition).tag x) - f ((π₂.infPrepartition π₁.toPrepartition).tag x))‖ ≤\n  ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 695,
+      "end_line": 721,
+      "nonblank_source_lines": 27,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖∑ x ∈ B',\n      μ.toBoxAdditive x •\n        (f ((π₁.infPrepartition π₂.toPrepartition).tag x) - f ((π₂.infPrepartition π₁.toPrepartition).tag x))‖ ≤\n  ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/InnerProductSpace/Projection/Minimal.lean",
+      "start_line": 79,
+      "end_line": 104,
+      "nonblank_source_lines": 26,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "dist ↑(w p) ↑(w q) ≤ √(b✝ N)"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 173,
+      "end_line": 197,
+      "nonblank_source_lines": 25,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.obtain",
+      "goal": "‖g ε z • f z‖ ≤ C"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+      "start_line": 132,
+      "end_line": 153,
+      "nonblank_source_lines": 22,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖∫ (x : α) in s, φ i x • g x ∂μ‖ ≤ δ * ∫ (x : α) in s, ‖g x‖ ∂μ + 2 * δ"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 811,
+      "end_line": 830,
+      "nonblank_source_lines": 20,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "dist (∑ x ∈ π.boxes with π.tag x ∈ s, (vol x) (f (π.tag x))) (∑ x ∈ π.boxes with π.tag x ∈ s, g x) ≤ ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 811,
+      "end_line": 830,
+      "nonblank_source_lines": 20,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "dist (∑ x ∈ π.boxes with π.tag x ∉ s, (vol x) (f (π.tag x))) (∑ x ∈ π.boxes with π.tag x ∉ s, g x) ≤ ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/DivergenceTheorem.lean",
+      "start_line": 92,
+      "end_line": 111,
+      "nonblank_source_lines": 20,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖(∏ j, (I.upper j - I.lower j)) • f' (Pi.single i 1) -\n      (integral (I.face i) ⊥ (f ∘ e (I.upper i)) BoxAdditiveMap.volume -\n        integral (I.face i) ⊥ (f ∘ e (I.lower i)) BoxAdditiveMap.volume)‖ ≤\n  2 * ε * ↑c * ∏ j, (I.upper j - I.lower j)"
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Bounds.lean",
+      "start_line": 61,
+      "end_line": 78,
+      "nonblank_source_lines": 18,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖iteratedFDerivWithin 𝕜 (n + 1) (fun y ↦ (B (f y)) (g y)) s x‖ ≤\n  ‖B‖ *\n    ∑ i ∈ Finset.range (n + 1 + 1),\n      ↑((n + 1).choose i) * ‖iteratedFDerivWithin 𝕜 i f s x‖ * ‖iteratedFDerivWithin 𝕜 (n + 1 - i) g s x‖"
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Bounds.lean",
+      "start_line": 79,
+      "end_line": 96,
+      "nonblank_source_lines": 18,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖iteratedFDerivWithin 𝕜 (n + 1) (fun y ↦ (B (f y)) (g y)) s x‖ ≤\n  ‖B‖ *\n    ∑ i ∈ Finset.range (n + 1 + 1),\n      ↑((n + 1).choose i) * ‖iteratedFDerivWithin 𝕜 i f s x‖ * ‖iteratedFDerivWithin 𝕜 (n + 1 - i) g s x‖"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+      "start_line": 106,
+      "end_line": 123,
+      "nonblank_source_lines": 18,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖(P * R) • x - (R * P * R) • x‖ = 0"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/Prokhorov.lean",
+      "start_line": 368,
+      "end_line": 385,
+      "nonblank_source_lines": 18,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "dist (∫ (x : E), g x ∂↑ρ) (∫ (x : E), g x ∂∑ i ∈ Finset.range (n + 1), ↑(ρ.restrict (disjointed K i))) < ε / 3"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/Prokhorov.lean",
+      "start_line": 368,
+      "end_line": 385,
+      "nonblank_source_lines": 18,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "dist (∫ (x : E), g x ∂∑ i ∈ Finset.range (n + 1), ↑(ρ.restrict (disjointed K i)))\n    (∫ (x : E), g x ∂∑ i ∈ Finset.range (n + 1), ↑(ν i)) <\n  ε / 3"
+    },
+    {
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "start_line": 812,
+      "end_line": 828,
+      "nonblank_source_lines": 17,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖f y.1 - f y.2 - (p 1) fun x ↦ y.1 - y.2‖ ≤ L y"
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Bounds.lean",
+      "start_line": 369,
+      "end_line": 385,
+      "nonblank_source_lines": 17,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖iteratedFDerivWithin 𝕜 (n + 1) (g ∘ f) s x‖ ≤ ↑(n + 1)! * C * D ^ (n + 1)"
+    },
+    {
+      "path": "Mathlib/Analysis/Distribution/ContDiffMapSupportedIn.lean",
+      "start_line": 1072,
+      "end_line": 1088,
+      "nonblank_source_lines": 17,
+      "eligibility_reason": "outside_decl_body",
+      "syntax_kind": "Lean.calcTactic",
+      "goal": "‖iteratedFDeriv ℝ k (fun x ↦ (B (φ x)) (g x)) x‖ ≤\n  ‖B‖ * 2 ^ k * ‖C₀‖ * ((Finset.Iic k).sup fun j ↦ ContDiffMapSupportedIn.seminorm 𝕜 E F₁ n K j) φ"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 695,
+      "end_line": 710,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖∑ x ∈ B \\ B',\n      μ.toBoxAdditive x •\n        (f ((π₁.infPrepartition π₂.toPrepartition).tag x) - f ((π₂.infPrepartition π₁.toPrepartition).tag x))‖ ≤\n  ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/Distribution/TemperateGrowth.lean",
+      "start_line": 144,
+      "end_line": 159,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖iteratedFDeriv ℝ n (g ∘ f) x‖ ≤ ↑n ! * C₃ * (1 + C₁) ^ n * (1 + ‖x‖) ^ (k₁ * k₂ + k₁ * n)"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 253,
+      "end_line": 268,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖f m₁ - f m₂‖ ≤ C * ↑(Fintype.card ι) * max ‖m₁‖ ‖m₂‖ ^ (Fintype.card ι - 1) * ‖m₁ - m₂‖"
+    },
+    {
+      "path": "Mathlib/Analysis/SpecialFunctions/Gaussian/FourierTransform.lean",
+      "start_line": 74,
+      "end_line": 89,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖verticalIntegral b c T‖ ≤ 2 * |c| * rexp (-(b.re * T ^ 2 - 2 * |b.im| * |c| * T - b.re * c ^ 2))"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+      "start_line": 366,
+      "end_line": 381,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "1 - δ ≤ ‖a.c i - (2 / ‖a.c j‖) • a.c j‖"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+      "start_line": 154,
+      "end_line": 169,
+      "nonblank_source_lines": 16,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖∫ (x : α) in s, φ i x • g x ∂μ‖ ≤ δ * ∫ (x : α) in s, ‖g x‖ ∂μ + 2 * δ"
+    },
+    {
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "start_line": 639,
+      "end_line": 653,
+      "nonblank_source_lines": 15,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖p.partialSum n z - p.partialSum n y‖ < ε"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 151,
+      "end_line": 165,
+      "nonblank_source_lines": 15,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.obtain",
+      "goal": "‖g ε z • f z‖ ≤ C"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral/DistLEIntegral.lean",
+      "start_line": 49,
+      "end_line": 63,
+      "nonblank_source_lines": 15,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖f b - f a‖ ≤ ∫ (t : ℝ) in a..b, B t"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/IntervalIntegral/DistLEIntegral.lean",
+      "start_line": 49,
+      "end_line": 63,
+      "nonblank_source_lines": 15,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖f b - f a‖ ≤ ∫ (t : ℝ) in a..b, B t"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/Basic.lean",
+      "start_line": 540,
+      "end_line": 553,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "dist (integralSum f vol π) (∑ J ∈ π₀.boxes, integral J l f vol) ≤ ε + δ"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Hadamard.lean",
+      "start_line": 488,
+      "end_line": 501,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖f z‖ ≤ a ^ (1 - z.re) * b ^ z.re"
+    },
+    {
+      "path": "Mathlib/Analysis/InnerProductSpace/Projection/Minimal.lean",
+      "start_line": 205,
+      "end_line": 218,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖u - v‖ ≤ ⨅ w, ‖u - ↑w‖"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 217,
+      "end_line": 230,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖f m₁ - f ((insert i s).piecewise m₂ m₁)‖ ≤\n  C * ∑ i ∈ insert i s, ∏ j, if j = i then ‖m₁ i - m₂ i‖ else max ‖m₁ j‖ ‖m₂ j‖"
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/MahlerBasis.lean",
+      "start_line": 167,
+      "end_line": 180,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖-∑ j ∈ range (p ^ t - 1), (p ^ t).choose (j + 1) • Δ_[1]^[n + (j + 1)] (⇑f) 0‖ ≤\n  ↑((range (p ^ t - 1)).sup fun j ↦ ‖Δ_[1]^[n + (j + 1)] (⇑f) 0‖₊ / ↑p)"
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/MahlerBasis.lean",
+      "start_line": 167,
+      "end_line": 180,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖∑ k ∈ range (n + 1), ((-1) ^ (n - k) * ↑(n.choose k)) • (f (↑k + ↑(p ^ t)) - f ↑k)‖ ≤ ‖f‖ / ↑p ^ s"
+    },
+    {
+      "path": "Mathlib/Topology/VectorBundle/Riemannian.lean",
+      "start_line": 200,
+      "end_line": 213,
+      "nonblank_source_lines": 14,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "((g' x) w) w ≤ r' ^ 2 * ((g' y) w) w"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 75,
+      "end_line": 87,
+      "nonblank_source_lines": 13,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖f z - f c‖ ≤ R₂ * (‖z - c‖ / R₁) ^ (n + 1)"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/Schwarz.lean",
+      "start_line": 75,
+      "end_line": 87,
+      "nonblank_source_lines": 13,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖f z - f c‖ ≤ R₂ * (‖z - c‖ / R₁) ^ (n + 1)"
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+      "start_line": 518,
+      "end_line": 530,
+      "nonblank_source_lines": 13,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.Parser.Tactic.tacticHave__",
+      "goal": "‖(f' x - A) z‖ ≤ (↑δ + ε) * (‖z‖ + ε) + ‖f' x - A‖ * ε"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/DivergenceTheorem.lean",
+      "start_line": 213,
+      "end_line": 224,
+      "nonblank_source_lines": 12,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖(BoxAdditiveMap.volume J) ((f' x) (Pi.single i 1))‖ ≤ ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/BoxIntegral/DivergenceTheorem.lean",
+      "start_line": 213,
+      "end_line": 224,
+      "nonblank_source_lines": 12,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖integral (J.face i) GP ((fun y ↦ f (i.insertNth (J.upper i) y)) - fun y ↦ f (i.insertNth (J.lower i) y))\n      BoxAdditiveMap.volume‖ ≤\n  ε / 2"
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/PhragmenLindelof.lean",
+      "start_line": 785,
+      "end_line": 796,
+      "nonblank_source_lines": 12,
+      "eligibility_reason": "multi_goal_tactic",
+      "syntax_kind": "Lean.cdot",
+      "goal": "‖g n (↑y * I)‖ ≤ C"
+    }
+  ],
+  "limitations": "Span line counts are ranking aids, not verified replaceable savings; overlapping spans are retained."
+}

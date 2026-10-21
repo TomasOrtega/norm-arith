@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "premeasurement_capacity_estimate_and_protocol_proposal",
+  "no_new_measurements": true,
+  "inputs": {
+    "baseline_report": {
+      "path": ".lake/benchmark-confirmatory-style-v4/report.json",
+      "sha256": "47a880408f7e21d88a460e21ba46912ae7313a090651c3967d1ed6b57143e260"
+    },
+    "baseline_plan": {
+      "path": ".lake/benchmark-confirmatory-style-v4/analysis-plan.json",
+      "sha256": "aee90122ff3fa8ef6d3e0ef577a019b5708f6ed648478e2774d7559ed6ddb83b"
+    },
+    "baseline_calibration": {
+      "path": ".lake/calibration-native-style-v4.json",
+      "sha256": "5898f5072a82f0296754bd19a554564112d7b582041682dcf8fd485d19045ed9"
+    },
+    "expanded_verification": {
+      "path": ".lake/expansion-combined-verification-03/verification.json",
+      "sha256": "3c7db42ec9298eb9be686fa085c8c5fadd63f7adfccfb7f4241cb1f33a84f88e"
+    }
+  },
+  "baseline": {
+    "affected_files": 10,
+    "measured_pairs": 40,
+    "warmup_pairs": 1,
+    "original_mean_pass_seconds": 34.823072014717035,
+    "replacement_mean_pass_seconds": 31.510197956151387,
+    "mean_pair_seconds": 66.33326997086843,
+    "measured_compiler_seconds": 2653.330798834737,
+    "all_compiler_seconds": 2720.9180564587587,
+    "setup_seconds": 68.89355979399988
+  },
+  "expanded_diagnostic": {
+    "affected_files": 21,
+    "new_file_count": 11,
+    "replacement_single_pass_seconds": 62.59675845998572,
+    "new_file_allowance_seconds": 29.795012292044703,
+    "rough_original_pass_seconds": 64.61808430676174,
+    "rough_pair_seconds": 127.21484276674747,
+    "interpretation": "Capacity only: single variant, concurrent discovery, different tactic; no speed estimate."
+  },
+  "proposed_design": {
+    "calibration_measured_pairs": 24,
+    "calibration_warmup_pairs": 1,
+    "block_pairs_and_confirmatory_pairs": {
+      "4": 40,
+      "8": 80
+    },
+    "confirmatory_warmup_pairs": 1,
+    "threads": 1,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20261020,
+    "statistic": "ratio_of_mean_pass_totals",
+    "gate": "valid_calibrated_95pct_BCa_lower_strictly_greater_than_one",
+    "pilot_selection": "speed-level-blinded serial/order/drift rationale before confirmatory plan freeze; no significance-based sample change"
+  },
+  "capacity": {
+    "default_total_pairs": 66,
+    "default_compiler_minutes": 139.9363270434222,
+    "longer_total_pairs": 106,
+    "longer_compiler_minutes": 224.74622222125387,
+    "suggested_reserved_hours_default": 3,
+    "suggested_reserved_hours_longer": 5,
+    "suggested_free_disk_gib_default": 10,
+    "suggested_free_disk_gib_longer": 15
+  },
+  "details": "artifacts/expansion/timing-plan.md"
+}

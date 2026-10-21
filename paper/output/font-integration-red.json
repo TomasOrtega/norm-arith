@@ -1,0 +1,44 @@
+{
+  "status": "fail",
+  "command": [
+    "xelatex",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-recorder",
+    "-output-directory=/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration/font-test.tex"
+  ],
+  "paper_preamble_sha256": "60f77768aa8282a303cd61038795f98b80fb5890742bd5055a36e55022dbfc40",
+  "expected_faces": [
+    "JuliaMono-Bold",
+    "JuliaMono-BoldItalic",
+    "JuliaMono-Regular",
+    "JuliaMono-RegularItalic",
+    "TeXGyreHeros-Bold",
+    "TeXGyreHeros-BoldItalic",
+    "TeXGyreHeros-Italic",
+    "TeXGyreHeros-Regular",
+    "TeXGyreTermes-Bold",
+    "TeXGyreTermes-BoldItalic",
+    "TeXGyreTermes-Italic",
+    "TeXGyreTermes-Regular"
+  ],
+  "embedded_faces": [
+    "JuliaMono-Regular",
+    "TeXGyreHeros-Regular",
+    "TeXGyreTermes-Regular"
+  ],
+  "font_warnings": [
+    "LaTeX Font Warning: Font shape `TU/texgyretermes-regular.otf(0)/b/n' undefined\n(Font)              using `TU/texgyretermes-regular.otf(0)/m/n' instead on inpu\nt line 27.",
+    "LaTeX Font Warning: Font shape `TU/texgyretermes-regular.otf(0)/m/it' undefined",
+    "LaTeX Font Warning: Font shape `TU/texgyretermes-regular.otf(0)/b/it' undefined",
+    "LaTeX Font Warning: Font shape `TU/texgyreheros-regular.otf(0)/b/n' undefined\n(Font)              using `TU/texgyreheros-regular.otf(0)/m/n' instead on input\n line 28.",
+    "LaTeX Font Warning: Font shape `TU/texgyreheros-regular.otf(0)/m/it' undefined\n(Font)              using `TU/texgyreheros-regular.otf(0)/m/n' instead on input\n line 28.",
+    "LaTeX Font Warning: Font shape `TU/texgyreheros-regular.otf(0)/b/it' undefined\n(Font)              using `TU/texgyreheros-regular.otf(0)/b/n' instead on input\n line 28.",
+    "LaTeX Font Warning: Font shape `TU/JuliaMono-Regular.ttf(0)/b/n' undefined\n(Font)              using `TU/JuliaMono-Regular.ttf(0)/m/n' instead on input li\nne 29.",
+    "LaTeX Font Warning: Font shape `TU/JuliaMono-Regular.ttf(0)/m/it' undefined\n(Font)              using `TU/JuliaMono-Regular.ttf(0)/m/n' instead on input li\nne 29.",
+    "LaTeX Font Warning: Font shape `TU/JuliaMono-Regular.ttf(0)/b/it' undefined\n(Font)              using `TU/JuliaMono-Regular.ttf(0)/b/n' instead on input li\nne 29.",
+    "LaTeX Font Warning: Some font shapes were not available, defaults substituted."
+  ],
+  "pdf_sha256": "8d3aed1a420aa339125475a82b9a78d23c7f457594ef917a4f95057d365786a9"
+}

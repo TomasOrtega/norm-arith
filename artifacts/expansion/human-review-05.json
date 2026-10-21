@@ -1,0 +1,12 @@
+{
+  "selection_manifest": ".lake/expansion-combined-selection-05/manifest.json",
+  "selection_manifest_sha256": "f5159eb13b461273b407721b1887667e44c435f66eeac3e7baa7449fd6daa0a9",
+  "example_id": "manual-strong-law-sums",
+  "original_span_sha256": "2e35cadb09cea58a6e4afe592db6fb4c0bdb33f1416b82a1a08434f5120819d4",
+  "replacement_sha256": "d71a59dcd4bfd6947d153725762e012ea28f0a546986164bca2ec91272474a4c",
+  "original_proof_lines": 20,
+  "replacement_proof_lines": 5,
+  "added_imports_for_this_file": 1,
+  "added_helpers": 0,
+  "scope": "Human proof-clarity review of selected source fragments; combined verification handled separately."
+}

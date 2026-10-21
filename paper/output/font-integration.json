@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "command": [
+    "xelatex",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-recorder",
+    "-output-directory=/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration/font-test.tex"
+  ],
+  "paper_preamble_sha256": "cd0fcfd8c39d4c7fa948181e9f3df566fc8cbecc956bc3f4f884123ae12fbbe1",
+  "expected_faces": [
+    "JuliaMono-Bold",
+    "JuliaMono-BoldItalic",
+    "JuliaMono-Regular",
+    "JuliaMono-RegularItalic",
+    "TeXGyreHeros-Bold",
+    "TeXGyreHeros-BoldItalic",
+    "TeXGyreHeros-Italic",
+    "TeXGyreHeros-Regular",
+    "TeXGyreTermes-Bold",
+    "TeXGyreTermes-BoldItalic",
+    "TeXGyreTermes-Italic",
+    "TeXGyreTermes-Regular"
+  ],
+  "embedded_faces": [
+    "JuliaMono-Bold",
+    "JuliaMono-BoldItalic",
+    "JuliaMono-Regular",
+    "JuliaMono-RegularItalic",
+    "TeXGyreHeros-Bold",
+    "TeXGyreHeros-BoldItalic",
+    "TeXGyreHeros-Italic",
+    "TeXGyreHeros-Regular",
+    "TeXGyreTermes-Bold",
+    "TeXGyreTermes-BoldItalic",
+    "TeXGyreTermes-Italic",
+    "TeXGyreTermes-Regular"
+  ],
+  "font_warnings": [],
+  "pdf_sha256": "3533df8e8afc7eb0dea0db7dd2ec013ed130e159b1ff61b32bbf0cb024c72bbb"
+}

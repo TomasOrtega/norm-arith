@@ -1,0 +1,79 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 3,
+    "no_line_saving_untried": 42,
+    "success": 1
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 3,
+      "no_line_saving_untried": 42,
+      "success": 1
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 45,
+    "eligible": 46,
+    "errors": 0,
+    "normGoals": 137,
+    "outsideBody": 0,
+    "proofNodes": 1133,
+    "synthetic": 0,
+    "tacticNodes": 1368,
+    "termNodes": 4741,
+    "unlocatedNodes": 2567,
+    "unresolved": 14
+  },
+  "directory": "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01",
+  "eligible_observations": 46,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/events.jsonl": "18175d4c114efc2d24d331f97a6ce9cea75a76189dcb1094c98888bfaaf67896",
+    "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/proposals.jsonl": "ac4f6b1427949530058b8b4473ad870bd28a8dafb962cee01e35e9ea8bc33796",
+    "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/request.json": "d5182e2d26636db5fd5ae883e153702bf1eca85073719ded71db7977958427c2",
+    "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Constructions.HaarToSphere.json.gz": "766277766fb8fc5d6bfd5f70d6d17fdc3b8b72f90167c4718718a4ce9eed7768",
+    "setups/Mathlib.MeasureTheory.Constructions.HaarToSphere.metadata.json": "326531953824bae7bbe2bcbb8e1626074a3578ce23ab1b5cba3412a1197fde93",
+    "setups/batch-160e4c04d23898ab.metadata.json": "dfc121d96569c478763a6b87ee98e7756bbe9a210802d5fe73f1ab01c5117605"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 7.178229917015415,
+    "peak_rss_bytes": 3896049664,
+    "returncode": 0,
+    "system_seconds": 1.689987,
+    "timed_out": false,
+    "user_seconds": 5.30044
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.MeasureTheory.Constructions.HaarToSphere",
+  "original_eligible_fragment_counts": {
+    "core": 46
+  },
+  "original_observation_fragment_counts": {
+    "core": 71,
+    "outside_fragment": 66
+  },
+  "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Constructions.HaarToSphere/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-160e4c04d23898ab.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "bba2b617cde330405c4850109655a4b6932d2637e0d896132868fe8a32642104",
+    "timed_out": false
+  },
+  "setup_sha256": "bba2b617cde330405c4850109655a4b6932d2637e0d896132868fe8a32642104",
+  "source_sha256": "83caa08ff8e2efc9e77e43bf1cfcdc53af02855e60e969c286ce58404217242c",
+  "status": "complete",
+  "successful_proposals": 1
+}

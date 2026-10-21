@@ -1,0 +1,15 @@
+Packing checked compact transport
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/preserve_study.py", line 151, in <module>
+    main()
+    ~~~~^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/preserve_study.py", line 82, in main
+    packed = transport.pack_bundle(compact, output / "transport")
+  File "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021-archive/compact/audit-tools/evidence_transport.py", line 68, in pack_bundle
+    names = validate_payload(directory, bundle_hash)
+  File "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021-archive/compact/audit-tools/evidence_transport.py", line 54, in validate_payload
+    require(actual == expected, "bundle payload members differ from inventory")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021-archive/compact/audit-tools/evidence_transport.py", line 22, in require
+    raise TransportError(message)
+study_transport.TransportError: bundle payload members differ from inventory

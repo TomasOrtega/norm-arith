@@ -1,0 +1,26 @@
+[
+  {
+    "path": "Mathlib/Analysis/Normed/Group/Tannery.lean",
+    "start_line": 84,
+    "end_line": 91,
+    "original_sha256": "a5f6344528a67e87748d233caadcb475d66169ef3ef4bf794c210d85d906612a",
+    "status": "reviewed-unattempted",
+    "reason": "Reviewed only. Explicit infinite-tail bounds and tsum normalization appeared to consume the saved triangle lines; no replacement was compiled."
+  },
+  {
+    "path": "Mathlib/Analysis/Normed/Group/HomCompletion.lean",
+    "start_line": 172,
+    "end_line": 177,
+    "original_sha256": "f4fe610deb2b4de277d0283a03228bdddc0e20474039205957598e90685f6631",
+    "status": "reviewed-unattempted",
+    "reason": "Reviewed only. A direct replacement needs completion-coercion normalization, a scaled scalar estimate, and the final epsilon normalization. The draft appeared import-neutral at best; no replacement was compiled."
+  },
+  {
+    "path": "Mathlib/Analysis/Normed/Operator/Extend.lean",
+    "start_line": 73,
+    "end_line": 77,
+    "original_sha256": "292c190f3a230650fb62d29cf1ee167442ebcda7c4f3eb127e471d36398dfe76",
+    "status": "reviewed-unattempted",
+    "reason": "Reviewed only. Existing operator bound is followed by variable-coefficient monotonicity and reassociation. The necessary preparation appeared to remove the line benefit; no replacement was compiled."
+  }
+]

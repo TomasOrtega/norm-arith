@@ -1,0 +1,17 @@
+{
+  "checked_files": {
+    "manifest.json": "55de5cb3283f57f58f72be14f3c571c9e013ae5b06a676737b7fbc3a7bb26944",
+    "mathlib.patch": "d9489b95183ca8f1dc693abc4355c2ff897cc5726f6f56ebaa48d58cb46b7bef",
+    "verification.json": "501794ff94e150c2d5b6785f3a40e393ecff670a5158f4a4f5754d349cebd573"
+  },
+  "compiler_and_setup_logs_checked": 192,
+  "created_at_utc": "2026-10-21T14:35:30.544962+00:00",
+  "git_apply_check_passed": true,
+  "git_diff_check_passed": true,
+  "mathlib_checkout_clean": true,
+  "schema_version": 1,
+  "status": "complete",
+  "verification_directory": ".lake/expansion-combined-verification-09",
+  "verified_files": 46,
+  "warning_or_error_diagnostics": 0
+}

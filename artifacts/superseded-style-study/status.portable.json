@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "implementation_status": "integration-tested",
+  "census_summary": null,
+  "confirmatory_report": null,
+  "description": "Superseded historical study: the selected patch passed combined Lean compilation but contains a proof line above mathlib's 100-character source-style limit. The fixed timing experiment was completed and preserved before correction. Its estimates do not apply to the revised patch.",
+  "census_manifest": null,
+  "census_integrity": null,
+  "census_outcomes": null,
+  "selector_summary": null,
+  "selector_manifest": null,
+  "selector_ledger": null,
+  "source_verification_report": null,
+  "source_verified_manifest": null,
+  "frozen_manifest": null,
+  "confirmatory_analysis_plan": null,
+  "confirmatory_measurements": null,
+  "claim_speedup": false,
+  "evidence_bundle": "artifacts/superseded-style-study/evidence",
+  "evidence_bundle_sha256": "de9e8a9d0c738a6c366cc46fc3a60f54695a30319f01ac3723cd7960ab845b85",
+  "census_archive": null,
+  "example_candidate_id": "census-11e8193fb56cafcc1fbf"
+}

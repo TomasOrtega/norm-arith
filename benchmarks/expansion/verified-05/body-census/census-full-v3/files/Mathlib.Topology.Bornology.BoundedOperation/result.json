@@ -1,0 +1,82 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 1,
+    "no_line_saving_untried": 25
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 1,
+      "no_line_saving_untried": 23
+    },
+    "upper_bound_extension": {
+      "no_line_saving_untried": 2
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 10,
+    "eligible": 26,
+    "errors": 0,
+    "normGoals": 98,
+    "outsideBody": 0,
+    "proofNodes": 611,
+    "synthetic": 0,
+    "tacticNodes": 643,
+    "termNodes": 1918,
+    "unlocatedNodes": 870,
+    "unresolved": 0
+  },
+  "directory": "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01",
+  "eligible_observations": 26,
+  "evidence_sha256": {
+    "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/events.jsonl": "e16a326958a08237340eabac8b2dcc00dcedf5cc2fe2ee5293a2d58a881e2122",
+    "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/request.json": "60007c06d0f19d4b7432c15aec06ca124862d2f798cc8529d7c1cbbf6f279f05",
+    "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Topology.Bornology.BoundedOperation.json.gz": "2b763f9cda59c3f261d6030cd1dfea3fa47cba74b76a089debb1882ee72e3de5",
+    "setups/Mathlib.Topology.Bornology.BoundedOperation.metadata.json": "1b8901a9034f58c0b1762457b10a809c028617d38da31c8412d8471ba3a8ac57",
+    "setups/batch-af856cd677cc08e0.metadata.json": "9dfcf6236aeeabd4c8a6f6f211307d95d737e3ac0bfa2ac8ba95257cc5bb498e"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 3.0786751249979716,
+    "peak_rss_bytes": 2998403072,
+    "returncode": 0,
+    "system_seconds": 1.435193,
+    "timed_out": false,
+    "user_seconds": 1.476462
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Topology.Bornology.BoundedOperation",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 24,
+    "upper_bound_extension": 2
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 39,
+    "outside_fragment": 57,
+    "upper_bound_extension": 2
+  },
+  "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+  "proposal_file": "files/Mathlib.Topology.Bornology.BoundedOperation/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-af856cd677cc08e0.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "56e0aeb49483d758816133ee03194155360fb3f6e7505124ff427b2341c083e8",
+    "timed_out": false
+  },
+  "setup_sha256": "56e0aeb49483d758816133ee03194155360fb3f6e7505124ff427b2341c083e8",
+  "source_sha256": "fff7b7d4394f011fc875c576d259f3651fbad8083c8a51ab2d22fcbb89a47c4c",
+  "status": "complete",
+  "successful_proposals": 0
+}

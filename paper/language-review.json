@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-21",
+  "reviewer": "Codex assisted editorial review",
+  "corpus_sha256": "f2e72aa03bd0442cad088421a8cb81a7d0728ed68e58b5d78acb69becd19b6fe",
+  "vocabulary_review_sha256": "9e9773ab487ebc86d1886eba79a617860ac7aff4c94753d230894db3f4e2c66f",
+  "scope": "Main and appendix explanatory prose and headings, title, generated status prose, and table captions; mathematical notation and imported code are excluded.",
+  "conformance": "STE-based explanatory prose with the mathematical exceptions declared in language-audit.md; no unqualified ASD conformance or external certification."
+}

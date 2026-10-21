@@ -1,0 +1,22 @@
+{
+  "observed_at_utc": "2026-10-20T23:49:00.802809+00:00",
+  "commands": [
+    [
+      "pmset",
+      "-g",
+      "batt"
+    ],
+    [
+      "pmset",
+      "-g",
+      "custom"
+    ]
+  ],
+  "power_source": "AC Power",
+  "battery_percent": 80,
+  "low_power_modes_reported": [
+    0
+  ],
+  "source_verification_inputs_and_outputs_unchanged_at_freeze": true,
+  "known_project_jobs": "Only paper and arithmetic-verifier preparation remains; sampling starts after both finish. Ordinary system background activity is uncontrolled."
+}

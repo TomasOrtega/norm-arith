@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "block_pairs": 4,
+  "rationale": "We selected four paired passes per nonoverlapping block before confirmatory sampling. The 24-pair pilot had lag-one autocorrelations of 0.563 and 0.584 for original and replacement totals; replacement lag-two was 0.249. Two-pair block log ratios retained lag-one autocorrelation 0.245. Four pairs cover two AB/BA cycles and leave ten blocks for forty confirmatory pairs; eight pairs would leave only five blocks. Original and replacement half-run mean changes were -0.034% and -0.396%; the AB-minus-BA mean-log-ratio shift was 0.00356. The choice targets observed short-range dependence and balances both orders. It does not establish block independence: the pilot has only six four-pair blocks, whose log-ratio lag-two autocorrelation is -0.644. Independent, representative blocks remain an explicit assumption for the conditional BCa interval; no coverage under arbitrary dependence or drift is claimed. Block length was not selected using a confidence interval or significance result.",
+  "pilot_report": {
+    "path": "benchmark-native-pilot-final/report.json",
+    "sha256": "3314bcea697b17523349ccc8ab7d19b0635806faf89e68d79c83f8ddc7da074a"
+  },
+  "pilot_measurements": {
+    "path": "benchmark-native-pilot-final/measurements.jsonl",
+    "sha256": "0ce78619f0389fad4cf6306520d66936691132a5706b0a4f707f9b7b3a761c40"
+  }
+}

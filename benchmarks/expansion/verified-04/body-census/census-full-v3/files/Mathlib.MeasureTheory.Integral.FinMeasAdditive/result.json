@@ -1,0 +1,89 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 7,
+    "no_line_saving_untried": 69
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 2,
+      "no_line_saving_untried": 55
+    },
+    "core": {
+      "failed": 2,
+      "no_line_saving_untried": 4
+    },
+    "upper_bound_extension": {
+      "failed": 3,
+      "no_line_saving_untried": 10
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 11,
+    "eligible": 76,
+    "errors": 0,
+    "normGoals": 169,
+    "outsideBody": 0,
+    "proofNodes": 2517,
+    "synthetic": 0,
+    "tacticNodes": 2986,
+    "termNodes": 15205,
+    "unlocatedNodes": 5704,
+    "unresolved": 0
+  },
+  "directory": "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01",
+  "eligible_observations": 76,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/events.jsonl": "fb62c0e42eaffb90728d9b10d873dd92ed5a03b05970e47cae7e653838fba55d",
+    "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/request.json": "a689bc1aac102e983adde39386b2c24df05b2871256d9823f4f5bcb485267288",
+    "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Integral.FinMeasAdditive.json.gz": "a6da39eeead408c5ec7f2048f8cda6298bf99cce9d97550faade90fd7fbed7be",
+    "setups/Mathlib.MeasureTheory.Integral.FinMeasAdditive.metadata.json": "30d56f7ae9b0df7fc70d43824a8b60e92a3d2ae23e23864ff0a414616babc42f",
+    "setups/batch-1c87224a529556f9.metadata.json": "011138f667d3af891f814e79755d06a6ee623e64d3d149b05014d5092c548daf"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 7.577983458992094,
+    "peak_rss_bytes": 3617865728,
+    "returncode": 0,
+    "system_seconds": 1.491286,
+    "timed_out": false,
+    "user_seconds": 5.92342
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.MeasureTheory.Integral.FinMeasAdditive",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 57,
+    "core": 6,
+    "upper_bound_extension": 13
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 80,
+    "core": 6,
+    "outside_fragment": 69,
+    "upper_bound_extension": 14
+  },
+  "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Integral.FinMeasAdditive/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-1c87224a529556f9.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "0fe76c73816234cb09101360bcd95b07831f45ece8596819f061ccb04f26f20d",
+    "timed_out": false
+  },
+  "setup_sha256": "0fe76c73816234cb09101360bcd95b07831f45ece8596819f061ccb04f26f20d",
+  "source_sha256": "a584aa4f50c25890a6c0583d584ae8216fd517ba5725efdd7804e25501c68c64",
+  "status": "complete",
+  "successful_proposals": 0
+}

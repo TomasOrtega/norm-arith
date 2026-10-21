@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "status": "independently_verified",
+  "created_at_utc": "2026-10-21T01:16:00.818277+00:00",
+  "method": "Independent nested-comment/string lexer, literal proof-line spans, whole-file code counts, independent unified-diff application; no project counting imports",
+  "python": "3.15.0 (main, Oct  9 2026, 11:16:41) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "helper_sha256": "7b6c94c03283203735a157930892ef64a06a162b398519102d6b78c172b26863",
+  "input_sha256": {
+    ".lake/selection-style-v4/manifest.json": "183dc9fd5feb0eb3a4460a6d5e6eb2b94de629ab58376948a10709c8d6ddeed8",
+    ".lake/source-verification-style-v4/manifest.json": "5a9d04bcab0156a937ecbe4de7021ec697537069245c7567b40f345ed9543417",
+    ".lake/frozen-style-v4/manifest.json": "63a285300df917604e480674aa41993e5e1109c376182c3f7943c30a4acc40e6",
+    ".lake/source-verification-style-v4/verification.json": "58b0765c47b48d1dc81758703b1492a0a68a2936ae633e9c60200247d8b9c77f",
+    ".lake/source-verification-style-v4/mathlib.patch": "7b28986c3dd602fdf9dbb412175ac8266bcc30b0f3674624b8eaa06bcb523a52"
+  },
+  "patch_sha256": "7b28986c3dd602fdf9dbb412175ac8266bcc30b0f3674624b8eaa06bcb523a52",
+  "replacements": 16,
+  "affected_files": 10,
+  "original_proof_code_lines": 67,
+  "replacement_proof_code_lines": 16,
+  "proof_code_lines_saved": 51,
+  "added_helper_code_lines": 0,
+  "added_import_code_lines": 10,
+  "net_file_code_lines_saved": 41,
+  "maximum_replacement_line_characters": 89,
+  "compiled_artifacts_hash_checked": 70,
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+      "original_sha256": "ec95a9dadc68ab0164909db152763d4581c73cb36282914bcc195acb85a7a690",
+      "patched_sha256": "6570ab828566bf052576fef0a2b8b7c3bce769616bca8673518d87aa81accd6d",
+      "before_file_code_lines": 628,
+      "after_file_code_lines": 626,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "original_sha256": "72bcb044cb13410220bdd0c73916db1c6a9abbe14cb3bd4982cf14c38d62258c",
+      "patched_sha256": "4e5c84aba26624fb1e148f4a33e77235d2db57422e97680e5ebfa580ebf15b5c",
+      "before_file_code_lines": 868,
+      "after_file_code_lines": 867,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "original_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+      "patched_sha256": "dc4fd13207e1772cffe07be4aa6c5d855e1729e3f1724c130cda099adfaff91c",
+      "before_file_code_lines": 702,
+      "after_file_code_lines": 689,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "original_sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+      "patched_sha256": "55d5a7ef15a3b5487a8d282a2e6b7599df394f5710a78c7e239b4508f4649c33",
+      "before_file_code_lines": 77,
+      "after_file_code_lines": 70,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+      "original_sha256": "b30ad3dac8d319b5532feafa16d18025682036f35b21d5c4d70a2fbfa31c3e3a",
+      "patched_sha256": "665d37edc37b777439e321111f044e25e8ee5ff912ca5e7ed694319bd756a9b8",
+      "before_file_code_lines": 107,
+      "after_file_code_lines": 106,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+      "original_sha256": "9d06e0a2e00e47cb5ba35463c8f9f331c1579523655c81717f5a4211b4f5f370",
+      "patched_sha256": "d24769850f260fadb5e0bbd29817aa55532f8a18dc70af10ede3202e158c19ae",
+      "before_file_code_lines": 620,
+      "after_file_code_lines": 610,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+      "original_sha256": "d80e3495465030c1accca450935e4bfafcfe31d9b695e17f23ee9cfcea537759",
+      "patched_sha256": "8068241d23c005401e42b29c4ac5d6b978155d5ab1cd005161c2edb57b67672c",
+      "before_file_code_lines": 912,
+      "after_file_code_lines": 911,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+      "original_sha256": "56394aacfe591230d26a1d93641f2a1d3e3a3eae4fcfe772775533a1da295833",
+      "patched_sha256": "cd6150baba8d5479f1a3907ac51ee49b5bfaace3eb22e4c38bb0d510170653b2",
+      "before_file_code_lines": 573,
+      "after_file_code_lines": 572,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+      "original_sha256": "d8a7bb02d53ee246528183aaf579406d98e2f1a207578110c9649a140727f224",
+      "patched_sha256": "4d96a4d40f65ae84f918b99ab85c6274e679eb6cad75792537d3bc24bb5baa90",
+      "before_file_code_lines": 341,
+      "after_file_code_lines": 337,
+      "added_import_code_lines": 1
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+      "original_sha256": "38c553041fc37267e7cc43df230f07410a8b89da42d7191354403ac4b3efb990",
+      "patched_sha256": "ecca2208255d5e93ee8ae2066549efaec562b6f75933fe8af26950b8cca9092c",
+      "before_file_code_lines": 751,
+      "after_file_code_lines": 750,
+      "added_import_code_lines": 1
+    }
+  ],
+  "proof_spans": [
+    {
+      "id": "census-fdb41ac9b4c815a99891",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+      "start_line": 903,
+      "end_line": 906,
+      "original_sha256": "a0aa85e53d499c3ecea12e642eb0cd5ac11873611cf7b222b8e38a1332b24ac8",
+      "original": "  calc\n    ‖f' y‖ ≤ ‖f (x₀ + y) - f x₀‖ + ‖f (x₀ + y) - f x₀ - f' y‖ := norm_le_insert _ _\n    _ ≤ C * ‖y‖ + ε * ‖y‖ := add_le_add hyC hy\n    _ = (C + ε) * ‖y‖ := (add_mul _ _ _).symm\n",
+      "replacement": "  norm_arith\n",
+      "before_code_lines": 4,
+      "after_code_lines": 1,
+      "saved_code_lines": 3
+    },
+    {
+      "id": "census-e908bdddd792fe4b8a6f",
+      "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+      "start_line": 234,
+      "end_line": 236,
+      "original_sha256": "c20ed2a6ed94aab130ec9b1a3a11bdad21849baaa964fd7320e1fabe3826eb53",
+      "original": "              ‖f (s.piecewise m₂ m₁) - f ((insert i s).piecewise m₂ m₁)‖ := by\n          rw [← dist_eq_norm, ← dist_eq_norm, ← dist_eq_norm]\n          exact dist_triangle _ _ _\n",
+      "replacement": "              ‖f (s.piecewise m₂ m₁) - f ((insert i s).piecewise m₂ m₁)‖ := by norm_arith\n",
+      "before_code_lines": 3,
+      "after_code_lines": 1,
+      "saved_code_lines": 2
+    },
+    {
+      "id": "census-a429d71bf590c6127d51",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "start_line": 259,
+      "end_line": 266,
+      "original_sha256": "6e6fdde8b2689e639bd930ef9bdd48a379f1d496434e985d34bfeb09fca2bb5c",
+      "original": "    calc\n      ‖L e p q - L e' p' q'‖ =\n          ‖L e p q - L e p r + (L e p r - L e' p' r) + (L e' p' r - L e' p' q')‖ := by\n        congr 1; abel\n      _ ≤ ‖L e p q - L e p r‖ + ‖L e p r - L e' p' r‖ + ‖L e' p' r - L e' p' q'‖ :=\n        norm_add₃_le\n      _ ≤ 4 * ‖c‖ * (1 / 2) ^ e + 4 * ‖c‖ * (1 / 2) ^ e + 4 * ‖c‖ * (1 / 2) ^ e := by gcongr\n      _ = 12 * ‖c‖ * (1 / 2) ^ e := by ring\n",
+      "replacement": "    norm_arith\n",
+      "before_code_lines": 8,
+      "after_code_lines": 1,
+      "saved_code_lines": 7
+    },
+    {
+      "id": "census-4c327df7dc57c1d46bf2",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "start_line": 588,
+      "end_line": 595,
+      "original_sha256": "085e4831de0f9dd92c28d87b10473dd51d897a724c0faa53aa43c0fee45088cb",
+      "original": "    calc\n      ‖L e p q - L e' p' q'‖ =\n          ‖L e p q - L e p r + (L e p r - L e' p' r) + (L e' p' r - L e' p' q')‖ := by\n        congr 1; abel\n      _ ≤ ‖L e p q - L e p r‖ + ‖L e p r - L e' p' r‖ + ‖L e' p' r - L e' p' q'‖ := by\n        grw [norm_add_le, norm_add_le]\n      _ ≤ 4 * (1 / 2) ^ e + 4 * (1 / 2) ^ e + 4 * (1 / 2) ^ e := by gcongr\n      _ = 12 * (1 / 2) ^ e := by ring\n",
+      "replacement": "    norm_arith\n",
+      "before_code_lines": 8,
+      "after_code_lines": 1,
+      "saved_code_lines": 7
+    },
+    {
+      "id": "census-4f9699997f4efef660c2",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "start_line": 62,
+      "end_line": 63,
+      "original_sha256": "bf6d6802a19e0c47b8cdeaea7e4649b74aae0dc0ad22363b7de0e237c90782b8",
+      "original": "  · rw [← one_add_one_eq_two]\n    exact (norm_add_le_of_le hx' hy).trans (sub_add_eq_add_sub _ _ _).le\n",
+      "replacement": "  · norm_arith\n",
+      "before_code_lines": 2,
+      "after_code_lines": 1,
+      "saved_code_lines": 1
+    },
+    {
+      "id": "census-563e98222ab7cb930923",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "start_line": 65,
+      "end_line": 66,
+      "original_sha256": "7ab01a7862da42c82276c9301754ace712c4957685375c570505da5ee7206fae",
+      "original": "  · rw [← one_add_one_eq_two]\n    exact (norm_add_le_of_le hx hy').trans (add_sub_assoc _ _ _).ge\n",
+      "replacement": "  · norm_arith\n",
+      "before_code_lines": 2,
+      "after_code_lines": 1,
+      "saved_code_lines": 1
+    },
+    {
+      "id": "census-2b4787caf258aeac9d58",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "start_line": 86,
+      "end_line": 89,
+      "original_sha256": "cb6b95704f511b1584099510dc88a87abf41f78f17a37b7592ac42caf10dfcbd",
+      "original": "      _ ≤ _ := by\n        have : ∀ x' y', x - y = x' - y' + (x - x') + (y' - y) := fun _ _ => by abel\n        rw [sub_le_iff_le_add, norm_sub_rev _ x, ← add_assoc, this]\n        exact norm_add₃_le\n",
+      "replacement": "      _ ≤ _ := by norm_arith\n",
+      "before_code_lines": 4,
+      "after_code_lines": 1,
+      "saved_code_lines": 3
+    },
+    {
+      "id": "census-11e8193fb56cafcc1fbf",
+      "path": "Mathlib/Analysis/Convex/Uniform.lean",
+      "start_line": 91,
+      "end_line": 94,
+      "original_sha256": "d569fcf1e01edd99e81b5d09ed4a47dbc8f208d983e6ebbf9ccbdda804246856",
+      "original": "    ‖x + y‖ ≤ ‖x' + y'‖ + ‖x' - x‖ + ‖y' - y‖ := by\n      have : ∀ x' y', x + y = x' + y' + (x - x') + (y - y') := fun _ _ => by abel\n      rw [norm_sub_rev, norm_sub_rev y', this]\n      exact norm_add₃_le\n",
+      "replacement": "    ‖x + y‖ ≤ ‖x' + y'‖ + ‖x' - x‖ + ‖y' - y‖ := by norm_arith\n",
+      "before_code_lines": 4,
+      "after_code_lines": 1,
+      "saved_code_lines": 3
+    },
+    {
+      "id": "census-12b57160bcea7a870439",
+      "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+      "start_line": 81,
+      "end_line": 83,
+      "original_sha256": "27356ae8616a7d177471ac5d80b2e66269771d06358b2c88ad982757da102350",
+      "original": "  _ ≤ ‖g.eval a - f.eval a‖ + ‖f.eval a‖ := by\n    convert norm_add_le (g.eval a - f.eval a) (f.eval a)\n    simp\n",
+      "replacement": "  _ ≤ ‖g.eval a - f.eval a‖ + ‖f.eval a‖ := by norm_arith\n",
+      "before_code_lines": 3,
+      "after_code_lines": 1,
+      "saved_code_lines": 2
+    },
+    {
+      "id": "census-7ab24a3d1c1a64823204",
+      "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+      "start_line": 442,
+      "end_line": 446,
+      "original_sha256": "152150641f9396a1df49fe6fc9272db6346139e598d64ba01167ac94c81d9844",
+      "original": "           _ ≥ f x + 1 / 2 * f x := by\n                  rw [sub_eq_add_neg]\n                  gcongr\n                  refine le_of_neg_le_neg ?bc.a\n                  rwa [neg_neg, ← neg_mul, ← neg_div]\n",
+      "replacement": "           _ ≥ f x + 1 / 2 * f x := by norm_arith\n",
+      "before_code_lines": 5,
+      "after_code_lines": 1,
+      "saved_code_lines": 4
+    },
+    {
+      "id": "census-50b4bc912cae9ebdcb4d",
+      "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+      "start_line": 458,
+      "end_line": 462,
+      "original_sha256": "238f1c07f0b0ff6e63a9b916be5d348a8224444497185a6620d7fc5bcb5d1125",
+      "original": "           _ ≥ f u + 1 / 2 * f u := by\n                  rw [sub_eq_add_neg]\n                  gcongr\n                  refine le_of_neg_le_neg ?_\n                  rwa [neg_neg, ← neg_mul, ← neg_div]\n",
+      "replacement": "           _ ≥ f u + 1 / 2 * f u := by norm_arith\n",
+      "before_code_lines": 5,
+      "after_code_lines": 1,
+      "saved_code_lines": 4
+    },
+    {
+      "id": "census-41051f4aa53c86a8bee8",
+      "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+      "start_line": 469,
+      "end_line": 472,
+      "original_sha256": "ef3b2c66888fabc908b54c4b9159389d767a5c6c2929c03be2dc901b0461117c",
+      "original": "           _ ≤ f u - 1 / 2 * f u := by\n                rw [sub_eq_add_neg]\n                gcongr\n                rwa [← neg_mul, ← neg_div]\n",
+      "replacement": "           _ ≤ f u - 1 / 2 * f u := by norm_arith\n",
+      "before_code_lines": 4,
+      "after_code_lines": 1,
+      "saved_code_lines": 3
+    },
+    {
+      "id": "census-4468072bd08412d1d24d",
+      "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+      "start_line": 615,
+      "end_line": 617,
+      "original_sha256": "d88b09dd51fb5560c0201acfd9b4e6c9fd174accffcc040cb82b93ea8a20b056",
+      "original": "    calc\n      ‖f₁ a‖ ≤ ‖f₀ a‖ + ‖f₀ a - f₁ a‖ := norm_le_insert _ _\n      _ ≤ ‖f₀ a‖ + g a := by gcongr\n",
+      "replacement": "    norm_arith\n",
+      "before_code_lines": 3,
+      "after_code_lines": 1,
+      "saved_code_lines": 2
+    },
+    {
+      "id": "census-6cc028cff5430bb880af",
+      "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+      "start_line": 436,
+      "end_line": 438,
+      "original_sha256": "c035aa6c2e9c4f61ac6536759f689a567a74fcd6abd60caf8eae83727fae7924",
+      "original": "        calc\n          ‖F x s - F x₀ s‖ ≤ ‖F x s‖ + ‖F x₀ s‖ := norm_sub_le _ _\n          _ ≤ 2 * bound s := by linarith only [hs₁, hs₂]\n",
+      "replacement": "        norm_arith\n",
+      "before_code_lines": 3,
+      "after_code_lines": 1,
+      "saved_code_lines": 2
+    },
+    {
+      "id": "census-0a929bc475d43a2c14ab",
+      "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+      "start_line": 520,
+      "end_line": 528,
+      "original_sha256": "26b4ee1f1f8efca3fe25238b95eea2db77ed1322ed1f696453828cd2c6314d58",
+      "original": "      · -- We have\n        -- `‖f + g - (bf + bg)‖ₚ`\n        --   `≤ ‖f - bf‖ₚ + ‖g - bg‖ₚ`\n        --   `< ε/2 + ε/2 = ε`.\n        calc\n          ‖MemLp.toLp f hf + MemLp.toLp g hg - (bf + bg)‖\n            = ‖(MemLp.toLp f hf) - bf + ((MemLp.toLp g hg) - bg)‖ := by congr; abel\n          _ ≤ ‖(MemLp.toLp f hf) - bf‖ + ‖(MemLp.toLp g hg) - bg‖ := norm_add_le ..\n          _ < ε := by linarith [hbf, hbg]\n",
+      "replacement": "      norm_arith\n",
+      "before_code_lines": 6,
+      "after_code_lines": 1,
+      "saved_code_lines": 5
+    },
+    {
+      "id": "census-15b9748861652a3366b3",
+      "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+      "start_line": 279,
+      "end_line": 281,
+      "original_sha256": "ee7389667888157ed8babf6a01fc56930a27c80353a8caaf2ef863b210482234",
+      "original": "              diam (univ : Set Y) := by\n          rw [DΦ, DΨ]\n          gcongr\n",
+      "replacement": "              diam (univ : Set Y) := by norm_arith\n",
+      "before_code_lines": 3,
+      "after_code_lines": 1,
+      "saved_code_lines": 2
+    }
+  ]
+}

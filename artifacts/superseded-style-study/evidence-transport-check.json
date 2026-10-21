@@ -1,0 +1,13 @@
+{
+  "bundle_sha256": "de9e8a9d0c738a6c366cc46fc3a60f54695a30319f01ac3723cd7960ab845b85",
+  "created_at_utc": "2026-10-21T14:03:46.156540+00:00",
+  "payload_bytes": 471698330,
+  "payload_files": 319,
+  "restored_destination": ".lake/superseded-evidence-transport-roundtrip",
+  "schema_version": 1,
+  "scope": "Transport byte validation; no new Lean compilation or timing experiment.",
+  "source_bundle_unchanged": true,
+  "status": "roundtrip_restored_all_bundle_bytes_verified",
+  "transport_receipt_sha256": "fa6cc922890a22cb4b694187054268b154b684f82884fe779c2e822447711979",
+  "transport_tool_sha256": "c713bbcc167f0e1054c77da493c4d31df8bab21360eb4873646a4e1b294f3225"
+}

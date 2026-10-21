@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at_utc": "2026-10-21T20:11:16.757020+00:00",
+  "command": [
+    "python3",
+    "paper/build.py",
+    "--render"
+  ],
+  "original_workspace_byte_opens": "actively denied in all Python subprocesses",
+  "lean_launches": "actively denied",
+  "initial_unpacked_bundle": false,
+  "initial_local_lean_example_source": false,
+  "lake_directory_present": false,
+  "restored_bundle_sha256": "fa6d752a764430ec10821f4ceab52f2fdfc5f4bc416db9ec6fc45408662b3577",
+  "python_audit_records": [
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 441,
+      "python_pid": 7694
+    },
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 6096,
+      "python_pid": 7695
+    },
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 41,
+      "python_pid": 7704
+    }
+  ],
+  "no_original_workspace_tex_inputs": true,
+  "source_sha256": {
+    "paper/paper.tex": "6dd0b3a00927c28535ebce05f2df8d46b170dc9c4c7872ed4938e5f8f7b19ceb",
+    "paper/appendix.tex": "a17176c639b551a2869bab32956ec17d1fe17813041b540fa6f10ec24a7b2fff",
+    "paper/status.json": "e9b3f37ed559772185180fdd0e23879023140a93ac8ac5486172d6d4351fdcce",
+    "paper/build.py": "ebe3dfe4902cc424637f8e2c163553240843c9094b6d9e7aa186e663e9ddb34d",
+    "paper/generate.py": "d9cd3c8b63103d5bc632588e6a47f952e064c4bdcd793f21126c537209608687",
+    "paper/evidence.py": "6bde40e7a7d3fc214e0f02f815d762eacde3b2ff3c87126d8c86c8fd125d9bad",
+    "paper/expansion.py": "0c1737fc7aebf467c4fb5a66e68063a01ace9ebd7696b7b01b6af0b2683966ed",
+    "paper/evidence_transport.py": "c713bbcc167f0e1054c77da493c4d31df8bab21360eb4873646a4e1b294f3225",
+    "paper/language-review.json": "1696d021034359904230afc7f5d51e7078c71e4922c4a1ef9b050191daf1cc09",
+    "paper/vocabulary-review.tsv": "9e9773ab487ebc86d1886eba79a617860ac7aff4c94753d230894db3f4e2c66f"
+  },
+  "matching_final_evidence_json": true,
+  "matching_pdf_text": true,
+  "matching_all17_rendered_page_pixels": true,
+  "clean_validation": {
+    "main_pages": 4,
+    "draft": false,
+    "pdf_sha256": "df691e7d4e0e481cd639fac7058e2b90d049a2a739529b0ab64e1b35e428ecbe",
+    "layout_log_issues": [],
+    "lean_validation": "checked release artifacts"
+  },
+  "clean_pdf_sha256": "df691e7d4e0e481cd639fac7058e2b90d049a2a739529b0ab64e1b35e428ecbe",
+  "limitations": "This rebuild checks frozen proof artifacts and recomputes evidence; it does not rerun Lean or timings. Python opens and TeX recorder inputs were checked, not all operating-system syscalls."
+}

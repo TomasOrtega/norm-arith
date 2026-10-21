@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "implementation_status": "integration-tested",
+  "census_summary": ".lake/census-archive-final/summary.json",
+  "confirmatory_report": ".lake/benchmark-confirmatory-final/report.json",
+  "description": "Superseded historical study: the selected patch passed combined Lean compilation but contains a proof line above mathlib's 100-character source-style limit. The fixed timing experiment was completed and preserved before correction. Its estimates do not apply to the revised patch.",
+  "census_manifest": ".lake/census-archive-final/manifest.json",
+  "census_integrity": ".lake/census-archive-final/integrity.json",
+  "census_outcomes": ".lake/census-archive-final/file-outcomes.jsonl",
+  "selector_summary": ".lake/selection-final/summary.json",
+  "selector_manifest": ".lake/selection-final/manifest.json",
+  "selector_ledger": ".lake/selection-final/selection.jsonl",
+  "source_verification_report": ".lake/source-verification-final/verification.json",
+  "source_verified_manifest": ".lake/source-verification-final/manifest.json",
+  "frozen_manifest": ".lake/frozen-final/manifest.json",
+  "confirmatory_analysis_plan": ".lake/benchmark-confirmatory-final/analysis-plan.json",
+  "confirmatory_measurements": ".lake/benchmark-confirmatory-final/measurements.jsonl",
+  "claim_speedup": false,
+  "evidence_bundle": null,
+  "evidence_bundle_sha256": null,
+  "census_archive": ".lake/census-archive-final/archive.json",
+  "example_candidate_id": "census-11e8193fb56cafcc1fbf"
+}

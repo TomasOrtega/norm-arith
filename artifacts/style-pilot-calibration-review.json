@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "scope": "Calibration review: omit absolute times and average speed levels. Use serial dependence, drift, order effects and block-count stability only.",
+  "diagnostics_sha256": "71c0772c4c70f1dd3895900cf45d31a8c1749de32eb66404837a67bd1e6ac7df",
+  "pair_series_autocorrelations": {
+    "original_seconds": {
+      "1": 0.40494564752763734,
+      "2": 0.28611619189115445,
+      "3": 0.07225734441679411,
+      "4": 0.0010149911993650102
+    },
+    "replacement_seconds": {
+      "1": 0.28090838157244796,
+      "2": 0.2827663668406828,
+      "3": 0.06473570453990662,
+      "4": -0.0046860276148663615
+    },
+    "log_paired_ratio": {
+      "1": -0.22105992215271997,
+      "2": -0.23226804143332713,
+      "3": 0.1732677623937155,
+      "4": 0.05861909587993997
+    }
+  },
+  "AB_minus_BA": {
+    "original_mean_seconds": 0.21075062208062434,
+    "replacement_mean_seconds": 0.18697705555435817,
+    "mean_log_paired_ratio": -2.3585851650215206e-06
+  },
+  "half_run_drift": {
+    "original_relative_mean_change": -0.01378114857908963,
+    "replacement_relative_mean_change": -0.013793076630072565,
+    "change_in_mean_log_paired_ratio": 3.6701225177016017e-07
+  },
+  "blocks": {
+    "2": {
+      "pilot_blocks": 12,
+      "confirmatory_blocks_at_40_pairs": 20,
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": 0.3414601873467997,
+          "2": 0.05296061859859069,
+          "3": -0.2068105065234606,
+          "4": -0.1323631019359011
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": 0.2150392084945604,
+          "2": 0.023988746600236786,
+          "3": -0.11216606990820426,
+          "4": -0.15098180046923776
+        },
+        "log_ratio_of_block_totals": {
+          "1": -0.4760141989841583,
+          "2": 0.17134015787798038,
+          "3": -0.14225475825236064,
+          "4": 0.08162669249188349
+        }
+      }
+    },
+    "4": {
+      "pilot_blocks": 6,
+      "confirmatory_blocks_at_40_pairs": 10,
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": 0.09725076825983066,
+          "2": -0.023960763898949047,
+          "3": -0.055877462007070416,
+          "4": -0.25718394344460255
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": 0.08101099563460967,
+          "2": 0.06893380432672962,
+          "3": -0.1769204482127398,
+          "4": -0.24154867850465858
+        },
+        "log_ratio_of_block_totals": {
+          "1": -0.3288718304890351,
+          "2": -0.3438398753459375,
+          "3": 0.3922081878733761,
+          "4": -0.08894653308829464
+        }
+      }
+    },
+    "8": {
+      "pilot_blocks": 3,
+      "confirmatory_blocks_at_40_pairs": 5,
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": -0.17316632158863796,
+          "2": -0.326833678411362,
+          "3": null,
+          "4": null
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": -0.15584942618028863,
+          "2": -0.3441505738197113,
+          "3": null,
+          "4": null
+        },
+        "log_ratio_of_block_totals": {
+          "1": -0.27954367314819845,
+          "2": -0.22045632685180155,
+          "3": null,
+          "4": null
+        }
+      }
+    }
+  }
+}

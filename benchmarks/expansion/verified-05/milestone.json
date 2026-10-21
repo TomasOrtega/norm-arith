@@ -1,0 +1,25 @@
+{
+  "affected_files": 46,
+  "discovery_files": {
+    "completed_files": 875,
+    "failed_files": 10,
+    "selected_files": 885
+  },
+  "discovery_scope": "targeted_followup_not_full_coverage",
+  "every_raw_archive_member_reopened_and_rehashed": true,
+  "evidence_stage": "final_source_verified_expanded_patch_untimed",
+  "fresh_artifacts_rehashed": 322,
+  "independent_audit_stage_override": "The preserved generic audit labels discovery ongoing; this final receipt supersedes that stage label after the targeted run terminated. Its numerical and byte checks are unchanged.",
+  "net_code_lines_saved": 310,
+  "patch_sha256": "d9489b95183ca8f1dc693abc4355c2ff897cc5726f6f56ebaa48d58cb46b7bef",
+  "raw_verification_archive_bytes": 35292668,
+  "raw_verification_archive_sha256": "f0782d5e62bc48573c2c188a80c186cf0ac90845ed9bdf22c195061f72d25482",
+  "raw_verification_members": 987,
+  "schema_version": 1,
+  "selected_replacements": 87,
+  "status": "independently_verified_expanded_patch",
+  "targeted_discovery_archive": "artifacts/expansion/discovery-v4-archive/archive.json",
+  "targeted_discovery_archive_receipt_sha256": "f90cc54bf35e68d856e03e65d6a79cc8bee10648667b778e03f50c2f6a982c96",
+  "targeted_discovery_raw_archive_sha256": "5c5e9c296deac62680740f264e3ff9dcd708a2fead1f4f66e16d4b5d154d36bf",
+  "timing_status": "untimed_expansion_preserved_baseline_speed_not_transferable"
+}

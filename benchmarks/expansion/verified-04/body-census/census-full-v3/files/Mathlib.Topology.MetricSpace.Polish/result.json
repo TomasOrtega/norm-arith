@@ -1,0 +1,66 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {},
+  "attempt_status_counts_by_original_fragment": {},
+  "complete": true,
+  "counts": {
+    "duplicate": 15,
+    "eligible": 0,
+    "errors": 0,
+    "normGoals": 102,
+    "outsideBody": 0,
+    "proofNodes": 803,
+    "synthetic": 0,
+    "tacticNodes": 766,
+    "termNodes": 3293,
+    "unlocatedNodes": 1307,
+    "unresolved": 13
+  },
+  "directory": "files/Mathlib.Topology.MetricSpace.Polish/attempt-01",
+  "eligible_observations": 0,
+  "evidence_sha256": {
+    "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/events.jsonl": "4fb7dd447821565bd7d27ec4d4ad744ac29db74616f569f80d4a695f03b00a10",
+    "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/request.json": "b606d6853ceb7470c6f49b8cc41f9946b7b4d31c4738a5591513d5647acc160e",
+    "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Topology.MetricSpace.Polish.json.gz": "0b0c165d034e3e51323e4b6bd10d5c0596b176f99708490f3a60d828966294c7",
+    "setups/Mathlib.Topology.MetricSpace.Polish.metadata.json": "e881d8f3a317ded2f5d1f9ad57bafa2b68c6ab795b0cbcf057fea63a1810743f",
+    "setups/batch-1c31629b24f94a2b.metadata.json": "a30e655acfb35e6ac807a53a3a97fc052ccf2ecccfb2b98bd755d3fbf092a8cc"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Topology.MetricSpace.Polish/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 1.3660844590049237,
+    "peak_rss_bytes": 999702528,
+    "returncode": 0,
+    "system_seconds": 0.609111,
+    "timed_out": false,
+    "user_seconds": 0.6696869999999999
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Topology.MetricSpace.Polish",
+  "original_eligible_fragment_counts": {},
+  "original_observation_fragment_counts": {
+    "outside_fragment": 102
+  },
+  "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+  "proposal_file": "files/Mathlib.Topology.MetricSpace.Polish/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-1c31629b24f94a2b.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "a71fade1db10cf2fe8d14b5e1d06f7d8db04f94b93a14bd577f056dd24ae0cf2",
+    "timed_out": false
+  },
+  "setup_sha256": "a71fade1db10cf2fe8d14b5e1d06f7d8db04f94b93a14bd577f056dd24ae0cf2",
+  "source_sha256": "71c9682ea53f194d1587fbd41695e35cc7fb8f51b1503f695ba4adfb15c52059",
+  "status": "complete",
+  "successful_proposals": 0
+}

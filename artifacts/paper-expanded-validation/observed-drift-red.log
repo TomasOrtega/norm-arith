@@ -1,0 +1,14 @@
+.....F.
+======================================================================
+FAIL: test_prominent_intervals_and_observed_drift_are_reported (test_composed_evidence.ComposedEvidenceTests.test_prominent_intervals_and_observed_drift_are_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/paper/test_composed_evidence.py", line 222, in test_prominent_intervals_and_observed_drift_are_reported
+    self.assertIn('conditional paired 95', main)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'conditional paired 95' not found in 'Mean original and replacement full-pass times were 6.500 and 1.000 seconds. The ratio of mean full-pass times is 6.5000. The paired 95\\% interval is [4.7000, 8.3000]. The predeclared speed criterion is met.\n'
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.400s
+
+FAILED (failures=1)

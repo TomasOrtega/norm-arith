@@ -2,3 +2,13 @@
 .lake/
 __pycache__/
 *.py[cod]
+
+# Restored evidence is published in checked compressed parts.
+/artifacts/paper-evidence/
+/artifacts/paper-evidence-expanded/
+/artifacts/superseded-style-study/evidence/
+
+# Deep audit records remain local; compact evidence and receipts are tracked.
+/artifacts/census-v3/raw.tar.gz
+/artifacts/expansion/discovery-v*-archive/raw.tar.gz
+/benchmarks/expansion/verified-*/raw-verification.tar.gz

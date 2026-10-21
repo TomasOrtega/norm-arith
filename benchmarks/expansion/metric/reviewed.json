@@ -1,0 +1,387 @@
+{
+  "scope": "Exploratory generic metric proof replacements, with all attempted full-file outcomes preserved.",
+  "queries": [
+    "Original census outside_fragment observations with dist goals, excluding edist/norm goals; multiline spans in Topology/MetricSpace, UniformSpace and Covering.",
+    "rg -n dist_triangle Mathlib/Topology/MetricSpace Mathlib/Topology/UniformSpace Mathlib/Topology/Covering",
+    "rg -n dist_triangle Mathlib/Topology excluding MetricSpace and EMetricSpace",
+    "rg -n dist_triangle Mathlib/Analysis Mathlib/MeasureTheory"
+  ],
+  "not_selected": [
+    {
+      "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+      "lines": [
+        [
+          767,
+          772
+        ],
+        [
+          796,
+          799
+        ]
+      ],
+      "status": "failed",
+      "reason": "Prepared real-comparison tails still fail in the frozen scratch metric prototype, including an explicit triangle comparison; no replacement counted."
+    },
+    {
+      "path": "Mathlib/Topology/ContinuousMap/ZeroAtInfty.lean",
+      "lines": [
+        [
+          436,
+          439
+        ]
+      ],
+      "status": "failed",
+      "reason": "Explicit evaluation bound requires further elaboration/coercion normalization; attempted versions fail, no replacement counted."
+    },
+    {
+      "paths": [
+        "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "Mathlib/Topology/MetricSpace/Completion.lean",
+        "Mathlib/Topology/MetricSpace/GromovHausdorff.lean"
+      ],
+      "status": "reviewed_not_attempted",
+      "reason": "Many longest distance calculations construct the metric instance itself. Applying its triangle axiom would be circular; no such replacement proposed."
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+      "status": "import_cycle",
+      "reason": "Prototype imports this foundational file, so importing the prototype back into it is invalid."
+    },
+    {
+      "paths": [
+        "Mathlib/Topology/MetricSpace/Ultra/Basic.lean",
+        "Mathlib/Topology/MetricSpace/Ultra/Pi.lean"
+      ],
+      "status": "reviewed_not_attempted",
+      "reason": "Maximum bounds need the ultrametric axiom, beyond generic triangle comparisons."
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Affine/MazurUlam.lean",
+      "lines": [
+        [
+          57,
+          60
+        ]
+      ],
+      "status": "reviewed_no_net_benefit",
+      "reason": "Preparing the fixed-point/isometry comparison costs most of the short triangle proof; one remaining proof line would offset the new file import."
+    },
+    {
+      "path": "Mathlib/Analysis/AperiodicOrder/Delone/Basic.lean",
+      "lines": [
+        [
+          134,
+          138
+        ]
+      ],
+      "status": "reviewed_not_attempted",
+      "reason": "The enclosing point equality plus NNReal coercion preparation is not a direct real-comparison tail; no saving claimed."
+    }
+  ],
+  "reports": [
+    {
+      "path": ".lake/metric-expansion-trial-01/report.json",
+      "sha256": "dd5eb9a6479d9ab7ae7ca7f87e668dc7401adeb95544630dd48d2ab99d21f49e",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+          "status": "failed",
+          "replacement_source_sha256": "0ff5c70abde62db9362fb8a96bd6f06145e21ada3860073193369b0f421c4ed3"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "blocked_dependency",
+          "replacement_source_sha256": "3c6ba564352d4378ffc17d277f3c84a0c8a5e84b2ea19b6750c1ca4872cf087a"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+          "status": "blocked_dependency",
+          "replacement_source_sha256": "5e4c56a29c0cd7611e2a6f8f319869ef547a85459c95cbc036b6eeab848728e0"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-02/report.json",
+      "sha256": "82e14a857e36eae513afc0e3a170bc6472e4230fa1b61ebdbbd9f3b0aafb941e",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+          "status": "verified",
+          "replacement_source_sha256": "0ff5c70abde62db9362fb8a96bd6f06145e21ada3860073193369b0f421c4ed3"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "failed",
+          "replacement_source_sha256": "3c6ba564352d4378ffc17d277f3c84a0c8a5e84b2ea19b6750c1ca4872cf087a"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+          "status": "verified",
+          "replacement_source_sha256": "5e4c56a29c0cd7611e2a6f8f319869ef547a85459c95cbc036b6eeab848728e0"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-03/report.json",
+      "sha256": "4063ef566edcbb758a6514c1815ec74a32d4bc2f31dff38248af8882fab41e44",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+          "status": "verified",
+          "replacement_source_sha256": "0ff5c70abde62db9362fb8a96bd6f06145e21ada3860073193369b0f421c4ed3"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+          "status": "failed",
+          "replacement_source_sha256": "0081626e4355d59c20b2214ee96e2406eef8f089cabbd8e11e55a4a663014137"
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "blocked_dependency",
+          "replacement_source_sha256": "920e4519a962a4b469bb877caac9df97b3b7eed6132e4f1b333a6290a6932f45"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "verified",
+          "replacement_source_sha256": "a59015a9660849fec128e676c579615cd62bafa97a5585e8e4057d9b9d165af3"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Contracting.lean",
+          "status": "failed",
+          "replacement_source_sha256": "f5b90ba6857191cf163a8efe4679545351e9b54c1e2daf0a217f39bb9322ba4a"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+          "status": "verified",
+          "replacement_source_sha256": "5e4c56a29c0cd7611e2a6f8f319869ef547a85459c95cbc036b6eeab848728e0"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-04/report.json",
+      "sha256": "5785a8da18a61390115d046168bbe8254d134219a6d262f7d4f3ce0b6e35dfb1",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+          "status": "verified",
+          "replacement_source_sha256": "0ff5c70abde62db9362fb8a96bd6f06145e21ada3860073193369b0f421c4ed3"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+          "status": "failed",
+          "replacement_source_sha256": "0081626e4355d59c20b2214ee96e2406eef8f089cabbd8e11e55a4a663014137"
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "blocked_dependency",
+          "replacement_source_sha256": "920e4519a962a4b469bb877caac9df97b3b7eed6132e4f1b333a6290a6932f45"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "verified",
+          "replacement_source_sha256": "a59015a9660849fec128e676c579615cd62bafa97a5585e8e4057d9b9d165af3"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Contracting.lean",
+          "status": "failed",
+          "replacement_source_sha256": "f5b90ba6857191cf163a8efe4679545351e9b54c1e2daf0a217f39bb9322ba4a"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+          "status": "verified",
+          "replacement_source_sha256": "5e4c56a29c0cd7611e2a6f8f319869ef547a85459c95cbc036b6eeab848728e0"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-05/report.json",
+      "sha256": "75e7f14f57bd0a4d4e3dd1745f100084e851ff36ae6183e5c6eb437969db98eb",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+          "status": "verified",
+          "replacement_source_sha256": "0ff5c70abde62db9362fb8a96bd6f06145e21ada3860073193369b0f421c4ed3"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+          "status": "failed",
+          "replacement_source_sha256": "95d67ac045256a9479def083a0ce11015a8654f35f13aa5bdbbef15e00860673"
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "blocked_dependency",
+          "replacement_source_sha256": "920e4519a962a4b469bb877caac9df97b3b7eed6132e4f1b333a6290a6932f45"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+          "status": "verified",
+          "replacement_source_sha256": "02179dc00211c42f6856171e0a9d8c940928b4628341580b9a2ffa98b0e393bd"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "verified",
+          "replacement_source_sha256": "a59015a9660849fec128e676c579615cd62bafa97a5585e8e4057d9b9d165af3"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/ZeroAtInfty.lean",
+          "status": "failed",
+          "replacement_source_sha256": "33a9db8e3b47658ee5530dbc30a3d2f0eccf9b413377cdd071177998ed2aaf2d"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Contracting.lean",
+          "status": "verified",
+          "replacement_source_sha256": "d1c3b492089040742a5abf7d40988676307dee744c6cc4b07e3b5cc6f05e9e53"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+          "status": "verified",
+          "replacement_source_sha256": "5e4c56a29c0cd7611e2a6f8f319869ef547a85459c95cbc036b6eeab848728e0"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-06/report.json",
+      "sha256": "dcdcf9cb2fa5d45666c7915339f61e03a9402c7c1e18a445cb35a8b7a113ba6f",
+      "files": [
+        {
+          "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+          "status": "verified",
+          "replacement_source_sha256": "e0b17c6a2f94c33aa66fdedf3ba8600b0933d19febc6424fc5f78397ee9e6f11"
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+          "status": "verified",
+          "replacement_source_sha256": "7ce433b479c47ecd2f28595decd8942f24d30c0985cea690b60228df7e02f547"
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "failed",
+          "replacement_source_sha256": "a3eef39bbac7e71aaa2542f422d20b2cc1c89f3051ea0114082ebfb2179d2284"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/ZeroAtInfty.lean",
+          "status": "failed",
+          "replacement_source_sha256": "67236f3e523d6152c0b0f2508ecd57266fae1b24725c42d25bc359668dd85051"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-07/report.json",
+      "sha256": "b095285bcd52f80b51bc56249d2852e05b1e0370f6042acbd2476c59487897d8",
+      "files": [
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "failed",
+          "replacement_source_sha256": "03ad7d3e7a52e5e54bd4be08e547ad3cede81217eb019beab1872052592758bb"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/ZeroAtInfty.lean",
+          "status": "failed",
+          "replacement_source_sha256": "bd8a3ee316bd64a91c823e6eba0d70f1bc40c97e6260dfa195c18b7d3c616832"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-08/report.json",
+      "sha256": "ab5d3675e4330a15a4aff6927072b65970a33cf44efe92793ae527f48b532ba3",
+      "files": [
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "failed",
+          "replacement_source_sha256": "105064ca465c843acf6370bc4a65b0c12798cd322ff86dca34007e824678f92c"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-09/report.json",
+      "sha256": "9f42371d21fdb0e8495f52116dad81fd8f4384c2bb1099399c5e03da4ed4332e",
+      "files": [
+        {
+          "path": "Mathlib/MeasureTheory/Constructions/Polish/Basic.lean",
+          "status": "failed",
+          "replacement_source_sha256": "1b5fbffd7a105016f50cd530620d0d8043bc349fbd7f2fde805148e42cfea3c0"
+        },
+        {
+          "path": "Mathlib/Topology/ContinuousMap/ZeroAtInfty.lean",
+          "status": "failed",
+          "replacement_source_sha256": "c7d9a48ccdb0a4c3df143ed93ed3961c248e074bf9029b3d660aec8cb17959ee"
+        }
+      ]
+    },
+    {
+      "path": ".lake/metric-expansion-trial-10/report.json",
+      "sha256": "da3e781b6d6060c9d2a1944510868aa9e97a85803c9a059159d9d88842fe57f6",
+      "files": [
+        {
+          "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+          "status": "verified",
+          "replacement_source_sha256": "ccc47b4ebdbd30b566130b4655e6ab6b5fdab2c2d7c2b1ed213561e06c13485f"
+        }
+      ]
+    }
+  ],
+  "production_review": {
+    "exclusions_path": "artifacts/expansion/source-exclusions-05.json",
+    "exclusions_sha256": "010268d6a81761960bfe2609feaae7caf50f53899c9e160310d12dfd1c0dd579",
+    "immutable_production_v2_sha256": "71c7fac392be12f6c4476bf33b5cde07e5132de4b98ac10ff5c4fe0fab14d7c2",
+    "rejected_candidates": [
+      {
+        "id": "metric-bounded-closed-ball",
+        "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+        "lines": [
+          [
+            75,
+            76
+          ]
+        ],
+        "status": "production_import_cycle",
+        "reason": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this.",
+        "scratch_proof_status": "complete copied file compiled with MetricPrototype",
+        "production_stage": "combined verification 05 rejected before source compilation",
+        "production_savings_claimed": false
+      },
+      {
+        "id": "metric-diameter-closed-ball",
+        "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+        "lines": [
+          [
+            525,
+            528
+          ]
+        ],
+        "status": "production_import_cycle",
+        "reason": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this.",
+        "scratch_proof_status": "complete copied file compiled with MetricPrototype",
+        "production_stage": "combined verification 05 rejected before source compilation",
+        "production_savings_claimed": false
+      },
+      {
+        "id": "metric-contracting-tail",
+        "path": "Mathlib/Topology/MetricSpace/Contracting.lean",
+        "lines": [
+          [
+            252,
+            254
+          ]
+        ],
+        "status": "production_fragment_rejection",
+        "reason": "Generic metric target contains a variable-coefficient distance product and is outside the production affine fragment. The scratch prototype accepted arbitrary real comparisons; those trial results do not establish production support.",
+        "scratch_proof_status": "complete copied file compiled with the broader scratch MetricPrototype",
+        "production_stage": "combined source compilation 06",
+        "compiler_diagnostic": "norm_arith expects a real linear comparison with recognized norm or distance facts",
+        "failure_receipt": "artifacts/expansion/combined-06-failure.json",
+        "failure_receipt_sha256": "abdb630147ddd76277a53ee3a0343e4313dba4687b7bb93ed9f9a49552805c76",
+        "original_source_sha256": "078df008c514927dd5f581a458cf95f5d66823f5324173db816ddbd1bf4ebcc5",
+        "replacement_source_sha256": "5b6cf87dbb05f5b79e356d35505e7f7c495ad1d894f4613a8da9e4d75a0f8845",
+        "production_savings_claimed": false
+      }
+    ],
+    "accounting_scope": "Scratch totals remain historical; use the reselected combined source-verified manifest for production totals.",
+    "additional_exclusions": [
+      {
+        "path": "artifacts/expansion/source-exclusions-06.json",
+        "sha256": "b4d47daed6ebd858b5895740308f2721a98c7904ba227eda34b968cae3bee7c1"
+      }
+    ]
+  }
+}

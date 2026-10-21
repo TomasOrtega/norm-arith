@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "purpose": "initial clean default restoration from tracked transport",
+  "command": [
+    "python3",
+    "paper/build.py",
+    "--render"
+  ],
+  "initial_conditions": {
+    "workspace": "/var/folders/hr/y9rnd2hd54j941bmk922ch7c0000gq/T/norm-arith-paper-offline-4erlgnqz",
+    "original_root": "/Users/to1717/Documents/GitHub/norm-arith",
+    "initial_lake_exists": false,
+    "initial_bundle_exists": false,
+    "initial_lean_example_source_exists": false
+  },
+  "final_lake_exists": false,
+  "restored_bundle_sha256": "fa6d752a764430ec10821f4ceab52f2fdfc5f4bc416db9ec6fc45408662b3577",
+  "validation": {
+    "main_pages": 4,
+    "draft": false,
+    "pdf_sha256": "8cb720038f7a8c18e0eac622c67159177378d85c6328a018be656562606d974c",
+    "layout_log_issues": [],
+    "lean_validation": "checked release artifacts"
+  },
+  "python_open_guard_records": [
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 453,
+      "python_pid": 7144
+    },
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 6111,
+      "python_pid": 7145
+    },
+    {
+      "blocked_lean_launches": 0,
+      "blocked_original_reads": 0,
+      "open_events": 41,
+      "python_pid": 7172
+    }
+  ]
+}

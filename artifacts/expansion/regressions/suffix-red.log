@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_tactic_suffix_preserves_preparation_and_nested_branch_boundary (test_census.CensusTests.test_tactic_suffix_preserves_preparation_and_nested_branch_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/scripts/test_census.py", line 58, in test_tactic_suffix_preserves_preparation_and_nested_branch_boundary
+    self.assertTrue(matches, f"missing checked suffix in {name}")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [] is not true : missing checked suffix in suffix
+
+----------------------------------------------------------------------
+Ran 1 test in 5.006s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+{
+  "aborted_run": ".lake/expansion-discovery-v1",
+  "reason": "Copied cached setup lacked its referenced batch metadata; drained STOP_REQUESTED, terminal130. No candidate selection or timings used.",
+  "new_run": ".lake/expansion-discovery-v2",
+  "files": 906
+}

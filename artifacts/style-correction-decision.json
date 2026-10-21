@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-20T23:28:00Z",
+  "decision_basis": "Source style and line-accounting correctness, before inspection of confirmatory timing results.",
+  "current_study": ".lake/benchmark-confirmatory-final",
+  "current_study_state_at_decision": "Running its fixed 40 measured pairs; only completion and compilation-failure counts inspected.",
+  "candidate_id": "census-8189925c0a373c48637c",
+  "source": "Mathlib/NumberTheory/Padics/Hensel.lean",
+  "original_lines": [313, 314],
+  "original_line_lengths_unicode": [99, 33],
+  "inline_replacement_length_unicode": 110,
+  "mathlib_style_limit_unicode": 100,
+  "observed_diagnostic": "linter.style.longLine in the separate native pilot's replacement compiler log",
+  "consequence": "Wrapping this proof requires two code lines, equal to its original proof span. The other selected edit in this file saves one line, offset by the charged import. Reapply the declared positive-net-file rule after formatting.",
+  "required_actions": [
+    "Preserve the fixed running study and its original inputs.",
+    "Add and demonstrate failing regression tests before fixing selection and source-style verification.",
+    "Format or reject overlong replacement lines before deterministic line accounting and selection.",
+    "Verify and freeze the corrected complete source patch in new directories.",
+    "Use a fresh exact-workload pilot and fixed confirmatory run; retain the earlier study as superseded evidence."
+  ],
+  "anticipated_counts_are_not_results": true
+}

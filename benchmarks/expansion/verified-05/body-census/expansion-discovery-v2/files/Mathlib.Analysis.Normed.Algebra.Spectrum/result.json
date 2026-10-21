@@ -1,0 +1,88 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 12,
+    "no_line_saving_untried": 51
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 11,
+      "no_line_saving_untried": 30
+    },
+    "core": {
+      "no_line_saving_untried": 6
+    },
+    "upper_bound_extension": {
+      "failed": 1,
+      "no_line_saving_untried": 15
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 25,
+    "eligible": 63,
+    "errors": 0,
+    "normGoals": 210,
+    "outsideBody": 0,
+    "proofNodes": 2551,
+    "synthetic": 0,
+    "tacticNodes": 3062,
+    "termNodes": 16047,
+    "unlocatedNodes": 9861,
+    "unresolved": 26
+  },
+  "directory": "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01",
+  "eligible_observations": 63,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/events.jsonl": "5d56078a71d0adbb5063c457f5f8f52ca11c8c9de02c804fcb19591ea759851d",
+    "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/request.json": "c00678e0c54758a224460d9267a469b179b6b54509e810a8f890656d64a0f644",
+    "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.Normed.Algebra.Spectrum.json.gz": "3645cd7b1ca62d4dc4213488a6ca79dc6883e208c3ff0f1ad87046eb7b45a998",
+    "setups/Mathlib.Analysis.Normed.Algebra.Spectrum.metadata.json": "69773ff524293cdac2c51037a3a8de805afbb493145707ba9718a9604db5369f",
+    "setups/batch-f8ba2e26090dc0fb.metadata.json": "d35d9c2f6740e1164ac9d3ff54b09f6cf6dad3c948829634e5079e2d66050cd4"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-discovery-v2/files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 9.192770666995784,
+    "peak_rss_bytes": 3688955904,
+    "returncode": 0,
+    "system_seconds": 1.5824019999999999,
+    "timed_out": false,
+    "user_seconds": 7.539166
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.Normed.Algebra.Spectrum",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 41,
+    "core": 6,
+    "upper_bound_extension": 16
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 59,
+    "core": 7,
+    "outside_fragment": 124,
+    "upper_bound_extension": 20
+  },
+  "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+  "proposal_file": "files/Mathlib.Analysis.Normed.Algebra.Spectrum/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-f8ba2e26090dc0fb.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "edcfef29c9652ba4627d04df998c4c4184ceb0a2d70f868c1bbf86d102dc47c5",
+    "timed_out": false
+  },
+  "setup_sha256": "edcfef29c9652ba4627d04df998c4c4184ceb0a2d70f868c1bbf86d102dc47c5",
+  "source_sha256": "11182f0ab43174531c8e2fa228dd965caa15efa7dcc40f0eb3a80f9ace015872",
+  "status": "complete",
+  "successful_proposals": 0
+}

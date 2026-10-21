@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "quantified-specialization-proposals-v4",
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "source_sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "source_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "quantified-analytic-partial-sums",
+      "path": "Mathlib/Analysis/Analytic/Basic.lean",
+      "status": "replace",
+      "reason": "Use bounded specialization of local tail estimates after fixed finite-sum normalization.",
+      "declaration": "HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod",
+      "parent_declaration": "HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod",
+      "start_line": 654,
+      "end_line": 671,
+      "original_sha256": "01f6632586b528e7182f2089d31284794aa618a9f7a9d7ba2c7e353c2e79124a",
+      "replacement": "  simp only [FormalMultilinearSeries.partialSum] at hz ⊢\n  simp only [← sum_range_add_sum_Ico _ hkn]\n  norm_arith\n",
+      "proof_replacement": "simp only [FormalMultilinearSeries.partialSum] at hz ⊢\n  simp only [← sum_range_add_sum_Ico _ hkn]\n  norm_arith",
+      "source_start_byte": 30390,
+      "source_end_byte": 31280,
+      "observation_key": "term:27986:28005:HasFPowerSeriesWithinOnBall.tendsto_partialSum_prod:1692103394",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Analytic.Basic/attempt-01/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 27664,
+      "body_end_byte": 31280,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true,
+      "origin_manual_candidate_id": "manual-analytic-partial-sums"
+    },
+    {
+      "id": "quantified-fderiv-map",
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+      "status": "replace",
+      "reason": "Normalize map subtraction, then specialize local derivative-error estimates and derive ball premises.",
+      "declaration": "FDerivMeasurableAux.mem_A_of_differentiable",
+      "parent_declaration": "FDerivMeasurableAux.mem_A_of_differentiable",
+      "start_line": 164,
+      "end_line": 170,
+      "original_sha256": "2576cb31d5e08541bd7fc47fb7d20a115cad32b22af6feb4c2f78f8117b77f92",
+      "replacement": "    ‖f z - f y - (fderiv 𝕜 f x) (z - y)‖ ≤ δ * ‖z - x‖ + δ * ‖y - x‖ := by\n      simp only [map_sub] at hR ⊢\n      norm_arith\n",
+      "proof_replacement": "‖f z - f y - (fderiv 𝕜 f x) (z - y)‖ ≤ δ * ‖z - x‖ + δ * ‖y - x‖ := by\n      simp only [map_sub] at hR ⊢\n      norm_arith",
+      "source_start_byte": 8656,
+      "source_end_byte": 9101,
+      "observation_key": "term:8414:8438:FDerivMeasurableAux.mem_A_of_differentiable:1870428558",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.FDeriv.Measurable/attempt-02/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 8249,
+      "body_end_byte": 9266,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true,
+      "origin_manual_candidate_id": "manual-fderiv-map"
+    }
+  ],
+  "trial_evidence": {
+    "scope": "Both complete copied files compiled with the checked interpreter prototype. This is not final production/native source verification; the combined selected patch must be verified again.",
+    "report": "benchmarks/expansion/quantified/scratch-corpus-report.json",
+    "report_sha256": "ebc61d30cfcf96442cdcea52b464839541c6c264519c59826dd9d290d911fe1b",
+    "source_guards_origin": "benchmarks/expansion/manual/confirmed-v3.json",
+    "source_guards_origin_sha256": "2b975b5cf57065a7afd8057c44b8a6bddea8b5e21ffd286d284c35711b2f1c4d",
+    "production_tactic_sha256": "0d10c0764ef192b5872c95b130aecf1e42569027fa96a0452ce159b611586571",
+    "production_tests_sha256": "45507445b612e80fabfc069e6d5e0558f981e98c3ee4dd8c70a60a47f82ff891"
+  }
+}

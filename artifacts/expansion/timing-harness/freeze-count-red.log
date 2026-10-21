@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_coherently_referenced_but_false_count_audit_cannot_freeze (test_freeze_study.FreezeStudyTests.test_coherently_referenced_but_false_count_audit_cannot_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/to1717/Documents/GitHub/norm-arith/artifacts/expansion/test_freeze_study.py", line 25, in test_coherently_referenced_but_false_count_audit_cannot_freeze
+    with self.assertRaisesRegex(ValueError, "independent.*count"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 6.105s
+
+FAILED (failures=1)

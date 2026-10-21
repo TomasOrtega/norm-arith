@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "checked_at_utc": "2026-10-20T23:42:02.592548+00:00",
+  "verification_report_sha256": "10e3b0217270d7a95afdb1215e56f9c713d9e20d533c3706cefd6a87e2407453",
+  "input_count": 11141,
+  "artifact_count": 77,
+  "reason": "Post-run check before source-style correction; the old study is superseded for line-accounting reasons."
+}

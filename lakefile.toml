@@ -9,6 +9,12 @@ rev = "2f3c7c8a8949b04a32f9303f59163acffb766996"
 
 [[lean_lib]]
 name = "NormArith"
+precompileLibrary = true
 
 [[lean_lib]]
 name = "NormArithTest"
+
+[[lean_exe]]
+name = "norm_arith_census"
+root = "NormArith.Census"
+supportInterpreter = true

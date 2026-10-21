@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "scope": "descriptive diagnostics only; no block selection, significance test or confidence interval",
+  "repetitions": 24,
+  "affected_file_count": 11,
+  "affected_files": [
+    "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+    "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+    "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+    "Mathlib/Analysis/Convex/Uniform.lean",
+    "Mathlib/Analysis/Normed/Field/Approximation.lean",
+    "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+    "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+    "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+    "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+    "Mathlib/NumberTheory/Padics/Hensel.lean",
+    "Mathlib/Topology/MetricSpace/GromovHausdorff.lean"
+  ],
+  "sequence_definition": {
+    "A": "original",
+    "B": "replacement",
+    "even_zero_based_pair": "AB",
+    "odd_zero_based_pair": "BA"
+  },
+  "log_ratio_definition": "natural log(original full-pass seconds / replacement full-pass seconds)",
+  "autocorrelation_definition": "sum_{t=k}^{n-1} (x[t]-mean(x))*(x[t-k]-mean(x)) / sum_{t=0}^{n-1} (x[t]-mean(x))^2",
+  "undefined_autocorrelations": "null when lag>=series length or centered sum of squares is zero",
+  "chronological_pairs": [
+    {
+      "pair_index": 0,
+      "pair_number": 1,
+      "sequence": "AB",
+      "original_seconds": 37.663386960019125,
+      "replacement_seconds": 34.15628108603414,
+      "ratio": 1.1026782121025165,
+      "log_paired_ratio": 0.09774195890634049
+    },
+    {
+      "pair_index": 1,
+      "pair_number": 2,
+      "sequence": "BA",
+      "original_seconds": 37.43687374997535,
+      "replacement_seconds": 33.8326406670094,
+      "ratio": 1.1065312376423657,
+      "log_paired_ratio": 0.10123011114741148
+    },
+    {
+      "pair_index": 2,
+      "pair_number": 3,
+      "sequence": "AB",
+      "original_seconds": 37.203663999040145,
+      "replacement_seconds": 33.51713024999481,
+      "ratio": 1.1099895403200848,
+      "log_paired_ratio": 0.10435059214478601
+    },
+    {
+      "pair_index": 3,
+      "pair_number": 4,
+      "sequence": "BA",
+      "original_seconds": 36.876262583973585,
+      "replacement_seconds": 33.58885366600589,
+      "ratio": 1.0978720188148239,
+      "log_paired_ratio": 0.09337377783742956
+    },
+    {
+      "pair_index": 4,
+      "pair_number": 5,
+      "sequence": "AB",
+      "original_seconds": 36.66978987902985,
+      "replacement_seconds": 33.68282466600067,
+      "ratio": 1.0886791782651237,
+      "log_paired_ratio": 0.08496519840303167
+    },
+    {
+      "pair_index": 5,
+      "pair_number": 6,
+      "sequence": "BA",
+      "original_seconds": 36.444411208009114,
+      "replacement_seconds": 33.546458665980026,
+      "ratio": 1.0863862433553366,
+      "log_paired_ratio": 0.08285681514578365
+    },
+    {
+      "pair_index": 6,
+      "pair_number": 7,
+      "sequence": "AB",
+      "original_seconds": 37.1123683739861,
+      "replacement_seconds": 34.035384832997806,
+      "ratio": 1.090405428235532,
+      "log_paired_ratio": 0.08654957959352826
+    },
+    {
+      "pair_index": 7,
+      "pair_number": 8,
+      "sequence": "BA",
+      "original_seconds": 37.440505082020536,
+      "replacement_seconds": 33.90639633501996,
+      "ratio": 1.1042313288643535,
+      "log_paired_ratio": 0.09914946291990237
+    },
+    {
+      "pair_index": 8,
+      "pair_number": 9,
+      "sequence": "AB",
+      "original_seconds": 37.41060787602328,
+      "replacement_seconds": 34.10660887300037,
+      "ratio": 1.0968726916043077,
+      "log_paired_ratio": 0.09246312314958977
+    },
+    {
+      "pair_index": 9,
+      "pair_number": 10,
+      "sequence": "BA",
+      "original_seconds": 37.714667916996405,
+      "replacement_seconds": 34.57424650102621,
+      "ratio": 1.090831232312669,
+      "log_paired_ratio": 0.08694000406258957
+    },
+    {
+      "pair_index": 10,
+      "pair_number": 11,
+      "sequence": "AB",
+      "original_seconds": 37.44984141696477,
+      "replacement_seconds": 34.158515375020215,
+      "ratio": 1.0963544816222157,
+      "log_paired_ratio": 0.09199056836998346
+    },
+    {
+      "pair_index": 11,
+      "pair_number": 12,
+      "sequence": "BA",
+      "original_seconds": 37.55867408399354,
+      "replacement_seconds": 34.23625300001004,
+      "ratio": 1.0970439459009291,
+      "log_paired_ratio": 0.09261924056448301
+    },
+    {
+      "pair_index": 12,
+      "pair_number": 13,
+      "sequence": "AB",
+      "original_seconds": 37.532650666020345,
+      "replacement_seconds": 34.05397708303644,
+      "ratio": 1.102151756739061,
+      "log_paired_ratio": 0.09726441153906036
+    },
+    {
+      "pair_index": 13,
+      "pair_number": 14,
+      "sequence": "BA",
+      "original_seconds": 37.12239529195358,
+      "replacement_seconds": 33.93968220698298,
+      "ratio": 1.0937755711901087,
+      "log_paired_ratio": 0.08963553779020751
+    },
+    {
+      "pair_index": 14,
+      "pair_number": 15,
+      "sequence": "AB",
+      "original_seconds": 37.16287549995468,
+      "replacement_seconds": 32.97850229102187,
+      "ratio": 1.1268818447850488,
+      "log_paired_ratio": 0.11945438908682424
+    },
+    {
+      "pair_index": 15,
+      "pair_number": 16,
+      "sequence": "BA",
+      "original_seconds": 36.488618125993526,
+      "replacement_seconds": 33.13635854201857,
+      "ratio": 1.1011655997059582,
+      "log_paired_ratio": 0.09636925488260382
+    },
+    {
+      "pair_index": 16,
+      "pair_number": 17,
+      "sequence": "AB",
+      "original_seconds": 36.303077707998455,
+      "replacement_seconds": 32.86907608099864,
+      "ratio": 1.1044751491808735,
+      "log_paired_ratio": 0.0993702440150221
+    },
+    {
+      "pair_index": 17,
+      "pair_number": 18,
+      "sequence": "BA",
+      "original_seconds": 37.3041856669588,
+      "replacement_seconds": 32.96427325200057,
+      "ratio": 1.1316550309415618,
+      "log_paired_ratio": 0.12368119035292607
+    },
+    {
+      "pair_index": 18,
+      "pair_number": 19,
+      "sequence": "AB",
+      "original_seconds": 37.695800334069645,
+      "replacement_seconds": 34.3442606239405,
+      "ratio": 1.097586602513518,
+      "log_paired_ratio": 0.09311377175019007
+    },
+    {
+      "pair_index": 19,
+      "pair_number": 20,
+      "sequence": "BA",
+      "original_seconds": 37.51310608306085,
+      "replacement_seconds": 34.52989029197488,
+      "ratio": 1.0863951714257054,
+      "log_paired_ratio": 0.08286503324844975
+    },
+    {
+      "pair_index": 20,
+      "pair_number": 21,
+      "sequence": "AB",
+      "original_seconds": 37.44092695598374,
+      "replacement_seconds": 34.172021542006405,
+      "ratio": 1.0956602877578956,
+      "log_paired_ratio": 0.09135718405412481
+    },
+    {
+      "pair_index": 21,
+      "pair_number": 22,
+      "sequence": "BA",
+      "original_seconds": 37.20495691799442,
+      "replacement_seconds": 34.22985278998385,
+      "ratio": 1.0869154812398472,
+      "log_paired_ratio": 0.08334385096688718
+    },
+    {
+      "pair_index": 22,
+      "pair_number": 23,
+      "sequence": "AB",
+      "original_seconds": 37.59331745901727,
+      "replacement_seconds": 34.035849544015946,
+      "ratio": 1.1045212022811632,
+      "log_paired_ratio": 0.09941193996464728
+    },
+    {
+      "pair_index": 23,
+      "pair_number": 24,
+      "sequence": "BA",
+      "original_seconds": 37.46595762699144,
+      "replacement_seconds": 34.47508070903132,
+      "ratio": 1.086754747384148,
+      "log_paired_ratio": 0.08319595930063939
+    }
+  ],
+  "all_pairs": {
+    "pairs_or_blocks": 24,
+    "original_mean_seconds": 37.242038394417854,
+    "replacement_mean_seconds": 33.877934119796315,
+    "ratio_of_means": 1.0993007502383612,
+    "mean_log_paired_ratio": 0.09472054996651841,
+    "sample_sd_log_paired_ratio": 0.010408401493621013
+  },
+  "lag_autocorrelations": {
+    "original_seconds": {
+      "1": 0.5626247841774048,
+      "2": 0.06508598974179469,
+      "3": -0.23245336297685681,
+      "4": -0.43313637406223
+    },
+    "replacement_seconds": {
+      "1": 0.5835512006828352,
+      "2": 0.249062194848067,
+      "3": -0.04609370927202852,
+      "4": -0.3605950177955416
+    },
+    "log_paired_ratio": {
+      "1": 0.11069448761643642,
+      "2": 0.0408781004483635,
+      "3": 0.14215380922945361,
+      "4": -0.20545794174851167
+    }
+  },
+  "sequence_means": {
+    "AB": {
+      "pairs_or_blocks": 12,
+      "original_mean_seconds": 37.269858927342284,
+      "replacement_mean_seconds": 33.84253602067232,
+      "ratio_of_means": 1.1012726382141227,
+      "mean_log_paired_ratio": 0.09650274674809405,
+      "sample_sd_log_paired_ratio": 0.009115367278883006
+    },
+    "BA": {
+      "pairs_or_blocks": 12,
+      "original_mean_seconds": 37.21421786149343,
+      "replacement_mean_seconds": 33.91333221892031,
+      "ratio_of_means": 1.0973329787018555,
+      "mean_log_paired_ratio": 0.09293835318494277,
+      "sample_sd_log_paired_ratio": 0.011683252824795582
+    }
+  },
+  "AB_minus_BA": {
+    "original_mean_seconds": 0.05564106584885309,
+    "replacement_mean_seconds": -0.0707961982479901,
+    "mean_log_paired_ratio": 0.0035643935631512746
+  },
+  "half_run_drift": {
+    "first_half_pair_indices": [
+      0,
+      11
+    ],
+    "second_half_pair_indices": [
+      12,
+      23
+    ],
+    "first_half": {
+      "pairs_or_blocks": 12,
+      "original_mean_seconds": 37.248421094169316,
+      "replacement_mean_seconds": 33.94513282650829,
+      "ratio_of_means": 1.0973125745167636,
+      "mean_log_paired_ratio": 0.09285253602040494,
+      "sample_sd_log_paired_ratio": 0.006768760991523985
+    },
+    "second_half": {
+      "pairs_or_blocks": 12,
+      "original_mean_seconds": 37.2356556946664,
+      "replacement_mean_seconds": 33.81073541308433,
+      "ratio_of_means": 1.1012968289431724,
+      "mean_log_paired_ratio": 0.09658856391263188,
+      "sample_sd_log_paired_ratio": 0.013156319230255677
+    },
+    "original_relative_mean_change": -0.00034270981501860476,
+    "replacement_relative_mean_change": -0.003959254309324978,
+    "change_in_mean_log_paired_ratio": 0.003736027892226934
+  },
+  "compatible_block_diagnostics": {
+    "2": {
+      "pilot_blocks": 12,
+      "confirmatory_blocks_at_40_pairs": 20,
+      "block_rows": [
+        {
+          "block_index": 0,
+          "pairs": [
+            0,
+            1
+          ],
+          "original_seconds": 75.10026070999447,
+          "replacement_seconds": 67.98892175304354,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.550130354997236,
+          "replacement_mean_seconds_per_pair": 33.99446087652177,
+          "ratio_of_totals": 1.104595554299,
+          "log_ratio_of_totals": 0.09947925376111676,
+          "mean_log_paired_ratio": 0.09948603502687599
+        },
+        {
+          "block_index": 1,
+          "pairs": [
+            2,
+            3
+          ],
+          "original_seconds": 74.07992658301373,
+          "replacement_seconds": 67.1059839160007,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.039963291506865,
+          "replacement_mean_seconds_per_pair": 33.55299195800035,
+          "ratio_of_totals": 1.103924303915171,
+          "log_ratio_of_totals": 0.09887138020996711,
+          "mean_log_paired_ratio": 0.09886218499110778
+        },
+        {
+          "block_index": 2,
+          "pairs": [
+            4,
+            5
+          ],
+          "original_seconds": 73.11420108703896,
+          "replacement_seconds": 67.2292833319807,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 36.55710054351948,
+          "replacement_mean_seconds_per_pair": 33.61464166599035,
+          "ratio_of_totals": 1.087535036272785,
+          "log_ratio_of_totals": 0.08391370072406822,
+          "mean_log_paired_ratio": 0.08391100677440766
+        },
+        {
+          "block_index": 3,
+          "pairs": [
+            6,
+            7
+          ],
+          "original_seconds": 74.55287345600664,
+          "replacement_seconds": 67.94178116801777,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.27643672800332,
+          "replacement_mean_seconds_per_pair": 33.970890584008885,
+          "ratio_of_totals": 1.0973052542093333,
+          "log_ratio_of_totals": 0.09285740531020921,
+          "mean_log_paired_ratio": 0.0928495212567153
+        },
+        {
+          "block_index": 4,
+          "pairs": [
+            8,
+            9
+          ],
+          "original_seconds": 75.12527579301968,
+          "replacement_seconds": 68.68085537402658,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.56263789650984,
+          "replacement_mean_seconds_per_pair": 34.34042768701329,
+          "ratio_of_totals": 1.093831394264059,
+          "log_ratio_of_totals": 0.08968657353368785,
+          "mean_log_paired_ratio": 0.08970156360608966
+        },
+        {
+          "block_index": 5,
+          "pairs": [
+            10,
+            11
+          ],
+          "original_seconds": 75.00851550095831,
+          "replacement_seconds": 68.39476837503025,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.504257750479155,
+          "replacement_mean_seconds_per_pair": 34.19738418751513,
+          "ratio_of_totals": 1.0966996055847835,
+          "log_ratio_of_totals": 0.09230531114575916,
+          "mean_log_paired_ratio": 0.09230490446723323
+        },
+        {
+          "block_index": 6,
+          "pairs": [
+            12,
+            13
+          ],
+          "original_seconds": 74.65504595797393,
+          "replacement_seconds": 67.99365929001942,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.32752297898696,
+          "replacement_mean_seconds_per_pair": 33.99682964500971,
+          "ratio_of_totals": 1.0979707039966933,
+          "log_ratio_of_totals": 0.09346366148976097,
+          "mean_log_paired_ratio": 0.09344997466463394
+        },
+        {
+          "block_index": 7,
+          "pairs": [
+            14,
+            15
+          ],
+          "original_seconds": 73.6514936259482,
+          "replacement_seconds": 66.11486083304044,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 36.8257468129741,
+          "replacement_mean_seconds_per_pair": 33.05743041652022,
+          "ratio_of_totals": 1.1139930221125323,
+          "log_ratio_of_totals": 0.10795087767266685,
+          "mean_log_paired_ratio": 0.10791182198471402
+        },
+        {
+          "block_index": 8,
+          "pairs": [
+            16,
+            17
+          ],
+          "original_seconds": 73.60726337495726,
+          "replacement_seconds": 65.8333493329992,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 36.80363168747863,
+          "replacement_mean_seconds_per_pair": 32.9166746664996,
+          "ratio_of_totals": 1.1180847415591135,
+          "log_ratio_of_totals": 0.11161716931938181,
+          "mean_log_paired_ratio": 0.11152571718397408
+        },
+        {
+          "block_index": 9,
+          "pairs": [
+            18,
+            19
+          ],
+          "original_seconds": 75.20890641713049,
+          "replacement_seconds": 68.87415091591538,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.604453208565246,
+          "replacement_mean_seconds_per_pair": 34.43707545795769,
+          "ratio_of_totals": 1.0919758053924884,
+          "log_ratio_of_totals": 0.08798872084327533,
+          "mean_log_paired_ratio": 0.08798940249931991
+        },
+        {
+          "block_index": 10,
+          "pairs": [
+            20,
+            21
+          ],
+          "original_seconds": 74.64588387397816,
+          "replacement_seconds": 68.40187433199026,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.32294193698908,
+          "replacement_mean_seconds_per_pair": 34.20093716599513,
+          "ratio_of_totals": 1.091284187794072,
+          "log_ratio_of_totals": 0.087355156701845,
+          "mean_log_paired_ratio": 0.08735051751050599
+        },
+        {
+          "block_index": 11,
+          "pairs": [
+            22,
+            23
+          ],
+          "original_seconds": 75.05927508600871,
+          "replacement_seconds": 68.51093025304726,
+          "AB_pairs": 1,
+          "BA_pairs": 1,
+          "original_mean_seconds_per_pair": 37.529637543004355,
+          "replacement_mean_seconds_per_pair": 34.25546512652363,
+          "ratio_of_totals": 1.0955810234772019,
+          "log_ratio_of_totals": 0.0912848375897515,
+          "mean_log_paired_ratio": 0.09130394963264334
+        }
+      ],
+      "summary_of_block_pair_means": {
+        "pairs_or_blocks": 12,
+        "original_mean_seconds": 37.242038394417854,
+        "replacement_mean_seconds": 33.877934119796315,
+        "ratio_of_means": 1.0993007502383612,
+        "mean_log_paired_ratio": 0.09473117069179082,
+        "sample_sd_log_paired_ratio": 0.00833827234121138
+      },
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": 0.1536971076474787,
+          "2": -0.45942419631504344,
+          "3": -0.44350297564258195,
+          "4": -0.1352377345082027
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": 0.26385004374773546,
+          "2": -0.3847103500054146,
+          "3": -0.544162888128221,
+          "4": -0.2588733903881378
+        },
+        "log_ratio_of_block_totals": {
+          "1": 0.24539528966676102,
+          "2": -0.31058120360479813,
+          "3": -0.33469685954604017,
+          "4": -0.19625175699111042
+        }
+      }
+    },
+    "4": {
+      "pilot_blocks": 6,
+      "confirmatory_blocks_at_40_pairs": 10,
+      "block_rows": [
+        {
+          "block_index": 0,
+          "pairs": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "original_seconds": 149.1801872930082,
+          "replacement_seconds": 135.09490566904424,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 37.29504682325205,
+          "replacement_mean_seconds_per_pair": 33.77372641726106,
+          "ratio_of_totals": 1.1042621226478377,
+          "log_ratio_of_totals": 0.09917734960751302,
+          "mean_log_paired_ratio": 0.09917411000899189
+        },
+        {
+          "block_index": 1,
+          "pairs": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "original_seconds": 147.6670745430456,
+          "replacement_seconds": 135.17106449999847,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 36.9167686357614,
+          "replacement_mean_seconds_per_pair": 33.792766124999616,
+          "ratio_of_totals": 1.092445895053577,
+          "log_ratio_of_totals": 0.08841912278283616,
+          "mean_log_paired_ratio": 0.08838026401556148
+        },
+        {
+          "block_index": 2,
+          "pairs": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "original_seconds": 150.133791293978,
+          "replacement_seconds": 137.07562374905683,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 37.5334478234945,
+          "replacement_mean_seconds_per_pair": 34.26890593726421,
+          "ratio_of_totals": 1.0952625068394848,
+          "log_ratio_of_totals": 0.09099406681077651,
+          "mean_log_paired_ratio": 0.09100323403666145
+        },
+        {
+          "block_index": 3,
+          "pairs": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "original_seconds": 148.30653958392213,
+          "replacement_seconds": 134.10852012305986,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 37.07663489598053,
+          "replacement_mean_seconds_per_pair": 33.527130030764965,
+          "ratio_of_totals": 1.105869630414488,
+          "log_ratio_of_totals": 0.10063202130108007,
+          "mean_log_paired_ratio": 0.10068089832467399
+        },
+        {
+          "block_index": 4,
+          "pairs": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "original_seconds": 148.81616979208775,
+          "replacement_seconds": 134.70750024891458,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 37.20404244802194,
+          "replacement_mean_seconds_per_pair": 33.676875062228646,
+          "ratio_of_totals": 1.1047355902017553,
+          "log_ratio_of_totals": 0.09960602145123088,
+          "mean_log_paired_ratio": 0.099757559841647
+        },
+        {
+          "block_index": 5,
+          "pairs": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "original_seconds": 149.70515895998687,
+          "replacement_seconds": 136.91280458503752,
+          "AB_pairs": 2,
+          "BA_pairs": 2,
+          "original_mean_seconds_per_pair": 37.42628973999672,
+          "replacement_mean_seconds_per_pair": 34.22820114625938,
+          "ratio_of_totals": 1.0934343169269016,
+          "log_ratio_of_totals": 0.08932349250563729,
+          "mean_log_paired_ratio": 0.08932723357157467
+        }
+      ],
+      "summary_of_block_pair_means": {
+        "pairs_or_blocks": 6,
+        "original_mean_seconds": 37.242038394417854,
+        "replacement_mean_seconds": 33.877934119796315,
+        "ratio_of_means": 1.0993007502383612,
+        "mean_log_paired_ratio": 0.09469201240984565,
+        "sample_sd_log_paired_ratio": 0.005681450380875252
+      },
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": -0.628003689832624,
+          "2": 0.10808366583557869,
+          "3": 0.223519813758605,
+          "4": -0.24170991022857033
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": -0.35321164132561544,
+          "2": -0.46450814872776425,
+          "3": 0.4169879820218694,
+          "4": -0.019424030095699017
+        },
+        "log_ratio_of_block_totals": {
+          "1": -0.14930350403414308,
+          "2": -0.6438163420391676,
+          "3": 0.09709383849063367,
+          "4": 0.34522339729200857
+        }
+      }
+    },
+    "8": {
+      "pilot_blocks": 3,
+      "confirmatory_blocks_at_40_pairs": 5,
+      "block_rows": [
+        {
+          "block_index": 0,
+          "pairs": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "original_seconds": 296.8472618360538,
+          "replacement_seconds": 270.2659701690427,
+          "AB_pairs": 4,
+          "BA_pairs": 4,
+          "original_mean_seconds_per_pair": 37.105907729506725,
+          "replacement_mean_seconds_per_pair": 33.78324627113034,
+          "ratio_of_totals": 1.0983523439905711,
+          "log_ratio_of_totals": 0.09381118777745225,
+          "mean_log_paired_ratio": 0.09377718701227669
+        },
+        {
+          "block_index": 1,
+          "pairs": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "original_seconds": 298.4403308779001,
+          "replacement_seconds": 271.1841438721167,
+          "AB_pairs": 4,
+          "BA_pairs": 4,
+          "original_mean_seconds_per_pair": 37.305041359737515,
+          "replacement_mean_seconds_per_pair": 33.89801798401459,
+          "ratio_of_totals": 1.1005080408338208,
+          "log_ratio_of_totals": 0.09577192848546578,
+          "mean_log_paired_ratio": 0.09584206618066772
+        },
+        {
+          "block_index": 2,
+          "pairs": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "original_seconds": 298.5213287520746,
+          "replacement_seconds": 271.6203048339521,
+          "AB_pairs": 4,
+          "BA_pairs": 4,
+          "original_mean_seconds_per_pair": 37.31516609400933,
+          "replacement_mean_seconds_per_pair": 33.95253810424401,
+          "ratio_of_totals": 1.099039075648515,
+          "log_ratio_of_totals": 0.09443623042953865,
+          "mean_log_paired_ratio": 0.09454239670661083
+        }
+      ],
+      "summary_of_block_pair_means": {
+        "pairs_or_blocks": 3,
+        "original_mean_seconds": 37.242038394417854,
+        "replacement_mean_seconds": 33.877934119796315,
+        "ratio_of_means": 1.0993007502383612,
+        "mean_log_paired_ratio": 0.09467311556415221,
+        "sample_sd_log_paired_ratio": 0.0010016046906170257
+      },
+      "lag_autocorrelations": {
+        "original_mean_seconds_per_pair": {
+          "1": -0.14253408706709755,
+          "2": -0.3574659129329025,
+          "3": null,
+          "4": null
+        },
+        "replacement_mean_seconds_per_pair": {
+          "1": -0.02700797948262924,
+          "2": -0.47299202051737077,
+          "3": null,
+          "4": null
+        },
+        "log_ratio_of_block_totals": {
+          "1": -0.6017620845247627,
+          "2": 0.10176208452476254,
+          "3": null,
+          "4": null
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Warmups are retained in input hashes but excluded from these summaries.",
+    "Only full-pass totals are analyzed; files are not sampling units.",
+    "AB/BA differences are descriptive and can mix sequence effects with time drift.",
+    "Half-run drift is descriptive, not a fitted drift correction or a stationarity test.",
+    "With 24 pairs, candidate block lengths 2,4,8 leave 12,6,3 pilot blocks; autocorrelations are noisy.",
+    "An absent or small sample autocorrelation does not establish block independence or representativeness.",
+    "These diagnostics do not justify coverage under arbitrary dependence or choose a calibration rationale.",
+    "Ratios of means and means of log ratios are different summaries; neither replaces the frozen confirmatory statistic.",
+    "Input hashes bind recorded bytes; this script does not revalidate compiler outputs or live runtime inputs."
+  ],
+  "input_sha256": {
+    "report": {
+      "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-native-pilot-final/report.json",
+      "sha256": "3314bcea697b17523349ccc8ab7d19b0635806faf89e68d79c83f8ddc7da074a"
+    },
+    "measurements": {
+      "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-native-pilot-final/measurements.jsonl",
+      "sha256": "0ce78619f0389fad4cf6306520d66936691132a5706b0a4f707f9b7b3a761c40"
+    },
+    "diagnostic_script": {
+      "path": "/Users/to1717/Documents/GitHub/norm-arith/artifacts/pilot_serial_diagnostics.py",
+      "sha256": "375b00deadd0c4450040347dabfa62a3f09c0acda7e869fcb37bc40eb24927ef"
+    },
+    "benchmark_script": {
+      "path": "/Users/to1717/Documents/GitHub/norm-arith/scripts/benchmark.py",
+      "sha256": "9243321cf906cfbe18f4e84a01977b8a1590be798bfcf683b9207693a4e120f2"
+    },
+    "analysis_plan": {
+      "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/benchmark-native-pilot-final/analysis-plan.json",
+      "sha256": "56ba672836eea0975e0ada2a55430f5097f076ccbe4e3e754e566f17ead76064"
+    }
+  },
+  "recorded_measurement_protocol_sha256": "e4a9613a367428931934f6cedb51582fb7e404961f24b541b8fbe43235c9cde1"
+}

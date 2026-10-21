@@ -7,6 +7,60 @@ public meta import NormArith.Search
 
 open NormArith.Search
 
+-- The reference search is not limited to three-source certificates.
+#guard (referenceDecompositions
+  #[#[1, 0, 0, 0], #[0, 1, 0, 0], #[0, 0, 1, 0], #[0, 0, 0, 1]]
+  #[1, 1, 1, 1]).coefficients == #[#[1, 1, 1, 1]]
+#guard (referenceDecompositions
+  #[#[1, 0, 0, 0], #[0, 1, 0, 0], #[0, 0, 1, 0], #[0, 0, 0, 1]]
+  #[1, 1, 1, 1]).status == .complete
+
+-- Every supplied column is eligible, including those after the first twelve.
+#guard (referenceDecompositions ((Array.replicate 12 #[1, 0]).push #[0, 1])
+  #[0, 1]).coefficients == #[(Array.replicate 12 0).push 1]
+#guard (referenceDecompositions ((Array.replicate 12 #[1, 0]).push #[0, 1])
+  #[0, 1]).status == .complete
+
+-- Independent signed supports recover exact averaging certificates.
+#guard (referenceDecompositions #[#[1, 1], #[1, -1]] #[1, 0]).coefficients ==
+  #[#[1 / 2, 1 / 2]]
+#guard (referenceDecompositions #[#[1, 1], #[1, -1]] #[0, 1]).coefficients ==
+  #[#[1 / 2, -1 / 2]]
+
+-- Rank bounds support sizes without losing alternative dependent-source bounds.
+#guard (referenceDecompositions #[#[1, 0], #[2, 0], #[0, 1]] #[3, 2]).coefficients ==
+  #[#[3, 0, 2], #[0, 3 / 2, 2]]
+#guard (referenceDecompositions #[#[1, 0], #[2, 0], #[0, 1]] #[3, 2]).rank == 2
+#guard (referenceDecompositions #[#[1, 0], #[2, 0], #[0, 1]] #[3, 2]).attempts == 6
+#guard (referenceDecompositions #[#[1, 0], #[2, 0], #[0, 1]] #[3, 2]).status == .complete
+
+-- The final row participates in both rank and span checks.
+#guard (referenceDecompositions #[#[1, 0, 0], #[0, 0, 1]] #[0, 0, 1]).rank == 2
+#guard (referenceDecompositions #[#[1, 0, 0], #[0, 0, 1]] #[0, 0, 1]).coefficients ==
+  #[#[0, 1]]
+#guard (referenceDecompositions #[#[1, 0, 0], #[0, 1, 0]] #[0, 0, 1]).coefficients == #[]
+#guard (referenceDecompositions #[#[1, 0, 0], #[0, 1, 0]] #[0, 0, 1]).status == .complete
+
+-- Exhaustion is distinct from a completed search with no decomposition.
+#guard (referenceDecompositions #[#[1, 0], #[0, 1]] #[1, 1]
+  { maxSubsets := 2 }).status == .exhausted .subsets
+#guard (referenceDecompositions #[#[1, 0], #[0, 1]] #[1, 1]
+  { maxSubsets := 2 }).attempts == 2
+#guard (referenceDecompositions #[#[1, 0], #[0, 1]] #[1, 1]
+  { maxSubsets := 3 }).status == .complete
+#guard (referenceDecompositions #[#[1], #[2]] #[1]
+  { maxResults := 1 }).status == .exhausted .results
+#guard (referenceDecompositions #[#[1], #[2]] #[1]
+  { maxResults := 1 }).coefficients == #[#[1, 0]]
+#guard (referenceDecompositions #[#[1], #[2]] #[1]
+  { maxResults := 2 }).status == .complete
+
+#guard (referenceDecompositions #[] #[]).coefficients == #[#[]]
+#guard (referenceDecompositions #[#[1]] #[0] { maxSubsets := 0 }).status == .complete
+#guard (referenceDecompositions #[#[1]] #[0] { maxResults := 0 }).status == .exhausted .results
+#guard (referenceDecompositions #[#[1]] #[1] { maxSubsets := 0 }).status == .exhausted .subsets
+#guard (referenceDecompositions #[#[1, 0], #[1]] #[1, 0]).status == .invalidDimensions
+
 -- An identity that requires combining two available vectors.
 #guard decompositions #[#[1, 1], #[1, -1]] #[3, 1] == #[#[2, 1]]
 

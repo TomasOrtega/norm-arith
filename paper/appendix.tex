@@ -1,0 +1,453 @@
+\section{Full proof of the finite characterization}\label{app:proof}
+
+Validity here quantifies over all real seminormed spaces and all assignments of vector and scalar atoms.
+Formal atoms can be linearly dependent in an input.
+The reduction records all recognized rational vector-equality assumptions.
+
+Scalar atoms and unsupported vector subterms have independent interpretations in the abstraction.
+A countermodel can ignore the internal operations of opaque expressions.
+This is completeness for the abstraction.
+Lean validates each proof for the concrete goal.
+
+\subsection{Encoding vector equalities}
+Represent the original atoms by the standard basis of $\R^d$.
+Set $V=\R^d$ and represent each observed term by its rational coefficient vector.
+For each recognized vector equality $u=v$, add the observed difference $e=u-v$ and the scalar constraint $n_e=0$.
+In the original context, the equality proves this zero-norm fact in Lean.
+
+A nonzero vector can have zero norm in an arbitrary seminormed space.
+The necessary converse is only a model construction for scalar conclusions.
+First realize all norm values on $V$.
+Then construct the quotient by the zero subspace of that seminorm.
+Each encoded difference then becomes zero.
+The quotient preserves each observed norm value.
+
+Thus the scalar encoding is exact for the stated implication problem.
+This justifies the frontend's zero-norm encoding.
+The frontend does not construct an explicit vector-space quotient.
+
+Let $U\subseteq V$ be the span of the observed vectors $v_1,\ldots,v_m$.
+All constructions start on $U$.
+The construction includes repeated vectors, opposite vectors, and zero vectors.
+
+\begin{lemma}[Vertices and finite enumeration]\label{lem:vertices}
+Let $M$ be a rational matrix and let $b$ be real.
+For $P=\{z\ge0:Mz=b\}$, a feasible point is a vertex exactly when its positive-support columns are independent.
+There are a finite number of vertices.
+If $b$ is rational, all vertices are rational.
+If $P$ is nonempty and a nonnegative linear cost is bounded below on it, a minimum occurs at a vertex.
+\end{lemma}
+\begin{proof}
+Suppose the support columns of a feasible $z$ are dependent.
+Select a nonzero vector $h$ with support there and $Mh=0$.
+For a sufficiently small $\epsilon>0$, the points $z+\epsilon h$ and $z-\epsilon h$ are nonnegative.
+They are distinct feasible points with midpoint $z$.
+Thus $z$ is not a vertex.
+
+Suppose the support columns are independent.
+If $z=(a+b)/2$ with feasible $a,b$, each zero coordinate of $z$ is zero in $a$ and $b$.
+The difference $a-b$ thus has support on the independent columns.
+Because $M(a-b)=0$, we get $a=b=z$.
+This proves the vertex characterization.
+
+Each independent support determines at most one solution.
+There are a finite number of supports.
+Thus there are a finite number of vertices.
+When $b$ is rational, exact rational elimination gives rational coordinates for each such solution.
+
+For the existence of an optimal vertex, write the cost as $w^Tz$ with $w\ge0$.
+Let $z$ be a feasible point with dependent support.
+Select $h$ as above.
+If $h$ has the two signs, select the direction with nonpositive cost change.
+Move to the first coordinate boundary in that direction.
+This preserves feasibility, does not increase the cost, and decreases the support.
+
+If $h$ has only one sign, select it nonnegative.
+Move in direction $-h$.
+Its cost change is nonpositive because $w\ge0$.
+Again the move stops at a coordinate boundary.
+
+Do this step again to get a feasible vertex with cost no greater than that of $z$.
+The finite vertex set is nonempty and has a least-cost element.
+Each feasible point has cost no less than the minimum.
+Thus the vertex attains the infimum over $P$.
+\end{proof}
+
+The proof's last claim applies to each nonnegative cost used here.
+Strictly positive norm values and a bounded feasible polyhedron are not necessary.
+For $M=[A,-A]$, the positive support cannot contain the two copies of a nonzero column.
+The signed solution on an independent unsigned subset thus represents the same vertex data.
+Zero columns add no positive coordinate at a vertex.
+The all-zero point is a vertex when $b=0$.
+
+\begin{lemma}[Necessity]\label{lem:necessary}
+Each vector assignment that satisfies the recognized equalities has norm values that satisfy \eqref{eq:constraints}.
+\end{lemma}
+\begin{proof}
+The assignment induces a seminorm on $V$ through a linear map.
+Seminorms are nonnegative, and the encoded equality differences have norm zero.
+For $z\in P_i$, the equality $[A,-A]z=v_i$ gives
+\[
+ v_i=\sum_j z_jv_j+\sum_j z_{m+j}(-v_j).
+\]
+Subadditivity, absolute homogeneity, and $z\ge0$ give
+$\norm{v_i}\le\sum_j(z_j+z_{m+j})\norm{v_j}$.
+This holds for all feasible points.
+Thus it holds for each vertex.
+\end{proof}
+
+\begin{lemma}[Realization]\label{lem:realization}
+Suppose nonnegative $n_1,\ldots,n_m$ satisfy \eqref{eq:constraints}.
+There is a seminorm $p$ on $V$ with $p(v_i)=n_i$ for each $i$.
+\end{lemma}
+\begin{proof}
+For $u\in U$, the feasible set in \eqref{eq:gauge} is nonempty.
+A real linear representation of $u$ in the columns of $A$ splits into positive and negative parts.
+Its cost is nonnegative.
+Lemma~\ref{lem:vertices} shows that the minimum defining $p(u)$ exists and is finite.
+The zero representation gives $p(0)=0$.
+
+If $z$ represents $u$, an exchange of its first and last $m$ coordinates represents $-u$ with equal cost.
+Thus $p(-u)=p(u)$.
+For $\lambda>0$, multiplication by $\lambda$ gives a bijection between the representations of $u$ and $\lambda u$.
+Costs multiply by $\lambda$.
+Thus $p(\lambda u)=\lambda p(u)$.
+Symmetry and the zero case give $p(\lambda u)=|\lambda|p(u)$ for each real $\lambda$.
+
+If $z$ and $z'$ minimize the costs of $u$ and $u'$, then $z+z'$ represents $u+u'$.
+Thus $p(u+u')\le p(u)+p(u')$.
+These facts prove that $p$ is a seminorm on $U$.
+
+The representation of $v_i$ by one positive column has cost $n_i$.
+Thus $p(v_i)\le n_i$.
+By Lemma~\ref{lem:vertices}, an optimal representation of $v_i$ is a vertex of $P_i$.
+Its constraint in \eqref{eq:constraints} gives $n_i\le p(v_i)$.
+Thus $p(v_i)=n_i$.
+
+Select a real linear complement $W$ with $V=U\oplus W$.
+Define $\widetilde p(u+w)=p(u)$ for $u\in U$ and $w\in W$.
+The uniqueness of the direct-sum decomposition makes this well-defined.
+Linearity of the projection onto $U$ preserves homogeneity and subadditivity.
+Thus $\widetilde p$ is the stated seminorm on $V$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:complete}]
+Lemma~\ref{lem:necessary} proves necessity.
+Each vector equality also gives its recorded zero-norm constraint.
+For sufficiency, apply Lemma~\ref{lem:realization} on $V=\R^d$.
+Let $K=\{v:p(v)=0\}$ be the kernel of this seminorm.
+Homogeneity and subadditivity make $K$ a vector subspace, and $p$ induces a norm on $V/K$.
+Assign each formal atom its basis class in that quotient.
+
+Each encoded equality difference belongs to $K$.
+Thus the assignment satisfies each vector equality.
+The quotient preserves $p(v_i)=n_i$ for each observed term.
+It is a normed space and thus also a seminormed space.
+
+Replace each observed norm by a real variable $n_i$.
+Conjoin \eqref{eq:constraints}, the scalar assumptions, and the negation of the proposed conclusion.
+The resulting problem is rational linear feasibility for a finite system with strict and weak comparisons.
+A feasible solution extends to a seminormed-space counterexample by the realization lemma.
+
+By necessity, a counterexample gives a feasible solution.
+Thus infeasibility is equivalent to validity of the implication.
+An equality conclusion is the conjunction of two weak inequalities, or equivalently its negation splits into two strict branches.
+Exact linear arithmetic decides each finite branch.
+This proves mathematical completeness of the reference reduction.
+\end{proof}
+
+The intermediate construction can have a nontrivial seminorm kernel.
+Its quotient is a normed-space model with the same scalar norm values and the necessary vector equalities.
+This observation is valid only for a grammar without vector-disequality assumptions or vector-equality conclusions.
+For multiple vector types, apply the construction to each type and combine their scalar constraints.
+Different spaces share scalar values but not vector identities.
+
+\subsection{Removing the target from the source set}
+The full polyhedron in \eqref{eq:polyhedron} always contains the trivial single-column representation.
+An implementation can exclude $v_i$ during the generation of nontrivial bounds on $n_i$.
+This optimization preserves the finite characterization.
+
+Use a representation $v_i=c_iv_i+\sum_{j\ne i}c_jv_j$.
+If $|c_i|\ge1$, nonnegativity implies its norm inequality.
+If $|c_i|<1$, then $c_i\ne1$ and
+\[
+ v_i=\sum_{j\ne i}\frac{c_j}{1-c_i}v_j.
+\]
+The target-free constraints bound $n_i$ by the minimum cost of such representations.
+Lemma~\ref{lem:vertices} reduces the minimum to their vertices.
+Because $|1-c_i|\ge1-|c_i|$, this bound implies
+\[
+ (1-|c_i|)n_i\le\sum_{j\ne i}|c_j|n_j,
+\]
+which is the original self-containing inequality.
+
+If no target-free representation exists, no such $|c_i|<1$ representation exists.
+The trivial inequalities add no restriction.
+
+\subsection{Strict scalar comparisons}
+Strict comparisons do not use approximate arithmetic.
+One exact feasibility construction replaces all strict rows $a_r^Ty<b_r$ by
+$a_r^Ty\le b_r-\delta$, adds $0\le\delta\le1$, and maximizes $\delta$.
+The original finite system is feasible exactly when the weak rows are feasible and this bounded linear program has a positive optimum.
+
+For a feasible strict system, its finite set of positive gaps has a minimum that gives such a $\delta$.
+The converse follows directly from $\delta>0$.
+If there are no strict rows, weak feasibility suffices.
+This is one reference argument.
+It does not specify the Lean backend reduction.
+
+\section{Checked examples and source provenance}\label{app:examples}
+\input{generated/example-status.tex}
+The generated manifest records source hashes and marker ranges.
+The paper does not change the imported blocks.
+
+\subsection{Quantified bounds and generic metric chains}
+The quantified example specializes the local hypothesis at two observed arguments.
+It normalizes ball membership, proves the radius premises with restricted scalar arithmetic, and checks the cancellation identity.
+It does not search arbitrary values of the quantified variable.
+\input{generated/quantified.tex}
+
+The metric example uses no addition or scalar multiplication on its points.
+Here $X$ is a pseudometric space.
+Symmetry reverses the second bound.
+Triangle constraints and scalar arithmetic complete the chain.
+\input{generated/metric.tex}
+
+The specialization limits are 12 templates, 12 binders per template, 32 observed vectors, 32 new bounds, and 128 candidate attempts.
+Each attempt checks at most eight additive patterns of depth at most eight.
+Premise construction has depth four.
+Norm alias filtering has depth eight and a 256-node budget.
+When inspection is incomplete, the tactic excludes that expression.
+
+The fixed rewrite set has rules for distances, balls, closed balls, the four bounded interval types, and membership in sets defined by predicates.
+This is not an unrestricted simplifier or quantified decision procedure.
+The metric path collects at most eight points in total.
+These limits give partial coverage, without changing Theorem~\ref{thm:complete}.
+
+\subsection{Strict and reverse-triangle reasoning}
+The reverse-triangle estimate compares a difference of norms with the norm of a vector difference.
+The finite constraints supply a triangle bound.
+Scalar arithmetic rearranges it.
+The comparison grammar also includes strict scalar relations.
+\input{generated/reverse.tex}
+
+\subsection{A checked boundary and the additive extension}
+Products of norms are not in the declared scalar grammar.
+This statement is true.
+In the negative tactic test, \NA{} must reject that unsupported goal.
+A multiplication lemma completes the Lean proof.
+This records an unsupported input.
+It is not a counterexample to the theorem or a timeout.
+\input{generated/boundary.tex}
+
+For $n\in\mathbb N$, the additive groups give $\norm{n\mathbin{\bullet}x}\le n\norm{x}$.
+This does not give real homogeneity.
+For example, the discrete norm on $\mathbb Z$ is zero at zero and one at all nonzero inputs.
+At $x=1$, $\norm{x}$ and $\norm{2x}$ are one.
+Thus $\norm{2x}\le1$ does not imply $\norm{x}\le1/2$ in that class.
+Do not use the real-space certificate in this class.
+
+\subsection{The selected composed patch example}
+\begingroup\raggedright
+\input{generated/census-example-provenance.tex}
+\par\endgroup
+The source replacement changes one estimate inside the Strong Law argument.
+The preparation uses the existing finite sum bound, norm homogeneity, and the sum triangle inequality.
+It distributes subtraction and scalar multiplication before the tactic combines the bounds.
+It preserves the full theorem statement and its assumptions.
+The tactic does not prove the convergence hypotheses or the Strong Law.
+\paragraph{Original source block.}
+\VerbatimInput{generated/census-example-original.lean}
+
+\subsection{The archived pilot generalization}
+The archived example is the candidate \texttt{fderiv-telescope} at the pinned mathlib revision.
+The build extracts the original and replacement blocks from the archived manifest and pinned source.
+The generation code validates their source hashes.
+This checked example abstracts the shared bound and renames the four operator values.
+It generalizes the proof shape.
+It does not give the literal mathlib source.
+
+Here $E$ is an additive group.
+\input{generated/mathlib.tex}
+\paragraph{Original source block.}
+\VerbatimInput{generated/mathlib-original.lean}
+\paragraph{Replacement source block.}
+\VerbatimInput{generated/mathlib-replacement.lean}
+
+\section{Evaluation protocol and artifact status}\label{app:evaluation}
+\paragraph{Implementation paths.}
+The frontend rewrites distances, collects norm arguments, and encodes recognized vector equalities as checked zero-norm facts.
+It tries structural bounds and short decompositions before the finite reference family.
+The reference search records the status of its independent-support enumeration: complete or resource-exhausted.
+Its default limits are 10,000 support systems and 10,000 retained results.
+The support-attempt count excludes the initial full-system rank test.
+
+The public interface also keeps a sound upper-bound extension with an opaque scalar right side.
+This path handles some pilot bounds that the affine scalar grammar excludes.
+It has no stated completeness guarantee.
+The additive-group path also has partial coverage.
+Added signed integer proposals can succeed where rational averaging is unavailable.
+Each path that succeeds constructs a Lean-validated certificate.
+
+Certificate identities must complete elaboration and synthesis before acceptance.
+Definitional vector aliases use checked normalization.
+Elaboration recovery does not replace a failed proof by \texttt{sorry}.
+The scalar backend uses exact proof construction at matching transparency.
+
+\paragraph{Composed evidence.}
+The historical full census gives the pinned source universe and its retained coverage gaps.
+The targeted follow-up gives a separate source subset, protocol, outcome ledger, and isolated proposals.
+The patch contains 50 census-generated replacements and 37 replacements composed outside the census.
+
+The selector combines census-generated replacements with replacements composed outside the census.
+Replacements composed outside the census can supply explicit facts or add preparation.
+Artificial intelligence (AI) coding agents assisted their development.
+The accounting counts all added preparation.
+
+The selector recomputes disjoint source edits and checks original declaration body observations.
+Final combined compilation, implementation snapshots, the frozen patch, and the new timing run form a separate chain.
+The historical full census tactic implementation does not supply a speed result for this chain.
+
+\paragraph{Initial prototype pilot.}
+The prototype pilot pins Lean \texttt{4.36.0-rc1} and this mathlib revision:
+\begin{quote}\small\texttt{2f3c7c8a8949b04a32f9303f59163acffb766996}\end{quote}
+The pilot selected its five verified replacements from fourteen cataloged candidates.
+The collection includes exclusions and no-saving outcomes.
+It gives documented lexical discovery.
+It does not give a full semantic census.
+The archived timing report and paired samples are the sources for each pilot table in this paper.
+
+Proof code decreases from \PilotBefore{} to \PilotAfter{} lines across \PilotReplacements{} replacements in \PilotFiles{} files.
+The pilot removes \PilotProofSaved{} proof lines, or \PilotNetSaved{} after imports.
+The affected files compile \PilotSlowdown{}\% slower in that exploratory experiment.
+The archived result does not give the final patch timings.
+\input{generated/pilot-table.tex}
+\input{generated/pilot-detail-table.tex}
+
+\paragraph{Line accounting.}
+Count nonblank, noncomment lines of proof code in the formatted source.
+Count preparation in each replacement.
+Count shared helper declarations one time.
+
+The report counts imports and includes them in the net figure.
+Count only the deterministic nonoverlapping combined patch.
+The report also counts the tactic implementation and census infrastructure.
+This count does not show a net reduction in the library's total source size.
+
+\paragraph{Semantic census.}
+The census uses the sorted tracked Lean sources in \texttt{Mathlib/} at the pinned revision.
+The census must include tactic observations and expected-type information from term proofs.
+The extractor must wait for finalized elaboration data.
+It records original source spans, declarations, normalized goals, local facts, eligibility, attempts, and per-file completion.
+Assign explicit classes to macro-generated, overlapping, abandoned, or uneditable observations.
+
+A checked replay proposal is not a verified source replacement.
+The full source patch must compile with all selected replacements together.
+The census denominator must include extraction failures and exhausted files.
+
+The full census uses four workers.
+The targeted follow-up uses three.
+Each worker uses one Lean thread and a 600-second file limit.
+Each worker has a 4096 MB memory limit.
+
+A resource-failure retry uses one worker, an 1800-second file limit, and 8192 MB.
+The per-goal limits are 200000 heartbeats and 2000 milliseconds.
+The scan makes no added preparation and does not try original single-line proofs.
+
+An eligible observation must have an editable source span and a closed local context.
+Unlocated or unresolved nodes are coverage gaps even in files with complete extraction.
+Their counters are not counts of distinct unsupported goals.
+
+\input{generated/census-detail.tex}
+
+\paragraph{Historical source format correction.}
+An earlier patch had a proof line longer than mathlib's source-style limit.
+The format correction removed that file's net line saving.
+The historical 41-line patch then passed new source verification, calibration, and confirmatory timing.
+The historical timing runs do not give an estimate for the expanded patch.
+
+\paragraph{Confirmatory timing.}
+We used paired passes over exactly the same affected files.
+Dependencies were built before measurement.
+Each pass emitted fresh compiler outputs.
+The run alternated the two variant sequences.
+For original totals $O_1,\ldots,O_N$ and replacement totals $R_1,\ldots,R_N$, the primary ratio is
+\[
+ S=\frac{\frac1N\sum_tO_t}{\frac1N\sum_tR_t}.
+\]
+
+We grouped the $N$ paired passes in sequence into $K=N/b$ blocks of the calibrated even length $b$.
+The blocks have equal length and do not overlap.
+Each block includes the two variants and all affected files.
+For each replicate, the bootstrap selects $K$ full blocks with replacement.
+It keeps all observations of each selected block together.
+The even block length gives equal counts of the two variant sequences.
+
+The sequences are original then replacement, and replacement then original.
+There are $K$ sampling units.
+
+The method uses the bias-corrected and accelerated (BCa) probability transformation \citep{efron1987}.
+For acceleration, the jackknife removes one full block at a time \citep{diciccioefron1996}.
+The implementation gives half weight to bias-correction ties.
+It uses linear interpolation for empirical quantiles.
+
+A bootstrap method has model assumptions \citep{fieldwelsh2007}.
+The interval uses a model with independent, representative blocks for the recorded timing conditions.
+The calibration uses pilot diagnostics to select the block length.
+These diagnostics do not prove the assumptions.
+
+Timing conditions can change over time.
+The interval is for runs of this fixed workload on the recorded machine.
+It does not give a result for other hardware or mathlib revisions.
+The paper gives no coverage theorem for arbitrary timing dependence.
+
+We fixed the sample count, block length, seed, bootstrap count, and stopping rule before the confirmatory run.
+The success criterion was a full paired 95\% interval for $S$ greater than one.
+\input{generated/calibration-status.tex}
+\FloatBarrier
+
+The analysis kept slower files, failed attempts, and measured passes.
+Timeouts or incomplete variants prevent a complete-compilation claim for those variants.
+The table separates setup processes from unmeasured dependency and native builds.
+Search-based compilation is the primary measurement.
+The study does not give timing results for explicit certificate replay.
+\input{generated/confirmatory-status.tex}
+\FloatBarrier
+
+The variants use native plugin configurations from their recorded headers.
+The replacement imports can load Mathlib and tactic native libraries for unchanged tactics.
+The ratio includes these import configurations.
+It does not prove an algorithmic improvement.
+A separate algorithm comparison must use the same runtime and imports.
+
+The study did not measure a full build without dependency or native-library artifacts.
+The numerical runtime was Python 3.15.0.
+The recorded runtime and numerical rules define the exact bootstrap hashes.
+
+\paragraph{Recorded hardware.}
+The hardware profile records an Apple M4 Max MacBook Pro with 36 GiB of memory.
+The logical processor count is 14.
+The recorded operating system is macOS 26.7.1.
+
+Snapshots before and after the study show the source label \texttt{AC Power}.
+They show low-power mode off and sleep disabled.
+The battery snapshots show 80\% before the study and 41\% after it.
+The later snapshot also shows battery discharging.
+
+Queries for thermal status failed.
+These snapshots do not show continuous power or thermal stability.
+The study did not control background activity.
+
+\section{Language, reproducibility, and research scope}
+The prose uses a documented review based on ASD-STE100 \citep{ste100}.
+Mathematical terms, formal notation, Lean identifiers, source quotations, and bibliographic titles have declared treatment.
+The audit lists technical terminology, exceptions, automated checks, and the limits of those checks.
+This is not an ASD certification.
+The style uses a short mathematical-reasoning workshop format.
+There is no submission or acceptance claim.
+
+The source package includes the unchanged official NeurIPS 2026 style, a bibliography, generation code, and a reproducible build command.
+It imports examples from checked Lean files and tables from archived JSON data.
+The build rejects stale generated examples, missing glyphs, unresolved references, and a main body longer than four pages.
+The build renders the PDF for visual review.
+A rebuild can give a different PDF byte sequence on different TeX installations.

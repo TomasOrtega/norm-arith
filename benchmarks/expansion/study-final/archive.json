@@ -1,0 +1,69 @@
+{
+  "compact_transport": {
+    "archive_bytes": 138084824,
+    "archive_sha256": "c2aabdaa11f0678fadb32a8b8dae63cb764c3ed1a3e5d739927b60cbd134eca5",
+    "bundle_sha256": "6908e00755a24a3447f68ac222628756a316f5a4f3ea1825cba0d1b2c01d7875",
+    "format": "split_gzip_tar",
+    "part_bytes": 33554432,
+    "parts": [
+      {
+        "bytes": 33554432,
+        "file": "evidence.part-00000",
+        "sha256": "d53dc8abe1335ef0ed3e96ae9f3f3b262171527a2d3ec6d7f8c47ac36ead5681"
+      },
+      {
+        "bytes": 33554432,
+        "file": "evidence.part-00001",
+        "sha256": "186f80e984ee961aaac4232dfa678ad539aa688e698a29caec0fae044a98f298"
+      },
+      {
+        "bytes": 33554432,
+        "file": "evidence.part-00002",
+        "sha256": "ea83c203852819005f50d44c50bd51be27913dd6c9cb2eede818734d9d12d628"
+      },
+      {
+        "bytes": 33554432,
+        "file": "evidence.part-00003",
+        "sha256": "eb0c526b91654e0bfd0afdd807d572aa3593556f313c4e6951a1bc42da20c7be"
+      },
+      {
+        "bytes": 3867096,
+        "file": "evidence.part-00004",
+        "sha256": "9538422acd1ac542fcc716ebefa80e2ca271c91264bb17d856a9a9d4521df356"
+      }
+    ],
+    "receipt": "transport/transport.json",
+    "schema_version": 1,
+    "sha256": "87a6604f1637e33ab4b32159ae282e26601164655a816aabf4487f3e16dc88ec",
+    "uncompressed_bytes": 1012266717
+  },
+  "created_at_utc": "2026-10-21T19:56:43.732886+00:00",
+  "helper_sha256": "e05fbe07a43e485a81834c0d4fae1f709fa8a7814615b6a79677c8969f9e4079",
+  "independent_statistics_sha256": "348735896280396b276e9e4540c1fcdcff79cb9b7d2e041ce4c22c7218395bc2",
+  "portable_statistics_roundtrip": {
+    "all_payload_files_checked_against_inventory": true,
+    "bundle_sha256": "6908e00755a24a3447f68ac222628756a316f5a4f3ea1825cba0d1b2c01d7875",
+    "created_at_utc": "2026-10-21T19:52:08.394895+00:00",
+    "original_project_open_access_forbidden_by_python_audit_hook": true,
+    "python": "3.15.0 (main, Oct  9 2026, 11:16:41) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "recomputed_statistics_sha256": "348735896280396b276e9e4540c1fcdcff79cb9b7d2e041ce4c22c7218395bc2",
+    "restored_tree": "/private/tmp/norm-arith-study-roundtrip-gxw_k6_v/restored",
+    "schema_version": 1,
+    "status": "restored_analysis_matches_exactly",
+    "transport_receipt_sha256": "87a6604f1637e33ab4b32159ae282e26601164655a816aabf4487f3e16dc88ec"
+  },
+  "raw_archive": {
+    "all_members_reopened_and_rehashed": true,
+    "bytes": 3052046826,
+    "files": 74429,
+    "index_sha256": "2e31089d0437b2bcf19bc973012b35431001fa91156468641766a7652e9b16dd",
+    "local_path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021-archive/raw-study.tar.gz",
+    "original_files_unchanged_during_archive": true,
+    "sha256": "cfbd8f4eb22038e4d246e1f5ab57b0da8b25334ce5c2373e669147fdde5673f9",
+    "uncompressed_file_bytes": 18278438164
+  },
+  "schema_version": 1,
+  "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/expanded-study-20261021",
+  "status": "validated_expanded_study_archive",
+  "timed_output_byte_audit_sha256": "6e9d7da91631be365c50a69e808bb8889b3429177483ac4b14f297509e29ac47"
+}

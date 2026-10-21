@@ -10,3 +10,8 @@ weaker guarantees. Real homogeneity and rational averaging are not valid rules
 for arbitrary normed groups, so one completeness claim cannot silently cover
 both settings. [ADR-0007](0007-paper-completeness-and-checked-soundness.md)
 specifies the paper's completeness obligation and treatment of vector equalities.
+
+Preserve the prototype's sound upper-bound behavior when the scalar right side
+is opaque to the real core, such as a norm multiplied by a variable scalar.
+Report such cases as an opaque upper-bound extension rather than extending the
+core's mathematical completeness claim to products of norms.

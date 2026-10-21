@@ -1,0 +1,78 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 4,
+    "no_line_saving_untried": 29
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "failed": 4,
+      "no_line_saving_untried": 29
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 18,
+    "eligible": 33,
+    "errors": 0,
+    "normGoals": 112,
+    "outsideBody": 0,
+    "proofNodes": 415,
+    "synthetic": 0,
+    "tacticNodes": 368,
+    "termNodes": 3942,
+    "unlocatedNodes": 1049,
+    "unresolved": 16
+  },
+  "directory": "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01",
+  "eligible_observations": 33,
+  "evidence_sha256": {
+    "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/events.jsonl": "bedd47c381cbce6252e31adddb59925695c892623bc0746f48eef281a0269e68",
+    "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/proposals.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/request.json": "210232f3e41b5dfecf2341cdceb4fdcfaac1e4035e9212a203af2f7c26c24678",
+    "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.Analysis.LocallyConvex.Polar.json.gz": "ba0b8b28f941bf023ccc7daaa26b030eef885ffae6d835f34490aaf4761a4c43",
+    "setups/Mathlib.Analysis.LocallyConvex.Polar.metadata.json": "8625319aa0b2b0ca97d0e715a1e4751c925078c3a7d5490d219ceffbb8aae2ad",
+    "setups/batch-d764b299a0c43cfd.metadata.json": "b9e203a5b4f556c58598401331bcce841af524bd1b6089f69c0655ad156b74e7"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 4.0992308749991935,
+    "peak_rss_bytes": 3038986240,
+    "returncode": 0,
+    "system_seconds": 1.363726,
+    "timed_out": false,
+    "user_seconds": 2.571859
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.Analysis.LocallyConvex.Polar",
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 33
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 47,
+    "outside_fragment": 62,
+    "upper_bound_extension": 3
+  },
+  "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+  "proposal_file": "files/Mathlib.Analysis.LocallyConvex.Polar/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-d764b299a0c43cfd.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "8ba67848ba0e7aaf81e4b413e0358680ecbfffe6c1037d86a55fc0380ff87bcc",
+    "timed_out": false
+  },
+  "setup_sha256": "8ba67848ba0e7aaf81e4b413e0358680ecbfffe6c1037d86a55fc0380ff87bcc",
+  "source_sha256": "c3256080e8f156ccbd984e5fc41f5f046a979dcec1f5e6e8c8f5992948e16aa2",
+  "status": "complete",
+  "successful_proposals": 0
+}

@@ -1,0 +1,84 @@
+{
+  "attempt": 1,
+  "attempt_status_counts": {
+    "failed": 11,
+    "no_line_saving_untried": 52,
+    "success": 1
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "core": {
+      "failed": 11,
+      "no_line_saving_untried": 43,
+      "success": 1
+    },
+    "upper_bound_extension": {
+      "no_line_saving_untried": 9
+    }
+  },
+  "complete": true,
+  "counts": {
+    "duplicate": 83,
+    "eligible": 64,
+    "errors": 0,
+    "normGoals": 505,
+    "outsideBody": 0,
+    "proofNodes": 3158,
+    "synthetic": 0,
+    "tacticNodes": 2866,
+    "termNodes": 12644,
+    "unlocatedNodes": 5720,
+    "unresolved": 11
+  },
+  "directory": "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01",
+  "eligible_observations": 64,
+  "evidence_sha256": {
+    "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/events.jsonl": "57233bace33d28e1cb939164fc1250c7020628a715a2b1f3f1b0f5d102a56394",
+    "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/proposals.jsonl": "80ee61f221007e3056409f60ed9af8e5087854799728e5edb9be9e20714d0807",
+    "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/request.json": "05a60625173e9292080b5ada3b8da068c37cf6e3bd1c7d37740a5500fa4eee19",
+    "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setups/Mathlib.MeasureTheory.Integral.DominatedConvergence.json.gz": "6bad545fc7cf6d44d7cabe87e86311ff79e37764d58e35271ab5a587aa5eb731",
+    "setups/Mathlib.MeasureTheory.Integral.DominatedConvergence.metadata.json": "4dbfa9a4c0b8d7912979f6fa14ea0d14f403913965ff6461a3d4f268c242646a",
+    "setups/batch-1c87224a529556f9.metadata.json": "011138f667d3af891f814e79755d06a6ee623e64d3d149b05014d5092c548daf"
+  },
+  "extraction": {
+    "command": [
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/bin/norm_arith_census",
+      "/Users/to1717/Documents/GitHub/norm-arith/.lake/census-full-v3/files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/request.json"
+    ],
+    "elapsed_seconds": 7.849412208015565,
+    "peak_rss_bytes": 3881238528,
+    "returncode": 0,
+    "system_seconds": 1.701484,
+    "timed_out": false,
+    "user_seconds": 5.964976
+  },
+  "limits": {
+    "file_timeout_seconds": 600,
+    "memory_mb": 4096
+  },
+  "module": "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+  "original_eligible_fragment_counts": {
+    "core": 55,
+    "upper_bound_extension": 9
+  },
+  "original_observation_fragment_counts": {
+    "core": 99,
+    "outside_fragment": 388,
+    "upper_bound_extension": 18
+  },
+  "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+  "proposal_file": "files/Mathlib.MeasureTheory.Integral.DominatedConvergence/attempt-01/proposals.jsonl",
+  "resource_tier": 1,
+  "setup": {
+    "batch": "setups/batch-1c87224a529556f9.metadata.json",
+    "kind": "batched_lake_query",
+    "returncode": 0,
+    "sha256": "bacc97d31d59d6a28bd3c73b4dcf37684028acd4680d81302060b81ccbf40e0e",
+    "timed_out": false
+  },
+  "setup_sha256": "bacc97d31d59d6a28bd3c73b4dcf37684028acd4680d81302060b81ccbf40e0e",
+  "source_sha256": "56394aacfe591230d26a1d93641f2a1d3e3a3eae4fcfe772775533a1da295833",
+  "status": "complete",
+  "successful_proposals": 1
+}

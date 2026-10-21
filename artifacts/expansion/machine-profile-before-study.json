@@ -1,0 +1,120 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "sw_vers"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.7.1\nBuildVersion:\t\t25G241\n"
+    },
+    {
+      "argv": [
+        "sysctl",
+        "-n",
+        "hw.model"
+      ],
+      "returncode": 1,
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "returncode": 1,
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "returncode": 1,
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "sysctl",
+        "-n",
+        "hw.logicalcpu"
+      ],
+      "returncode": 1,
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23265379)\t80%; AC attached; not charging present: true\n"
+    },
+    {
+      "argv": [
+        "pmset",
+        "-g",
+        "custom"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "AC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         10\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10\n"
+    }
+  ],
+  "created_at_utc": "2026-10-21T14:05:02.987048+00:00",
+  "hardware_read_retry": {
+    "commands": [
+      {
+        "argv": [
+          "sysctl",
+          "-n",
+          "hw.model"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "Mac16,6\n"
+      },
+      {
+        "argv": [
+          "sysctl",
+          "-n",
+          "machdep.cpu.brand_string"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "Apple M4 Max\n"
+      },
+      {
+        "argv": [
+          "sysctl",
+          "-n",
+          "hw.memsize"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "38654705664\n"
+      },
+      {
+        "argv": [
+          "sysctl",
+          "-n",
+          "hw.logicalcpu"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": "14\n"
+      }
+    ],
+    "created_at_utc": "2026-10-21T14:05:18.507232+00:00"
+  },
+  "schema_version": 1,
+  "scope": "Machine and power snapshot before timing; ordinary background activity remains uncontrolled."
+}

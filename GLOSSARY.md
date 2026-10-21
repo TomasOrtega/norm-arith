@@ -18,8 +18,8 @@ a pinned mathlib revision, with extraction and tactic failures recorded.
 _Avoid_: Every conceivable norm-arithmetic replacement
 
 **Eligible proof goal**:
-A source-backed proof obligation within the paper's declared mathematical
-fragment and preparation rules.
+A source-backed proof obligation within the declared real core or a separately
+reported sound extension, under the census preparation rules.
 
 **Real norm-arithmetic core**:
 The paper's real-vector-space fragment: rational vector combinations and linear
@@ -28,6 +28,10 @@ scalar comparisons involving norms, with distances expressed as norms of differe
 **Additive-group extension**:
 Sound norm arithmetic in seminormed additive commutative groups, with guarantees
 stated separately from the real norm-arithmetic core.
+
+**Opaque upper-bound extension**:
+Sound automation for a norm upper bound whose scalar right side is outside the
+real core's recognized affine grammar. It has no separate completeness claim.
 
 **Norm certificate**:
 Finite mathematical evidence that vector relations and valid norm inequalities

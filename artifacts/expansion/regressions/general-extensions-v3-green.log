@@ -1,0 +1,16 @@
+✔ [23528/27022] Built NormArith.Tactic (2.9s)
+✔ [27235/27262] Built NormArith (1.5s)
+✔ [27240/27262] Built NormArith.Tactic:c.o (2.2s)
+✔ [27241/27262] Built NormArith:shared (56ms)
+✔ [27242/27262] Built NormArithTest.Search (1.8s)
+✔ [27244/27262] Built NormArithTest.Certificate (1.9s)
+✔ [27246/27262] Built NormArithTest.Paper (2.3s)
+✔ [27248/27262] Built NormArithTest.Metric (2.4s)
+✔ [27250/27262] Built NormArithTest.Expansion (2.7s)
+ℹ [27252/27262] Built NormArithTest.Tactic (2.9s)
+info: NormArithTest/Tactic.lean:61:2: norm_arith checked decomposition coefficients: [1/2, 1/2]
+✔ [27254/27262] Built NormArithTest.Core (3.2s)
+✔ [27256/27262] Built NormArithTest (634ms)
+✔ [27259/27262] Built NormArith.Census (5.5s)
+✔ [27262/27262] Built norm_arith_census:exe (1.0s)
+Build completed successfully (27262 jobs).

@@ -1,0 +1,1 @@
+NormArithTest/Metric.lean:36:16: error: norm_arith: no certificate for the recognized scalar and norm constraints; the additive-group extension is incomplete

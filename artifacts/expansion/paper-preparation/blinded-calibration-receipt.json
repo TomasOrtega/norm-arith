@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-21T14:36:32.604741+00:00",
+  "status": "passed",
+  "paper_tests": 58,
+  "new_schema": "speed-level-blinded24-pairpilot;40/4or80/8confirm",
+  "unblinded_diagnostics_required": false,
+  "offline_export_and_generation_after_live_workspace_deletion": "passed",
+  "source_sha256": {
+    "paper/generate.py": "b32e73aab881cb0918627d5049804bc153a1521b4f0b16d150f9b4ea3f8ccd5f",
+    "paper/evidence.py": "6bde40e7a7d3fc214e0f02f815d762eacde3b2ff3c87126d8c86c8fd125d9bad",
+    "paper/test_calibration_metadata.py": "35822f08b91931851fa1473d02bf5151d67cc1478392c37d0900805e6d720d58",
+    "paper/test_composed_evidence.py": "b34e2449372781a8aa6acae87374a59d76c21dafcd4429da0e241fef69f18684"
+  },
+  "logs": {
+    "blinded-calibration-red.log": "5cda10199a83cd27ec10b41afc5136377f3aa173db84601fd11bbac87e79fafa",
+    "blinded-calibration-green.log": "60e643004b02b39e907b6a44f2687a24128dfed1d3d0b983617f55810e476b1f"
+  },
+  "limits": "Synthetic fixture tests; not empirical timings or a final language/PDF review."
+}

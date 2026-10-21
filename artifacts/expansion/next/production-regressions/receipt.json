@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-10-21T13:41:43.232157+00:00",
+  "status": "regressions_red_then_warning_free_full_build_green",
+  "records": {
+    "alias-red.log": {
+      "source": ".lake/expansion-next-alias/expansion-red.log",
+      "sha256": "f44c810e1c147c7640ac1c920ed7e791b92a706763990cefb923441f230cea1e"
+    },
+    "proposition-red.log": {
+      "source": ".lake/expansion-next-alias/proposition-tests-red.log",
+      "sha256": "c697994555a108e6d8092b6aff402f052e37b891afbb0827d3d9a32390d47b24"
+    },
+    "green-build.log": {
+      "source": "/private/tmp/norm-arith-next-production-green.log",
+      "sha256": "8ee1a1a6920c4dd6efc004455275f95d1b8400199971dc8933717eadb47f9853"
+    },
+    "Tactic.lean": {
+      "source": "NormArith/Tactic.lean",
+      "sha256": "53c79f56f2c5c66fc2a9af885e37e715f464eeb9557450d19a7274bd88d1de77"
+    },
+    "Expansion.lean": {
+      "source": "NormArithTest/Expansion.lean",
+      "sha256": "fc30e227186e9fc29c39e3e79ea70cc32de73a5590c47645820e3af69b43f7db"
+    },
+    "Paper.lean": {
+      "source": "NormArithTest/Paper.lean",
+      "sha256": "b9d395d00eab4b34b906726ae30211438aa83b763555e29937f95af02b7293b5"
+    }
+  },
+  "command": "lake build --wfail NormArith NormArithTest norm_arith_census",
+  "scope": "Immediate checked identity synthesis, definitional aliases, set membership bounds; explicit-fact exclusion and six paper examples."
+}

@@ -1,5 +1,9 @@
 # Implementation plan
 
+This is the completed prototype plan. The current research implementation follows
+[PAPER-PLAN.md](PAPER-PLAN.md), which requires a broader tactic, a semantic census,
+and a verified compilation speedup over existing mathlib proofs.
+
 Build a useful norm-arithmetic tactic and a reproducible mathlib replacement
 patch. Proof simplification is the primary goal; compilation speed is measured
 and reported even when it regresses.

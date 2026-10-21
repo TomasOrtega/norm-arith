@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "nonmeasurement_preflight_passed_waiting_for_final_v4_selection_and_QUIET_START",
+  "test_count_benchmark_and_verifier": 60,
+  "test_count_blinded_review": 1,
+  "changes": [
+    "compiler process-group cleanup on interruption",
+    "coordinator launch record and interrupted result",
+    "fresh per-measurement artifact hashes",
+    "executable bytes and Python version bound across pilot and confirmation",
+    "protocol hash covers fingerprinting and runtime helper functions",
+    "zero-exit failed validation excluded from statistical totals",
+    "scale-invariant speed-level-blinded calibration review",
+    "independent count equality guard before creating a frozen manifest"
+  ],
+  "source_sha256": {
+    "artifacts/expansion/analysis-checker-receipt.json": "628e920f1349c0aa61439ef8309b1b143565e12e2c598863021cb36c1dbe51d2",
+    "artifacts/expansion/calibration_review.py": "f0af353f37a997aed661c30664cab3b5084dfcc201d3c0b0fbadcc5bb40ca191",
+    "artifacts/expansion/expanded-study-protocol.md": "b4c4377f16163f4825952df1cee34d06e66e05a6d0ab36dbbf2e97798487e200",
+    "artifacts/expansion/implementation-costs-v4.json": "b0ba4ec2754543e8df3fce1594f7d8f69c2f8afe3937c6c91970033f6f75ed7b",
+    "artifacts/expansion/test_calibration_review.py": "2b6d0776d51582697e9fba811d30657e6a6514d4b8622d001dc712460bac4e83",
+    "artifacts/expansion/test_expanded_statistics.py": "3b23fb1a9c5536f8e4ac2f99d66991653f26e1ecdb44fca996d5a4756c698b6d",
+    "artifacts/expansion/verify_expanded_statistics.py": "45814ef4576573ec38078f6b3ade4ab985ebb85394d56c391341137be9096edb",
+    "scripts/README.md": "784a0d902ac0831f7d8104671e3c602ef18d5e3ff3785ad735009a30dbddf90c",
+    "scripts/benchmark.py": "8c642627de7ed43484bb74c8880fa2623d54197380ef55aa83c205d9e3f1cff9",
+    "scripts/test_benchmark.py": "dd298c9b3e3561ac4afcca43d1e1dcda086795e4a3b687bcac73d07d70f18461",
+    "scripts/test_verify_selection.py": "49dfd345c7ce459dbb2ac0436806a08d78195797cc22558cc020b7e7ad4556a3",
+    "artifacts/expansion/freeze_study.py": "7727799089496a0572ebf0a9c3198ff1ea264010d8c86bbcee7322bb951af2d9",
+    "artifacts/expansion/test_freeze_study.py": "744d36c7c17b06aff15abc42495e18d3df9dfc729173faeec5f216dec5f5a938",
+    "artifacts/expansion/machine-profile-before-study.json": "d81cfbca07e7743c351252b701d5c025fb62f676247188e0c55ecbe32b5cc31d"
+  },
+  "evidence_sha256": {
+    "tests-green.log": "a1a447fda47546b63a2529d921e2252cf59dd2ef2dff4e654f33ee6f670ad594",
+    "validation-regression-red.log": "9b0260b33477bee7144bcd1e91441defe3a16cd6ef7a9ef4e08855e7a66e5be1",
+    "independent-statistics-tests.log": "0137090168464a0060cf842e6c6ae41b8f1f134231f7fc3616ded981d882b890",
+    "protocol-regression-red.log": "97dea0394f369d266e40a783027ca30ace357cce4bb534f7c44d7d2ea66b8f8d",
+    "blinded-review-tests.log": "c346f1228fe88f4ab3cb336ffa610dc3a34ec7c7bb7d05df7a1c222f2d928881",
+    "regressions-red.log": "d9ff3bfe3e01da28e4971ecc45dff0cac139e333c392fdd21ad73704788b4c6f",
+    "freeze-count-red.log": "07257bdda85215dc9af5e4b49bd9869d2b8c54bce313e8b51769bf34b472fc9c",
+    "freeze-count-green.log": "774d1086a37de6d8b9e2865f12621648cb23ee1c9a1e8f5919ee23e907dcf70c",
+    "nonmeasurement-checks-verified08.json": "5b95163550e1761657c49c6e108b72ca0fad8f8c6cdaaeff029ef56fe22c3aeb",
+    "environment-preflight.json": "9d17d0645075a033dcad1dfaf3f545b9111f0922bc2db97ed68205302346931f"
+  },
+  "planned_sampling": {
+    "pilot_pairs": 24,
+    "warmup_pairs_each_run": 1,
+    "block4_confirmation_pairs": 40,
+    "block8_confirmation_pairs": 80,
+    "bootstrap_resamples": 10000,
+    "seed": 20261020,
+    "gate": "valid calibrated 95% paired block BCa lower endpoint > 1"
+  },
+  "capacity_reference_not_speed_estimate": {
+    "affected_files": 40,
+    "replacement_single_verification_seconds": 101.48852125104167,
+    "new_file_allowance_seconds": 68.0179800009937,
+    "rough_original_pass_seconds": 102.84105201571074,
+    "rough_pair_seconds": 204.32957326675242,
+    "default_total_pairs": 66,
+    "default_compiler_minutes": 224.76253059342764,
+    "longer_total_pairs": 106,
+    "longer_compiler_minutes": 360.98224610459596,
+    "reserve_hours_default": 5,
+    "reserve_hours_longer": 7,
+    "reserve_disk_gib_default": 20,
+    "reserve_disk_gib_longer": 30
+  },
+  "final_manifest": null,
+  "timed_pilot_started": false,
+  "source_freeze_authorized": false,
+  "test_count_independent_statistics": 3,
+  "test_count_freeze_guard": 1
+}

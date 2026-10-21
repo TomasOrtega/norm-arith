@@ -1,0 +1,93 @@
+{
+  "attempt_status_counts": {
+    "augmented_elaboration_failed": 42,
+    "context_unmatched": 8,
+    "failed": 6528,
+    "goal_timeout": 3,
+    "import_cycle": 192,
+    "no_line_saving_untried": 20742,
+    "success": 140
+  },
+  "attempt_status_counts_by_original_fragment": {
+    "additive_group_extension": {
+      "augmented_elaboration_failed": 18,
+      "context_unmatched": 5,
+      "failed": 1776,
+      "import_cycle": 51,
+      "no_line_saving_untried": 7045,
+      "success": 41
+    },
+    "core": {
+      "failed": 2356,
+      "goal_timeout": 3,
+      "import_cycle": 2,
+      "no_line_saving_untried": 7918,
+      "success": 83
+    },
+    "metric_extension": {
+      "augmented_elaboration_failed": 12,
+      "failed": 815,
+      "import_cycle": 108,
+      "no_line_saving_untried": 3120,
+      "success": 10
+    },
+    "upper_bound_extension": {
+      "augmented_elaboration_failed": 12,
+      "context_unmatched": 3,
+      "failed": 1581,
+      "import_cycle": 31,
+      "no_line_saving_untried": 2659,
+      "success": 6
+    }
+  },
+  "completed_files": 875,
+  "counts": {
+    "duplicate": 19961,
+    "eligible": 27655,
+    "errors": 8,
+    "normGoals": 135698,
+    "outsideBody": 369,
+    "proofNodes": 1037444,
+    "synthetic": 0,
+    "tacticNodes": 1074357,
+    "termNodes": 5557176,
+    "unlocatedNodes": 2171664,
+    "unresolved": 12404
+  },
+  "eligible_observations": 27655,
+  "evidence_stage": "isolated_kernel_checked_proposals_not_compiled_patches",
+  "failed_files": 10,
+  "file_status_counts": {
+    "augmented_elaboration_failed": 8,
+    "complete": 875,
+    "partial_extraction": 2
+  },
+  "frozen_inputs_verified": true,
+  "full_universe_completed": false,
+  "full_universe_processed": false,
+  "original_eligible_fragment_counts": {
+    "additive_group_extension": 8936,
+    "core": 10362,
+    "metric_extension": 4065,
+    "upper_bound_extension": 4292
+  },
+  "original_observation_fragment_counts": {
+    "additive_group_extension": 12944,
+    "core": 15907,
+    "metric_extension": 6015,
+    "outside_fragment": 93939,
+    "upper_bound_extension": 6893
+  },
+  "processed_files": 885,
+  "protocol_hash": "1abf699c5f7f0b488720d32555d4af063575c1b34721d0722dbe70a86fef82ff",
+  "resource_tier_counts": {
+    "1": 858,
+    "2": 27
+  },
+  "schema_version": 1,
+  "scope": "calibration",
+  "selected_files": 885,
+  "successful_proposals": 140,
+  "universe_files": 8637,
+  "unprocessed_files": 0
+}
