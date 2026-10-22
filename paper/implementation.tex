@@ -1,0 +1,56 @@
+\clearpage
+\section{Implementation excerpts and guide}
+\label{app:implementation}
+
+The three excerpts show the certificate lemmas, reference search, and proof construction used by the measured tactic.
+The build imports their text from the archived source and checks its hashes.
+Line numbers are from the original files.
+The \href{https://github.com/TomasOrtega/norm-arith/tree/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2}{full source snapshot} includes all five project modules and the omitted helpers.
+The source package also includes these complete files and their hash manifest, \sourcepath{generated/implementation.json}.
+
+\subsection{Small norm certificates}
+In \sourcepath{NormArith/Certificate.lean}, $E$ has a \sourcepath{SeminormedAddCommGroup E} instance.
+The excerpt adds the real normed-space structure.
+The lemma \sourcepath{bound_smul} scales a supplied bound by the absolute value of its coefficient.
+The lemma \sourcepath{bound_add} uses the triangle inequality to combine two bounds.
+Their composition proves the two-term certificate below.
+Lean checks these lemmas and each later application.
+
+\input{generated/implementation-certificate.tex}
+
+\subsection{Exact rational search}
+The function below is from \sourcepath{NormArith/Search.lean}.
+Each column records a norm argument in shared formal atom coordinates.
+The helper \sourcepath{solve} uses exact Gauss--Jordan elimination over rational numbers.
+The reference search enumerates independent supports through the column rank and checks each proposed coefficient array.
+This representation does not imply linear independence of the concrete vectors.
+
+The default limits are 10,000 tested subsets and 10,000 returned proposals per target.
+The result records completion, resource exhaustion, or invalid dimensions.
+A completed enumeration gives the proposals for the finite reduction.
+The frontend must prove their vector identities.
+This search is not a complete procedure for arbitrary additive groups.
+
+\input{generated/implementation-search.tex}
+
+\subsection{From coefficients to a checked proof}
+The function \sourcepath{addConstraint} is from \sourcepath{NormArith/Tactic.lean}.
+It constructs a vector combination and a proof of its norm bound.
+The helper \sourcepath{scaleSource} selects a lemma for the coefficient.
+Repeated applications of \sourcepath{bound_add} combine the bounds.
+Reflexivity, \sourcepath{abel!}, or \sourcepath{module} proves the vector identity.
+The lemma \sourcepath{bound_of_eq} then gives the target bound.
+
+The code checks term elaboration and simplifies coefficient arithmetic.
+The caller can then use linear arithmetic to close the goal.
+A failed attempt restores the saved state.
+If no proof closes the goal, exhaustion of the finite search reports unknown.
+The search proposes coefficients, and Lean checks the resulting proof.
+
+\input{generated/implementation-tactic.tex}
+
+The frontend tries scalar arithmetic and short decompositions before the reference search.
+Other paths normalize facts, specialize quantified bounds with fixed limits, and add metric constraints for at most eight points.
+The full source includes these paths and the public tactic syntax.
+Appendix~\ref{app:examples} gives examples and extension limits.
+The mathematical completeness theorem does not prove unrestricted completeness for the bounded program.

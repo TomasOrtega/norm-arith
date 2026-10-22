@@ -8,7 +8,7 @@ abstraction	abstraction	noun / noun component	technical-noun	The formal syntax/m
 abstracts	abstracts	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 accelerated	accelerated	technical-noun component	technical-noun	Component of the named bias-corrected and accelerated (BCa) method; not physical acceleration	1.5 category 7; 1.6; full name and BCa alias introduced together
 acceleration	acceleration	noun / noun component	technical-noun	The BCa correction parameter calculated by deleting each timing block	1.5 category 7; 1.6; experiment-specific mathematical/statistical concept
-acceptance	acceptance	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+acceptance	acceptance	noun	technical-noun / research-genre-exception	Lean certificate acceptance, project build criteria, or community/mathlib adoption; the local patch makes no adoption claim	1.5 categories 7 and 19; E5 for community or mathlib adoption
 accounting	accounting	noun / noun component	technical-noun	The named scientific method, proof process, or writing-review concept	1.5 category 7; 3.5 for process nouns
 across	across	preposition	dictionary	Relate two boundaries or different installations	Issue 9 dictionary; contextual use reviewed
 activity	activity	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
@@ -23,7 +23,7 @@ affected-file	affected-file	adjective / participial modifier / technical-noun co
 affine	affine	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 after	after	preposition/conjunction	dictionary	Relate the order or time of stated operations	Issue 9 dictionary; contextual use reviewed
 again	again	adverb	dictionary	Express addition, repetition, manner, degree, location, negation, restriction, sequence, or consequence	Issue 9 dictionary; contextual use reviewed
-agents	agents	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
+agents	agents	noun / technical-noun component	technical-noun	An AI coding system involved in software development	1.5 category 19; 1.6; restricted to the stated concept
 ai	ai	defined abbreviation	technical-noun	Artificial intelligence in the explicitly disclosed coding-agent assistance	1.5 category 19; full term and abbreviation introduced together
 algorithm	algorithm	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 algorithmic	algorithmic	modifier within a technical noun	technical-noun-component	The algorithm rather than import configuration as the subject of an efficiency comparison	1.5 categories 7 and 19; 1.6
@@ -40,6 +40,8 @@ analysis	analysis	noun / noun component	technical-noun	The specified concept in 
 and	and	conjunction	dictionary	Connect alternatives, conditions, reasons, or simultaneous events	Issue 9 dictionary; contextual use reviewed
 appendix	appendix	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 apple	apple	official-name component	name	Component of the recorded Apple M4 Max MacBook Pro model name; M is the tokenizer fragment of M4	1.5 categories 11 and 19; E4 preserves official names
+application	application	noun	technical-noun	Application of a Lean theorem or lemma to arguments to construct a proof term	1.5 category 19; 1.6 for the stated noun components
+applications	application	noun	technical-noun	Application of a Lean theorem or lemma to arguments to construct a proof term	1.5 category 19; 1.6 for the stated noun components
 applies	apply	verb	dictionary	Use a theorem or construction in the stated situation	Issue 9 dictionary; contextual use reviewed
 apply	apply	verb	dictionary	Use a theorem or construction in the stated situation	Issue 9 dictionary; contextual use reviewed
 approximate	approximate	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
@@ -49,17 +51,18 @@ are	be	verb	dictionary	State existence or a property	Issue 9 dictionary; context
 argument	argument	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 arguments	arguments	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 arithmetic	arithmetic	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
+array	array	noun	technical-noun	Indexed coefficient data used by the exact rational search	1.5 category 19; 1.6 for the stated noun components
 arthan	arthan	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 artifact	artifact	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 artifacts	artifacts	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
-artificial	artificial	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
+artificial	artificial	adjective / technical-noun component	technical-noun	Modifier within artificial intelligence; the computing field used for coding assistance	1.5 category 19; 1.6; exact computing sense
 as	as	preposition/adjective	math-grammar-exception	The precise mathematical representation, value comparison, mediation by a map, truth equivalence, or additive inverse	E1; explicit mathematical relation, not an unrestricted dictionary sense
 asd	asd	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 asd-ste	asd-ste	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 assign	assign	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 assignment	assignment	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 assignments	assignments	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
-assisted	assisted	verb / past tense	research-genre-exception	Disclose that coding agents contributed to developing replacements composed outside the census	E3; explicit assistance disclosure; not claimed as a general technical-verb permission
+assisted	assisted	verb / simple past	research-genre-exception	AI contribution to tactic implementation, source replacements, evaluation, and manuscript revision; no autonomous share is specified	E5; explicit assistance disclosure, not a general technical-verb permission
 assumptions	assumption	noun	technical-noun	Recognized logical premises or the independent, representative-block conditions of the statistical timing model	1.5 category 7; 1.6
 at	at	adverb / comparison / preposition	math-grammar-exception	The stated exact equivalence, extremum, numerical comparison, or quantification over a class	E1; mathematical relational syntax
 atom	atom	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
@@ -145,17 +148,19 @@ changing	change	noun/verb	dictionary	A difference, or cause an item to become di
 character	character	noun / computing noun component	technical-noun	The specified proof-search object, syntax component, runtime state, data record, or resource limit	1.5 category 19; 1.6; exact computing concept
 characterization	characterization	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 charge	charge	verb	technical-verb	Assign a line cost in the declared evaluation accounting	1.12 category 3(a); scientific measurement method
-check	check	noun / technical-noun component	technical-noun	The recorded successful Lean proof or whole-source verification operation	1.5 category 19; 1.6; category 7 for experiment-specific numerical concepts
+check	check	noun / technical verb	technical-noun-and-verb	A recorded Lean verification operation, or check coefficient arrays and proof terms for validity	1.5 category 19; 1.12 category 2; 3.1-3.5
 checked	checked	verb / participial modifier	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5
 checks	checks	verb / participial modifier	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5
-claim	claim	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+claim	claim	noun / verb	technical-noun / research-genre-exception	A stated scientific assertion; as a verb, assert priority or acceptance, which the paper explicitly limits	1.5 category 7 for the noun; E5 for the reporting verb
 claims	claims	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 class	class	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 classes	classes	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 classifies	classify	verb / participial modifier	technical-verb	Assign the observed goal to a declared fragment in the extractor	1.12 category 2; 3.1-3.5
+close	close	verb	technical-verb	Discharge the focused Lean goal with a checked proof	1.12 category 2; 3.1-3.5; limited to this stated operation
 closed	closed	noun / technical-noun component	technical-noun	Component of closed unit ball; includes its mathematical boundary, not a physical closure	1.5 category 7; 1.6; no unrelated general adjective meaning is inferred
+closes	close	verb	technical-verb	Discharge the focused Lean goal with a checked proof	1.12 category 2; 3.1-3.5; limited to this stated operation
 code	code	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
-coding	coding	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
+coding	coding	process noun / technical-noun component	technical-noun	Software construction performed by the identified AI agents	1.5 category 19; 1.6; exact computing sense
 coefficient	coefficient	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 coefficients	coefficients	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 collection	collection	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
@@ -185,6 +190,7 @@ completeness	completeness	noun / noun component	technical-noun	The stated mathem
 completes	complete	verb	dictionary	Finish the stated search or procedure	Issue 9 dictionary; contextual use reviewed
 completion	completion	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 composed	composed	adjective / participle / artifact qualifier	artifact-property-exception	The specified study version, source location, selection relation, evaluation stage, or outcome status	E3; no general dictionary permission inferred
+composition	composition	noun	technical-noun	Composition of the scalar and additive norm lemmas to prove the displayed two-term bound	1.5 category 7
 compression	compression	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 conclusion	conclusion	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 conclusions	conclusions	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
@@ -260,12 +266,13 @@ depth	depth	noun / computing noun component	technical-noun	The specified proof-s
 design	design	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 determines	determines	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 deterministic	deterministic	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
-development	development	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
+development	development	noun / technical-noun component	technical-noun	The process of building and revising the tactic, source replacements, and associated evaluation	1.5 category 19; 1.6; exact computing sense
 diagnostics	diagnostics	noun / noun component	technical-noun	The specified numerical checks of serial behavior in the timing pilot	1.5 category 7; 1.6; experiment-specific mathematical/statistical concept
 did	do	auxiliary verb	dictionary	Simple-past auxiliary in the stated negative record of extraction completion	Issue 9 approved do inflection; 3.1-3.5
 difference	difference	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 differences	differences	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 different	different	adjective	dictionary	Not the same	Issue 9 dictionary; contextual use reviewed
+dimensions	dimension	noun	technical-noun	Array lengths that define the rational linear system	1.5 category 7; 1.6 for the stated noun components
 direct-sum	direct-sum	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 direction	direction	noun / component of a technical noun	technical-noun-component	Coefficient direction, comparison side, proof shape, compilation rate, or dependency-cache condition	1.5 categories 7 and 19; different from physical dictionary senses
 directions	directions	noun / component of a technical noun	technical-noun-component	Coefficient direction, comparison side, proof shape, compilation rate, or dependency-cache condition	1.5 categories 7 and 19; different from physical dictionary senses
@@ -305,6 +312,7 @@ encoded	encoded	verb / participial modifier	technical-verb	Perform the stated ex
 encodes	encodes	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 encoding	encoding	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 entry	entry	noun	dictionary	An item in the candidate record	Issue 9 dictionary; contextual use reviewed
+enumerates	enumerate	verb	technical-verb	Enumerate the independent coefficient supports in the reference search	1.12 category 3(a); 3.1-3.5
 enumeration	enumeration	noun / noun component	technical-noun	The stated mathematical structure, finite family, proof property, or formal grammar	1.5 category 7; 1.6
 equal	equal	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 equalities	equalities	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
@@ -317,11 +325,13 @@ evaluation	evaluation	noun / noun component	technical-noun	The specified concept
 even	even	technical-noun component	math-property-exception	The integer block length is divisible by two; not the physical smoothness sense	1.5 category 7; 1.6 inside the technical noun; E1 for mathematical property syntax
 every	every	determiner	math-grammar-exception	Quantify over all files in the fixed affected-file set	E1; explicit finite quantification
 evidence	evidence	noun / noun component	technical-noun	The named scientific method, proof process, or writing-review concept	1.5 category 7; 3.5 for process nouns
-exact	exact	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
+exact	exact	adjective / technical-noun component	math-and-artifact-property-exception	Exact rational or mathematical relations, or byte-for-byte identity of the archived source listings	E1 for mathematical properties; E3 for the specified source-byte identity
 exactly	exactly	adverb / comparison / preposition	math-grammar-exception	The stated exact equivalence, extremum, numerical comparison, or quantification over a class	E1; mathematical relational syntax
 example	example	noun	dictionary	An instance that explains the stated claim	Issue 9 dictionary; contextual use reviewed
 examples	example	noun	dictionary	An instance that explains the stated claim	Issue 9 dictionary; contextual use reviewed
 exceptions	exceptions	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+excerpt	excerpt	noun	technical-noun	A literal selected source span from the measured Lean implementation	1.5 category 19
+excerpts	excerpt	noun	technical-noun	The three literal selected source spans from the measured Lean implementation	1.5 category 19
 exchange	exchange	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 exclude	exclude	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 excluded	exclude	verb / past participle	technical-verb	Exclude processes or statistics from the specified measurement	1.12 category 2; category 3(a) for numerical grouping and decision predicates; 3.1-3.6
@@ -395,9 +405,11 @@ full	full	adjective	dictionary	Include the entire stated collection or operation
 full-pass	full-pass	noun / technical-noun component	technical-noun	Component of a measurement that compiles all affected files for one variant	1.5 categories 7 and 19; 1.6; restricted mathematical or computing sense
 full-system	full-system	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
 fully	fully	adverb	dictionary	Express addition, repetition, manner, degree, location, negation, restriction, sequence, or consequence	Issue 9 dictionary; contextual use reviewed
+function	function	noun	technical-noun	The named Lean metaprogram function in the source listing	1.5 category 19; 1.6 for the stated noun components
 gain	gain	noun	technical-noun	The measured compilation-time reduction or isolated algorithmic efficiency change	1.5 category 7 (scientific measurement)
 gaps	gaps	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 gate	gate	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+gauss	Gauss	proper name / noun component	name	The established Gauss-Jordan exact elimination algorithm	1.5 category 9; established mathematical name
 gb	GB	unit symbol	number/name	Gigabyte unit in the recorded physical-memory specification	1.5 category 9
 generalization	generalization	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 generalizes	generalizes	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
@@ -418,12 +430,14 @@ grouped	group	verb / past participle	technical-verb	Partition the ordered paired
 groups	group	noun	dictionary	A collection of objects; the algebraic use is separately declared	Issue 9 dictionary; contextual use reviewed
 guarantee	guarantee	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 guarantees	guarantees	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+guide	guide	noun	technical-noun	This source-referenced implementation guide, a named software document	1.5 category 19; 1.6 for the stated noun components
 had	have	verb	dictionary	Simple-past possession of the recorded incomplete outcome	Issue 9 approved have inflection and meaning; 3.1-3.5
 half	half	numerical noun / modifier	number/name	The fraction one half in the numerical weight of bias-correction ties	1.5 category 9
 handles	handles	verb / participial modifier	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5
 hardware	hardware	noun / technical-noun component	technical-noun	The computer equipment used for the recorded compilation experiment	1.5 category 19; 1.6
 harrison	harrison	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 has	have	verb	dictionary	Possess the stated component, data, or property	Issue 9 dictionary; contextual use reviewed
+hash	hash	noun component	technical-noun	A SHA-256 fingerprint in the source-byte manifest	1.5 category 19
 hashes	hashes	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 have	have	verb	dictionary	Possess the stated component, data, or property	Issue 9 dictionary; contextual use reviewed
 headers	headers	noun / computing noun component	technical-noun	The specified proof-search object, syntax component, runtime state, data record, or resource limit	1.5 category 19; 1.6; exact computing concept
@@ -449,7 +463,7 @@ implies	implies	verb / participial modifier	technical-verb	Perform the stated ex
 imply	imply	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 import	import	noun	technical-noun	The specified runtime/import settings, import operation, or loaded software libraries	1.5 category 19
 imported	imported	verb / participial modifier	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5
-imports	imports	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+imports	imports	noun / technical verb	technical-noun-and-verb	Lean module import commands, load a tactic module, or copy archived source/evidence text into generated paper inputs	1.5 category 19; 1.12 category 2; 3.1-3.5
 improvement	improvement	noun	technical-noun	The measured compilation-time reduction or isolated algorithmic efficiency change	1.5 category 7 (scientific measurement)
 in	in	preposition	dictionary	Express the stated location, relationship, source, agent, or destination	Issue 9 dictionary; contextual use reviewed
 include	include	verb	dictionary	Have the stated item as part of a collection	Issue 9 dictionary; contextual use reviewed
@@ -474,9 +488,10 @@ inputs	inputs	noun / noun component	technical-noun	The specified publication com
 inside	inside	adjective / participle / artifact qualifier	artifact-property-exception	The specified study version, source location, selection relation, evaluation stage, or outcome status	E3; no general dictionary permission inferred
 inspection	inspection	noun / computing noun component	technical-noun	The bounded traversal and unfolding of that formal syntax term	1.5 category 19; 1.6; exact syntax-inspection operation
 installations	installations	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+instance	instance	noun component	technical-noun	A Lean typeclass instance considered by instance synthesis	1.5 category 19; 1.6 for the stated noun components
 integer	integer	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 integration	integration	noun / noun component	technical-noun	The specified implementation fragment or combined-component verification	1.5 category 19
-intelligence	intelligence	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
+intelligence	intelligence	noun / technical-noun component	technical-noun	The computing field in the established name artificial intelligence	1.5 category 19; 1.6; exact computing sense
 interface	interface	noun	dictionary	The stated boundary through which the caller uses the tactic	Issue 9 dictionary; contextual use reviewed
 intermediate	intermediate	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 internal	internal	modifier within a technical noun	technical-noun-component	A scalar expression without norm terms, the represented formal syntax, its original Lean goal, hidden operation semantics, or a vector term with a variable coefficient	1.5 categories 7 and 19; 1.6
@@ -486,12 +501,14 @@ interval	interval	noun / noun component	technical-noun	The specified concept in 
 intervals	intervals	noun / technical-noun component	technical-noun	Statistical confidence intervals or mathematical intervals as specified by context	1.5 categories 7 and 19; 1.6; restricted mathematical or computing sense
 into	into	preposition	dictionary	Express the stated location, relationship, source, agent, or destination	Issue 9 dictionary; contextual use reviewed
 introduced	introduced	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
+invalid	invalid	technical-noun component / status property	artifact-property-exception	The invalidDimensions search status for inconsistent array dimensions	E3; no general dictionary permission
 is	be	verb	dictionary	State existence or a property	Issue 9 dictionary; contextual use reviewed
 isabelle	isabelle	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 isolated	isolated	technical-noun component / research-property modifier	artifact-property-exception	A replay-checked proposal before combined whole-source verification	1.5 categories 7 and 19; 1.6 inside the defined concept; E3 for research-property syntax
 it	it	pronoun	dictionary	Refer to the explicit subject, objects, or authors	Issue 9 dictionary; contextual use reviewed
 its	its	possessive determiner	dictionary	Identify the possessor of the stated item	Issue 9 dictionary; contextual use reviewed
 jackknife	jackknife	noun / noun component	technical-noun	The delete-one-block calculation used for BCa acceleration	1.5 category 7; 1.6; experiment-specific mathematical/statistical concept
+jordan	Jordan	proper name / noun component	name	The established Gauss-Jordan exact elimination algorithm	1.5 category 9; established mathematical name
 json	json	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
 justifies	justifies	verb	technical-verb	Decide a formal implication, prove the stated encoding adequate, or define a mathematical concept	1.12 category 3(a)
 keep	keep	verb	dictionary	Do not remove the stated data or operation	Issue 9 dictionary; contextual use reviewed
@@ -581,8 +598,9 @@ minimum	minimum	noun/adjective	dictionary	The smallest quantity in the stated se
 missing	missing	adjective	dictionary	Not present	Issue 9 dictionary; contextual use reviewed
 mixed	mixed	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 mode	mode	noun / computing noun component	technical-noun	The stated software-development operation, coding tool, system setting, command record, or background process condition	1.5 category 19; 1.6; exact computing sense
-model	model	noun / noun component	technical-noun	The mathematical realization model or the explicitly qualified statistical timing model in the surrounding argument	1.5 category 7; 1.6
+model	model	noun / noun component	technical-noun	The mathematical realization model, the stated statistical timing model, or a language model used in development; local context distinguishes them	1.5 categories 7 and 19; 1.6
 module	module	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+modules	module	noun	technical-noun	The five named Lean source modules in the tactic dependency chain	1.5 category 19; 1.6 for the stated noun components
 most	most	adverb / comparison / preposition	math-grammar-exception	The stated exact equivalence, extremum, numerical comparison, or quantification over a class	E1; mathematical relational syntax
 move	move	verb	technical-verb	Introduce an arbitrary mathematical object, define its value, or move a coefficient point along a feasible direction	1.12 category 3(a); E2 for proof-imperative genre
 multiple	multiple	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
@@ -617,6 +635,7 @@ norm-free	norm-free	modifier within a technical noun	technical-noun-component	A 
 norm-value	norm-value	modifier within a technical noun	technical-noun-component	A norm value or a candidate recorded in the declared catalog	1.5 category 7; 1.6
 normal	normal	adjective / technical-noun component	math-property-exception	Normal form, incomplete coverage, pointed polyhedron, proof soundness, or logical validity, as specified by the occurrence	E1; mathematical properties, not the dictionary physical senses
 normalization	normalization	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+normalize	normalize	verb	technical-verb	Rewrite retained proof types to the fixed frontend normal form and construct the associated proofs	1.12 category 3(a); 3.1-3.5; limited to this stated operation
 normalized	normalized	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 normalizes	normalize	verb / mathematical participle	technical-verb	Perform the specified exact algebraic or logical transformation, projection, or substitution	1.12 category 3(a); 3.1-3.5
 normed	normed	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
@@ -625,6 +644,7 @@ norms	norms	noun / noun component	technical-noun	The mathematical object, relati
 not	not	adverb	dictionary	Express addition, repetition, manner, degree, location, negation, restriction, sequence, or consequence	Issue 9 dictionary; contextual use reviewed
 notation	notation	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 number	number	noun	dictionary	The quantity of stated members	Issue 9 dictionary; contextual use reviewed
+numbers	number	noun	dictionary	The displayed source-line indices or rational numerical values	Issue 9 dictionary; contextual sense and grammatical form reviewed
 numerical	numerical	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 object	object	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 observation	observation	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
@@ -717,6 +737,7 @@ products	products	noun / noun component	technical-noun	The mathematical object, 
 profile	profile	noun / technical-noun component	technical-noun	The stored hardware-model and physical-memory metadata snapshot	1.5 category 19; 1.6
 program	program	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 progress	progress	adjective / participle / artifact qualifier	artifact-property-exception	The specified study version, source location, selection relation, evaluation stage, or outcome status	E3; no general dictionary permission inferred
+project	project	noun component	technical-noun	This repository software project, as distinct from its Lean and Mathlib dependencies	1.5 category 19; 1.6 for the stated noun components
 projection	projection	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 projects	project	verb / mathematical participle	technical-verb	Perform the specified exact algebraic or logical transformation, projection, or substitution	1.12 category 3(a); 3.1-3.5
 proof	proof	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
@@ -768,6 +789,7 @@ reduces	reduces	verb / participial modifier	technical-verb	Perform the stated ex
 reduction	reduction	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 reference	reference	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 references	references	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+reflexivity	reflexivity	noun	technical-noun	Proof of the vector equality by reflexivity after definitional reduction	1.5 category 7; 1.6 for the stated noun components
 regression	regression	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 reified	reified	modifier within a technical noun	technical-noun-component	A scalar expression without norm terms, the represented formal syntax, its original Lean goal, hidden operation semantics, or a vector term with a variable coefficient	1.5 categories 7 and 19; 1.6
 reject	reject	verb	dictionary	Refuse an unsupported input or invalid artifact	Issue 9 dictionary; contextual use reviewed
@@ -777,7 +799,7 @@ related	related	adjective	dictionary	Have the stated dependency relationship	Iss
 relations	relations	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 relative	relative	adjective / mathematical relation	math-property-exception	The change divided by the first-half mean duration	E1; exact statistical ratio, not a family relationship
 release	release	noun / noun component	technical-noun	The published portable paper/evidence artifact, with recorded proof checks	1.5 category 19; 1.6
-remains	remains	verb / mathematical relation	math-grammar-exception	The reported interval is still subject to the stated timing-model conditions	E1; explicit inferential-condition statement, not general dictionary permission
+remains	remains	verb / relation predicate	math-grammar-exception	The timing interval keeps its conditional assumptions; normed-algebra products stay outside the stated core fragment	E1/E3; exact model or grammar boundary, not a general dictionary approval
 remove	remove	verb	dictionary	Take the stated item out of the collection	Issue 9 dictionary; contextual use reviewed
 removed	remove	verb / past participle	technical-verb	Delete source code or remove a positive net line-count saving by the required formatting change	1.12 categories 2 and 3(a); simple-past form reviewed under 3.1-3.5
 removes	remove	verb	technical-verb	Delete source-code lines or omit one complete observation block in a jackknife calculation	1.12 categories 2 and 3(a); 3.1-3.5; not the unrelated physical relocation sense
@@ -792,7 +814,7 @@ replaces	replace	verb	dictionary	Put the replacement in place of the baseline te
 replay	replay	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 replicate	replicate	noun / noun component	technical-noun	One bootstrap resampling draw of K timing blocks	1.5 category 7; 1.6; experiment-specific mathematical/statistical concept
 report	report	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
-reports	reports	verb	technical-verb	Display every validated file result in the generated appendix table	1.12 category 2; exact computer data-reporting operation
+reports	reports	verb	technical-verb	Display validated file results in a generated table or emit the specified frontend diagnostic/status	1.12 category 2; 3.1-3.5
 repository	repository	noun / technical-noun component	technical-noun	The Git source repository, including implementation and study tools	1.5 category 19; 1.6; category 7 for experiment-specific numerical concepts
 represent	represent	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 representation	representation	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
@@ -806,6 +828,7 @@ resource	resource	noun / noun component	technical-noun	The specified proof-autom
 resource-exhausted	resource-exhausted	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
 resource-failure	resource-failure	noun / technical-noun component	technical-noun	A file-level resource failure eligible for the recorded higher-resource retry	1.5 category 19; 1.6; category 7 for experiment-specific numerical concepts
 restore	restore	verb	technical-verb	Load a recorded native library or restore the saved proof-search state	1.12 category 2; computer operation; 3.1-3.5
+restores	restore	verb	technical-verb	Restore the saved Lean proof-search state after an unsuccessful attempt	1.12 category 2; 3.1-3.5; limited to this stated operation
 restricted	restricted	adjective / mathematical noun component	math-property-exception	The stated logical or mathematical scope, relation, equality, or interpretation; not an unrelated physical sense	E1; 1.5 category 7 applies only within a defined technical noun
 restriction	restriction	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 result	result	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
@@ -814,11 +837,12 @@ results	results	noun / noun component	technical-noun	The specified concept in th
 retained	retained	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
 retry	retry	noun / technical-noun component	technical-noun	A repeated file attempt at the predeclared second resource tier	1.5 category 19; 1.6; category 7 for experiment-specific numerical concepts
 return	return	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
+returned	return	past participle / modifier	technical-verb	Coefficient proposals returned by the bounded search function	1.12 category 2; 3.1-3.5
 returns	returns	verb	technical-verb	Return the specified enumeration status	1.12 category 2
 reverse	reverse	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 reverse-triangle	reverse-triangle	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 reverses	reverse	verb / mathematical participle	technical-verb	Perform the specified exact algebraic or logical transformation, projection, or substitution	1.12 category 3(a); 3.1-3.5
-review	review	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
+review	review	noun / verb	technical-noun / research-genre-exception	An inspection of source edits, evidence, or manuscript prose; also the disclosed action of inspecting these artifacts	1.5 categories 7 and 19 for the process noun; E5 for research/editorial action
 revised	revised	technical-noun component / research-property modifier	artifact-property-exception	The source-verified patch after the documented formatting correction	1.5 category 19; 1.6 inside the named artifact; E3 for precise program/study states
 revision	revision	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
 revisions	revisions	noun / technical-noun component	technical-noun	The frozen software-source versions of mathlib	1.5 category 19; 1.6
@@ -837,11 +861,12 @@ samples	sample	noun	dictionary	One of the stated measured observations	Issue 9 d
 sampling	sampling	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 satisfies	satisfies	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 satisfy	satisfy	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
-saved	save	past participle / modifier	technical-verb	Stored source-check hashes in the release artifact, not general cost saving	1.12 category 2; 3.1-3.5
+saved	save	past participle / modifier	artifact-property-exception	Stored source-check hashes or restored Lean state; in the figure, the net source lines removed after preparation and imports	E3; specified stored artifacts, states, and exact line-accounting result
 saving	saving	noun / technical-noun component	technical-noun	The numerical decrease in proof-code lines after the specified import and helper costs	1.5 categories 7 and 19; 1.6; context-bound source and study concepts
 savings	savings	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 scalar	scalar	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 scalar-comparison	scalar-comparison	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
+scales	scale	verb	technical-verb	Multiply a supplied norm bound by the absolute value of a scalar coefficient	1.12 category 3(a); 3.1-3.5
 scan	scan	noun / technical-noun component	technical-noun	The program execution that extracts and attempts eligible source observations	1.5 category 19; 1.6; category 7 for experiment-specific numerical concepts
 scope	scope	noun / noun component	technical-noun	The named scientific method, proof process, or writing-review concept	1.5 category 7; 3.5 for process nouns
 search	search	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
@@ -886,6 +911,7 @@ signed	signed	adjective/adverb / technical-noun component	math-property-exceptio
 significance	significance	noun / technical-noun component	technical-noun	Statistical significance, excluded from the block-length review	1.5 categories 7 and 19; 1.6; restricted mathematical or computing sense
 signs	signs	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 simplifier	simplifier	noun / computing noun component	technical-noun	The specified proof-search object, syntax component, runtime state, data record, or resource limit	1.5 category 19; 1.6; exact computing concept
+simplifies	simplify	verb	technical-verb	Reduce coefficient arithmetic during construction of a Lean proof term	1.12 category 3(a); 3.1-3.5; limited to this stated operation
 single-column	single-column	adjective/adverb / technical-noun component	math-property-exception	A precise mathematical property or quantifier. Predicative and adverbial uses are explicit mathematical-grammar exceptions, not general dictionary permissions	E1; 1.5 category 7 applies only inside technical nouns
 single-line	single-line	technical-noun component / research-property modifier	artifact-property-exception	An original proof with one counted source line	1.5 category 19; 1.6 inside the named artifact; E3 for precise program/study states
 six	six	numeral / unit noun	technical-noun	The stated number or time unit	1.5 category 9
@@ -961,9 +987,9 @@ sums	sum	noun	dictionary	The result of addition	Issue 9 dictionary; contextual u
 superseded	superseded	technical-noun component / research-property modifier	artifact-property-exception	The archived patch and fixed timing study replaced after the documented source-style correction	1.5 category 19; 1.6 inside the named artifact; E3 for precise program/study states
 supplied	supply	verb/participial modifier	dictionary	Give the stated mathematical bound	Issue 9 dictionary; contextual use reviewed
 supply	supply	verb/participial modifier	dictionary	Give the stated mathematical bound	Issue 9 dictionary; contextual use reviewed
-support	support	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
+support	support	noun / verb	technical-noun / research-genre-exception	The mathematical support of a coefficient vector; as a verb, recorded checks give limited evidence for the reported artifact or development account	1.5 category 7 for the mathematical noun; E5 for the evidential verb
 support-attempt	support-attempt	noun / noun component	technical-noun	The specified proof-automation concept, source artifact, or build operation; see the occurrence contexts	1.5 category 19; 1.6
-supports	supports	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
+supports	supports	plural noun / verb	technical-noun / research-genre-exception	Independent coefficient supports; as a verb, limited evidence for an artifact or research account	1.5 category 7 for the mathematical noun; E5 for the evidential verb
 suppose	suppose	verb / participial modifier	technical-verb	Perform the stated exact mathematical operation or assert its defined relation	1.12 category 3(a); 3.1-3.5
 symmetry	symmetry	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 syntax	syntax	noun / noun component	technical-noun	The stated mathematical structure, finite family, proof property, or formal grammar	1.5 category 7; 1.6
@@ -988,8 +1014,10 @@ terminal	terminal	adjective / participle / artifact qualifier	artifact-property-
 terminology	terminology	noun / noun component	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named
 terms	terms	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 test	test	noun	dictionary	The specified verification operation; the verb is a computing technical verb	Issue 9 dictionary; contextual use reviewed
+tested	test	past participle / modifier	technical-verb	Candidate supports examined by the exact rational search and counted against its subset limit	1.12 categories 2 and 3(a); 3.1-3.5; not general test-as-a-verb permission
 tests	tests	verb / participial modifier	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5
 tex	tex	proper noun / official abbreviation	official-name	The named person, organization, proof system, programming language, data format, or publication format	1.5 categories 10, 11, 19
+text	text	noun	technical-noun	The exact Lean source text copied from the measured archive into the excerpts	1.5 category 19
 than	than	conjunction	dictionary	Introduce the quantity in a comparison	Issue 9 dictionary; contextual use reviewed
 that	that	determiner/pronoun/conjunction	dictionary	Identify a stated item or introduce the dependent clause	Issue 9 dictionary; contextual use reviewed
 the	the	article	dictionary	Identify the stated or previously introduced item	Issue 9 dictionary; contextual use reviewed
@@ -1034,6 +1062,7 @@ trusted	trusted	adjective / participial modifier / technical-noun component	arti
 truth	truth	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
 try	try	verb	dictionary	Make an attempt to solve the stated original proof with tactic search	Issue 9 try verb and approved effort sense
 two	two	numeral / unit noun	technical-noun	The stated number or time unit	1.5 category 9
+two-term	two-term	mathematical noun component	technical-noun	The norm certificate for a sum with two scalar-vector terms	1.5 category 7; 1.6
 type	type	noun	technical-noun	The stated software layer, source patch, caller interface control, or Lean type	1.5 category 19; different from physical dictionary senses
 types	types	noun	technical-noun	The stated software layer, source patch, caller interface control, or Lean type	1.5 category 19; different from physical dictionary senses
 unavailable	unavailable	adjective / participial modifier / technical-noun component	artifact-property-exception	A precise statement, source, evaluation, or implementation property. Uses outside a technical noun are declared genre exceptions	E3; technical-noun permission is limited to the named concept
@@ -1100,3 +1129,167 @@ workshop	workshop	noun / noun component	technical-noun	The specified concept in 
 write	write	verb	dictionary	Express the stated mathematical formula	Issue 9 dictionary; contextual use reviewed
 zero	zero	numeral / unit noun	technical-noun	The stated number or time unit	1.5 category 9
 zero-norm	zero-norm	noun / noun component	technical-noun	The mathematical object, relation, proof concept, or construction defined in the surrounding argument	1.5 category 7; 1.6
+ability	ability	noun	research-genre-exception	Capability of an AI coding system, explicitly not measured by this case study	E5; exact research-narrative context; no new dictionary approval
+accepted	accept	participial modifier	research-genre-exception	A contribution adopted into mathlib; this status is not claimed	E5; exact research-narrative context; no new dictionary approval
+account	account	noun	research-genre-exception	The evidence-supported report of AI-assisted development	E5; exact research-narrative context; no new dictionary approval
+additional	additional	adjective / technical-noun component	artifact-property-exception	A new extracted community example beyond the six archived marked examples	E3; stated property only; not an unrestricted dictionary meaning
+address	address	verb	research-genre-exception	Respond to the normed-space decomposition request; identify proof validity as the kernel-checking scope	E5; exact research-narrative context; no new dictionary approval
+addresses	address	verb	research-genre-exception	Respond to the normed-space decomposition request; identify proof validity as the kernel-checking scope	E5; exact research-narrative context; no new dictionary approval
+adopt	adopt	verb	research-genre-exception	Record the project decision to use automatic bound selection	E5; exact research-narrative context; no new dictionary approval
+against	against	preposition	research-genre-exception	Identify existing proofs or other tactics as comparison baselines	E5; exact research-narrative context; no new dictionary approval
+agent	agent	noun / technical-noun component	technical-noun	An AI coding system involved in software development	1.5 category 19; 1.6; restricted to the stated concept
+ai's	AI	possessive acronym	name/label	AI as the proposed influence on development time, whose effect is not measured	E4; possessive form of the artificial-intelligence abbreviation
+ai-assisted	AI-assisted	participial adjective	research-genre-exception	Development, implementation, or review with AI contributions; no autonomous share is specified	E5; exact research-narrative context; no new dictionary approval
+already	already	adverb	artifact-property-exception	Dependencies were built before the measured compilation passes	E3; exact order of build and measurement
+appendices	appendix	plural noun	technical-noun	The specified concept in the scientific evaluation, mathematical paper, or reproducibility protocol	1.5 category 7 (scientific methods); category 19 where a software artifact is named; same lemma and sense as existing reviewed appendix entry
+archive	archive	noun / technical-noun component	technical-noun	The validated source or regression-evidence collection	1.5 category 19; 1.6; restricted to the stated concept
+asked	ask	verb / simple past	research-genre-exception	Report the documented 2020 request for norm decomposition automation	E5; exact research-narrative context; no new dictionary approval
+assigning	assigning	participial clause	research-genre-exception	Attribute individual source lines or design decisions to a tool or person; exhaustive attribution is explicitly absent	E5; exact research-narrative context; no new dictionary approval
+assistance	assistance	noun	research-genre-exception	The disclosed AI contribution to tactic or source-edit development and review	E5; exact research-narrative context; no new dictionary approval
+assumes	assume	verb	math-grammar-exception	State independent, representative timing blocks as the statistical model condition	E1; explicit statistical-model assumption
+attributing	attributing	participial clause	research-genre-exception	Attribute individual source lines or design decisions to a tool or person; exhaustive attribution is explicitly absent	E5; exact research-narrative context; no new dictionary approval
+automatic	automatic	adjective / technical-noun component	artifact-property-exception	Selection of related local norm bounds by the tactic without an explicit fact list	E3; stated property only; not an unrestricted dictionary meaning
+automation	automation	noun / technical-noun component	technical-noun	Software that finds and checks proofs of norm or structural inequalities	1.5 category 19; 1.6; restricted to the stated concept
+autonomous	autonomous	adjective	research-genre-exception	Coding ability without human intervention; this study does not measure it	E5; exact research-narrative context; no new dictionary approval
+autonomously	autonomous	adverb	research-genre-exception	Code generation without human intervention; its fraction is not available	E5; exact research-narrative context; no new dictionary approval
+bar	bar	noun / technical-noun component	technical-noun	The plotted line segment for the aggregate conditional timing interval	1.5 category 7; 1.6; restricted to the stated concept
+behind	behind	preposition	artifact-property-exception	Search paths share a certificate interface	E3; specified interface relation, not physical position
+benchmark	benchmark	noun / technical-noun component	technical-noun	The selected workload used for empirical tactic evaluation	1.5 category 7; 1.6; restricted to the stated concept
+beyond	beyond	preposition	artifact-property-exception	The averaging example tests fractional coefficients in addition to the motivating inequality	E3; explicit comparison of example scope
+binds	bind	verb	technical-verb	Associate archived evidence files with cryptographic source hashes	1.12 category 2; 3.1-3.5; stated operation only
+call	call	noun / technical-noun component	technical-noun	Invocation of a tactic or of a language model at proof time	1.5 category 19; 1.6; restricted to the stated concept
+causal	causal	adjective within the technical noun causal effect	technical-noun	A claimed effect caused by AI assistance, which this experiment does not estimate	1.5 category 7; 1.6; restricted to the stated concept
+characterizes	characterize	verb	technical-verb	Give the exact finite abstraction described by the mathematical theorem	1.12 category 3(a); 3.1-3.5; stated operation only
+chatgpt	chatgpt	proper noun / name component	name/label	The named AI products or model in the recorded development provenance	E4; official product or model name retained
+checking	checking	process noun / noun component	technical-noun	Lean verification of a certificate identity or proof term	1.5 category 19; 1.6; restricted to the stated concept
+codex	codex	proper noun / name component	name/label	The named AI products or model in the recorded development provenance	E4; official product or model name retained
+commit	commit	noun / technical-noun component	technical-noun	A recorded revision in the Git repository history	1.5 category 19; 1.6; restricted to the stated concept
+community	community	noun / attributive noun	research-genre-exception	Participants in the cited Lean discussion; no endorsement by all participants is inferred	E5; exact research-narrative context; no new dictionary approval
+compare	compare	verb / infinitive	research-genre-exception	Contrast coding models in a controlled experiment; this study does not do so	E5; exact research-narrative context; no new dictionary approval
+concerned	concern	verb / simple past	research-genre-exception	Identify definitionally equal alias terms as the subject of one recorded regression	E5; exact research-narrative context; no new dictionary approval
+contribution	contribution	noun	research-genre-exception	The reported research artifact or a source patch proposed for mathlib	E5; exact research-narrative context; no new dictionary approval
+controlled	controlled	adjective within the specified experimental term	technical-noun	A comparison or baseline that separates AI effects from other development factors	1.5 category 7; 1.6; restricted to the stated concept
+could	could	modal verb / reported past	research-genre-exception	Capability requested in the 2020 discussion, not an observed result of this study	E5; exact research-narrative context; no new dictionary approval
+decisions	decision	plural noun	research-genre-exception	Recorded choices about the tactic interface and search architecture	E5; exact research-narrative context; no new dictionary approval
+decomposition-search	decomposition-search	modifier within a technical noun	technical-noun	The part of the community request that asks for hidden norm decompositions	1.5 category 7; 1.6; restricted to the stated concept
+decrease	decrease	verb / infinitive	dictionary	Make the count or support smaller	Issue 9 dictionary; contextual use reviewed; same lemma and sense as existing reviewed decreases entry
+definitionally	definitional	adverb	math-property-exception	Equality by Lean reduction of terms, including function aliases	E1; specified formal equality relation
+demonstrates	demonstrate	verb	research-genre-exception	The checked example shows automatic fact selection and fractional coefficients	E5; exact research-narrative context; no new dictionary approval
+describe	describe	verb	research-genre-exception	Restrict line savings to the compiled patch or the interval to repeated timing runs	E5; exact research-narrative context; no new dictionary approval
+details	details	plural noun	technical-noun	The specified calibration and runtime information for the recorded experiment	1.5 category 7; 1.6; restricted to the stated concept
+develop	develop	verb	technical-verb	Construct and refine the tactic implementation or source replacements	1.12 category 2; 3.1-3.5; stated operation only
+developing	developing	gerund / complement of in	research-genre-exception	Disclose AI participation in construction and editorial inspection of source edits	E5; exact research-narrative context; no new dictionary approval
+diamond	diamond	noun / technical-noun component	technical-noun	The plot marker for the ratio of mean full-pass compilation times	1.5 category 7; 1.6; restricted to the stated concept
+disclosure	disclosure	noun	research-genre-exception	The starter commit statement that ChatGPT generated the initial code	E5; exact research-narrative context; no new dictionary approval
+discoveries	discoveries	plural noun	technical-noun	Proof replacements found by unattended tactic execution; the patch count is explicitly not such a count	1.5 category 19; 1.6; restricted to the stated concept
+discussion	discussion	noun	research-genre-exception	The cited May 2020 Lean conversation and its later normed-algebra proposal	E5; exact research-narrative context; no new dictionary approval
+effect	effect	noun / technical-noun component	technical-noun	The change in development outcomes caused by AI use; not measured in this study	1.5 category 7; 1.6; restricted to the stated concept
+effort	effort	noun	research-genre-exception	Human or agent work spent on development; no complete effort record is available	E5; exact research-narrative context; no new dictionary approval
+end-to-end	end-to-end	adjective / technical-noun component	artifact-property-exception	A formal proof covering the complete implemented search-to-proof pipeline; such formalization is not claimed	E3; stated property only; not an unrestricted dictionary meaning
+endorsement	endorsement	noun	research-genre-exception	Community approval of the implementation, which the examples do not establish	E5; exact research-narrative context; no new dictionary approval
+enumerate	enumerate	verb / proof imperative	technical-verb	Visit the independent unsigned column subsets of the reference family	1.12 category 3(a); 3.1-3.5; stated operation only
+errors	errors	plural noun	technical-noun	Compiler failure diagnostics; warnings were configured to count as these	1.5 category 19; 1.6; restricted to the stated concept
+establish	establish	verb	research-genre-exception	Supply evidence of community endorsement; the manuscript denies that inference	E5; exact research-narrative context; no new dictionary approval
+exercises	exercise	verb	technical-verb	Test the tactic on rational coefficients in the checked averaging example	1.12 category 2; 3.1-3.5; stated operation only
+expansion	expansion	noun / technical-noun component	technical-noun	The repository revision that added bounded tactic capabilities	1.5 category 19; 1.6; restricted to the stated concept
+failure-to-repair	failure-to-repair	modifier within a technical noun	technical-noun	The archived sequence from a failing regression to its successful corrected build	1.5 category 19; 1.6; restricted to the stated concept
+favor	favor	verb	math-grammar-exception	A ratio greater than one means smaller mean replacement compilation time	E1; exact defined ratio comparison
+find	find	verb / infinitive	dictionary	Discover coefficient data	Issue 9 dictionary; contextual use reviewed; same lemma and sense as existing reviewed finds entry
+followed	follow	participial modifier	artifact-property-exception	A successful build occurred after the archived regression failures	E3; specified chronological record
+formalization	formalization	noun / technical-noun component	technical-noun	A Lean-checked proof of completeness for the entire search implementation	1.5 category 7; 1.6; restricted to the stated concept
+fraction	fraction	noun / technical-noun component	technical-noun	The numerical proportion of code produced without human involvement; not estimated	1.5 category 7; 1.6; restricted to the stated concept
+fractional	fractional	adjective	math-property-exception	Noninteger rational coefficients in a norm decomposition	E1; precise coefficient property
+full-library	full-library	adjective / technical-noun component	artifact-property-exception	Coverage of the complete pinned mathlib source universe	E3; stated property only; not an unrestricted dictionary meaning
+gpt	gpt	proper noun / name component	name/label	The named AI products or model in the recorded development provenance	E4; official product or model name retained
+handle	handles	verb / infinitive	technical-verb	The stated computer process, source transformation, validation, or execution status	1.12 category 2; 3.1-3.5; same lemma and sense as existing reviewed handles entry
+heather	heather	proper noun / person-name component	name/label	Heather Macbeth, author of the cited norm-decomposition request	E4; cited person name retained
+held-out	held-out	adjective / technical-noun component	artifact-property-exception	An evaluation set not used during development; the selected patch is explicitly not this kind of test	E3; stated property only; not an unrestricted dictionary meaning
+helped	help	verb / simple past	research-genre-exception	AI agents contributed to the source replacement development and review	E5; exact research-narrative context; no new dictionary approval
+history	history	noun component of commit history	technical-noun	The chronological Git revision record	1.5 category 19; 1.6; restricted to the stated concept
+human	human	noun / adjective	research-genre-exception	A person involved in software development, contrasted with an AI coding agent	E5; exact research-narrative context; no new dictionary approval
+identified	identify	verb / simple past	research-genre-exception	The cited discussion recognized decomposition search as the missing automation step	E5; exact research-narrative context; no new dictionary approval
+illustrates	illustrate	verb	research-genre-exception	The case supplies an example of AI-assisted construction, without a general productivity claim	E5; exact research-narrative context; no new dictionary approval
+immediate	immediate	adjective / technical-noun component	artifact-property-exception	Identity synthesis performed during certificate construction before later proof assembly	E3; stated property only; not an unrestricted dictionary meaning
+implicit	implicit	adjective / technical-noun component	artifact-property-exception	The decomposition is found inside the tactic rather than supplied as coefficients	E3; stated property only; not an unrestricted dictionary meaning
+including	include	preposition / participial phrase	artifact-property-exception	State explicit members of a reported source-line count, benchmark baseline, or file-outcome set	E3; exact scope of the enumerated evidence
+independently	independently	adverb	artifact-property-exception	Lean proof outputs and library edits can be checked separately from the AI coding process	E3; stated property only; not an unrestricted dictionary meaning
+indexing	index	participial modifier	technical-verb	Use the specified index set to identify the equality differences	1.12 category 3(a); 3.1-3.5; stated operation only
+inference	inference	noun / technical-noun component	technical-noun	Statistical reasoning from the recorded paired compilation measurements	1.5 category 7; 1.6; restricted to the stated concept
+inherit	inherit	verb	math-grammar-exception	Extend a completeness theorem to bounded implementation extensions; this implication is denied	E1; exact theorem-scope relation
+invocation	invocation	noun / technical-noun component	technical-noun	One execution of the tactic	1.5 category 19; 1.6; restricted to the stated concept
+isolate	isolate	verb	research-genre-exception	Attribute the measured compilation ratio solely to the tactic algorithm; the study cannot do this	E5; exact research-narrative context; no new dictionary approval
+itself	itself	reflexive/emphatic pronoun	math-grammar-exception	The full Strong Law theorem as distinct from one estimate in its proof	E1; explicit theorem-scope distinction
+kind	kind	noun	research-genre-exception	The requested class of norm-decomposition proofs	E5; request-scope noun
+larger	large	comparative adjective	math-property-exception	Mean replacement compilation time greater than mean original time	E1; exact comparison of recorded means
+latter	latter	pronoun	research-genre-exception	The 37 replacements composed outside the census, from the immediately preceding pair	E5; exact research-narrative context; no new dictionary approval
+links	link	verb	technical-verb	Give source references for design decisions and regression records	1.12 category 2; 3.1-3.5; stated operation only
+logs	logs	plural noun	technical-noun	Recorded failure and build output files	1.5 category 19; 1.6; restricted to the stated concept
+macbeth	macbeth	proper noun / person-name component	name/label	Heather Macbeth, author of the cited norm-decomposition request	E4; cited person name retained
+main-text	main-text	adjective / technical-noun component	artifact-property-exception	The checked source excerpt displayed in the main body, as distinct from appendix examples	E3; stated property only; not an unrestricted dictionary meaning
+maintenance	maintenance	noun / technical-noun component	technical-noun	Work to keep the tactic implementation suitable for ongoing library use	1.5 category 19; 1.6; restricted to the stated concept
+manuscript	manuscript	noun	research-genre-exception	The current research article that also received AI-assisted editing	E5; exact research-narrative context; no new dictionary approval
+mark	mark	verb	technical-verb	Identify in the plot all files with larger mean replacement compilation times	1.12 category 2; 3.1-3.5; stated operation only
+may	May	proper noun	name/label	May, the calendar month of the cited 2020 discussion	E4; calendar name, not the modal verb
+meet	meet	verb	math-grammar-exception	Satisfy the numerical source-line length limit	E1; explicit comparison with the 100-character bound
+models	models	plural noun	technical-noun	AI language models whose relative coding performance this study does not compare	1.5 category 19; 1.6; restricted to the stated concept
+motivating	motivate	participial adjective	research-genre-exception	The documented norm-decomposition request that prompted this case study	E5; exact research-narrative context; no new dictionary approval
+normed-algebra	normed-algebra	modifier within a technical noun	technical-noun	The later request involving products in normed algebras, outside the affine core	1.5 category 7; 1.6; restricted to the stated concept
+optimized	optimized	adjective / technical-noun component	artifact-property-exception	Search paths designed to avoid the cost of exhaustive reference enumeration	E3; stated property only; not an unrestricted dictionary meaning
+ordinary	ordinary	adjective / technical-noun component	artifact-property-exception	Lean tactic execution with no language-model call at proof time	E3; stated property only; not an unrestricted dictionary meaning
+our	our	possessive determiner	research-genre-exception	The authors current tactic or declared core fragment	E5; exact research-narrative context; no new dictionary approval
+overlaps	overlap	plural noun	technical-noun/technical-verb	Intersection of source spans or timing blocks, or share an element as a set-theoretic relation	1.5 categories 7 and 19; 1.12 categories 2 and 3(a); same lemma and sense as existing reviewed overlap entry
+part	part	noun	research-genre-exception	The normed-space decomposition portion of the broader community request	E5; exact research-narrative context; no new dictionary approval
+particular	particular	adjective	research-genre-exception	An individually identified AI tool; complete line-by-line attribution is absent	E5; exact research-narrative context; no new dictionary approval
+present	present	adjective	research-genre-exception	The current manuscript receiving AI-assisted review and revision	E5; exact research-narrative context; no new dictionary approval
+preserve	preserve	verb	technical-verb	Keep the library theorem statements and assumptions unchanged	1.12 category 2; 3.1-3.5; stated operation only
+preserving	preserve	participial clause	technical-verb	Keep explicit fact-list control after adding automatic bound selection	1.12 category 2; 3.1-3.5; stated operation only
+produced	produce	verb / simple past	technical-verb	Create the documented software, proof, and evaluation artifacts	1.12 category 2; 3.1-3.5; stated operation only
+produces	produce	verb	technical-verb	Return a Lean proof term from a successful tactic call	1.12 category 2; 3.1-3.5; stated operation only
+productivity	productivity	noun / technical-noun component	technical-noun	Development output relative to effort, which this study does not estimate	1.5 category 7; 1.6; restricted to the stated concept
+prompt	prompt	noun component of prompt transcript	technical-noun	Instructions supplied to a language model or coding agent	1.5 category 19; 1.6; restricted to the stated concept
+provides	provide	verb	research-genre-exception	Name structural inequality automation as the function of the cited tactic	E5; exact research-narrative context; no new dictionary approval
+puts	put	verb	artifact-property-exception	Record the design choice that search paths share one certificate interface	E3; software-interface arrangement, not physical movement
+quality	quality	noun	research-genre-exception	Suitability of software maintenance or research claims; kernel checking does not validate it	E5; exact research-narrative context; no new dictionary approval
+quote	quote	noun / technical-noun component	technical-noun	The exact checked Lean source excerpt in the main body	1.5 category 19; 1.6; restricted to the stated concept
+range	range	noun / technical-noun component	technical-noun	The first and last source line numbers of the imported Lean excerpt	1.5 category 19; 1.6; restricted to the stated concept
+rationals	rationals	plural noun	technical-noun	The rational-number domain for exact coefficient-system solutions	1.5 category 7; 1.6; restricted to the stated concept
+received	receive	verb / simple past	research-genre-exception	Disclose AI-assisted review and revision of this manuscript	E5; exact research-narrative context; no new dictionary approval
+recording	record	participial clause	dictionary	The stored evidence, or put stated evidence in storage	Issue 9 dictionary; contextual use reviewed; same lemma and sense as existing reviewed record entry
+rejection	rejection	noun / technical-noun component	technical-noun	A negative tactic test correctly fails with an omitted norm premise	1.5 category 19; 1.6; restricted to the stated concept
+reliable	reliable	adjective	research-genre-exception	A defensible fraction of code generated autonomously, which the available records do not provide	E5; exact research-narrative context; no new dictionary approval
+repair	repair	noun / technical-noun component	technical-noun	The documented correction of the alias/identity-checking regression	1.5 category 19; 1.6; restricted to the stated concept
+request	request	noun	research-genre-exception	The documented Lean discussion asking for norm-decomposition automation	E5; exact research-narrative context; no new dictionary approval
+requested	request	participial modifier	research-genre-exception	The norm inequality specified in the cited community request	E5; exact research-narrative context; no new dictionary approval
+reusable	reusable	adjective / technical-noun component	artifact-property-exception	One tactic can handle multiple norm proofs without a language-model call for each proof	E3; stated property only; not an unrestricted dictionary meaning
+reviewing	reviewing	gerund / complement of in	research-genre-exception	Disclose AI participation in construction and editorial inspection of source edits	E5; exact research-narrative context; no new dictionary approval
+satisfying	satisfy	participial modifier	technical-verb	An assignment makes the recognized logical assumptions true	1.12 category 3(a); 3.1-3.5; stated operation only
+saves	save	verb	technical-verb	The compiled patch removes the stated net number of source lines after all added costs	1.12 category 2; 3.1-3.5; stated operation only
+searches	search	verb	technical-verb	Find candidate decomposition constraints before checking the resulting proof	1.12 category 2; 3.1-3.5; stated operation only
+separately	separately	adverb	artifact-property-exception	The plot displays the import cost as a distinct segment	E3; specified plotted component
+set-membership	set-membership	modifier within a technical noun	technical-noun	A bound expressed as membership in the set used in the regression fixture	1.5 category 7; 1.6; restricted to the stated concept
+settings	settings	plural noun	technical-noun	The Lean normalization options used during identity synthesis	1.5 category 19; 1.6; restricted to the stated concept
+seven	seven	number	name/label	The number of affected files whose mean replacement compilation time is larger	1.5 category 11; exact integer count
+shown	show	past participle	dictionary	Give evidence or make the stated result visible	Issue 9 dictionary; contextual use reviewed; same lemma and sense as existing reviewed show entry
+sketch	sketch	noun / technical-noun component	technical-noun	The abbreviated main-text argument for the finite characterization	1.5 category 7; 1.6; restricted to the stated concept
+starter	starter	noun / technical-noun component	technical-noun	The initial tactic code whose commit discloses ChatGPT generation	1.5 category 19; 1.6; restricted to the stated concept
+steps	step	plural noun	research-genre-exception	The recorded stages in development of the tactic interface and implementation	E5; exact research-narrative context; no new dictionary approval
+subsequent	subsequent	adjective	research-genre-exception	Implementation and evaluation work after generation of the starter	E5; exact research-narrative context; no new dictionary approval
+tool	tool	noun / technical-noun component	technical-noun	The AI coding systems or the reusable Lean tactic, distinguished by local context	1.5 category 19; 1.6; restricted to the stated concept
+tools	tools	noun / technical-noun component	technical-noun	The AI coding systems or the reusable Lean tactic, distinguished by local context	1.5 category 19; 1.6; restricted to the stated concept
+transcript	transcript	noun / technical-noun component	technical-noun	The sequence of prompts and responses in an AI-assisted development session	1.5 category 19; 1.6; restricted to the stated concept
+treated	treat	past participle	technical-verb	The build configured compiler warnings to count as errors	1.12 category 2; 3.1-3.5; stated operation only
+triangles	triangles	plural noun	technical-noun	The plot markers for files with larger mean replacement times	1.5 category 7; 1.6; restricted to the stated concept
+unattended	unattended	adjective / technical-noun component	artifact-property-exception	Tactic discoveries produced without source preparation or outside-census assistance	E3; stated property only; not an unrestricted dictionary meaning
+uncontrolled	uncontrolled	adjective / technical-noun component	artifact-property-exception	Background machine activity whose conditions the timing study did not control	E3; stated property only; not an unrestricted dictionary meaning
+upper	upper	adjective within a mathematical noun	technical-noun-component	An upper bound on a norm	1.5 category 7; 1.6; the defined bound relation
+useful	useful	adjective	research-genre-exception	The displayed identity supplies the decomposition for the requested inequality	E5; exact research-narrative context; no new dictionary approval
+utility	utility	noun	research-genre-exception	Evidence that the checked tactic can shorten the selected library proofs; not measured development productivity	E5; exact research-narrative context; no new dictionary approval
+validate	validate	verb	research-genre-exception	Establish adequacy of benchmark selection, research claims, or maintenance; kernel checking does not do this	E5; limited negative claim, distinct from technical proof validation
+waits	wait	verb / third-person singular	dictionary	Do not proceed until the specified data is available	Issue 9 dictionary; contextual use reviewed; same lemma and sense as existing reviewed wait entry
+warnings	warnings	plural noun	technical-noun	Compiler diagnostics that the complete regression build configured as failures	1.5 category 19; 1.6; restricted to the stated concept
+while	while	conjunction	research-genre-exception	Automatic fact selection and preservation of explicit fact control occur in the same interface revision	E5; exact research-narrative context; no new dictionary approval
+wholly	wholly	adverb	math-grammar-exception	Every point of the conditional interval is greater than one	E1; exact universal interval comparison
+whose	whose	relative possessive pronoun	research-genre-exception	The reusable proof tool as owner of its checkable outputs and source edits	E5; exact research-narrative context; no new dictionary approval
+workflow	workflow	noun / technical-noun component	technical-noun	The recorded development process that produced the tactic and evaluation artifacts	1.5 category 19; 1.6; restricted to the stated concept
+written	write	past participial modifier	technical-verb	Express vector terms through aliases or the displayed source syntax	1.12 category 2; 3.1-3.5; stated operation only
+zero-cost	zero-cost	modifier within a technical noun	technical-noun	The formal representation cases in which the cost is zero	1.5 category 7; 1.6; restricted to the stated concept

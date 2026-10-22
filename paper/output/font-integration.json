@@ -8,7 +8,7 @@
     "-output-directory=/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/tmp/font-integration/font-test.tex"
   ],
-  "paper_preamble_sha256": "cd0fcfd8c39d4c7fa948181e9f3df566fc8cbecc956bc3f4f884123ae12fbbe1",
+  "paper_preamble_sha256": "7ac9401fc7d43ca68a204affb6a192feedaf2e236fb30e13b13783809f1dd28c",
   "expected_faces": [
     "JuliaMono-Bold",
     "JuliaMono-BoldItalic",
@@ -38,5 +38,5 @@
     "TeXGyreTermes-Regular"
   ],
   "font_warnings": [],
-  "pdf_sha256": "3533df8e8afc7eb0dea0db7dd2ec013ed130e159b1ff61b32bbf0cb024c72bbb"
+  "pdf_sha256": "1995e2ad17fa9e3b211bd7bc0ee2eb9ce565da03d22b8030a8c555d5da53e7d2"
 }

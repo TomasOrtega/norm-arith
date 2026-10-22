@@ -1,8 +1,10 @@
 # Research paper plan
 
 Status: expanded study and paper complete. The release has a four-page main body,
-references, and technical appendices. The decisions below remain the design
-record. The independently verified final expansion saves 310 net lines
+references, and technical appendices. The current framing is an AI-assisted Lean
+tactic for the normed-space part of a documented community request. Two plots
+show charged line savings and all affected-file timing ratios. The decisions
+below remain the design record. The independently verified final expansion saves 310 net lines
 in 46 files. Final targeted discovery completed with 875 complete files and ten
 explicit gaps. The expanded implementation and workload are frozen. The 24-pair
 pilot and 40-pair confirmation finished. The block choice was fixed from blinded
@@ -12,10 +14,13 @@ diagnostics. Mean warm affected-file compilation time decreases from 131.19 to
 slower files. The interval assumes independent, representative four-pair blocks;
 machine snapshots do not establish continuous performance conditions.
 
-The final manuscript has six Lean-checked examples, a current STE contextual
+The final manuscript has six archived Lean-checked examples and a separately
+checked community-request excerpt, a current STE contextual
 review with declared exceptions, and a successful all-page visual review. The
-default offline build restores its checked evidence and reproduces all 17
-rendered pages without the original checkout or a Lean build. The
+portable build uses its checked evidence without a Lean build. The implementation
+appendix explains three measured code excerpts and links to the complete source.
+The prototype-pilot results and tables are omitted; the calibration study remains.
+The earlier release also passed an isolated offline rebuild. The
 [release receipt](../paper/output/release.json) and
 [independent claims review](../artifacts/expansion/final-review/final-claims.json)
 bind the completed paper to its evidence.

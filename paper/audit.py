@@ -19,6 +19,7 @@ GENERATED_PROSE = (
 
 def prose(text):
     text = re.sub(r"(?m)^\s*%.*$", "", text)
+    text = re.sub(r"\\href\{[^}]*\}", "", text)
     text = re.sub(r"\\begin\{(?:equation|align|tabular)\}(.*?)\\end\{(?:equation|align|tabular)\}", lambda m: " FORMULA" + (". " if m[1].rstrip().endswith(".") else " "), text, flags=re.S)
     text = re.sub(r"\\\[(.*?)\\\]", lambda m: " FORMULA" + (". " if m[1].rstrip().endswith(".") else " "), text, flags=re.S)
     text = re.sub(r"\$[^$]*\$", " FORMULA ", text)
@@ -31,7 +32,7 @@ def prose(text):
 
 
 def blocks():
-    for name in ("paper.tex", "appendix.tex", *("generated/" + x for x in GENERATED_PROSE)):
+    for name in ("paper.tex", "appendix.tex", "implementation.tex", *("generated/" + x for x in GENERATED_PROSE)):
         source = (HERE / name).read_text()
         if name == "paper.tex":
             title = re.search(r"\\title\{([^}]*)\}", source)
@@ -47,8 +48,9 @@ def blocks():
             clean = " ".join(prose(block).split())
             if clean:
                 yield name, clean
-    for name in ("pilot-table.tex", "pilot-detail-table.tex", "census-table.tex", "census-outcomes.tex",
-                 "census-fragments.tex", "selector-outcomes.tex", "line-costs.tex", "timing-table.tex", "timing-setup.tex", "calibration-table.tex"):
+    for name in ("census-table.tex", "census-outcomes.tex",
+                 "census-fragments.tex", "selector-outcomes.tex", "line-costs.tex", "timing-table.tex", "timing-setup.tex", "calibration-table.tex",
+                 "evaluation-figure.tex"):
         path = HERE / "generated" / name
         if not path.exists():
             continue
@@ -112,7 +114,7 @@ def main():
             raise SystemExit("Resolve length candidates and vocabulary gaps before recording review")
         record_path.write_text(json.dumps({"date": datetime.now(timezone.utc).date().isoformat(), "reviewer": "Codex assisted editorial review",
             "corpus_sha256": corpus_hash, "vocabulary_review_sha256": ledger_hash,
-            "scope": "Main and appendix explanatory prose and headings, title, generated status prose, and table captions; mathematical notation and imported code are excluded.",
+            "scope": "Main and appendix explanatory prose and headings, title, generated status prose, and table/figure captions; mathematical notation and imported code are excluded.",
             "conformance": "STE-based explanatory prose with the mathematical exceptions declared in language-audit.md; no unqualified ASD conformance or external certification."}, indent=2) + "\n")
     recorded = json.loads(record_path.read_text()) if record_path.exists() else {}
     output["record_matches_current_corpus"] = (recorded.get("corpus_sha256") == corpus_hash and recorded.get("vocabulary_review_sha256") == ledger_hash)

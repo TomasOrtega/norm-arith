@@ -9,12 +9,26 @@ import re
 from pathlib import Path
 
 from evidence import implementation_sha, load_evidence
+from plots import generate_plots
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 GENERATED = HERE / "generated"
 NAMES = ("hidden", "reverse", "mathlib", "boundary")
 EXPANSION_NAMES = (*NAMES, "quantified", "metric")
+IMPLEMENTATION_EXCERPTS = (
+    {"id": "certificate", "relative_source": "NormArith/Certificate.lean",
+     "first_line": 63, "last_line": 75, "first_anchor": "variable [NormedSpace ℝ E]",
+     "last_anchor": "  bound_add (bound_smul c hx) (bound_smul d hy)"},
+    {"id": "search", "relative_source": "NormArith/Search.lean",
+     "first_line": 179, "last_line": 210,
+     "first_anchor": "def referenceDecompositions (sources : Array (Array Rat)) (target : Array Rat)",
+     "last_anchor": "  return result"},
+    {"id": "tactic", "relative_source": "NormArith/Tactic.lean",
+     "first_line": 480, "last_line": 512,
+     "first_anchor": "private def addConstraint (sources : Array Source) (target : Expr)",
+     "last_anchor": "  withMainContext <| Term.elabTermAndSynthesize name none"},
+)
 
 
 def sha(path):
@@ -32,6 +46,89 @@ def tex(value):
 
 def write(name, content):
     (GENERATED / name).write_text(content.rstrip() + "\n")
+
+
+def implementation_data(evidence, expected_aggregate, *, excerpt_specs=None):
+    root = evidence.get("project_source_root")
+    if root is None:
+        raise ValueError("validated project source root is required for the implementation appendix")
+    root = Path(root).resolve()
+    hashes = ((evidence.get("patch") or {}).get("verification") or {}).get("project_lean_sources", {})
+    pending, sources = [root / "NormArith.lean"], {}
+    while pending:
+        path = pending.pop()
+        if path in sources:
+            continue
+        name = str(path.relative_to(root))
+        if name not in hashes:
+            raise ValueError("implementation source lacks a final verification fingerprint: " + name)
+        if not path.is_file() or path.is_symlink() or not path.resolve().is_relative_to(root):
+            raise ValueError("missing validated implementation source: " + name)
+        data = path.read_bytes()
+        if hashlib.sha256(data).hexdigest() != hashes[name]:
+            raise ValueError("measured implementation source hash differs: " + name)
+        sources[path] = data
+        imports = re.findall(r"(?m)^\s*(?:(?:public|meta)\s+)*import\s+(NormArith(?:\.[\w']+)*)\s*$", data.decode())
+        pending.extend(root / (module.replace(".", "/") + ".lean") for module in imports)
+    aggregate = hashlib.sha256()
+    for path, data in sorted(sources.items()):
+        aggregate.update(str(path.relative_to(root)).encode() + b"\0" + data)
+    if aggregate.hexdigest() != expected_aggregate:
+        raise ValueError("measured implementation aggregate hash differs from checked examples")
+    relative_sources = {path.relative_to(root).as_posix(): data for path, data in sources.items()}
+    if excerpt_specs is None:
+        known_modules = {"NormArith.lean", "NormArith/Certificate.lean", "NormArith/Search.lean",
+                         "NormArith/Metric.lean", "NormArith/Tactic.lean"}
+        if relative_sources.keys() == known_modules:
+            excerpt_specs = IMPLEMENTATION_EXCERPTS
+        elif relative_sources.keys() == {"NormArith.lean"}:
+            excerpt_specs = ()
+        else:
+            raise ValueError("implementation import closure needs an explicit excerpt plan")
+    excerpts, ids = [], set()
+    for specification in excerpt_specs:
+        identifier, relative = specification["id"], specification["relative_source"]
+        if not re.fullmatch(r"[a-z][a-z0-9-]*", identifier) or identifier in ids:
+            raise ValueError("invalid or duplicate implementation excerpt id")
+        ids.add(identifier)
+        if relative not in relative_sources:
+            raise ValueError("implementation excerpt is not a validated runtime source: " + relative)
+        lines = relative_sources[relative].splitlines(keepends=True)
+        first, last = specification["first_line"], specification["last_line"]
+        if type(first) is not int or type(last) is not int or not 1 <= first <= last <= len(lines):
+            raise ValueError("invalid implementation excerpt range: " + identifier)
+        if (lines[first - 1].decode().rstrip("\r\n") != specification["first_anchor"] or
+                lines[last - 1].decode().rstrip("\r\n") != specification["last_anchor"]):
+            raise ValueError("implementation excerpt boundary anchor differs: " + identifier)
+        excerpt = b"".join(lines[first - 1:last])
+        excerpts.append({**specification, "module": relative[:-5].replace("/", "."),
+                         "generated_path": "implementation/" + relative,
+                         "wrapper": "implementation-" + identifier + ".tex",
+                         "source_sha256": hashes[relative],
+                         "excerpt_sha256": hashlib.sha256(excerpt).hexdigest(),
+                         "bytes": len(excerpt), "lines": last - first + 1})
+    modules = []
+    for path, data in sorted(sources.items()):
+        relative = path.relative_to(root).as_posix()
+        generated = "implementation/" + relative
+        destination = GENERATED / generated
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(data)
+        modules.append({"module": relative[:-5].replace("/", "."), "relative_source": relative,
+                        "generated_path": generated,
+                        "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data),
+                        "lines": len(data.splitlines())})
+    for alias in ("certificate", "search", "metric", "tactic", "entry"):
+        (GENERATED / ("implementation-" + alias + ".tex")).unlink(missing_ok=True)
+    for excerpt in excerpts:
+        first, last = excerpt["first_line"], excerpt["last_line"]
+        write(excerpt["wrapper"], rf"\VerbatimInput[firstline={first},lastline={last},firstnumber={first}]" +
+              "{generated/" + excerpt["generated_path"] + "}")
+    manifest = {"schema_version": 1, "entrypoint": "NormArith.lean",
+                "source_role": "measured_runtime_import_closure",
+                "implementation_sha256": aggregate.hexdigest(), "modules": modules, "excerpts": excerpts}
+    write("implementation.json", json.dumps(manifest, indent=2))
+    return manifest
 
 
 def marked_blocks(source):
@@ -99,46 +196,44 @@ def example_data(draft, inputs=None, required_names=NAMES):
     return manifest
 
 
-def pilot_data(inputs=None):
-    path = inputs["pilot_report"] if inputs else ROOT / "benchmarks/results/report.json"
-    report = json.loads(path.read_text())
-    if report["status"] != "complete":
-        raise ValueError("the archived pilot is not a complete run")
-    account = report["accounting"]
-    summary = report["summary"]
-    ratio = summary["aggregate"]["speedup"]
-    facts = {
-        "PilotProofSaved": account["net_proof_lines_saved"],
-        "PilotNetSaved": account["net_lines_saved_including_imports"],
-        "PilotReplacements": account["proposed_replacements"],
-        "PilotFiles": len(summary["files"]), "PilotCandidates": account["candidate_count"],
-        "PilotBefore": account["original_proof_lines"], "PilotAfter": account["replacement_proof_lines"],
-        "PilotSlowdown": f"{100 * (1 / ratio - 1):.1f}",
-    }
-    write("pilot-facts.tex", "\n".join("\\newcommand{\\" + key + "}{" + str(value) + "}" for key, value in facts.items()))
-    rows = []
-    detail = []
-    for item in summary["files"]:
-        label = item["path"].removeprefix("Mathlib/Analysis/").removesuffix(".lean")
-        o, r = item["original"], item["replacement"]
-        rows.append(f"{tex(label)} & {o['median_seconds']:.3f} & {r['median_seconds']:.3f} & {item['speedup']:.3f}\\\\")
-        detail.append(f"{tex(label)} & {o['min_seconds']:.3f}--{o['max_seconds']:.3f} & {r['min_seconds']:.3f}--{r['max_seconds']:.3f}\\\\")
-    aggregate = summary["aggregate"]
-    rows.append(f"Total & {aggregate['original']['median_seconds']:.3f} & {aggregate['replacement']['median_seconds']:.3f} & {ratio:.3f}\\\\")
-    write("pilot-table.tex", r"""\begin{table}[t]
-\centering\small
-\caption{Archived pilot: Lean compilation of full files with built dependencies, in seconds. Ratios below one show a slowdown. Totals are per-pass sums before the median calculation.}
-\label{tab:pilot}
-\begin{tabular}{lrrr}\toprule
-File & Original median & Patch median & Ratio\\\midrule
-""" + "\n".join(rows) + r"\bottomrule\end{tabular}\end{table}")
-    write("pilot-detail-table.tex", r"""\begin{table}[h]
-\centering\small
-\caption{Archived pilot ranges across ten measured passes. The report keeps all samples.}
-\begin{tabular}{lrr}\toprule
-File & Original min--max (s) & Patch min--max (s)\\\midrule
-""" + "\n".join(detail) + r"\bottomrule\end{tabular}\end{table}")
-    manifest = json.loads((inputs["pilot_manifest"] if inputs else ROOT / "benchmarks/results/manifest.json").read_text())
+def community_request_data(evidence):
+    root = evidence.get("project_source_root")
+    if root is None:
+        raise ValueError("validated project source root is required for the community request")
+    root = Path(root).resolve()
+    relative = "NormArithTest/Tactic.lean"
+    path = root / relative
+    hashes = ((evidence.get("patch") or {}).get("verification") or {}).get("project_lean_sources", {})
+    if relative not in hashes:
+        raise ValueError("community request source lacks a final verification fingerprint")
+    if not path.is_file() or path.is_symlink() or not path.resolve().is_relative_to(root):
+        raise ValueError("missing validated community request source")
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != hashes[relative]:
+        raise ValueError("community request source hash differs")
+    expected = (
+        "-- The 2020 motivating example: 2a + b = 3a + (b - a).",
+        "example (a b : E) : ‖(2 : ℝ) • a + b‖ ≤ 3 * ‖a‖ + ‖b - a‖ := by",
+        "  norm_arith [le_refl ‖a‖, le_refl ‖b - a‖]",
+    )
+    lines = data.splitlines(keepends=True)
+    text = [line.decode().rstrip("\r\n") for line in lines]
+    starts = [index for index, line in enumerate(text) if line == expected[0]]
+    if len(starts) != 1 or tuple(text[starts[0]:starts[0] + len(expected)]) != expected:
+        raise ValueError("community request source anchor or body differs")
+    start = starts[0]
+    snippet = b"".join(lines[start:start + len(expected)])
+    (GENERATED / "community-request.lean").write_bytes(snippet)
+    write("community-request.tex", r"\VerbatimInput{generated/community-request.lean}")
+    return {"source": relative, "source_sha256": hashes[relative],
+            "start_line": start + 1, "end_line": start + len(expected),
+            "sha256": hashlib.sha256(snippet).hexdigest(),
+            "generated_path": "community-request.lean", "wrapper": "community-request.tex"}
+
+
+def source_example_data(inputs=None):
+    path = inputs["pilot_manifest"] if inputs else ROOT / "benchmarks/results/manifest.json"
+    manifest = json.loads(path.read_text())
     candidate = next(c for c in manifest["candidates"] if c["id"] == "fderiv-telescope")
     source_path = inputs["pilot_source"] if inputs else ROOT / ".lake/packages/mathlib" / candidate["path"]
     if source_path.exists():
@@ -149,7 +244,10 @@ File & Original min--max (s) & Patch min--max (s)\\\midrule
         raise ValueError("the pinned mathlib checkout is needed to extract the original source block")
     write("mathlib-original.lean", original)
     write("mathlib-replacement.lean", candidate["replacement"])
-    return {"path": str(path), "sha256": sha(path), "facts": facts}
+    return {"manifest": str(path), "manifest_sha256": sha(path), "candidate_id": candidate["id"],
+            "source": str(source_path), "source_sha256": sha(source_path),
+            "original_sha256": candidate["original_sha256"],
+            "replacement_sha256": hashlib.sha256(candidate["replacement"].encode()).hexdigest()}
 
 
 def table(name, caption, headings, rows, *, long=False):
@@ -157,12 +255,12 @@ def table(name, caption, headings, rows, *, long=False):
         write(name, "")
         return
     if long:
-        columns = r"p{0.61\linewidth}rrr"
+        columns = r"p{0.63\linewidth}rrr"
         start = r"\begin{longtable}{" + columns + "}\n" + r"\caption{" + caption + r"}\\\toprule" + "\n"
         start = "{\\small\n" + start
         end = r"\bottomrule\end{longtable}}"
     else:
-        start = r"\begin{table}[ht]\centering\small" + "\n" + r"\caption{" + caption + "}\n" + r"\begin{tabular}{lr}\toprule" + "\n"
+        start = r"\begin{table}[!htbp]\centering\small" + "\n" + r"\caption{" + caption + "}\n" + r"\begin{tabular}{lr}\toprule" + "\n"
         end = r"\bottomrule\end{tabular}\end{table}"
     header = " & ".join(headings) + r"\\\midrule" + "\n"
     if long:
@@ -195,7 +293,7 @@ def final_tables(evidence):
             rows.extend([(r"Compiled proof spans / affected files", f"{account['proposed_replacements']} / {len(patch['affected_files'])}"),
                          ("Original / replacement proof lines", f"{account['original_proof_lines']} / {account['replacement_proof_lines']}"),
                          ("Added helper / import lines", f"{account['added_helper_lines']} / {account['added_import_lines']}"),
-                         ("Net proof lines after helpers and imports", str(account["net_lines_saved_including_imports"]))])
+                         ("Net lines saved after helpers and imports", str(account["net_lines_saved_including_imports"]))])
         if timing is not None:
             rows.append(("Ratio of mean compilation times", f"{timing['estimate']:.4f}"))
             interval = timing["interval"]
@@ -339,7 +437,7 @@ def future_status(config=None, evidence=None):
     census, patch, timing = (evidence[key] for key in ["census", "patch", "timing"])
     if census is None:
         write("census-status.tex", r"\textbf{Current status:} this artifact does not contain a complete semantic census.")
-        write("census-detail.tex", "This build has no complete semantic-census summary. The pilot's five replacements do not show census coverage.")
+        write("census-detail.tex", "This build has no complete semantic-census summary.")
     else:
         summary = census["summary"]
         message = f"The census processed all {summary['universe_files']} tracked files. "
@@ -560,7 +658,14 @@ def main():
     evidence = load_evidence(config, ROOT)
     inputs = evidence.get("paper_inputs")
     names = EXPANSION_NAMES if evidence.get("targeted") is not None else NAMES
-    provenance = {"schema_version": 2, "pilot": pilot_data(inputs), "examples": example_data(args.draft, inputs, names), "status": future_status(config, evidence), "metadata": metadata_data(config, evidence, inputs)}
+    examples = example_data(args.draft, inputs, names)
+    implementation = implementation_data(evidence, examples["implementation_sha256"])
+    provenance = {"schema_version": 2, "source_example": source_example_data(inputs), "examples": examples,
+                  "implementation": implementation, "status": future_status(config, evidence),
+                  "metadata": metadata_data(config, evidence, inputs)}
+    if evidence.get("targeted") is not None:
+        provenance["community_request"] = community_request_data(evidence)
+    provenance["plots"] = generate_plots(evidence, GENERATED)
     write("provenance.json", json.dumps(provenance, indent=2))
 
 

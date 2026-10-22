@@ -15,6 +15,7 @@ import generate
 import test_evidence as baseline
 import test_expansion as targeted
 from test_calibration_metadata import add_export_metadata
+from test_community import REQUEST
 from unittest.mock import patch
 
 
@@ -109,8 +110,13 @@ class ComposedEvidenceTests(unittest.TestCase):
             "patch_sha256": evidence.BENCHMARK.sha256(patch)})
         dump(f.verification / "manifest.json", f.verified)
         (f.root / "NormArith.lean").write_text("-- Synthetic final implementation differs from background.\n")
+        community = f.root / "NormArithTest/Tactic.lean"
+        community.parent.mkdir(exist_ok=True)
+        community.write_text("-- Synthetic source fixture; not Lean evidence.\n" + REQUEST)
+        project_sources = {name: evidence.file_sha(f.root / name)
+                           for name in ["NormArith.lean", "NormArithTest/Tactic.lean"]}
         inputs = {evidence.recorded_name(f.root / f.config["selector_manifest"]): manifest_hash}
-        for name in ["NormArith.lean", "lakefile.toml", "lake-manifest.json", "lean-toolchain"]:
+        for name in [*project_sources, "lakefile.toml", "lake-manifest.json", "lean-toolchain"]:
             inputs[evidence.recorded_name(f.root / name)] = evidence.file_sha(f.root / name)
         body_root = f.root / "synthetic-body-census"
         body_events = body_root / "files/Mathlib.SyntheticFixture/attempt-01/events.jsonl"
@@ -127,7 +133,7 @@ class ComposedEvidenceTests(unittest.TestCase):
         f.verification_report.update(mathlib_revision=f.revision, input_manifest_sha256=manifest_hash,
              final_manifest_sha256=evidence.file_sha(f.verification / "manifest.json"), accounting=f.account,
              patch_sha256=evidence.BENCHMARK.sha256(patch), input_sha256=inputs,
-             project_lean_sources={"NormArith.lean": evidence.file_sha(f.root / "NormArith.lean")},
+             project_lean_sources=project_sources,
              proof_span_policy="manually_reviewed_exact_proof_replacement_with_source_bound_original_body_evidence",
              body_census_evidence=[{"candidate_id": "synthetic-only", "path": f.path, "parent_declaration": "example",
                  "body_start_byte": start, "body_end_byte": end, "source_sha256": source_hash, "census": str(body_root),
@@ -237,6 +243,7 @@ class ComposedEvidenceTests(unittest.TestCase):
             shutil.rmtree(f.root)
             restored = evidence.load_evidence(configuration, Path(temporary))
             self.assertEqual(evidence.evidence_facts(original), evidence.evidence_facts(restored))
+            self.assertEqual(restored["project_source_root"], (output / "project").resolve())
             self.assertFalse((Path(temporary) / ".lake").exists())
             self.assertFalse(any(path.name == "raw.tar.gz" for path in output.rglob("*")))
             workspace = Path(temporary) / "fresh-workspace"
@@ -245,7 +252,7 @@ class ComposedEvidenceTests(unittest.TestCase):
             scripts = workspace / "scripts"
             scripts.mkdir()
             repository = Path(__file__).resolve().parents[1]
-            for name in ["evidence.py", "evidence_transport.py", "expansion.py", "generate.py"]:
+            for name in ["evidence.py", "evidence_transport.py", "expansion.py", "generate.py", "plots.py"]:
                 shutil.copyfile(repository / "paper" / name, paper / name)
             for name in ["benchmark.py", "verify_selection.py", "select_expansion.py", "select_census.py", "census.py"]:
                 shutil.copyfile(repository / "scripts" / name, scripts / name)
@@ -253,6 +260,14 @@ class ComposedEvidenceTests(unittest.TestCase):
             subprocess.run([sys.executable, str(paper / "generate.py")], cwd=workspace, check=True, timeout=20)
             self.assertTrue((paper / "generated/quantified.lean").is_file())
             self.assertTrue((paper / "generated/metric.lean").is_file())
+            self.assertEqual((paper / "generated/community-request.lean").read_text(), REQUEST)
+            request = json.loads((paper / "generated/provenance.json").read_bytes())["community_request"]
+            self.assertEqual(request["source_sha256"], evidence.file_sha(output / "project/NormArithTest/Tactic.lean"))
+            self.assertEqual((request["start_line"], request["end_line"]), (2, 4))
+            implementation = json.loads((paper / "generated/implementation.json").read_bytes())
+            self.assertEqual(implementation["implementation_sha256"], restored["paper_inputs"]["implementation_sha256"])
+            self.assertEqual((paper / "generated/implementation/NormArith.lean").read_bytes(),
+                             (output / "project/NormArith.lean").read_bytes())
             self.assertIn('selected 4 pairs', (paper / 'generated/calibration-status.tex').read_text())
             self.assertFalse((workspace / ".lake").exists())
 

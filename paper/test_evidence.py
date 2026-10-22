@@ -128,6 +128,13 @@ class EvidenceTests(unittest.TestCase):
             generate.study_data({"example_candidate_id": None}, result)
             self.assertIn("undefined", (Path(directory) / "study-facts.tex").read_text())
 
+    def test_generated_net_savings_label_describes_saved_lines(self):
+        result = self.load()
+        with tempfile.TemporaryDirectory() as directory, patch.object(generate, "GENERATED", Path(directory)):
+            generate.final_tables(result)
+            self.assertIn("Net lines saved after helpers and imports",
+                          (Path(directory) / "census-table.tex").read_text())
+
     def paper_inputs(self, expanded=False):
         pilot_manifest = copy.deepcopy(self.selection)
         pilot_manifest["candidates"][0]["id"] = "fderiv-telescope"
@@ -183,7 +190,7 @@ class EvidenceTests(unittest.TestCase):
         provenance = {key: "synthetic fixture" for key in BENCHMARK.CALIBRATION_MATCH_KEYS}
         provenance.update(mathlib_revision=self.revision, manifest_sha256=evidence.file_sha(self.root / self.config["frozen_manifest"]),
                           proposed_patch_sha256=self.verification_report["patch_sha256"],
-                          project_lean_sources={"NormArith.lean": evidence.file_sha(self.root / "NormArith.lean")},
+                          project_lean_sources=copy.deepcopy(self.verification_report["project_lean_sources"]),
                           project_lake_manifest_sha256=evidence.file_sha(self.root / "lake-manifest.json"),
                           project_lakefile_sha256=evidence.file_sha(self.root / "lakefile.toml"),
                           project_toolchain_sha256=evidence.file_sha(self.root / "lean-toolchain"),
@@ -314,6 +321,7 @@ class EvidenceTests(unittest.TestCase):
             shutil.rmtree(self.root)
             result = evidence.load_evidence(config, Path(exported))
             self.assertEqual(evidence.evidence_facts(result), evidence.evidence_facts(original))
+            self.assertEqual(result["project_source_root"], (Path(exported) / "bundle/project").resolve())
             self.assertIn("checked at export", result["validation_context"])
             self.assertEqual(result["timing"]["bootstrap_resamples"], 10000)
             new_root = Path(exported) / "new-workspace"
@@ -321,7 +329,7 @@ class EvidenceTests(unittest.TestCase):
             paper.mkdir(parents=True)
             (new_root / "scripts").mkdir()
             repository = Path(__file__).resolve().parents[1]
-            for name in ["generate.py", "evidence.py", "evidence_transport.py"]:
+            for name in ["generate.py", "evidence.py", "evidence_transport.py", "plots.py"]:
                 shutil.copyfile(repository / "paper" / name, paper / name)
             shutil.copyfile(repository / "scripts/benchmark.py", new_root / "scripts/benchmark.py")
             dump(paper / "status.json", dict(config, description="Synthetic fixture; not manuscript evidence."))
@@ -332,6 +340,30 @@ class EvidenceTests(unittest.TestCase):
             self.assertTrue((generated / "hidden.lean").is_file())
             self.assertTrue(json.loads((generated / "examples.json").read_text())["checked"])
             self.assertIn("saved hashes", (generated / "example-status.tex").read_text())
+            implementation = json.loads((generated / "implementation.json").read_bytes())
+            self.assertEqual(implementation["modules"][0]["relative_source"], "NormArith.lean")
+            self.assertEqual((generated / "implementation/NormArith.lean").read_bytes(),
+                             (Path(exported) / "bundle/project/NormArith.lean").read_bytes())
+            self.assertEqual(json.loads((generated / "provenance.json").read_bytes())["implementation"], implementation)
+
+    def test_portable_measured_source_drift_and_missing_source_are_rejected(self):
+        self.add_timing()
+        self.paper_inputs()
+        with tempfile.TemporaryDirectory() as exported:
+            bundle = Path(exported) / "bundle"
+            config = evidence.export_bundle(self.config, bundle, self.root)
+            shutil.rmtree(self.root)
+            source = bundle / "project/NormArith.lean"
+            original = source.read_bytes()
+            source.write_bytes(b"-- changed measured source\n")
+            with self.assertRaisesRegex(evidence.EvidenceError, "portable payload changed or missing"):
+                evidence.load_evidence(config, Path(exported))
+            source.unlink()
+            with self.assertRaisesRegex(evidence.EvidenceError, "portable payload changed or missing"):
+                evidence.load_evidence(config, Path(exported))
+            source.write_bytes(original)
+            self.assertEqual(evidence.load_evidence(config, Path(exported))["project_source_root"],
+                             (bundle / "project").resolve())
 
     def test_compact_archive_paths_work_after_the_original_workspace_is_deleted(self):
         self.add_timing()

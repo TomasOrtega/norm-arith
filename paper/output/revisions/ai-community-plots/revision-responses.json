@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "revision": "AI-assisted tactic for a documented community request; two evaluation plots; full-paper review and revision",
+  "review_reports": [
+    "review-editorial.json",
+    "review-scientific.json"
+  ],
+  "responses": [
+    {
+      "finding": "E1",
+      "status": "addressed",
+      "response": "Added the documented explicit-bound interface to automatic-selection progression and a regression/repair episode; linked ADRs and red/green build evidence."
+    },
+    {
+      "finding": "E2",
+      "status": "addressed",
+      "response": "Qualified the contribution as the normed-space decomposition part of the request and explicitly excluded the later algebra/product extension."
+    },
+    {
+      "finding": "E3",
+      "status": "addressed",
+      "response": "Replaced the opening example with the exact requested inequality, extracted from hash-verified frozen source. Preserved rational averaging in the checked-examples appendix. The complete source test module passed a fresh Lean check."
+    },
+    {
+      "finding": "E4",
+      "status": "addressed",
+      "response": "Changed the generated 310-line row label to Net lines saved after helpers and imports, with the numerical evidence unchanged."
+    },
+    {
+      "finding": "E5",
+      "status": "addressed",
+      "response": "Defined each file point as a ratio of original and replacement sample means across 40 paired passes. Kept the aggregate interval separate."
+    },
+    {
+      "finding": "E6",
+      "status": "addressed",
+      "response": "Placed a FloatBarrier after the census tables, before the timing protocol."
+    },
+    {
+      "finding": "E7",
+      "status": "addressed",
+      "response": "Changed census and accounting instructions into descriptions of the implemented and verified methods."
+    },
+    {
+      "finding": "SCI-01",
+      "status": "addressed",
+      "response": "Documented concrete project decisions and a failed-regression-to-successful-build sequence without assigning unrecorded decisions to either humans or agents."
+    },
+    {
+      "finding": "SCI-02",
+      "status": "addressed",
+      "response": "Explained module, linarith, and bound in relation to decomposition search. Explicitly limited comparison to existing library proofs and denied a held-out success estimate."
+    },
+    {
+      "finding": "SCI-03",
+      "status": "addressed",
+      "response": "Corrected the Strong Law explanation to say the tactic combines the norm bounds, without the incorrect count of two."
+    },
+    {
+      "finding": "SCI-04",
+      "status": "addressed",
+      "response": "Specified M in Q^(r\u00d7n), b in R^r, and the dimensions of the nonnegative feasible set; made the rational-vector condition explicit."
+    },
+    {
+      "finding": "SCI-05",
+      "status": "addressed",
+      "response": "Described the seven slower files through their larger observed replacement means in the caption and main results, with no per-file inference claim."
+    }
+  ],
+  "unresolved_findings": [],
+  "retained_limits": [
+    "No complete prompt or effort transcript, AI productivity estimate, or autonomous-code fraction.",
+    "No upstream acceptance claim or claim to implement the broader normed-algebra request.",
+    "No new full-library coverage, alternative-tactic comparison, or held-out tactic-success experiment.",
+    "Timing intervals remain conditional for the fixed selected workload and recorded native-import configurations."
+  ],
+  "numerical_results_changed": false,
+  "validation": {
+    "paper_tests": 85,
+    "fresh_community_test_module": "community-example-check.json",
+    "content_recheck": "revision-verification.json",
+    "layout": "Strict release build and all-page visual review passed: four main pages, 19 total pages. No unresolved layout findings.",
+    "strict_build": "build.log",
+    "diff_check": "git -c core.whitespace=cr-at-eol diff --check: passed",
+    "pdf_sha256": "e4337f8fc29398d3fbaa64c0150682433f80ad32d01d59102dd540e6f778a822",
+    "visual_review": "final-visual-review.json"
+  },
+  "additional_layout_revision": {
+    "finding": "FV1",
+    "status": "addressed",
+    "response": "Allowed tables to share pages through normal float placement. Table 7 now shares page 14 with the timing method, eliminating an otherwise empty float page."
+  },
+  "source_sha256": {
+    "paper/paper.tex": "ce0cbbeb146a0e1ba57d361c066857a84d822af4ffb58d38297d6102b1b23925",
+    "paper/appendix.tex": "5c80e82af0d9e5fc63c2432afa37caa8ec4ddc0fbd6b2f4021cd9659eb9d6088",
+    "paper/plots.py": "ce044b530e07f17eda57470c2f9f3341aff20a22c16dc8dfb1be4d863f7808c4",
+    "paper/generate.py": "4a77d2dfa9b1dd3ea66dafe718ebd64845546e84552f718662675a6b3085136a",
+    "paper/references.bib": "3e796a05a8ae87130846a6a9e098623f562afb263b948c5aeabaafec5c3cfdac"
+  }
+}

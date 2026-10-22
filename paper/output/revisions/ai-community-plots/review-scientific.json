@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "reviewer": "Codex scientific and methods review",
+  "review_date": "2026-10-21",
+  "reviewed_pdf_pages": 19,
+  "scope": [
+    "Entire main text, sections 1–5",
+    "Appendix A: finite characterization, target removal, strict feasibility",
+    "Appendix B: checked examples and literal source replacements",
+    "Appendix C: census, selection, line accounting, calibration, timing, hardware",
+    "Appendices D–E: AI provenance, research limits, reproducibility",
+    "Appendix F: measured implementation excerpts and full source import closure",
+    "Figure 1, generated plot data, and Tables 1–10"
+  ],
+  "method": "Read-only source and evidence inspection; all 19 PDF pages rendered and visually inspected. Existing compile receipts and source hashes were inspected. No tactic, census, timing, or statistical reruns were performed.",
+  "overall_assessment": "No blocking mathematical or evidence-consistency error found. The finite characterization is coherent, and the paper separates mathematical completeness, checked proof production, bounded program behavior, and conditional timing inference. Revise the case-study process account and comparison scope; correct the Strong Law explanation and minor mathematical/plot wording.",
+  "reviewed_source_sha256": {
+    "paper/paper.tex": "9bf964ec110029fe7999a464e3efbeca60f33f5763bfcbf118b79f4252653d53",
+    "paper/appendix.tex": "2be72819a7cfaf6c203975d10800e1d93772ca0940e07b5a16d09c76e3fe4d7f",
+    "paper/implementation.tex": "e08123c24315e362d79fd2626a9efe9558ae93279c81cb904136bde350710b34",
+    "paper/references.bib": "3e796a05a8ae87130846a6a9e098623f562afb263b948c5aeabaafec5c3cfdac",
+    "paper/output/pdf/paper.pdf": "3f5b26afc4e0814bc1328ced03a215f5251870db6f317bccae752a8daa422a01",
+    "paper/plots.py": "4cf788fb3834071b20e337c1f823f310dc9b5f7643c986e2a9a56a39cd415baf",
+    "paper/generated/boundary.tex": "f2fe70f6517f51018b4e3a107b295035001adfd1711685e74a5023874451a4e6",
+    "paper/generated/calibration-status.tex": "d799a772ce061ef1dc07645322b06fa489f5002043fda911a690b8f261ce162a",
+    "paper/generated/calibration-table.tex": "c949c949a9584fa9ed92b9ed806d2e5ad7b07c04bb6a096fdd6131f76915384e",
+    "paper/generated/census-detail.tex": "06162a351ff07ce3024c63e66007c2d38b4e8db959c9fe6cd9ee465a3e5bdd7f",
+    "paper/generated/census-example-provenance.tex": "d7b82cd001682ebc157859707be49f48d77f85759a3b516c3b30d432e7f625b4",
+    "paper/generated/census-fragments.tex": "bc912526797772f407072aa54bd0cdb45e8d4c8a51fdabe2de64cf44fa465afd",
+    "paper/generated/census-outcomes.tex": "f850ce7c895f13df47b00d8ea56e45fad091d4287e6e2711c6beeb622e697f47",
+    "paper/generated/census-status.tex": "5ac1c149188bdf34961e86aeaff7b4acdcdae8a90105a56c565c8406c7a41779",
+    "paper/generated/census-table.tex": "c30c31a90d978a56296eb1e8768fbd077705481e8e17d6fcbe238055a8cae099",
+    "paper/generated/confirmatory-status.tex": "da8725cdecb622291f2383cfc9a88ee73c5432bccf76ae0c2134784df20bcc92",
+    "paper/generated/evaluation-figure.tex": "2ce36fb48fa80aed42f7d059e15830066c79db0091a5df58f538a8c9f8759bd0",
+    "paper/generated/evaluation-plot.tex": "08c93f246cd5b8ad5625497155634eddf69fc39016612acd141e41acbf7cc77f",
+    "paper/generated/evaluation-standalone.tex": "c13d3136f1a74399b4f9b086ed4d595a3eab30c1c22c93652ffca98147c2adc8",
+    "paper/generated/example-status.tex": "b4016080fd7a1a8b9f0dbe53127c870cb2a0884150ad1f599b099c6ca1ec3f4b",
+    "paper/generated/hidden.tex": "d0cebb780b9e446e19b1bdcb697485a631f415313fa6c53d62a44e9d40084e82",
+    "paper/generated/implementation-certificate.tex": "cfd0ce58534eca41949db4a7a59293b7a094ae20b3ce8dc5cc9b67feeaed90bc",
+    "paper/generated/implementation-search.tex": "fc8bb39cacae48a17e803647acc70c7c39b8c6e004dd152efbfe905bfd1d685e",
+    "paper/generated/implementation-status.tex": "36ef3f592f3c7c09bef65ba33d0fab3d25e81d4d8dc8339c10fd83a3d2dd8d1f",
+    "paper/generated/implementation-tactic.tex": "3a3f2ed642c442a8c64a7f782ece36d83b7549800b089b19ee294d938ed7454d",
+    "paper/generated/line-costs.tex": "e3d54cac2022a3e33f037877c2abd85c1d6bc50b173218cf6e351ee84f6fb308",
+    "paper/generated/mathlib.tex": "4d0a808cfe2e23de1b6cec7411c5ee8ec5584411d277e01068070323746004ae",
+    "paper/generated/metric.tex": "0e42e09032927fc998a73a9b7d06451925405b2c14b2e1f3902f36d8742efbc8",
+    "paper/generated/quantified.tex": "c4b040df2e929e9d13d0ab87abdad86df791ed0a8a5907f70857339f7ff5bb35",
+    "paper/generated/reverse.tex": "dd0142eaf8422f2d9f8f3adb728b6f895dc15838126df9af36904e1ef8aa99c7",
+    "paper/generated/selector-outcomes.tex": "4b88be2150061a12718c5a91b8b246496baa172bca4052296aa55c723aae705d",
+    "paper/generated/study-facts.tex": "27aaedcd0b043f09abe6562745984d1452344e1b0c56ea9ae46715548a71353b",
+    "paper/generated/targeted-fragments.tex": "f39d821af47c12f5b72c1d1ce3d9ac4b761e93812b9002881c38c92ec29728bb",
+    "paper/generated/targeted-outcomes.tex": "6e5f849a46b9a483bf64bc8f1397461ca1458d3cc9c9d1be08be2ae520c04c1d",
+    "paper/generated/timing-main.tex": "db5f8b8ac10853692b2be064fb0a321429ec6c97d4dff81b3065c50a676ec2fe",
+    "paper/generated/timing-setup.tex": "d85e31d3a849125870d4d9d9820d2251ec51e72fdd28afa4c9ac26efa28aeeab",
+    "paper/generated/timing-table.tex": "dff0b3cf8ae9737ba0fe5fc88c3dc727f16f3b960f493ca63f71b4c488c70e1f",
+    "paper/generated/evaluation-plot.json": "78a0696155aef1c758355eefd1b3673db55fea9b5e5701339d78e9ea0434104e",
+    "paper/generated/evaluation-plot-provenance.json": "b4844c53db99f3c4fd7560b9869ad6f4bf6b525bec29d6a592abe89ffa652f9d",
+    "paper/generated/implementation.json": "d54944d465ecb41bfe751da76355831097758c89eb63a167cb5e41fe0e951671",
+    "paper/generated/provenance.json": "8f55da6daecc8cf62279f888511ce6c5fbf62e05ef2e754cdaeefec611578c9f",
+    "paper/generated/implementation/NormArith/Certificate.lean": "3d944608f71ee05fda46c2347488e72d37e2635d578f84ce412177a22b42c516",
+    "paper/generated/implementation/NormArith/Metric.lean": "4987a96a314ef53daa83868c5a772e133899efbb81b80e9d88792581629deb0f",
+    "paper/generated/implementation/NormArith/Search.lean": "10cc53acad6c6670000e78621ebff2a90613373228aad93663cb1b589ad1f358",
+    "paper/generated/implementation/NormArith/Tactic.lean": "53c79f56f2c5c66fc2a9af885e37e715f464eeb9557450d19a7274bd88d1de77",
+    "paper/generated/implementation/NormArith.lean": "3e21896ccac8fb1d5c04e9a9903a2079a045ef3230bc784d23a02821b2a12c67"
+  },
+  "findings": [
+    {
+      "id": "SCI-01",
+      "severity": "medium",
+      "priority": 2,
+      "section": "Section 2; Appendix D",
+      "location": "paper/paper.tex:74–78; paper/appendix.tex:437–452",
+      "title": "The central AI-assisted development contribution needs concrete, traceable development episodes",
+      "rationale": "The manuscript names ChatGPT and Codex and lists artifact components, but otherwise gives little account of development. The qualification against AI productivity claims is appropriate; readers still need one or two observable project decisions or failures to understand the engineering case study. Such evidence already exists, so this can be repaired without inventing human effort or agent autonomy.",
+      "actionable_revision": "Add a compact table or paragraph with two documented episodes: explicit-fact upper bounds evolving into the default automatic interface, and alias-sensitive certificate construction corrected through failing regression examples followed by a warning-free full build. Link the ADRs and regression receipt. Describe these as episodes within the AI-assisted project; the available records do not attribute each decision specifically to a human or agent.",
+      "evidence": [
+        "docs/adr/0002-initial-tactic-fragment.md",
+        "docs/adr/0004-automatic-bound-discovery.md",
+        "NormArithTest/Paper.lean:9–14",
+        "artifacts/expansion/next/production-regressions/receipt.json",
+        "artifacts/expansion/next/production-regressions/alias-red.log",
+        "artifacts/expansion/next/production-regressions/green-build.log",
+        "artifacts/expansion/next/alias-regression/Probe.lean"
+      ]
+    },
+    {
+      "id": "SCI-02",
+      "severity": "medium",
+      "priority": 2,
+      "section": "Section 5 and Section 4 baseline scope",
+      "location": "paper/paper.tex:196–206",
+      "title": "Clarify what the implementation adds to existing Lean automation and what the benchmark does not compare",
+      "rationale": "Related work names HOL Light and Isabelle but omits the existing Lean tools that the implementation builds on. Since the motivating request is historical, a reader could infer that the study establishes a current gap or superiority over available tactics. The actual experiment compares edited proof text and its native import configuration with the original library source, not alternative Lean tactic pipelines or AI coding systems.",
+      "actionable_revision": "Add a short concrete distinction: module checks a supplied vector identity, linarith combines supplied scalar inequalities, and norm_arith searches for the decomposition constraints before those checks. Mention bound as related structural inequality automation if space permits. Explicitly say the evaluation does not compare alternative tactic portfolios, and its selected patch is not a held-out measure of general proof success. Do not claim that these tactics fail on all selected goals.",
+      "evidence": [
+        "paper/generated/implementation/NormArith/Tactic.lean:480–512",
+        ".lake/packages/mathlib/Mathlib/Tactic/Module.lean:12–20",
+        ".lake/packages/mathlib/Mathlib/Tactic/Bound.lean:13–35",
+        "docs/PLAN.md",
+        "docs/REFERENCES.md"
+      ]
+    },
+    {
+      "id": "SCI-03",
+      "severity": "low",
+      "priority": 3,
+      "section": "Section 4, selected Strong Law replacement",
+      "location": "paper/paper.tex:176–178",
+      "title": "The Strong Law replacement combines three norm bounds, not two",
+      "rationale": "After constructing hsum, the tactic uses that bound, h'n for the centered approximating average, and the earlier anonymous expectation-difference bound, together with hδ. The literal source is a three-term decomposition.",
+      "actionable_revision": "Replace “combine two bounds” with “combine the three norm bounds” or simply “combine these bounds.”",
+      "evidence": [
+        "paper/generated/census-example-replacement.lean",
+        "artifacts/paper-evidence-expanded/mathlib/Mathlib/Probability/StrongLaw.lean:740–780"
+      ]
+    },
+    {
+      "id": "SCI-04",
+      "severity": "low",
+      "priority": 3,
+      "section": "Appendix A.1, Lemma 1",
+      "location": "paper/appendix.tex:33–38",
+      "title": "Specify the matrix and right-hand-side dimensions",
+      "rationale": "The lemma currently says “let b be real” although Mz=b uses a vector right-hand side. The proof and intended result are correct, but the statement should not type b as a scalar.",
+      "actionable_revision": "Write M∈Q^{r×n}, b∈R^r, and P={z∈R^n_{≥0}:Mz=b}; replace “if b is rational” with b∈Q^r. The bounded-below clause is redundant for nonnegative costs, though harmless.",
+      "evidence": [
+        "paper/appendix.tex:33–80"
+      ]
+    },
+    {
+      "id": "SCI-05",
+      "severity": "low",
+      "priority": 3,
+      "section": "Figure 1 caption and Section 4 timing result",
+      "location": "paper/generated/evaluation-figure.tex; paper/paper.tex:190",
+      "title": "Make clear that the seven slower files are classified by observed means",
+      "rationale": "The file markers are ratios of per-file sample means. Only the aggregate diamond has an uncertainty interval; there are no per-file inference results. The plotted data and total agree with the tables, but the bare label “7 slower” can be read more strongly than the analysis establishes.",
+      "actionable_revision": "Use “seven files with higher replacement mean times” or “seven slower sample means” in the caption, and identify the points as per-file ratios of means. Keep the aggregate interval explicitly separate from variation among files.",
+      "evidence": [
+        "paper/generated/evaluation-plot.json",
+        "paper/generated/timing-table.tex",
+        "paper/generated/evaluation-figure.tex"
+      ]
+    }
+  ],
+  "checked_positive_findings": [
+    "The vertex-support proof handles zero costs and unbounded feasible polyhedra through support reduction; the realization construction and quotient preserve the required scalar norm values.",
+    "The quotient encoding is properly limited to vector-equality assumptions and scalar conclusions; vector disequalities and equality conclusions are explicitly excluded.",
+    "Removing the target from source supports preserves the finite characterization, including the abs(c_i)>=1 and abs(c_i)<1 cases.",
+    "The strict-feasibility construction is an exact finite-system argument and is not misrepresented as the Lean backend implementation.",
+    "The 582 original lines minus 226 replacement lines and 46 import lines reconcile to 310 net lines. The figure includes all 46 affected files and seven sample-mean regressions.",
+    "The aggregate timing ratio and interval agree across plot data and generated tables; the manuscript states the independent representative block assumptions, ten block sample size, changing timing conditions, native-import confound, and warm dependency scope.",
+    "The historical full census, targeted follow-up, isolated successes, and composed 87-span patch are kept distinct. The 50 census / 37 outside-census composition is disclosed.",
+    "The original requested inequality is present in the measured test source; the additional community-example-check receipt records a successful direct compilation without modifying frozen runtime sources.",
+    "AI attribution is supported at project/tool level. No runtime language-model use, model comparison, autonomous fraction, productivity advantage, or upstream acceptance is claimed.",
+    "All 19 rendered pages were inspected. No scientific information was missing due to clipping in the reviewed PDF."
+  ],
+  "remaining_limits_to_preserve": [
+    "No controlled AI-versus-human development comparison, complete prompt history, human/agent effort record, or reliable autonomous code fraction.",
+    "A documented request and successful tests do not establish broad community demand, adoption, endorsement, or mathlib acceptance.",
+    "Finite mathematical completeness is relative to the declared abstraction, with no end-to-end formal completeness proof, parser coverage guarantee, or resource-independent implementation guarantee.",
+    "Bounded quantified, additive-group, opaque-upper-bound, and metric extensions do not inherit the real-core completeness theorem.",
+    "The selected local source patch has positive-savings selection and examples used in development; it does not estimate mathlib-wide speedup or general proof success.",
+    "The speed ratio compares the full measured configurations, including native imports. It is not an isolated algorithmic speedup or a cold full-build result.",
+    "The BCa interval has ten resampling blocks and remains conditional on independence and representativeness; pilot diagnostics, power snapshots, and retaining all samples do not prove those assumptions.",
+    "Kernel checking validates produced proofs, not experimental selection, research claims, maintenance quality, or accuracy of AI-development attribution."
+  ],
+  "external_sources_checked": [
+    {
+      "url": "https://leanprover-community.github.io/archive/stream/187764-Lean-for-teaching/topic/Real.20analysis.html#196946153",
+      "scope": "Original 2020 request and surrounding discussion; checked during provenance audit"
+    },
+    {
+      "url": "https://arxiv.org/abs/0904.3482",
+      "scope": "2012 version metadata and universal/existential normed-space decidability statement"
+    },
+    {
+      "url": "https://arxiv.org/pdf/0904.3482",
+      "scope": "Primary-paper metadata and abstract; the manuscript makes only the supported general related-work claim"
+    }
+  ]
+}

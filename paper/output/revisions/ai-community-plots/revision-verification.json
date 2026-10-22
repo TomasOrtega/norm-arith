@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "reviewer": "Codex scientific reviewer, revision verification",
+  "review_date": "2026-10-21",
+  "scope": "Read-only verification of all five scientific findings and editorial findings E1–E7 against revised sources, generated text, archived implementation evidence, and the community-example compile receipt. No experiments rerun.",
+  "overall_status": "all_substantive_findings_addressed_in_source",
+  "unresolved_substantive_issues": [],
+  "findings": [
+    {
+      "id": "SCI-01",
+      "status": "addressed",
+      "verification": "Sections 2 and D now describe the explicit-to-automatic interface progression and the function-alias regression, with ADR and red/green build archive links. They explicitly avoid attributing every project decision to an agent or human."
+    },
+    {
+      "id": "SCI-02",
+      "status": "addressed",
+      "verification": "Section 5 identifies module, linarith, and bound, states the existing-library-proof baseline, and excludes separate tactic comparisons and held-out success claims."
+    },
+    {
+      "id": "SCI-03",
+      "status": "addressed",
+      "verification": "The Strong Law description now says “combine the norm bounds,” avoiding the incorrect two-bound count."
+    },
+    {
+      "id": "SCI-04",
+      "status": "addressed",
+      "verification": "Lemma 1 now gives M in Q^{r×n}, b in R^r, z in R^n_{≥0}, and the rational condition b in Q^r."
+    },
+    {
+      "id": "SCI-05",
+      "status": "addressed",
+      "verification": "Main timing prose and Figure 1 caption explicitly classify the seven files using mean replacement times. The per-file ratio and aggregate interval have separate descriptions."
+    },
+    {
+      "id": "E1",
+      "status": "addressed",
+      "verification": "Concrete development sequence and regression/correction episode are visible in Section 2 and linked to immutable evidence in Appendix D. Missing effort and prompt history remain explicitly unknown."
+    },
+    {
+      "id": "E2",
+      "status": "addressed",
+      "verification": "Abstract and opening describe the normed-space/decomposition-search part of the request. The later normed-algebra product extension is explicitly outside the core."
+    },
+    {
+      "id": "E3",
+      "status": "addressed",
+      "verification": "The main text imports the exact historical requested inequality from generated/community-request.lean. The generator validates the full archived test source hash and exact anchor/body, records source range and snippet hash, and Appendix B identifies the additional fresh test-module check."
+    },
+    {
+      "id": "E4",
+      "status": "addressed",
+      "verification": "Both generator and generated census table now label 310 as “Net lines saved after helpers and imports.”"
+    },
+    {
+      "id": "E5",
+      "status": "addressed",
+      "verification": "The generator and generated caption define each point as a ratio of mean original to mean replacement time over 40 paired passes."
+    },
+    {
+      "id": "E6",
+      "status": "addressed_in_source",
+      "verification": "A FloatBarrier immediately follows generated/census-detail.tex, before the historical-format and timing prose. Final PDF placement must be checked after rebuilding."
+    },
+    {
+      "id": "E7",
+      "status": "addressed",
+      "verification": "Line accounting and census methods now use descriptive performed-procedure wording. Remaining “must” concerns the eligibility definition, not an unperformed protocol command."
+    }
+  ],
+  "attribution_assessment": "The revision describes observable project progression and repairs, supported by development records. It neither attributes all decisions to AI nor invents human effort, autonomy fractions, or productivity effects.",
+  "comparison_assessment": "The revised related-work text correctly describes the roles of existing Lean automation and limits the measured baseline to the original library proofs and recorded import configurations.",
+  "community_example_assessment": "The generated exact requested inequality and its source SHA match the independently recorded successful compilation receipt; it is correctly distinguished from the six marked Paper.lean examples.",
+  "reviewed_source_sha256": {
+    "paper/paper.tex": "ce0cbbeb146a0e1ba57d361c066857a84d822af4ffb58d38297d6102b1b23925",
+    "paper/appendix.tex": "5c80e82af0d9e5fc63c2432afa37caa8ec4ddc0fbd6b2f4021cd9659eb9d6088",
+    "paper/plots.py": "a9cb602ef6dfcc81ed923ee8fd92e79f4b8a1bb8f452d49e2780f1df6c43849a",
+    "paper/generate.py": "02acac0ad564440dc5ad22947d2d00298af7a9b511b39a5c24741040eac312df",
+    "paper/generated/community-request.lean": "afaa02d907f6b339160cf7eb36c0f1202d91fd91b41252bf3e1ad6fea224f18d",
+    "paper/generated/community-request.tex": "9bdc56a5482c0b3e48553435c5b047291e1b51fcdef7364c9b794f8c252eb1fe",
+    "paper/generated/provenance.json": "8384b8b9fba6cfbbf9847cac2697888c4906779c6648ce5b52e2caaffe4aa2fa",
+    "paper/generated/census-table.tex": "25fbfb1b390f13c16de8a1086e97b0e7def77959104dd4f8fbc1b705400c14ad",
+    "paper/generated/evaluation-figure.tex": "e3751bbc4032be5c332eda6cdf6ca76af4e2372989ed59bac58e70efb9e96396",
+    "paper/output/revisions/ai-community-plots/community-example-check.json": "35dfa79d13124a36f4ac18a50327d0903993c9174f629eec24e61e58bde05348"
+  },
+  "pdf_status": {
+    "path": "paper/output/pdf/paper.pdf",
+    "sha256_at_verification": "dfe62a929d746308eb39a717b36ede6003c780e4b155bd929f25c691e993e5f4",
+    "same_as_reviewed_pre_revision_pdf": false,
+    "revised_pdf_visually_reviewed": false,
+    "required_final_step": "Finish manuscript build and inspect revised page count, placement of census tables, and the newly displayed request example."
+  },
+  "remaining_limits": "All previously documented AI-provenance, bounded-program, selected-patch, native-import, and conditional timing limits remain necessary and are retained in the revised text."
+}

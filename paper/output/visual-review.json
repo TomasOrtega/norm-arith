@@ -1,34 +1,207 @@
 {
-  "schema_version": 2,
-  "status": "all_pages_reviewed",
-  "reviewed_at_utc": "2026-10-21T20:11:16.760119+00:00",
-  "pdf_sha256": "d3729d2afb922c0ee3a62cfc41675df66746eb632b4da9eb47ffd5d9cceb9dca",
-  "main_pages": 4,
-  "total_pages": 17,
-  "rendered_page_sha256": {
-    "page-01.png": "073e6f8d7a304d683313811c9d350b6667573b908bdd40ad700f70f291beed76",
-    "page-02.png": "66c25e08b2e89ca3d8290ca097530c3277d97cdbf66c79fc10109fbaf963953a",
-    "page-03.png": "b768fcef756c205c4ca709c09e0dc949f0f99fc853e99e9ef97e76f82c68f9cb",
-    "page-04.png": "1161ef86fee0d36888689dda4fae4ce66d7e7c399aa8acd7aa9bff9e091f750d",
-    "page-05.png": "f1600a84245ab65f78108aa6d742f4f2e62745843e02e7b1a0102ba5fe8aab66",
-    "page-06.png": "5b720b4e40f58c31c56f223611d6a1d41f749b819d29b34f21b913145a0f71f7",
-    "page-07.png": "969c834a6bddf2d969ce79300f3320209f18b1825afcd29320cdf0bfbe64dd1c",
-    "page-08.png": "a284b5c1be69e05be44ad002541db459c21b6b9c1d4b5c1fa5d623404ad4c351",
-    "page-09.png": "dcb19b33489f594f76ce70c30bbceb4a425fa822e1f874bc749444904e58a45c",
-    "page-10.png": "27ae94a94ffbebc6ff5080d29ee32047b77d37b6a0d35ef2b79c2c02975e222b",
-    "page-11.png": "a2e456d1cf4eedff8780c660a24d4717a6c5e3c4c1c574598f4d3cc4ca30784a",
-    "page-12.png": "04494fce29c9428a1c60f0ab38580aa9827ba0f7b1f0c41bbb3c3c29cc5efa1a",
-    "page-13.png": "dc3481d84dbfc488dc8a4f9e1c273e08d68d972461ed544991a0841298be7914",
-    "page-14.png": "4d75884a3e56f868bcb7db78210b4db046d91593d31009dafb3f46eb49d9ab60",
-    "page-15.png": "01c3ac69f3554af8ba2f165f24b97a164166021311546e2121c2850040093f70",
-    "page-16.png": "bfe9d93fb7dcf806616b44692bdb24ce030b61bbbe51ca2e399297f32e02b4f7",
-    "page-17.png": "4c6501e6b0e14dc4098c41c8bb913246903bc42511a2e81bb77bff62dde0eafd"
-  },
-  "checks": [
-    "All17 pages visually inspected; final changed appendix pages rechecked after FloatBarrier removal.",
-    "No clipping, overlaps, missing glyphs, or unreadable table entries.",
-    "All46 timing rows and seven ratios below1 are retained.",
-    "Official style and fonts unchanged; main body meets four-page cap."
+  "schema_version": 1,
+  "reviewer": "independent editorial reviewer",
+  "review_date": "2026-10-21",
+  "status": "pass",
+  "scope": "Final read-only visual review of the 19-page layout candidate. Pages 1-13 are pixel-identical to the previously inspected snapshot; every changed page 14-19 was freshly inspected.",
+  "pdf": "paper/output/pdf/paper.pdf",
+  "reviewed_pdf_snapshot": "paper/tmp/final-editorial-table-review.pdf",
+  "pdf_sha256": "e4337f8fc29398d3fbaa64c0150682433f80ad32d01d59102dd540e6f778a822",
+  "page_count": 19,
+  "main_page_count": 4,
+  "render_command": "pdftoppm -r 110 -png paper/tmp/final-editorial-table-review.pdf paper/tmp/final-editorial-table-review",
+  "pages": [
+    {
+      "page": 1,
+      "image": "paper/tmp/final-editorial-table-review-01.png",
+      "sha256": "82b4f2a9796dfbdf6e8edadca1c8d024ccc8a9c95b72048aea28d6e833de3bd3",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 1,
+      "notes": "Title, abstract, exact community-request Lean excerpt, and section transition are legible."
+    },
+    {
+      "page": 2,
+      "image": "paper/tmp/final-editorial-table-review-02.png",
+      "sha256": "1b312e0c5552d6ca7795c79f7d1ec1432caab2dd9ebfe57259c981a97a4987a5",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 2,
+      "notes": "Development account, mathematical definitions, theorem, and equations are legible."
+    },
+    {
+      "page": 3,
+      "image": "paper/tmp/final-editorial-table-review-03.png",
+      "sha256": "4eb0888b84eb8515b3ec6db4dc440a29b13281d36b680d744af79ffeba22006f",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 3,
+      "notes": "Figure 1 is inside Library evaluation after its introduction; both panels, marks, axes, and full caption are legible."
+    },
+    {
+      "page": 4,
+      "image": "paper/tmp/final-editorial-table-review-04.png",
+      "sha256": "d6a15b6e0143831bfc1536107293f54f780643f20d7211b9f8302247be03429a",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 4,
+      "notes": "Related work and scope are legible and main content remains within four pages."
+    },
+    {
+      "page": 5,
+      "image": "paper/tmp/final-editorial-table-review-05.png",
+      "sha256": "05366a3b80be5790ae47435c917ae326387cff7a6e0196130c703117bb8dc952",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 5,
+      "notes": "Bibliography URLs wrap without clipping."
+    },
+    {
+      "page": 6,
+      "image": "paper/tmp/final-editorial-table-review-06.png",
+      "sha256": "694ee9d2f95961830819569fd78d853939b99e779386f89786c26c6019ddfa0b",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 6,
+      "notes": "Proof appendix has intact notation and margins."
+    },
+    {
+      "page": 7,
+      "image": "paper/tmp/final-editorial-table-review-07.png",
+      "sha256": "74f9c48da8955097583a698b28b95673935aa110b12c0de307545b66d66b1b1c",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 7,
+      "notes": "Proof continuation and theorem proof are legible."
+    },
+    {
+      "page": 8,
+      "image": "paper/tmp/final-editorial-table-review-08.png",
+      "sha256": "1ae4e2c2c7b8f82dd414d7809d86023d40b9a03a7df612aa9a7f2ce44e1e433c",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 8,
+      "notes": "Community-source provenance, averaging, and quantified examples are legible."
+    },
+    {
+      "page": 9,
+      "image": "paper/tmp/final-editorial-table-review-09.png",
+      "sha256": "3faa3f581868c003f0bf99bfafbd0a215c1ea21f978b5aa3f4087bc2df57338a",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 9,
+      "notes": "Metric, reverse-triangle, boundary, and source-example material is legible; source block continues onto page 10."
+    },
+    {
+      "page": 10,
+      "image": "paper/tmp/final-editorial-table-review-10.png",
+      "sha256": "190d6ec2b124f34776d9febb217754c35df72ddefd146f282e3df717c016f43d",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 10,
+      "notes": "Continued source block and replacements remain readable; evaluation appendix begins cleanly."
+    },
+    {
+      "page": 11,
+      "image": "paper/tmp/final-editorial-table-review-11.png",
+      "sha256": "8df8a2216210abb6b1bdc0d24864a6cfd4d4c0d8bb78096c3fd4d20c236cec3e",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 11,
+      "notes": "Implementation and census methods are legible and precede their tables."
+    },
+    {
+      "page": 12,
+      "image": "paper/tmp/final-editorial-table-review-12.png",
+      "sha256": "a1ac9f44353eaa23e4078f7927c7b846827ce04cafeaaec59e878725cbd4c717",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 12,
+      "notes": "Tables 1 and 2 are readable; the 310-row label now explicitly says lines saved."
+    },
+    {
+      "page": 13,
+      "image": "paper/tmp/final-editorial-table-review-13.png",
+      "sha256": "162b231c8191436a414b3c5c6e68fe1f9ecef263df0d3fb64519fe8d7dea9000",
+      "inspected": true,
+      "inspection": "prior visual inspection plus identical rendered image hash",
+      "previous_identical_page": 13,
+      "notes": "Tables 3 through 6 are legible with distinct captions and no clipping."
+    },
+    {
+      "page": 14,
+      "image": "paper/tmp/final-editorial-table-review-14.png",
+      "sha256": "df249bd1587f697971683c1df483e603c9df179aab56c4d1e6a6f39d096ba534",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "FV1 resolved: the small implementation-cost Table 7 shares the page with the subsequent history and timing methods. Timing prose is continuous and no table interrupts a paragraph."
+    },
+    {
+      "page": 15,
+      "image": "paper/tmp/final-editorial-table-review-15.png",
+      "sha256": "d83a72a890df909fced17313b316bdb4336517cfcc5402722f3367e993c5840a",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "Calibration table and timing summary are legible; the per-file table begins with readable path wrapping and numeric columns."
+    },
+    {
+      "page": 16,
+      "image": "paper/tmp/final-editorial-table-review-16.png",
+      "sha256": "249e5eac988497a847c28305640868c3af2b4a3a878ff585224d624a000965bf",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "Per-file table continuation, total row, setup costs, and hardware account are legible without clipping."
+    },
+    {
+      "page": 17,
+      "image": "paper/tmp/final-editorial-table-review-17.png",
+      "sha256": "e7a53f11917725c7e0c2203019029a0c406cb6f9184e453bd9154717942d6217",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "AI development provenance and the recorded correction now fit together on this page, followed by reproducibility prose. All text is readable."
+    },
+    {
+      "page": 18,
+      "image": "paper/tmp/final-editorial-table-review-18.png",
+      "sha256": "d09cfafa2cbeed037488b9836effaf8876add486999d4e18d1b0843c185bd442",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "Certificate and reference-search source excerpts remain legible with intact line numbers."
+    },
+    {
+      "page": 19,
+      "image": "paper/tmp/final-editorial-table-review-19.png",
+      "sha256": "128bb604755e16490552641f3d6647d1e8fd2c4559eafd6a6f56b9cea709a3eb",
+      "inspected": true,
+      "inspection": "fresh visual inspection",
+      "previous_identical_page": null,
+      "notes": "Search continuation and proof-construction source excerpt remain legible without clipping."
+    }
   ],
-  "offline_rendering": "All17 clean-default rendered pages have identical pixel hashes."
+  "findings": [],
+  "blocking_rendering_defects": [],
+  "resolved_findings": [
+    {
+      "id": "FV1",
+      "status": "resolved",
+      "page": 14,
+      "resolution": "Table 7 shares the page with timing methods; the otherwise empty float page is removed."
+    }
+  ],
+  "previous_review": "paper/output/revisions/ai-community-plots/visual-review-before-table-layout.json",
+  "previous_pdf_sha256": "78c7435828aceba7dc5f7cd81f07e2da324fa3515321d213095251793a4b4ad8",
+  "confirmed_revisions": [
+    "The exact motivating inequality is printed as a readable checked-source excerpt on page 1.",
+    "The figure is placed within the evaluation section on page 3.",
+    "The caption defines each file point using mean times across 40 paired passes.",
+    "The savings label unambiguously identifies 310 as lines saved.",
+    "Census tables no longer interrupt the timing explanation.",
+    "The expanded AI-development account includes concrete recorded steps and a correction example."
+  ],
+  "release_note": "Compare the final release PDF hash with pdf_sha256. Rebuild differences require image comparison and inspection of any changed pages before transferring this review."
 }

@@ -31,10 +31,10 @@ All constructions start on $U$.
 The construction includes repeated vectors, opposite vectors, and zero vectors.
 
 \begin{lemma}[Vertices and finite enumeration]\label{lem:vertices}
-Let $M$ be a rational matrix and let $b$ be real.
-For $P=\{z\ge0:Mz=b\}$, a feasible point is a vertex exactly when its positive-support columns are independent.
+Let $M\in\Q^{r\times n}$ and $b\in\R^r$.
+For $P=\{z\in\R^n_{\ge0}:Mz=b\}$, a feasible point is a vertex exactly when its positive-support columns are independent.
 There are a finite number of vertices.
-If $b$ is rational, all vertices are rational.
+If $b\in\Q^r$, all vertices are rational.
 If $P$ is nonempty and a nonnegative linear cost is bounded below on it, a minimum occurs at a vertex.
 \end{lemma}
 \begin{proof}
@@ -201,6 +201,17 @@ It does not specify the Lean backend reduction.
 The generated manifest records source hashes and marker ranges.
 The paper does not change the imported blocks.
 
+\subsection{The community request and rational averaging}
+The main-text source quote is from \sourcepath{NormArithTest/Tactic.lean} at the measured source snapshot.
+The build extracts it from the validated archive and records its source hash and line range.
+A separate fresh check of the full test module includes this exact inequality.
+It is additional to the six archived paper examples.
+
+The averaging example finds $x=\frac12(x+y)+\frac12(x-y)$ from two local bounds.
+Here $E$ is a real seminormed space.
+It demonstrates automatic bound selection and fractional coefficients.
+\input{generated/hidden.tex}
+
 \subsection{Quantified bounds and generic metric chains}
 The quantified example specializes the local hypothesis at two observed arguments.
 It normalizes ball membership, proves the radius premises with restricted scalar arithmetic, and checks the cancellation identity.
@@ -258,10 +269,12 @@ It preserves the full theorem statement and its assumptions.
 The tactic does not prove the convergence hypotheses or the Strong Law.
 \paragraph{Original source block.}
 \VerbatimInput{generated/census-example-original.lean}
+\paragraph{Replacement source block.}
+\VerbatimInput{generated/census-example-replacement.lean}
 
-\subsection{The archived pilot generalization}
-The archived example is the candidate \texttt{fderiv-telescope} at the pinned mathlib revision.
-The build extracts the original and replacement blocks from the archived manifest and pinned source.
+\subsection{An operator estimate}
+The source example is the candidate \texttt{fderiv-telescope} at the pinned mathlib revision.
+The build extracts the original and replacement blocks from the recorded manifest and pinned source.
 The generation code validates their source hashes.
 This checked example abstracts the shared bound and renames the four operator values.
 It generalizes the proof shape.
@@ -275,6 +288,9 @@ Here $E$ is an additive group.
 \VerbatimInput{generated/mathlib-replacement.lean}
 
 \section{Evaluation protocol and artifact status}\label{app:evaluation}
+The study uses Lean \texttt{4.36.0-rc1} and this mathlib revision:
+\begin{quote}\small\texttt{2f3c7c8a8949b04a32f9303f59163acffb766996}\end{quote}
+
 \paragraph{Implementation paths.}
 The frontend rewrites distances, collects norm arguments, and encodes recognized vector equalities as checked zero-norm facts.
 It tries structural bounds and short decompositions before the finite reference family.
@@ -283,7 +299,7 @@ Its default limits are 10,000 support systems and 10,000 retained results.
 The support-attempt count excludes the initial full-system rank test.
 
 The public interface also keeps a sound upper-bound extension with an opaque scalar right side.
-This path handles some pilot bounds that the affine scalar grammar excludes.
+This path handles bounds that the affine scalar grammar excludes.
 It has no stated completeness guarantee.
 The additive-group path also has partial coverage.
 Added signed integer proposals can succeed where rational averaging is unavailable.
@@ -308,42 +324,25 @@ The selector recomputes disjoint source edits and checks original declaration bo
 Final combined compilation, implementation snapshots, the frozen patch, and the new timing run form a separate chain.
 The historical full census tactic implementation does not supply a speed result for this chain.
 
-\paragraph{Initial prototype pilot.}
-The prototype pilot pins Lean \texttt{4.36.0-rc1} and this mathlib revision:
-\begin{quote}\small\texttt{2f3c7c8a8949b04a32f9303f59163acffb766996}\end{quote}
-The pilot selected its five verified replacements from fourteen cataloged candidates.
-The collection includes exclusions and no-saving outcomes.
-It gives documented lexical discovery.
-It does not give a full semantic census.
-The archived timing report and paired samples are the sources for each pilot table in this paper.
-
-Proof code decreases from \PilotBefore{} to \PilotAfter{} lines across \PilotReplacements{} replacements in \PilotFiles{} files.
-The pilot removes \PilotProofSaved{} proof lines, or \PilotNetSaved{} after imports.
-The affected files compile \PilotSlowdown{}\% slower in that exploratory experiment.
-The archived result does not give the final patch timings.
-\input{generated/pilot-table.tex}
-\input{generated/pilot-detail-table.tex}
-
 \paragraph{Line accounting.}
-Count nonblank, noncomment lines of proof code in the formatted source.
-Count preparation in each replacement.
-Count shared helper declarations one time.
+The accounting counts nonblank, noncomment lines of proof code in the formatted source.
+It counts preparation in each replacement and each shared helper declaration one time.
 
 The report counts imports and includes them in the net figure.
-Count only the deterministic nonoverlapping combined patch.
+The savings describe only the deterministic nonoverlapping combined patch.
 The report also counts the tactic implementation and census infrastructure.
 This count does not show a net reduction in the library's total source size.
 
 \paragraph{Semantic census.}
 The census uses the sorted tracked Lean sources in \texttt{Mathlib/} at the pinned revision.
-The census must include tactic observations and expected-type information from term proofs.
-The extractor must wait for finalized elaboration data.
+The census includes tactic observations and expected-type information from term proofs.
+The extractor waits for finalized elaboration data.
 It records original source spans, declarations, normalized goals, local facts, eligibility, attempts, and per-file completion.
-Assign explicit classes to macro-generated, overlapping, abandoned, or uneditable observations.
+The ledger gives explicit classes to macro-generated, overlapping, abandoned, or uneditable observations.
 
 A checked replay proposal is not a verified source replacement.
-The full source patch must compile with all selected replacements together.
-The census denominator must include extraction failures and exhausted files.
+The full source patch compiled with all selected replacements together.
+The census denominator includes extraction failures and exhausted files.
 
 The full census uses four workers.
 The targeted follow-up uses three.
@@ -359,6 +358,7 @@ Unlocated or unresolved nodes are coverage gaps even in files with complete extr
 Their counters are not counts of distinct unsupported goals.
 
 \input{generated/census-detail.tex}
+\FloatBarrier
 
 \paragraph{Historical source format correction.}
 An earlier patch had a proof line longer than mathlib's source-style limit.
@@ -403,6 +403,7 @@ The paper gives no coverage theorem for arbitrary timing dependence.
 
 We fixed the sample count, block length, seed, bootstrap count, and stopping rule before the confirmatory run.
 The success criterion was a full paired 95\% interval for $S$ greater than one.
+
 \input{generated/calibration-status.tex}
 \FloatBarrier
 
@@ -411,6 +412,7 @@ Timeouts or incomplete variants prevent a complete-compilation claim for those v
 The table separates setup processes from unmeasured dependency and native builds.
 Search-based compilation is the primary measurement.
 The study does not give timing results for explicit certificate replay.
+
 \input{generated/confirmatory-status.tex}
 \FloatBarrier
 
@@ -437,6 +439,46 @@ The later snapshot also shows battery discharging.
 Queries for thermal status failed.
 These snapshots do not show continuous power or thermal stability.
 The study did not control background activity.
+
+\section{AI development provenance and limits}\label{app:development}
+The motivating request is the May 2020 Lean community discussion of norm decompositions \citep{leanrequest2020}.
+The repository test module contains the same inequality, with the decomposition implicit in the tactic call.
+The averaging example exercises rational coefficients beyond that motivating example.
+These examples address the normed-space decomposition request.
+They do not establish community endorsement or solve the later normed-algebra request.
+
+The project development guide records that ChatGPT generated the starter.
+The expansion commit records \texttt{Assisted-by: Codex:GPT-6}.
+The repository also records AI assistance in developing and reviewing library source edits.
+These records support an AI-assisted development account, without assigning every source line to a particular tool.
+The \href{https://github.com/TomasOrtega/norm-arith/tree/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2}{measured source snapshot} contains the development guide, code, tests, and evaluation artifacts.
+
+\paragraph{Recorded development steps.}
+The \href{https://github.com/TomasOrtega/norm-arith/commit/e5b88e1}{starter commit} contains the initial code and its ChatGPT disclosure.
+The design records first specify \href{https://github.com/TomasOrtega/norm-arith/blob/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2/docs/adr/0002-initial-tactic-fragment.md}{explicit upper bounds}, then adopt \href{https://github.com/TomasOrtega/norm-arith/blob/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2/docs/adr/0004-automatic-bound-discovery.md}{automatic selection} while preserving explicit fact control.
+A \href{https://github.com/TomasOrtega/norm-arith/blob/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2/docs/adr/0008-normalized-core-and-shared-certificates.md}{later decision} puts optimized paths and the finite reference search behind the same certificate interface.
+They record project decisions without attributing every decision to an agent or a human.
+
+The \href{https://github.com/TomasOrtega/norm-arith/tree/0f9b637e6f3f385e8ffa7c8a6135beb0e9c6fdc2/artifacts/expansion/next/production-regressions}{regression archive} records failures for function aliases and set-membership bounds, followed by a complete successful build.
+For example, expressions written with \sourcepath{Function.uncurry} failed during certificate identity checking.
+The correction used immediate checked identity synthesis, matching normalization settings, and restricted fact selection.
+The archive binds the failed logs, revised tactic, tests, and successful build with source hashes.
+The tests include positive examples and rejection of omitted norm premises.
+This is one documented repair, not a complete record of development failures.
+
+\paragraph{Acceptance checks and limits.}
+The workflow produced separate artifacts for coefficient search, norm certificates, proof construction, source replacements, and measurement.
+Lean checks the certificate lemmas and generated proof terms.
+Combined source compilation checks that the replacements preserve the library statements and assumptions.
+Frozen evidence records the workload, source hashes, and paired timings.
+The present manuscript also received AI-assisted review and revision.
+
+The available record is not a complete prompt transcript or a record of human and agent effort.
+It gives no controlled baseline for development without AI, model comparison, or reliable fraction of code generated autonomously.
+The experiment measures the resulting tactic and selected patch, not the causal effect of AI assistance.
+Kernel checking addresses proof validity.
+It does not validate benchmark selection, research claims, or maintenance quality.
+The local patch is not an accepted mathlib contribution.
 
 \section{Language, reproducibility, and research scope}
 The prose uses a documented review based on ASD-STE100 \citep{ste100}.

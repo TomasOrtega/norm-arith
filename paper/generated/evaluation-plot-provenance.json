@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "generated",
+  "bundle_sha256": "fa6d752a764430ec10821f4ceab52f2fdfc5f4bc416db9ec6fc45408662b3577",
+  "patch_sha256": "d9489b95183ca8f1dc693abc4355c2ff897cc5726f6f56ebaa48d58cb46b7bef",
+  "generator_sha256": "ce044b530e07f17eda57470c2f9f3341aff20a22c16dc8dfb1be4d863f7808c4",
+  "source_evidence": "final-evidence.json",
+  "source_evidence_sha256": "6f6851c4d5bb3984c92cc86661726aa0350622bc0c68141ccd38a099cbaadd38",
+  "files": {
+    "evaluation-plot.json": "78a0696155aef1c758355eefd1b3673db55fea9b5e5701339d78e9ea0434104e",
+    "evaluation-files.csv": "99a690a93adb014f67497965188c695638b6210b909f5232700e64de40bb6310",
+    "evaluation-plot.tex": "5a996a003ceeda8da422c8f1de45e04b4d2a2614c23a1115d928ca0189a46ab0",
+    "evaluation-figure.tex": "da96709ee8a2e1dc957af4ea3f62fd677087f109f5403db96850d4e321409b7e",
+    "evaluation-standalone.tex": "c13d3136f1a74399b4f9b086ed4d595a3eab30c1c22c93652ffca98147c2adc8"
+  }
+}

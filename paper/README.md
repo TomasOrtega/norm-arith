@@ -1,9 +1,39 @@
-# Norm and metric arithmetic paper
+# AI-assisted norm arithmetic paper
 
 The expanded manuscript has a four-page main body, followed
 by references and technical appendices, in the unchanged official NeurIPS 2026
 preprint style. Anonymous author information does not assert workshop submission
 or acceptance.
+
+The central contribution is an AI-assisted Lean implementation responding to the
+normed-space part of a documented 2020 community request. The manuscript names
+the recorded tools, separates development assistance from ordinary tactic
+execution, and states the limits of the available process record. The evaluation
+measures the resulting artifact rather than AI productivity.
+
+The main figure contains two vector plots: charged source-line savings and all
+46 per-file timing ratios, with the full-pass ratio and conditional interval
+shown separately. `plots.py` derives the figure from the same validated evidence
+as the tables. `generated/evaluation-files.csv` contains every plotted file;
+`evaluation-plot.json` and `evaluation-plot-provenance.json` record the values
+and source hashes. PGFPlots renders the plots in the normal XeLaTeX build.
+To export a standalone vector PDF after generation, run:
+
+```sh
+python3 paper/plots.py --export-pdf
+```
+
+The complete-paper reviews and their revision responses are recorded under
+`output/revisions/ai-community-plots/`.
+
+The implementation appendix explains three key excerpts: norm certificates,
+reference search, and proof construction. Its 78 source lines keep their original
+numbers, with a link to the complete measured source at a fixed Git commit.
+The generator copies all five runtime modules byte for byte from the validated
+evidence bundle and checks them against the source-verification record.
+`generated/implementation.json` records module hashes, line counts, and excerpt
+ranges and hashes. The source package includes the complete files; the PDF shows
+only the excerpts. Census and test infrastructure are outside this code appendix.
 
 The paper explains the finite real-space core, bounded quantified specialization,
 and a checked pseudometric extension. Its new patch and timings must come from
@@ -23,7 +53,7 @@ python3 paper/build.py --render
 ```
 
 This command restores the configured local evidence transport if needed, checks
-its payload, regenerates the tables, runs XeLaTeX and BibTeX through latexmk,
+its payload, regenerates the tables and plots, runs XeLaTeX and BibTeX through latexmk,
 and checks the log and four-page main-body limit. It launches no Lean or native
 build. Portable status uses its checked examples by default; the explicit
 `--reuse-checked-examples` alias remains available. The PDF is
@@ -38,12 +68,19 @@ python3 paper/build.py --draft --render
 
 A draft has visible unfinished-evidence labels. It does not establish a final
 patch, fresh example check, or timing result. A release must build without
-`--draft`.
+`--draft`. The implementation appendix still needs source-verification hashes
+and the matching implementation hash from the checked examples; draft mode does
+not substitute unverified source for its listings.
 
 An explicit `--fresh-examples` build compiles `NormArith` and freshly checks
 `NormArithTest/Paper.lean`. Do this before final source verification and timing,
 or in a separate replay checkout. A build or relink after verification can
 invalidate the frozen runtime fingerprints.
+
+The opening community-request example is separately extracted from the validated
+`NormArithTest/Tactic.lean` source. Its manifest records the module hash, exact
+line range, and snippet hash; the revision receipt records a fresh check of the
+complete test module. It is additional to the six archived paper examples.
 
 The six snippet markers are `hidden`, `reverse`, `mathlib`, `boundary`,
 `quantified`, and `metric`, delimited by `-- paper:begin NAME` and
@@ -55,7 +92,7 @@ The build requires XeLaTeX, latexmk, BibTeX, `kpsewhich`, and Poppler's `pdfinfo
 Heros, and JuliaMono, with explicit regular, bold, italic, and bold-italic faces.
 No shell escape is required. `paper/output/toolchain.json` records tool versions,
 font and TeX-input hashes, embedded font names, and build logs. Different TeX or
-font versions can change PDF bytes and layout.
+font versions can change PDF bytes and layout. PGFPlots is required for the figures.
 
 The checked numerical runtime is CPython 3.15.0. Use that version for exact
 bootstrap-hash replay, for example `uv run --python 3.15.0 python paper/build.py

@@ -101,9 +101,21 @@ introduced with its short form *BCa*.
 E4 — **Formal and preserved material.** Equations, quantified formal syntax,
 Lean code, identifiers, literal archived source, bibliographic titles, and
 unchanged official labels retain their content. This prose review does not
-rewrite them to force dictionary coverage. Imported Lean snippets pass a fresh
-Lean compilation; that is mathematical/software validation, not language
-validation.
+rewrite them to force dictionary coverage. Imported Lean snippets have recorded
+successful Lean checks. Portable builds validate their saved hashes. These are
+mathematical/software checks, not language validation.
+
+E5 — **Research history and assistance disclosure.** The paper records a named
+community request, AI assistance in software development, and the limits of the
+available development record. Reporting words such as *asked*, *assisted*,
+*request*, and *contribution* retain only the precise senses listed in the
+ledger. Their use is a research-narrative exception, not permission inferred
+from an unrelated dictionary meaning. The same boundary covers statements
+about community acceptance, development effort, and the absence of a controlled
+AI-versus-human comparison. *AI-assisted* does not specify an autonomous share
+of the work or imply a measured productivity gain. Product and person names
+retain E4 treatment. Existing dictionary entries remain distinct from these
+explicit exceptions; this renewal does not invent new dictionary approvals.
 
 The formal *abstraction* gives independent interpretations to scalar and vector
 atoms. *Norm-free expression*, *opaque subterm*, *reified syntax*, and *internal
@@ -125,7 +137,7 @@ the rule is satisfied without qualification. Rule numbers refer to Issue 9.
 
 | Rule | Project criterion | Result and concrete evidence |
 | --- | --- | --- |
-| 1.1 | Limit lexical choices to the dictionary and declared terminology | Reviewed with the complete surface-word/context ledger; E1–E4 are explicit boundaries. |
+| 1.1 | Limit lexical choices to the dictionary and declared terminology | Reviewed with the complete surface-word/context ledger; E1–E5 are explicit boundaries. |
 | 1.2 | Match each general word's approved grammatical role | Reviewed; adjective *faster/slower*, verb *validate*, noun *check*. Technical and exceptional roles are distinct ledger columns. |
 | 1.3 | Match the intended general meaning | Reviewed; physical *warm*, *layer*, *patch*, *linear*, and *right* were not silently accepted for software or mathematical meanings. E1/E3 apply. |
 | 1.4 | Limit inflection and comparison forms | Reviewed; *faster/slower/longer* checked against their headwords. Mathematical predicates and adverbs have E1 treatment. |
@@ -143,7 +155,7 @@ the rule is satisfied without qualification. Rule numbers refer to Issue 9.
 | 2.2 | Introduce a long necessary name and give a clear short form | Reviewed; the four-word additive-group name appears before its explicit two-word alias. Hyphenated defined units keep relationships clear. |
 | 3.1 | Use allowed forms for general verbs | Reviewed against the dictionary; the ledger names inflected forms such as *decreases*, *occurs*, and *tries*. Technical verbs follow the same form review. |
 | 3.2 | Avoid prohibited tense constructions | Reviewed; present description, simple past build record, proof infinitives, and E2 imperatives. No perfect or progressive prose construction remains. |
-| 3.3 | Use participles as modifiers with a clear noun | Reviewed; *validated certificate*, *archived pilot*, *selected patch*, *observed vector*. Mathematical property predicates have E1 treatment. |
+| 3.3 | Use participles as modifiers with a clear noun | Reviewed; *validated certificate*, *recorded manifest*, *selected patch*, *observed vector*. Mathematical property predicates have E1 treatment. |
 | 3.4 | Avoid complex auxiliary chains | Reviewed all finite verb groups. Modals express protocol requirements; no perfect/passive/progressive chains. |
 | 3.5 | Restrict ambiguous verbal -ing clauses | Reviewed; replaced “Finding,” “Combining and scaling,” and “before extracting” clauses. *Timing*, *sampling*, and *encoding* name declared processes. E1 covers necessary mathematical forms. |
 | 3.6 | Prefer an explicit active agent | Reviewed; “the build imports/extracts/renders,” “Lean validates,” “the report counts.” Mathematical predicates are not treated as hidden-agent passives. |
@@ -158,11 +170,11 @@ the rule is satisfied without qualification. Rule numbers refer to Issue 9.
 | 5.3 | Use commands for actual instructions | Reviewed; *Count*, *Keep*, *Select*, *Do not discard*. E2 distinguishes mathematical proof instructions. |
 | 5.4 | Give a necessary condition before its command | Reviewed conditional proof and protocol instructions; *For equality conclusions*, *If...*, *Before the run*. |
 | 5.5 | Keep notes informative | Not separately applicable: no procedural note boxes. Status paragraphs state information and do not hide instructions. |
-| 6.1 | Introduce information in stages | Reviewed: problem, grammar, finite theorem, proof idea, implementation, census, compilation, limits; full derivation follows in appendices. |
+| 6.1 | Introduce information in stages | Reviewed: community request, development and validation, finite core, library evaluation, compilation, and limits; full derivation and provenance follow in appendices. |
 | 6.2 | Use stable organizing terms | Reviewed section references and repeated subjects: *constraints*, *certificate*, *pilot*, *census*, *confirmatory timing*. |
 | 6.3 | Keep descriptive sentences within 25 prose words | Reviewed with section 8 counting principles. Automated formula placeholders are only a length aid; E1/E4 preserve formal expressions. No open prose-length candidates. |
-| 6.4 | Group related statements into paragraphs | Reviewed; proof construction, scalar decision, pilot accounting, and timing have separate paragraphs. |
-| 6.5 | Keep one subject per paragraph | Reviewed all paragraphs, including generated statuses and captions. Splits separate certificate construction from scalar handling and pilot text from checked generalizations. |
+| 6.4 | Group related statements into paragraphs | Reviewed; proof construction, scalar decision, line accounting, and timing have separate paragraphs. |
+| 6.5 | Keep one subject per paragraph | Reviewed all paragraphs, including generated statuses and captions. Splits separate certificate construction from scalar handling and source examples from evaluation results. |
 | 6.6 | Keep each paragraph within six sentences | Reviewed; paragraph splits resolve every reported candidate. Generated status prose is included. Proof displays do not conceal extra sentences. |
 | 7.1 | Label actual safety hazards | Not applicable: no safety instructions or hazardous activity. Software failure states are not physical safety warnings. |
 | 7.2 | State a safety command or condition clearly | Not applicable for the same reason. |
@@ -370,3 +382,113 @@ The initial prototype pilot, calibration pilot, and confirmatory experiment have
 separate roles. The final corpus-bound pass is STE-based explanatory writing,
 with the declared mathematical and research-format exceptions. It is not
 unqualified ASD-STE100 conformance or external certification.
+
+## Prototype-pilot removal
+
+The 21 October 2026 revision removes the prototype-pilot results and two timing
+tables from the manuscript. The operator estimate remains a checked mathematical
+example, with source provenance and no pilot framing. The separate calibration
+study and the final confirmatory results are unchanged. The evaluation protocol
+keeps the Lean and mathlib version identifiers.
+
+The contextual review covers all current prose blocks, the title, macro
+values, and the source-example and evaluation transitions under the criteria
+above. It found no new vocabulary, word-role, sentence, paragraph, or scope issue.
+The automated aid has no length candidates or unreviewed words. Historical
+benchmark evidence remains archived outside the manuscript.
+
+The rendered review also checks paragraph boundaries at generated inputs. Explicit
+breaks separate the calibration and result summaries from the surrounding prose.
+The timing table uses a wider file-name column to reduce wrapping within the
+existing margins; its data and captions are unchanged.
+
+
+
+## Implementation-excerpt renewal
+
+The final implementation appendix contains three source excerpts with short
+explanations and a link to the full source snapshot. Its literal Lean text and
+identifiers keep E4 treatment. The link label is explanatory prose; the fixed
+commit URL is a source reference. The full source files and their hash manifest
+are package artifacts, not additional prose or complete listings in the PDF.
+
+The contextual pass reviews the new section title and every explanatory
+paragraph against the criteria above. It checks the certificate lemmas,
+reference enumeration, proof construction, source references, and failure
+boundary against the measured implementation. The 159 existing prose blocks
+are unchanged from the preceding reviewed corpus. The combined scope retains
+the same finite mathematical theorem, bounded extensions, and timing limits.
+
+The guide separates formal atom coordinates from concrete-vector independence.
+It distinguishes a completed enumeration from a checked vector identity and
+from unrestricted program completeness. An incomplete search can still produce
+a valid proof. Exhaustion without a proof reports an unknown result. The source
+link and the shorter excerpts make no new coverage or speed claim.
+
+The wording pass removes the prose semicolon and replaces ordinary *need*,
+*still*, *applicable*, *supplies*, and *establish*. Context-specific ledger
+entries identify coefficient arrays, theorem applications, Lean instances,
+source excerpts, hash manifests, and program statuses. *Gauss--Jordan* is an
+established algorithm name. *Enumerates* and *scales* are declared mathematical
+verbs. *Close* and *restore* name specific Lean operations. Existing entries for
+*check*, *imports*, *reports*, *saved*, and *exact* record the added senses and
+roles. Unused entries from the discarded complete-listing draft were removed;
+all earlier ledger entries and CRLF records were preserved.
+
+The complete review has no unresolved vocabulary, word-role, sentence,
+paragraph, or scientific-scope issue. Every new descriptive sentence has at
+most 25 words, and each paragraph has at most six sentences. The language aid
+has no length candidates or uncovered words. This remains a qualified
+STE-based editorial review, not external certification or unqualified
+ASD-STE100 conformance. The final excerpts still need the separate build and
+rendered-page review.
+
+## Community-request and plot revision
+
+The 21 October 2026 pass covers the revised title, abstract, main text,
+appendices, implementation guide, generated status prose, and table and figure
+captions. It also inspects the plot labels and macro-expanded numerical claims.
+The full 53-rule matrix and eight recommendations remain the review criteria.
+The paper now gives the named norm-decomposition request, the AI-assisted
+development record, the selected source patch, and the limits of each result.
+
+The request is for the normed-space decomposition part of the cited discussion.
+The later proposal about normed-algebra products stays outside the finite core.
+The checked source excerpt and its archived source hash support the specific
+example. They do not establish community endorsement or mathlib acceptance.
+The development account separates recorded decisions and a documented repair
+from an unavailable complete prompt or effort record. It does not infer a
+percentage of autonomous work, a productivity gain, or a causal effect of AI.
+
+The ledger adds 164 current surface words with their actual grammatical roles
+and meanings. Fourteen earlier entries gain precise new senses or roles; all
+other earlier rows and CRLF records are preserved. E5 explicitly identifies
+the research-reporting vocabulary. It does not assign reporting verbs to a
+technical category merely because the article is technical. New dictionary
+classifications are restricted to inflections of already reviewed headwords in
+the same sense. Product names, person names, the month *May*, and the acronym
+*AI* have name treatment. The word *May* does not approve the modal verb.
+
+The contextual pass distinguishes mathematical coefficient *supports* from the
+reporting verb *support*, and a statistical or realization *model* from an AI
+language model. *Saved* can identify stored evidence or the specified net line
+count, without granting a general cost-saving verb. *Assisted* and *AI-assisted*
+describe contributions, not autonomous execution. Research *claim* and
+*acceptance* do not imply a submission, adoption, or priority result.
+
+The figure's points are ratios of per-file means over all 40 paired passes.
+Triangles identify the seven files with larger mean replacement times; they
+are not tests of per-file statistical significance. The separate diamond and
+bar encode the aggregate ratio and conditional interval over repeated timings.
+The code-line panel counts preparation and imports and keeps implementation
+costs outside the reported local source savings. The legend and caption have
+the same interpretation as the numerical text and complete file table.
+
+The final contextual pass checks tense, voice, articles, nearby references,
+sentence and paragraph boundaries, technical predicates, and reporting scope.
+No new length or paragraph exception is needed. The language aid has no open
+candidates or vocabulary gaps. The refreshed record binds this prose corpus
+and ledger. This remains a qualified STE-based editorial review with explicit
+mathematical and research-narrative exceptions, not unqualified ASD-STE100
+conformance or external certification. PDF layout and scientific verification
+remain separate checks.

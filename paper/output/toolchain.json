@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at_utc": "2026-10-21T20:08:25.531907+00:00",
+  "captured_at_utc": "2026-10-22T02:14:04.979441+00:00",
   "capture_mode": "build",
   "tools": {
     "xelatex": {
@@ -41,6 +41,7 @@
       "sha256": "b170162835f4efc288886dd4231406dc47e19b614cf4416836635599d44a7d60",
       "identified_by": [
         "XeLaTeX log",
+        "embedded PDF font name",
         "explicit family variant; availability does not imply use"
       ]
     },
@@ -62,6 +63,7 @@
       "sha256": "6ae1a09d5a940367b7aaaa91ee8bd8a2c333bfe193e7096e23f931357d62081f",
       "identified_by": [
         "XeLaTeX log",
+        "embedded PDF font name",
         "explicit family variant; availability does not imply use"
       ]
     },
@@ -104,6 +106,12 @@
     },
     "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm": {
       "sha256": "373172fe340e4aede5129b89d65f576bfb1fe6932bd55c38f60bcaa84f3d1188",
+      "identified_by": [
+        "XeLaTeX file recorder"
+      ]
+    },
+    "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm": {
+      "sha256": "3f56ab22f7fc6a015813976c6c6cc2fd55736bbaec4958a4562e10719fa18062",
       "identified_by": [
         "XeLaTeX file recorder"
       ]
@@ -156,6 +164,12 @@
         "XeLaTeX file recorder"
       ]
     },
+    "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm": {
+      "sha256": "65af8c1e162a952cab8e93c834fcf43ce09b508e6c16e512ebb673cd850b0d41",
+      "identified_by": [
+        "XeLaTeX file recorder"
+      ]
+    },
     "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm": {
       "sha256": "20672649a2f07eef8fe07ccb42eeb731023e48f2e0797ecef57c0887da46c032",
       "identified_by": [
@@ -168,6 +182,12 @@
         "XeLaTeX file recorder"
       ]
     },
+    "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm": {
+      "sha256": "4c5ae243ac0aa254e7ec7f0602cc2a4351e5011ff0cb6dc150a5f6de19585de6",
+      "identified_by": [
+        "XeLaTeX file recorder"
+      ]
+    },
     "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm": {
       "sha256": "2ffa73e8446c1d46c3509a0f65ff97d4d09de46f48e1ce578a1004498b67dba9",
       "identified_by": [
@@ -176,6 +196,12 @@
     },
     "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm": {
       "sha256": "137eb9f38f661c66309614066a7b5d63d8969d33aba0c9efee9f844a4ce65b50",
+      "identified_by": [
+        "XeLaTeX file recorder"
+      ]
+    },
+    "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm": {
+      "sha256": "84c37f07ca360c41ad0a0fba7387d279d72457c69bdae03653208c683d8de6bc",
       "identified_by": [
         "XeLaTeX file recorder"
       ]
@@ -233,6 +259,12 @@
         "embedded PDF font name"
       ]
     },
+    "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb": {
+      "sha256": "f396f52d9ed3498c15aa7e694baef74c0a11119624fcd6db66dad4ac76972cb0",
+      "identified_by": [
+        "embedded PDF font name"
+      ]
+    },
     "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb": {
       "sha256": "fdcede8794018df5f2b58f0905fb20a2b418ed8f67b73ee12445855dfbe5b1be",
       "identified_by": [
@@ -241,6 +273,12 @@
     },
     "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb": {
       "sha256": "b37e8671820b0753c6e233eaa3230c6ab9cff04e6c4baee312d60ae261e5aba1",
+      "identified_by": [
+        "embedded PDF font name"
+      ]
+    },
+    "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb": {
+      "sha256": "8150cbfac5cfe53040327df171c3059f10730b32cabf2504b01713d639a11feb",
       "identified_by": [
         "embedded PDF font name"
       ]
@@ -265,36 +303,37 @@
     }
   },
   "tex_inputs": {
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/appendix.tex": "a17176c639b551a2869bab32956ec17d1fe17813041b540fa6f10ec24a7b2fff",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/appendix.tex": "5c80e82af0d9e5fc63c2432afa37caa8ec4ddc0fbd6b2f4021cd9659eb9d6088",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/boundary.tex": "f2fe70f6517f51018b4e3a107b295035001adfd1711685e74a5023874451a4e6",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/calibration-status.tex": "d799a772ce061ef1dc07645322b06fa489f5002043fda911a690b8f261ce162a",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/calibration-table.tex": "c949c949a9584fa9ed92b9ed806d2e5ad7b07c04bb6a096fdd6131f76915384e",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/calibration-table.tex": "805a758ec8e0f7d68dc37e2e2fac265df893843d3e41aaae85d6329e0ca7d638",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-detail.tex": "06162a351ff07ce3024c63e66007c2d38b4e8db959c9fe6cd9ee465a3e5bdd7f",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-example-provenance.tex": "d7b82cd001682ebc157859707be49f48d77f85759a3b516c3b30d432e7f625b4",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-fragments.tex": "bc912526797772f407072aa54bd0cdb45e8d4c8a51fdabe2de64cf44fa465afd",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-outcomes.tex": "f850ce7c895f13df47b00d8ea56e45fad091d4287e6e2711c6beeb622e697f47",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-status.tex": "5ac1c149188bdf34961e86aeaff7b4acdcdae8a90105a56c565c8406c7a41779",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-table.tex": "c30c31a90d978a56296eb1e8768fbd077705481e8e17d6fcbe238055a8cae099",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-fragments.tex": "f1e290e79248b0f4779b08ed62d6367f54b1231e633caadc11d827c967d602cc",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-outcomes.tex": "d95d900fbfb11ed94c5e0a9fc0dba665bf878352e02542d6dade10844f7e0086",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/census-table.tex": "54233e048dd6b58d9741fcc8a73c7f82f76531e0409443ed085bd682069d3fdb",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/community-request.tex": "9bdc56a5482c0b3e48553435c5b047291e1b51fcdef7364c9b794f8c252eb1fe",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/confirmatory-status.tex": "da8725cdecb622291f2383cfc9a88ee73c5432bccf76ae0c2134784df20bcc92",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/evaluation-figure.tex": "da96709ee8a2e1dc957af4ea3f62fd677087f109f5403db96850d4e321409b7e",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/evaluation-plot.tex": "5a996a003ceeda8da422c8f1de45e04b4d2a2614c23a1115d928ca0189a46ab0",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/example-status.tex": "b4016080fd7a1a8b9f0dbe53127c870cb2a0884150ad1f599b099c6ca1ec3f4b",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/hidden.tex": "d0cebb780b9e446e19b1bdcb697485a631f415313fa6c53d62a44e9d40084e82",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/implementation-status.tex": "36ef3f592f3c7c09bef65ba33d0fab3d25e81d4d8dc8339c10fd83a3d2dd8d1f",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/line-costs.tex": "e3d54cac2022a3e33f037877c2abd85c1d6bc50b173218cf6e351ee84f6fb308",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/implementation-certificate.tex": "cfd0ce58534eca41949db4a7a59293b7a094ae20b3ce8dc5cc9b67feeaed90bc",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/implementation-search.tex": "fc8bb39cacae48a17e803647acc70c7c39b8c6e004dd152efbfe905bfd1d685e",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/implementation-tactic.tex": "3a3f2ed642c442a8c64a7f782ece36d83b7549800b089b19ee294d938ed7454d",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/line-costs.tex": "d0f3c40495eb0b68394ee8d696588b31d3c01e6298e13807bdf5a21d9eb905d7",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/mathlib.tex": "4d0a808cfe2e23de1b6cec7411c5ee8ec5584411d277e01068070323746004ae",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/metric.tex": "0e42e09032927fc998a73a9b7d06451925405b2c14b2e1f3902f36d8742efbc8",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/pilot-detail-table.tex": "2274ae74a820dc97192bd1c41f626ddba80f9c4d8af34014d6a2ff4c8c301c82",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/pilot-facts.tex": "2d2f39d7f017792ed7f313c2e4a09e017deb8d758c6bd4b3364ed2aad14e1e0e",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/pilot-table.tex": "97372d8fed9bb8e4dc74af9ed3159a43f08f7b30ce7963298daec659cdca9393",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/quantified.tex": "c4b040df2e929e9d13d0ab87abdad86df791ed0a8a5907f70857339f7ff5bb35",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/reverse.tex": "dd0142eaf8422f2d9f8f3adb728b6f895dc15838126df9af36904e1ef8aa99c7",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/selector-outcomes.tex": "4b88be2150061a12718c5a91b8b246496baa172bca4052296aa55c723aae705d",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/selector-outcomes.tex": "194f1ab2bd8d643f7eddd2640e27653bf49e4a2fca8ed9f1c3af256589cf37bc",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/study-facts.tex": "27aaedcd0b043f09abe6562745984d1452344e1b0c56ea9ae46715548a71353b",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/targeted-fragments.tex": "f39d821af47c12f5b72c1d1ce3d9ac4b761e93812b9002881c38c92ec29728bb",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/targeted-outcomes.tex": "6e5f849a46b9a483bf64bc8f1397461ca1458d3cc9c9d1be08be2ae520c04c1d",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-main.tex": "db5f8b8ac10853692b2be064fb0a321429ec6c97d4dff81b3065c50a676ec2fe",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-setup.tex": "d85e31d3a849125870d4d9d9820d2251ec51e72fdd28afa4c9ac26efa28aeeab",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-table.tex": "ee7f446c695771a061fecae2924c2d415b2b9ccb9564afc3557cc742574acec5",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/paper.tex": "6dd0b3a00927c28535ebce05f2df8d46b170dc9c4c7872ed4938e5f8f7b19ceb",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/targeted-fragments.tex": "4b37bc16f847efdf675fb3cc7c9298ea41d64f5c9538cc689bf86951f80d19e0",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/targeted-outcomes.tex": "3c08a5960670ee3e27a4846094f40fdc596cbb220c50c488ba8b1a58fc6c89ef",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-setup.tex": "c044c86888b7e074b87a27a88b828fd4b37639dc9a8058082655a4213680cd3b",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-table.tex": "dff0b3cf8ae9737ba0fe5fc88c3dc727f16f3b960f493ca63f71b4c488c70e1f",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/implementation.tex": "e08123c24315e362d79fd2626a9efe9558ae93279c81cb904136bde350710b34",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/paper.tex": "ce0cbbeb146a0e1ba57d361c066857a84d822af4ffb58d38297d6102b1b23925",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/vendor/neurips_2026.sty": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
     "/usr/local/texlive/2026/texmf-dist/bibtex/bst/natbib/plainnat.bst": "21eefa76f1c967f5074776fcef096c0f8f2b9e42347e84b62e1dbb121dcae486",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty": "050f2ad3a3671a1f4f9bcf97784836301bc751507e7ada546632379406aea103",
@@ -308,6 +347,102 @@
     "/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty": "8fea89995d37ba4c69137186faafc589c470edcc5026d8a31aadbe5cef47dcb4",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty": "b3f0e56366c11b85dae521f9a48a6fd415dec1ce8c83152fde813a9f64445b49",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty": "2df7e0bd148c99d8097352b8ac9948dccf91d61ba360dcf43f82206933b6045b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex": "ec94fcfeeda3204c4e43d2008be50b6005da0e642deafaead137284d66e82926",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex": "ffabc47530ac7058f6dff74bf3325ab114049dcedc51b2d8556f578b03311799",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex": "545c4616f93c5f5d25bc04090a0b7ef869bab84b3952fadfd539d71187c83fe0",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex": "81862c3425e8aa2a82e605eb8fde07b1b7b47862b981922393d4f54ca9fa6250",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex": "758e504e9c194cf9bbed098700b1d7969420e9a87552222d3000084a9d095571",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex": "743e89ac1e529af45751fa85fde4b3438284a63dfd53ff52c94c2f229b20beff",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex": "541e41626d66e0e8bc8b5249805c9efbb134dfe0dc85c63102eea3c2d21da6f0",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex": "64b0b4193616b937a2b4520c678f8863ae06ab38385bb58db437b39a8f27719b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex": "359d413e7bb9d37f0fddc6ea5827415f6c73db584e781f6b2e2521059b595285",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex": "165569c2ffb6a80272d2853c3d3c4373c386391e8cbb81ed9683ae2a810dd28c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex": "f91d37fcda30e70ae85fbd9030682bc64df4424fc1260704def57dc6c444a63a",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex": "7533dd80c95a5124726b0a617a5f458226d4a7490bcd209e3fd7e717e24dc127",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex": "6143371709342ea83dcdb1744a229d18f4c1ee670e1e31b496046a708bfa3e66",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex": "0bc32a855862a83b7ece27d2ebf6bfeace759d6b64fb776394eee13d62401350",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex": "cd9bb9fbaac3f5bca5bedd77ca07a8c4457467869e2303fdf2b446a30dca9f9f",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex": "42ff3f6524037f73b44d16fe0abeae93a72407950b6a9b176f4d6a2a3f6e9fdb",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex": "bdea875774b4ad7a1e12debc67c46286245031f5c2e287c9e192f3ca4b6193b6",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex": "ea5e14f7fade556cee79636a6824710e97db928542fc1b23dfa618ff6448688e",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex": "eb08f70bacc87cf840512c98a45c3ed1fab04410f4228501cd2b3a833ecd6de6",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex": "02cfff83b06cc576ae02b8d5618fc9d8bcc02515a5cdb8dd419dd350a42c920d",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex": "acabde0c8a15d23b8e08dd666f1a8f013c9fc5feefbef4cc533065f198d7ee62",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex": "0fd495f3a090300a9740c637772e0b5b779f0fbdb94cbfe987815c0def856614",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex": "992706da31e055cdbecf5b1bf1b9c267383e3b4d4385773448f868e1cabf17f2",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex": "5cf22e53ee27e044a06a4aebdd77924101a491915021428a61cd6ff3ff2c8e0e",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex": "118694789bd8f5f732250b881ce15d36421f7f84e15a56adba1ed3661c5a0450",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex": "91ac89b327e3085fdb10a1213657b1c9e6540e1654e3b173193f60c154f381f7",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex": "97d1eab390dd0611f3749ff18d293687a85b28f322b1a367b74bc3767177ab45",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex": "b3db772dd8eb595d8a5c8ef8d232862f9cef97d4ac9dedee283ad7b6e83361dd",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex": "c65e39ffd0c7fac8fabf7a51a47acd9e11bac5b70dce14347b1c78887c81151f",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex": "95f8053efeeb2267d543d8d1afb10195d6114765eea7b90755b4e0c359324d64",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex": "7fa0ff434e9cdeb14c40f326d53e6ea0273ef2046daf28987992e2488d186c85",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex": "58fcc94547646458470315a6d10953a9729e7962e3def5273633b06fb444a5aa",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex": "ccd576f7cebab3a0c5d5cdef41fc44e638d7bb4a20e0a0465160eba1757795e5",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex": "f83601dd74e8c166162cb3daf926744c44ccf15a0122e17613658f82fa64c6a9",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex": "c94abbd89ad0556546d9e5053af16b58ce7f38d19c379b27309e5fefd23908f8",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex": "9758185623cce6b2a8d4a504d10dfd0a01ef6d3480794fa4c466384f4c08540c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex": "ea5ff35778088d94d8d2f1a20075ec57cc4ecd22844f9c288625a6db59ba7818",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex": "6e9383c1e63a6dbcfd2d95369905df566bdb6e7374c06e28c15a25eb782dc46b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex": "51038be668b2083ac5e8ae38a1da6f75091ee9471d71f33749d01a8bff1a9aa6",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex": "968308d364b4f31f2a787adf32c3df7d87959a519c4eb5c8b47bedde4311ab95",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex": "9b980e1373f9451da75cc6030a5b4c1671b88a1b14b45ed172cfb7cf2607fe1f",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex": "1c8834abe00807467a52d31ef96032d5084b2560eea45995018084d13a3cde3c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex": "317b4a8059ee9afd04b052dd2974c1c9a059d1b8e301f9578efa9ac0b9984990",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex": "cda208d98bdc556a06f5915571c6ce4d98c18aa639c4782a56c6d32a6ba68055",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex": "4bdde0208ec6188bb2b5aca3d37c89636070df1e06e6bbf4290f51c0f7c1aa2b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex": "ceafd7c1de02bde3d5a7570489ed6a150db51aabd658c1c78acf1ee5b5f89c6e",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex": "58a2c1ff27de97cb32b19ce95a4182d85369304980da9f1b21e4a1fddf4d666d",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex": "01dd81e3f2c56a8db7864916ada1a5036964aff2e8176aafd4773244e236bb27",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex": "8c056cfd919cca2dc5e398c776865e1af6a8605ab9d715f452aa68327164b52d",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg": "eb308ac3d665db8dd3c03b18328c551609346c659c2ce0e5029223fbcc339cb3",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def": "babfe19163bca9c6fa5b1abb6b6154cd0d1ca98888f08f1bf7d06a74de5fd330",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def": "10344ea78a94b2c725682edc400bbadbda9894ed654d3181ac947049fcf65079",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def": "6b950cad5613b1b8bad260abf397eba070f01ebbe73e4c4f9ac0986b6b5597ec",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def": "3738251bd32ac408cd0223b560fa6adefbcd0755c7b7d14f8e3215e1636a0c24",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex": "97d841d782de156f192fb9866c76ec65d28dabdf186cb4700094d0a5a13eadab",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex": "818b8e3cd0606bdb8ac7fbaccc5f80033672fa817537536f76bc67bc3942928c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex": "6ea4caeea5bcb6cd60b80ef4607e8a79824ec0cdcebb47424c1bdbe0c2ea6671",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex": "5787859fab7c72cc3dfd7134e78bbb0e770a43e7da39f93732c24232249fdde8",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex": "212f64f8641fb944a006a3c0825e78d30b0a2c5e3b4c4d62ff59ef61214caeed",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex": "68cd7046c23f0c5d5775e5f481d14577f1d62bfe1dce1605387d46490edf7e5c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex": "6d28f51c1b4cb933969339982286f86bb1c9af70ed34535482321de4cd491664",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex": "ff576d97434040185004b8be9b40804b9e9f95ae225719583c4376d8718e9f06",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def": "72036598130f2477df66608d26ab7008eb87a18b09fbe0c7eed9c63188720c77",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex": "e90c556be8f468865ca2b656913ba8afc2220f2c163f02e0874731a6d34cdd64",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex": "7eca55f2e1d560656706f0cc1c1bce1b989604e3d224737e7db058ee1ffd1d8d",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex": "92d3506845332bb9cd1a9ec001690eb0ba1e11c2b63e63244941873b5e8cb85e",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex": "861dfd01baf043b81e3a0c9ae9c6666dc95f22d63b5ed27c6c919f6aa1f55654",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex": "86843251927c29a021eac1635ee8650cfc06265281b50441d8cb6f67bb8504ee",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex": "ef606fdf2ffc6197b9e1037860e1fe788cfa1aa3bf271a986dd6662b2e6526ca",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex": "67b18085596cac4fe3c092347325b96e63e09617e8cb290a262a11424a529a0d",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex": "a22375071be85968f3b7489bd64c01f5317ca1ddadc0b7ab1f8257181d55a35b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex": "7a368fe374ef0c89e25ae68bbf7db29fc57303a412c7c1dbcc8c2cc3ee1ed8c4",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex": "b776f0cb53282d46ecfc87e003c200f3261fe28f03530bfc297fb81c1d9aba19",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex": "b353c3d994370f16a1e5867eb9b1d39646c4be7dc896aff5b022ec1fb3dbcadf",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex": "c4245419e40e5058320853728f6bb93521c153d89f1fbf185ce8793d067c1ca6",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex": "70c56e4ccf3448f53cfbb90046ada2683dbf2eec1cf586562fe78bcfe146b3de",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex": "59104418d1184b73a01e15b254ffb8c5d4320cf510673f095933d88e901617d6",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex": "d11c8b83414c052bb39c678e49d81c5f0235de4af1bdf5dd75270e4de82f94a5",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex": "3b7e08cae4b9d3c8cc9919d5ddf11327769eae0d7368fff67d2961f39fc88746",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex": "6626da5af27eecfedb5b0d8cdfeee7818d8006e6031ddc9d4dc7c9b3f24a8bd2",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex": "7a884e8daa52c24cd65da0b6a7158466b544fa65355116686fda292f0a60cef3",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex": "4745cc082fd09d18d6983388fd5eb52f742889333e0216caff2ff0b25b40bf3c",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex": "1e9b23521104bdeaba4625d546b781b1f1d73603f7b3f56f8672c05ec78ba4ce",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex": "1fd685ef9909ce8566e941c1a06057fbe2612cd1ff341f10bbb48e5ca47dd1ac",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex": "68f0c4afe14d61d06c454a53963ff5adb78244eacd0ead7244892e00ccbfe4c8",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex": "b00f676b47081cec0cc3aa197864154452bfe20832f49e291c465ae3af7bf130",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex": "ee933b674d90333fb05d45ef71d88b68611f5f353171335b4d080f55be08fe82",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def": "f1d6a3054884a35db9c2db65b1bd0836cbced86b390293e1ecdc57a10d0bf929",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def": "df2d0c48a483aa808daef731fdb91760c802a997132007fba3d7563a6b0ea170",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex": "7124db702274395928a825f687081477f0de5ee9007b9a4a9208f28f209f67fe",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex": "f274eca8ddc61d21656836cd55022230afb5bcde248d7ea9da0035695838ab1f",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex": "6df88a8d3f68bd0dbbfb2dcf3054af193855aba8676d2e7fc801780e7b3bdeaa",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex": "306ecf26e6e6fb2ace2e4a743f448adf098325519e0b178b526368ed5616c52b",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex": "9be91a0768c4bc60f742c8ead8f311cd2bae733a30fdcf62d1ef8b4e5c90f257",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex": "591d8a4658974604f95ce234532715d98f449565a4ff7f893eca6222e7214fdc",
+    "/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex": "878385031a1d3ea317938785f956d075fd419415bc00204b28f3f6792bb30d29",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty": "b134a7bba648a6987afc83ddfb6a3fcdad43bcae6b616e533eb484306d56ac45",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty": "9d11c81501953d689787ff14c073d2f1eda5874068db9e882b8dbbf9a9d863b0",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty": "8d5e2bdb117297385971927b14fe4804314133dc0027b3171249a08280894626",
@@ -361,6 +496,17 @@
     "/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg": "1b338f55100686395d294258975d188876c6bed14f15393a2c4af610bd59280f",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg": "859dceb86efcaf0f0762c76b541b8a1dfb091f0a2141764c6dc019c7d0354ffd",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty": "d9b0f6ed58f5c260d2df9435b97da23ca326e3596db8ef0681bbff7a14343603",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty": "99e08946749446e0b9b7faa985f8202740a94476f9e99bab5286cca5ce4766e9",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty": "3a52a05062a74a763ee604b4a3d20f0be4a4b99fe8182373e30ccea0abafc96e",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty": "7df38d1bb03d0bf642b3f53c38d86641765d950f82d481ebd63c67838bc78ee7",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty": "b5a95ba245bb51ce01e5ead16e818a0024f16cd208df3386b30ba0798a911344",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty": "6e39ff4fdf9f126aff28880a7dd59fccc0e6735409d92ca455cdd2a4f2b4db53",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty": "4abed7d8c88642201dd1a932a435ae05a1f2659f1f7e95c72d6b5347c83d232a",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty": "cc7121c5706c5c52807aea879ca0a9083a8dc81b04d96303d0d398804d9d3d52",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty": "5ae03317ea221a6f68d807775bd06a10625aa9fb1f590dbe2114688f735c447d",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty": "b90072b20d0590f23fd0ad273d059e3b7737319b3fb61e3bea6102fd77f24b3d",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty": "9653b8fae6bba95bec40ffbedd7d6c2b8f3be4a85b8b39580ab3ee6c3590041a",
+    "/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty": "cb353b58769449f756c5c16f9d355c90c0714d1da1228bf912c3a5b208b4890b",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty": "e6c6c01e0c057e360c07238cd765117e5d415c26c2ea1cdf141b7ddfaf151b0c",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty": "1bd5d42025520bef74f8808af99cf3f3be7d2e3774b9931bf85c11ba81bb6cab",
     "/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty": "7771d8fb8f76147d1d6fc5b205c8989feb270bafccd6021570cd7e5152ead1d6",
@@ -372,25 +518,29 @@
     "/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty": "478888f8e8f00345fd645b6cdd6fa7db1e9efdd6f585b25c89bb3665d9029295"
   },
   "build_record_sha256": {
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.log": "aa48b071d2df09f369fb6b95d677bfa3335ccb6903df3c551264fa0585cff2f1",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.fls": "13442f468f0eebf2a64425965bb59fd9f24a1ed57a152928095c4cd5808890f6",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.blg": "1b832ec84df3485a73cfdc2d9bd1e03979b12b83f0a6dda499c51441a48cb00d"
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.log": "4d4b286b30f443fe99e21693f244e87841fde19b3f850e7f8b7c8ad9808ca3be",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.fls": "a356b99ccd1b806f3d381cb78656dfe29f735863efa706c4262ae1084f3e804a",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.blg": "466e04daa17227b521567b98d3eea4fbebc0d8d352c9f23198485906f174cb9d"
   },
   "embedded_pdf_font_names": [
     "TeXGyreTermes-Bold-Identity-H",
     "TeXGyreTermes-Regular-Identity-H",
+    "JuliaMono-Regular",
     "CMR10",
     "CMMI10",
     "CMSY10",
     "CMR7",
-    "JuliaMono-Regular",
     "CMMI7",
     "MSBM10",
     "CMSY7",
     "CMEX10",
-    "TeXGyreTermes-Italic-Identity-H"
+    "TeXGyreTermes-Italic-Identity-H",
+    "TeXGyreHeros-Bold-Identity-H",
+    "TeXGyreHeros-Regular-Identity-H",
+    "CMR8",
+    "CMMI8"
   ],
   "unresolved_font_files": [],
   "font_warnings": [],
-  "pdf_sha256": "d3729d2afb922c0ee3a62cfc41675df66746eb632b4da9eb47ffd5d9cceb9dca"
+  "pdf_sha256": "e4337f8fc29398d3fbaa64c0150682433f80ad32d01d59102dd540e6f778a822"
 }

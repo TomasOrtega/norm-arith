@@ -476,11 +476,14 @@ def load_evidence(config, root=ROOT):
             result["paper_inputs"] = {key: directory.resolve() / name if key != "implementation_sha256" else name
                                       for key, name in receipt["paper_inputs"].items()}
             result["paper_metadata"] = receipt["configuration"].get("paper_metadata", {})
+            result["project_source_root"] = model.project_source_root
             if config.get("claim_speedup"):
                 require(result["timing"] and result["timing"]["success_criterion_met"], "speed claim requested without a passing confirmatory gate")
             return result
         require(config.get("evidence_bundle_sha256") is None, "bundle receipt hash has no bundle path")
-        result = Evidence(config, root).load()
+        model = Evidence(config, root)
+        result = model.load()
+        result["project_source_root"] = model.project_source_root
         result["validation_context"] = "Live evidence: the listed stages were checked in this workspace; no absent stage is inferred."
         return result
     except (OSError, KeyError, TypeError, subprocess.SubprocessError, BENCHMARK.BenchmarkError, TransportError) as error:

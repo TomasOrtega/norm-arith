@@ -15,8 +15,9 @@ The mean warm affected-file compilation time decreases from 131.19 to 122.33
 seconds: a 1.0724× ratio, with conditional 95% block-BCa interval
 [1.0669, 1.0814]. All 46 files and 40 pairs remain in the result. The final paper
 passed scientific review, STE review, all-page visual inspection, and a clean
-offline default rebuild. Its main body is four pages; references and appendices
-bring the total to 17. The [release receipt](../paper/output/release.json) records
+offline default rebuild. Its main body is four pages. The current appendices omit
+the prototype-pilot results and tables and include key tactic excerpts with an
+implementation guide and a full-source link. The [release receipt](../paper/output/release.json) records
 the checked sources and evidence.
 
 The user requests substantially more uses and line savings than the original

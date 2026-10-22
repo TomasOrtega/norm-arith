@@ -11,6 +11,10 @@ import audit
 
 
 class ReviewRecordTests(unittest.TestCase):
+    def test_link_label_is_prose_but_its_destination_is_not(self):
+        source = r"The \href{https://github.com/example/repo/tree/abc123}{full source} has five modules."
+        self.assertEqual(" ".join(audit.prose(source).split()), "The full source has five modules.")
+
     def test_record_uses_current_utc_review_date(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

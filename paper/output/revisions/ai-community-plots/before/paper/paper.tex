@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage[preprint]{vendor/neurips_2026}
+\usepackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf,
+  BoldItalicFont=texgyretermes-bolditalic.otf]
+\setsansfont{texgyreheros-regular.otf}[
+  BoldFont=texgyreheros-bold.otf,
+  ItalicFont=texgyreheros-italic.otf,
+  BoldItalicFont=texgyreheros-bolditalic.otf]
+\setmonofont{JuliaMono-Regular.ttf}[
+  Ligatures=NoCommon,Scale=0.9,
+  BoldFont=JuliaMono-Bold.ttf,
+  ItalicFont=JuliaMono-RegularItalic.ttf,
+  BoldItalicFont=JuliaMono-BoldItalic.ttf]
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,fvextra,microtype,xcolor,longtable}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{enumitem,placeins}
+\setlist{nosep,leftmargin=*}
+\fvset{fontsize=\small,breaklines=true,breaksymbolleft={},breaksymbolright={}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\NA}{\texttt{norm\_arith}}
+\newcommand{\sourcepath}[1]{\texttt{\detokenize{#1}}}
+\input{generated/study-facts.tex}
+\title{Checked Norm and Metric Arithmetic in Lean:\\A Finite Core and a Library Evaluation}
+\author{Anonymous Authors}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+A norm estimate can use a linear decomposition that the goal does not show.
+We give a finite reduction for affine norm comparisons over real seminormed spaces, with rational vector terms and vector-equality assumptions.
+The reduction includes strict comparisons and distances.
+Its finite completeness theorem does not remove implementation resource limits.
+Lean validates the vector identities and norm certificates.
+Bounded extensions specialize local quantified bounds and check finite metric constraints.
+
+An earlier census processes \CensusFiles{} tracked mathlib files.
+A targeted follow-up processes \FollowupFiles{} files and records \FollowupFailed{} incomplete outcomes.
+The verified local patch replaces \PatchReplacements{} proof spans and removes \PatchNetSaved{} lines after preparation, helpers, and imports.
+With built dependencies, the ratio of mean original and replacement compilation times is \StudyRatio{} across \PatchFiles{} affected files.
+The conditional paired 95\% interval is $[\StudyLower{},\StudyUpper{}]$.
+\end{abstract}
+
+\section{The problem and the trust boundary}
+\label{sec:problem}
+A proof can use many lines to specify a norm decomposition.
+For example, two supplied bounds imply
+\[
+ \norm{x+y}\le a,\quad \norm{x-y}\le b
+ \quad\Longrightarrow\quad
+ \norm{x}\le (a+b)/2.
+\]
+The hidden identity is $x=\frac12(x+y)+\frac12(x-y)$.
+The tactic finds rational coefficients and constructs a proof from them.
+Here $E$ is a real seminormed space.
+\input{generated/hidden.tex}
+
+Lean's kernel validates the proof terms that tactics produce \citep{lean4}.
+Exact rational search proposes certificates for proved norm lemmas.
+The search algorithm stays outside the trusted kernel.
+The finite theorem, checked certificates, and bounded program have distinct guarantees.
+A program completeness claim must have a completed search.
+\input{generated/implementation-status.tex}
+
+\section{The real-space fragment}
+\label{sec:fragment}
+A vector term is a rational linear combination of formal atoms $x_1,\ldots,x_d$.
+A scalar term is a rational affine combination of real scalar atoms $s_1,\ldots,s_k$ and norm terms $\norm{v}$.
+Assumptions are vector equalities and scalar comparisons with $\le$, $<$, or $=$.
+Conclusions use the same scalar-comparison syntax.
+Validity means truth in all such spaces for all assignments of vector and scalar atoms that satisfy the recognized assumptions.
+
+Distances abbreviate $\norm{u-v}$.
+Products of norms are not in this affine scalar grammar.
+
+Norm-free scalar expressions and unsupported vector subterms can be independent atoms.
+This includes vector terms with variable coefficients.
+Recognized equalities can relate vector atoms.
+Completeness applies to the reified abstraction, without the internal semantics of opaque expressions.
+
+For each vector equality $u=v$, include the norm argument $u-v$ with value zero.
+Let $v_1,\ldots,v_m\in\Q^d$ be all observed norm arguments.
+Let $Z$ index the differences introduced from vector equalities.
+Write $A=[v_1\ \cdots\ v_m]$ and $n_i=\norm{v_i}$.
+Define the pointed polyhedron
+\begin{equation}\label{eq:polyhedron}
+ P_i=\{z\in\R_{\ge0}^{2m}:[A,-A]z=v_i\}.
+\end{equation}
+
+Its vertices are a finite rational set $B_i$.
+The finite norm constraints are
+\begin{equation}\label{eq:constraints}
+ n_i\ge0,\quad n_\ell=0\ (\ell\in Z),\qquad
+ n_i\le\sum_{j=1}^m(z_j+z_{m+j})n_j
+ \quad(i\le m,\ z\in B_i).
+\end{equation}
+One validated vector identity, the triangle inequality, and real homogeneity prove each inequality.
+
+\begin{theorem}[Finite norm-value characterization]\label{thm:complete}
+Nonnegative real values $n_1,\ldots,n_m$ satisfy \eqref{eq:constraints} if and only if some real seminormed space realizes these values and the vector equalities.
+Thus exact linear arithmetic over these constraints decides each implication in the declared fragment.
+\end{theorem}
+
+\section{Finite search and checked certificates}
+\label{sec:procedure}
+A vertex of $P_i$ has independent positive-support columns.
+Such a support contains at most $\operatorname{rank}(A)$ columns.
+It cannot contain the two signs of one nonzero column.
+Thus independent subsets of the unsigned source columns suffice: solve each selected system exactly and keep its signed coefficients.
+The zero target also has the empty certificate.
+
+This enumeration is finite, although it can have exponential cost.
+An implementation must report resource exhaustion as unknown.
+
+For a certificate $v=\sum_j c_jv_j$, Lean constructs
+\begin{equation}\label{eq:certificate}
+ \norm{v}\le\sum_j |c_j|\norm{v_j}.
+\end{equation}
+Normalization proves the vector identity.
+Norm lemmas prove the inequality.
+The scalar backend combines these facts with local scalar assumptions.
+
+For equality conclusions, prove the two directions.
+For a strict conclusion, the backend adds its weak negation.
+An equality's negation has two strict branches.
+The reference reduction must have exact feasibility for mixed linear constraints.
+It does not use a numerical tolerance.
+
+\paragraph{Completeness argument.}
+For fixed feasible $n$, assign a cost to each signed representation:
+\begin{equation}\label{eq:gauge}
+ p(u)=\min\{\textstyle\sum_j n_j(z_j+z_{m+j}):[A,-A]z=u,\ z\ge0\}.
+\end{equation}
+This minimum exists on the span of the observed vectors.
+A vertex attains a minimum because the feasible polyhedron is pointed and the cost is nonnegative.
+The constraints give $p(v_i)\ge n_i$.
+The single-column representation gives the reverse inequality.
+
+The representation costs define a seminorm.
+Extend it by zero on a complement and quotient by its zero subspace.
+The quotient satisfies the encoded vector equalities and preserves observed norm values.
+Thus a scalar counterexample gives a space counterexample to the abstraction.
+Appendix~\ref{app:proof} gives the cases with zero costs and vector relations.
+
+\paragraph{One certificate interface.}
+The default \NA{} selects related local bounds automatically.
+The explicit form \texttt{norm\_arith [facts]} gives the caller control.
+The two paths use the same normal forms and certificate layer.
+Fast paths can return before the reference search.
+The finite reference search is the fallback.
+
+\paragraph{Bounded extensions.}
+The tactic projects conjunctions and specializes local quantified norm bounds at observed vector terms.
+It checks local, conjunction, and linear scalar premises.
+Explicit fact lists exclude omitted norm and distance premises.
+This does not give quantified completeness.
+
+A separate path gives nonnegativity, symmetry, self-distance, and triangle constraints for at most eight observed points in pseudometric spaces.
+Failed metric attempts restore state before the norm paths run.
+This path does not use vector-space structure.
+The additive-group extension uses integer certificates without real homogeneity.
+Appendix~\ref{app:examples} gives checked examples and the fixed limits.
+
+\section{Library evaluation}
+\label{sec:evaluation}
+The mathlib proofs are the baseline \citep{mathlib}.
+The initial census uses all tracked Lean files in \texttt{Mathlib/} at one pinned revision.
+It records source-backed tactic and term observations during elaboration \citep{leaninfotree}.
+Each file has a completion status.
+The denominator includes incomplete extraction.
+
+The follow-up uses the fixed subset with norm observations.
+Its outcomes are separate from the earlier full census outcomes.
+The composed patch combines census-generated replacements with replacements composed outside the census.
+
+\input{generated/census-status.tex}
+
+Eligibility uses the recognized norm grammar and an editable source span.
+The follow-up includes the real-space core, additive groups, the opaque upper-bound extension, and generic metric comparisons.
+The scan records the original goal before each tactic attempt.
+It uses fixed preparation and resource rules.
+The scan does not try original single-line proofs because a replacement cannot use fewer proof lines.
+These untried observations are not tactic successes.
+
+The deterministic selector excludes overlapping replacements and files without positive savings after import costs.
+All selected replacements compile together with the theorem statements and assumptions unchanged.
+The selected proof lines satisfy mathlib's 100-character limit.
+The proof counts include preparation, helpers, and imports.
+Tactic implementation and census infrastructure have separate costs in Appendix~\ref{app:evaluation}.
+These are local patch savings, not a reduction in total repository size.
+
+\paragraph{A selected source replacement.}
+The entry \texttt{\CaseID} replaces one estimate inside the Strong Law proof.
+It keeps the finite sum bound and its pointwise normalization.
+The tactic then combines the centered average and expectation bounds.
+
+\VerbatimInput{generated/census-example-replacement.lean}
+
+The block decreases from \CaseBefore{} proof code lines to \CaseAfter{}, with all preparation counted.
+The net figure includes the import one time for each file.
+Appendix~\ref{app:examples} records the original block, declaration, and provenance.
+
+\paragraph{Compilation results.}
+The statistic was the ratio of mean total times for all affected files.
+We froze the code, patch, sample count, and analysis before the confirmatory run.
+The predeclared speed criterion was a paired 95\% interval fully above one.
+The run included tactic search, imports, proof construction, proof validation, serialization, and C generation.
+It excluded native C object compilation and Lake dispatch.
+The analysis kept slower files and all paired samples.
+
+Appendix~\ref{app:evaluation} gives the timing-block method and runtime limits.
+
+\input{generated/timing-main.tex}
+
+The variants used different native imports.
+This ratio does not give an algorithm comparison.
+The result applies to these affected files with built dependencies on the recorded machine.
+
+\section{Related work and limits}
+HOL Light has \texttt{NORM\_ARITH}, and Isabelle has the \texttt{norm} method \citep{hollightnorm,isabellenorm}.
+Solovay, Arthan, and Harrison prove decidability results for universal normed-space formulas \citep{solovay2012}.
+We give a Lean certificate design, an explicit finite reduction, and a reproducible library evaluation.
+We do not give the first decision procedure.
+
+The finite theorem gives no parser coverage result, complete census, or practical runtime bound.
+The corpus runs include incomplete extraction and untried observations.
+The targeted follow-up does not show all uses in mathlib.
+Proof compression does not prove faster compilation.
+\label{main-end}
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+\clearpage
+\appendix
+\input{appendix.tex}
+\begingroup
+\fvset{fontsize=\small,numbers=left,numbersep=6pt,xleftmargin=1.8em,
+  firstnumber=1,numberblanklines=true,baselinestretch=0.9}
+\input{implementation.tex}
+\endgroup
+\end{document}
