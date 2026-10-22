@@ -1,0 +1,107 @@
+{
+  "scope": "new source-verified proof edits; no new timing measurement",
+  "manifest": "benchmarks/expansion/followup-20261021/calculus/manifest.json",
+  "manifest_sha256": "d4c09bf8ab35ec708bdeb11d9f873fec7e43a9d7fd72d23adeec31619974ddd7",
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "outside_published_46_files": true,
+  "tactic_sha256": "53c79f56f2c5c66fc2a9af885e37e715f464eeb9557450d19a7274bd88d1de77",
+  "candidate_count": 13,
+  "file_count": 6,
+  "original_proof_lines": 59,
+  "replacement_proof_lines": 28,
+  "added_import_lines": 6,
+  "net_lines_saved": 25,
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+      "candidate_ids": [
+        "followup-calculus-contdiff-inside",
+        "followup-calculus-contdiff-outside"
+      ],
+      "original_proof_lines": 5,
+      "replacement_proof_lines": 2,
+      "added_import_lines": 1,
+      "net_lines_saved": 2,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "replacement_source_sha256": "d5218ef9b14e070099ac93fa9c6957ae151899d48865a6d580439c8649f1381c",
+      "status": "complete_file_verified_warnings_as_errors"
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+      "candidate_ids": [
+        "followup-calculus-uniform-ball",
+        "followup-calculus-uniform-mvt"
+      ],
+      "original_proof_lines": 7,
+      "replacement_proof_lines": 3,
+      "added_import_lines": 1,
+      "net_lines_saved": 3,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "replacement_source_sha256": "447f782493b826040bb433c8ec2f4298946047431deb0587360b1176eec9dc8e",
+      "status": "complete_file_verified_warnings_as_errors"
+    },
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "candidate_ids": [
+        "followup-calculus-convolution-limit",
+        "followup-calculus-convolution-local"
+      ],
+      "original_proof_lines": 4,
+      "replacement_proof_lines": 2,
+      "added_import_lines": 1,
+      "net_lines_saved": 1,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "replacement_source_sha256": "23281a5f021e90eb2be8371fe624856f36eca832e515becae5426f97f4f3d797",
+      "status": "complete_file_verified_warnings_as_errors"
+    },
+    {
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "candidate_ids": [
+        "followup-calculus-schwartz-antilipschitz",
+        "followup-calculus-schwartz-max",
+        "followup-calculus-schwartz-norm"
+      ],
+      "original_proof_lines": 11,
+      "replacement_proof_lines": 5,
+      "added_import_lines": 1,
+      "net_lines_saved": 5,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "replacement_source_sha256": "42926717edf19f331de24da8278efb11f2a0cac36e44577297c9d86fcbe02b3d",
+      "status": "complete_file_verified_warnings_as_errors"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+      "candidate_ids": [
+        "followup-calculus-finite-symmetry",
+        "followup-calculus-finite-witness"
+      ],
+      "original_proof_lines": 7,
+      "replacement_proof_lines": 3,
+      "added_import_lines": 1,
+      "net_lines_saved": 3,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "replacement_source_sha256": "664afccfae0cc8aa09b98fb2d2b39f2769f6e9faa326ab6fe00d8ee74f6b624f",
+      "status": "complete_file_verified_warnings_as_errors"
+    },
+    {
+      "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "candidate_ids": [
+        "followup-calculus-picard-ball",
+        "followup-calculus-picard-local"
+      ],
+      "original_proof_lines": 25,
+      "replacement_proof_lines": 13,
+      "added_import_lines": 1,
+      "net_lines_saved": 11,
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "replacement_source_sha256": "5df50802ad44f6f4805f67ae34ea523474b0c8e1a9e8bf227753824e6eb7a5c4",
+      "status": "complete_file_verified_warnings_as_errors"
+    }
+  ]
+}

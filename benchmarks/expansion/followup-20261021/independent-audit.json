@@ -1,0 +1,4272 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "created_at_utc": "2026-10-21T21:11:29.337453+00:00",
+  "scope": "Independent literal source/count/body-provenance and selection audit; exploratory batch compiles rechecked. Final combined fresh-source verification is separate. No new timing claim.",
+  "method": "Stdlib source rendering and independent comment/string-aware lexer; no benchmark.py or select_expansion.py imports.",
+  "checker_source": "benchmarks/expansion/followup-20261021/metric/audit_union.py",
+  "checker_source_sha256": "a95a29c3f779619d180326057756059f4db8796cbbab72e8a1e93d77657a546b",
+  "lexer_source_sha256": "7b6c94c03283203735a157930892ef64a06a162b398519102d6b78c172b26863",
+  "batches": [
+    {
+      "manifest": "benchmarks/expansion/followup-20261021/measure/confirmed.json",
+      "manifest_sha256": "3a6a481ffb063f78d31b62466a9f85e79089f59ba005c0985d94d7dd126de107",
+      "totals": {
+        "replacements": 4,
+        "affected_files": 3,
+        "original_proof_code_lines": 18,
+        "replacement_proof_code_lines": 8,
+        "added_import_code_lines": 3,
+        "added_helper_code_lines": 0,
+        "net_code_lines_saved": 7
+      },
+      "files": [
+        {
+          "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+          "original_sha256": "5eb429e05ae70ef328b276e3a9ac40f30fbe7d875d1024d470370a1eb22fd239",
+          "patched_sha256": "43e8bb16d2f87fa749393a8fd07fafa5f4ee0f6751f89e22dad49e5fa0bfe952",
+          "original_proof_lines": 3,
+          "replacement_proof_lines": 1,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+          "original_sha256": "86e7e198048461599fb9c7d3030f8e971c270c5cd45826362772a2c0c6e4cda7",
+          "patched_sha256": "cbaead9bdf8a20466657ad1385bf015f231af9e75f6d596b98bb071c452b8054",
+          "original_proof_lines": 5,
+          "replacement_proof_lines": 3,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+          "original_sha256": "7f81281ad5a14613f427dcfdf6eeccec20137b33929d576fa08fa479400edceb",
+          "patched_sha256": "5efead02697c71c60f69fa42e96fcea18ecd2c4eb2ad7a4c8fd35b2e178c66f1",
+          "original_proof_lines": 10,
+          "replacement_proof_lines": 4,
+          "added_import_lines": 1,
+          "net_lines_saved": 5
+        }
+      ],
+      "proof_spans": [
+        {
+          "id": "followup-smooth-pointwise",
+          "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+          "start_line": 73,
+          "end_line": 75,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "census-79b02bbaa97f1bcecd14",
+          "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+          "start_line": 167,
+          "end_line": 168,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-besicovitch-self",
+          "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+          "start_line": 179,
+          "end_line": 181,
+          "original_code_lines": 3,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "followup-resolvent-separation",
+          "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+          "start_line": 157,
+          "end_line": 166,
+          "original_code_lines": 10,
+          "replacement_code_lines": 4
+        }
+      ]
+    },
+    {
+      "manifest": "benchmarks/expansion/followup-20261021/metric/confirmed.json",
+      "manifest_sha256": "bbf3ef448c3aa6aa525fad7d05f4cc459565909cf70bcb5e1530858471634faf",
+      "totals": {
+        "replacements": 9,
+        "affected_files": 4,
+        "original_proof_code_lines": 30,
+        "replacement_proof_code_lines": 16,
+        "added_import_code_lines": 4,
+        "added_helper_code_lines": 0,
+        "net_code_lines_saved": 10
+      },
+      "files": [
+        {
+          "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+          "original_sha256": "a8f87ce5dbfb20aef5b43910abaaad23c9f40764d8b36139c587a7a5b4cb8d06",
+          "patched_sha256": "772eda0ab8e5b2e7cd5d37b4fab87e967b1e111c5d8be340108f0cf99b3697a7",
+          "original_proof_lines": 14,
+          "replacement_proof_lines": 8,
+          "added_import_lines": 1,
+          "net_lines_saved": 5
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+          "original_sha256": "22bde8f2f8bcad18724d52ad5f6718ccc57f691427764a826a1f3576ace5a08e",
+          "patched_sha256": "693b417e0654b13deeaf848c864fda017f86e02bad40d2252b77a094c455fa6e",
+          "original_proof_lines": 6,
+          "replacement_proof_lines": 3,
+          "added_import_lines": 1,
+          "net_lines_saved": 2
+        },
+        {
+          "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+          "original_sha256": "29f30a0831f99315b9c437dac16b706ddebe37536cc88b0be4b67d9d8d853f58",
+          "patched_sha256": "70e2b26d0b989d816320c0998cb3187e94be3d61bae74a65fdafbc9934fe17dc",
+          "original_proof_lines": 5,
+          "replacement_proof_lines": 3,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/Topology/UrysohnsLemma.lean",
+          "original_sha256": "1a822919ca604e6a50d27d87efe291f6c63632b19f92b5bfb101c94c1c777568",
+          "patched_sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+          "original_proof_lines": 5,
+          "replacement_proof_lines": 2,
+          "added_import_lines": 1,
+          "net_lines_saved": 2
+        }
+      ],
+      "proof_spans": [
+        {
+          "id": "metric-followup-sphere-ext-centers",
+          "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+          "start_line": 477,
+          "end_line": 479,
+          "original_code_lines": 3,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "metric-followup-sphere-int-centers",
+          "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+          "start_line": 483,
+          "end_line": 485,
+          "original_code_lines": 3,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "metric-followup-sphere-radius-positive",
+          "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+          "start_line": 523,
+          "end_line": 530,
+          "original_code_lines": 8,
+          "replacement_code_lines": 4
+        },
+        {
+          "id": "metric-followup-causeq-limit",
+          "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+          "start_line": 40,
+          "end_line": 43,
+          "original_code_lines": 4,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "metric-followup-causeq-cauchy",
+          "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+          "start_line": 81,
+          "end_line": 82,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "metric-followup-hausdorff-cover",
+          "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+          "start_line": 567,
+          "end_line": 569,
+          "original_code_lines": 3,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "metric-followup-hausdorff-lipschitz",
+          "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+          "start_line": 571,
+          "end_line": 572,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "metric-followup-urysohn-first",
+          "path": "Mathlib/Topology/UrysohnsLemma.lean",
+          "start_line": 293,
+          "end_line": 294,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "metric-followup-urysohn-second",
+          "path": "Mathlib/Topology/UrysohnsLemma.lean",
+          "start_line": 306,
+          "end_line": 308,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        }
+      ]
+    },
+    {
+      "manifest": "benchmarks/expansion/followup-20261021/calculus/confirmed.json",
+      "manifest_sha256": "c1e96cd58d08533daaedab02d94cd396e318d8dff4d1c85fae4656710c58c7bc",
+      "totals": {
+        "replacements": 13,
+        "affected_files": 6,
+        "original_proof_code_lines": 59,
+        "replacement_proof_code_lines": 28,
+        "added_import_code_lines": 6,
+        "added_helper_code_lines": 0,
+        "net_code_lines_saved": 25
+      },
+      "files": [
+        {
+          "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+          "original_sha256": "8252085c90d89aa44372ffd20386c1be6e2be2118dae1a12eea5ca44448bc683",
+          "patched_sha256": "d5218ef9b14e070099ac93fa9c6957ae151899d48865a6d580439c8649f1381c",
+          "original_proof_lines": 5,
+          "replacement_proof_lines": 2,
+          "added_import_lines": 1,
+          "net_lines_saved": 2
+        },
+        {
+          "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+          "original_sha256": "77ce5b3aded8b40f85a9f8d99b900f1b631902963c1ad4c1f28bbffbdca20b37",
+          "patched_sha256": "447f782493b826040bb433c8ec2f4298946047431deb0587360b1176eec9dc8e",
+          "original_proof_lines": 7,
+          "replacement_proof_lines": 3,
+          "added_import_lines": 1,
+          "net_lines_saved": 3
+        },
+        {
+          "path": "Mathlib/Analysis/Convolution.lean",
+          "original_sha256": "49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220",
+          "patched_sha256": "23281a5f021e90eb2be8371fe624856f36eca832e515becae5426f97f4f3d797",
+          "original_proof_lines": 4,
+          "replacement_proof_lines": 2,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+          "original_sha256": "7e090fe3e8df982e44dae25896442f4134123a8ee433512403320250557c557b",
+          "patched_sha256": "42926717edf19f331de24da8278efb11f2a0cac36e44577297c9d86fcbe02b3d",
+          "original_proof_lines": 11,
+          "replacement_proof_lines": 5,
+          "added_import_lines": 1,
+          "net_lines_saved": 5
+        },
+        {
+          "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+          "original_sha256": "0915f1a75bb45b99f27227605ea0bb5a39f48eecc15f93aefb38c48762655103",
+          "patched_sha256": "664afccfae0cc8aa09b98fb2d2b39f2769f6e9faa326ab6fe00d8ee74f6b624f",
+          "original_proof_lines": 7,
+          "replacement_proof_lines": 3,
+          "added_import_lines": 1,
+          "net_lines_saved": 3
+        },
+        {
+          "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+          "original_sha256": "c9211adf39cf27a6419c6516bea3e109de7445a905f9b65ffdb68de5a0abac90",
+          "patched_sha256": "5df50802ad44f6f4805f67ae34ea523474b0c8e1a9e8bf227753824e6eb7a5c4",
+          "original_proof_lines": 25,
+          "replacement_proof_lines": 13,
+          "added_import_lines": 1,
+          "net_lines_saved": 11
+        }
+      ],
+      "proof_spans": [
+        {
+          "id": "followup-calculus-contdiff-inside",
+          "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+          "start_line": 191,
+          "end_line": 192,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-contdiff-outside",
+          "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+          "start_line": 193,
+          "end_line": 195,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-uniform-ball",
+          "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+          "start_line": 142,
+          "end_line": 143,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-uniform-mvt",
+          "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+          "start_line": 212,
+          "end_line": 216,
+          "original_code_lines": 5,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "followup-calculus-convolution-local",
+          "path": "Mathlib/Analysis/Convolution.lean",
+          "start_line": 855,
+          "end_line": 856,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-convolution-limit",
+          "path": "Mathlib/Analysis/Convolution.lean",
+          "start_line": 858,
+          "end_line": 859,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-schwartz-antilipschitz",
+          "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+          "start_line": 976,
+          "end_line": 978,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-schwartz-max",
+          "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+          "start_line": 979,
+          "end_line": 984,
+          "original_code_lines": 6,
+          "replacement_code_lines": 3
+        },
+        {
+          "id": "followup-calculus-schwartz-norm",
+          "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+          "start_line": 1230,
+          "end_line": 1231,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-finite-witness",
+          "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+          "start_line": 435,
+          "end_line": 439,
+          "original_code_lines": 5,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "followup-calculus-finite-symmetry",
+          "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+          "start_line": 450,
+          "end_line": 451,
+          "original_code_lines": 2,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-calculus-picard-ball",
+          "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+          "start_line": 234,
+          "end_line": 245,
+          "original_code_lines": 12,
+          "replacement_code_lines": 7
+        },
+        {
+          "id": "followup-calculus-picard-local",
+          "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+          "start_line": 686,
+          "end_line": 698,
+          "original_code_lines": 13,
+          "replacement_code_lines": 6
+        }
+      ]
+    },
+    {
+      "manifest": "benchmarks/expansion/followup-20261021/analysis/confirmed.json",
+      "manifest_sha256": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971",
+      "totals": {
+        "replacements": 4,
+        "affected_files": 4,
+        "original_proof_code_lines": 16,
+        "replacement_proof_code_lines": 8,
+        "added_import_code_lines": 4,
+        "added_helper_code_lines": 0,
+        "net_code_lines_saved": 4
+      },
+      "files": [
+        {
+          "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+          "original_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+          "patched_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+          "original_proof_lines": 6,
+          "replacement_proof_lines": 4,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+          "original_sha256": "096cc593462d7578246c2e105790ec4593ffbc0630c7de06e9ca0912d69637ee",
+          "patched_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+          "original_proof_lines": 3,
+          "replacement_proof_lines": 1,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+          "original_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+          "patched_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+          "original_proof_lines": 4,
+          "replacement_proof_lines": 2,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        },
+        {
+          "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+          "original_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+          "patched_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+          "original_proof_lines": 3,
+          "replacement_proof_lines": 1,
+          "added_import_lines": 1,
+          "net_lines_saved": 1
+        }
+      ],
+      "proof_spans": [
+        {
+          "id": "followup-second-main-separation",
+          "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+          "start_line": 90,
+          "end_line": 95,
+          "original_code_lines": 6,
+          "replacement_code_lines": 4
+        },
+        {
+          "id": "followup-smoothing-dist",
+          "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+          "start_line": 146,
+          "end_line": 148,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        },
+        {
+          "id": "followup-amice-operator-norm",
+          "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+          "start_line": 136,
+          "end_line": 139,
+          "original_code_lines": 4,
+          "replacement_code_lines": 2
+        },
+        {
+          "id": "followup-complex-mgf-realpart",
+          "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+          "start_line": 153,
+          "end_line": 155,
+          "original_code_lines": 3,
+          "replacement_code_lines": 1
+        }
+      ]
+    }
+  ],
+  "baseline": {
+    "manifest": "benchmarks/expansion/verified-05/manifest.json",
+    "manifest_sha256": "55de5cb3283f57f58f72be14f3c571c9e013ae5b06a676737b7fbc3a7bb26944",
+    "totals": {
+      "replacements": 87,
+      "affected_files": 46,
+      "original_proof_code_lines": 582,
+      "replacement_proof_code_lines": 226,
+      "added_import_code_lines": 46,
+      "added_helper_code_lines": 0,
+      "net_code_lines_saved": 310
+    },
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "original_sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+        "patched_sha256": "ba5fa3b5737c6e510cacd99f9cb395f0125f2866f391206b3df5f415a0106aed",
+        "original_proof_lines": 22,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 16
+      },
+      {
+        "path": "Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean",
+        "original_sha256": "b19d877d99aa8a306fe9e258afb576b3861d69b5ffc8c1d8b475926e73a7f123",
+        "patched_sha256": "6058fc5118b04316f6f9b9b76e5585f96a6b10588b8f3ba437c1b116833303e3",
+        "original_proof_lines": 8,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean",
+        "original_sha256": "c0757881f43471ea4bb41d6b0c2355ab88270dd24d2d84436cf38cb4f6058b71",
+        "patched_sha256": "88b211e104ae82f6de98bc406e83df88ff30b4e90f991eb8df6c03e04995babe",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 4
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "original_sha256": "8dc79594ff8a3617145908f5f7c6d250a2055a8a5d9901c5ad853b8868aca74d",
+        "patched_sha256": "97a5742a1ef971a54c07bcef9e3fea691f52b8dca71f3671646b1e6d94b9cca3",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+        "original_sha256": "ec95a9dadc68ab0164909db152763d4581c73cb36282914bcc195acb85a7a690",
+        "patched_sha256": "6570ab828566bf052576fef0a2b8b7c3bce769616bca8673518d87aa81accd6d",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "original_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+        "patched_sha256": "1698166e9b96ba4ee67d7313e4f1fcdc57b290280e9da74d2f0dbc13082ce73e",
+        "original_proof_lines": 77,
+        "replacement_proof_lines": 27,
+        "added_import_lines": 1,
+        "net_lines_saved": 49
+      },
+      {
+        "path": "Mathlib/Analysis/Complex/OpenMapping.lean",
+        "original_sha256": "4f0ea804ca4e7180e60d0e875c1c93fd9d55f5be06c97b8cc849d0103936b617",
+        "patched_sha256": "20a9c2c61663724f838293c8b882b68e2243aebfaf0e05dcd5a56a30c14a7dc5",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "original_sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+        "patched_sha256": "3e942048611a4c9ea75d08c197e8ffb22086bbf6f0963344d66734d2b01b48bd",
+        "original_proof_lines": 23,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 17
+      },
+      {
+        "path": "Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean",
+        "original_sha256": "176bad9d2b863f82dffa40593465525c5cff3c24e2aeae9c2b92b5b2fcd56353",
+        "patched_sha256": "6d22eb70ffc19b8d7a220923b4bbf67fddf85aab4db45a853e7c877d623c35ca",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+        "original_sha256": "c3256080e8f156ccbd984e5fc41f5f046a979dcec1f5e6e8c8f5992948e16aa2",
+        "patched_sha256": "86db26063fd41341f58d955421cb1028a2221043286af7863b9cad6f2f7c93c6",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+        "original_sha256": "11182f0ab43174531c8e2fa228dd965caa15efa7dcc40f0eb3a80f9ace015872",
+        "patched_sha256": "51dcb2060a55907db1475b2b925d787c1a7a413c9e601df29d5d71bd6a4a7672",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "original_sha256": "05cf9a20ff6d867d36c62089862c0542a92f903d96da287ebfe1e67eb94da645",
+        "patched_sha256": "d859186b07a84fc0c2f885fa5981d4e97c2912c1d047200b9dcfa345cdede2b9",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+        "original_sha256": "b30ad3dac8d319b5532feafa16d18025682036f35b21d5c4d70a2fbfa31c3e3a",
+        "patched_sha256": "665d37edc37b777439e321111f044e25e8ee5ff912ca5e7ed694319bd756a9b8",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "original_sha256": "049a49caaecc9a181c463302cfea209f0e47552d564e1835c2c1ad5072044b9e",
+        "patched_sha256": "817bdc3e673d0d241d97ab8a9e5fc90d26292087e8e3088a630aefbd95c6368a",
+        "original_proof_lines": 19,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+        "original_sha256": "0aff6fc60bc52f7b93aa644fc6aa15fd230ab264dc94a19642ffe0a20aac6c73",
+        "patched_sha256": "1aceb0dc675dbc79cc679e00f54a0d86b8faa4e622c15bfebd679f143e034c8d",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+        "original_sha256": "72bcb044cb13410220bdd0c73916db1c6a9abbe14cb3bd4982cf14c38d62258c",
+        "patched_sha256": "b4f5f50b875a727f083a93f16a4eaf3b96e8d1debf585e4c8fa6c984d6d64264",
+        "original_proof_lines": 11,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "original_sha256": "b4241bc2e2606cebfd3121899adc9a581e4a272b49413d515b1d97958734d6db",
+        "patched_sha256": "9f4d8d310c578a6a46d8f4d72222a016872d238f51b51ad08bcdf2ab0e93d8af",
+        "original_proof_lines": 21,
+        "replacement_proof_lines": 12,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "original_sha256": "273ac68bd21cec59de106f60f41a77b6af2407f34b4c6447152a33330a244e43",
+        "patched_sha256": "09b1f7b49c0aaa060777a5eb93c92e11844c0c4d554e13898ef45ccfcfd0b4f3",
+        "original_proof_lines": 22,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 11
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "original_sha256": "d3711d5d5b528b8d1733d531d5ae78bc77d13a68079a7243af3251abc48380f7",
+        "patched_sha256": "e690200a4d8a0d6e8dd30fee8863624232b0e8d49ce0d52be8b5ab88217d675e",
+        "original_proof_lines": 23,
+        "replacement_proof_lines": 11,
+        "added_import_lines": 1,
+        "net_lines_saved": 11
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "original_sha256": "9c4d9e0afc86a5d8f750aa8fd9b7b578897a1f7126b1f4de34faa504aad95dff",
+        "patched_sha256": "26c90fd9c1fe79c3bcc875b46bd997fa10abd13ac39e4575e073d5b9f36e71b5",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Exp.lean",
+        "original_sha256": "1dcb27b9ea4dbfea015fd97196f0cb6ac294633be79590dba8af8685d11b03e8",
+        "patched_sha256": "dd73a7db22136534fac62420fdb1751fcb0634811d206bc0ecbf580fa65139a4",
+        "original_proof_lines": 14,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+        "original_sha256": "201735278f26a2dc9e7567524ffdb276428830f6f8008cca0e6cd3ff1f5b8fa9",
+        "patched_sha256": "cd59b712933b324ad7ace4c973b421c06f5ac4e452e43dc3586f6459b1839735",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "original_sha256": "9d06e0a2e00e47cb5ba35463c8f9f331c1579523655c81717f5a4211b4f5f370",
+        "patched_sha256": "2ab40238777ad76a3bdada05f5d048b41244e44d2745d6c5cbdf010ae7d0dea7",
+        "original_proof_lines": 51,
+        "replacement_proof_lines": 12,
+        "added_import_lines": 1,
+        "net_lines_saved": 38
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "original_sha256": "83caa08ff8e2efc9e77e43bf1cfcdc53af02855e60e969c286ce58404217242c",
+        "patched_sha256": "d889a5563241d365871f79da94bcea568d5d4747a99ca932398e8bc16be6c16a",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 9,
+        "added_import_lines": 1,
+        "net_lines_saved": 5
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "original_sha256": "dee90a5d3d51c2acedd4eaad4184c11e10ca2c2d6fe5827abb5f3301edfb2bad",
+        "patched_sha256": "b476c853a23788ffda1539b376d8589fcffb08b060325969e7c12e1198ae0713",
+        "original_proof_lines": 37,
+        "replacement_proof_lines": 19,
+        "added_import_lines": 1,
+        "net_lines_saved": 17
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean",
+        "original_sha256": "08afb977f9b8574ffdb0a8e3c3b442ad32394f1bdf4f9117bbaa1bb57edccfc3",
+        "patched_sha256": "b666577c1377b4076250800d7ec672c78c4f24f6ea3d0a6013478c5542a11715",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "original_sha256": "5e4dfb2c3b0a5a5748403c4ce7841da18df4e918e0beca624941c7c7ab613994",
+        "patched_sha256": "09005fef9816934817f6f75faddc406e01d19ab137ec71d8a43518b08d0d771d",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "original_sha256": "b8c17cd35ce102bbe761d2289fd2c94c8ddaa7e557a466bb2640b4c13e79bea0",
+        "patched_sha256": "c35305cfeb3f425b9c5231cda9563b760fb394a9ba5cb0eda7bbc54f48ffc4d3",
+        "original_proof_lines": 30,
+        "replacement_proof_lines": 16,
+        "added_import_lines": 1,
+        "net_lines_saved": 13
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+        "original_sha256": "d80e3495465030c1accca450935e4bfafcfe31d9b695e17f23ee9cfcea537759",
+        "patched_sha256": "8068241d23c005401e42b29c4ac5d6b978155d5ab1cd005161c2edb57b67672c",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "original_sha256": "56394aacfe591230d26a1d93641f2a1d3e3a3eae4fcfe772775533a1da295833",
+        "patched_sha256": "433a0514d224fa169bd77838d1a705ac16323e201d3991fbb155b2b64ed531a6",
+        "original_proof_lines": 14,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 10
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "original_sha256": "a584aa4f50c25890a6c0583d584ae8216fd517ba5725efdd7804e25501c68c64",
+        "patched_sha256": "7a958a20818cd83d2a7097a31d33cc95fd1c5646b7ef1fa3c605a768e5603ef4",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "original_sha256": "c3d7196bd029c4e123dd43a7cae1a1d07cb65675603dfffdcdf5e5b844861d98",
+        "patched_sha256": "ce263bb549052c1db72f3d753957e33a4816ad140fcf52e1d106aaa62fd57e53",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Measure/IntegralCharFun.lean",
+        "original_sha256": "95ff5e7f8870ec039479aceab2c3709c5b02052942f2512bcc17f4228c5dd200",
+        "patched_sha256": "cf114cac78de00e680ff497d75320310cfd5f8645ad9466dd5b3f443b1b2961d",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+        "original_sha256": "d8a7bb02d53ee246528183aaf579406d98e2f1a207578110c9649a140727f224",
+        "patched_sha256": "4d96a4d40f65ae84f918b99ab85c6274e679eb6cad75792537d3bc24bb5baa90",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 4
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/PadicNumbers.lean",
+        "original_sha256": "949e91ac90c6371b1d9d5d09bdd1ef7bba2d919697ec356d3feccd1cb6ac1077",
+        "patched_sha256": "c49fae981b7922799a3b059fc562f7aee1111ed96fa2556af5e00e9cea2286cd",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "original_sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+        "patched_sha256": "9f8f6164f85ad2cb8f02fa5bb4daa890dcd8668093f3e7a833d2a4b102b8c7c6",
+        "original_proof_lines": 20,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 14
+      },
+      {
+        "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+        "original_sha256": "fff7b7d4394f011fc875c576d259f3651fbad8083c8a51ab2d22fcbb89a47c4c",
+        "patched_sha256": "f47633876680e9f30c4cb693528ed81dda7707a0bbd0d5971a15cd1e7e08b1cf",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+        "original_sha256": "fbeca6ed0689a68fb94229ffb5e9a7d97df8808c81b60c182a205629552f392b",
+        "patched_sha256": "b51a527fd7a2824683c34edc4d5487c8e345f37a42c5e71ec0ed20d1f1890963",
+        "original_proof_lines": 16,
+        "replacement_proof_lines": 7,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+        "original_sha256": "db859cb320b918a0aff952cceefced83c37b728a4ed7d95df20480e243a1fe53",
+        "patched_sha256": "b3ead19a231690e673bec0dfece68c5f607c3e554128dcd117c5b256c977ff4e",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+        "original_sha256": "f538bd984303ce5fdf14803442dc2b2a333d8c16df172fdc89a75ba3061cc8ac",
+        "patched_sha256": "2b1328c2f67bba54e9b5755c0759489d09500bc1b9b081249ad7e2a5e3c7cd53",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "original_sha256": "46715ae1e627b66ffc8c40fa183f95810d831575aa1ae24ed32d0de93af3ec0b",
+        "patched_sha256": "a1589e18d22b45fdd8b604fcfc43c5759fc7e77701b2f29c6c942c8bfffc09aa",
+        "original_proof_lines": 19,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 14
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "original_sha256": "38c553041fc37267e7cc43df230f07410a8b89da42d7191354403ac4b3efb990",
+        "patched_sha256": "41793333e820fd6a95cce987c0b1ea45ad726903fa27c89b20fb0fb9d6ed34a9",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "original_sha256": "e2fe16c298bd99673daba9ec732060217a63c1af07f9b04c997aab2ad80d6492",
+        "patched_sha256": "1395412b9d9f42b6e013cdbfeb92f4a0187c7204ed87d47f10e0b16729043e56",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+        "original_sha256": "8534fa708785e4d1b8cf9ac77bd3e800bbd110345a1f6045654925935b1f7f0a",
+        "patched_sha256": "61e93afd72938ebbdf079fbec593644dccad39a1d2bcce0589421ef905bfd7c4",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 8,
+        "added_import_lines": 1,
+        "net_lines_saved": 6
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+        "original_sha256": "2bc708387c7e1c649d157dee0f38c3c34c83bfe3ae259430f8b99846608cd61b",
+        "patched_sha256": "2f144a9bfaaa903573e6a03caf838f2f66a72090d5b2135f53f47caed26c86e8",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+        "original_sha256": "71c9682ea53f194d1587fbd41695e35cc7fb8f51b1503f695ba4adfb15c52059",
+        "patched_sha256": "f883631a22a1dc696d6cf35c56ca9c9770e82b588cff969a6396a816d2e6ffcf",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      }
+    ],
+    "proof_spans": [
+      {
+        "id": "manual-analytic-partial-sums",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 654,
+        "end_line": 671,
+        "original_code_lines": 18,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-eb23be19fdb828e64d98",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 693,
+        "end_line": 694,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6969ddf685f8ea1379a0",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 913,
+        "end_line": 914,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-asymptotic-smul",
+        "path": "Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean",
+        "start_line": 256,
+        "end_line": 263,
+        "original_code_lines": 8,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "manual-littleo-partial-sum",
+        "path": "Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean",
+        "start_line": 152,
+        "end_line": 166,
+        "original_code_lines": 15,
+        "replacement_code_lines": 10
+      },
+      {
+        "id": "census-8dfb227ac69d5d06085b",
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "start_line": 346,
+        "end_line": 347,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-dbdc9337c5954073c21c",
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "start_line": 367,
+        "end_line": 368,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-fdb41ac9b4c815a99891",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+        "start_line": 903,
+        "end_line": 906,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-74952700efbab8848cc8",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 151,
+        "end_line": 152,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "quantified-fderiv-map",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 164,
+        "end_line": 170,
+        "original_code_lines": 7,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "next-fderiv-shell-bound",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 180,
+        "end_line": 194,
+        "original_code_lines": 15,
+        "replacement_code_lines": 10
+      },
+      {
+        "id": "census-a429d71bf590c6127d51",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 259,
+        "end_line": 266,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-af003beeddf517183039",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 479,
+        "end_line": 480,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-right-deriv-error",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 491,
+        "end_line": 507,
+        "original_code_lines": 17,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-4c327df7dc57c1d46bf2",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 588,
+        "end_line": 595,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-fderiv-param",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 835,
+        "end_line": 852,
+        "original_code_lines": 18,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-ed86ff388cea32dec3bb",
+        "path": "Mathlib/Analysis/Complex/OpenMapping.lean",
+        "start_line": 63,
+        "end_line": 65,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-4f9699997f4efef660c2",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 62,
+        "end_line": 63,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-563e98222ab7cb930923",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 65,
+        "end_line": 66,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-d38e66ff11800533b907",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 82,
+        "end_line": 85,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2b4787caf258aeac9d58",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 86,
+        "end_line": 89,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-uniform-upper",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 90,
+        "end_line": 100,
+        "original_code_lines": 11,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6face237dda5a8f408bd",
+        "path": "Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean",
+        "start_line": 199,
+        "end_line": 202,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-c7076f2af6cecd2f0fac",
+        "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+        "start_line": 118,
+        "end_line": 120,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-ef477bfa7aaf9bbbdb41",
+        "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+        "start_line": 831,
+        "end_line": 833,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-3a50c8549f9184c884e3",
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "start_line": 158,
+        "end_line": 159,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8d39915259516cc3afdb",
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "start_line": 175,
+        "end_line": 176,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-12b57160bcea7a870439",
+        "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+        "start_line": 81,
+        "end_line": 83,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-controlled-initial",
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "start_line": 85,
+        "end_line": 93,
+        "original_code_lines": 9,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "manual-controlled-partial-sum",
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "start_line": 100,
+        "end_line": 109,
+        "original_code_lines": 10,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "manual-lprojection-product",
+        "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+        "start_line": 144,
+        "end_line": 150,
+        "original_code_lines": 7,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "next-multilinear-insert-tail",
+        "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+        "start_line": 231,
+        "end_line": 241,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-banach-preimage",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 127,
+        "end_line": 134,
+        "original_code_lines": 8,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-b5a153970170d2ff315a",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 175,
+        "end_line": 176,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-banach-preimage-limit",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 198,
+        "end_line": 206,
+        "original_code_lines": 9,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-c6946b9a9cdb3d7376d7",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 241,
+        "end_line": 242,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-lattice-inf-distance",
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "start_line": 98,
+        "end_line": 108,
+        "original_code_lines": 11,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "next-lattice-sup-distance",
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "start_line": 111,
+        "end_line": 121,
+        "original_code_lines": 11,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "manual-log-inverse-denominator",
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "start_line": 122,
+        "end_line": 130,
+        "original_code_lines": 9,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "manual-log-half",
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "start_line": 213,
+        "end_line": 226,
+        "original_code_lines": 14,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-c1af158a2075f23fe803",
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "start_line": 198,
+        "end_line": 199,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-d1435d04508bda8f5e9e",
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "start_line": 357,
+        "end_line": 359,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-local-exp-lipschitz",
+        "path": "Mathlib/Analysis/SpecialFunctions/Exp.lean",
+        "start_line": 51,
+        "end_line": 64,
+        "original_code_lines": 14,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-08f34ca0fd1e0235cb33",
+        "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+        "start_line": 172,
+        "end_line": 174,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2c974395baaa9faf22a7",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 392,
+        "end_line": 394,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-88493a6d8861398a311f",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 396,
+        "end_line": 399,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-akra-positive-lower",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 407,
+        "end_line": 413,
+        "original_code_lines": 7,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-akra-positive-upper",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 415,
+        "end_line": 420,
+        "original_code_lines": 6,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-e7b41322c868e89614ff",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 436,
+        "end_line": 438,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-952c3c0b366b22f355a9",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 440,
+        "end_line": 447,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-akra-negative-lower",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 456,
+        "end_line": 466,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-akra-negative-upper",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 468,
+        "end_line": 476,
+        "original_code_lines": 9,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-haar-normalized-inside",
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "start_line": 179,
+        "end_line": 183,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-haar-normalized-distance",
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "start_line": 189,
+        "end_line": 198,
+        "original_code_lines": 10,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "next-besicovitch-separation",
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "start_line": 315,
+        "end_line": 339,
+        "original_code_lines": 25,
+        "replacement_code_lines": 11
+      },
+      {
+        "id": "next-besicovitch-radial-error",
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "start_line": 383,
+        "end_line": 394,
+        "original_code_lines": 12,
+        "replacement_code_lines": 8
+      },
+      {
+        "id": "census-775d3fc655bfa057c288",
+        "path": "Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean",
+        "start_line": 98,
+        "end_line": 100,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-45dc93a2fd89dd30ae84",
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "start_line": 237,
+        "end_line": 238,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-e55431279d2ae67a6bed",
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "start_line": 268,
+        "end_line": 269,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-jacobian-cover",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 164,
+        "end_line": 176,
+        "original_code_lines": 13,
+        "replacement_code_lines": 6
+      },
+      {
+        "id": "census-f808bb0e45ac7e6c6b13",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 512,
+        "end_line": 515,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-jacobian-dense",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 531,
+        "end_line": 543,
+        "original_code_lines": 13,
+        "replacement_code_lines": 9
+      },
+      {
+        "id": "census-4468072bd08412d1d24d",
+        "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+        "start_line": 615,
+        "end_line": 617,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6cc028cff5430bb880af",
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "start_line": 436,
+        "end_line": 438,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-dominated-uniform-bound",
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "start_line": 595,
+        "end_line": 605,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "manual-finite-measure-additive",
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "start_line": 240,
+        "end_line": 246,
+        "original_code_lines": 7,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-08ebd118dcbb57c281a7",
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "start_line": 85,
+        "end_line": 86,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8c00023751962a1dea11",
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "start_line": 142,
+        "end_line": 143,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-56bb79c7835633d62563",
+        "path": "Mathlib/MeasureTheory/Measure/IntegralCharFun.lean",
+        "start_line": 132,
+        "end_line": 134,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-0a929bc475d43a2c14ab",
+        "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+        "start_line": 520,
+        "end_line": 528,
+        "original_code_lines": 6,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-cce1f2cdc1b3890bd6ed",
+        "path": "Mathlib/NumberTheory/Padics/PadicNumbers.lean",
+        "start_line": 806,
+        "end_line": 808,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-strong-law-sums",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "start_line": 760,
+        "end_line": 780,
+        "original_code_lines": 20,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-9a1046d2bbe06ec82398",
+        "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+        "start_line": 229,
+        "end_line": 232,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-arzela-ascoli",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+        "start_line": 73,
+        "end_line": 88,
+        "original_code_lines": 16,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "metric-bcf-limit-bounded",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+        "start_line": 322,
+        "end_line": 325,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-4e0b8b585c644634133b",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+        "start_line": 76,
+        "end_line": 79,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-e401e74ffffc29859015",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 357,
+        "end_line": 360,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2d162277da34cfa04d1b",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 363,
+        "end_line": 367,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-f58f99f4509a73484e57",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 370,
+        "end_line": 374,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-bab3521d94f384e15b19",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 376,
+        "end_line": 380,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-15b9748861652a3366b3",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "start_line": 279,
+        "end_line": 281,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8c1b0d1b4bf6f83d106e",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "start_line": 751,
+        "end_line": 752,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-4d7a262db9aaf7e9064a",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "start_line": 160,
+        "end_line": 162,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-fea92e115375333a11e6",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "start_line": 178,
+        "end_line": 180,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-kuratowski-tail",
+        "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+        "start_line": 68,
+        "end_line": 82,
+        "original_code_lines": 15,
+        "replacement_code_lines": 8
+      },
+      {
+        "id": "metric-pinat-surjection",
+        "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+        "start_line": 749,
+        "end_line": 753,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "metric-polish-complete-copy-triangle",
+        "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+        "start_line": 193,
+        "end_line": 198,
+        "original_code_lines": 6,
+        "replacement_code_lines": 2
+      }
+    ]
+  },
+  "selected_union": {
+    "manifest": "benchmarks/expansion/followup-20261021/selection/manifest.json",
+    "manifest_sha256": "85f5a18d57f23cf55ceac4e36b579fa2377676492688edf2e7b570003a2ba8dd",
+    "totals": {
+      "replacements": 117,
+      "affected_files": 63,
+      "original_proof_code_lines": 705,
+      "replacement_proof_code_lines": 286,
+      "added_import_code_lines": 63,
+      "added_helper_code_lines": 0,
+      "net_code_lines_saved": 356
+    },
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "original_sha256": "5bd829b44524785c84db262cade6c3cc4ab28f6966329429bcbf4dc35ba1e62c",
+        "patched_sha256": "ba5fa3b5737c6e510cacd99f9cb395f0125f2866f391206b3df5f415a0106aed",
+        "original_proof_lines": 22,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 16
+      },
+      {
+        "path": "Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean",
+        "original_sha256": "b19d877d99aa8a306fe9e258afb576b3861d69b5ffc8c1d8b475926e73a7f123",
+        "patched_sha256": "6058fc5118b04316f6f9b9b76e5585f96a6b10588b8f3ba437c1b116833303e3",
+        "original_proof_lines": 8,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean",
+        "original_sha256": "c0757881f43471ea4bb41d6b0c2355ab88270dd24d2d84436cf38cb4f6058b71",
+        "patched_sha256": "88b211e104ae82f6de98bc406e83df88ff30b4e90f991eb8df6c03e04995babe",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 4
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "original_sha256": "8dc79594ff8a3617145908f5f7c6d250a2055a8a5d9901c5ad853b8868aca74d",
+        "patched_sha256": "97a5742a1ef971a54c07bcef9e3fea691f52b8dca71f3671646b1e6d94b9cca3",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "original_sha256": "8252085c90d89aa44372ffd20386c1be6e2be2118dae1a12eea5ca44448bc683",
+        "patched_sha256": "d5218ef9b14e070099ac93fa9c6957ae151899d48865a6d580439c8649f1381c",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+        "original_sha256": "ec95a9dadc68ab0164909db152763d4581c73cb36282914bcc195acb85a7a690",
+        "patched_sha256": "6570ab828566bf052576fef0a2b8b7c3bce769616bca8673518d87aa81accd6d",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "original_sha256": "bf0144735606f97c98b0953080e2c18fd3a0e90e8a9bb503d142b6e505b98cc6",
+        "patched_sha256": "1698166e9b96ba4ee67d7313e4f1fcdc57b290280e9da74d2f0dbc13082ce73e",
+        "original_proof_lines": 77,
+        "replacement_proof_lines": 27,
+        "added_import_lines": 1,
+        "net_lines_saved": 49
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "original_sha256": "77ce5b3aded8b40f85a9f8d99b900f1b631902963c1ad4c1f28bbffbdca20b37",
+        "patched_sha256": "447f782493b826040bb433c8ec2f4298946047431deb0587360b1176eec9dc8e",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Analysis/Complex/OpenMapping.lean",
+        "original_sha256": "4f0ea804ca4e7180e60d0e875c1c93fd9d55f5be06c97b8cc849d0103936b617",
+        "patched_sha256": "20a9c2c61663724f838293c8b882b68e2243aebfaf0e05dcd5a56a30c14a7dc5",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "original_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+        "patched_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "original_sha256": "aa7c5bdf067bb1134df713f1e3a97e0b579f8bcb5bf27ce42239b3d6f5cd6b20",
+        "patched_sha256": "3e942048611a4c9ea75d08c197e8ffb22086bbf6f0963344d66734d2b01b48bd",
+        "original_proof_lines": 23,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 17
+      },
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "original_sha256": "49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220",
+        "patched_sha256": "23281a5f021e90eb2be8371fe624856f36eca832e515becae5426f97f4f3d797",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "original_sha256": "7e090fe3e8df982e44dae25896442f4134123a8ee433512403320250557c557b",
+        "patched_sha256": "42926717edf19f331de24da8278efb11f2a0cac36e44577297c9d86fcbe02b3d",
+        "original_proof_lines": 11,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 5
+      },
+      {
+        "path": "Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean",
+        "original_sha256": "176bad9d2b863f82dffa40593465525c5cff3c24e2aeae9c2b92b5b2fcd56353",
+        "patched_sha256": "6d22eb70ffc19b8d7a220923b4bbf67fddf85aab4db45a853e7c877d623c35ca",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+        "original_sha256": "c3256080e8f156ccbd984e5fc41f5f046a979dcec1f5e6e8c8f5992948e16aa2",
+        "patched_sha256": "86db26063fd41341f58d955421cb1028a2221043286af7863b9cad6f2f7c93c6",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+        "original_sha256": "11182f0ab43174531c8e2fa228dd965caa15efa7dcc40f0eb3a80f9ace015872",
+        "patched_sha256": "51dcb2060a55907db1475b2b925d787c1a7a413c9e601df29d5d71bd6a4a7672",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "original_sha256": "05cf9a20ff6d867d36c62089862c0542a92f903d96da287ebfe1e67eb94da645",
+        "patched_sha256": "d859186b07a84fc0c2f885fa5981d4e97c2912c1d047200b9dcfa345cdede2b9",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+        "original_sha256": "b30ad3dac8d319b5532feafa16d18025682036f35b21d5c4d70a2fbfa31c3e3a",
+        "patched_sha256": "665d37edc37b777439e321111f044e25e8ee5ff912ca5e7ed694319bd756a9b8",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "original_sha256": "049a49caaecc9a181c463302cfea209f0e47552d564e1835c2c1ad5072044b9e",
+        "patched_sha256": "817bdc3e673d0d241d97ab8a9e5fc90d26292087e8e3088a630aefbd95c6368a",
+        "original_proof_lines": 19,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+        "original_sha256": "5eb429e05ae70ef328b276e3a9ac40f30fbe7d875d1024d470370a1eb22fd239",
+        "patched_sha256": "43e8bb16d2f87fa749393a8fd07fafa5f4ee0f6751f89e22dad49e5fa0bfe952",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "original_sha256": "0915f1a75bb45b99f27227605ea0bb5a39f48eecc15f93aefb38c48762655103",
+        "patched_sha256": "664afccfae0cc8aa09b98fb2d2b39f2769f6e9faa326ab6fe00d8ee74f6b624f",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+        "original_sha256": "0aff6fc60bc52f7b93aa644fc6aa15fd230ab264dc94a19642ffe0a20aac6c73",
+        "patched_sha256": "1aceb0dc675dbc79cc679e00f54a0d86b8faa4e622c15bfebd679f143e034c8d",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+        "original_sha256": "72bcb044cb13410220bdd0c73916db1c6a9abbe14cb3bd4982cf14c38d62258c",
+        "patched_sha256": "b4f5f50b875a727f083a93f16a4eaf3b96e8d1debf585e4c8fa6c984d6d64264",
+        "original_proof_lines": 11,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "original_sha256": "b4241bc2e2606cebfd3121899adc9a581e4a272b49413d515b1d97958734d6db",
+        "patched_sha256": "9f4d8d310c578a6a46d8f4d72222a016872d238f51b51ad08bcdf2ab0e93d8af",
+        "original_proof_lines": 21,
+        "replacement_proof_lines": 12,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "original_sha256": "273ac68bd21cec59de106f60f41a77b6af2407f34b4c6447152a33330a244e43",
+        "patched_sha256": "09b1f7b49c0aaa060777a5eb93c92e11844c0c4d554e13898ef45ccfcfd0b4f3",
+        "original_proof_lines": 22,
+        "replacement_proof_lines": 10,
+        "added_import_lines": 1,
+        "net_lines_saved": 11
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+        "original_sha256": "096cc593462d7578246c2e105790ec4593ffbc0630c7de06e9ca0912d69637ee",
+        "patched_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "original_sha256": "c9211adf39cf27a6419c6516bea3e109de7445a905f9b65ffdb68de5a0abac90",
+        "patched_sha256": "5df50802ad44f6f4805f67ae34ea523474b0c8e1a9e8bf227753824e6eb7a5c4",
+        "original_proof_lines": 25,
+        "replacement_proof_lines": 13,
+        "added_import_lines": 1,
+        "net_lines_saved": 11
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "original_sha256": "d3711d5d5b528b8d1733d531d5ae78bc77d13a68079a7243af3251abc48380f7",
+        "patched_sha256": "e690200a4d8a0d6e8dd30fee8863624232b0e8d49ce0d52be8b5ab88217d675e",
+        "original_proof_lines": 23,
+        "replacement_proof_lines": 11,
+        "added_import_lines": 1,
+        "net_lines_saved": 11
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "original_sha256": "9c4d9e0afc86a5d8f750aa8fd9b7b578897a1f7126b1f4de34faa504aad95dff",
+        "patched_sha256": "26c90fd9c1fe79c3bcc875b46bd997fa10abd13ac39e4575e073d5b9f36e71b5",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/Exp.lean",
+        "original_sha256": "1dcb27b9ea4dbfea015fd97196f0cb6ac294633be79590dba8af8685d11b03e8",
+        "patched_sha256": "dd73a7db22136534fac62420fdb1751fcb0634811d206bc0ecbf580fa65139a4",
+        "original_proof_lines": 14,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+        "original_sha256": "201735278f26a2dc9e7567524ffdb276428830f6f8008cca0e6cd3ff1f5b8fa9",
+        "patched_sha256": "cd59b712933b324ad7ace4c973b421c06f5ac4e452e43dc3586f6459b1839735",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "original_sha256": "9d06e0a2e00e47cb5ba35463c8f9f331c1579523655c81717f5a4211b4f5f370",
+        "patched_sha256": "2ab40238777ad76a3bdada05f5d048b41244e44d2745d6c5cbdf010ae7d0dea7",
+        "original_proof_lines": 51,
+        "replacement_proof_lines": 12,
+        "added_import_lines": 1,
+        "net_lines_saved": 38
+      },
+      {
+        "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+        "original_sha256": "a8f87ce5dbfb20aef5b43910abaaad23c9f40764d8b36139c587a7a5b4cb8d06",
+        "patched_sha256": "772eda0ab8e5b2e7cd5d37b4fab87e967b1e111c5d8be340108f0cf99b3697a7",
+        "original_proof_lines": 14,
+        "replacement_proof_lines": 8,
+        "added_import_lines": 1,
+        "net_lines_saved": 5
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "original_sha256": "83caa08ff8e2efc9e77e43bf1cfcdc53af02855e60e969c286ce58404217242c",
+        "patched_sha256": "d889a5563241d365871f79da94bcea568d5d4747a99ca932398e8bc16be6c16a",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 9,
+        "added_import_lines": 1,
+        "net_lines_saved": 5
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+        "original_sha256": "86e7e198048461599fb9c7d3030f8e971c270c5cd45826362772a2c0c6e4cda7",
+        "patched_sha256": "cbaead9bdf8a20466657ad1385bf015f231af9e75f6d596b98bb071c452b8054",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "original_sha256": "dee90a5d3d51c2acedd4eaad4184c11e10ca2c2d6fe5827abb5f3301edfb2bad",
+        "patched_sha256": "b476c853a23788ffda1539b376d8589fcffb08b060325969e7c12e1198ae0713",
+        "original_proof_lines": 37,
+        "replacement_proof_lines": 19,
+        "added_import_lines": 1,
+        "net_lines_saved": 17
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean",
+        "original_sha256": "08afb977f9b8574ffdb0a8e3c3b442ad32394f1bdf4f9117bbaa1bb57edccfc3",
+        "patched_sha256": "b666577c1377b4076250800d7ec672c78c4f24f6ea3d0a6013478c5542a11715",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "original_sha256": "5e4dfb2c3b0a5a5748403c4ce7841da18df4e918e0beca624941c7c7ab613994",
+        "patched_sha256": "09005fef9816934817f6f75faddc406e01d19ab137ec71d8a43518b08d0d771d",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "original_sha256": "b8c17cd35ce102bbe761d2289fd2c94c8ddaa7e557a466bb2640b4c13e79bea0",
+        "patched_sha256": "c35305cfeb3f425b9c5231cda9563b760fb394a9ba5cb0eda7bbc54f48ffc4d3",
+        "original_proof_lines": 30,
+        "replacement_proof_lines": 16,
+        "added_import_lines": 1,
+        "net_lines_saved": 13
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+        "original_sha256": "d80e3495465030c1accca450935e4bfafcfe31d9b695e17f23ee9cfcea537759",
+        "patched_sha256": "8068241d23c005401e42b29c4ac5d6b978155d5ab1cd005161c2edb57b67672c",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "original_sha256": "56394aacfe591230d26a1d93641f2a1d3e3a3eae4fcfe772775533a1da295833",
+        "patched_sha256": "433a0514d224fa169bd77838d1a705ac16323e201d3991fbb155b2b64ed531a6",
+        "original_proof_lines": 14,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 10
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "original_sha256": "a584aa4f50c25890a6c0583d584ae8216fd517ba5725efdd7804e25501c68c64",
+        "patched_sha256": "7a958a20818cd83d2a7097a31d33cc95fd1c5646b7ef1fa3c605a768e5603ef4",
+        "original_proof_lines": 7,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "original_sha256": "c3d7196bd029c4e123dd43a7cae1a1d07cb65675603dfffdcdf5e5b844861d98",
+        "patched_sha256": "ce263bb549052c1db72f3d753957e33a4816ad140fcf52e1d106aaa62fd57e53",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Measure/IntegralCharFun.lean",
+        "original_sha256": "95ff5e7f8870ec039479aceab2c3709c5b02052942f2512bcc17f4228c5dd200",
+        "patched_sha256": "cf114cac78de00e680ff497d75320310cfd5f8645ad9466dd5b3f443b1b2961d",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+        "original_sha256": "7f81281ad5a14613f427dcfdf6eeccec20137b33929d576fa08fa479400edceb",
+        "patched_sha256": "5efead02697c71c60f69fa42e96fcea18ecd2c4eb2ad7a4c8fd35b2e178c66f1",
+        "original_proof_lines": 10,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 5
+      },
+      {
+        "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+        "original_sha256": "d8a7bb02d53ee246528183aaf579406d98e2f1a207578110c9649a140727f224",
+        "patched_sha256": "4d96a4d40f65ae84f918b99ab85c6274e679eb6cad75792537d3bc24bb5baa90",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 4
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "original_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+        "patched_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/PadicNumbers.lean",
+        "original_sha256": "949e91ac90c6371b1d9d5d09bdd1ef7bba2d919697ec356d3feccd1cb6ac1077",
+        "patched_sha256": "c49fae981b7922799a3b059fc562f7aee1111ed96fa2556af5e00e9cea2286cd",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "original_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+        "patched_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "original_sha256": "c2a8328a0f84e4585acdbb932c429244edfeea28bcfaa616d31d8b8623005bc0",
+        "patched_sha256": "9f8f6164f85ad2cb8f02fa5bb4daa890dcd8668093f3e7a833d2a4b102b8c7c6",
+        "original_proof_lines": 20,
+        "replacement_proof_lines": 5,
+        "added_import_lines": 1,
+        "net_lines_saved": 14
+      },
+      {
+        "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+        "original_sha256": "fff7b7d4394f011fc875c576d259f3651fbad8083c8a51ab2d22fcbb89a47c4c",
+        "patched_sha256": "f47633876680e9f30c4cb693528ed81dda7707a0bbd0d5971a15cd1e7e08b1cf",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+        "original_sha256": "fbeca6ed0689a68fb94229ffb5e9a7d97df8808c81b60c182a205629552f392b",
+        "patched_sha256": "b51a527fd7a2824683c34edc4d5487c8e345f37a42c5e71ec0ed20d1f1890963",
+        "original_proof_lines": 16,
+        "replacement_proof_lines": 7,
+        "added_import_lines": 1,
+        "net_lines_saved": 8
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+        "original_sha256": "db859cb320b918a0aff952cceefced83c37b728a4ed7d95df20480e243a1fe53",
+        "patched_sha256": "b3ead19a231690e673bec0dfece68c5f607c3e554128dcd117c5b256c977ff4e",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+        "original_sha256": "f538bd984303ce5fdf14803442dc2b2a333d8c16df172fdc89a75ba3061cc8ac",
+        "patched_sha256": "2b1328c2f67bba54e9b5755c0759489d09500bc1b9b081249ad7e2a5e3c7cd53",
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 1,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+        "original_sha256": "22bde8f2f8bcad18724d52ad5f6718ccc57f691427764a826a1f3576ace5a08e",
+        "patched_sha256": "693b417e0654b13deeaf848c864fda017f86e02bad40d2252b77a094c455fa6e",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "original_sha256": "46715ae1e627b66ffc8c40fa183f95810d831575aa1ae24ed32d0de93af3ec0b",
+        "patched_sha256": "a1589e18d22b45fdd8b604fcfc43c5759fc7e77701b2f29c6c942c8bfffc09aa",
+        "original_proof_lines": 19,
+        "replacement_proof_lines": 4,
+        "added_import_lines": 1,
+        "net_lines_saved": 14
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "original_sha256": "38c553041fc37267e7cc43df230f07410a8b89da42d7191354403ac4b3efb990",
+        "patched_sha256": "41793333e820fd6a95cce987c0b1ea45ad726903fa27c89b20fb0fb9d6ed34a9",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "original_sha256": "e2fe16c298bd99673daba9ec732060217a63c1af07f9b04c997aab2ad80d6492",
+        "patched_sha256": "1395412b9d9f42b6e013cdbfeb92f4a0187c7204ed87d47f10e0b16729043e56",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+        "original_sha256": "29f30a0831f99315b9c437dac16b706ddebe37536cc88b0be4b67d9d8d853f58",
+        "patched_sha256": "70e2b26d0b989d816320c0998cb3187e94be3d61bae74a65fdafbc9934fe17dc",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 3,
+        "added_import_lines": 1,
+        "net_lines_saved": 1
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+        "original_sha256": "8534fa708785e4d1b8cf9ac77bd3e800bbd110345a1f6045654925935b1f7f0a",
+        "patched_sha256": "61e93afd72938ebbdf079fbec593644dccad39a1d2bcce0589421ef905bfd7c4",
+        "original_proof_lines": 15,
+        "replacement_proof_lines": 8,
+        "added_import_lines": 1,
+        "net_lines_saved": 6
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+        "original_sha256": "2bc708387c7e1c649d157dee0f38c3c34c83bfe3ae259430f8b99846608cd61b",
+        "patched_sha256": "2f144a9bfaaa903573e6a03caf838f2f66a72090d5b2135f53f47caed26c86e8",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      },
+      {
+        "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+        "original_sha256": "71c9682ea53f194d1587fbd41695e35cc7fb8f51b1503f695ba4adfb15c52059",
+        "patched_sha256": "f883631a22a1dc696d6cf35c56ca9c9770e82b588cff969a6396a816d2e6ffcf",
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 3
+      },
+      {
+        "path": "Mathlib/Topology/UrysohnsLemma.lean",
+        "original_sha256": "1a822919ca604e6a50d27d87efe291f6c63632b19f92b5bfb101c94c1c777568",
+        "patched_sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 2,
+        "added_import_lines": 1,
+        "net_lines_saved": 2
+      }
+    ],
+    "proof_spans": [
+      {
+        "id": "manual-analytic-partial-sums",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 654,
+        "end_line": 671,
+        "original_code_lines": 18,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-eb23be19fdb828e64d98",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 693,
+        "end_line": 694,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6969ddf685f8ea1379a0",
+        "path": "Mathlib/Analysis/Analytic/Basic.lean",
+        "start_line": 913,
+        "end_line": 914,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-asymptotic-smul",
+        "path": "Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean",
+        "start_line": 256,
+        "end_line": 263,
+        "original_code_lines": 8,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "manual-littleo-partial-sum",
+        "path": "Mathlib/Analysis/Asymptotics/SpecificAsymptotics.lean",
+        "start_line": 152,
+        "end_line": 166,
+        "original_code_lines": 15,
+        "replacement_code_lines": 10
+      },
+      {
+        "id": "census-8dfb227ac69d5d06085b",
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "start_line": 346,
+        "end_line": 347,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-dbdc9337c5954073c21c",
+        "path": "Mathlib/Analysis/Calculus/BumpFunction/FiniteDimension.lean",
+        "start_line": 367,
+        "end_line": 368,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-contdiff-inside",
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "start_line": 191,
+        "end_line": 192,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-contdiff-outside",
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "start_line": 193,
+        "end_line": 195,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-fdb41ac9b4c815a99891",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+        "start_line": 903,
+        "end_line": 906,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-74952700efbab8848cc8",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 151,
+        "end_line": 152,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "quantified-fderiv-map",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 164,
+        "end_line": 170,
+        "original_code_lines": 7,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "next-fderiv-shell-bound",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 180,
+        "end_line": 194,
+        "original_code_lines": 15,
+        "replacement_code_lines": 10
+      },
+      {
+        "id": "census-a429d71bf590c6127d51",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 259,
+        "end_line": 266,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-af003beeddf517183039",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 479,
+        "end_line": 480,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-right-deriv-error",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 491,
+        "end_line": 507,
+        "original_code_lines": 17,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-4c327df7dc57c1d46bf2",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 588,
+        "end_line": 595,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-fderiv-param",
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "start_line": 835,
+        "end_line": 852,
+        "original_code_lines": 18,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-7a1170a6040a83846ec5",
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "start_line": 142,
+        "end_line": 143,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-uniform-mvt",
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "start_line": 212,
+        "end_line": 216,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-ed86ff388cea32dec3bb",
+        "path": "Mathlib/Analysis/Complex/OpenMapping.lean",
+        "start_line": 63,
+        "end_line": 65,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-second-main-separation",
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "start_line": 90,
+        "end_line": 95,
+        "original_code_lines": 6,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "census-4f9699997f4efef660c2",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 62,
+        "end_line": 63,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-563e98222ab7cb930923",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 65,
+        "end_line": 66,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-d38e66ff11800533b907",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 82,
+        "end_line": 85,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2b4787caf258aeac9d58",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 86,
+        "end_line": 89,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-uniform-upper",
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "start_line": 90,
+        "end_line": 100,
+        "original_code_lines": 11,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-convolution-local",
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "start_line": 855,
+        "end_line": 856,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-b4dcb0e16a9ee3006007",
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "start_line": 858,
+        "end_line": 859,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-schwartz-antilipschitz",
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "start_line": 976,
+        "end_line": 978,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-schwartz-max",
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "start_line": 979,
+        "end_line": 984,
+        "original_code_lines": 6,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-61a56545ce568b55b7fa",
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "start_line": 1230,
+        "end_line": 1231,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6face237dda5a8f408bd",
+        "path": "Mathlib/Analysis/Fourier/RiemannLebesgueLemma.lean",
+        "start_line": 199,
+        "end_line": 202,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-c7076f2af6cecd2f0fac",
+        "path": "Mathlib/Analysis/LocallyConvex/Polar.lean",
+        "start_line": 118,
+        "end_line": 120,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-ef477bfa7aaf9bbbdb41",
+        "path": "Mathlib/Analysis/Normed/Algebra/Spectrum.lean",
+        "start_line": 831,
+        "end_line": 833,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-3a50c8549f9184c884e3",
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "start_line": 158,
+        "end_line": 159,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8d39915259516cc3afdb",
+        "path": "Mathlib/Analysis/Normed/Algebra/Unitization.lean",
+        "start_line": 175,
+        "end_line": 176,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-12b57160bcea7a870439",
+        "path": "Mathlib/Analysis/Normed/Field/Approximation.lean",
+        "start_line": 81,
+        "end_line": 83,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-controlled-initial",
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "start_line": 85,
+        "end_line": 93,
+        "original_code_lines": 9,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "manual-controlled-partial-sum",
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "start_line": 100,
+        "end_line": 109,
+        "original_code_lines": 10,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "followup-smooth-pointwise",
+        "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+        "start_line": 73,
+        "end_line": 75,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-finite-witness",
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "start_line": 435,
+        "end_line": 439,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "followup-calculus-finite-symmetry",
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "start_line": 450,
+        "end_line": 451,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-lprojection-product",
+        "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+        "start_line": 144,
+        "end_line": 150,
+        "original_code_lines": 7,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "next-multilinear-insert-tail",
+        "path": "Mathlib/Analysis/Normed/Module/Multilinear/Basic.lean",
+        "start_line": 231,
+        "end_line": 241,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-banach-preimage",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 127,
+        "end_line": 134,
+        "original_code_lines": 8,
+        "replacement_code_lines": 3
+      },
+      {
+        "id": "census-b5a153970170d2ff315a",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 175,
+        "end_line": 176,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-banach-preimage-limit",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 198,
+        "end_line": 206,
+        "original_code_lines": 9,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-c6946b9a9cdb3d7376d7",
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "start_line": 241,
+        "end_line": 242,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-lattice-inf-distance",
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "start_line": 98,
+        "end_line": 108,
+        "original_code_lines": 11,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "next-lattice-sup-distance",
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "start_line": 111,
+        "end_line": 121,
+        "original_code_lines": 11,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "followup-smoothing-dist",
+        "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+        "start_line": 146,
+        "end_line": 148,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-calculus-picard-ball",
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "start_line": 234,
+        "end_line": 245,
+        "original_code_lines": 12,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "followup-calculus-picard-local",
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "start_line": 686,
+        "end_line": 698,
+        "original_code_lines": 13,
+        "replacement_code_lines": 6
+      },
+      {
+        "id": "manual-log-inverse-denominator",
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "start_line": 122,
+        "end_line": 130,
+        "original_code_lines": 9,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "manual-log-half",
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "start_line": 213,
+        "end_line": 226,
+        "original_code_lines": 14,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-c1af158a2075f23fe803",
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "start_line": 198,
+        "end_line": 199,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-d1435d04508bda8f5e9e",
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "start_line": 357,
+        "end_line": 359,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-local-exp-lipschitz",
+        "path": "Mathlib/Analysis/SpecialFunctions/Exp.lean",
+        "start_line": 51,
+        "end_line": 64,
+        "original_code_lines": 14,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-08f34ca0fd1e0235cb33",
+        "path": "Mathlib/Analysis/SpecialFunctions/FrullaniIntegral.lean",
+        "start_line": 172,
+        "end_line": 174,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2c974395baaa9faf22a7",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 392,
+        "end_line": 394,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-88493a6d8861398a311f",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 396,
+        "end_line": 399,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-akra-positive-lower",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 407,
+        "end_line": 413,
+        "original_code_lines": 7,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-akra-positive-upper",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 415,
+        "end_line": 420,
+        "original_code_lines": 6,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-e7b41322c868e89614ff",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 436,
+        "end_line": 438,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-952c3c0b366b22f355a9",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 440,
+        "end_line": 447,
+        "original_code_lines": 8,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-akra-negative-lower",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 456,
+        "end_line": 466,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-prep-v5-manual-akra-negative-upper",
+        "path": "Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean",
+        "start_line": 468,
+        "end_line": 476,
+        "original_code_lines": 9,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "metric-followup-sphere-ext-centers",
+        "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+        "start_line": 477,
+        "end_line": 479,
+        "original_code_lines": 3,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "metric-followup-sphere-int-centers",
+        "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+        "start_line": 483,
+        "end_line": 485,
+        "original_code_lines": 3,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "metric-followup-sphere-radius-positive",
+        "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+        "start_line": 523,
+        "end_line": 530,
+        "original_code_lines": 8,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "next-haar-normalized-inside",
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "start_line": 179,
+        "end_line": 183,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-haar-normalized-distance",
+        "path": "Mathlib/MeasureTheory/Constructions/HaarToSphere.lean",
+        "start_line": 189,
+        "end_line": 198,
+        "original_code_lines": 10,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "census-79b02bbaa97f1bcecd14",
+        "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+        "start_line": 167,
+        "end_line": 168,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-besicovitch-self",
+        "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+        "start_line": 179,
+        "end_line": 181,
+        "original_code_lines": 3,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "next-besicovitch-separation",
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "start_line": 315,
+        "end_line": 339,
+        "original_code_lines": 25,
+        "replacement_code_lines": 11
+      },
+      {
+        "id": "next-besicovitch-radial-error",
+        "path": "Mathlib/MeasureTheory/Covering/BesicovitchVectorSpace.lean",
+        "start_line": 383,
+        "end_line": 394,
+        "original_code_lines": 12,
+        "replacement_code_lines": 8
+      },
+      {
+        "id": "census-775d3fc655bfa057c288",
+        "path": "Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean",
+        "start_line": 98,
+        "end_line": 100,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-45dc93a2fd89dd30ae84",
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "start_line": 237,
+        "end_line": 238,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-e55431279d2ae67a6bed",
+        "path": "Mathlib/MeasureTheory/Function/ConvergenceInDistribution.lean",
+        "start_line": 268,
+        "end_line": 269,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-jacobian-cover",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 164,
+        "end_line": 176,
+        "original_code_lines": 13,
+        "replacement_code_lines": 6
+      },
+      {
+        "id": "census-f808bb0e45ac7e6c6b13",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 512,
+        "end_line": 515,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-jacobian-dense",
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "start_line": 531,
+        "end_line": 543,
+        "original_code_lines": 13,
+        "replacement_code_lines": 9
+      },
+      {
+        "id": "census-4468072bd08412d1d24d",
+        "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+        "start_line": 615,
+        "end_line": 617,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-6cc028cff5430bb880af",
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "start_line": 436,
+        "end_line": 438,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "next-prep-v5-manual-dominated-uniform-bound",
+        "path": "Mathlib/MeasureTheory/Integral/DominatedConvergence.lean",
+        "start_line": 595,
+        "end_line": 605,
+        "original_code_lines": 11,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "manual-finite-measure-additive",
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "start_line": 240,
+        "end_line": 246,
+        "original_code_lines": 7,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-08ebd118dcbb57c281a7",
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "start_line": 85,
+        "end_line": 86,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8c00023751962a1dea11",
+        "path": "Mathlib/MeasureTheory/Integral/PeakFunction.lean",
+        "start_line": 142,
+        "end_line": 143,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-56bb79c7835633d62563",
+        "path": "Mathlib/MeasureTheory/Measure/IntegralCharFun.lean",
+        "start_line": 132,
+        "end_line": 134,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-resolvent-separation",
+        "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+        "start_line": 157,
+        "end_line": 166,
+        "original_code_lines": 10,
+        "replacement_code_lines": 4
+      },
+      {
+        "id": "census-0a929bc475d43a2c14ab",
+        "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+        "start_line": 520,
+        "end_line": 528,
+        "original_code_lines": 6,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-amice-operator-norm",
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "start_line": 136,
+        "end_line": 139,
+        "original_code_lines": 4,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-cce1f2cdc1b3890bd6ed",
+        "path": "Mathlib/NumberTheory/Padics/PadicNumbers.lean",
+        "start_line": 806,
+        "end_line": 808,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "followup-complex-mgf-realpart",
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "start_line": 153,
+        "end_line": 155,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "manual-strong-law-sums",
+        "path": "Mathlib/Probability/StrongLaw.lean",
+        "start_line": 760,
+        "end_line": 780,
+        "original_code_lines": 20,
+        "replacement_code_lines": 5
+      },
+      {
+        "id": "census-9a1046d2bbe06ec82398",
+        "path": "Mathlib/Topology/Bornology/BoundedOperation.lean",
+        "start_line": 229,
+        "end_line": 232,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-arzela-ascoli",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/ArzelaAscoli.lean",
+        "start_line": 73,
+        "end_line": 88,
+        "original_code_lines": 16,
+        "replacement_code_lines": 7
+      },
+      {
+        "id": "metric-bcf-limit-bounded",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+        "start_line": 322,
+        "end_line": 325,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-4e0b8b585c644634133b",
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+        "start_line": 76,
+        "end_line": 79,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-followup-causeq-limit",
+        "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+        "start_line": 40,
+        "end_line": 43,
+        "original_code_lines": 4,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-8b67f838d205b6cbfbcd",
+        "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+        "start_line": 81,
+        "end_line": 82,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-e401e74ffffc29859015",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 357,
+        "end_line": 360,
+        "original_code_lines": 4,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-2d162277da34cfa04d1b",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 363,
+        "end_line": 367,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-f58f99f4509a73484e57",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 370,
+        "end_line": 374,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-bab3521d94f384e15b19",
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "start_line": 376,
+        "end_line": 380,
+        "original_code_lines": 5,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-15b9748861652a3366b3",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "start_line": 279,
+        "end_line": 281,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-8c1b0d1b4bf6f83d106e",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorff.lean",
+        "start_line": 751,
+        "end_line": 752,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-4d7a262db9aaf7e9064a",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "start_line": 160,
+        "end_line": 162,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "census-fea92e115375333a11e6",
+        "path": "Mathlib/Topology/MetricSpace/GromovHausdorffRealized.lean",
+        "start_line": 178,
+        "end_line": 180,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-followup-hausdorff-cover",
+        "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+        "start_line": 567,
+        "end_line": 569,
+        "original_code_lines": 3,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-0fa6ec8e97c594ddcfce",
+        "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+        "start_line": 571,
+        "end_line": 572,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-kuratowski-tail",
+        "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+        "start_line": 68,
+        "end_line": 82,
+        "original_code_lines": 15,
+        "replacement_code_lines": 8
+      },
+      {
+        "id": "metric-pinat-surjection",
+        "path": "Mathlib/Topology/MetricSpace/PiNat.lean",
+        "start_line": 749,
+        "end_line": 753,
+        "original_code_lines": 5,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "metric-polish-complete-copy-triangle",
+        "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+        "start_line": 193,
+        "end_line": 198,
+        "original_code_lines": 6,
+        "replacement_code_lines": 2
+      },
+      {
+        "id": "census-62fa1529f87cf79921e4",
+        "path": "Mathlib/Topology/UrysohnsLemma.lean",
+        "start_line": 293,
+        "end_line": 294,
+        "original_code_lines": 2,
+        "replacement_code_lines": 1
+      },
+      {
+        "id": "metric-followup-urysohn-second",
+        "path": "Mathlib/Topology/UrysohnsLemma.lean",
+        "start_line": 306,
+        "end_line": 308,
+        "original_code_lines": 3,
+        "replacement_code_lines": 1
+      }
+    ]
+  },
+  "baseline_retention": {
+    "retained_byte_identical_replacements": 87,
+    "dropped": 0,
+    "new_replacements": 30,
+    "new_files": 17,
+    "new_net_code_lines_saved": 46,
+    "duplicate_or_overlapping_active_spans": 0,
+    "added_helpers": 0,
+    "changes_outside_original_body_ranges_except_imports": 0
+  },
+  "original_body_matches": [
+    {
+      "candidate_id": "followup-smooth-pointwise",
+      "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+      "parent_declaration": "HasCompactSupport.exist_eLpNorm_sub_le_of_continuous",
+      "body_start_byte": 1516,
+      "body_end_byte": 3377,
+      "original_observation_key": "term:1606:1628:HasCompactSupport.exist_eLpNorm_sub_le_of_continuous:3933658500",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Lp.SmoothApprox/attempt-01/events.jsonl",
+      "events_sha256": "80e16ffe4d1488b99d68d5493cafcbc0a0227f5ceca7cbf930d84d55756467ae",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-besicovitch-self",
+      "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+      "parent_declaration": "Besicovitch.SatelliteConfig.inter'",
+      "body_start_byte": 9206,
+      "body_end_byte": 9400,
+      "original_observation_key": "tactic:9211:9250:Besicovitch.SatelliteConfig.inter':2198470166",
+      "events": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.Besicovitch/attempt-01/events.jsonl",
+      "events_sha256": "ea641b490684fc60755f2d91530cd1c780a6059cdb5d6fdd5a3c33d5eb7e7783",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-resolvent-separation",
+      "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+      "parent_declaration": "MeasureTheory.hasDerivAt_resolventTransform",
+      "body_start_byte": 5386,
+      "body_end_byte": 7542,
+      "original_observation_key": "tactic:6390:6392:MeasureTheory.hasDerivAt_resolventTransform:1142910661",
+      "events": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.ResolventTransform/attempt-01/events.jsonl",
+      "events_sha256": "7e730034b5ef8b3c9c0e3bf15643b8a0c21b90448843f3aa537c8db635bcf2be",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "census-79b02bbaa97f1bcecd14",
+      "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+      "parent_declaration": "Besicovitch.SatelliteConfig.instInhabited",
+      "body_start_byte": 8576,
+      "body_end_byte": 8973,
+      "original_observation_key": "tactic:8875:8968:Besicovitch.SatelliteConfig.instInhabited:4034885919",
+      "events": ".lake/expansion-discovery-v4/files/Mathlib.MeasureTheory.Covering.Besicovitch/attempt-01/events.jsonl",
+      "events_sha256": "ec1f2fad982b2389711ae257d665c89aeb3647192624a686f900387f7c95945c",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-causeq-limit",
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "parent_declaration": "CauSeq.tendsto_limit",
+      "body_start_byte": 826,
+      "body_end_byte": 1225,
+      "original_observation_key": "term:826:838:CauSeq.tendsto_limit:1241320745",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.CauSeqFilter/attempt-01/events.jsonl",
+      "events_sha256": "51df6ffad3c1b90d6b9e3c3600e41ff84540d5636d267bdf787a29213eeffb0a",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-causeq-cauchy",
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "parent_declaration": "CauSeq.cauchySeq",
+      "body_start_byte": 2226,
+      "body_end_byte": 2739,
+      "original_observation_key": "term:2238:2248:CauSeq.cauchySeq:2383206349",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.CauSeqFilter/attempt-01/events.jsonl",
+      "events_sha256": "51df6ffad3c1b90d6b9e3c3600e41ff84540d5636d267bdf787a29213eeffb0a",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-sphere-radius-positive",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "parent_declaration": "EuclideanGeometry.Sphere.isIntTangent_iff_dist_center",
+      "body_start_byte": 23105,
+      "body_end_byte": 24523,
+      "original_observation_key": "term:23133:23134:EuclideanGeometry.Sphere.isIntTangent_iff_dist_center:1159316466",
+      "events": ".lake/census-full-v3/files/Mathlib.Geometry.Euclidean.Sphere.Tangent/attempt-01/events.jsonl",
+      "events_sha256": "07a411a5b07065f9b447881d75df37f26cfc63b7df05695c0aba7f1cda568b32",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-urysohn-first",
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "parent_declaration": "Urysohns.CU.continuous_lim",
+      "body_start_byte": 11852,
+      "body_end_byte": 13547,
+      "original_observation_key": "tactic:12202:12223:Urysohns.CU.continuous_lim:2483763841",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.UrysohnsLemma/attempt-01/events.jsonl",
+      "events_sha256": "2a5f785e2fc6614b239ff9d2365c4cb679869d2048615953789ff94c297f132a",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-urysohn-second",
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "parent_declaration": "Urysohns.CU.continuous_lim",
+      "body_start_byte": 11852,
+      "body_end_byte": 13547,
+      "original_observation_key": "tactic:12202:12223:Urysohns.CU.continuous_lim:2483763841",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.UrysohnsLemma/attempt-01/events.jsonl",
+      "events_sha256": "2a5f785e2fc6614b239ff9d2365c4cb679869d2048615953789ff94c297f132a",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-hausdorff-cover",
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "parent_declaration": "DifferentiableOn.hausdorffMeasure_image_eq_zero",
+      "body_start_byte": 24067,
+      "body_end_byte": 25693,
+      "original_observation_key": "term:24474:24479:DifferentiableOn.hausdorffMeasure_image_eq_zero:1703296896",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.HausdorffDimension/attempt-01/events.jsonl",
+      "events_sha256": "d9d3fba4dd4c72f0db2475f3491be0c00bedd0b398ba412debee2e4743da4ed2",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-hausdorff-lipschitz",
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "parent_declaration": "DifferentiableOn.hausdorffMeasure_image_eq_zero",
+      "body_start_byte": 24067,
+      "body_end_byte": 25693,
+      "original_observation_key": "term:24474:24479:DifferentiableOn.hausdorffMeasure_image_eq_zero:1703296896",
+      "events": ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.HausdorffDimension/attempt-01/events.jsonl",
+      "events_sha256": "d9d3fba4dd4c72f0db2475f3491be0c00bedd0b398ba412debee2e4743da4ed2",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-sphere-ext-centers",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "parent_declaration": "EuclideanGeometry.Sphere.IsExtTangent.dist_center",
+      "body_start_byte": 21224,
+      "body_end_byte": 21341,
+      "original_observation_key": "tactic:21229:21265:EuclideanGeometry.Sphere.IsExtTangent.dist_center:358094704",
+      "events": ".lake/census-full-v3/files/Mathlib.Geometry.Euclidean.Sphere.Tangent/attempt-01/events.jsonl",
+      "events_sha256": "07a411a5b07065f9b447881d75df37f26cfc63b7df05695c0aba7f1cda568b32",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "metric-followup-sphere-int-centers",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "parent_declaration": "EuclideanGeometry.Sphere.IsIntTangent.dist_center",
+      "body_start_byte": 21492,
+      "body_end_byte": 21636,
+      "original_observation_key": "tactic:21497:21533:EuclideanGeometry.Sphere.IsIntTangent.dist_center:1851392701",
+      "events": ".lake/census-full-v3/files/Mathlib.Geometry.Euclidean.Sphere.Tangent/attempt-01/events.jsonl",
+      "events_sha256": "07a411a5b07065f9b447881d75df37f26cfc63b7df05695c0aba7f1cda568b32",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-finite-witness",
+      "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+      "parent_declaration": "exists_norm_le_le_norm_sub_of_finset",
+      "body_start_byte": 20889,
+      "body_end_byte": 21597,
+      "original_observation_key": "tactic:20894:20934:exists_norm_le_le_norm_sub_of_finset:1743856322",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.FiniteDimension/attempt-01/events.jsonl",
+      "events_sha256": "b8a7179d95158aed65f15f531a7fe78ac2c3d0a17c08aabae0a1e2582c1c008e",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-finite-symmetry",
+      "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+      "parent_declaration": "exists_seq_norm_le_one_le_norm_sub'",
+      "body_start_byte": 22061,
+      "body_end_byte": 22372,
+      "original_observation_key": "tactic:22125:22136:exists_seq_norm_le_one_le_norm_sub':1381348884",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.FiniteDimension/attempt-01/events.jsonl",
+      "events_sha256": "b8a7179d95158aed65f15f531a7fe78ac2c3d0a17c08aabae0a1e2582c1c008e",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-contdiff-inside",
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+      "parent_declaration": "MeasureTheory.hasFDerivAt_convolution_right_with_param",
+      "body_start_byte": 6618,
+      "body_end_byte": 14341,
+      "original_observation_key": "tactic:7811:7878:MeasureTheory.hasFDerivAt_convolution_right_with_param:3514202024",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.ContDiff.Convolution/attempt-02/events.jsonl",
+      "events_sha256": "374d0d3780b02360d617c42fceb8436103f588b88bc799bb11b87862ec204052",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-contdiff-outside",
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+      "parent_declaration": "MeasureTheory.hasFDerivAt_convolution_right_with_param",
+      "body_start_byte": 6618,
+      "body_end_byte": 14341,
+      "original_observation_key": "tactic:7811:7878:MeasureTheory.hasFDerivAt_convolution_right_with_param:3514202024",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.ContDiff.Convolution/attempt-02/events.jsonl",
+      "events_sha256": "374d0d3780b02360d617c42fceb8436103f588b88bc799bb11b87862ec204052",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-uniform-ball",
+      "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+      "parent_declaration": "uniformCauchySeqOnFilter_of_fderiv",
+      "body_start_byte": 4956,
+      "body_end_byte": 7710,
+      "original_observation_key": "term:5728:5763:uniformCauchySeqOnFilter_of_fderiv:1773943884",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.UniformLimitsDeriv/attempt-01/events.jsonl",
+      "events_sha256": "0e6d418b723b59b33505e7e1cdd5d35e22ca9df8b5713c16bdb156190cce0787",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-uniform-mvt",
+      "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+      "parent_declaration": "uniformCauchySeqOn_ball_of_fderiv",
+      "body_start_byte": 8684,
+      "body_end_byte": 10809,
+      "original_observation_key": "term:9621:9650:uniformCauchySeqOn_ball_of_fderiv:751110014",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.UniformLimitsDeriv/attempt-01/events.jsonl",
+      "events_sha256": "0e6d418b723b59b33505e7e1cdd5d35e22ca9df8b5713c16bdb156190cce0787",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-convolution-local",
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+      "body_start_byte": 41278,
+      "body_end_byte": 42250,
+      "original_observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+      "events_sha256": "0d8a4ec262c670a57e1fe84d15a5bde544641eb4551543ba56a75cdb34a71a91",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-convolution-limit",
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+      "body_start_byte": 41278,
+      "body_end_byte": 42250,
+      "original_observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+      "events_sha256": "0d8a4ec262c670a57e1fe84d15a5bde544641eb4551543ba56a75cdb34a71a91",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-picard-ball",
+      "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "parent_declaration": "ODE.FunSpace.mem_closedBall",
+      "body_start_byte": 11491,
+      "body_end_byte": 12016,
+      "original_observation_key": "term:11500:11514:ODE.FunSpace.mem_closedBall:2180734267",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.ODE.PicardLindelof/attempt-01/events.jsonl",
+      "events_sha256": "fc5d80fff50ef08475702ae1d2320da16b525bab8ec2a3e672e1398935cb387c",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-picard-local",
+      "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "parent_declaration": "IsPicardLindelof.of_contDiffAt_one",
+      "body_start_byte": 34831,
+      "body_end_byte": 36118,
+      "original_observation_key": "tactic:35100:35110:IsPicardLindelof.of_contDiffAt_one:1670772371",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.ODE.PicardLindelof/attempt-01/events.jsonl",
+      "events_sha256": "fc5d80fff50ef08475702ae1d2320da16b525bab8ec2a3e672e1398935cb387c",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-schwartz-antilipschitz",
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "parent_declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "body_start_byte": 39301,
+      "body_end_byte": 39887,
+      "original_observation_key": "term:39366:39368:SchwartzMap.compCLMOfAntilipschitz:3243953330",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl",
+      "events_sha256": "b71b4df9abe59358bf266fd10cd5b446bdbdfbd6036d05d3f4134062f4300d6d",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-schwartz-max",
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "parent_declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "body_start_byte": 39301,
+      "body_end_byte": 39887,
+      "original_observation_key": "term:39366:39368:SchwartzMap.compCLMOfAntilipschitz:3243953330",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl",
+      "events_sha256": "b71b4df9abe59358bf266fd10cd5b446bdbdfbd6036d05d3f4134062f4300d6d",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-calculus-schwartz-norm",
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "parent_declaration": "SchwartzMap.norm_toZeroAtInfty",
+      "body_start_byte": 49412,
+      "body_end_byte": 49490,
+      "original_observation_key": "term:49425:49468:SchwartzMap.norm_toZeroAtInfty:4292191492",
+      "events": ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl",
+      "events_sha256": "b71b4df9abe59358bf266fd10cd5b446bdbdfbd6036d05d3f4134062f4300d6d",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-second-main-separation",
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "parent_declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+      "body_start_byte": 2040,
+      "body_end_byte": 7464,
+      "original_observation_key": "tactic:2353:2501:Real.exists_sum_posLog_inv_norm_sub_le:3727209014",
+      "events": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/attempt-02/events.jsonl",
+      "events_sha256": "7ed98a047e4233a2fcca3c2bbc94ab87df37269ee5e5ea8e53f7452ffe013c9c",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-amice-operator-norm",
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "parent_declaration": "AbstractMeasure.invTransform",
+      "body_start_byte": 4600,
+      "body_end_byte": 5126,
+      "original_observation_key": "tactic:4680:4687:AbstractMeasure.invTransform:2505273936",
+      "events": ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Measure.AmiceTransform/attempt-01/events.jsonl",
+      "events_sha256": "3a85f64e69cc65aba6cac0facd73a9547ee31a97f0136bf5dc514402e959a750",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-complex-mgf-realpart",
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "parent_declaration": "ProbabilityTheory.hasDerivAt_integral_pow_mul_exp",
+      "body_start_byte": 5372,
+      "body_end_byte": 7197,
+      "original_observation_key": "term:5748:5796:ProbabilityTheory.hasDerivAt_integral_pow_mul_exp:656495895",
+      "events": ".lake/expansion-discovery-v4/files/Mathlib.Probability.Moments.ComplexMGF/attempt-01/events.jsonl",
+      "events_sha256": "98dc0f5bd048871b704522a75ee6450eaceede492597ba74493fcf55e8838024",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    },
+    {
+      "candidate_id": "followup-smoothing-dist",
+      "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+      "parent_declaration": "tendsto_smoothingFun_of_ne_zero",
+      "body_start_byte": 5405,
+      "body_end_byte": 12507,
+      "original_observation_key": "term:5540:5560:tendsto_smoothingFun_of_ne_zero:839533399",
+      "events": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/attempt-01/events.jsonl",
+      "events_sha256": "6662b09de0de7cda99041a8bf294c084d90c3b4f010d85acf7cc730e427cb161",
+      "claim": "Original declaration body evidence only; replacement soundness requires whole-file compilation."
+    }
+  ],
+  "checked_batch_compilations": [
+    {
+      "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+      "report": "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-01/report.json",
+      "report_sha256": "7a7c703225f85becfe9e3bbec4a0261c489d4755bfe3c5260372ff63d7ae1033",
+      "original_source_sha256": "5eb429e05ae70ef328b276e3a9ac40f30fbe7d875d1024d470370a1eb22fd239",
+      "replacement_source_sha256": "43e8bb16d2f87fa749393a8fd07fafa5f4ee0f6751f89e22dad49e5fa0bfe952",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.c",
+          "sha256": "22764ebb6fbae870c5a071dd3a69238fa0f787b299e9636299eb7e06ff44defb",
+          "bytes": 27778
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ilean",
+          "sha256": "74c6d7adf3ecc7e4d3bc2ba000af95e3cec739dca716c01822d435045c8693a7",
+          "bytes": 18122
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ir",
+          "sha256": "155810aefe83fc767bcd9f7b61cc7ae1b0426c86d84a10ecac065160e3ca9d36",
+          "bytes": 11536
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ir.sig",
+          "sha256": "18c111efc2237f1bae100f974ff1b76479137ac82f880a82c2003f13355a96b7",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean",
+          "sha256": "409faebc0c9cfbfc1d76ed6fea039a87ac8dde1f50df33a0de6b1a84e875ddfc",
+          "bytes": 51024
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean.private",
+          "sha256": "589ae3a3c21d5d5e75694a9c4e11206bb5d0492bcbd34a26217923dd3177dbba",
+          "bytes": 279992
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean.server",
+          "sha256": "44dd5d15f69d02ad50f2110751f359ceea8c153ef7551ee7fece71c1e17f7f76",
+          "bytes": 2408
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+      "report": "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-01/report.json",
+      "report_sha256": "7a7c703225f85becfe9e3bbec4a0261c489d4755bfe3c5260372ff63d7ae1033",
+      "original_source_sha256": "86e7e198048461599fb9c7d3030f8e971c270c5cd45826362772a2c0c6e4cda7",
+      "replacement_source_sha256": "cbaead9bdf8a20466657ad1385bf015f231af9e75f6d596b98bb071c452b8054",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.c",
+          "sha256": "520efd9b9c7226a1ec1f62d8b6278fd1e48dbc45ee75fdeff806d9c6da21f15d",
+          "bytes": 127769
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ilean",
+          "sha256": "caf69096512eaf36d8635cf0ba8c1967200cd43400d6cfd737b67d6d503c8f1b",
+          "bytes": 146890
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ir",
+          "sha256": "263aad370106335cc8c7c40cb9b6d512776303b99a924069fe61ddaebb57b12d",
+          "bytes": 100304
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ir.sig",
+          "sha256": "78b851d85c421cb5242da00bb2623eafdcf3044b610a17a91cd1784d8f77e027",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean",
+          "sha256": "9813ba755af8b81327e6049bcaaa4730fade0d94504b635b56a68f72323c13d1",
+          "bytes": 398136
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean.private",
+          "sha256": "ab29818eba87be0745c2d7f3662d432a0bdd1e9d30e6fc19bfe44dfdcc0f318c",
+          "bytes": 1764168
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean.server",
+          "sha256": "094473115c076adc295d3d6c9d291f7e82d2f077a1235a329d4e1b4808045755",
+          "bytes": 26144
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+      "report": "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-03/report.json",
+      "report_sha256": "61a52f12c6c314a5047ca8412f5909acfbaf2ea2d4759e7bdfe7291dd3b2cf2d",
+      "original_source_sha256": "7f81281ad5a14613f427dcfdf6eeccec20137b33929d576fa08fa479400edceb",
+      "replacement_source_sha256": "5efead02697c71c60f69fa42e96fcea18ecd2c4eb2ad7a4c8fd35b2e178c66f1",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.c",
+          "sha256": "cb4057a4d02e41f523b254e5d841536896e46c0853246aefa38c4f5e84c67d21",
+          "bytes": 7065
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.ilean",
+          "sha256": "05026cae26815444f8b2a0b616e363abc6777053201577c6d6b5bc13755f4b4e",
+          "bytes": 23013
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.ir",
+          "sha256": "7ce8c39aefe16cd6fe225cfa3daec6a604971dade8e7e64c90012c954efda87f",
+          "bytes": 3152
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.ir.sig",
+          "sha256": "ba6752d4154a58c253e7602fa5e415be384c0345e433bc661b04a692433650ac",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.olean",
+          "sha256": "840d5086402756d6218af9e19100f0eabf9446038dcf444421169440b764366f",
+          "bytes": 73080
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.olean.private",
+          "sha256": "359f46d51adb97ca979dbe2fe80d1fc455938e18bf74ca87a7fcf59b676208be",
+          "bytes": 393440
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-03/artifacts/Mathlib/MeasureTheory/Measure/ResolventTransform.olean.server",
+          "sha256": "8acd8da9378f2b76ef3c4997cb3808aea189dbae88165c8a78527a4a91a6c0b9",
+          "bytes": 4528
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "report": ".lake/followup-metric-02/report.json",
+      "report_sha256": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+      "original_source_sha256": "1a822919ca604e6a50d27d87efe291f6c63632b19f92b5bfb101c94c1c777568",
+      "replacement_source_sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.c",
+          "sha256": "797723808477fd100e5b65859e4ed7d4b954652a4724e555b97032929380e4b6",
+          "bytes": 6470
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ilean",
+          "sha256": "8840f253273d17f5b03405353c4959152d0fca8e264a1b970735a0031c3ab3ef",
+          "bytes": 63687
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ir",
+          "sha256": "ca8c5f7ae3ee8330ea4c563b50cefbdd7cb4884482487688333ef2a9eac9b62c",
+          "bytes": 3000
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ir.sig",
+          "sha256": "6d5b9766d96c066b9b1148451dc4a92d86cfbfc62158d0f0f251e1777853e4ae",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean",
+          "sha256": "d506ee07a60470f5842b65af5150a3c1770e41173bd9d509903f00585a90201c",
+          "bytes": 171584
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean.private",
+          "sha256": "3724e25a2dbb23c0a8aa2d52bbbb4df4b9ed7290688026708378a582d9c5a2a5",
+          "bytes": 650240
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean.server",
+          "sha256": "dfc2771d0c128d5efc140c2432f7022fae97808c093e658c991752af4c28d77b",
+          "bytes": 18760
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "report": ".lake/followup-metric-02/report.json",
+      "report_sha256": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+      "original_source_sha256": "a8f87ce5dbfb20aef5b43910abaaad23c9f40764d8b36139c587a7a5b4cb8d06",
+      "replacement_source_sha256": "772eda0ab8e5b2e7cd5d37b4fab87e967b1e111c5d8be340108f0cf99b3697a7",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.c",
+          "sha256": "83eb1bca69958ad7194366b51fe3e1574743bebabfba24f9f20b0cfbf71f3b19",
+          "bytes": 9475
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ilean",
+          "sha256": "5f7b4b9de1faa71da7d10331e097c4cd1d8a0a4297da320636b4e5a13587b4ac",
+          "bytes": 92226
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir",
+          "sha256": "51c9db0e5c5e945c856373266c6eab7fc275bec59676a8a94229f12da94d31ac",
+          "bytes": 5704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir.sig",
+          "sha256": "ad57d97f7397a192cc2faa887d98a41303e90bab58ca3193259daad029b23edf",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean",
+          "sha256": "718ac63629114f1fdab2854f5639a61822d0092e0cc45c07fe9ebf9c441aaded",
+          "bytes": 206704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.private",
+          "sha256": "3ea87443425930ef62e9c42a16cc66e8b1bfc6b3f35f65d0d4aa626a397c1435",
+          "bytes": 749016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.server",
+          "sha256": "afd0528ac886c8fce4f031b676846ba725af41d7c735f0d2a62d504bab56c222",
+          "bytes": 21512
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "report": ".lake/followup-metric-02/report.json",
+      "report_sha256": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+      "original_source_sha256": "29f30a0831f99315b9c437dac16b706ddebe37536cc88b0be4b67d9d8d853f58",
+      "replacement_source_sha256": "70e2b26d0b989d816320c0998cb3187e94be3d61bae74a65fdafbc9934fe17dc",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.c",
+          "sha256": "a002cbe16321be9ed44ac4983e716031cc5c65ad40f5fe6ddcddd9cc1878f2ef",
+          "bytes": 4467
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ilean",
+          "sha256": "8d6f53e88abd6e73d67ec982e3a4668f7ec8e00e606b5378e18d4e0efa80cf0e",
+          "bytes": 80583
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ir",
+          "sha256": "1480217715a7e4fb40c5d256e18be28143d25d24b19365ac7ec1e397f1309d4b",
+          "bytes": 2216
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ir.sig",
+          "sha256": "8c8d6ff659ae4599d83100c92bfb0314f5d996fc8c9bd19d294f7f445caee904",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean",
+          "sha256": "8024b7ebb946bcb7e230eb25f0b36068620eca27a372cb089cd9cadec34ce579",
+          "bytes": 180984
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean.private",
+          "sha256": "e4625462c9c1541ee06be78bec9978ce5799a7e71448ae4f179677e5751c081e",
+          "bytes": 764520
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean.server",
+          "sha256": "4a510404c8570a211c32e88ee73f432c23369ff66fc9e1dd04071b2f4388706f",
+          "bytes": 29448
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "report": ".lake/followup-metric-03/report.json",
+      "report_sha256": "5262e9a7653b342aba8579ab7305d64c2250a40ec48f40be423c5f61e4dcf335",
+      "original_source_sha256": "22bde8f2f8bcad18724d52ad5f6718ccc57f691427764a826a1f3576ace5a08e",
+      "replacement_source_sha256": "693b417e0654b13deeaf848c864fda017f86e02bad40d2252b77a094c455fa6e",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.c",
+          "sha256": "526469d1d0b4fe13d93e05843910e3ce60529e73b914f6fc72da7bc0dd7adc66",
+          "bytes": 3875
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ilean",
+          "sha256": "49948af307c63ae829f85abd0a63ec4480e8b974b762e0c434e0ad29f01f7719",
+          "bytes": 7846
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ir",
+          "sha256": "bb4fcb45eb3a6778ca35192e8f68f043b58991ef036fb6ca7f6c0180e3f376b8",
+          "bytes": 2016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ir.sig",
+          "sha256": "4c6105dcfd09471c0530c20be120c38a5ebcfa2d6e6f4e5cca4ae0f8bf3d1a41",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean",
+          "sha256": "cbc51841f43af5fb73fd99994c27c318b68a3f32548d477b206801c52659ddf9",
+          "bytes": 20104
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean.private",
+          "sha256": "8af368e13c2c58fda51c35372c01eb1b2d7e6ad57c4177fd35997d06c68b1b74",
+          "bytes": 206544
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean.server",
+          "sha256": "f91e86aad725481fa1418bdeb0137fb2d534f64a8e7fb330596ea62eabb1d472",
+          "bytes": 2800
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "original_source_sha256": "49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220",
+      "replacement_source_sha256": "23281a5f021e90eb2be8371fe624856f36eca832e515becae5426f97f4f3d797",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.c",
+          "sha256": "dcb688fffed30de43254228ec6fcf5c0bcbc8d5a38d2cf3ec8c7fca9a27b9b5a",
+          "bytes": 151754
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.ilean",
+          "sha256": "d9bef76c4a8e595b47c66b1af83c792b255718f64326a3e51d6c0e1cfe7ce4fd",
+          "bytes": 125774
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.ir",
+          "sha256": "2bf8e843199e09bbb666407c8f3d20da2b040a3077fc7129d142439756c1f15d",
+          "bytes": 66480
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.ir.sig",
+          "sha256": "6720cf5a1a98c3efd254b9faf6ad21c780893bb11f5e7a09a773df4fb0211e32",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.olean",
+          "sha256": "335bde0daa8091313cd6804830cc5903492365679ce475a8fedb27a34bb18fef",
+          "bytes": 916112
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.olean.private",
+          "sha256": "0ab2f4f69eea5db7af84c16fa4e7dc92c2d767791e5ccbb4c382f3bfb070f282",
+          "bytes": 2155664
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Convolution.olean.server",
+          "sha256": "4d28213d43c1b87d379beb2bba73c589ac1a1ebe90afd5b2a7b3dfdd9cd35115",
+          "bytes": 30696
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "original_source_sha256": "8252085c90d89aa44372ffd20386c1be6e2be2118dae1a12eea5ca44448bc683",
+      "replacement_source_sha256": "d5218ef9b14e070099ac93fa9c6957ae151899d48865a6d580439c8649f1381c",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.c",
+          "sha256": "523f8d6765c784697957e790bcc462e0ca7cc204a5e0f92fae122078f5bf1de6",
+          "bytes": 4450
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.ilean",
+          "sha256": "213de4371b086f6066227fef3cde274af9aa694fd06958c078460828f5c99f75",
+          "bytes": 72038
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.ir",
+          "sha256": "9445ea171a3203368908b25796fb19b08367f97fee262d77284b6a84e5735fef",
+          "bytes": 2000
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.ir.sig",
+          "sha256": "fb75b2da51cb6e22b5f8376abc11ad492989dac4ed478941eba404adafed98b0",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.olean",
+          "sha256": "1558e730cf86e1a9f3aeb63e22676a482a65106655f32c04d7b6fbf7d2b12a3f",
+          "bytes": 235176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.olean.private",
+          "sha256": "282c75833f229ef0d1a83cfb83a6aed8ba8abbc089e383ba9498c63604005b54",
+          "bytes": 1846592
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/Calculus/ContDiff/Convolution.olean.server",
+          "sha256": "037642df051c4cb0450cd36d84c229bb928e62f0b4697ccc0b2893c46da48a97",
+          "bytes": 7248
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json",
+      "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+      "original_source_sha256": "c9211adf39cf27a6419c6516bea3e109de7445a905f9b65ffdb68de5a0abac90",
+      "replacement_source_sha256": "5df50802ad44f6f4805f67ae34ea523474b0c8e1a9e8bf227753824e6eb7a5c4",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.c",
+          "sha256": "12f45df580437cb830b6dad3fcf2cec1e1c1e784cce8e491f95ef7c6f7cd7015",
+          "bytes": 12221
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.ilean",
+          "sha256": "bf486bfbbf85be5f91729046ef9d2917befe9e7523e3756bd29c9554c65ef90d",
+          "bytes": 82580
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.ir",
+          "sha256": "eb5f72280de81ee358ce2f75840a553b35dcb2eabb1db09fd001f6a66a0f3a3f",
+          "bytes": 7240
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.ir.sig",
+          "sha256": "1e459774625299135c84276b35b54ccbc62171f52c91a5a57cbff02db631b5a3",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.olean",
+          "sha256": "c6d514a717fc50e3d3a946a6b3cdb89a7c17b061026bd8acaf30cbcb77438990",
+          "bytes": 326072
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.olean.private",
+          "sha256": "7873db757cded25b5f205ac21c936280ea7fc8ca50606f8fea0aa99961229b5d",
+          "bytes": 868880
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-final-05/artifacts/Mathlib/Analysis/ODE/PicardLindelof.olean.server",
+          "sha256": "ff12fbdd4ed88b61b2527ea4db621e56264ec68ec363bfa63350c59a02bfa573",
+          "bytes": 28448
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "original_source_sha256": "0915f1a75bb45b99f27227605ea0bb5a39f48eecc15f93aefb38c48762655103",
+      "replacement_source_sha256": "664afccfae0cc8aa09b98fb2d2b39f2769f6e9faa326ab6fe00d8ee74f6b624f",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.c",
+          "sha256": "4da557be70beb4d588a6bde043b9c93000eedc26f375dd4e1ab983c89b4b038c",
+          "bytes": 21213
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.ilean",
+          "sha256": "bd924340782452e37d091f34318f3aa8e1dba38c1a9d7fe819fa1070b301d5d0",
+          "bytes": 105213
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.ir",
+          "sha256": "7e0b723376513b3c43dde93684b682ee317c288e1135d0a99bbba1635ccb7b35",
+          "bytes": 13768
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.ir.sig",
+          "sha256": "a2e625595755696e08405514e36c2f8d683765f97cf6a0599441d6675d7adf49",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.olean",
+          "sha256": "da40785a82540566fa64d01b9c270f8e4a847a9895a33dee4b40d612af20edda",
+          "bytes": 531640
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.olean.private",
+          "sha256": "454a95ed67824434901d95c1d10da2a2701a12f310d051246e1a7ce1bc52d7fc",
+          "bytes": 1245960
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Normed/Module/FiniteDimension.olean.server",
+          "sha256": "dc5cf655558efe33a2a2ba00b534242c26d47096a7764935eb3ed1527e6759ae",
+          "bytes": 25712
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "original_source_sha256": "77ce5b3aded8b40f85a9f8d99b900f1b631902963c1ad4c1f28bbffbdca20b37",
+      "replacement_source_sha256": "447f782493b826040bb433c8ec2f4298946047431deb0587360b1176eec9dc8e",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.c",
+          "sha256": "321e9ff1e29d57072bb69390fd024a05486e5cf043394a8775e4dd270c35fbe8",
+          "bytes": 3936
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.ilean",
+          "sha256": "3aad64ef65a9790093905144f86bac832b9db903613620bdb28385cc58407e42",
+          "bytes": 56907
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.ir",
+          "sha256": "d4247e7d0f67dbaf873a514638fe85baed81223f997c74d452f057698795bf2b",
+          "bytes": 2016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.ir.sig",
+          "sha256": "78869848b5b08301ffeb682c1db8e2eaf57ecb7c01f0b5d00860d7bd449bcb7a",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.olean",
+          "sha256": "4257a99027143f4c1563b677013b0cff60ec83b3b6107520fecbbb2a93c32351",
+          "bytes": 129496
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.olean.private",
+          "sha256": "a8049937d6f92243ef6454dd1c44725b0d498ecbe5cabac414cd15465e764428",
+          "bytes": 1411840
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Calculus/UniformLimitsDeriv.olean.server",
+          "sha256": "58731c95b084c8ec2d998df9eb27ba80304c58816efc79e5cfd75923fd10789e",
+          "bytes": 12424
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "report": "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json",
+      "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+      "original_source_sha256": "7e090fe3e8df982e44dae25896442f4134123a8ee433512403320250557c557b",
+      "replacement_source_sha256": "42926717edf19f331de24da8278efb11f2a0cac36e44577297c9d86fcbe02b3d",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.c",
+          "sha256": "cbcad804c57b373fafbaa057252a931a49028737f42334b2c3821d1b5d57fc48",
+          "bytes": 129016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.ilean",
+          "sha256": "6293eb4e16761b54147814c1f8db88da346f2a58df7668ac32af0361d8ce8914",
+          "bytes": 153054
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.ir",
+          "sha256": "d9e5ad95d603a8cf183f7e20811b4c627f5b4268b9593919fb089c984c4232dd",
+          "bytes": 66232
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.ir.sig",
+          "sha256": "489d1d9b6fd62956f68cbc258224180c8209be13e3cc77b9e3832fe6de975872",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.olean",
+          "sha256": "7e9b2e5ad93563bc5a8a915770b5e0a0982af4fd8caca6dfc7061df5e2f8c0e6",
+          "bytes": 2078104
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.olean.private",
+          "sha256": "f26c2d86d45c50ea5b4a3e4b3a872ccd45e4e91a83e49c45e8c9178d2a6b2024",
+          "bytes": 2809544
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.olean.server",
+          "sha256": "d4c42ed2c8e1d8210eb693432b0c77585cf8b5a08d1e64cc42f717c532060e66",
+          "bytes": 52352
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "report": "benchmarks/expansion/followup-20261021/analysis/trials/final-01/report.json",
+      "report_sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b",
+      "original_source_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+      "replacement_source_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.c",
+          "sha256": "f1560358e641878ae3206e0264f5f305ff1e25c5aa63df0bb3a6ae4e3d546bf3",
+          "bytes": 4053
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ilean",
+          "sha256": "c178656565ff1850eb058e66d6a8c864ae373fc43f72965e9bee2e8ca20dcc34",
+          "bytes": 11932
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir",
+          "sha256": "342419d744c6a70448c8efeb54b276f9d80e9875f29d033b3320f0f73b45ef12",
+          "bytes": 2032
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir.sig",
+          "sha256": "e9718532cc25fd0528a445722e6e358cbaa421f81bbc8c23356612fe5c5ef3af",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean",
+          "sha256": "a05ef01f2d37b092da776e649543db82f240a575b7e59add75801f7be3c2d278",
+          "bytes": 13424
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.private",
+          "sha256": "08f03cec54fbb17bcb65e2fc9484a6d1a47af17d2ff6775ab14ff3b35ca04864",
+          "bytes": 592512
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.server",
+          "sha256": "368b4aac4ad93b63de869d8ca23c9072ebc93836e1dd2b989bd4357989d956d0",
+          "bytes": 2792
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "report": "benchmarks/expansion/followup-20261021/analysis/trials/final-01/report.json",
+      "report_sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b",
+      "original_source_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+      "replacement_source_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.c",
+          "sha256": "14b77f981e1aa1c156ec75313cd6deffd327e2aac27f092bf3bc67fa110b6786",
+          "bytes": 5546
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ilean",
+          "sha256": "5d5d325ded747e665218c83a13008f438f92dc911398bfca50db69b5a700de0b",
+          "bytes": 18688
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir",
+          "sha256": "c58b4bd6007a260f9fa41360b4e38c5ab5dd705f61a3bbede2647663a88f9b14",
+          "bytes": 2704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir.sig",
+          "sha256": "2dbcce9866e4f34fd8168d964a4cad3670b1ff207dde2f16b7aa642c60e038ff",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean",
+          "sha256": "05ee55cd14ccfbc72420e8912b05bd809b7082d6ee8eba22fa2bdc616e9604b1",
+          "bytes": 143480
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.private",
+          "sha256": "71905b4b555a0c07c588dd60adfcb267949664d8460ac3be572a2a5afeb241f3",
+          "bytes": 385616
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.server",
+          "sha256": "530cf94565c436218a9fe6a54401b5ddaeee2370576659bc6f9e137e72f4fa4b",
+          "bytes": 5792
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "report": "benchmarks/expansion/followup-20261021/analysis/trials/final-01/report.json",
+      "report_sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b",
+      "original_source_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+      "replacement_source_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.c",
+          "sha256": "56098d254fbf22b3bac48696c8c2a4ac8970a4cc8a0e6fbca1e04aa4771c3988",
+          "bytes": 5592
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ilean",
+          "sha256": "99d3ba7d48fc34385df311c100a52d7c36d098ca5899ff4b9bdaa8559f70560c",
+          "bytes": 44498
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ir",
+          "sha256": "ed4304db85ab1f4ad7aba7c1162ad476f426ff35cf6ffa4f3a3bb5d4caffd21e",
+          "bytes": 2568
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ir.sig",
+          "sha256": "e3b806f5bbdb74555b80157d761355d2484e3df5afaf11f05e4d263227360778",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean",
+          "sha256": "08ab7d226fb4b221e6c1584535e52ca0ebe8cc9996f1993d67e6a1ab14d0c3ba",
+          "bytes": 61904
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean.private",
+          "sha256": "1d5e10d4170f67e71ed4853bba4faa9ce9a9b4af5e903a802e62468072435164",
+          "bytes": 444648
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean.server",
+          "sha256": "f3d4858bab2c565da8006f9d5575cadf1ea330522446697c5f3adc170879f3b3",
+          "bytes": 11800
+        }
+      ]
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+      "report": "benchmarks/expansion/followup-20261021/analysis/trials/final-01/report.json",
+      "report_sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b",
+      "original_source_sha256": "096cc593462d7578246c2e105790ec4593ffbc0630c7de06e9ca0912d69637ee",
+      "replacement_source_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.c",
+          "sha256": "81516939022d02091b65efe8f2b689f350f73590b85a378deb3efda531e4a566",
+          "bytes": 6144
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ilean",
+          "sha256": "75d5eccc5cbf82a6d9e5409f3cbf9962be5b777e453bc6295d31cd584f9dd358",
+          "bytes": 103595
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir",
+          "sha256": "782348812a0e22a05a1461ed2569628778a0f16a78753b9d84d82f0d4fa3d522",
+          "bytes": 2928
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir.sig",
+          "sha256": "a7617775dcd0e45e8c216e3786cc51c01db15d0b24f66064ede561546ba5465b",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean",
+          "sha256": "30ed0274929ac408c258d45da691bb5c62f2a66671d3799b9ccb549026c771c5",
+          "bytes": 63880
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.private",
+          "sha256": "699927035d261a8e3a5fd8985ac490c8b126cead5a066e96010803407d0a43ad",
+          "bytes": 742496
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.server",
+          "sha256": "fa34b8710c8c507f8303f4a8a9f0c884e7343c45313960d7fe1baa26be5a7893",
+          "bytes": 14184
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "benchmarks/expansion/followup-20261021/measure/confirmed.json": "3a6a481ffb063f78d31b62466a9f85e79089f59ba005c0985d94d7dd126de107",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Lp.SmoothApprox/attempt-01/events.jsonl": "80e16ffe4d1488b99d68d5493cafcbc0a0227f5ceca7cbf930d84d55756467ae",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Lp.SmoothApprox/result.json": "a64b6a583a657b8626e3efb95c96628a850f94126e05f5153427f24405410034",
+    ".lake/census-full-v3/manifest.json": "e03cd54a6998dd2c18b2c7b723891da5357170a5f23380748c32ad6a1dfa8fd2",
+    ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.Besicovitch/attempt-01/events.jsonl": "ea641b490684fc60755f2d91530cd1c780a6059cdb5d6fdd5a3c33d5eb7e7783",
+    ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.Besicovitch/result.json": "d7e99aa7fd9bae0e250331e724bf702244a12b578510b4866f7598b1278bd5d6",
+    ".lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.ResolventTransform/attempt-01/events.jsonl": "7e730034b5ef8b3c9c0e3bf15643b8a0c21b90448843f3aa537c8db635bcf2be",
+    ".lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.ResolventTransform/result.json": "f8428d11b31624473a5c5cfc23de809c27cd6b0d0f7a76bc357c1f3ab8fcff8d",
+    ".lake/expansion-discovery-v4/files/Mathlib.MeasureTheory.Covering.Besicovitch/attempt-01/events.jsonl": "ec1f2fad982b2389711ae257d665c89aeb3647192624a686f900387f7c95945c",
+    ".lake/expansion-discovery-v4/files/Mathlib.MeasureTheory.Covering.Besicovitch/result.json": "55b5790f8374145da20c7ab9120fc39c7d271a1e71c7fa7ec31983bc869850d5",
+    ".lake/expansion-discovery-v4/manifest.json": "82074bb8465d62d71ff0dbb13cf7ccf684d105cba7f80b2c92b1f3c1a5b9a01a",
+    "benchmarks/expansion/followup-20261021/metric/confirmed.json": "bbf3ef448c3aa6aa525fad7d05f4cc459565909cf70bcb5e1530858471634faf",
+    ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.CauSeqFilter/attempt-01/events.jsonl": "51df6ffad3c1b90d6b9e3c3600e41ff84540d5636d267bdf787a29213eeffb0a",
+    ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.CauSeqFilter/result.json": "e211b393f58bb491f2403fb179832dbcc43a836bf3ffb25b64b552276aa34711",
+    ".lake/census-full-v3/files/Mathlib.Geometry.Euclidean.Sphere.Tangent/attempt-01/events.jsonl": "07a411a5b07065f9b447881d75df37f26cfc63b7df05695c0aba7f1cda568b32",
+    ".lake/census-full-v3/files/Mathlib.Geometry.Euclidean.Sphere.Tangent/result.json": "edab197afb0ffe70fa09602f48184bbf1cbe46d45d101721558904d4d5308faf",
+    ".lake/census-full-v3/files/Mathlib.Topology.UrysohnsLemma/attempt-01/events.jsonl": "2a5f785e2fc6614b239ff9d2365c4cb679869d2048615953789ff94c297f132a",
+    ".lake/census-full-v3/files/Mathlib.Topology.UrysohnsLemma/result.json": "4c36ec23f7160d7e93c33dbeb6d78d90edc974cff8cd7bd23638bd49fff69008",
+    ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.HausdorffDimension/attempt-01/events.jsonl": "d9d3fba4dd4c72f0db2475f3491be0c00bedd0b398ba412debee2e4743da4ed2",
+    ".lake/census-full-v3/files/Mathlib.Topology.MetricSpace.HausdorffDimension/result.json": "cdb3303433762baff767e71b726ba88ac9909f9730a0bfbf17dad67bd6fc5d09",
+    "benchmarks/expansion/followup-20261021/calculus/confirmed.json": "c1e96cd58d08533daaedab02d94cd396e318d8dff4d1c85fae4656710c58c7bc",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.FiniteDimension/attempt-01/events.jsonl": "b8a7179d95158aed65f15f531a7fe78ac2c3d0a17c08aabae0a1e2582c1c008e",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Module.FiniteDimension/result.json": "d42859546fd7a27700570e7052a3f5c53ad7561e8eccedda314d0b97fad1e7c9",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.ContDiff.Convolution/attempt-02/events.jsonl": "374d0d3780b02360d617c42fceb8436103f588b88bc799bb11b87862ec204052",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.ContDiff.Convolution/result.json": "a0d2806cacb26986a443dce4b73749e48b27f495ae404f78ece6e8f17919ecaa",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.UniformLimitsDeriv/attempt-01/events.jsonl": "0e6d418b723b59b33505e7e1cdd5d35e22ca9df8b5713c16bdb156190cce0787",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Calculus.UniformLimitsDeriv/result.json": "85a1cbf3af5d1708a3c44a0aba16453de0a8117b3ba416ce7fc2681366d443a0",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl": "0d8a4ec262c670a57e1fe84d15a5bde544641eb4551543ba56a75cdb34a71a91",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/result.json": "41431af67f1191df02168fcacdf75b0a1a62f8790fd9b824d3d7a40254b759a7",
+    ".lake/census-full-v3/files/Mathlib.Analysis.ODE.PicardLindelof/attempt-01/events.jsonl": "fc5d80fff50ef08475702ae1d2320da16b525bab8ec2a3e672e1398935cb387c",
+    ".lake/census-full-v3/files/Mathlib.Analysis.ODE.PicardLindelof/result.json": "3460cb3fb4db49b6c6a6f7ae1da292311bf819c4347ed33b4af84157e6ab2354",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl": "b71b4df9abe59358bf266fd10cd5b446bdbdfbd6036d05d3f4134062f4300d6d",
+    ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/result.json": "815b1729acdaea3e26358e6297093413f2e3798711d6229f552edc0e64c68bf2",
+    "benchmarks/expansion/followup-20261021/analysis/confirmed.json": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971",
+    ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/attempt-02/events.jsonl": "7ed98a047e4233a2fcca3c2bbc94ab87df37269ee5e5ea8e53f7452ffe013c9c",
+    ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/result.json": "2e16fccddb48ef60d0d9c463f5c224d87baf3d8c9401a7e2ed469c46a67ad0aa",
+    ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Measure.AmiceTransform/attempt-01/events.jsonl": "3a85f64e69cc65aba6cac0facd73a9547ee31a97f0136bf5dc514402e959a750",
+    ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Measure.AmiceTransform/result.json": "353678fd879e28b96c62f221272d643f966a28f44d567853298ff487d0123173",
+    ".lake/expansion-discovery-v4/files/Mathlib.Probability.Moments.ComplexMGF/attempt-01/events.jsonl": "98dc0f5bd048871b704522a75ee6450eaceede492597ba74493fcf55e8838024",
+    ".lake/expansion-discovery-v4/files/Mathlib.Probability.Moments.ComplexMGF/result.json": "b05ca7bcf0f90f85a8d26cba5cd19a7025a5535175f722b7b4526862611b2538",
+    ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/attempt-01/events.jsonl": "6662b09de0de7cda99041a8bf294c084d90c3b4f010d85acf7cc730e427cb161",
+    ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/result.json": "1ff66c4245219ad33874b3327d6e700499f457b477e7084b17b2936751b8cd5b",
+    "benchmarks/expansion/verified-05/manifest.json": "55de5cb3283f57f58f72be14f3c571c9e013ae5b06a676737b7fbc3a7bb26944",
+    "benchmarks/expansion/followup-20261021/selection/manifest.json": "85f5a18d57f23cf55ceac4e36b579fa2377676492688edf2e7b570003a2ba8dd",
+    "benchmarks/expansion/followup-20261021/selection/inputs/00.json": "55de5cb3283f57f58f72be14f3c571c9e013ae5b06a676737b7fbc3a7bb26944",
+    "benchmarks/expansion/followup-20261021/selection/inputs/01.json": "3a6a481ffb063f78d31b62466a9f85e79089f59ba005c0985d94d7dd126de107",
+    "benchmarks/expansion/followup-20261021/selection/inputs/02.json": "bbf3ef448c3aa6aa525fad7d05f4cc459565909cf70bcb5e1530858471634faf",
+    "benchmarks/expansion/followup-20261021/selection/inputs/03.json": "c1e96cd58d08533daaedab02d94cd396e318d8dff4d1c85fae4656710c58c7bc",
+    "benchmarks/expansion/followup-20261021/selection/inputs/04.json": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971",
+    "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-01/report.json": "7a7c703225f85becfe9e3bbec4a0261c489d4755bfe3c5260372ff63d7ae1033",
+    "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-02/report.json": "dda52f1d2000483ca2deb2e28d206aa4edf8931eb90dd1524f49a473a81e0017",
+    "benchmarks/expansion/followup-20261021/measure/trials/followup-measure-03/report.json": "61a52f12c6c314a5047ca8412f5909acfbaf2ea2d4759e7bdfe7291dd3b2cf2d",
+    ".lake/followup-metric-01/report.json": "d293e18eaa2492285db7dca3d8fe0bd63d971be4b382159ecef9e6e4400936b6",
+    ".lake/followup-metric-02/report.json": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+    ".lake/followup-metric-03/report.json": "5262e9a7653b342aba8579ab7305d64c2250a40ec48f40be423c5f61e4dcf335",
+    "benchmarks/expansion/followup-20261021/calculus/trials/final-05/report.json": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+    "benchmarks/expansion/followup-20261021/calculus/trials/04/report.json": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+    "benchmarks/expansion/followup-20261021/analysis/trials/final-01/report.json": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b"
+  }
+}

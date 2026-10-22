@@ -1,0 +1,485 @@
+{
+  "scope": "exploratory manual complete-file compilation; no timing claim",
+  "accounting": {
+    "candidate_count": 6,
+    "candidate_status_counts": {
+      "replace": 6
+    },
+    "proposed_replacements": 6,
+    "original_proof_lines": 15,
+    "replacement_proof_lines": 7,
+    "added_helper_lines": 0,
+    "added_import_lines": 3,
+    "candidates": [
+      {
+        "id": "followup-smooth-pointwise",
+        "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+        "status": "replace",
+        "reason": "reviewed_followup",
+        "declaration": "HasCompactSupport.exist_eLpNorm_sub_le_of_continuous",
+        "parent_declaration": "HasCompactSupport.exist_eLpNorm_sub_le_of_continuous",
+        "start_line": 73,
+        "end_line": 75,
+        "original_sha256": "8ad710781239e3533aebb9ed2015439849cfd6ab019f483ead29cc088f75f3a8",
+        "proof_replacement": "exact fun x => by norm_arith [hg₂ x]",
+        "source_start_byte": 3332,
+        "source_end_byte": 3377,
+        "observation_key": "term:1606:1628:HasCompactSupport.exist_eLpNorm_sub_le_of_continuous:3933658500",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Normed.Lp.SmoothApprox/attempt-01/events.jsonl",
+        "origin_syntax_kind": "Lean.Parser.Term.identProj",
+        "body_start_byte": 1516,
+        "body_end_byte": 3377,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "followup-besicovitch-self",
+        "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+        "status": "replace",
+        "reason": "reviewed_followup",
+        "declaration": "Besicovitch.SatelliteConfig.inter'",
+        "parent_declaration": "Besicovitch.SatelliteConfig.inter'",
+        "start_line": 179,
+        "end_line": 181,
+        "original_sha256": "c402e6cef0a0b3a5f3135f909e06a4b3a8fab14c30f80baf9a4dde6094cb0909",
+        "proof_replacement": "· rcases top_le_iff.1 H with rfl\n    norm_arith [a.rpos (last N)]",
+        "source_start_byte": 9276,
+        "source_end_byte": 9400,
+        "observation_key": "tactic:9211:9250:Besicovitch.SatelliteConfig.inter':2198470166",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.Besicovitch/attempt-01/events.jsonl",
+        "origin_syntax_kind": "Lean.Parser.Tactic.rcases",
+        "body_start_byte": 9206,
+        "body_end_byte": 9400,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 2
+      },
+      {
+        "id": "census-79b02bbaa97f1bcecd14",
+        "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+        "declaration": "Besicovitch.SatelliteConfig.instInhabited",
+        "status": "replace",
+        "reason": "import_cost_offsets_savings",
+        "start_line": 167,
+        "end_line": 168,
+        "original_sha256": "37e8a309bc1731aa813c482d89806c664cf451554a7fcdb68d45d601350daf03",
+        "proof_lines_saved": 1,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1,
+        "observation_key": "tactic:8875:8968:Besicovitch.SatelliteConfig.instInhabited:4034885919",
+        "fragment": "metric_extension",
+        "source_start_byte": 8875,
+        "source_end_byte": 8968,
+        "body_start_byte": 8576,
+        "body_end_byte": 8973,
+        "proof_replacement": "by norm_arith",
+        "manual_review": true,
+        "proof_kind": "reviewed_checked_census"
+      },
+      {
+        "id": "followup-density-center",
+        "path": "Mathlib/MeasureTheory/Covering/DensityTheorem.lean",
+        "status": "replace",
+        "reason": "reviewed_followup",
+        "declaration": "IsUnifLocDoublingMeasure.closedBall_mem_vitaliFamily_of_dist_le_mul",
+        "parent_declaration": "IsUnifLocDoublingMeasure.closedBall_mem_vitaliFamily_of_dist_le_mul",
+        "start_line": 104,
+        "end_line": 106,
+        "original_sha256": "d3f4466e94861f7169610762ca4d1f6ae436204413b5cdb621b7f34c276dc4d3",
+        "proof_replacement": "norm_arith [mem_closedBall'.1 (H (mem_closedBall_self rpos.le))]",
+        "source_start_byte": 4641,
+        "source_end_byte": 4752,
+        "observation_key": "term:3971:4000:IsUnifLocDoublingMeasure.closedBall_mem_vitaliFamily_of_dist_le_mul:3846877659",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.DensityTheorem/attempt-01/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 3004,
+        "body_end_byte": 4752,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "followup-density-triangle",
+        "path": "Mathlib/MeasureTheory/Covering/DensityTheorem.lean",
+        "status": "replace",
+        "reason": "reviewed_followup",
+        "declaration": "IsUnifLocDoublingMeasure.tendsto_closedBall_filterAt",
+        "parent_declaration": "IsUnifLocDoublingMeasure.tendsto_closedBall_filterAt",
+        "start_line": 127,
+        "end_line": 128,
+        "original_sha256": "323c331066c70b5d8c6eaa234aef4fcf619f9ffbf5a64cca30116cba6774ed8c",
+        "proof_replacement": "norm_arith",
+        "source_start_byte": 5999,
+        "source_end_byte": 6083,
+        "observation_key": "term:5264:5266:IsUnifLocDoublingMeasure.tendsto_closedBall_filterAt:3317009908",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Covering.DensityTheorem/attempt-01/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 5056,
+        "body_end_byte": 6083,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "census-b62868fdb6ac70dd5d4f",
+        "path": "Mathlib/MeasureTheory/Covering/DensityTheorem.lean",
+        "declaration": "IsUnifLocDoublingMeasure.closedBall_mem_vitaliFamily_of_dist_le_mul",
+        "status": "replace",
+        "reason": "import_cost_offsets_savings",
+        "start_line": 90,
+        "end_line": 91,
+        "original_sha256": "ae2f615c77f4afd528329a89f3236ed77e00c396958256d1162e942ff2e3a4da",
+        "proof_lines_saved": 1,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1,
+        "observation_key": "tactic_suffix:4007:4036:IsUnifLocDoublingMeasure.closedBall_mem_vitaliFamily_of_dist_le_mul:1889083277",
+        "fragment": "metric_extension",
+        "source_start_byte": 4007,
+        "source_end_byte": 4036,
+        "body_start_byte": 3004,
+        "body_end_byte": 4752,
+        "proof_replacement": "norm_arith",
+        "manual_review": true,
+        "proof_kind": "reviewed_checked_census"
+      }
+    ],
+    "net_proof_lines_saved": 8,
+    "net_lines_saved_including_imports": 5
+  },
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+      "candidate_ids": [
+        "followup-smooth-pointwise"
+      ],
+      "original_source_sha256": "5eb429e05ae70ef328b276e3a9ac40f30fbe7d875d1024d470370a1eb22fd239",
+      "replacement_source_sha256": "43e8bb16d2f87fa749393a8fd07fafa5f4ee0f6751f89e22dad49e5fa0bfe952",
+      "process": {
+        "seconds": 8.636674624984153,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/Analysis/Normed/Lp/SmoothApprox"
+      },
+      "setup_sha256": "82d096a3d9f1ad8611a0ce1e098b4f3e2169a658bf5eae5682b8f5efae4f20c6",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.c": "22764ebb6fbae870c5a071dd3a69238fa0f787b299e9636299eb7e06ff44defb",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ilean": "74c6d7adf3ecc7e4d3bc2ba000af95e3cec739dca716c01822d435045c8693a7",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ir": "155810aefe83fc767bcd9f7b61cc7ae1b0426c86d84a10ecac065160e3ca9d36",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.ir.sig": "18c111efc2237f1bae100f974ff1b76479137ac82f880a82c2003f13355a96b7",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean": "409faebc0c9cfbfc1d76ed6fea039a87ac8dde1f50df33a0de6b1a84e875ddfc",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean.private": "589ae3a3c21d5d5e75694a9c4e11206bb5d0492bcbd34a26217923dd3177dbba",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/Analysis/Normed/Lp/SmoothApprox.olean.server": "44dd5d15f69d02ad50f2110751f359ceea8c153ef7551ee7fece71c1e17f7f76"
+      }
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+      "candidate_ids": [
+        "census-79b02bbaa97f1bcecd14",
+        "followup-besicovitch-self"
+      ],
+      "original_source_sha256": "86e7e198048461599fb9c7d3030f8e971c270c5cd45826362772a2c0c6e4cda7",
+      "replacement_source_sha256": "cbaead9bdf8a20466657ad1385bf015f231af9e75f6d596b98bb071c452b8054",
+      "process": {
+        "seconds": 4.54817737499252,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/Besicovitch"
+      },
+      "setup_sha256": "ab60a5d8e7d0f872869ac83c9447fd43a4d00bfa4779bf92cbaa87e88ce4bc2a",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.c": "520efd9b9c7226a1ec1f62d8b6278fd1e48dbc45ee75fdeff806d9c6da21f15d",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ilean": "caf69096512eaf36d8635cf0ba8c1967200cd43400d6cfd737b67d6d503c8f1b",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ir": "263aad370106335cc8c7c40cb9b6d512776303b99a924069fe61ddaebb57b12d",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.ir.sig": "78b851d85c421cb5242da00bb2623eafdcf3044b610a17a91cd1784d8f77e027",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean": "9813ba755af8b81327e6049bcaaa4730fade0d94504b635b56a68f72323c13d1",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean.private": "ab29818eba87be0745c2d7f3662d432a0bdd1e9d30e6fc19bfe44dfdcc0f318c",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/artifacts/Mathlib/MeasureTheory/Covering/Besicovitch.olean.server": "094473115c076adc295d3d6c9d291f7e82d2f077a1235a329d4e1b4808045755"
+      }
+    },
+    {
+      "path": "Mathlib/MeasureTheory/Covering/DensityTheorem.lean",
+      "candidate_ids": [
+        "census-b62868fdb6ac70dd5d4f",
+        "followup-density-center",
+        "followup-density-triangle"
+      ],
+      "original_source_sha256": "b8cd8a6df6f1e2d1c1c8323ea600a4119429f15f048ea16fce11d23809db4194",
+      "replacement_source_sha256": "a96c8502334c1feac208373849b371275975894b5d05c27dc1a8d6d28da54f0a",
+      "process": {
+        "seconds": 2.1464716249902267,
+        "returncode": 1,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/DensityTheorem"
+      },
+      "setup_sha256": "76bafe3fe153d2ccc2d6a0ca28140f26f07c432bfad34816df44981031a92956",
+      "style_diagnostics": [],
+      "status": "failed",
+      "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/DensityTheorem"
+    }
+  ],
+  "excluded": {
+    "census-b62868fdb6ac70dd5d4f": "combined_source_compile_failure: Mathlib/MeasureTheory/Covering/DensityTheorem.lean; source_sha256=b8cd8a6df6f1e2d1c1c8323ea600a4119429f15f048ea16fce11d23809db4194; replacement_sha256=a96c8502334c1feac208373849b371275975894b5d05c27dc1a8d6d28da54f0a; selected ids rejected as one file-level set: census-b62868fdb6ac70dd5d4f,followup-density-center,followup-density-triangle; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/DensityTheorem",
+    "followup-density-center": "combined_source_compile_failure: Mathlib/MeasureTheory/Covering/DensityTheorem.lean; source_sha256=b8cd8a6df6f1e2d1c1c8323ea600a4119429f15f048ea16fce11d23809db4194; replacement_sha256=a96c8502334c1feac208373849b371275975894b5d05c27dc1a8d6d28da54f0a; selected ids rejected as one file-level set: census-b62868fdb6ac70dd5d4f,followup-density-center,followup-density-triangle; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/DensityTheorem",
+    "followup-density-triangle": "combined_source_compile_failure: Mathlib/MeasureTheory/Covering/DensityTheorem.lean; source_sha256=b8cd8a6df6f1e2d1c1c8323ea600a4119429f15f048ea16fce11d23809db4194; replacement_sha256=a96c8502334c1feac208373849b371275975894b5d05c27dc1a8d6d28da54f0a; selected ids rejected as one file-level set: census-b62868fdb6ac70dd5d4f,followup-density-center,followup-density-triangle; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/logs/Mathlib/MeasureTheory/Covering/DensityTheorem"
+  },
+  "setups": {
+    "Mathlib/Analysis/Normed/Lp/SmoothApprox.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/sources/Mathlib/Analysis/Normed/Lp/SmoothApprox.lean",
+      "source_sha256": "43e8bb16d2f87fa749393a8fd07fafa5f4ee0f6751f89e22dad49e5fa0bfe952",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.Calculus.ContDiff.Defs"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.LinearAlgebra.FiniteDimensional.Defs"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Function.LpSpace.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Geometry.Manifold.SmoothApprox"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Function.ContinuousMapDense"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.Analysis.Normed.Lp.SmoothApprox.header.json",
+      "header_sha256": "c967f0ad0c605dd96db6a1b00695c885910aa83fd328dac069444ec4ad76c9f0",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.Analysis.Normed.Lp.SmoothApprox.raw-setup.json",
+      "raw_setup_sha256": "7a7487784c39ae489ec786c7ec2cebffe18b23565b792ecac5593faab8352a55",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.Analysis.Normed.Lp.SmoothApprox.setup.json",
+      "setup_sha256": "7dac35189ccb801461355456e79a99bd18b43f7cd19ed287c260c8230cd3c416",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/MeasureTheory/Covering/Besicovitch.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/sources/Mathlib/MeasureTheory/Covering/Besicovitch.lean",
+      "source_sha256": "cbaead9bdf8a20466657ad1385bf015f231af9e75f6d596b98bb071c452b8054",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Covering.Differentiation"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.Besicovitch.header.json",
+      "header_sha256": "4a49700117e1572b5d2885890fbe6406c5bad0e5d27a3455413d5926de1f25f3",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.Besicovitch.raw-setup.json",
+      "raw_setup_sha256": "1859abf0bfaa74142f2c72fe2fcf5a569aba75ef1cdb078a28533b593524bb14",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.Besicovitch.setup.json",
+      "setup_sha256": "36733153d1c70c4c21e6a5b44eea2233ccc92a11d560803dd1a06e19f8c8e538",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/MeasureTheory/Covering/DensityTheorem.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/sources/Mathlib/MeasureTheory/Covering/DensityTheorem.lean",
+      "source_sha256": "a96c8502334c1feac208373849b371275975894b5d05c27dc1a8d6d28da54f0a",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Covering.Differentiation"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Covering.Vitali"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.DensityTheorem.header.json",
+      "header_sha256": "6853e4f6d044bd91cd9d79ea44d8587fa5f9b0413d7e022c1fd10b675583e8ee",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.DensityTheorem.raw-setup.json",
+      "raw_setup_sha256": "80bae0dce42217f602c521b8ca3615b6a6b468fb9048d14f2d0edcde0ca4625f",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-measure-01/edited-setups/Mathlib.MeasureTheory.Covering.DensityTheorem.setup.json",
+      "setup_sha256": "c37aafdc876c1f20303546aa08acd0755c70b1203828245d3f898da7d77149df",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    }
+  }
+}

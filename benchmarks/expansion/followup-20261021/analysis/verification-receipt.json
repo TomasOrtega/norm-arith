@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "checked_exploratory_batch",
+  "scope": "Four complete copied pinned Mathlib files; no timing or frozen-release claim.",
+  "manifest_sha256": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971",
+  "patch_sha256": "3fcdb02cb8c6a42c93556b405fb64304fcd87a1abe14481c232b84896194c119",
+  "body_evidence_sha256": "15fd663bde34eb0d4c3eece9d1120f097902ec418e8e04307f2654675e5cb12d",
+  "report_sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b",
+  "warnings_as_errors": true,
+  "max_replacement_line_length": 88,
+  "fresh_artifacts": 28,
+  "accounting": {
+    "original_proof_lines": 16,
+    "replacement_proof_lines": 8,
+    "added_helper_lines": 0,
+    "added_import_lines": 4,
+    "net_proof_lines_saved": 8,
+    "net_lines_saved_including_imports": 4
+  },
+  "current_project_source_sha256": {
+    "NormArith.lean": "3e21896ccac8fb1d5c04e9a9903a2079a045ef3230bc784d23a02821b2a12c67",
+    "NormArith/Census.lean": "3759e281a3a6dd72a248dc79599ce3977b614389174a56d7c4f8f679cd7c1dc6",
+    "NormArith/Certificate.lean": "3d944608f71ee05fda46c2347488e72d37e2635d578f84ce412177a22b42c516",
+    "NormArith/Metric.lean": "4987a96a314ef53daa83868c5a772e133899efbb81b80e9d88792581629deb0f",
+    "NormArith/Search.lean": "10cc53acad6c6670000e78621ebff2a90613373228aad93663cb1b589ad1f358",
+    "NormArith/Tactic.lean": "53c79f56f2c5c66fc2a9af885e37e715f464eeb9557450d19a7274bd88d1de77",
+    "lean-toolchain": "d581a24b57a4ae9e0b2132ca8ac7cc3ac336a9fc2751fe6b29414e2d434d54c4",
+    "lakefile.toml": "5142d800556c20e3fe733eb5797f2d52e1c736019752c5b4bfc2f9d9fd0c1930",
+    "lake-manifest.json": "c7862fd0c1362ddb73b91d454d3b6d9405feb6024b4b50f5f4a3aa1bc0acfc82"
+  },
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "candidate_ids": [
+        "followup-second-main-separation"
+      ],
+      "original_source_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+      "replacement_source_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+      "process": {
+        "seconds": 1.9070372079731897,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem"
+      },
+      "setup_sha256": "7490d0327ec313949a2226112c7c2f2ca647af3d0c19136e6436c211c0c1353d",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.c": "f1560358e641878ae3206e0264f5f305ff1e25c5aa63df0bb3a6ae4e3d546bf3",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ilean": "c178656565ff1850eb058e66d6a8c864ae373fc43f72965e9bee2e8ca20dcc34",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir": "342419d744c6a70448c8efeb54b276f9d80e9875f29d033b3320f0f73b45ef12",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir.sig": "e9718532cc25fd0528a445722e6e358cbaa421f81bbc8c23356612fe5c5ef3af",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean": "a05ef01f2d37b092da776e649543db82f240a575b7e59add75801f7be3c2d278",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.private": "08f03cec54fbb17bcb65e2fc9484a6d1a47af17d2ff6775ab14ff3b35ca04864",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.server": "368b4aac4ad93b63de869d8ca23c9072ebc93836e1dd2b989bd4357989d956d0"
+      }
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "candidate_ids": [
+        "followup-amice-operator-norm"
+      ],
+      "original_source_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+      "replacement_source_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+      "process": {
+        "seconds": 2.19222800002899,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform"
+      },
+      "setup_sha256": "3b618c4fc001ebdd463aeca72e0fa8c1eb539f22d341f3845b619dde0b58fa90",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.c": "14b77f981e1aa1c156ec75313cd6deffd327e2aac27f092bf3bc67fa110b6786",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ilean": "5d5d325ded747e665218c83a13008f438f92dc911398bfca50db69b5a700de0b",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir": "c58b4bd6007a260f9fa41360b4e38c5ab5dd705f61a3bbede2647663a88f9b14",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir.sig": "2dbcce9866e4f34fd8168d964a4cad3670b1ff207dde2f16b7aa642c60e038ff",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean": "05ee55cd14ccfbc72420e8912b05bd809b7082d6ee8eba22fa2bdc616e9604b1",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.private": "71905b4b555a0c07c588dd60adfcb267949664d8460ac3be572a2a5afeb241f3",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.server": "530cf94565c436218a9fe6a54401b5ddaeee2370576659bc6f9e137e72f4fa4b"
+      }
+    },
+    {
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "candidate_ids": [
+        "followup-complex-mgf-realpart"
+      ],
+      "original_source_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+      "replacement_source_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+      "process": {
+        "seconds": 1.834817834023852,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/logs/Mathlib/Probability/Moments/ComplexMGF"
+      },
+      "setup_sha256": "30ef503f815da6a08f151adbf6bd2f039a2bc2791db7dfe4ed11bfaf1c277994",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.c": "56098d254fbf22b3bac48696c8c2a4ac8970a4cc8a0e6fbca1e04aa4771c3988",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ilean": "99d3ba7d48fc34385df311c100a52d7c36d098ca5899ff4b9bdaa8559f70560c",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ir": "ed4304db85ab1f4ad7aba7c1162ad476f426ff35cf6ffa4f3a3bb5d4caffd21e",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.ir.sig": "e3b806f5bbdb74555b80157d761355d2484e3df5afaf11f05e4d263227360778",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean": "08ab7d226fb4b221e6c1584535e52ca0ebe8cc9996f1993d67e6a1ab14d0c3ba",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean.private": "1d5e10d4170f67e71ed4853bba4faa9ce9a9b4af5e903a802e62468072435164",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Probability/Moments/ComplexMGF.olean.server": "f3d4858bab2c565da8006f9d5575cadf1ea330522446697c5f3adc170879f3b3"
+      }
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+      "candidate_ids": [
+        "followup-smoothing-dist"
+      ],
+      "original_source_sha256": "096cc593462d7578246c2e105790ec4593ffbc0630c7de06e9ca0912d69637ee",
+      "replacement_source_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+      "process": {
+        "seconds": 4.515107791987248,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm"
+      },
+      "setup_sha256": "4fced0257006efb064ed4ce3237caba67cd5418deae2c47251252fdc41594ae1",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.c": "81516939022d02091b65efe8f2b689f350f73590b85a378deb3efda531e4a566",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ilean": "75d5eccc5cbf82a6d9e5409f3cbf9962be5b777e453bc6295d31cd584f9dd358",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir": "782348812a0e22a05a1461ed2569628778a0f16a78753b9d84d82f0d4fa3d522",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir.sig": "a7617775dcd0e45e8c216e3786cc51c01db15d0b24f66064ede561546ba5465b",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean": "30ed0274929ac408c258d45da691bb5c62f2a66671d3799b9ccb549026c771c5",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.private": "699927035d261a8e3a5fd8985ac490c8b126cead5a066e96010803407d0a43ad",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.server": "fa34b8710c8c507f8303f4a8a9f0c884e7343c45313960d7fe1baa26be5a7893"
+      }
+    }
+  ]
+}

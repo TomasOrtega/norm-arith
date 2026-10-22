@@ -1,0 +1,97 @@
+[
+  {
+    "trial": "trial-01",
+    "report": "benchmarks/expansion/followup-20261021/analysis/trials/trial-01/report.json",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem"
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform"
+      },
+      {
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-01/logs/Mathlib/Probability/Moments/ComplexMGF"
+      }
+    ]
+  },
+  {
+    "trial": "trial-02",
+    "report": "benchmarks/expansion/followup-20261021/analysis/trials/trial-02/report.json",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem"
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "status": "verified",
+        "reason": null
+      },
+      {
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "status": "verified",
+        "reason": null
+      }
+    ]
+  },
+  {
+    "trial": "trial-03",
+    "report": "benchmarks/expansion/followup-20261021/analysis/trials/trial-03/report.json",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "status": "verified",
+        "reason": null
+      },
+      {
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "status": "verified",
+        "reason": null
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Ring/Units.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Normed/Ring/Units"
+      },
+      {
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "status": "blocked_dependency",
+        "reason": "an affected dependency failed source verification"
+      },
+      {
+        "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+        "status": "verified",
+        "reason": null
+      }
+    ]
+  },
+  {
+    "trial": "hensel-01",
+    "report": "benchmarks/expansion/followup-20261021/analysis/trials/hensel-01/report.json",
+    "files": [
+      {
+        "path": "Mathlib/NumberTheory/Padics/Hensel.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel"
+      }
+    ]
+  },
+  {
+    "trial": "hensel-02",
+    "report": "benchmarks/expansion/followup-20261021/analysis/trials/hensel-02/report.json",
+    "files": [
+      {
+        "path": "Mathlib/NumberTheory/Padics/Hensel.lean",
+        "status": "failed",
+        "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-02/logs/Mathlib/NumberTheory/Padics/Hensel"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/sources/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+    "-R",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/sources",
+    "--setup",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/resolved-setups/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.setup.json",
+    "-o",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.olean",
+    "-i",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.ilean",
+    "-c",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-04/artifacts/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.c",
+    "--json",
+    "-j",
+    "1",
+    "-DwarningAsError=true"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

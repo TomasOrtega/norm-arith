@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "followup-calculus-exploratory-trial",
+  "candidates": [
+    {
+      "id": "followup-calculus-schwartz-antilipschitz",
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "status": "replace",
+      "reason": "Normalize the existing antilipschitz distance bound in the norm calculation.",
+      "declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "parent_declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "start_line": 976,
+      "end_line": 978,
+      "original_sha256": "0fce061bc2c258b44578779b824a047cab75dc15ee865e93305565e4a5105f73",
+      "replacement": "  ‖x‖ ≤ K * ‖g x - g 0‖ := by norm_arith [h'g.le_mul_dist x 0]\n",
+      "proof_replacement": "‖x‖ ≤ K * ‖g x - g 0‖ := by norm_arith [h'g.le_mul_dist x 0]",
+      "source_start_byte": 39381,
+      "source_end_byte": 39491,
+      "observation_key": "term:39366:39368:SchwartzMap.compCLMOfAntilipschitz:3243953330",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl",
+      "origin_syntax_kind": "Lean.Parser.Term.syntheticHole",
+      "body_start_byte": 39301,
+      "body_end_byte": 39887,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-calculus-schwartz-max",
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "status": "replace",
+      "reason": "Retain scalar monotonicity and combine the norm triangle with the maximum bound.",
+      "declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "parent_declaration": "SchwartzMap.compCLMOfAntilipschitz",
+      "start_line": 979,
+      "end_line": 984,
+      "original_sha256": "805c550ee92fe679241d9ae9ab00b7e68e2fb9b3e69d79199f246408489237d6",
+      "replacement": "  _ ≤ K * (‖g x‖ + max 1 ‖g 0‖) := by\n    gcongr\n    norm_arith\n",
+      "proof_replacement": "_ ≤ K * (‖g x‖ + max 1 ‖g 0‖) := by\n    gcongr\n    norm_arith",
+      "source_start_byte": 39494,
+      "source_end_byte": 39656,
+      "observation_key": "term:39366:39368:SchwartzMap.compCLMOfAntilipschitz:3243953330",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Distribution.SchwartzSpace.Basic/attempt-01/events.jsonl",
+      "origin_syntax_kind": "Lean.Parser.Term.syntheticHole",
+      "body_start_byte": 39301,
+      "body_end_byte": 39887,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    }
+  ],
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+      "source_sha256": "7e090fe3e8df982e44dae25896442f4134123a8ee433512403320250557c557b",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "scope": "exploratory manual complete-file compilation; no timing claim",
+  "accounting": {
+    "candidate_count": 3,
+    "candidate_status_counts": {
+      "replace": 3
+    },
+    "proposed_replacements": 3,
+    "original_proof_lines": 6,
+    "replacement_proof_lines": 3,
+    "added_helper_lines": 0,
+    "added_import_lines": 1,
+    "candidates": [
+      {
+        "id": "followup-calculus-convolution-bounded",
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "replace",
+        "reason": "Instantiate the local distance estimate after checking ball membership.",
+        "declaration": "MeasureTheory.dist_convolution_le'",
+        "parent_declaration": "MeasureTheory.dist_convolution_le'",
+        "start_line": 781,
+        "end_line": 782,
+        "original_sha256": "9d37ab2b317a1be2a3d936228d99a15cca840303509d726413e170aff686dede",
+        "proof_replacement": "norm_arith [hg x (by norm_arith)]",
+        "source_start_byte": 37987,
+        "source_end_byte": 38102,
+        "observation_key": "term:37726:37728:MeasureTheory.dist_convolution_le':862755660",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+        "origin_syntax_kind": "Lean.Parser.Term.syntheticHole",
+        "body_start_byte": 37628,
+        "body_end_byte": 39151,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "followup-calculus-convolution-local",
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "replace",
+        "reason": "Combine the two local distances and check the domain by the triangle inequality.",
+        "declaration": "MeasureTheory.convolution_tendsto_right",
+        "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+        "start_line": 855,
+        "end_line": 856,
+        "original_sha256": "21a79537063e2331f388357291874dfda48fbf0807567fb8d74333f617f1e8c7",
+        "proof_replacement": "norm_arith [hgδ hpi (show dist x' x₀ < δ by norm_arith), hgi]",
+        "source_start_byte": 41984,
+        "source_end_byte": 42077,
+        "observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 41278,
+        "body_end_byte": 42250,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "followup-calculus-convolution-limit",
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "replace",
+        "reason": "Combine the convolution error bound and the local target distance.",
+        "declaration": "MeasureTheory.convolution_tendsto_right",
+        "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+        "start_line": 858,
+        "end_line": 859,
+        "original_sha256": "e2c7f274e5c5ac76fee348aea51c6726bd1210bdc9f512bc0c2a220669ab5eb0",
+        "proof_replacement": "norm_arith",
+        "source_start_byte": 42158,
+        "source_end_byte": 42250,
+        "observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+        "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 41278,
+        "body_end_byte": 42250,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 2,
+        "replacement_proof_lines": 1
+      }
+    ],
+    "net_proof_lines_saved": 3,
+    "net_lines_saved_including_imports": 2
+  },
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "candidate_ids": [
+        "followup-calculus-convolution-bounded",
+        "followup-calculus-convolution-limit",
+        "followup-calculus-convolution-local"
+      ],
+      "original_source_sha256": "49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220",
+      "replacement_source_sha256": "2afbc4910d32792eae4bd902a3a5d987564eaf77ccb30287e308948618206a9f",
+      "process": {
+        "seconds": 9.680665833002422,
+        "returncode": 1,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/logs/Mathlib/Analysis/Convolution"
+      },
+      "setup_sha256": "995fb373a755b4686ddb8156f63a86c2529edc81b38434d88cc7956cbeeaebfc",
+      "style_diagnostics": [],
+      "status": "failed",
+      "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/logs/Mathlib/Analysis/Convolution"
+    }
+  ],
+  "excluded": {
+    "followup-calculus-convolution-bounded": "combined_source_compile_failure: Mathlib/Analysis/Convolution.lean; source_sha256=49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220; replacement_sha256=2afbc4910d32792eae4bd902a3a5d987564eaf77ccb30287e308948618206a9f; selected ids rejected as one file-level set: followup-calculus-convolution-bounded,followup-calculus-convolution-limit,followup-calculus-convolution-local; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/logs/Mathlib/Analysis/Convolution",
+    "followup-calculus-convolution-limit": "combined_source_compile_failure: Mathlib/Analysis/Convolution.lean; source_sha256=49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220; replacement_sha256=2afbc4910d32792eae4bd902a3a5d987564eaf77ccb30287e308948618206a9f; selected ids rejected as one file-level set: followup-calculus-convolution-bounded,followup-calculus-convolution-limit,followup-calculus-convolution-local; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/logs/Mathlib/Analysis/Convolution",
+    "followup-calculus-convolution-local": "combined_source_compile_failure: Mathlib/Analysis/Convolution.lean; source_sha256=49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220; replacement_sha256=2afbc4910d32792eae4bd902a3a5d987564eaf77ccb30287e308948618206a9f; selected ids rejected as one file-level set: followup-calculus-convolution-bounded,followup-calculus-convolution-limit,followup-calculus-convolution-local; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/logs/Mathlib/Analysis/Convolution"
+  },
+  "setups": {
+    "Mathlib/Analysis/Convolution.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/sources/Mathlib/Analysis/Convolution.lean",
+      "source_sha256": "2afbc4910d32792eae4bd902a3a5d987564eaf77ccb30287e308948618206a9f",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Function.Holder"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Group.Integral"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Integral.Prod"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/edited-setups/Mathlib.Analysis.Convolution.header.json",
+      "header_sha256": "18ae34b0a50ce25008ccec09fd06c0cbb598a3e9438e7d6bacadc6b59592c0b9",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/edited-setups/Mathlib.Analysis.Convolution.raw-setup.json",
+      "raw_setup_sha256": "5fbd7a395b3f00a44e9d8524bcb7b25a1d1af7a64cfa3faa937537c6ceedab75",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-calculus-convolution-03/edited-setups/Mathlib.Analysis.Convolution.setup.json",
+      "setup_sha256": "7e4340a4b51c37c194bb3af1c3d6c0c773ec1f48b84c1c23f4b9f4f1f3e4f118",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    }
+  }
+}

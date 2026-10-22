@@ -1,0 +1,986 @@
+{
+  "schema_version": 1,
+  "status": "verified_exploratory_source_patch",
+  "scope": "Bounded manual follow-up; complete copied-file compilation; no timing claim; union requires fresh combined verification.",
+  "manifest_sha256": "bbf3ef448c3aa6aa525fad7d05f4cc459565909cf70bcb5e1530858471634faf",
+  "patch_sha256": "228ac3011b26aa98c1f4b6ab96a1e00bbc30336342b7a5e4fbd9c3f238cf54c4",
+  "independent_lexer_sha256": "7b6c94c03283203735a157930892ef64a06a162b398519102d6b78c172b26863",
+  "replacements": 9,
+  "affected_files": 4,
+  "original_proof_code_lines": 30,
+  "replacement_proof_code_lines": 16,
+  "added_import_code_lines": 4,
+  "added_helper_code_lines": 0,
+  "net_code_lines_saved": 10,
+  "files": [
+    {
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "original_sha256": "a8f87ce5dbfb20aef5b43910abaaad23c9f40764d8b36139c587a7a5b4cb8d06",
+      "patched_sha256": "772eda0ab8e5b2e7cd5d37b4fab87e967b1e111c5d8be340108f0cf99b3697a7",
+      "verified_trial": ".lake/followup-metric-02",
+      "before_code_lines": 407,
+      "after_code_lines": 402,
+      "added_import_lines": 1,
+      "fresh_artifact_count": 7
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "original_sha256": "22bde8f2f8bcad18724d52ad5f6718ccc57f691427764a826a1f3576ace5a08e",
+      "patched_sha256": "693b417e0654b13deeaf848c864fda017f86e02bad40d2252b77a094c455fa6e",
+      "verified_trial": ".lake/followup-metric-03",
+      "before_code_lines": 65,
+      "after_code_lines": 63,
+      "added_import_lines": 1,
+      "fresh_artifact_count": 7
+    },
+    {
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "original_sha256": "29f30a0831f99315b9c437dac16b706ddebe37536cc88b0be4b67d9d8d853f58",
+      "patched_sha256": "70e2b26d0b989d816320c0998cb3187e94be3d61bae74a65fdafbc9934fe17dc",
+      "verified_trial": ".lake/followup-metric-02",
+      "before_code_lines": 371,
+      "after_code_lines": 370,
+      "added_import_lines": 1,
+      "fresh_artifact_count": 7
+    },
+    {
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "original_sha256": "1a822919ca604e6a50d27d87efe291f6c63632b19f92b5bfb101c94c1c777568",
+      "patched_sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+      "verified_trial": ".lake/followup-metric-02",
+      "before_code_lines": 350,
+      "after_code_lines": 348,
+      "added_import_lines": 1,
+      "fresh_artifact_count": 7
+    }
+  ],
+  "proof_spans": [
+    {
+      "id": "metric-followup-sphere-ext-centers",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "start_line": 477,
+      "end_line": 479,
+      "original_code_lines": 3,
+      "replacement_code_lines": 2
+    },
+    {
+      "id": "metric-followup-sphere-int-centers",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "start_line": 483,
+      "end_line": 485,
+      "original_code_lines": 3,
+      "replacement_code_lines": 2
+    },
+    {
+      "id": "metric-followup-sphere-radius-positive",
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "start_line": 523,
+      "end_line": 530,
+      "original_code_lines": 8,
+      "replacement_code_lines": 4
+    },
+    {
+      "id": "metric-followup-causeq-limit",
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "start_line": 40,
+      "end_line": 43,
+      "original_code_lines": 4,
+      "replacement_code_lines": 2
+    },
+    {
+      "id": "metric-followup-causeq-cauchy",
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "start_line": 81,
+      "end_line": 82,
+      "original_code_lines": 2,
+      "replacement_code_lines": 1
+    },
+    {
+      "id": "metric-followup-hausdorff-cover",
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "start_line": 567,
+      "end_line": 569,
+      "original_code_lines": 3,
+      "replacement_code_lines": 2
+    },
+    {
+      "id": "metric-followup-hausdorff-lipschitz",
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "start_line": 571,
+      "end_line": 572,
+      "original_code_lines": 2,
+      "replacement_code_lines": 1
+    },
+    {
+      "id": "metric-followup-urysohn-first",
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "start_line": 293,
+      "end_line": 294,
+      "original_code_lines": 2,
+      "replacement_code_lines": 1
+    },
+    {
+      "id": "metric-followup-urysohn-second",
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "start_line": 306,
+      "end_line": 308,
+      "original_code_lines": 3,
+      "replacement_code_lines": 1
+    }
+  ],
+  "trials": [
+    {
+      "trial": 1,
+      "report_sha256": "d293e18eaa2492285db7dca3d8fe0bd63d971be4b382159ecef9e6e4400936b6",
+      "outcomes": {
+        "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean": "verified",
+        "Mathlib/Topology/MetricSpace/CauSeqFilter.lean": "failed",
+        "Mathlib/Topology/MetricSpace/HausdorffDimension.lean": "failed",
+        "Mathlib/Topology/UrysohnsLemma.lean": "verified"
+      }
+    },
+    {
+      "trial": 2,
+      "report_sha256": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+      "outcomes": {
+        "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean": "verified",
+        "Mathlib/Topology/MetricSpace/CauSeqFilter.lean": "failed",
+        "Mathlib/Topology/MetricSpace/HausdorffDimension.lean": "verified",
+        "Mathlib/Topology/UrysohnsLemma.lean": "verified"
+      }
+    },
+    {
+      "trial": 3,
+      "report_sha256": "5262e9a7653b342aba8579ab7305d64c2250a40ec48f40be423c5f61e4dcf335",
+      "outcomes": {
+        "Mathlib/Topology/MetricSpace/CauSeqFilter.lean": "verified"
+      }
+    }
+  ],
+  "compiler_outputs_rehashed": [
+    {
+      "trial": 1,
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.c",
+          "sha256": "83eb1bca69958ad7194366b51fe3e1574743bebabfba24f9f20b0cfbf71f3b19",
+          "bytes": 9475
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ilean",
+          "sha256": "15faadaf24bb6c2eddddb580308ec69ac2d97759099e77e3a27e93f7c582877c",
+          "bytes": 92020
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir",
+          "sha256": "51c9db0e5c5e945c856373266c6eab7fc275bec59676a8a94229f12da94d31ac",
+          "bytes": 5704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir.sig",
+          "sha256": "ad57d97f7397a192cc2faa887d98a41303e90bab58ca3193259daad029b23edf",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean",
+          "sha256": "718ac63629114f1fdab2854f5639a61822d0092e0cc45c07fe9ebf9c441aaded",
+          "bytes": 206704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.private",
+          "sha256": "ce8be9338d17d9eddbcf6f5d3d4c0a4a768544fa130ad4c9eeb524ec43b3d109",
+          "bytes": 713480
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.server",
+          "sha256": "3f569e21ec57d84db94aec78993afa223dafefa688880fc44ad78bd9563706b3",
+          "bytes": 21512
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "status": "failed",
+      "artifacts": []
+    },
+    {
+      "trial": 1,
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "status": "failed",
+      "artifacts": []
+    },
+    {
+      "trial": 1,
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.c",
+          "sha256": "797723808477fd100e5b65859e4ed7d4b954652a4724e555b97032929380e4b6",
+          "bytes": 6470
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.ilean",
+          "sha256": "8840f253273d17f5b03405353c4959152d0fca8e264a1b970735a0031c3ab3ef",
+          "bytes": 63687
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.ir",
+          "sha256": "ca8c5f7ae3ee8330ea4c563b50cefbdd7cb4884482487688333ef2a9eac9b62c",
+          "bytes": 3000
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.ir.sig",
+          "sha256": "6d5b9766d96c066b9b1148451dc4a92d86cfbfc62158d0f0f251e1777853e4ae",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.olean",
+          "sha256": "d506ee07a60470f5842b65af5150a3c1770e41173bd9d509903f00585a90201c",
+          "bytes": 171584
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.olean.private",
+          "sha256": "3724e25a2dbb23c0a8aa2d52bbbb4df4b9ed7290688026708378a582d9c5a2a5",
+          "bytes": 650240
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-01/artifacts/Mathlib/Topology/UrysohnsLemma.olean.server",
+          "sha256": "dfc2771d0c128d5efc140c2432f7022fae97808c093e658c991752af4c28d77b",
+          "bytes": 18760
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "path": "Mathlib/Geometry/Euclidean/Sphere/Tangent.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.c",
+          "sha256": "83eb1bca69958ad7194366b51fe3e1574743bebabfba24f9f20b0cfbf71f3b19",
+          "bytes": 9475
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ilean",
+          "sha256": "5f7b4b9de1faa71da7d10331e097c4cd1d8a0a4297da320636b4e5a13587b4ac",
+          "bytes": 92226
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir",
+          "sha256": "51c9db0e5c5e945c856373266c6eab7fc275bec59676a8a94229f12da94d31ac",
+          "bytes": 5704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.ir.sig",
+          "sha256": "ad57d97f7397a192cc2faa887d98a41303e90bab58ca3193259daad029b23edf",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean",
+          "sha256": "718ac63629114f1fdab2854f5639a61822d0092e0cc45c07fe9ebf9c441aaded",
+          "bytes": 206704
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.private",
+          "sha256": "3ea87443425930ef62e9c42a16cc66e8b1bfc6b3f35f65d0d4aa626a397c1435",
+          "bytes": 749016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Geometry/Euclidean/Sphere/Tangent.olean.server",
+          "sha256": "afd0528ac886c8fce4f031b676846ba725af41d7c735f0d2a62d504bab56c222",
+          "bytes": 21512
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "status": "failed",
+      "artifacts": []
+    },
+    {
+      "trial": 2,
+      "path": "Mathlib/Topology/MetricSpace/HausdorffDimension.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.c",
+          "sha256": "a002cbe16321be9ed44ac4983e716031cc5c65ad40f5fe6ddcddd9cc1878f2ef",
+          "bytes": 4467
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ilean",
+          "sha256": "8d6f53e88abd6e73d67ec982e3a4668f7ec8e00e606b5378e18d4e0efa80cf0e",
+          "bytes": 80583
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ir",
+          "sha256": "1480217715a7e4fb40c5d256e18be28143d25d24b19365ac7ec1e397f1309d4b",
+          "bytes": 2216
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.ir.sig",
+          "sha256": "8c8d6ff659ae4599d83100c92bfb0314f5d996fc8c9bd19d294f7f445caee904",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean",
+          "sha256": "8024b7ebb946bcb7e230eb25f0b36068620eca27a372cb089cd9cadec34ce579",
+          "bytes": 180984
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean.private",
+          "sha256": "e4625462c9c1541ee06be78bec9978ce5799a7e71448ae4f179677e5751c081e",
+          "bytes": 764520
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/MetricSpace/HausdorffDimension.olean.server",
+          "sha256": "4a510404c8570a211c32e88ee73f432c23369ff66fc9e1dd04071b2f4388706f",
+          "bytes": 29448
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "path": "Mathlib/Topology/UrysohnsLemma.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.c",
+          "sha256": "797723808477fd100e5b65859e4ed7d4b954652a4724e555b97032929380e4b6",
+          "bytes": 6470
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ilean",
+          "sha256": "8840f253273d17f5b03405353c4959152d0fca8e264a1b970735a0031c3ab3ef",
+          "bytes": 63687
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ir",
+          "sha256": "ca8c5f7ae3ee8330ea4c563b50cefbdd7cb4884482487688333ef2a9eac9b62c",
+          "bytes": 3000
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.ir.sig",
+          "sha256": "6d5b9766d96c066b9b1148451dc4a92d86cfbfc62158d0f0f251e1777853e4ae",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean",
+          "sha256": "d506ee07a60470f5842b65af5150a3c1770e41173bd9d509903f00585a90201c",
+          "bytes": 171584
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean.private",
+          "sha256": "3724e25a2dbb23c0a8aa2d52bbbb4df4b9ed7290688026708378a582d9c5a2a5",
+          "bytes": 650240
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-02/artifacts/Mathlib/Topology/UrysohnsLemma.olean.server",
+          "sha256": "dfc2771d0c128d5efc140c2432f7022fae97808c093e658c991752af4c28d77b",
+          "bytes": 18760
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "path": "Mathlib/Topology/MetricSpace/CauSeqFilter.lean",
+      "status": "verified",
+      "artifacts": [
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.c",
+          "sha256": "526469d1d0b4fe13d93e05843910e3ce60529e73b914f6fc72da7bc0dd7adc66",
+          "bytes": 3875
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ilean",
+          "sha256": "49948af307c63ae829f85abd0a63ec4480e8b974b762e0c434e0ad29f01f7719",
+          "bytes": 7846
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ir",
+          "sha256": "bb4fcb45eb3a6778ca35192e8f68f043b58991ef036fb6ca7f6c0180e3f376b8",
+          "bytes": 2016
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.ir.sig",
+          "sha256": "4c6105dcfd09471c0530c20be120c38a5ebcfa2d6e6f4e5cca4ae0f8bf3d1a41",
+          "bytes": 176
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean",
+          "sha256": "cbc51841f43af5fb73fd99994c27c318b68a3f32548d477b206801c52659ddf9",
+          "bytes": 20104
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean.private",
+          "sha256": "8af368e13c2c58fda51c35372c01eb1b2d7e6ad57c4177fd35997d06c68b1b74",
+          "bytes": 206544
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-metric-03/artifacts/Mathlib/Topology/MetricSpace/CauSeqFilter.olean.server",
+          "sha256": "f91e86aad725481fa1418bdeb0137fb2d534f64a8e7fb330596ea62eabb1d472",
+          "bytes": 2800
+        }
+      ]
+    }
+  ],
+  "retained_files": {
+    "trial-evidence/trial-01/driver.log": {
+      "sha256": "4eeddfd06efcb02c6c4b09efbd5ee0732d62f372d1ede17dd550244459625cee",
+      "bytes": 298
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.header.json": {
+      "sha256": "bb9c36e38c9026882ea3cb283acce2aba134973a17bc5b91052eaeda7c91c032",
+      "bytes": 530
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.raw-setup.json": {
+      "sha256": "9666ac84156792bcec6259407eebf41b2a93d0a980057421b4cd964a3fbf503d",
+      "bytes": 1333415
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.setup.json": {
+      "sha256": "b13ba3ca05d6ec2f4d38addc5ab992fce6afc9bff4f55e4f02f6951388493db2",
+      "bytes": 1514368
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.header.json": {
+      "sha256": "13ac8a9a4f172f47370bb80d2b7be6fb163b01426665eca48d56ac2eae292b06",
+      "bytes": 665
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.raw-setup.json": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.setup.json": {
+      "sha256": "43796f465e23b4f465877a67983b18d7765b53f014ea1b53dd33697b55283d10",
+      "bytes": 1060701
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.header.json": {
+      "sha256": "22ce997dfbe6e9ad8812cdb64367eb88a90c63859b9ebd72fe037cc4ad7c9ac3",
+      "bytes": 815
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.raw-setup.json": {
+      "sha256": "d59443d236d4873419e489b11aa0342d156b8ddbdb6a8b9dd3fc89aa2efe52f7",
+      "bytes": 1461059
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.setup.json": {
+      "sha256": "6a563737b26b08c5cd890e56e08f4de8612c583f4e0fdf7d799fea740c15ba45",
+      "bytes": 1658287
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.UrysohnsLemma.header.json": {
+      "sha256": "a89b5831bf7ca164f3d16a87e8a741042ac9b57b9bdce2dfee071186470b68d3",
+      "bytes": 1397
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.UrysohnsLemma.raw-setup.json": {
+      "sha256": "e775b92c5ae6decbca0de2a658cbc41204fa9679d55c738b6d40158b1c7b24bf",
+      "bytes": 972557
+    },
+    "trial-evidence/trial-01/edited-setups/Mathlib.Topology.UrysohnsLemma.setup.json": {
+      "sha256": "945f263423fa57372b7bc7e6a0bfa2728f3b0cbd8a631c5697d6224201a85aed",
+      "bytes": 1106410
+    },
+    "trial-evidence/trial-01/input-manifest.json": {
+      "sha256": "f55a66fb89c2158c9c7b0735ec8e123c7199a3623d42e1a1af7b9c99b6716d61",
+      "bytes": 9593
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/command.json": {
+      "sha256": "377c0845369db65a246c73f7409f4d2fbd638d5d796f8742a39396ff6aace9d6",
+      "bytes": 943
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/process.json": {
+      "sha256": "6d6e5cd0813cab8763a7b9e584add61641195b974fb3cef5913dd359b970f608",
+      "bytes": 205
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/command.json": {
+      "sha256": "db8f47ab01b293f4d4e5a35de9229dc94be8f69eac7c169059f5b7b06707b774",
+      "bytes": 943
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/process.json": {
+      "sha256": "e779f2ab56b803b25867d5195aaf3866abb1ff70972d6e1e0408e691de2dd81a",
+      "bytes": 207
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stdout.log": {
+      "sha256": "23a9274c6cb8dd2e0a3f4f10c1e3ea775ee8855fc164947e0853d903084f04ba",
+      "bytes": 383
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/command.json": {
+      "sha256": "03e759a599bf2446a21d091debb32d8c1214fa48390ba451fb81d891a65c18ad",
+      "bytes": 973
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/process.json": {
+      "sha256": "4cb42405719567b9d0c6d2dce5209857b3d567f2d9edb4c734990c754f1b56a0",
+      "bytes": 212
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/stdout.log": {
+      "sha256": "030bb8ddcba469ea4e77fc0441a61a99757a7c379487ba5a854ae0fe53907f38",
+      "bytes": 866
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/UrysohnsLemma/command.json": {
+      "sha256": "252e7663c8cd338b2f2e54737f800c9ce5d260766990f55cdf9e6c46acec8632",
+      "bytes": 888
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/UrysohnsLemma/process.json": {
+      "sha256": "85c44d01a887bcea7efbe1fb0393472f791874c808292de19b56b0ca536ab52f",
+      "bytes": 195
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/UrysohnsLemma/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/logs/Mathlib/Topology/UrysohnsLemma/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/report.json": {
+      "sha256": "d293e18eaa2492285db7dca3d8fe0bd63d971be4b382159ecef9e6e4400936b6",
+      "bytes": 32772
+    },
+    "trial-evidence/trial-01/resolved-setups/Mathlib/Geometry/Euclidean/Sphere/Tangent.setup.json": {
+      "sha256": "dec0931171d9c985ae1d758de369af31aa6ba3802a53e6729fe00e7ed4006b70",
+      "bytes": 1514387
+    },
+    "trial-evidence/trial-01/resolved-setups/Mathlib/Topology/MetricSpace/CauSeqFilter.setup.json": {
+      "sha256": "323d37da3f0ba5fd40b68fc96c0dbb06ddf92644dc279c8cfe879d45a871f5fc",
+      "bytes": 1060720
+    },
+    "trial-evidence/trial-01/resolved-setups/Mathlib/Topology/MetricSpace/HausdorffDimension.setup.json": {
+      "sha256": "3fd71be77bebf4c45284ea0f3da510df9dbff2638a52d57837da46a36c1efa0f",
+      "bytes": 1658306
+    },
+    "trial-evidence/trial-01/resolved-setups/Mathlib/Topology/UrysohnsLemma.setup.json": {
+      "sha256": "ce9ae364869221fd9df9fd09936d0c160d45a3ec6e90ed4602be44d5f4b5fba0",
+      "bytes": 1106429
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/command.json": {
+      "sha256": "3297e370386ace8404374c3709b035b6762ffcf5ae0e45874c3fde86e3b4777f",
+      "bytes": 665
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/process.json": {
+      "sha256": "ebdbc023edba00ec4651d66acf15b2d5ba47b56a8bfd74d48888d804c87a202d",
+      "bytes": 219
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/stdout.log": {
+      "sha256": "9666ac84156792bcec6259407eebf41b2a93d0a980057421b4cd964a3fbf503d",
+      "bytes": 1333415
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/command.json": {
+      "sha256": "7d01de51edce919a63cb80a2e583ed81e70377b0e1a57adc1d1908fac9dc2a14",
+      "bytes": 768
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/process.json": {
+      "sha256": "b94f77ffc57a312997a3798a8c855a5abc66ba11245cf364182d3f22315766e4",
+      "bytes": 219
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stdout.log": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/command.json": {
+      "sha256": "089ae13fd2e792d6c2c99ad1f1a2034ca9ec112d017dff052df077781f89acf8",
+      "bytes": 892
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/process.json": {
+      "sha256": "8317f8acb850c24f3a04acf504e2694a79854b6b21d56531b65dad42d52009fc",
+      "bytes": 225
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/stdout.log": {
+      "sha256": "d59443d236d4873419e489b11aa0342d156b8ddbdb6a8b9dd3fc89aa2efe52f7",
+      "bytes": 1461059
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.UrysohnsLemma/command.json": {
+      "sha256": "dcdf7e648310f7980c884f5acec81490fe17dd96bb485ffe9a053335b1540be3",
+      "bytes": 1329
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.UrysohnsLemma/process.json": {
+      "sha256": "32f0f2d8415adc646922b254f629c3ad78a12e33c52db83bbef958a6ec1dfcda",
+      "bytes": 208
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.UrysohnsLemma/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/setup/next-edited-Mathlib.Topology.UrysohnsLemma/stdout.log": {
+      "sha256": "e775b92c5ae6decbca0de2a658cbc41204fa9679d55c738b6d40158b1c7b24bf",
+      "bytes": 972557
+    },
+    "trial-evidence/trial-01/setup/next-headers-000000/command.json": {
+      "sha256": "959dc52e60d7684c45140c587b624bc0b33eb03b9d7e789b2ea2497330ca389f",
+      "bytes": 639
+    },
+    "trial-evidence/trial-01/setup/next-headers-000000/process.json": {
+      "sha256": "e4ac94d6059e1a3cf05f5549f892292c4ef7f934ffad00ff89e40039933190a5",
+      "bytes": 186
+    },
+    "trial-evidence/trial-01/setup/next-headers-000000/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-01/setup/next-headers-000000/stdout.log": {
+      "sha256": "fccbb6bee56ededa3837883b9d7c4dbc933b722ad6c092e9c67a2b8dc4e5f4cb",
+      "bytes": 2415
+    },
+    "trial-evidence/trial-01/sources/Mathlib/Geometry/Euclidean/Sphere/Tangent.lean": {
+      "sha256": "6c0f5365308a1f96b2cbd3cd6945043943ba75c3d2a6f880bfaba9914afcc8c5",
+      "bytes": 24521
+    },
+    "trial-evidence/trial-01/sources/Mathlib/Topology/MetricSpace/CauSeqFilter.lean": {
+      "sha256": "8544dce94d5919c9a24c8af5aee90d6c6f44a12409c36a495794b63c99ed39d8",
+      "bytes": 3607
+    },
+    "trial-evidence/trial-01/sources/Mathlib/Topology/MetricSpace/HausdorffDimension.lean": {
+      "sha256": "13ef4686a03c583349b27ad5b5e695d336c200fb48461e87b2f8cb554a5f274d",
+      "bytes": 29581
+    },
+    "trial-evidence/trial-01/sources/Mathlib/Topology/UrysohnsLemma.lean": {
+      "sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+      "bytes": 25875
+    },
+    "trial-evidence/trial-02/driver.log": {
+      "sha256": "3c3c28b7cf3e2dda1bd3a112c17a88fbaa55edb6d0efc30c6bf0615946bdc4f8",
+      "bytes": 300
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.header.json": {
+      "sha256": "bb9c36e38c9026882ea3cb283acce2aba134973a17bc5b91052eaeda7c91c032",
+      "bytes": 530
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.raw-setup.json": {
+      "sha256": "9666ac84156792bcec6259407eebf41b2a93d0a980057421b4cd964a3fbf503d",
+      "bytes": 1333415
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Geometry.Euclidean.Sphere.Tangent.setup.json": {
+      "sha256": "b13ba3ca05d6ec2f4d38addc5ab992fce6afc9bff4f55e4f02f6951388493db2",
+      "bytes": 1514368
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.header.json": {
+      "sha256": "13ac8a9a4f172f47370bb80d2b7be6fb163b01426665eca48d56ac2eae292b06",
+      "bytes": 665
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.raw-setup.json": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.setup.json": {
+      "sha256": "43796f465e23b4f465877a67983b18d7765b53f014ea1b53dd33697b55283d10",
+      "bytes": 1060701
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.header.json": {
+      "sha256": "22ce997dfbe6e9ad8812cdb64367eb88a90c63859b9ebd72fe037cc4ad7c9ac3",
+      "bytes": 815
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.raw-setup.json": {
+      "sha256": "d59443d236d4873419e489b11aa0342d156b8ddbdb6a8b9dd3fc89aa2efe52f7",
+      "bytes": 1461059
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.MetricSpace.HausdorffDimension.setup.json": {
+      "sha256": "6a563737b26b08c5cd890e56e08f4de8612c583f4e0fdf7d799fea740c15ba45",
+      "bytes": 1658287
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.UrysohnsLemma.header.json": {
+      "sha256": "a89b5831bf7ca164f3d16a87e8a741042ac9b57b9bdce2dfee071186470b68d3",
+      "bytes": 1397
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.UrysohnsLemma.raw-setup.json": {
+      "sha256": "e775b92c5ae6decbca0de2a658cbc41204fa9679d55c738b6d40158b1c7b24bf",
+      "bytes": 972557
+    },
+    "trial-evidence/trial-02/edited-setups/Mathlib.Topology.UrysohnsLemma.setup.json": {
+      "sha256": "945f263423fa57372b7bc7e6a0bfa2728f3b0cbd8a631c5697d6224201a85aed",
+      "bytes": 1106410
+    },
+    "trial-evidence/trial-02/input-manifest.json": {
+      "sha256": "e24e4c6b00611842fce3249efcc7386ca7d3878b79ba064c07f7f21b8bc3c311",
+      "bytes": 12398
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/command.json": {
+      "sha256": "bf34dab25cafaacb817640b9b00c2a4f82dcecf124fd14c59984275f00025e25",
+      "bytes": 943
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/process.json": {
+      "sha256": "40ecb37c7729add21e557eb359fd18ac14ffa567c1c211356826979799c9a1b5",
+      "bytes": 206
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Geometry/Euclidean/Sphere/Tangent/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/command.json": {
+      "sha256": "53abe5d52642e546f3e8dc28fca7affaecedef64db960e1e3ec3c5706ca2ada5",
+      "bytes": 943
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/process.json": {
+      "sha256": "b3139e68d21773a33e8bfdc9d236606b3801000e54f154fdd7d309974be20bd6",
+      "bytes": 207
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stdout.log": {
+      "sha256": "f7eced430d2d8bd24a3f081dc6ee411ffc50a422a2b4b15b6ce6b88766c2043d",
+      "bytes": 418
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/command.json": {
+      "sha256": "b0e8f11a5208fa9ff2f8b7773c12d7621b36fe88d6179584ac26b74af9dbbbbd",
+      "bytes": 973
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/process.json": {
+      "sha256": "df868d52e75370dbf7611546ddb03996bb59c063e0a70dcf6fcbdb4affd84e0c",
+      "bytes": 213
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/MetricSpace/HausdorffDimension/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/UrysohnsLemma/command.json": {
+      "sha256": "b5f0d13055ddb4a56ede894335cb9e3f6c893f0b11b1822c6017446af65f1609",
+      "bytes": 888
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/UrysohnsLemma/process.json": {
+      "sha256": "a3ff0969891489471c8c43bcdb4199338e62d7b0079bd5b7bb6b78afad7d5bce",
+      "bytes": 195
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/UrysohnsLemma/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/logs/Mathlib/Topology/UrysohnsLemma/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/report.json": {
+      "sha256": "697ee1852d09f1bc7957558742f728500c92a5c2633de4714127de38fd34df8c",
+      "bytes": 35765
+    },
+    "trial-evidence/trial-02/resolved-setups/Mathlib/Geometry/Euclidean/Sphere/Tangent.setup.json": {
+      "sha256": "dec0931171d9c985ae1d758de369af31aa6ba3802a53e6729fe00e7ed4006b70",
+      "bytes": 1514387
+    },
+    "trial-evidence/trial-02/resolved-setups/Mathlib/Topology/MetricSpace/CauSeqFilter.setup.json": {
+      "sha256": "323d37da3f0ba5fd40b68fc96c0dbb06ddf92644dc279c8cfe879d45a871f5fc",
+      "bytes": 1060720
+    },
+    "trial-evidence/trial-02/resolved-setups/Mathlib/Topology/MetricSpace/HausdorffDimension.setup.json": {
+      "sha256": "3fd71be77bebf4c45284ea0f3da510df9dbff2638a52d57837da46a36c1efa0f",
+      "bytes": 1658306
+    },
+    "trial-evidence/trial-02/resolved-setups/Mathlib/Topology/UrysohnsLemma.setup.json": {
+      "sha256": "ce9ae364869221fd9df9fd09936d0c160d45a3ec6e90ed4602be44d5f4b5fba0",
+      "bytes": 1106429
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/command.json": {
+      "sha256": "3297e370386ace8404374c3709b035b6762ffcf5ae0e45874c3fde86e3b4777f",
+      "bytes": 665
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/process.json": {
+      "sha256": "c8d2d88ff24346a71a8372c87e817762f42a8a9aac61cdf056978230cbae7b26",
+      "bytes": 219
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Geometry.Euclidean.Sphere.Tangent/stdout.log": {
+      "sha256": "9666ac84156792bcec6259407eebf41b2a93d0a980057421b4cd964a3fbf503d",
+      "bytes": 1333415
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/command.json": {
+      "sha256": "7d01de51edce919a63cb80a2e583ed81e70377b0e1a57adc1d1908fac9dc2a14",
+      "bytes": 768
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/process.json": {
+      "sha256": "b2aade0d992432da7f889c3a7c7fda9f7435de3cc3429f96cac07b84b637a6cb",
+      "bytes": 219
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stdout.log": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/command.json": {
+      "sha256": "089ae13fd2e792d6c2c99ad1f1a2034ca9ec112d017dff052df077781f89acf8",
+      "bytes": 892
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/process.json": {
+      "sha256": "21ba53cc9f54c7e797e5a0572dd26199d2ccaecc0b99df586c49d0c03db0c448",
+      "bytes": 225
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.MetricSpace.HausdorffDimension/stdout.log": {
+      "sha256": "d59443d236d4873419e489b11aa0342d156b8ddbdb6a8b9dd3fc89aa2efe52f7",
+      "bytes": 1461059
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.UrysohnsLemma/command.json": {
+      "sha256": "dcdf7e648310f7980c884f5acec81490fe17dd96bb485ffe9a053335b1540be3",
+      "bytes": 1329
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.UrysohnsLemma/process.json": {
+      "sha256": "f1d6a7d3d471f335b82f67eff3b39d1f41c714cdfd2648a4d8c8411515ec3b8c",
+      "bytes": 209
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.UrysohnsLemma/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/setup/next-edited-Mathlib.Topology.UrysohnsLemma/stdout.log": {
+      "sha256": "e775b92c5ae6decbca0de2a658cbc41204fa9679d55c738b6d40158b1c7b24bf",
+      "bytes": 972557
+    },
+    "trial-evidence/trial-02/setup/next-headers-000000/command.json": {
+      "sha256": "be877680f3668c3a65cd6bb412299c8ba9adbe536cf8910971af2b1e32b54002",
+      "bytes": 639
+    },
+    "trial-evidence/trial-02/setup/next-headers-000000/process.json": {
+      "sha256": "3a65907d39852f4e73030ad0d5351bc33a1c2c1660263f2145f20a8547430a2d",
+      "bytes": 187
+    },
+    "trial-evidence/trial-02/setup/next-headers-000000/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-02/setup/next-headers-000000/stdout.log": {
+      "sha256": "fccbb6bee56ededa3837883b9d7c4dbc933b722ad6c092e9c67a2b8dc4e5f4cb",
+      "bytes": 2415
+    },
+    "trial-evidence/trial-02/sources/Mathlib/Geometry/Euclidean/Sphere/Tangent.lean": {
+      "sha256": "772eda0ab8e5b2e7cd5d37b4fab87e967b1e111c5d8be340108f0cf99b3697a7",
+      "bytes": 24506
+    },
+    "trial-evidence/trial-02/sources/Mathlib/Topology/MetricSpace/CauSeqFilter.lean": {
+      "sha256": "06ceb8a4c8b4a00fe81ae86cac37bf6eab88844c912a2edf9fb54926533e5e34",
+      "bytes": 3642
+    },
+    "trial-evidence/trial-02/sources/Mathlib/Topology/MetricSpace/HausdorffDimension.lean": {
+      "sha256": "70e2b26d0b989d816320c0998cb3187e94be3d61bae74a65fdafbc9934fe17dc",
+      "bytes": 29594
+    },
+    "trial-evidence/trial-02/sources/Mathlib/Topology/UrysohnsLemma.lean": {
+      "sha256": "39ded0f7be3ba3b7cae1a3dfb74c9de718af344f8fc8117a0d0b84c6462f13ba",
+      "bytes": 25875
+    },
+    "trial-evidence/trial-03/driver.log": {
+      "sha256": "22c1827d1b6711d6d2948e5fbfb58a321d39b5ec97b28513dec10f1e3ad56d5d",
+      "bytes": 136
+    },
+    "trial-evidence/trial-03/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.header.json": {
+      "sha256": "13ac8a9a4f172f47370bb80d2b7be6fb163b01426665eca48d56ac2eae292b06",
+      "bytes": 665
+    },
+    "trial-evidence/trial-03/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.raw-setup.json": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-03/edited-setups/Mathlib.Topology.MetricSpace.CauSeqFilter.setup.json": {
+      "sha256": "43796f465e23b4f465877a67983b18d7765b53f014ea1b53dd33697b55283d10",
+      "bytes": 1060701
+    },
+    "trial-evidence/trial-03/input-manifest.json": {
+      "sha256": "14088442887cf4037323fbd1d828e6bffb477e098842788dae12fa7b97777002",
+      "bytes": 2638
+    },
+    "trial-evidence/trial-03/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/command.json": {
+      "sha256": "41c839e94ccf4e9c2b6d8c534a0154eb9850d6aa1dd696e73e34cfa020eb3c03",
+      "bytes": 943
+    },
+    "trial-evidence/trial-03/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/process.json": {
+      "sha256": "4f3b09f568e58018f6de099e0d711156d79cd41093ddf285f86c0f1e1e439143",
+      "bytes": 207
+    },
+    "trial-evidence/trial-03/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-03/logs/Mathlib/Topology/MetricSpace/CauSeqFilter/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-03/report.json": {
+      "sha256": "5262e9a7653b342aba8579ab7305d64c2250a40ec48f40be423c5f61e4dcf335",
+      "bytes": 8597
+    },
+    "trial-evidence/trial-03/resolved-setups/Mathlib/Topology/MetricSpace/CauSeqFilter.setup.json": {
+      "sha256": "323d37da3f0ba5fd40b68fc96c0dbb06ddf92644dc279c8cfe879d45a871f5fc",
+      "bytes": 1060720
+    },
+    "trial-evidence/trial-03/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/command.json": {
+      "sha256": "7d01de51edce919a63cb80a2e583ed81e70377b0e1a57adc1d1908fac9dc2a14",
+      "bytes": 768
+    },
+    "trial-evidence/trial-03/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/process.json": {
+      "sha256": "a7d54d345fa271544004d182565dda9033aadea2c736019b3333be43e6693952",
+      "bytes": 220
+    },
+    "trial-evidence/trial-03/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-03/setup/next-edited-Mathlib.Topology.MetricSpace.CauSeqFilter/stdout.log": {
+      "sha256": "64ae6565d61ed4e87a6ff001fe0d998bd8c349e853209b2a62ae4aa82a1c988e",
+      "bytes": 932098
+    },
+    "trial-evidence/trial-03/setup/next-headers-000000/command.json": {
+      "sha256": "86de8917973176a905d68c934e7d96c4431de3b63028df6dbfcba80c513052dd",
+      "bytes": 257
+    },
+    "trial-evidence/trial-03/setup/next-headers-000000/process.json": {
+      "sha256": "0fcd03576bbe08cfe2cfd14250108f03ae718b7c82544e4ab613d5dc6500c844",
+      "bytes": 188
+    },
+    "trial-evidence/trial-03/setup/next-headers-000000/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "trial-evidence/trial-03/setup/next-headers-000000/stdout.log": {
+      "sha256": "1d1b126f6cb81a6c718aa5d92ccc2e1d9ccad384cf1671689018a835fa85f803",
+      "bytes": 480
+    },
+    "trial-evidence/trial-03/sources/Mathlib/Topology/MetricSpace/CauSeqFilter.lean": {
+      "sha256": "693b417e0654b13deeaf848c864fda017f86e02bad40d2252b77a094c455fa6e",
+      "bytes": 3683
+    }
+  }
+}

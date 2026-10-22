@@ -1,0 +1,518 @@
+--- a/Mathlib/Analysis/Calculus/ContDiff/Convolution.lean
++++ b/Mathlib/Analysis/Calculus/ContDiff/Convolution.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Calculus.ContDiff.Comp
+ public import Mathlib.Analysis.Convolution
+ 
+@@ -188,11 +189,8 @@
+         · simp only [hx, singleton_prod, mem_image, Prod.mk_inj, true_and, exists_eq_right]
+         · rw [← dist_eq_norm] at hp
+           simpa only [Prod.dist_eq, εpos, dist_self, max_lt_iff, and_true] using hp
+-      have : g' (p, x) ∈ closedBall (0 : P × G →L[𝕜] E') C := hC (mem_image_of_mem _ H)
+-      rwa [mem_closedBall_zero_iff] at this
+-    · have : g' (p, x) = 0 := g'_zero _ _ hps hx
+-      rw [this]
+-      simpa only [norm_zero] using Cpos.le
++      norm_arith [hC (mem_image_of_mem _ H)]
++    · norm_arith [g'_zero _ _ hps hx]
+   /- Now, we wish to apply a theorem on differentiation of integrals. For this, we need to check
+     trivial measurability or integrability assumptions (in `I1`, `I2`, `I3`), as well as a uniform
+     integrability assumption over the derivative (in `I4` and `I5`) and pointwise differentiability
+--- a/Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean
++++ b/Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Calculus.MeanValue
+ 
+ import Mathlib.Analysis.Normed.Module.RCLike.Basic
+@@ -139,8 +140,7 @@
+       hR' (lt_of_lt_of_le (Metric.mem_ball.mp hy) (min_le_right _ _))
+     have hxy : ∀ y : E, y ∈ Metric.ball x r → ‖y - x‖ < 1 := by
+       intro y hy
+-      rw [Metric.mem_ball, dist_eq_norm] at hy
+-      exact lt_of_lt_of_le hy (min_le_left _ _)
++      norm_arith
+     have hxyε : ∀ y : E, y ∈ Metric.ball x r → ε * ‖y - x‖ < ε := by
+       intro y hy
+       exact (mul_lt_iff_lt_one_right hε.lt).mpr (hxy y hy)
+@@ -210,10 +210,7 @@
+         (fun z hz => ((hf n.1 z hz).sub (hf n.2 z hz)).hasFDerivWithinAt) (fun z hz => (hn z hz).le)
+         (convex_ball x r) (Metric.mem_ball_self hr) hy
+     refine lt_of_le_of_lt mvt ?_
+-    have : q * ‖y - x‖ < q * r :=
+-      mul_lt_mul' rfl.le (by simpa only [dist_eq_norm] using Metric.mem_ball.mp hy) (norm_nonneg _)
+-        hqpos
+-    exact this.trans hq
++    exact (mul_lt_mul_of_pos_left (by norm_arith [hy]) hqpos).trans hq
+   · -- This is just `hfg` run through `eventually_prod_iff`
+     refine Metric.tendstoUniformlyOn_iff.mpr fun ε hε => ?_
+     obtain ⟨t, ht, ht'⟩ := (Metric.cauchy_iff.mp hfg).2 ε hε
+--- a/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean
++++ b/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.SpecialFunctions.Log.PosLog
+ 
+ import Mathlib.Topology.MetricSpace.Infsep
+@@ -90,9 +91,7 @@
+         have h1 : δ / (2 * #s) ≤ δ / 4 := by
+           gcongr
+           linarith
+-        have h2 : δ ≤ ‖w - a₀‖ + ‖w - b‖ := hδgap a₀ ha₀ b (by grind) (by grind) |>.trans <| by
+-          simpa [norm_sub_rev] using norm_sub_le (w - a₀) (w - b)
+-        linarith
++        norm_arith [hnear, h1, hδgap a₀ ha₀ b (by grind) (by grind)]
+       -- Tail estimate: the sum over `s \ {a₀}` is bounded by the constant.
+       have htail : ∑ b ∈ s.erase a₀, log⁺ ‖w - b‖⁻¹ ≤ (#s - 1) * log⁺ (2 * #s / δ) := by
+         have h1 := sum_posLog_inv_norm_sub_le (by positivity) hother
+--- a/Mathlib/Analysis/Convolution.lean
++++ b/Mathlib/Analysis/Convolution.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+ 
+ import Mathlib.MeasureTheory.Function.Holder
+@@ -852,11 +853,9 @@
+   have hgi : dist (g i (k i)) z₀ < ε / 3 := hgδ hpi (hki.trans <| half_lt_self hδ)
+   have h1 : ∀ x' ∈ ball (k i) (δ / 2), dist (g i x') (g i (k i)) ≤ ε / 3 + ε / 3 := by
+     intro x' hx'
+-    grw [dist_triangle_right, hgδ hpi ?_, hgi]
+-    grw [dist_triangle, hx'.out, hki, add_halves]
++    norm_arith [hgδ hpi (show dist x' x₀ < δ by norm_arith), hgi]
+   have := dist_convolution_le (add_pos h2ε h2ε).le hφi hnφi hiφi hmgi h1
+-  refine ((dist_triangle _ _ _).trans_lt (add_lt_add_of_le_of_lt this hgi)).trans_eq ?_
+-  ring
++  norm_arith
+ 
+ end NormedAddCommGroup
+ 
+--- a/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean
++++ b/Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Calculus.IteratedDeriv.Defs
+ public import Mathlib.Analysis.Distribution.TemperateGrowth
+ public import Mathlib.MeasureTheory.Function.L2Space
+@@ -973,15 +974,10 @@
+     𝓢(E, F) →L[𝕜] 𝓢(D, F) := by
+   refine compCLM 𝕜 hg ⟨1, K * max 1 ‖g 0‖, fun x ↦ ?_⟩
+   calc
+-  ‖x‖ ≤ K * ‖g x - g 0‖ := by
+-    rw [← dist_zero_right, ← dist_eq_norm]
+-    apply h'g.le_mul_dist
+-  _ ≤ K * (‖g x‖ + ‖g 0‖) := by
+-    gcongr
+-    exact norm_sub_le _ _
++  ‖x‖ ≤ K * ‖g x - g 0‖ := by norm_arith [h'g.le_mul_dist x 0]
+   _ ≤ K * (‖g x‖ + max 1 ‖g 0‖) := by
+     gcongr
+-    exact le_max_right _ _
++    norm_arith
+   _ ≤ (K * max 1 ‖g 0‖ : ℝ) * (1 + ‖g x‖) ^ 1 := by
+     simp only [mul_add, add_comm (K * ‖g x‖), pow_one, mul_one, add_le_add_iff_left]
+     gcongr
+@@ -1227,8 +1223,7 @@
+   rfl
+ 
+ @[simp] theorem norm_toZeroAtInfty (f : 𝓢(E, F)) :
+-    ‖f.toZeroAtInfty‖ = ‖f.toBoundedContinuousFunction‖ := by
+-  rw [← ZeroAtInftyContinuousMap.norm_toBCF_eq_norm, toZeroAtInfty_toBCF]
++    ‖f.toZeroAtInfty‖ = ‖f.toBoundedContinuousFunction‖ := by norm_arith
+ 
+ variable (𝕜 E F)
+ variable [RCLike 𝕜] [NormedSpace 𝕜 F] [SMulCommClass ℝ 𝕜 F]
+--- a/Mathlib/Analysis/Normed/Lp/SmoothApprox.lean
++++ b/Mathlib/Analysis/Normed/Lp/SmoothApprox.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Calculus.ContDiff.Defs
+ public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
+ public import Mathlib.MeasureTheory.Function.LpSpace.Basic
+@@ -70,9 +71,7 @@
+   refine ⟨g, h₁.mono hg₃, hg₁, (eLpNorm_sub_le_of_dist_bdd μ hp
+     h₁.measurableSet.nullMeasurableSet hε'.le (h₂.sub hg₁.continuous).aestronglyMeasurable ?_
+     (subset_tsupport f) (hg₃.trans (subset_tsupport f))).trans hε₂⟩
+-  intro x
+-  rw [dist_comm]
+-  exact (hg₂ x).le
++  exact fun x => by norm_arith [hg₂ x]
+ 
+ end HasCompactSupport
+ 
+--- a/Mathlib/Analysis/Normed/Module/FiniteDimension.lean
++++ b/Mathlib/Analysis/Normed/Module/FiniteDimension.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
+ public import Mathlib.Analysis.Normed.Affine.Isometry
+ public import Mathlib.Analysis.Normed.Group.Lemmas
+@@ -432,11 +433,8 @@
+     exact .of_fg_top hF
+   obtain ⟨x, xR, hx⟩ : ∃ x : E, ‖x‖ ≤ R ∧ ∀ y : E, y ∈ F → 1 ≤ ‖x - y‖ :=
+     riesz_lemma_of_norm_lt hc hR Fclosed this
+-  have hx' : ∀ y : E, y ∈ F → 1 ≤ ‖y - x‖ := by
+-    intro y hy
+-    rw [← norm_neg]
+-    simpa using hx y hy
+-  exact ⟨x, xR, fun y hy => hx' _ (Submodule.subset_span hy)⟩
++  refine ⟨x, xR, fun y hy => ?_⟩
++  norm_arith [hx y (Submodule.subset_span hy)]
+ 
+ /-- In an infinite-dimensional normed space, there exists a sequence of points which are all
+ bounded by `R` and at distance at least `1`. For a version not assuming `c` and `R`, see
+@@ -447,8 +445,7 @@
+   have : Std.Symm fun x y : E => 1 ≤ ‖x - y‖ := by
+     constructor
+     intro x y hxy
+-    rw [← norm_neg]
+-    simpa
++    norm_arith [show 1 ≤ ‖x - y‖ from hxy]
+   apply
+     exists_seq_of_forall_finset_exists' (fun x : E => ‖x‖ ≤ R) fun (x : E) (y : E) => 1 ≤ ‖x - y‖
+   rintro s -
+--- a/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean
++++ b/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Normed.Unbundled.RingSeminorm
+ public import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
+ 
+@@ -143,9 +144,7 @@
+     obtain ⟨N, hN⟩ := hL2 δ hδ
+     use N
+     intro n hn
+-    specialize hN n hn
+-    rw [Real.dist_eq, abs_lt] at hN
+-    exact le_of_lt hN.right
++    norm_arith [hN n hn]
+   /- We now show that for all `n ≥ max m1 m2`, we have
+     `dist (smoothingSeminormSeq μ x n) (smoothingFun μ x) < ε`. -/
+   use max (m1 : ℕ) m2
+--- a/Mathlib/Analysis/ODE/PicardLindelof.lean
++++ b/Mathlib/Analysis/ODE/PicardLindelof.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+ public import Mathlib.Topology.MetricSpace.Contracting
+ 
+@@ -232,17 +233,12 @@
+     {α : FunSpace t₀ x₀ r L} (h : L * max (tmax - t₀) (t₀ - tmin) ≤ a - r) {t : Icc tmin tmax} :
+     α t ∈ closedBall x₀ a := by
+   rw [mem_closedBall, dist_eq_norm]
+-  calc
+-    ‖α t - x₀‖ ≤ ‖α t - α t₀‖ + ‖α t₀ - x₀‖ := norm_sub_le_norm_sub_add_norm_sub ..
+-    _ ≤ L * |t.1 - t₀.1| + r := by
+-      apply add_le_add _ <| mem_closedBall_iff_norm.mp α.mem_closedBall₀
+-      rw [← dist_eq_norm]
+-      exact α.lipschitzWith.dist_le_mul t t₀
+-    _ ≤ L * max (tmax - t₀) (t₀ - tmin) + r := by
+-      gcongr
+-      exact abs_sub_le_max_sub t.2.1 t.2.2 _
+-    _ ≤ a - r + r := by gcongr
+-    _ = a := sub_add_cancel _ _
++  have ht : L * |t.1 - t₀.1| ≤ L * max (tmax - t₀) (t₀ - tmin) := by
++    gcongr
++    exact abs_sub_le_max_sub t.2.1 t.2.2 _
++  have hd := α.lipschitzWith.dist_le_mul t t₀
++  simp only [Subtype.dist_eq, dist_eq_norm] at hd
++  norm_arith [hd.trans (ht.trans h), α.mem_closedBall₀]
+ 
+ lemma compProj_mem_closedBall
+     (α : FunSpace t₀ x₀ r L) (h : L * max (tmax - t₀) (t₀ - tmin) ≤ a - r) {t : ℝ} :
+@@ -683,19 +679,12 @@
+   set L := K * a + ‖f x₀‖ + 1 with hL
+   have hL0 : 0 < L := by positivity
+   have hb (x : E) (hx : x ∈ closedBall x₀ (a / 2)) : ‖f x‖ ≤ L := by
+-    rw [hL]
+-    calc
+-      ‖f x‖ ≤ ‖f x - f x₀‖ + ‖f x₀‖ := norm_le_norm_sub_add _ _
+-      _ ≤ K * ‖x - x₀‖ + ‖f x₀‖ := by
+-        gcongr
+-        apply hl.norm_sub_le _ (mem_of_mem_nhds hs)
+-        apply subset_trans _ has hx
+-        exact closedBall_subset_ball <| half_lt_self ha -- this is where we need `a / 2`
+-      _ ≤ K * a + ‖f x₀‖ := by
+-        gcongr
+-        rw [← mem_closedBall_iff_norm]
+-        exact closedBall_subset_closedBall (half_le_self (le_of_lt ha)) hx
+-      _ ≤ L := le_add_of_nonneg_right zero_le_one
++    have hxs : x ∈ s := has (closedBall_subset_ball (half_lt_self ha) hx)
++    have hd := hl.norm_sub_le hxs (mem_of_mem_nhds hs)
++    have hmul : K * ‖x - x₀‖ ≤ K * a := by
++      gcongr
++      norm_arith
++    norm_arith [hd.trans hmul, hL]
+   let ε := a / L / 2 / 2
+   have hε0 : 0 < ε := by positivity
+   refine ⟨ε, hε0,
+--- a/Mathlib/Geometry/Euclidean/Sphere/Tangent.lean
++++ b/Mathlib/Geometry/Euclidean/Sphere/Tangent.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Geometry.Euclidean.Sphere.PolePolar
+ 
+ /-!
+@@ -475,14 +476,12 @@
+ lemma IsExtTangent.dist_center {s₁ s₂ : Sphere P} (h : s₁.IsExtTangent s₂) :
+     dist s₁.center s₂.center = s₁.radius + s₂.radius := by
+   rcases h with ⟨p, h₁, h₂, h⟩
+-  rw [← dist_add_dist_eq_iff] at h
+-  rw [← h, mem_sphere'.1 h₁, h₂]
++  norm_arith [mem_sphere'.1 h₁, mem_sphere'.1 h₂, dist_add_dist_eq_iff.mpr h]
+ 
+ lemma IsIntTangent.dist_center {s₁ s₂ : Sphere P} (h : s₁.IsIntTangent s₂) :
+     dist s₁.center s₂.center = s₂.radius - s₁.radius := by
+   rcases h with ⟨p, h₁, h₂, h⟩
+-  rw [← dist_add_dist_eq_iff, mem_sphere'.1 h₁, mem_sphere'.1 h₂] at h
+-  simp [← h, dist_comm]
++  norm_arith [mem_sphere'.1 h₁, mem_sphere'.1 h₂, dist_add_dist_eq_iff.mpr h]
+ 
+ lemma isExtTangent_iff_dist_center {s₁ s₂ : Sphere P} : s₁.IsExtTangent s₂ ↔
+     dist s₁.center s₂.center = s₁.radius + s₂.radius ∧ 0 ≤ s₁.radius ∧ 0 ≤ s₂.radius := by
+@@ -520,14 +519,10 @@
+         ext <;> assumption
+       simp [hs, h₂]
+     · rw [dist_comm] at h
+-      have ha : |s₂.radius - s₁.radius| = s₂.radius - s₁.radius := by
+-        refine abs_of_nonneg ?_
+-        rw [← h]
+-        exact dist_nonneg
+-      have hr0 : s₂.radius - s₁.radius ≠ 0 := by
+-        intro hr0
+-        rw [hr0, dist_eq_zero] at h
+-        exact h0 h.symm
++      have ha : |s₂.radius - s₁.radius| = s₂.radius - s₁.radius :=
++        abs_of_nonneg (by norm_arith [h])
++      have hr0 : s₂.radius - s₁.radius ≠ 0 :=
++        ne_of_gt (by norm_arith [h, dist_pos.mpr (Ne.symm h0)])
+       refine ⟨AffineMap.lineMap s₂.center s₁.center (s₂.radius / (s₂.radius - s₁.radius)),
+               ?_, ?_, ?_⟩
+       · simp only [mem_sphere, dist_lineMap_right, Real.norm_eq_abs, h, one_sub_div hr0, abs_div,
+--- a/Mathlib/MeasureTheory/Covering/Besicovitch.lean
++++ b/Mathlib/MeasureTheory/Covering/Besicovitch.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.MeasureTheory.Covering.Differentiation
+ 
+ /-!
+@@ -164,8 +165,7 @@
+       h := fun i j hij => (hij (Subsingleton.elim (α := Fin 1) i j)).elim
+       hlast := fun i hi => by
+         rw [Subsingleton.elim (α := Fin 1) i (last 0)] at hi; exact (lt_irrefl _ hi).elim
+-      inter := fun i hi => by
+-        rw [Subsingleton.elim (α := Fin 1) i (last 0)] at hi; exact (lt_irrefl _ hi).elim }⟩
++      inter := fun i hi => by norm_arith }⟩
+ 
+ namespace Besicovitch
+ 
+@@ -176,9 +176,8 @@
+ theorem inter' (i : Fin N.succ) : dist (a.c i) (a.c (last N)) ≤ a.r i + a.r (last N) := by
+   rcases lt_or_ge i (last N) with (H | H)
+   · exact a.inter i H
+-  · have I : i = last N := top_le_iff.1 H
+-    have := (a.rpos (last N)).le
+-    simp only [I, add_nonneg this this, dist_self]
++  · rcases top_le_iff.1 H with rfl
++    norm_arith [a.rpos (last N)]
+ 
+ theorem hlast' (i : Fin N.succ) (h : 1 ≤ τ) : a.r (last N) ≤ τ * a.r i := by
+   rcases lt_or_ge i (last N) with (H | H)
+--- a/Mathlib/MeasureTheory/Measure/ResolventTransform.lean
++++ b/Mathlib/MeasureTheory/Measure/ResolventTransform.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Analytic.Basic
+ public import Mathlib.Analysis.Calculus.Deriv.Basic
+ public import Mathlib.Analysis.InnerProductSpace.Basic
+@@ -154,16 +155,10 @@
+     filter_upwards [support_mem_ae] with x hx w hw
+     grw [resolvent, Ring.inverse_eq_inv, norm_pow, norm_inv]
+     gcongr
+-    calc infDist a (algebraMap 𝕜 A '' μ.support) / 2
+-      _ ≤ infDist a (algebraMap 𝕜 A '' μ.support)
+-        - infDist a (algebraMap 𝕜 A '' μ.support) / 2 := by grind
+-      _ ≤ ‖(algebraMap 𝕜 A) x - a‖ - ‖a - w‖ := by
+-        gcongr
+-        · grw [infDist_le_dist_of_mem (y := (algebraMap 𝕜 A) x) (by simp [hx]), dist_comm,
+-            dist_eq_norm]
+-        · apply le_of_lt
+-          simpa [s, ← dist_eq_norm, dist_comm w a] using hw
+-      _ ≤ ‖(algebraMap 𝕜 A) x - w‖ := by grw [norm_sub_le_norm_add]; grind
++    have hx' := infDist_le_dist_of_mem (x := a) (s := algebraMap 𝕜 A '' μ.support)
++      (y := algebraMap 𝕜 A x) ⟨x, hx, rfl⟩
++    change dist w a < infDist a (algebraMap 𝕜 A '' μ.support) / 2 at hw
++    norm_arith [hx', hw]
+   have h_deriv : ∀ᵐ x ∂μ, ∀ w ∈ s, HasDerivAt (fun w ↦ resolvent w x) (resolvent w x ^ 2) w := by
+     filter_upwards [support_mem_ae] with x hx w hw
+     apply hasDerivAt_resolvent_const_right
+--- a/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean
++++ b/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.NumberTheory.Padics.MahlerBasis
+ public import Mathlib.NumberTheory.Padics.Measure.Basic
+ public import Mathlib.RingTheory.PowerSeries.Basic
+@@ -133,10 +134,8 @@
+     apply IsUltrametricDist.norm_tsum_le_of_forall_le
+     intro i
+     grw [norm_mul, (F.coeff i).norm_le_one, mul_one, one_mul, ← ge_iff_le]
+-    calc ‖f‖ = ‖PadicInt.mahlerEquiv ℤ_[p] f‖ := by rw [← (PadicInt.mahlerEquiv ℤ_[p]).norm_map]
+-      _ = ‖(PadicInt.mahlerEquiv ℤ_[p] f).toBCF‖ := by
+-        rw [← ZeroAtInftyContinuousMap.norm_toBCF_eq_norm]
+-      _ ≥ _ := BoundedContinuousFunction.norm_coe_le_norm ..
++    norm_arith [(PadicInt.mahlerEquiv ℤ_[p]).norm_map f,
++      BoundedContinuousFunction.norm_coe_le_norm (PadicInt.mahlerEquiv ℤ_[p] f).toBCF i]
+ 
+ lemma invTransform_apply (F : ℤ_[p]⟦X⟧) (f : C(ℤ_[p], ℤ_[p])) :
+     invTransform F f = ∑' i, PadicInt.mahlerEquiv ℤ_[p] f i * F.coeff i := by
+--- a/Mathlib/Probability/Moments/ComplexMGF.lean
++++ b/Mathlib/Probability/Moments/ComplexMGF.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic
+ public import Mathlib.Probability.Moments.Basic
+ public import Mathlib.Probability.Moments.IntegrableExpMul
+@@ -150,9 +151,7 @@
+     refine (le_abs_self _).trans ?_
+     rw [abs_mul]
+     gcongr
+-    refine (abs_re_le_norm _).trans ?_
+-    simp only [Metric.mem_ball, dist_eq_norm] at hε
+-    exact hε.le
++    norm_arith [abs_re_le_norm (ε - z), hε]
+   · refine integrable_pow_abs_mul_exp_add_of_integrable_exp_mul ?_ ?_ ?_ ?_ (t := t) (n + 1)
+     · exact h_subset (add_half_inf_sub_mem_Ioo hlu)
+     · exact h_subset (sub_half_inf_sub_mem_Ioo hlu)
+--- a/Mathlib/Topology/MetricSpace/CauSeqFilter.lean
++++ b/Mathlib/Topology/MetricSpace/CauSeqFilter.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Normed.Field.Basic
+ 
+ import Mathlib.Topology.MetricSpace.Cauchy
+@@ -37,10 +38,8 @@
+       obtain ⟨N, hN⟩ := Setoid.symm (CauSeq.equiv_lim f) _ hε
+       exists N
+       intro b hb
+-      apply hεs
+-      dsimp [Metric.ball]
+-      rw [dist_comm, dist_eq_norm]
+-      solve_by_elim)
++      have hn : ‖f.lim - f b‖ < ε := hN b hb
++      exact hεs (show dist (f b) f.lim < ε from by norm_arith [hn]))
+ 
+ variable [NormedField β]
+ 
+@@ -78,8 +77,7 @@
+     dsimp at ha'1 ha'2 hb'1 hb'2
+     rw [← ha'2, ← hb'2]
+     apply hεs
+-    rw [dist_eq_norm]
+-    apply hN <;> assumption
++    norm_arith
+ 
+ /-- In a normed field, `CauSeq` coincides with the usual notion of Cauchy sequences. -/
+ theorem isCauSeq_iff_cauchySeq {α : Type u} [NormedField α] {u : ℕ → α} :
+--- a/Mathlib/Topology/MetricSpace/HausdorffDimension.lean
++++ b/Mathlib/Topology/MetricSpace/HausdorffDimension.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Calculus.ContDiff.RCLike
+ public import Mathlib.MeasureTheory.Measure.Hausdorff
+ 
+@@ -564,12 +565,10 @@
+     obtain ⟨y, hyc, hy⟩ := Metric.mem_closure_iff.1 (htc hx) _
+       (by positivity : (0 : ℝ) < (n + 1 : ℝ)⁻¹ / 2)
+     refine mem_iUnion_of_mem n (mem_biUnion hyc ⟨⟨hx, fun z hz hzx ↦ ?_⟩, Metric.mem_ball.2 hy⟩)
+-    calc
+-      dist (f z) (f x) ≤ C * dist z x := hδ ⟨Metric.mem_ball.2 (hzx.trans_lt hnδ), hz⟩
+-      _ ≤ n * dist z x := by grw [((le_max_left _ _).trans_lt hn).le]
++    norm_arith [hδ ⟨Metric.mem_ball.2 (hzx.trans_lt hnδ), hz⟩,
++      mul_le_mul_of_nonneg_right ((le_max_left _ _).trans_lt hn).le (dist_nonneg : 0 ≤ dist z x)]
+   have hlip (n : ℕ) (y : E) : LipschitzOnWith n f (P n y) :=
+-    .of_dist_le_mul fun z ⟨⟨hzt, _⟩, hzb⟩ w ⟨⟨_, hwP⟩, hwb⟩ ↦ hwP z hzt <| by
+-      linarith [dist_triangle_right z w y, Metric.mem_ball.1 hzb, Metric.mem_ball.1 hwb]
++    .of_dist_le_mul fun z ⟨⟨hzt, _⟩, hzb⟩ w ⟨⟨_, hwP⟩, hwb⟩ ↦ hwP z hzt <| by norm_arith
+   refine measure_mono_null (image_mono hcover) ?_
+   simp only [image_iUnion, measure_iUnion_null_iff, measure_biUnion_null_iff hcc]
+   intro n y _
+--- a/Mathlib/Topology/UrysohnsLemma.lean
++++ b/Mathlib/Topology/UrysohnsLemma.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Algebra.Order.Group.Indicator
+ public import Mathlib.Analysis.Normed.Affine.AddTorsor
+ public import Mathlib.Analysis.Normed.Group.FunctionSeries
+@@ -290,8 +291,7 @@
+         c.right.lim_of_mem_C _ (c.left_U_subset_right_C hyl),
+         c.right.lim_of_mem_C _ (c.left_U_subset_right_C hxl)]
+       refine (dist_midpoint_midpoint_le _ _ _ _).trans ?_
+-      rw [dist_self, add_zero, div_eq_inv_mul]
+-      gcongr
++      norm_arith
+     · replace hxl : x ∈ c.left.right.Cᶜ :=
+         compl_subset_compl.2 c.left.right.subset hxl
+       filter_upwards [IsOpen.mem_nhds (isOpen_compl_iff.2 c.left.right.closed_C) hxl,
+@@ -303,9 +303,7 @@
+       simp only [pow_succ, c.lim_eq_midpoint, c.left.lim_eq_midpoint,
+         c.left.left.lim_of_notMem_U _ hxl, c.left.left.lim_of_notMem_U _ hyl]
+       grw [dist_midpoint_midpoint_le, dist_midpoint_midpoint_le, dist_self, zero_add]
+-      set r := (3 / 4 : ℝ) ^ n
+-      calc _ ≤ (r / 2 + r) / 2 := by gcongr
+-        _ = _ := by ring
++      norm_arith [hydl, hydr]
+ 
+ end CU
+ 

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+    "-R",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources",
+    "--setup",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/resolved-setups/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.setup.json",
+    "-o",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean",
+    "-i",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ilean",
+    "-c",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.c",
+    "--json",
+    "-j",
+    "1"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

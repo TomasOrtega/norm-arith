@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lake",
+    "--no-build",
+    "setup-file",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Probability/Moments/ComplexMGF.lean",
+    "{\"imports\":[{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Init\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":true,\"module\":\"Init\"},{\"importAll\":false,\"isExported\":false,\"isMeta\":false,\"module\":\"NormArith\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Mathlib.Probability.Moments.Basic\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Mathlib.Probability.Moments.IntegrableExpMul\"},{\"importAll\":false,\"isExported\":false,\"isMeta\":false,\"module\":\"Mathlib.Analysis.Calculus.ParametricIntegral\"},{\"importAll\":false,\"isExported\":false,\"isMeta\":false,\"module\":\"Mathlib.Analysis.Complex.CauchyIntegral\"}],\"isModule\":true}"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

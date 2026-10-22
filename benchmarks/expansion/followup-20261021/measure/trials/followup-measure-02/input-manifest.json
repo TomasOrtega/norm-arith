@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "followup-exploratory-proposals",
+  "files": [
+    {
+      "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+      "source_sha256": "7f81281ad5a14613f427dcfdf6eeccec20137b33929d576fa08fa479400edceb",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "followup-resolvent-separation",
+      "path": "Mathlib/MeasureTheory/Measure/ResolventTransform.lean",
+      "status": "replace",
+      "reason": "reviewed_followup",
+      "declaration": "MeasureTheory.hasDerivAt_resolventTransform",
+      "parent_declaration": "MeasureTheory.hasDerivAt_resolventTransform",
+      "start_line": 157,
+      "end_line": 166,
+      "original_sha256": "75d5735a95e0aabf7c417b6f9b8ba214cac0c2e2a57cbe2f79f2406bfa40b122",
+      "replacement": "    have hx' := infDist_le_dist_of_mem (y := (algebraMap 𝕜 A) x) (by simp [hx])\n    change dist w a < infDist a (algebraMap 𝕜 A '' μ.support) / 2 at hw\n    norm_arith [hx', hw]\n",
+      "proof_replacement": "have hx' := infDist_le_dist_of_mem (y := (algebraMap 𝕜 A) x) (by simp [hx])\n    change dist w a < infDist a (algebraMap 𝕜 A '' μ.support) / 2 at hw\n    norm_arith [hx', hw]",
+      "source_start_byte": 6474,
+      "source_end_byte": 7024,
+      "observation_key": "tactic:6390:6392:MeasureTheory.hasDerivAt_resolventTransform:1142910661",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.MeasureTheory.Measure.ResolventTransform/attempt-01/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 5386,
+      "body_end_byte": 7542,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    }
+  ]
+}

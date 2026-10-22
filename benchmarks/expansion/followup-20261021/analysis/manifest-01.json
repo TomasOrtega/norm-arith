@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "followup-exploratory-proposals",
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "source_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "source_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    },
+    {
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "source_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "followup-second-main-separation",
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "status": "replace",
+      "reason": "Combine the separation bound with a triangle certificate; retain the scalar reciprocal estimate.",
+      "declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+      "parent_declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+      "start_line": 90,
+      "end_line": 95,
+      "original_sha256": "0e9ae5988fc0705c110b6701510bc4f81a53ac9d04ae2aa77bfaa42772259244",
+      "replacement": "        have h1 : δ / (2 * #s) ≤ δ / 4 := by\n          gcongr\n          linarith\n        norm_arith [hδgap a₀ ha₀ b (by grind) (by grind)]\n",
+      "proof_replacement": "have h1 : δ / (2 * #s) ≤ δ / 4 := by\n          gcongr\n          linarith\n        norm_arith [hδgap a₀ ha₀ b (by grind) (by grind)]",
+      "source_start_byte": 4088,
+      "source_end_byte": 4363,
+      "observation_key": "tactic:2353:2501:Real.exists_sum_posLog_inv_norm_sub_le:3727209014",
+      "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/attempt-02/events.jsonl",
+      "origin_syntax_kind": "Lean.Parser.Tactic.obtain",
+      "body_start_byte": 2040,
+      "body_end_byte": 7464,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-second-main-lower-sum",
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "status": "replace",
+      "reason": "Normalize the inverse norm and split the distinguished finite-sum term before lower triangle arithmetic.",
+      "declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+      "parent_declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+      "start_line": 127,
+      "end_line": 130,
+      "original_sha256": "fac83e91cbafe690eb29643172fce9fb578ecd13355ec45081937ea032806773",
+      "replacement": "            rw [← norm_inv, ← add_sum_erase s (fun a ↦ (w - a)⁻¹) ha₀]\n            norm_arith [htv]\n",
+      "proof_replacement": "rw [← norm_inv, ← add_sum_erase s (fun a ↦ (w - a)⁻¹) ha₀]\n            norm_arith [htv]",
+      "source_start_byte": 6242,
+      "source_end_byte": 6559,
+      "observation_key": "tactic:2353:2501:Real.exists_sum_posLog_inv_norm_sub_le:3727209014",
+      "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/attempt-02/events.jsonl",
+      "origin_syntax_kind": "Lean.Parser.Tactic.obtain",
+      "body_start_byte": 2040,
+      "body_end_byte": 7464,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-amice-operator-norm",
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "status": "replace",
+      "reason": "Transport the coefficient bound through the two isometric norms.",
+      "declaration": "AbstractMeasure.invTransform",
+      "parent_declaration": "AbstractMeasure.invTransform",
+      "start_line": 136,
+      "end_line": 139,
+      "original_sha256": "61383f56fc9f9d4f195a7651f4de43358058ec904df0cd9ea8dc6b9416d22aa1",
+      "replacement": "    norm_arith [(PadicInt.mahlerEquiv ℤ_[p]).norm_map f,\n      ZeroAtInftyContinuousMap.norm_toBCF_eq_norm (PadicInt.mahlerEquiv ℤ_[p] f),\n      BoundedContinuousFunction.norm_coe_le_norm (PadicInt.mahlerEquiv ℤ_[p] f).toBCF i]\n",
+      "proof_replacement": "norm_arith [(PadicInt.mahlerEquiv ℤ_[p]).norm_map f,\n      ZeroAtInftyContinuousMap.norm_toBCF_eq_norm (PadicInt.mahlerEquiv ℤ_[p] f),\n      BoundedContinuousFunction.norm_coe_le_norm (PadicInt.mahlerEquiv ℤ_[p] f).toBCF i]",
+      "source_start_byte": 4835,
+      "source_end_byte": 5126,
+      "observation_key": "tactic:4680:4687:AbstractMeasure.invTransform:2505273936",
+      "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Measure.AmiceTransform/attempt-01/events.jsonl",
+      "origin_syntax_kind": "null",
+      "body_start_byte": 4600,
+      "body_end_byte": 5126,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-complex-mgf-realpart",
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "status": "replace",
+      "reason": "Derive the real-part absolute bound from the ball hypothesis and the coordinate norm estimate.",
+      "declaration": "ProbabilityTheory.hasDerivAt_integral_pow_mul_exp",
+      "parent_declaration": "ProbabilityTheory.hasDerivAt_integral_pow_mul_exp",
+      "start_line": 153,
+      "end_line": 155,
+      "original_sha256": "a07fa81c1c10d788cd86d2a0660b71127a8aebcf1eb32528de812e5e0aac97c9",
+      "replacement": "    norm_arith [abs_re_le_norm (ε - z)]\n",
+      "proof_replacement": "norm_arith [abs_re_le_norm (ε - z)]",
+      "source_start_byte": 6553,
+      "source_end_byte": 6657,
+      "observation_key": "term:5748:5796:ProbabilityTheory.hasDerivAt_integral_pow_mul_exp:656495895",
+      "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Probability.Moments.ComplexMGF/attempt-01/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 5372,
+      "body_end_byte": 7197,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    }
+  ]
+}

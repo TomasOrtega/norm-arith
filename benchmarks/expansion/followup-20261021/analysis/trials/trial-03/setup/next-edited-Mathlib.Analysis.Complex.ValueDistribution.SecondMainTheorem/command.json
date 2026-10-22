@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lake",
+    "--no-build",
+    "setup-file",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+    "{\"imports\":[{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Init\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":true,\"module\":\"Init\"},{\"importAll\":false,\"isExported\":false,\"isMeta\":false,\"module\":\"NormArith\"},{\"importAll\":false,\"isExported\":true,\"isMeta\":false,\"module\":\"Mathlib.Analysis.SpecialFunctions.Log.PosLog\"},{\"importAll\":false,\"isExported\":false,\"isMeta\":false,\"module\":\"Mathlib.Topology.MetricSpace.Infsep\"}],\"isModule\":true}"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

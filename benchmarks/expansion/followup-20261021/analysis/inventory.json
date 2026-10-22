@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "files": {
+    "README.md": {
+      "bytes": 2606,
+      "sha256": "82f439f3793ef480a70845d221ade99622254eed5d4b6ca4d5ca047b0db02d9b"
+    },
+    "attempts.json": {
+      "bytes": 3727,
+      "sha256": "ceee0b94984284be4dcd1ce4dd86e44ba9411436d09a4096573ff84b978f1731"
+    },
+    "body-evidence.json": {
+      "bytes": 12814,
+      "sha256": "15fd663bde34eb0d4c3eece9d1120f097902ec418e8e04307f2654675e5cb12d"
+    },
+    "manifest-01.json": {
+      "bytes": 6373,
+      "sha256": "a7b247769b930500240fedaaf7c60447b7a774bbd7d5a902dc4dc15e55cd356c"
+    },
+    "manifest-02.json": {
+      "bytes": 6469,
+      "sha256": "65cd5fc5d35cdf86031d2f983dde85500a54d8093aeeba0a2bf7e52bec17b73b"
+    },
+    "manifest-03.json": {
+      "bytes": 7825,
+      "sha256": "b1625bcf66fcdb7c637d467f55b748acc655e585d2939fc8dca53bc868f69007"
+    },
+    "manifest-extra.json": {
+      "bytes": 5471,
+      "sha256": "8dcf1245e85b54490edaaa70cdff709a3fc9105f4f10bdac7e1e42d48d136af6"
+    },
+    "manifest-hensel-01.json": {
+      "bytes": 2527,
+      "sha256": "cb3765c8a012493c9d994e3e2605babc79642925b04158ca80e339c442750c33"
+    },
+    "manifest-hensel-02.json": {
+      "bytes": 2555,
+      "sha256": "989b4dec4706b0dd3058d7a2db9fbfc899282c7bf0ea9d145bf30f7dbebccb9c"
+    },
+    "manifest.json": {
+      "bytes": 6227,
+      "sha256": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971"
+    },
+    "mathlib.patch": {
+      "bytes": 3492,
+      "sha256": "3fcdb02cb8c6a42c93556b405fb64304fcd87a1abe14481c232b84896194c119"
+    },
+    "trial.py": {
+      "bytes": 2907,
+      "sha256": "aa6c46686252809366ad2d82d2e4179e649d066fd3f2418e461767c34c8a9457"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.header.json": {
+      "bytes": 674,
+      "sha256": "bb279de0c980d792eb880704d5dad3129a39b27a645de0154b1677a80c09fdfa"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.raw-setup.json": {
+      "bytes": 1116131,
+      "sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.setup.json": {
+      "bytes": 1269184,
+      "sha256": "76a9b2cc189aefebfe91ab416dd3ec384fd3ca8a9845e45c2c0b52819159e534"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.header.json": {
+      "bytes": 1272,
+      "sha256": "f5a589128d0bb75fdde4f1077dd32af896ec9a66155076b547934428df1cd5ab"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.raw-setup.json": {
+      "bytes": 1120834,
+      "sha256": "249dfeee6b524def1bdc35e232d389f1ff6b417018fc78df3d86233260f5ca3a"
+    },
+    "trials/final-01/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.setup.json": {
+      "bytes": 1274487,
+      "sha256": "5b33a6e7c12fedf862b1bc620863a4eafc18ce3b56a643cefba5a124fccbec5f"
+    },
+    "trials/final-01/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.header.json": {
+      "bytes": 1109,
+      "sha256": "fda43e8e6640e5a33f5f23915e6e439644688be26ec38eff7d0c4b4600cad6b7"
+    },
+    "trials/final-01/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.raw-setup.json": {
+      "bytes": 1257508,
+      "sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07"
+    },
+    "trials/final-01/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.setup.json": {
+      "bytes": 1428786,
+      "sha256": "9570b6e0031eab6477da5d1f958d785c1c38128126db668b4bb9b3705eae1bde"
+    },
+    "trials/final-01/edited-setups/Mathlib.Probability.Moments.ComplexMGF.header.json": {
+      "bytes": 1135,
+      "sha256": "8201afe1f8cd755ce846304681f51fb65cfc80959cbadc89785a2dee17463947"
+    },
+    "trials/final-01/edited-setups/Mathlib.Probability.Moments.ComplexMGF.raw-setup.json": {
+      "bytes": 1645747,
+      "sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157"
+    },
+    "trials/final-01/edited-setups/Mathlib.Probability.Moments.ComplexMGF.setup.json": {
+      "bytes": 1865700,
+      "sha256": "6c16fa1731c8aff0a14abd7473e0d92b0978c4ae551ed23d2e3aa68bc53264d0"
+    },
+    "trials/final-01/input-manifest.json": {
+      "bytes": 6227,
+      "sha256": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/command.json": {
+      "bytes": 1086,
+      "sha256": "ee0c73a2372ca408c93a5a776b6d2f940980b6cc44eada8e4c6cb9018e776154"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/process.json": {
+      "bytes": 234,
+      "sha256": "55526f2da3537b1b79e8899249604674a1fdf5279bc5fc0189440758181752db"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/command.json": {
+      "bytes": 1041,
+      "sha256": "165491fd235a381e97211ee48ba1dff9460d722d129efd900086e9ea3b96685f"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/process.json": {
+      "bytes": 224,
+      "sha256": "c52f1626c1d21ed2789cd9a78f46356e8896b476e3b2d526cc79b12f5a9e8cce"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/command.json": {
+      "bytes": 1036,
+      "sha256": "03f8d4a8a554ed88f7744136ae003360da638fa1f43fcf813b851911bcd814ee"
+    },
+    "trials/final-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/process.json": {
+      "bytes": 222,
+      "sha256": "19ff129fd7596bb670943f9b59575ac537ae0799b5d9d84d6a9b3cb4dfc1cd3b"
+    },
+    "trials/final-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/Probability/Moments/ComplexMGF/command.json": {
+      "bytes": 976,
+      "sha256": "6c8fcd0fcdd434525e180effa81c635adc718075c74a4d3a48a2243d8ee9e968"
+    },
+    "trials/final-01/logs/Mathlib/Probability/Moments/ComplexMGF/process.json": {
+      "bytes": 211,
+      "sha256": "fc8f5c300e4d53b971e7679a1c3202e4b23324140acadfff73cc5d3dffcf87df"
+    },
+    "trials/final-01/logs/Mathlib/Probability/Moments/ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/logs/Mathlib/Probability/Moments/ComplexMGF/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/report.json": {
+      "bytes": 31486,
+      "sha256": "e19971b7b6b5c982ba9a0c649db90eb8bc6d8348e6b5e8c2e444c836cd09d58b"
+    },
+    "trials/final-01/resolved-setups/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.setup.json": {
+      "bytes": 1269231,
+      "sha256": "7490d0327ec313949a2226112c7c2f2ca647af3d0c19136e6436c211c0c1353d"
+    },
+    "trials/final-01/resolved-setups/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.setup.json": {
+      "bytes": 1274534,
+      "sha256": "4fced0257006efb064ed4ce3237caba67cd5418deae2c47251252fdc41594ae1"
+    },
+    "trials/final-01/resolved-setups/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.setup.json": {
+      "bytes": 1428833,
+      "sha256": "3b618c4fc001ebdd463aeca72e0fa8c1eb539f22d341f3845b619dde0b58fa90"
+    },
+    "trials/final-01/resolved-setups/Mathlib/Probability/Moments/ComplexMGF.setup.json": {
+      "bytes": 1865747,
+      "sha256": "30ef503f815da6a08f151adbf6bd2f039a2bc2791db7dfe4ed11bfaf1c277994"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/command.json": {
+      "bytes": 796,
+      "sha256": "f9319aed4543d1a25f53a1c10a502a14439d9a6e984bbd40246d67854c0fa12d"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/process.json": {
+      "bytes": 244,
+      "sha256": "4515995cf25393f8803ed5b501dd6561ff2ffc8d5722298e4b4eda3c50d587eb"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stdout.log": {
+      "bytes": 1116131,
+      "sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/command.json": {
+      "bytes": 1257,
+      "sha256": "66f8ddf9353e3beb26fee1288ea090996cda618460fa5142776fe890694e15af"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/process.json": {
+      "bytes": 238,
+      "sha256": "4fb2209f6dc1e3d32d00c0549298ad339028ca0e0ebbf96997dbbd3880f6ca5a"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/stdout.log": {
+      "bytes": 1120834,
+      "sha256": "249dfeee6b524def1bdc35e232d389f1ff6b417018fc78df3d86233260f5ca3a"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/command.json": {
+      "bytes": 1125,
+      "sha256": "eb851d7d40cebba78c367209d7ca36ebeed5530d17783ebace46e1e3157bd49f"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/process.json": {
+      "bytes": 236,
+      "sha256": "1b15b98a30bc1d0aa8429cd02a012238f5c0badf1c339b1224a8df61d45633f7"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stdout.log": {
+      "bytes": 1257508,
+      "sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/command.json": {
+      "bytes": 1139,
+      "sha256": "2336db742f5dc34324492b52a67096c078049a0b42c0c620ace8b1b730044250"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/process.json": {
+      "bytes": 223,
+      "sha256": "9652041e1dfeb38c2fd0383c8de8fdbc0492df8233d5747fdedf7ef529c7c755"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stdout.log": {
+      "bytes": 1645747,
+      "sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157"
+    },
+    "trials/final-01/setup/next-headers-000000/command.json": {
+      "bytes": 711,
+      "sha256": "8087dce7eab144c32821a9db29a0026d0a4bf67842672cdee1d3e5e81b74faac"
+    },
+    "trials/final-01/setup/next-headers-000000/process.json": {
+      "bytes": 195,
+      "sha256": "e71df4f82634dc0deae690480cbbc304020c8cf70dc3cc7050bbfe0bd6f719db"
+    },
+    "trials/final-01/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/final-01/setup/next-headers-000000/stdout.log": {
+      "bytes": 2988,
+      "sha256": "05302ccddbb2314c7bc89a40f1338b53f29744457c8ee66de4041ec516f0dd4c"
+    },
+    "trials/final-01/sources/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean": {
+      "bytes": 7367,
+      "sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e"
+    },
+    "trials/final-01/sources/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean": {
+      "bytes": 34327,
+      "sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f"
+    },
+    "trials/final-01/sources/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean": {
+      "bytes": 6401,
+      "sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce"
+    },
+    "trials/final-01/sources/Mathlib/Probability/Moments/ComplexMGF.lean": {
+      "bytes": 15418,
+      "sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01"
+    },
+    "trials/hensel-01/input-manifest.json": {
+      "bytes": 2527,
+      "sha256": "cb3765c8a012493c9d994e3e2605babc79642925b04158ca80e339c442750c33"
+    },
+    "trials/hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel/command.json": {
+      "bytes": 962,
+      "sha256": "19d75c617c1d993256a6d2ed43ba6bdee0b9bb8d63779dbe486ededb75b0db9e"
+    },
+    "trials/hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel/process.json": {
+      "bytes": 209,
+      "sha256": "2a0d3c683408d34ea0f1927366f0a8129f9022609cb02984b102f4603684784b"
+    },
+    "trials/hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel/stdout.log": {
+      "bytes": 350,
+      "sha256": "b1801dfe1c84cdf2397dba289f88e4caea1e44a4866d2d878849c9f9fc178d57"
+    },
+    "trials/hensel-01/report.json": {
+      "bytes": 7797,
+      "sha256": "6f36fc10431508e2ce99a5b323a49c8497255ca93077dfa1c82752e3fac215d6"
+    },
+    "trials/hensel-01/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/command.json": {
+      "bytes": 1109,
+      "sha256": "c06b599ac1db520f6043ebae518209fc9f71bea324e49092debfd991cc45b473"
+    },
+    "trials/hensel-01/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/process.json": {
+      "bytes": 221,
+      "sha256": "1add3cb42b3eda98ab3d54d7efc14a4a9611ef2be73c371ce74959dbe3a2c1a6"
+    },
+    "trials/hensel-01/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-01/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/stdout.log": {
+      "bytes": 1172897,
+      "sha256": "b5f354506b486bf959be916d3707b74b84bc569f3364ae2c514dd0859d19ddc5"
+    },
+    "trials/hensel-01/setup/next-headers-000000/command.json": {
+      "bytes": 259,
+      "sha256": "4b87cdfb7365a3e0fec05e4d7b34595e1d189f53ff475085bb6b2651896d4802"
+    },
+    "trials/hensel-01/setup/next-headers-000000/process.json": {
+      "bytes": 196,
+      "sha256": "281b3fe5514c2bfbf36bd3ee66994d30f25b578e088bf868087610ce69ac9132"
+    },
+    "trials/hensel-01/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-01/setup/next-headers-000000/stdout.log": {
+      "bytes": 798,
+      "sha256": "5d5dccf407bf5714c86f4f28a6f27c38b2cb4d63830bc5d4a76e8bfbf07eed41"
+    },
+    "trials/hensel-02/input-manifest.json": {
+      "bytes": 2555,
+      "sha256": "989b4dec4706b0dd3058d7a2db9fbfc899282c7bf0ea9d145bf30f7dbebccb9c"
+    },
+    "trials/hensel-02/logs/Mathlib/NumberTheory/Padics/Hensel/command.json": {
+      "bytes": 962,
+      "sha256": "a97216af41231fcd691ff24375c995b115fc6f7079c0beb688de5efa2594a04c"
+    },
+    "trials/hensel-02/logs/Mathlib/NumberTheory/Padics/Hensel/process.json": {
+      "bytes": 208,
+      "sha256": "2b6fdf747ffbbb26489841b788b6a477d6e63ac43bb499ca2e1e70f5713574de"
+    },
+    "trials/hensel-02/logs/Mathlib/NumberTheory/Padics/Hensel/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-02/logs/Mathlib/NumberTheory/Padics/Hensel/stdout.log": {
+      "bytes": 976,
+      "sha256": "ad9d735391d8c76d701446948b0c21ce6ddd96533a4d7cdf377af014b23017a5"
+    },
+    "trials/hensel-02/report.json": {
+      "bytes": 7810,
+      "sha256": "834017efa2248cf5a8cd4824bf4c15659022ed4c5df96342be8136b6e5dea671"
+    },
+    "trials/hensel-02/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/command.json": {
+      "bytes": 1109,
+      "sha256": "c06b599ac1db520f6043ebae518209fc9f71bea324e49092debfd991cc45b473"
+    },
+    "trials/hensel-02/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/process.json": {
+      "bytes": 221,
+      "sha256": "5f007116993a73d32bb869662a07fcd9a26c9cd7c608ab298fe484c4c834b7e6"
+    },
+    "trials/hensel-02/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-02/setup/next-edited-Mathlib.NumberTheory.Padics.Hensel/stdout.log": {
+      "bytes": 1172897,
+      "sha256": "b5f354506b486bf959be916d3707b74b84bc569f3364ae2c514dd0859d19ddc5"
+    },
+    "trials/hensel-02/setup/next-headers-000000/command.json": {
+      "bytes": 259,
+      "sha256": "de86324c5da565bba1261ebef96a54759e992302e439c7aef0ce80317a1c17f7"
+    },
+    "trials/hensel-02/setup/next-headers-000000/process.json": {
+      "bytes": 196,
+      "sha256": "8f6f83c7615d1d29ee719f6e8f771c3a7df4342ee4b9a0c00bfd4179a0812699"
+    },
+    "trials/hensel-02/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/hensel-02/setup/next-headers-000000/stdout.log": {
+      "bytes": 798,
+      "sha256": "5d5dccf407bf5714c86f4f28a6f27c38b2cb4d63830bc5d4a76e8bfbf07eed41"
+    },
+    "trials/trial-01/input-manifest.json": {
+      "bytes": 6373,
+      "sha256": "a7b247769b930500240fedaaf7c60447b7a774bbd7d5a902dc4dc15e55cd356c"
+    },
+    "trials/trial-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/command.json": {
+      "bytes": 1086,
+      "sha256": "c5a63d6b04d27849b24b06c9027a3f2360c75bc20f07c1d80128553da0c38931"
+    },
+    "trials/trial-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/process.json": {
+      "bytes": 233,
+      "sha256": "094e24457ca5ffdd5d9517490a9c662edcf0ba7cf5d8253975f3d7d914b487b4"
+    },
+    "trials/trial-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stdout.log": {
+      "bytes": 893,
+      "sha256": "8479cde9945a8bfb94c2dfcb348b6f129cf20b389ba413595d49529e4e532954"
+    },
+    "trials/trial-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/command.json": {
+      "bytes": 1036,
+      "sha256": "608f58804f355a8683a7e95e970072a203cac8ce82445df7ae27155abfc6911f"
+    },
+    "trials/trial-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/process.json": {
+      "bytes": 222,
+      "sha256": "711c83aeaca2b29d95b49fb3d11ab9704522675feb0b1d46c9f636fb00a7bf2a"
+    },
+    "trials/trial-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stdout.log": {
+      "bytes": 589,
+      "sha256": "2939c14a1bd58d7bc75186a0dc75694257773384d0c10e33cbd7921d780d1b20"
+    },
+    "trials/trial-01/logs/Mathlib/Probability/Moments/ComplexMGF/command.json": {
+      "bytes": 976,
+      "sha256": "8423b39dcf14b15ab6f66cc37162ccdb7f25d6f4d2a5ac1c5386d583d49159e7"
+    },
+    "trials/trial-01/logs/Mathlib/Probability/Moments/ComplexMGF/process.json": {
+      "bytes": 212,
+      "sha256": "4ea9a51932dcb17e94cbdad39f3bcc0d453993f9fc3699860e554fe0ed4c1509"
+    },
+    "trials/trial-01/logs/Mathlib/Probability/Moments/ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/logs/Mathlib/Probability/Moments/ComplexMGF/stdout.log": {
+      "bytes": 425,
+      "sha256": "b87a927708847bfd9b84d15925db3c72296750bbca10577cbd14150e2dcf6c7b"
+    },
+    "trials/trial-01/report.json": {
+      "bytes": 23018,
+      "sha256": "684537e2b93e5b4a4f99873a14efba833ac95f2d9bdd4a3afcc8206feedfa33e"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/command.json": {
+      "bytes": 796,
+      "sha256": "f9319aed4543d1a25f53a1c10a502a14439d9a6e984bbd40246d67854c0fa12d"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/process.json": {
+      "bytes": 246,
+      "sha256": "d8d310c5f582a47bced3249a6bf5738bfb466d405dcc3f6f6f3eab09ed8c4ae9"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stdout.log": {
+      "bytes": 1116131,
+      "sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/command.json": {
+      "bytes": 1125,
+      "sha256": "eb851d7d40cebba78c367209d7ca36ebeed5530d17783ebace46e1e3157bd49f"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/process.json": {
+      "bytes": 236,
+      "sha256": "f5c22753c40cf11073087ff72986de4e0624b4f63e14700a6729e4702bbe9235"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stdout.log": {
+      "bytes": 1257508,
+      "sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/command.json": {
+      "bytes": 1139,
+      "sha256": "2336db742f5dc34324492b52a67096c078049a0b42c0c620ace8b1b730044250"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/process.json": {
+      "bytes": 224,
+      "sha256": "b5f704bb01fd00884343f207a1ce8dcff036cd7dccd9920f00e7b5a15b1cb31a"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stdout.log": {
+      "bytes": 1645747,
+      "sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157"
+    },
+    "trials/trial-01/setup/next-headers-000000/command.json": {
+      "bytes": 564,
+      "sha256": "8a5aeb40ca5fd4e81e2866f7f55701b52987530e9a2b2dcc5b4cc0337d857b32"
+    },
+    "trials/trial-01/setup/next-headers-000000/process.json": {
+      "bytes": 194,
+      "sha256": "3f1caf25627501999f544a012c90ec35d7905bcd358f1ad7bf4508a3e418c5e4"
+    },
+    "trials/trial-01/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-01/setup/next-headers-000000/stdout.log": {
+      "bytes": 2083,
+      "sha256": "abd44d85555f5d67b455da0b447e2941a150745d91f8c4fed184bb70c2c31fd3"
+    },
+    "trials/trial-02/input-manifest.json": {
+      "bytes": 6469,
+      "sha256": "65cd5fc5d35cdf86031d2f983dde85500a54d8093aeeba0a2bf7e52bec17b73b"
+    },
+    "trials/trial-02/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/command.json": {
+      "bytes": 1086,
+      "sha256": "e3d2432b3b3054ee01f4622f7ea8d2e89569c2a4d39b4487bbf4aae138a3331d"
+    },
+    "trials/trial-02/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/process.json": {
+      "bytes": 233,
+      "sha256": "a25826f3ea8a571a4f0fc2df56f024f86c87713c0a2aa5368e22c6670401a4bf"
+    },
+    "trials/trial-02/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stdout.log": {
+      "bytes": 448,
+      "sha256": "956f931c883f5e48b974f245de853138f7701fe4531fde1eeed3726e493fc914"
+    },
+    "trials/trial-02/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/command.json": {
+      "bytes": 1036,
+      "sha256": "c862fb27aee447d51ca558fa581d492788704d4d56b124d99fa73cbd3309aa3e"
+    },
+    "trials/trial-02/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/process.json": {
+      "bytes": 224,
+      "sha256": "3b25f1244b55dee88672aa7a5e91279a9d702ca36ee99c5f0d3b547d6eac993e"
+    },
+    "trials/trial-02/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/logs/Mathlib/Probability/Moments/ComplexMGF/command.json": {
+      "bytes": 976,
+      "sha256": "a1926bf5f684372aef3dbff86665c2d2510bf0c102a9e3efaff95e0d3176f806"
+    },
+    "trials/trial-02/logs/Mathlib/Probability/Moments/ComplexMGF/process.json": {
+      "bytes": 212,
+      "sha256": "41e401ff5b394c3f842c8cb23b6087bc3aa9040b5b7b58d1f8849d8ed50ed037"
+    },
+    "trials/trial-02/logs/Mathlib/Probability/Moments/ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/logs/Mathlib/Probability/Moments/ComplexMGF/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/report.json": {
+      "bytes": 24760,
+      "sha256": "396b5de2bc056341a8e11a70865b0be6455d582ba864a809c95ec5687f9ab9c4"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/command.json": {
+      "bytes": 796,
+      "sha256": "f9319aed4543d1a25f53a1c10a502a14439d9a6e984bbd40246d67854c0fa12d"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/process.json": {
+      "bytes": 246,
+      "sha256": "b012d81502f54df619d941771b2571733217668a957c73b77c02e9c7284769d7"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stdout.log": {
+      "bytes": 1116131,
+      "sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/command.json": {
+      "bytes": 1125,
+      "sha256": "eb851d7d40cebba78c367209d7ca36ebeed5530d17783ebace46e1e3157bd49f"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/process.json": {
+      "bytes": 236,
+      "sha256": "bde45d5353e65751fc3340111b9a8081b37904556faeae116053a294ac109d02"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stdout.log": {
+      "bytes": 1257508,
+      "sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/command.json": {
+      "bytes": 1139,
+      "sha256": "2336db742f5dc34324492b52a67096c078049a0b42c0c620ace8b1b730044250"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/process.json": {
+      "bytes": 224,
+      "sha256": "3de5ec245ad150fbba1b5c6089f9202e9f76d70cd7d6ffd6e76e5e86beb6ba3e"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stdout.log": {
+      "bytes": 1645747,
+      "sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157"
+    },
+    "trials/trial-02/setup/next-headers-000000/command.json": {
+      "bytes": 564,
+      "sha256": "63fd94d020390fc21594cd0cf27620cf18b75ea81d1fc1eb340b2d00d0eddb69"
+    },
+    "trials/trial-02/setup/next-headers-000000/process.json": {
+      "bytes": 196,
+      "sha256": "f2538a0bbc9f0ed4809fdab5bc533e2d94f3de3450d722f87f160c660d74ef8d"
+    },
+    "trials/trial-02/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-02/setup/next-headers-000000/stdout.log": {
+      "bytes": 2083,
+      "sha256": "abd44d85555f5d67b455da0b447e2941a150745d91f8c4fed184bb70c2c31fd3"
+    },
+    "trials/trial-03/input-manifest.json": {
+      "bytes": 7825,
+      "sha256": "b1625bcf66fcdb7c637d467f55b748acc655e585d2939fc8dca53bc868f69007"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/command.json": {
+      "bytes": 1086,
+      "sha256": "33fd6764d544184d0c8c00e650ee4c77206d0dd922af3f6819aaf1ebbb0809cb"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/process.json": {
+      "bytes": 234,
+      "sha256": "59552a5290a7cad85993747448bd4beb4af6220d764caa0b3c08c0d97ed4d6dd"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Ring/Units/command.json": {
+      "bytes": 956,
+      "sha256": "4b0285016b8b6538814d2ab627afab5f9f259fdc8186253eface5494e1b95d27"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Ring/Units/process.json": {
+      "bytes": 208,
+      "sha256": "cacf79eb6e9ae6f1299a94d43c32bd6c4308314a57fa4cbe67f42e1c4a25bccb"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Ring/Units/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Ring/Units/stdout.log": {
+      "bytes": 5112,
+      "sha256": "7c2ecef4c8206b04fd55d7befd0b0dc33cf16402f7d5be6e420d9081246c667c"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/command.json": {
+      "bytes": 1041,
+      "sha256": "4f860b9f37e1506e4b2c3b5435136e41803dc65ad3ffc1cdb5fc757e8fa08f25"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/process.json": {
+      "bytes": 224,
+      "sha256": "e2bfc0f3655cd9714e4976d34e4216a4de81df0ea40caaffa4a2629727aec982"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/command.json": {
+      "bytes": 1036,
+      "sha256": "03733c28b0e60756ba81dcd87760929c8904b7281c4d2edc22f4ee92d54a085a"
+    },
+    "trials/trial-03/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/process.json": {
+      "bytes": 224,
+      "sha256": "a6746600d1b4c278536b179f1d1dc385643e6f0705480ba2b120799e6511929d"
+    },
+    "trials/trial-03/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform/stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/report.json": {
+      "bytes": 36050,
+      "sha256": "6c54eded48e7d957bf2809e50119d84ccf1ac63325052afac1b3664df5c56d99"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/command.json": {
+      "bytes": 796,
+      "sha256": "f9319aed4543d1a25f53a1c10a502a14439d9a6e984bbd40246d67854c0fa12d"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/process.json": {
+      "bytes": 246,
+      "sha256": "44cba6a4631ca3cdd0a62fb5e342caa7efde63df2f759486460ca88aa108b8b6"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/stdout.log": {
+      "bytes": 1116131,
+      "sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Ring.Units/command.json": {
+      "bytes": 763,
+      "sha256": "f912d19996d45d9a4b43edb2a6a06828a14c290c3477e6eb749ea18692203cbd"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Ring.Units/process.json": {
+      "bytes": 220,
+      "sha256": "2dc8b9b5687b0426270dad05069550591a0c8527f9317e474cf1952060609b00"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Ring.Units/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Ring.Units/stdout.log": {
+      "bytes": 991331,
+      "sha256": "f9d991183ed36bf2da81a7e4946af4d5ad23153ea75f3ed96491b7fe58f6f1cd"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/command.json": {
+      "bytes": 1257,
+      "sha256": "66f8ddf9353e3beb26fee1288ea090996cda618460fa5142776fe890694e15af"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/process.json": {
+      "bytes": 237,
+      "sha256": "36f02dae64f29262b377e7f7eba03cd950775bc5dca66002f201a3574f6c88dd"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/stdout.log": {
+      "bytes": 1120834,
+      "sha256": "249dfeee6b524def1bdc35e232d389f1ff6b417018fc78df3d86233260f5ca3a"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/command.json": {
+      "bytes": 1125,
+      "sha256": "eb851d7d40cebba78c367209d7ca36ebeed5530d17783ebace46e1e3157bd49f"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/process.json": {
+      "bytes": 236,
+      "sha256": "73b7a2305392500fbb8418466078047c3662c47605c2008ffbf07d66c080558e"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.NumberTheory.Padics.Measure.AmiceTransform/stdout.log": {
+      "bytes": 1257508,
+      "sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/command.json": {
+      "bytes": 1139,
+      "sha256": "2336db742f5dc34324492b52a67096c078049a0b42c0c620ace8b1b730044250"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/process.json": {
+      "bytes": 224,
+      "sha256": "24620143f76c958b703c322ba0b4ae54e189df06a9bd79779c40e33e3d04e193"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-edited-Mathlib.Probability.Moments.ComplexMGF/stdout.log": {
+      "bytes": 1645747,
+      "sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157"
+    },
+    "trials/trial-03/setup/next-headers-000000/command.json": {
+      "bytes": 841,
+      "sha256": "4a6e667cbca401868793dd411865a2e5f050686a76683eb2acfdf6dd6f5f8eb1"
+    },
+    "trials/trial-03/setup/next-headers-000000/process.json": {
+      "bytes": 196,
+      "sha256": "380cd7a14b7d7d74e7870623b9380520fe1e9a9cb5ab19096cb7f7c3e5162d96"
+    },
+    "trials/trial-03/setup/next-headers-000000/stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trials/trial-03/setup/next-headers-000000/stdout.log": {
+      "bytes": 3456,
+      "sha256": "8bec770355d59c07339c7f8523d3b9ccd692f2054eb6961c196a8345f7f5e4d2"
+    },
+    "verification-receipt.json": {
+      "bytes": 11218,
+      "sha256": "9274941af1768ed039f43e38e13c37b3a7c4efa12e0f6b7e1b6f1dc63cd98af7"
+    },
+    "confirmed.json": {
+      "bytes": 6227,
+      "sha256": "9d89f37036089e96d2495c59113b63ea1cc92e65ade4980c4774639659372971"
+    }
+  }
+}

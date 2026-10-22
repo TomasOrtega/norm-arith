@@ -1,0 +1,1 @@
+{"caption":"","data":"Unknown identifier `rw`","endPos":{"column":6,"line":315},"fileName":"/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/sources/Mathlib/NumberTheory/Padics/Hensel.lean","isSilent":false,"keepFullRange":false,"kind":"lean.unknownIdentifier._namedError","pos":{"column":4,"line":315},"severity":"error"}

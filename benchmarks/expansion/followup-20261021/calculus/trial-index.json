@@ -1,0 +1,143 @@
+[
+  {
+    "trial": ".lake/followup-calculus-01",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/01",
+    "report_sha256": "9efcd7a6078795ba13f5c23b37382b98962bab64e6d91aadf7f150aba9c6f64e",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "status": "failed"
+      },
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "blocked_dependency"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "status": "blocked_dependency"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "status": "failed"
+      },
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "status": "blocked_dependency"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-02",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/02",
+    "report_sha256": "b9350283df32f55e9728c0f0f30de3d3a6d88f3790887028cb3af729f6e6e3e9",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "failed"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "status": "blocked_dependency"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-04",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/04",
+    "report_sha256": "813fc8a441686edebf040cd42537edc42cd7c686de915d744fe8542966f6c4ff",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "failed"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "status": "blocked_dependency"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-convolution-03",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/convolution-03",
+    "report_sha256": "60d57b5c71375b3faebd34974390e447d44bc3fb0fcd4d80d425998c552bab5a",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-final-05",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/final-05",
+    "report_sha256": "8c04162f037b0edb1ac698a6d2f6a37fd161569b8ec1b0c2368afa56a1d5de0d",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Convolution.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean",
+        "status": "verified"
+      },
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-picard-03",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/picard-03",
+    "report_sha256": "841662768a7b289d6b5961d0af8fbd64f572cd9be89e9b8b1ac54c6674aaeebb",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/ODE/PicardLindelof.lean",
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "trial": ".lake/followup-calculus-schwartz-01",
+    "durable_copy": "benchmarks/expansion/followup-20261021/calculus/trials/schwartz-01",
+    "report_sha256": "6dd662ebeec2fc5a87189b3cc4aaf4c8de12d95a7c452adf6121e02351771681",
+    "files": [
+      {
+        "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean",
+        "status": "verified"
+      }
+    ]
+  }
+]

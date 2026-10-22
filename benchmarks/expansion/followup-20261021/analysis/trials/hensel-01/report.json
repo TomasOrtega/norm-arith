@@ -1,0 +1,163 @@
+{
+  "scope": "exploratory manual complete-file compilation; no timing claim",
+  "accounting": {
+    "candidate_count": 1,
+    "candidate_status_counts": {
+      "replace": 1
+    },
+    "proposed_replacements": 1,
+    "original_proof_lines": 13,
+    "replacement_proof_lines": 7,
+    "added_helper_lines": 0,
+    "added_import_lines": 1,
+    "candidates": [
+      {
+        "id": "followup-hensel-ultrametric-telescope",
+        "path": "Mathlib/NumberTheory/Padics/Hensel.lean",
+        "status": "replace",
+        "reason": "Retain the ultrametric and scalar monotonicity bounds while checking the telescoping identity.",
+        "declaration": "_private.Mathlib.NumberTheory.Padics.Hensel.0.newton_seq_dist_aux",
+        "parent_declaration": "_private.Mathlib.NumberTheory.Padics.Hensel.0.newton_seq_dist_aux",
+        "start_line": 310,
+        "end_line": 322,
+        "original_sha256": "fedd1a597f94ed7d94280030896551aea539ea56762ae3f2d46b228614c0a633",
+        "proof_replacement": "have hpow : ‖F.derivative.aeval a‖ * T ^ 2 ^ (n + k) ≤ ‖F.derivative.aeval a‖ * T ^ 2 ^ n :=\n      mul_le_mul_of_nonneg_left\n        (pow_le_pow_of_le_one (norm_nonneg _) (T_lt_one hnorm).le this) (norm_nonneg _)\n    have hmax := max_le ((newton_seq_succ_dist _ _).trans hpow) (newton_seq_dist_aux _ _)\n    rw [← add_assoc]\n    norm_arith [hmax, PadicInt.nonarchimedean\n      (newton_seq (n + k + 1) - newton_seq (n + k)) (newton_seq (n + k) - newton_seq n)]",
+        "source_start_byte": 13461,
+        "source_end_byte": 14272,
+        "observation_key": "tactic:13582:13591:_private.Mathlib.NumberTheory.Padics.Hensel.0.newton_seq_dist_aux:2932999640",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Hensel/attempt-01/events.jsonl",
+        "origin_syntax_kind": "null",
+        "body_start_byte": 13346,
+        "body_end_byte": 14272,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 13,
+        "replacement_proof_lines": 7
+      }
+    ],
+    "net_proof_lines_saved": 6,
+    "net_lines_saved_including_imports": 5
+  },
+  "files": [
+    {
+      "path": "Mathlib/NumberTheory/Padics/Hensel.lean",
+      "candidate_ids": [
+        "followup-hensel-ultrametric-telescope"
+      ],
+      "original_source_sha256": "c1a221e4f94ba124575640c2dc5557d800f44ac67df622ed54128aad86f02884",
+      "replacement_source_sha256": "0ba4505f2de3e9dea5e045f503762d1438905baad9e2fbf626fb29ebecb054b1",
+      "process": {
+        "seconds": 3.1696872919565067,
+        "returncode": 1,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel"
+      },
+      "setup_sha256": "a9615d6dc66903b90c7718f1b8370399feb3d3e7fab16d7bf922b37da27c1d73",
+      "style_diagnostics": [],
+      "status": "failed",
+      "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel"
+    }
+  ],
+  "excluded": {
+    "followup-hensel-ultrametric-telescope": "combined_source_compile_failure: Mathlib/NumberTheory/Padics/Hensel.lean; source_sha256=c1a221e4f94ba124575640c2dc5557d800f44ac67df622ed54128aad86f02884; replacement_sha256=0ba4505f2de3e9dea5e045f503762d1438905baad9e2fbf626fb29ebecb054b1; selected ids rejected as one file-level set: followup-hensel-ultrametric-telescope; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/logs/Mathlib/NumberTheory/Padics/Hensel"
+  },
+  "setups": {
+    "Mathlib/NumberTheory/Padics/Hensel.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/sources/Mathlib/NumberTheory/Padics/Hensel.lean",
+      "source_sha256": "0ba4505f2de3e9dea5e045f503762d1438905baad9e2fbf626fb29ebecb054b1",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.NumberTheory.Padics.PadicIntegers"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Topology.Algebra.Polynomial"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Algebra.Polynomial.Identities"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.SpecificLimits.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.MetricSpace.CauSeqFilter"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/edited-setups/Mathlib.NumberTheory.Padics.Hensel.header.json",
+      "header_sha256": "f9a55a561c72cb823a978bb770dc2dc7c25e717126bd62e53f09a30c7d6cab5b",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/edited-setups/Mathlib.NumberTheory.Padics.Hensel.raw-setup.json",
+      "raw_setup_sha256": "b5f354506b486bf959be916d3707b74b84bc569f3364ae2c514dd0859d19ddc5",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-01/edited-setups/Mathlib.NumberTheory.Padics.Hensel.setup.json",
+      "setup_sha256": "0f8e2797ab95ea0b97053e084e342bcf8fef7b9493ea96fc37f5ed0f3e952893",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    }
+  }
+}

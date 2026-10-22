@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/sources/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+    "-R",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/sources",
+    "--setup",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/resolved-setups/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.setup.json",
+    "-o",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean",
+    "-i",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ilean",
+    "-c",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-02/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.c",
+    "--json",
+    "-j",
+    "1"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

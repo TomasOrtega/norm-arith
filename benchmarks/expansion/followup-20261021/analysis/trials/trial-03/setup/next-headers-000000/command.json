@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lean",
+    "--deps-json",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Probability/Moments/ComplexMGF.lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Normed/Ring/Units.lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

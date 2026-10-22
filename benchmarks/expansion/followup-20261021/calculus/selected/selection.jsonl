@@ -1,0 +1,13 @@
+{"id": "followup-calculus-contdiff-inside", "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-contdiff-outside", "path": "Mathlib/Analysis/Calculus/ContDiff/Convolution.lean", "outcome": "selected", "proof_lines_saved": 2}
+{"id": "followup-calculus-uniform-ball", "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-uniform-mvt", "path": "Mathlib/Analysis/Calculus/UniformLimitsDeriv.lean", "outcome": "selected", "proof_lines_saved": 3}
+{"id": "followup-calculus-convolution-local", "path": "Mathlib/Analysis/Convolution.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-convolution-limit", "path": "Mathlib/Analysis/Convolution.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-schwartz-antilipschitz", "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean", "outcome": "selected", "proof_lines_saved": 2}
+{"id": "followup-calculus-schwartz-max", "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean", "outcome": "selected", "proof_lines_saved": 3}
+{"id": "followup-calculus-schwartz-norm", "path": "Mathlib/Analysis/Distribution/SchwartzSpace/Basic.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-finite-witness", "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean", "outcome": "selected", "proof_lines_saved": 3}
+{"id": "followup-calculus-finite-symmetry", "path": "Mathlib/Analysis/Normed/Module/FiniteDimension.lean", "outcome": "selected", "proof_lines_saved": 1}
+{"id": "followup-calculus-picard-ball", "path": "Mathlib/Analysis/ODE/PicardLindelof.lean", "outcome": "selected", "proof_lines_saved": 5}
+{"id": "followup-calculus-picard-local", "path": "Mathlib/Analysis/ODE/PicardLindelof.lean", "outcome": "selected", "proof_lines_saved": 7}

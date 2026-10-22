@@ -1,0 +1,704 @@
+{
+  "scope": "exploratory manual complete-file compilation; no timing claim",
+  "accounting": {
+    "candidate_count": 5,
+    "candidate_status_counts": {
+      "replace": 5
+    },
+    "proposed_replacements": 5,
+    "original_proof_lines": 21,
+    "replacement_proof_lines": 11,
+    "added_helper_lines": 0,
+    "added_import_lines": 5,
+    "candidates": [
+      {
+        "id": "followup-second-main-separation",
+        "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+        "status": "replace",
+        "reason": "Combine the separation bound with a triangle certificate; retain the scalar reciprocal estimate.",
+        "declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+        "parent_declaration": "Real.exists_sum_posLog_inv_norm_sub_le",
+        "start_line": 90,
+        "end_line": 95,
+        "original_sha256": "0e9ae5988fc0705c110b6701510bc4f81a53ac9d04ae2aa77bfaa42772259244",
+        "proof_replacement": "have h1 : δ / (2 * #s) ≤ δ / 4 := by\n          gcongr\n          linarith\n        norm_arith [hnear, h1, hδgap a₀ ha₀ b (by grind) (by grind)]",
+        "source_start_byte": 4088,
+        "source_end_byte": 4363,
+        "observation_key": "tactic:2353:2501:Real.exists_sum_posLog_inv_norm_sub_le:3727209014",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem/attempt-02/events.jsonl",
+        "origin_syntax_kind": "Lean.Parser.Tactic.obtain",
+        "body_start_byte": 2040,
+        "body_end_byte": 7464,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 6,
+        "replacement_proof_lines": 4
+      },
+      {
+        "id": "followup-amice-operator-norm",
+        "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+        "status": "replace",
+        "reason": "Transport the coefficient bound through the two isometric norms.",
+        "declaration": "AbstractMeasure.invTransform",
+        "parent_declaration": "AbstractMeasure.invTransform",
+        "start_line": 136,
+        "end_line": 139,
+        "original_sha256": "61383f56fc9f9d4f195a7651f4de43358058ec904df0cd9ea8dc6b9416d22aa1",
+        "proof_replacement": "norm_arith [(PadicInt.mahlerEquiv ℤ_[p]).norm_map f,\n      BoundedContinuousFunction.norm_coe_le_norm (PadicInt.mahlerEquiv ℤ_[p] f).toBCF i]",
+        "source_start_byte": 4835,
+        "source_end_byte": 5126,
+        "observation_key": "tactic:4680:4687:AbstractMeasure.invTransform:2505273936",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.NumberTheory.Padics.Measure.AmiceTransform/attempt-01/events.jsonl",
+        "origin_syntax_kind": "null",
+        "body_start_byte": 4600,
+        "body_end_byte": 5126,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 4,
+        "replacement_proof_lines": 2
+      },
+      {
+        "id": "followup-complex-mgf-realpart",
+        "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+        "status": "replace",
+        "reason": "Derive the real-part absolute bound from the ball hypothesis and the coordinate norm estimate.",
+        "declaration": "ProbabilityTheory.hasDerivAt_integral_pow_mul_exp",
+        "parent_declaration": "ProbabilityTheory.hasDerivAt_integral_pow_mul_exp",
+        "start_line": 153,
+        "end_line": 155,
+        "original_sha256": "a07fa81c1c10d788cd86d2a0660b71127a8aebcf1eb32528de812e5e0aac97c9",
+        "proof_replacement": "norm_arith [abs_re_le_norm (ε - z), hε]",
+        "source_start_byte": 6553,
+        "source_end_byte": 6657,
+        "observation_key": "term:5748:5796:ProbabilityTheory.hasDerivAt_integral_pow_mul_exp:656495895",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Probability.Moments.ComplexMGF/attempt-01/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 5372,
+        "body_end_byte": 7197,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1
+      },
+      {
+        "id": "followup-units-negative-product",
+        "path": "Mathlib/Analysis/Normed/Ring/Units.lean",
+        "status": "replace",
+        "reason": "Retain the nonlinear product estimate and discharge the norm-negation transport with a checked bound.",
+        "declaration": "Units.add",
+        "parent_declaration": "Units.add",
+        "start_line": 52,
+        "end_line": 56,
+        "original_sha256": "449bb2ae947fed8a7bbe392881a200bb73996845ecaeb279fe543a9eb523dd2c",
+        "proof_replacement": "have hmul : ‖(↑x⁻¹ : R)‖ * ‖t‖ < 1 := by\n        nlinarith only [h, hpos, mul_inv_cancel₀ (ne_of_gt hpos)]\n      norm_arith [hmul, norm_mul_le (x⁻¹).1 t])))",
+        "source_start_byte": 1934,
+        "source_end_byte": 2232,
+        "observation_key": "tactic:1825:1858:Units.add:1274216717",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Normed.Ring.Units/attempt-01/events.jsonl",
+        "origin_syntax_kind": "Mathlib.Tactic.Nontriviality.nontriviality",
+        "body_start_byte": 1704,
+        "body_end_byte": 2270,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 5,
+        "replacement_proof_lines": 3
+      },
+      {
+        "id": "followup-smoothing-dist",
+        "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+        "status": "replace",
+        "reason": "Specialize the convergence bound and use its positive distance side directly.",
+        "declaration": "tendsto_smoothingFun_of_ne_zero",
+        "parent_declaration": "tendsto_smoothingFun_of_ne_zero",
+        "start_line": 146,
+        "end_line": 148,
+        "original_sha256": "e1c85c9062849e0d40c6a6fa61af2a8a9b9f7d8942b07553fbd011b5a55ebe1c",
+        "proof_replacement": "norm_arith [hN n hn]",
+        "source_start_byte": 6569,
+        "source_end_byte": 6651,
+        "observation_key": "term:5540:5560:tendsto_smoothingFun_of_ne_zero:839533399",
+        "origin_event_path": ".lake/expansion-discovery-v4/files/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm/attempt-01/events.jsonl",
+        "origin_syntax_kind": "ident",
+        "body_start_byte": 5405,
+        "body_end_byte": 12507,
+        "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+        "manual_review": true,
+        "original_proof_lines": 3,
+        "replacement_proof_lines": 1
+      }
+    ],
+    "net_proof_lines_saved": 10,
+    "net_lines_saved_including_imports": 5
+  },
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "candidate_ids": [
+        "followup-second-main-separation"
+      ],
+      "original_source_sha256": "d78d40b1780b602227242477a5e7b8ba9f92f5947273a49df620e02f7253c22f",
+      "replacement_source_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+      "process": {
+        "seconds": 1.8827130839927122,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem"
+      },
+      "setup_sha256": "7490d0327ec313949a2226112c7c2f2ca647af3d0c19136e6436c211c0c1353d",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.c": "f1560358e641878ae3206e0264f5f305ff1e25c5aa63df0bb3a6ae4e3d546bf3",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ilean": "c178656565ff1850eb058e66d6a8c864ae373fc43f72965e9bee2e8ca20dcc34",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir": "342419d744c6a70448c8efeb54b276f9d80e9875f29d033b3320f0f73b45ef12",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.ir.sig": "e9718532cc25fd0528a445722e6e358cbaa421f81bbc8c23356612fe5c5ef3af",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean": "a05ef01f2d37b092da776e649543db82f240a575b7e59add75801f7be3c2d278",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.private": "08f03cec54fbb17bcb65e2fc9484a6d1a47af17d2ff6775ab14ff3b35ca04864",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.olean.server": "368b4aac4ad93b63de869d8ca23c9072ebc93836e1dd2b989bd4357989d956d0"
+      }
+    },
+    {
+      "path": "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "candidate_ids": [
+        "followup-amice-operator-norm"
+      ],
+      "original_source_sha256": "930b27d3c90549963102082c0c11f1b109d4f8ddd6cf4c9d05ec5606a0e3b2a9",
+      "replacement_source_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+      "process": {
+        "seconds": 2.1807445830199867,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/NumberTheory/Padics/Measure/AmiceTransform"
+      },
+      "setup_sha256": "3b618c4fc001ebdd463aeca72e0fa8c1eb539f22d341f3845b619dde0b58fa90",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.c": "14b77f981e1aa1c156ec75313cd6deffd327e2aac27f092bf3bc67fa110b6786",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ilean": "5d5d325ded747e665218c83a13008f438f92dc911398bfca50db69b5a700de0b",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir": "c58b4bd6007a260f9fa41360b4e38c5ab5dd705f61a3bbede2647663a88f9b14",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.ir.sig": "2dbcce9866e4f34fd8168d964a4cad3670b1ff207dde2f16b7aa642c60e038ff",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean": "05ee55cd14ccfbc72420e8912b05bd809b7082d6ee8eba22fa2bdc616e9604b1",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.private": "71905b4b555a0c07c588dd60adfcb267949664d8460ac3be572a2a5afeb241f3",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.olean.server": "530cf94565c436218a9fe6a54401b5ddaeee2370576659bc6f9e137e72f4fa4b"
+      }
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Ring/Units.lean",
+      "candidate_ids": [
+        "followup-units-negative-product"
+      ],
+      "original_source_sha256": "ae1c678092cd0d1f2081f063175e042e8a7e6271d4cf89deeaac33c285ec3dd3",
+      "replacement_source_sha256": "9942f08758795c770073f24d0305164cdf734d9c00a333713d021dc122ea30c3",
+      "process": {
+        "seconds": 1.5346049999934621,
+        "returncode": 1,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Normed/Ring/Units"
+      },
+      "setup_sha256": "55fc992542a7d3f3ae79ca479b15fb87273b43206cb3242dec662bc248e601bf",
+      "style_diagnostics": [],
+      "status": "failed",
+      "reason": "command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Normed/Ring/Units"
+    },
+    {
+      "path": "Mathlib/Probability/Moments/ComplexMGF.lean",
+      "candidate_ids": [
+        "followup-complex-mgf-realpart"
+      ],
+      "original_source_sha256": "b7428e7dc7b524a5cf76da8f1ac3d6627fa6620f05227ae8e1a14953cf14267f",
+      "replacement_source_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+      "status": "blocked_dependency",
+      "blocked_by": [
+        "Mathlib/Analysis/Normed/Ring/Units.lean"
+      ],
+      "reason": "an affected dependency failed source verification"
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+      "candidate_ids": [
+        "followup-smoothing-dist"
+      ],
+      "original_source_sha256": "096cc593462d7578246c2e105790ec4593ffbc0630c7de06e9ca0912d69637ee",
+      "replacement_source_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+      "process": {
+        "seconds": 2.249297750007827,
+        "returncode": 0,
+        "timed_out": false,
+        "log_dir": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm"
+      },
+      "setup_sha256": "4fced0257006efb064ed4ce3237caba67cd5418deae2c47251252fdc41594ae1",
+      "style_diagnostics": [],
+      "status": "verified",
+      "artifact_sha256": {
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.c": "81516939022d02091b65efe8f2b689f350f73590b85a378deb3efda531e4a566",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ilean": "75d5eccc5cbf82a6d9e5409f3cbf9962be5b777e453bc6295d31cd584f9dd358",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir": "782348812a0e22a05a1461ed2569628778a0f16a78753b9d84d82f0d4fa3d522",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ir.sig": "a7617775dcd0e45e8c216e3786cc51c01db15d0b24f66064ede561546ba5465b",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean": "30ed0274929ac408c258d45da691bb5c62f2a66671d3799b9ccb549026c771c5",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.private": "699927035d261a8e3a5fd8985ac490c8b126cead5a066e96010803407d0a43ad",
+        "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean.server": "fa34b8710c8c507f8303f4a8a9f0c884e7343c45313960d7fe1baa26be5a7893"
+      }
+    }
+  ],
+  "excluded": {
+    "followup-units-negative-product": "combined_source_compile_failure: Mathlib/Analysis/Normed/Ring/Units.lean; source_sha256=ae1c678092cd0d1f2081f063175e042e8a7e6271d4cf89deeaac33c285ec3dd3; replacement_sha256=9942f08758795c770073f24d0305164cdf734d9c00a333713d021dc122ea30c3; selected ids rejected as one file-level set: followup-units-negative-product; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/logs/Mathlib/Analysis/Normed/Ring/Units"
+  },
+  "setups": {
+    "Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean",
+      "source_sha256": "60e1b102415f664b59e05148f7f97e7d9b29310ee6baf1cbb11a74ba3ce70d6e",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.SpecialFunctions.Log.PosLog"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.MetricSpace.Infsep"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.header.json",
+      "header_sha256": "bb279de0c980d792eb880704d5dad3129a39b27a645de0154b1677a80c09fdfa",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.raw-setup.json",
+      "raw_setup_sha256": "3d6208d7fea1f9f779924b462110d6df5e3dd8a78a7a8335a4ca1fb4bbe5b783",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Complex.ValueDistribution.SecondMainTheorem.setup.json",
+      "setup_sha256": "76a9b2cc189aefebfe91ab416dd3ec384fd3ca8a9845e45c2c0b52819159e534",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean",
+      "source_sha256": "40d8753f44ce53cac8aeb4fcc2fd160b7b1d20e06ac15c3a2432909903e663ce",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.NumberTheory.Padics.MahlerBasis"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.NumberTheory.Padics.Measure.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.RingTheory.PowerSeries.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Algebra.Order.Field.Power"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.Algebra.InfiniteSum.Module"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.header.json",
+      "header_sha256": "fda43e8e6640e5a33f5f23915e6e439644688be26ec38eff7d0c4b4600cad6b7",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.raw-setup.json",
+      "raw_setup_sha256": "f2cc5ffbcd97dc4d1428e3a18af7f9444d4d433bd49944ed13b446ce981c9f07",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.NumberTheory.Padics.Measure.AmiceTransform.setup.json",
+      "setup_sha256": "9570b6e0031eab6477da5d1f958d785c1c38128126db668b4bb9b3705eae1bde",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/Probability/Moments/ComplexMGF.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Probability/Moments/ComplexMGF.lean",
+      "source_sha256": "e621f59ca2b186920d1c5854c24a26a685467438b8a8213702804ed6dcc04b01",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Probability.Moments.Basic"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Probability.Moments.IntegrableExpMul"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.Calculus.ParametricIntegral"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.Complex.CauchyIntegral"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Probability.Moments.ComplexMGF.header.json",
+      "header_sha256": "8201afe1f8cd755ce846304681f51fb65cfc80959cbadc89785a2dee17463947",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Probability.Moments.ComplexMGF.raw-setup.json",
+      "raw_setup_sha256": "a16554e6abda032ae54cbf449f6eddadf3e6e30c63f23dc2e179c07a5c018157",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Probability.Moments.ComplexMGF.setup.json",
+      "setup_sha256": "6c16fa1731c8aff0a14abd7473e0d92b0978c4ae551ed23d2e3aa68bc53264d0",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/Analysis/Normed/Ring/Units.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Normed/Ring/Units.lean",
+      "source_sha256": "9942f08758795c770073f24d0305164cdf734d9c00a333713d021dc122ea30c3",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.SpecificLimits.Normed"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Topology.Algebra.Ring.Ideal"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Ring.Units.header.json",
+      "header_sha256": "d979a37c1747d798193c60448137b60ae6e6688a1f3c0cfaa9476f2c8b83da75",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Ring.Units.raw-setup.json",
+      "raw_setup_sha256": "f9d991183ed36bf2da81a7e4946af4d5ad23153ea75f3ed96491b7fe58f6f1cd",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Ring.Units.setup.json",
+      "setup_sha256": "73c79972491ad308455588486081dba1962ad24d5736c0469c0b86b41280e108",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    },
+    "Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean": {
+      "source": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/sources/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+      "source_sha256": "4818d9c109208f1cc1b15202ea78fd415257f694fe3e3bb0fa9c6ae20be3b12f",
+      "header": {
+        "imports": [
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": true,
+            "module": "Init"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "NormArith"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.Normed.Unbundled.RingSeminorm"
+          },
+          {
+            "importAll": false,
+            "isExported": true,
+            "isMeta": false,
+            "module": "Mathlib.Analysis.SpecialFunctions.Pow.Continuity"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Algebra.Order.GroupWithZero.Bounds"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.MetricSpace.Sequences"
+          },
+          {
+            "importAll": false,
+            "isExported": false,
+            "isMeta": false,
+            "module": "Mathlib.Topology.UnitInterval"
+          }
+        ],
+        "isModule": true
+      },
+      "header_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.header.json",
+      "header_sha256": "f5a589128d0bb75fdde4f1077dd32af896ec9a66155076b547934428df1cd5ab",
+      "raw_setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.raw-setup.json",
+      "raw_setup_sha256": "249dfeee6b524def1bdc35e232d389f1ff6b417018fc78df3d86233260f5ca3a",
+      "setup_file": "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-trial-03/edited-setups/Mathlib.Analysis.Normed.Unbundled.SmoothingSeminorm.setup.json",
+      "setup_sha256": "5b33a6e7c12fedf862b1bc620863a4eafc18ce3b56a643cefba5a124fccbec5f",
+      "compiler_options_source": "original Lake build setup; setup-file server options are excluded",
+      "dynlibs": [],
+      "plugins": [
+        {
+          "path": "/Users/to1717/.elan/toolchains/leanprover--lean4---v4.36.0-rc1/lib/lean/libLake_shared.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/batteries/.lake/build/lib/libbatteries_Batteries.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/importGraph/.lake/build/lib/libimportGraph_ImportGraph.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/Qq/.lake/build/lib/libQq_Qq.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/aesop/.lake/build/lib/libaesop_Aesop.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/proofwidgets/.lake/build/lib/libproofwidgets_ProofWidgets.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/plausible/.lake/build/lib/libplausible_Plausible.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/LeanSearchClient/.lake/build/lib/libLeanSearchClient_LeanSearchClient.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/packages/mathlib/.lake/build/lib/libmathlib_Mathlib.dylib"
+        },
+        {
+          "path": "/Users/to1717/Documents/GitHub/norm-arith/.lake/build/lib/libnorm_x2darith_NormArith.dylib"
+        }
+      ]
+    }
+  }
+}

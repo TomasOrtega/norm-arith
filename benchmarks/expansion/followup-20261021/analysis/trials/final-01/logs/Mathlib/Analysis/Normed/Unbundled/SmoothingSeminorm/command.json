@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/to1717/.elan/bin/lean",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/sources/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean",
+    "-R",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/sources",
+    "--setup",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/resolved-setups/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.setup.json",
+    "-o",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.olean",
+    "-i",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.ilean",
+    "-c",
+    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-final-01/artifacts/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.c",
+    "--json",
+    "-j",
+    "1"
+  ],
+  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
+}

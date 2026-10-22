@@ -1,0 +1,86 @@
+--- a/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean
++++ b/Mathlib/Analysis/Complex/ValueDistribution/SecondMainTheorem.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.SpecialFunctions.Log.PosLog
+ 
+ import Mathlib.Topology.MetricSpace.Infsep
+@@ -90,9 +91,7 @@
+         have h1 : δ / (2 * #s) ≤ δ / 4 := by
+           gcongr
+           linarith
+-        have h2 : δ ≤ ‖w - a₀‖ + ‖w - b‖ := hδgap a₀ ha₀ b (by grind) (by grind) |>.trans <| by
+-          simpa [norm_sub_rev] using norm_sub_le (w - a₀) (w - b)
+-        linarith
++        norm_arith [hnear, h1, hδgap a₀ ha₀ b (by grind) (by grind)]
+       -- Tail estimate: the sum over `s \ {a₀}` is bounded by the constant.
+       have htail : ∑ b ∈ s.erase a₀, log⁺ ‖w - b‖⁻¹ ≤ (#s - 1) * log⁺ (2 * #s / δ) := by
+         have h1 := sum_posLog_inv_norm_sub_le (by positivity) hother
+--- a/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean
++++ b/Mathlib/NumberTheory/Padics/Measure/AmiceTransform.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.NumberTheory.Padics.MahlerBasis
+ public import Mathlib.NumberTheory.Padics.Measure.Basic
+ public import Mathlib.RingTheory.PowerSeries.Basic
+@@ -133,10 +134,8 @@
+     apply IsUltrametricDist.norm_tsum_le_of_forall_le
+     intro i
+     grw [norm_mul, (F.coeff i).norm_le_one, mul_one, one_mul, ← ge_iff_le]
+-    calc ‖f‖ = ‖PadicInt.mahlerEquiv ℤ_[p] f‖ := by rw [← (PadicInt.mahlerEquiv ℤ_[p]).norm_map]
+-      _ = ‖(PadicInt.mahlerEquiv ℤ_[p] f).toBCF‖ := by
+-        rw [← ZeroAtInftyContinuousMap.norm_toBCF_eq_norm]
+-      _ ≥ _ := BoundedContinuousFunction.norm_coe_le_norm ..
++    norm_arith [(PadicInt.mahlerEquiv ℤ_[p]).norm_map f,
++      BoundedContinuousFunction.norm_coe_le_norm (PadicInt.mahlerEquiv ℤ_[p] f).toBCF i]
+ 
+ lemma invTransform_apply (F : ℤ_[p]⟦X⟧) (f : C(ℤ_[p], ℤ_[p])) :
+     invTransform F f = ∑' i, PadicInt.mahlerEquiv ℤ_[p] f i * F.coeff i := by
+--- a/Mathlib/Probability/Moments/ComplexMGF.lean
++++ b/Mathlib/Probability/Moments/ComplexMGF.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic
+ public import Mathlib.Probability.Moments.Basic
+ public import Mathlib.Probability.Moments.IntegrableExpMul
+@@ -150,9 +151,7 @@
+     refine (le_abs_self _).trans ?_
+     rw [abs_mul]
+     gcongr
+-    refine (abs_re_le_norm _).trans ?_
+-    simp only [Metric.mem_ball, dist_eq_norm] at hε
+-    exact hε.le
++    norm_arith [abs_re_le_norm (ε - z), hε]
+   · refine integrable_pow_abs_mul_exp_add_of_integrable_exp_mul ?_ ?_ ?_ ?_ (t := t) (n + 1)
+     · exact h_subset (add_half_inf_sub_mem_Ioo hlu)
+     · exact h_subset (sub_half_inf_sub_mem_Ioo hlu)
+--- a/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean
++++ b/Mathlib/Analysis/Normed/Unbundled/SmoothingSeminorm.lean
+@@ -5,6 +5,7 @@
+ -/
+ module
+ 
++import NormArith
+ public import Mathlib.Analysis.Normed.Unbundled.RingSeminorm
+ public import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
+ 
+@@ -143,9 +144,7 @@
+     obtain ⟨N, hN⟩ := hL2 δ hδ
+     use N
+     intro n hn
+-    specialize hN n hn
+-    rw [Real.dist_eq, abs_lt] at hN
+-    exact le_of_lt hN.right
++    norm_arith [hN n hn]
+   /- We now show that for all `n ≥ max m1 m2`, we have
+     `dist (smoothingSeminormSeq μ x n) (smoothingFun μ x) < ε`. -/
+   use max (m1 : ℕ) m2

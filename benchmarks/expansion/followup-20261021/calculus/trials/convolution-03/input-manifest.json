@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "mathlib_revision": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "selection_status": "followup-calculus-exploratory-trial",
+  "candidates": [
+    {
+      "id": "followup-calculus-convolution-bounded",
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "status": "replace",
+      "reason": "Instantiate the local distance estimate after checking ball membership.",
+      "declaration": "MeasureTheory.dist_convolution_le'",
+      "parent_declaration": "MeasureTheory.dist_convolution_le'",
+      "start_line": 781,
+      "end_line": 782,
+      "original_sha256": "9d37ab2b317a1be2a3d936228d99a15cca840303509d726413e170aff686dede",
+      "replacement": "    norm_arith [hg x (by norm_arith)]\n",
+      "proof_replacement": "norm_arith [hg x (by norm_arith)]",
+      "source_start_byte": 37987,
+      "source_end_byte": 38102,
+      "observation_key": "term:37726:37728:MeasureTheory.dist_convolution_le':862755660",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+      "origin_syntax_kind": "Lean.Parser.Term.syntheticHole",
+      "body_start_byte": 37628,
+      "body_end_byte": 39151,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-calculus-convolution-local",
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "status": "replace",
+      "reason": "Combine the two local distances and check the domain by the triangle inequality.",
+      "declaration": "MeasureTheory.convolution_tendsto_right",
+      "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+      "start_line": 855,
+      "end_line": 856,
+      "original_sha256": "21a79537063e2331f388357291874dfda48fbf0807567fb8d74333f617f1e8c7",
+      "replacement": "    norm_arith [hgδ hpi (show dist x' x₀ < δ by norm_arith), hgi]\n",
+      "proof_replacement": "norm_arith [hgδ hpi (show dist x' x₀ < δ by norm_arith), hgi]",
+      "source_start_byte": 41984,
+      "source_end_byte": 42077,
+      "observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 41278,
+      "body_end_byte": 42250,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    },
+    {
+      "id": "followup-calculus-convolution-limit",
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "status": "replace",
+      "reason": "Combine the convolution error bound and the local target distance.",
+      "declaration": "MeasureTheory.convolution_tendsto_right",
+      "parent_declaration": "MeasureTheory.convolution_tendsto_right",
+      "start_line": 858,
+      "end_line": 859,
+      "original_sha256": "e2c7f274e5c5ac76fee348aea51c6726bd1210bdc9f512bc0c2a220669ab5eb0",
+      "replacement": "  norm_arith\n",
+      "proof_replacement": "norm_arith",
+      "source_start_byte": 42158,
+      "source_end_byte": 42250,
+      "observation_key": "term:41328:41347:MeasureTheory.convolution_tendsto_right:334095321",
+      "origin_event_path": ".lake/census-full-v3/files/Mathlib.Analysis.Convolution/attempt-02/events.jsonl",
+      "origin_syntax_kind": "ident",
+      "body_start_byte": 41278,
+      "body_end_byte": 42250,
+      "proof_kind": "reviewed_tactic_sequence_or_calc_fragment",
+      "manual_review": true
+    }
+  ],
+  "files": [
+    {
+      "path": "Mathlib/Analysis/Convolution.lean",
+      "source_sha256": "49c86aa5a497790bdf6a36b08a7f160bc24aadccfc024e51666d7e5e6308b220",
+      "imports": [
+        "NormArith"
+      ],
+      "helpers": []
+    }
+  ]
+}
