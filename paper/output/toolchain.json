@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "captured_at_utc": "2026-10-22T02:14:04.979441+00:00",
+  "captured_at_utc": "2026-10-22T12:47:11.336930+00:00",
   "capture_mode": "build",
   "tools": {
     "xelatex": {
@@ -333,7 +333,7 @@
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-setup.tex": "c044c86888b7e074b87a27a88b828fd4b37639dc9a8058082655a4213680cd3b",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/generated/timing-table.tex": "dff0b3cf8ae9737ba0fe5fc88c3dc727f16f3b960f493ca63f71b4c488c70e1f",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/implementation.tex": "e08123c24315e362d79fd2626a9efe9558ae93279c81cb904136bde350710b34",
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/paper.tex": "ce0cbbeb146a0e1ba57d361c066857a84d822af4ffb58d38297d6102b1b23925",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/paper.tex": "37b2d88e1162127c722c9d4e5c9aff3b41ce090ee90e2743708546426d9741ad",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/vendor/neurips_2026.sty": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
     "/usr/local/texlive/2026/texmf-dist/bibtex/bst/natbib/plainnat.bst": "21eefa76f1c967f5074776fcef096c0f8f2b9e42347e84b62e1dbb121dcae486",
     "/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty": "050f2ad3a3671a1f4f9bcf97784836301bc751507e7ada546632379406aea103",
@@ -518,11 +518,12 @@
     "/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty": "478888f8e8f00345fd645b6cdd6fa7db1e9efdd6f585b25c89bb3665d9029295"
   },
   "build_record_sha256": {
-    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.log": "4d4b286b30f443fe99e21693f244e87841fde19b3f850e7f8b7c8ad9808ca3be",
+    "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.log": "6994dfca0191254bb6d1602109bd856b508535b15996072999bd0e4f492838c8",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.fls": "a356b99ccd1b806f3d381cb78656dfe29f735863efa706c4262ae1084f3e804a",
     "/Users/to1717/Documents/GitHub/norm-arith/paper/output/pdf/paper.blg": "466e04daa17227b521567b98d3eea4fbebc0d8d352c9f23198485906f174cb9d"
   },
   "embedded_pdf_font_names": [
+    "TeXGyreHeros-Bold-Identity-H",
     "TeXGyreTermes-Bold-Identity-H",
     "TeXGyreTermes-Regular-Identity-H",
     "JuliaMono-Regular",
@@ -535,12 +536,11 @@
     "CMSY7",
     "CMEX10",
     "TeXGyreTermes-Italic-Identity-H",
-    "TeXGyreHeros-Bold-Identity-H",
     "TeXGyreHeros-Regular-Identity-H",
     "CMR8",
     "CMMI8"
   ],
   "unresolved_font_files": [],
   "font_warnings": [],
-  "pdf_sha256": "e4337f8fc29398d3fbaa64c0150682433f80ad32d01d59102dd540e6f778a822"
+  "pdf_sha256": "2b5924459accc3fe76f2e777c5dce9738527088661c5f90cb990d27559729484"
 }

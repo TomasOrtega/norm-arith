@@ -3,7 +3,7 @@
 The expanded manuscript has a four-page main body, followed
 by references and technical appendices, in the unchanged official NeurIPS 2026
 preprint style. Anonymous author information does not assert workshop submission
-or acceptance.
+or acceptance. Every page carries an “AI-generated” watermark.
 
 The central contribution is an AI-assisted Lean implementation responding to the
 normed-space part of a documented 2020 community request. The manuscript names

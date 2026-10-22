@@ -19,6 +19,13 @@
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{enumitem,placeins,pgfplots}
 \pgfplotsset{compat=1.18}
+\AddToHook{shipout/background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[rotate=45,text=black!12,
+      font=\sffamily\bfseries\fontsize{64}{64}\selectfont]
+      at (current page.center) {AI-generated};
+  \end{tikzpicture}%
+}
 \setlist{nosep,leftmargin=*}
 \fvset{fontsize=\small,breaklines=true,breaksymbolleft={},breaksymbolright={}}
 \newtheorem{theorem}{Theorem}

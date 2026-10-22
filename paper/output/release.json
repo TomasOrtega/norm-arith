@@ -1,10 +1,10 @@
 {
   "schema_version": 4,
   "status": "validated_manuscript_revision",
-  "checked_at_utc": "2026-10-22T02:15:45.037324+00:00",
+  "checked_at_utc": "2026-10-22T12:51:54.678636+00:00",
   "pdf": {
     "path": "paper/output/pdf/paper.pdf",
-    "sha256": "e4337f8fc29398d3fbaa64c0150682433f80ad32d01d59102dd540e6f778a822",
+    "sha256": "2b5924459accc3fe76f2e777c5dce9738527088661c5f90cb990d27559729484",
     "main_pages": 4,
     "total_pages": 19
   },
@@ -35,7 +35,7 @@
     "docs/EXPANSION-PLAN.md": "943a8e9192133c6c72545985d616171c4f8f710c9e17f8a93586f61f911eff2b",
     "docs/PAPER-PLAN.md": "04e88ec3c1db5e17d8127daa5195ddf480bcbbdfbedbf4999b1ed821b3f72218",
     "paper/EXPANSION-RELEASE.md": "f35616aa25f40719f8d536d0c6bba4ce1bb39a05b473be6197fd7965b4bd365f",
-    "paper/README.md": "21c3fe94aee467c9468cb07f4ce09471a55bc75a2efc7b1c3fb7a8cdacaa7e58",
+    "paper/README.md": "273fb472d01cd477d5e1ab04dbe76c39e73a84e669384cf49d5b6b10f32df941",
     "paper/appendix.tex": "5c80e82af0d9e5fc63c2432afa37caa8ec4ddc0fbd6b2f4021cd9659eb9d6088",
     "paper/audit.py": "03bfc997ae10f432595cf4ca7f834febe533f3c6548448805ea08052398fd3f6",
     "paper/build.py": "ebe3dfe4902cc424637f8e2c163553240843c9094b6d9e7aa186e663e9ddb34d",
@@ -46,7 +46,7 @@
     "paper/implementation.tex": "e08123c24315e362d79fd2626a9efe9558ae93279c81cb904136bde350710b34",
     "paper/language-audit.md": "4a825144e06aaf4c7bfa485a5f1c7560e8c42ed86c68021b32bcbb0bcae5a755",
     "paper/language-review.json": "fce066cba3194dbe2f111b4dc025d269c9b8cb648e0427d337deb27ac1e7181b",
-    "paper/paper.tex": "ce0cbbeb146a0e1ba57d361c066857a84d822af4ffb58d38297d6102b1b23925",
+    "paper/paper.tex": "37b2d88e1162127c722c9d4e5c9aff3b41ce090ee90e2743708546426d9741ad",
     "paper/plots.py": "ce044b530e07f17eda57470c2f9f3341aff20a22c16dc8dfb1be4d863f7808c4",
     "paper/references.bib": "3e796a05a8ae87130846a6a9e098623f562afb263b948c5aeabaafec5c3cfdac",
     "paper/status.json": "e9b3f37ed559772185180fdd0e23879023140a93ac8ac5486172d6d4351fdcce",
@@ -61,7 +61,8 @@
     "paper/test_implementation.py": "0fe9613e51a51bd771bd735d9f2b31d08894b044e2ca29e498459d09896b024d",
     "paper/test_plots.py": "15578b63c041b6219153999e0fcdc2e72487d48205075d6d89facceae8310829",
     "paper/test_transport.py": "4d59b43f6e138ed5f99a8507a2a552a64de5db55c470240c991185429898c54b",
-    "paper/vocabulary-review.tsv": "63c2203b1e2acf405d1e5ef4c189874a03fc972748e23dbf71dc3f89749d6e05"
+    "paper/vocabulary-review.tsv": "63c2203b1e2acf405d1e5ef4c189874a03fc972748e23dbf71dc3f89749d6e05",
+    "README.md": "90a4a67c7a44d437df32269c1ec2a1603422f5e2aaef4d519d088d14e88ca4e3"
   },
   "generated_sha256": {
     "paper/generated/boundary.lean": "e50fe25cf389ae4e573f3d48fb358a9bcd82a3e44457e25c99dbf3137f217749",
@@ -124,16 +125,17 @@
   },
   "checks": {
     "paper_tests": 85,
-    "paper_test_scope": "Full paper unittest discovery, including plot accounting, exact community-source extraction, evidence/transport, portable rebuilds, implementation excerpts, audit, and fonts.",
+    "paper_test_scope": "Previously passed full 85-test suite. This README/LaTeX markup revision was checked by the strict PDF build, page-by-page watermark verification, text comparison, and visual inspection.",
     "six_examples": "Successful archived Lean check validated during the portable publication build.",
     "community_example": "Fresh successful check of complete NormArithTest/Tactic.lean; exact quoted snippet and measured module hash checked by generation.",
-    "layout": "All 19 pages visually checked, directly or by identical rendered image hashes. No remaining visual findings. Four-page main-body cap and layout-log checks pass.",
+    "layout": "All 19 watermarked pages visually inspected. Four main pages, unchanged extracted body text, and no layout-log issues.",
     "language": "Recorded contextual review matches current corpus and ledger. No length candidates or vocabulary gaps; explicit STE-based research exceptions, no external certification.",
     "offline_default": "Strict portable build passed without a Lean build; fixture tests rebuild without the original workspace. No new isolated full-PDF offline replay.",
     "source_excerpts": "Three measured runtime excerpts plus the exact historical-request test quote, all with verified source hashes.",
     "plots": "Two vector plots generated from validated evidence; all 46 files, seven slower observed means, charged line costs, and aggregate conditional interval retained.",
     "review": "Two full-paper agent reviews and an independent revision verification; all 12 substantive/editorial findings and one final layout finding addressed.",
-    "diff_check": "git -c core.whitespace=cr-at-eol diff --check passed."
+    "diff_check": "git -c core.whitespace=cr-at-eol diff --check passed.",
+    "ai_disclosure": "Prominent root README disclaimer and a diagonal AI-generated background watermark on every paper page."
   },
   "check_receipt_sha256": {
     "paper/output/revisions/ai-community-plots/tests.log": "c0e40ae40860f739a73046592e8ec59cae5f2c0a1089a866793e487a3bccb10c",
@@ -144,20 +146,24 @@
     "paper/output/revisions/ai-community-plots/revision-verification.json": "dbf9684dd1aa0dd0aea5412a9abfb3d9f2c420bb08962409dbbc779a194bca47",
     "paper/output/revisions/ai-community-plots/revision-responses.json": "9ca964544ff06ed8578131d55ed8942e02007e394f7a42a20628ecd0b1f0bbe8",
     "paper/output/revisions/ai-community-plots/final-visual-review.json": "54b0ada0ea4e85eb3cd227fb9c28a4b7d7491b826ff1fc91e17fa23ae3acbd29",
-    "paper/output/validation.json": "dee30f5a4826932e76e5a3d31f49bdd09bba0d45bcec84a567d482aaaf3db7af",
+    "paper/output/validation.json": "768d2991bd5686f9070357251a551a04bfa1b22d03dc940bba4cd1b796991a16",
     "paper/output/language-audit.log": "dde877573a2460c5a261df82b13595603cd0203aa07a048db136bbb373d27761",
-    "paper/output/font-integration.json": "1f29eade2d1dd329204f5732769674a86ab8cd3e89119a006ec5b1590ed8dfda"
+    "paper/output/font-integration.json": "1f29eade2d1dd329204f5732769674a86ab8cd3e89119a006ec5b1590ed8dfda",
+    "paper/output/revisions/ai-disclosure/build.log": "c7190e9396718d7d186a643b2165ca22dea2120bcdcc6160ad1346c73c2c9f69",
+    "paper/output/revisions/ai-disclosure/watermark-check.json": "e64b3e5627322a0a6149dfe52262dcb4e75717dbe0100c52a07d24b59f4713ad",
+    "paper/output/revisions/ai-disclosure/visual-review.json": "16ad83a57176136959b9c6f8640e0e4495d8e9133d7b2a610c8cb7a7eba7894d",
+    "paper/output/visual-review.json": "16ad83a57176136959b9c6f8640e0e4495d8e9133d7b2a610c8cb7a7eba7894d"
   },
   "lean_check_sha256": "f19e1cc8e05b606236a5b10de72606f357a2735523ce091672eced36a50008a3",
   "language_review_sha256": "fce066cba3194dbe2f111b4dc025d269c9b8cb648e0427d337deb27ac1e7181b",
-  "toolchain_sha256": "d59f6d1ff344f2dfc43e35f3a70234dd7356c979330eb031d0bf3340d26c0299",
+  "toolchain_sha256": "c8daf050441ae538424c0c76f041507371d8fbc6f41f63807d068e55eb7d589c",
   "publication_python": "3.15.0",
   "historical_study": "Preserved separately under artifacts/paper-baseline-41line; its 1.105\u00d7 estimate is not transferred.",
-  "revision": "AI-assisted tactic for a documented community request; two vector plots, full-paper agent reviews, and all review findings addressed",
+  "revision": "Repository-wide AI-generation disclosure and AI-generated watermark on every paper page",
   "previous_release": {
-    "path": "paper/output/revisions/ai-community-plots/before/paper/output/release.json",
-    "sha256": "e9f5b26bac7ec92b19c0156531a2d82533e17497bca3ec7932310253cc1ec0c6",
-    "source_state": "The pre-existing uncommitted manuscript was preserved before this revision."
+    "path": "paper/output/revisions/ai-disclosure/before/paper/output/release.json",
+    "sha256": "b29b2d83829c07722f33be09e4002664ff66072a4df654fa83b80d7437363eec",
+    "source_state": "Committed manuscript before the AI-generation disclosure and watermark."
   },
   "prior_scientific_claims_review": {
     "path": "artifacts/expansion/final-review/final-claims.json",
