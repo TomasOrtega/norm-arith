@@ -12,3 +12,5 @@ import NormArithTest.Seminorm
 import NormArithTest.Analysis
 import NormArithTest.FixedPoint
 import NormArithTest.Realization
+import NormArithTest.Hilbert
+import NormArithTest.HilbertHeldOut
