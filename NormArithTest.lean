@@ -14,3 +14,5 @@ import NormArithTest.FixedPoint
 import NormArithTest.Realization
 import NormArithTest.Hilbert
 import NormArithTest.HilbertHeldOut
+import NormArithTest.LPAgreement
+import NormArithTest.Replay

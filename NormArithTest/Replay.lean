@@ -1,0 +1,74 @@
+module
+
+import NormArith.Analysis
+import NormArith.Replay
+public meta import NormArith.ReplayData
+public meta import Lean
+
+set_option linter.unusedVariables false
+
+open Lean Meta Elab Tactic
+
+-- Each generated suggestion is decoded and checked before it is offered.
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
+    (x y : E) (a b : ℝ) (hx : ‖x + y‖ < a) (hy : ‖x - y‖ ≤ b) :
+    2 * ‖x‖ < a + b := by
+  set_option norm_arith.forceLP true in norm_arith? [hx, hy]
+
+example (a b ε : ℝ) (hε : 0 < ε) : a * b ≤ ε * a ^ 2 + b ^ 2 / (4 * ε) := by
+  analytic_estimate?
+
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x y : E) :
+    ‖x + y‖ ≤ ‖x‖ + ‖y‖ ∧ True := by
+  constructor
+  norm_arith?
+  trivial
+
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x y : E) :
+    ‖x + y‖ ≤ ‖x‖ + ‖y‖ := by
+  let z := x + y
+  have hz : ‖z‖ ≤ ‖x‖ + ‖y‖ := norm_add_le x y
+  norm_arith? [hz]
+
+-- This saved graph refers to the named premise and performs no search.
+example (a b : ℝ) (h : a ≤ b) : a ≤ b := by
+  norm_arith_replay "[1,0,[[1,[null,\"h\"],0]]]"
+
+example (a b : ℝ) (h : a ≤ b) : True := by
+  fail_if_success
+    have : a < b := by
+      norm_arith_replay "[1,0,[[1,[null,\"h\"],0]]]"
+  trivial
+
+example : True := by
+  fail_if_success norm_arith_replay "[1,0,[[1,[null,\"missing\"],0]]]"
+  fail_if_success norm_arith_replay "[1,0,[[4,0,0]]]"
+  fail_if_success norm_arith_replay "[1,0,[[0,0]]]"
+  fail_if_success norm_arith_replay "[2,0,[]]"
+  fail_if_success norm_arith_replay "[1,0,[[3,[null,\"sorryAx\"],[]]]]"
+  trivial
+
+-- A well-formed graph can still contain an ill-typed application.
+example : True := by
+  fail_if_success
+    norm_arith_replay "[1,1,[[3,[[null,\"True\"],\"intro\"],[]],[4,0,0]]]"
+  norm_arith_replay "[1,0,[[3,[[null,\"True\"],\"intro\"],[]]]]"
+
+-- Shared subterms, binders, and let expressions round-trip without delaboration.
+elab "check_replay_term " value:term : tactic => withMainContext do
+  let proof ← Term.elabTermAndSynthesize value (some (← getMainTarget))
+  let encoded ← NormArith.Replay.encode proof
+  let decoded ← NormArith.Replay.decode encoded
+  unless ← isDefEq (← inferType decoded) (← getMainTarget) do
+    throwError "round-trip changed the proof type"
+  (← getMainGoal).assign decoded
+  replaceMainGoal []
+
+example (p : Prop) (h : p) : ∀ q : Prop, q → p := by
+  check_replay_term (fun q (_ : q) => h)
+
+example (p : Prop) (h : p) : p ∧ p := by
+  check_replay_term (let hp : p := h; And.intro hp hp)
+
+example (p q : Prop) (h : p ∧ q) : p := by
+  check_replay_term h.1
