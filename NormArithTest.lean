@@ -10,3 +10,4 @@ import NormArithTest.Expansion
 import NormArithTest.Metric
 import NormArithTest.Seminorm
 import NormArithTest.Analysis
+import NormArithTest.FixedPoint
