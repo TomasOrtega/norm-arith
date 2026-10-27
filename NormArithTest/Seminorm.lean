@@ -1,6 +1,7 @@
 module
 
 import NormArith.Seminorm
+import Mathlib.Analysis.Normed.Module.Seminorm.Norm
 
 set_option linter.unusedVariables false
 
@@ -140,3 +141,35 @@ example (p : Seminorm ℝ E) (x y : E) (a b : ℝ)
 end ForcedLP
 
 set_option seminorm_arith.forceLP false
+
+set_option seminorm_arith.forceLP true in
+example {E F : Type*} [AddCommGroup E] [Module ℝ E]
+    [SeminormedAddCommGroup F] [NormedSpace ℝ F]
+    (p : Seminorm ℝ E) (x y : E) (u v : F) :
+    2 * p x + 2 * ‖u‖ ≤ p (x + y) + p (x - y) + ‖u + v‖ + ‖u - v‖ := by
+  seminorm_arith
+
+set_option seminorm_arith.forceLP true in
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x y : E) :
+    2 * (normSeminorm ℝ E) x ≤ ‖x + y‖ + ‖x - y‖ := by
+  seminorm_arith
+
+set_option seminorm_arith.forceLP true in
+example (x y : ℝ) : 2 * ‖x‖ ≤ ‖x + y‖ + ‖x - y‖ := by
+  seminorm_arith
+
+-- An explicit different norm instance has no automatic bridge to the ambient norm.
+set_option seminorm_arith.forceLP true in
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
+    (other : Norm E) (x : E) : True := by
+  fail_if_success
+    have : @Norm.norm E other x ≤ ‖x‖ := by seminorm_arith
+  trivial
+
+-- A raw function does not supply a derivative linearity theorem.
+set_option seminorm_arith.forceLP true in
+example {E F : Type*} [AddCommGroup E] [Module ℝ E] [AddCommGroup F] [Module ℝ F]
+    (D : E → F) (p : Seminorm ℝ F) (u v : E) : True := by
+  fail_if_success
+    have : p (D (u + v)) ≤ p (D u) + p (D v) := by seminorm_arith
+  trivial

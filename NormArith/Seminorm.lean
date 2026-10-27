@@ -1,6 +1,6 @@
 module
 
-public import Mathlib.Analysis.Normed.Module.Seminorm.Basic
+public import Mathlib.Analysis.Normed.Module.Seminorm.Norm
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.NormNum
 public import Mathlib.Tactic.Positivity
@@ -13,7 +13,8 @@ public meta import NormArith.Facts
 
 `seminorm_arith` first tries structural seminorm bounds and scalar arithmetic.
 Its fallback uses the same exact LP backend as `norm_arith`. Each real seminorm
-has a separate supporting-functional block. Local vector equalities are shared.
+has a separate supporting-functional block. Ordinary real-space norms can share
+the same problem. Local vector equalities are shared.
 
 `seminorm_arith [h₁, h₂]` selects analytic premises. Local scalar comparisons
 remain available. A supplied universal comparison is specialized at observed
@@ -96,15 +97,33 @@ private def lastTwo? (e : Expr) : Option (Expr × Expr) :=
   let args := e.getAppArgs
   if args.size < 2 then none else some (args[args.size - 2]!, args.back!)
 
-/-- Recognize bundled seminorm evaluation without unfolding the seminorm. -/
+/-- Preserve the exact family, including the instance used by an ordinary norm. -/
 def application? (input : Expr) : MetaM (Option (Expr × Expr)) := do
   let e := input.consumeMData
+  if e.isAppOf ``Norm.norm then
+    let saved ← saveState
+    try
+      let x := e.getAppArgs.back!
+      let p ← mkAppOptM ``normSeminorm
+        #[some (mkConst ``Real), some (← inferType x), none, none, none]
+      let value ← mkAppM ``DFunLike.coe #[p, x]
+      if ← isDefEq value e then
+        let p ← instantiateMVars p
+        if !p.hasMVar then return some (p, x)
+      trace[seminorm_arith.lp] "The available real norm does not match {e}"
+      saved.restore
+      return none
+    catch error =>
+      trace[seminorm_arith.lp] "No real seminorm adapter for {e}: {error.toMessageData}"
+      saved.restore
+      return none
   unless e.isAppOf ``DFunLike.coe do return none
   let some (p, x) := lastTwo? e | return none
   if (← whnf (← inferType p)).isAppOf ``Seminorm then return some (p, x)
   return none
 
 private structure CollectState where
+  includeNorms : Bool := true
   seen : Array Expr := #[]
   facts : Array Expr := #[]
   remaining : Nat := 512
@@ -120,7 +139,9 @@ private partial def collect (input : Expr) : StateT CollectState MetaM Unit := d
   let state ← get
   if state.remaining == 0 || state.seen.contains e then return
   modify fun s => { s with seen := s.seen.push e, remaining := s.remaining - 1 }
-  if let some (p, x) ← liftM <| application? e then
+  let observation ← if e.isAppOf ``Norm.norm && !state.includeNorms then pure none
+    else liftM <| application? e
+  if let some (p, x) := observation then
     addFact ``NormArith.seminorm_nonneg #[p, x]
     let evalAt (v : Expr) := mkApp e.appFn! v
     if x.isAppOf ``Neg.neg then
@@ -145,8 +166,8 @@ private partial def collect (input : Expr) : StateT CollectState MetaM Unit := d
   for arg in e.getAppArgs do collect arg
 
 /-- Generate a bounded collection of ordinary Lean proofs. -/
-def constraints (inputs : Array Expr) : MetaM (Array Expr) := do
-  let (_, state) ← (inputs.forM collect).run {}
+def constraints (inputs : Array Expr) (includeNorms := true) : MetaM (Array Expr) := do
+  let (_, state) ← (inputs.forM collect).run { includeNorms }
   return state.facts
 
 /-- Add a proof and normalize its numerical coefficients. -/
@@ -158,7 +179,7 @@ def noteFact (proof : Expr) : TacticM Unit := withMainContext do
   -- Full `norm_num` simplifies facts such as `0 ≤ ‖x‖` to `True`, and can
   -- similarly erase a negation identity before the scalar solver uses it.
   -- Restrict simplification to scalar norms and numerical evaluation.
-  evalTactic (← `(tactic| try norm_num only [Real.norm_eq_abs] at $stx:ident))
+  evalTactic (← `(tactic| try norm_num only [Real.norm_eq_abs, coe_normSeminorm] at $stx:ident))
 
 /-- Hints are additional proved facts, not a replacement for local hypotheses. -/
 def addHints (hints : Array (TSyntax `term)) : TacticM Unit := do
@@ -300,11 +321,12 @@ private def compactLP : TacticM Unit := withMainContext do
     trace[seminorm_arith.lp] "{result.rowCount} rows; {result.proposals.size} checked decompositions"
     proposals := proposals ++ result.proposals
   for proposal in proposals do addCertificate terms proposal
-  evalTactic (← `(tactic| linarith))
+  evalTactic (← `(tactic| (try simp only [coe_normSeminorm, Real.norm_eq_abs] at *) <;> linarith))
 
 private def run (hints : Option (Array (TSyntax `term))) : TacticM Unit :=
   focusAndDone <| withoutRecover do
     selectContext hints
+    evalTactic (← `(tactic| try simp only [coe_normSeminorm] at *))
     if (← getGoals).isEmpty then return
     let facts ← withMainContext <| constraints (← contextInputs)
     for proof in facts do
