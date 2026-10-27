@@ -18,3 +18,5 @@ import NormArithTest.LPAgreement
 import NormArithTest.Replay
 import NormArithTest.Rules
 import NormArithTest.Uniform
+import NormArithTest.Parameters
+import NormArithTest.FunctionSpace
