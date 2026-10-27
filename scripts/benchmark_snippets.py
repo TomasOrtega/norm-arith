@@ -228,7 +228,7 @@ def markdown_report(report: dict) -> str:
             f"| Whole-snippet code lines | {result['baseline_code_lines']} | {result['tactic_code_lines']} | {result['net_code_lines_saved']} |", "",
             "Counts exclude blank and comment-only lines. Proof bodies are delimited in every file. "
             "Whole-snippet counts include imports, statements, and all preparation. "
-            "The added tactic import is charged once in every standalone snippet.", "",
+            "Imports and local preparation are counted in each file.", "",
         ]
     else:
         lines += ["The two variants run the same proof with different solver settings. "

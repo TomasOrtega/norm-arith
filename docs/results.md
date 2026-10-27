@@ -1,8 +1,77 @@
 # Results
 
-## Workloads and accounting
+## Roadmap implementation
 
-The feature branch has two separate workloads:
+The new measurements use implementation `cd9083f` and the unchanged Lean and
+mathlib pins. Source hashes are stored with every report. The timings below are
+small descriptive samples, not a general speed claim.
+
+### Analytic composition
+
+All 40 compilations passed: five pairs, one warmup, and three measured runs.
+Proof bodies decrease from 44 to 5 lines. Whole snippets decrease from 94 to 55
+lines, including imports, assumptions, and local exponent instances.
+The [report](../Benchmarks/analytic-results.md) and
+[raw samples](../Benchmarks/analytic-results.json) contain every case.
+
+| Case | Manual compile | Tactic compile | Proof lines, manual → tactic |
+| --- | ---: | ---: | ---: |
+| Interpolation, held out | 2.940 s | 2.895 s | 7 → 1 |
+| Product | 2.986 s | 3.553 s | 17 → 1 |
+| Elliptic | 2.981 s | 2.964 s | 10 → 1 |
+| Mixed norms, held out | 3.048 s | 5.982 s | 3 → 1 |
+| Fixed point | 2.870 s | 2.977 s | 7 → 1 |
+
+The median corpus totals are 14.836 s manually and 18.356 s with the tactics:
+**23.7% slower overall**. The mixed-norm case is about twice as slow. It remains
+in the report, and no rules were tuned on these held-out results.
+
+The 39 saved lines are savings per use after shared primitive lemmas are
+available. They are not a net reduction in repository code. The reusable
+`Parameters`, `FunctionSpace`, and `FixedPoint` modules contain 67, 223, and 143
+code lines respectively: 433 total. The `NormArith/` implementation grew from 1,455
+to 2,801 code lines, excluding blanks and comments. That total includes the
+realization proofs, rule infrastructure, and replay checker. These costs must
+remain visible when deciding how many uses justify an adapter.
+
+### Core phases and replay
+
+Two cases compare the reference backend, forced LP, and saved proof replay.
+Each variant has one warmup and three measured samples in fresh processes.
+All 24 samples and both replay captures passed. The source did not change during
+the run. The [raw report](../artifacts/core-profile/results.json) contains the
+samples, memory counters, proof data sizes, and source hashes.
+
+| Case | Reference compile | LP compile | Replay compile | LP search | Reconstruction |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| RationalChain4 | 2.628 s | 2.667 s | 2.476 s | 8.263 ms | 115.448 ms |
+| CoupledErrors | 2.621 s | 2.555 s | 2.467 s | 12.914 ms | 50.536 ms |
+
+Values are medians. Reconstruction includes vector proofs and the final scalar
+proof. Whole compilation includes process startup, imports, checking, and output.
+Replay includes graph decoding and kernel checking; it does not isolate kernel
+time. The LP measurements also include trace and proof-size collection.
+
+| Case | Replay data | Shared graph nodes |
+| --- | ---: | ---: |
+| RationalChain4 | 93,950 bytes | 6,328 |
+| CoupledErrors | 53,561 bytes | 3,545 |
+
+Peak process memory was about 2.37–2.39 GB, including imports and process overhead.
+The files contain anonymous examples, so exported `.olean` size is not a useful
+measure of their proof size. Stored replay is much larger than a tactic call.
+It avoids search; it is not a source-size reduction technique.
+
+Earlier failed trials are retained: [host counter access](../artifacts/core-profile-sandbox-failure/results.json),
+[runner and build interference](../artifacts/core-profile-runner-failure/results.json),
+[local-name replay](../artifacts/core-profile-replay-failure/results.json), and
+[generated-lemma replay](../artifacts/core-profile-auxiliary-failure/results.json).
+They are excluded from the table. Their runner and replay defects were fixed and
+covered by regression tests before the successful run.
+
+## Earlier workloads and accounting
+
+The original measured implementation has two separate workloads:
 
 - **20 mathlib-derived pairs** compare original standalone proof blocks with the
   public tactic. Eight are complete theorem copies, nine are extracted local
@@ -51,9 +120,9 @@ meaningful performance distinction in this small run.
 Aggregate figures are medians of the per-pair totals; individual case medians
 need not sum to the aggregate median. The formulation avoids enumerating all
 supports, but a compact formulation alone does not establish a runtime benefit.
-The next performance work is profiling search and proof reconstruction, followed
-by larger workloads selected before measurement. No tuning was performed on the
-measured implementation after observing these results.
+These baseline reports predate the separate phase and replay measurements above.
+No tuning was performed on that measured implementation after observing its
+results.
 
 ## Measurements
 
@@ -105,9 +174,9 @@ python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json \
 
 The implementation measured here is
 [`0e35741a42c721537674a0a1c8bd9334f787c70d`](https://github.com/TomasOrtega/norm-arith/commit/0e35741a42c721537674a0a1c8bd9334f787c70d),
-with Lean 4.36.0-rc1 and the pinned mathlib revision. Both reports' implementation
-and snippet hashes were checked against the final source files. Documentation
-and report additions after that commit do not change the measured Lean code.
+with Lean 4.36.0-rc1 and the pinned mathlib revision. The stored source hashes
+identify that implementation. Later roadmap changes use separate reports and
+must not be attributed to these earlier timings.
 
 Record hardware, toolchain, source revision, and all samples when comparing runs.
 The JSON includes the implementation and snippet hashes so later changes can be

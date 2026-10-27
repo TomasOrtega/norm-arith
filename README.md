@@ -1,17 +1,15 @@
 # norm-arith
 
-An independent Lean package for **checked norm arithmetic and analytic estimates**.
-The direction is to shorten estimate blocks in analysis and PDE proofs: combine
-norm bounds, compose operator estimates, and discharge arithmetic while Lean
-checks the resulting proof.
+A Lean package for **checked norm arithmetic and analytic estimates**.
+It combines supplied bounds and checks the resulting proof in Lean.
 
-Development happens on **`feature/analytic-estimates`**. This package depends on
-mathlib without modifying it. A later contribution to mathlib should be possible;
-no mathlib port is part of this branch.
+The package pins mathlib and does not change its source. Development is on
+`feature/analytic-estimates`.
 
-## Use it in another project
+## Use in another project
 
-Use `leanprover/lean4:v4.36.0-rc1` in `lean-toolchain` and add to `lakefile.toml`:
+Put `leanprover/lean4:v4.36.0-rc1` in `lean-toolchain`. Add this dependency to
+`lakefile.toml`:
 
 ```toml
 [[require]]
@@ -20,10 +18,9 @@ git = "https://github.com/TomasOrtega/norm-arith.git"
 rev = "feature/analytic-estimates"
 ```
 
-Run `lake update` and `lake exe cache get`. For reproducible work, replace the
-branch name with a commit. The package pins mathlib to
-`2f3c7c8a8949b04a32f9303f59163acffb766996`; projects already using mathlib should
-use a compatible revision.
+Run `lake update` and `lake exe cache get`. Use a commit instead of the branch
+name for a fixed version. The pinned mathlib commit is
+`2f3c7c8a8949b04a32f9303f59163acffb766996`.
 
 ```lean
 import NormArith
@@ -35,20 +32,31 @@ example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
   norm_arith
 ```
 
-## Features
+## Public modules
 
-| Entry point | Purpose |
+| Import | Main use |
 | --- | --- |
-| `import NormArith` | Rational-linear norm arithmetic, distances, local vector equalities, checked certificates |
-| `norm_arith` / `norm_arith?` | Prove an estimate; `?` also explains a successful search |
-| `norm_arith [h₁, h₂]` | Select norm premises; local scalar comparisons remain available |
-| `import NormArith.Seminorm` | `seminorm_arith` for explicit, possibly different, bundled seminorms |
-| `import NormArith.Analysis` | `analytic_estimate`, operator/bilinear estimates, Young/absorption templates, finite-`Lp` bridges |
+| `NormArith` | Rational norm arithmetic, distances, and vector equalities |
+| `NormArith.Seminorm` | Exact LP arithmetic for several explicit real seminorms |
+| `NormArith.Analysis` | Operator estimates, products, absorption, and registered analytic rules |
+| `NormArith.Parameters` | Exact Hölder exponents and interpolation weights |
+| `NormArith.FunctionSpace` | Finite `Lp` estimates, interpolation, mixed norms, and an elliptic estimate |
+| `NormArith.FixedPoint` | Fixed points on a certified ball, stability, and residual bounds |
+| `NormArith.Hilbert` | Rational quadratic estimates in real inner-product spaces |
+| `NormArith.Realization` | Formal finite realization theorem; optional for tactic users |
 
-The new **LP backend** uses a compact supporting-functional formulation and
-mathlib's exact simplex oracle. It recovers rational triangle certificates and
-checks actual vector identities in Lean. Short searches still run first;
-finite decomposition enumeration remains a fallback.
+`norm_arith`, `seminorm_arith`, and `analytic_estimate` use local facts.
+An explicit list, such as `norm_arith [h₁, h₂]`, selects the analytic premises.
+Local scalar comparisons remain available. Include membership and other analytic
+premises in the list when a rule needs them.
+
+`norm_arith?` and `analytic_estimate?` report the selected proof steps and offer
+checked replay code. `lp_interpolate?` also reports the chosen weight.
+Replay checks the stored proof without running the search again. Set
+`norm_arith.replayText true` to print its full source in command-line output.
+`hilbert_arith?` gives an explicit sum-of-squares proof.
+
+## Analytic estimates
 
 ```lean
 import NormArith.Analysis
@@ -58,67 +66,81 @@ example (E ν A F : ℝ) (hν : 0 < ν) (h : E + ν * A ^ 2 ≤ F * A) :
   analytic_estimate
 
 example {E : Type*} [AddCommGroup E] [Module ℝ E]
-    (p : Seminorm ℝ E) (x y : E) (A B : ℝ)
-    (hx : p x ≤ A) (hy : p y ≤ B) : p (x - y) ≤ A + B := by
+    (p : Seminorm ℝ E) (x y : E) :
+    2 * p x ≤ p (x + y) + p (x - y) := by
   seminorm_arith
 ```
 
-`analytic_estimate [facts]` and `seminorm_arith [facts]` add proved hints to the
-local context. Analytic inputs such as Sobolev or Hölder estimates must come with
-their required side conditions. Raw `eLpNorm` values are not assumed finite.
+Mark a proved theorem with `@[analytic_rule]` to use it in bounded rule search.
+Local and scoped rules are supported. Every premise must be proved. The options
+`analytic_estimate.maxDepth` and `analytic_estimate.maxApplications` set the limits.
 
-## Scope and direction
+```lean
+import NormArith.FunctionSpace
 
-The LP addresses generic rational-linear norm arithmetic. The analytic frontend
-also uses bounded theorem templates and nonlinear scalar arithmetic. Explicit
-seminorm automation is currently structural. Exponent synthesis, general
-interpolation planning, mixed-norm search, and Hilbert certificates are later
-milestones, described in the [roadmap](docs/roadmap.md).
+open MeasureTheory
+open scoped ENNReal
 
-Every successful tactic call produces a Lean proof. Failure or resource limits
-mean **unknown**, not a counterexample. [Progress](docs/progress.md) distinguishes
-working features from proposals; [results](docs/results.md) records measured
-proof-size and compilation costs, including slower cases.
+example {α : Type*} [MeasurableSpace α] (μ : Measure α) (f : α → ℝ)
+    (h₂ : MemLp f 2 μ) (h₆ : MemLp f 6 μ) :
+    lpNorm f 4 μ ≤ lpNorm f 2 μ ^ (1 / 4 : ℝ) *
+      lpNorm f 6 μ ^ (3 / 4 : ℝ) := by
+  lp_interpolate 2 6 4
+```
 
-The current 20-snippet workload saves 56 net lines and takes 11.6% longer to
-compile in fresh processes. The five-case backend comparison shows no aggregate
-LP speedup. These are starting measurements for further development.
+```lean
+import NormArith.FixedPoint
+import NormArith.Hilbert
 
-## Build, test, and measure
+example {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X] [CompleteSpace X]
+    (B : X →L[ℝ] X →L[ℝ] X) (a : X) (A : ℝ)
+    (hA : 0 ≤ A) (ha : ‖a‖ ≤ A) (hsmall : 8 * ‖B‖ * A ≤ 1) :
+    ∃! u, ‖u‖ ≤ 2 * A ∧ a + B u u = u := by
+  analytic_estimate
 
-With [elan](https://github.com/leanprover/elan) installed:
+example {X : Type*} [SeminormedAddCommGroup X] [InnerProductSpace ℝ X]
+    (x y : X) : ‖x + y‖ ^ 2 ≤ 2 * ‖x‖ ^ 2 + 2 * ‖y‖ ^ 2 := by
+  hilbert_arith
+```
+
+The function-space rules keep the measure, exponent, and membership assumptions
+in the proof. The elliptic example takes its energy and Sobolev bounds as inputs.
+The fixed-point theorem gives uniqueness on the stated ball. Hilbert search
+handles rational quadratic forms and checks the signs of the square weights.
+
+## Scope
+
+The core uses a compact supporting-functional LP and mathlib's exact simplex
+oracle. Lean checks the recovered vector identities and scalar bounds.
+Structural search runs first; finite support enumeration remains available for
+comparison. Set `norm_arith.forceLP` or `seminorm_arith.forceLP` to test the LP path.
+
+The finite realization theorem proves the mathematical encoding. Runtime search
+has resource limits. A failed search means unknown. The solver does not return a
+counterexample. General nonlinear parameter search, new PDE hypotheses, and
+arbitrary changes of mixed-norm order are outside the supported fragment.
+
+See [progress](docs/progress.md) for the roadmap gates and [results](docs/results.md)
+for measurements. The original 20-snippet measurements saved 56 net lines and
+compiled 11.6% more slowly. They describe the earlier measured commit, not a
+speed claim for all later features.
+
+## Build and check
 
 ```sh
 lake exe cache get
 lake build --wfail NormArith NormArithTest
 python3 -m unittest discover -s scripts
-python3 scripts/check_consumer.py
 python3 scripts/benchmark_snippets.py --check
-python3 scripts/benchmark_snippets.py --pairs 5 --warmups 1
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json --check
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/analytic.json --check
+python3 scripts/check_consumer.py
 ```
 
-The benchmark corpus contains standalone pairs from pinned mathlib sources.
-Both versions state the same proposition, with attribution and adaptations
-recorded for every pair. Counts charge extra imports and setup. The runner
-alternates compilation order, uses fresh outputs, and retains raw samples.
-Dependency builds are excluded from warm timings. Synthetic backend comparisons
-are measured separately; see the [benchmark guide](Benchmarks/README.md).
+To check an unpublished commit as a Git dependency, use
+`python3 scripts/check_consumer.py --repository "$PWD"`.
+The [benchmark guide](Benchmarks/README.md) explains timing and source accounting.
+The [documentation index](docs/README.md) links the proofs, design, and roadmap.
 
-## Repository map
-
-| Path | Contents |
-| --- | --- |
-| `NormArith/` | Importable implementation and checked analytic lemmas |
-| `NormArithTest/` | Regression proofs, expected failures, analytic examples |
-| `Benchmarks/Baseline/`, `Benchmarks/Tactic/` | Original mathlib snippets and replacement proofs |
-| `Benchmarks/manifest.json` | Source revision, theorem, span, and adaptations |
-| `Benchmarks/BackendBaseline/`, `Benchmarks/BackendLP/` | Separate synthetic reference-versus-LP cases |
-| `scripts/` | Benchmark runner and accounting tests |
-| `docs/` | Mathematics, proofs, tradeoffs, roadmap, progress, results |
-
-Start with the [documentation index](docs/README.md). Earlier paper and census
-artifacts remain accessible through [history](docs/history.md).
-
-Code and documentation were developed with AI assistance. Contributions should
-include checked examples and report failures as well as successes.
-License: [Apache-2.0](LICENSE). Mathlib snippets retain their source attribution.
+Code and text were developed with AI assistance.
+License: [Apache-2.0](LICENSE). Mathlib excerpts retain their source attribution.

@@ -1,134 +1,93 @@
 # Proofs and the trust boundary
 
-## What is checked
+Every successful tactic call produces a Lean proof. Search and numeric data are
+checked against the original mathematical expressions.
 
-All successful tactic applications produce Lean proof terms. The library has no
-new analytic axioms. The mathematical realization/completeness argument in
-[math.md](math.md) and the future algorithms in [roadmap.md](roadmap.md) are
-explanations and proposals; they are not new formal completeness theorems.
-
-| Claim or component | Checked source |
+| Claim | Checked source |
 | --- | --- |
-| Finite sums, rational scalar bounds, vector decomposition certificates | [`Certificate.lean`](../NormArith/Certificate.lean) |
-| Actual vector identities and final scalar consequences | [`Tactic.lean`](../NormArith/Tactic.lean) |
-| Exact LP coefficient/strictness checks and extraction tests | [`LP.lean`](../NormArith/LP.lean), [`NormArithTest/LP.lean`](../NormArithTest/LP.lean) |
-| Explicit seminorm triangle, homogeneity, and reverse triangle | [`Seminorm.lean`](../NormArith/Seminorm.lean) |
-| Young, absorption, operator and bilinear perturbation bounds | [`Analysis.lean`](../NormArith/Analysis.lean) |
-| Positive and rejected analytic applications, including actual `Lp` Hölder operators | [`NormArithTest/Analysis.lean`](../NormArithTest/Analysis.lean) |
-| Multiple seminorms and rejected cross-seminorm/definiteness inferences | [`NormArithTest/Seminorm.lean`](../NormArithTest/Seminorm.lean) |
+| Finite norm combinations | [Certificate](../NormArith/Certificate.lean) |
+| Seminorm blocks and strict scalar certificates | [SeminormCertificate](../NormArith/SeminormCertificate.lean) |
+| Finite sup-norm realization, relations, and several seminorms | [Realization](../NormArith/Realization.lean) |
+| LP extraction and actual vector identities | [LP](../NormArith/LP.lean), [Tactic](../NormArith/Tactic.lean), [Seminorm](../NormArith/Seminorm.lean) |
+| Operators, products, Young, and absorption | [Analysis](../NormArith/Analysis.lean) |
+| Finite interpolation, Hölder, mixed norms, and elliptic estimates | [FunctionSpace](../NormArith/FunctionSpace.lean) |
+| Banach fixed points and error bounds | [FixedPoint](../NormArith/FixedPoint.lean) |
+| Quadratic identities and nonnegative square weights | [Hilbert](../NormArith/Hilbert.lean) |
 
-`LP.checkCertificate` is an exact metaprogram check, not a kernel theorem stating
-the correctness of the solver. Soundness does not depend on trusting this check:
-the frontend separately builds proofs of the recovered identities and bounds.
-The original context and these proved bounds must entail the original goal.
+## Realization and certificates
 
-## Young and absorption
+`Realization.Supports` states nonnegativity, an anchor equality, and bounds on
+all observed vectors. Hahn–Banach proves that actual norm values give support
+rows. The columns of those rows give vectors in a finite sup-norm space with
+exactly the required norms. Every supplied vector relation is checked in every
+support row. The proof allows dependent atoms, zero values, and no observations.
 
-`NormArith.young_mul` proves, for real `a`, `b` and positive `ε`,
+For several seminorms, one common coordinate space contains every family block.
+Each seminorm reads its own block. This proves the finite seminorm statement;
+it does not identify several genuine norms with arbitrary independent kernels.
 
-$$
-ab\le\varepsilon a^2+\frac{b^2}{4\varepsilon}.
-$$
+The runtime checker uses elementary certificates. It proves the selected vector
+identities and applies triangle inequality and homogeneity. The generalized
+seminorm block lemma also permits a zero target multiplier without division.
+A strict scalar conclusion requires a positively weighted strict premise.
 
-It starts from the nonnegative square $(2\varepsilon a-b)^2$, clears a
-positive denominator, and uses checked polynomial arithmetic. No sign restriction
-on `a` or `b` is needed. `energy_absorb` applies it with $\varepsilon=\nu/2$
-to turn $E+\nu A^2\le FA$ into
-$E+(\nu/2)A^2\le F^2/(2\nu)$.
+`LP.checkCertificate` is a metaprogram check. Soundness also has an independent
+kernel boundary: the frontend builds actual Lean proofs of the recovered bounds
+and the final conclusion. The finite realization theorem does not prove that a
+bounded frontend always finds a certificate.
 
-`absorb` uses `0 ≤ A`, `θ ≤ q`, `q < 1` and `A ≤ B + θ*A` to conclude
-`A ≤ B/(1-q)`. The strict positivity of the denominator is part of the proof.
-`absorb_half` specializes the budget. A regression example rejects absorption
-when the available coefficient is one.
+## Analytic estimates
 
-For coupled linear estimates,
+`young_mul` starts from a nonnegative square and clears a positive denominator.
+`energy_absorb` spends half the positive coercive coefficient. `absorb` requires
+a coefficient strictly below one. All zero-factor cases stay in the statements
+and proofs.
 
-$$
-A\le F+\tfrac14B,\qquad B\le G+\tfrac12A,
-$$
+The bilinear perturbation theorem proves
 
-the checked conclusions are
-$A\le8F/7+2G/7$ and $B\le4F/7+8G/7$. This is scalar linear arithmetic;
-it does not need a nonlinear optimizer.
+$$B(x,y)-B(x',y')=B(x-x',y)+B(x',y-y')$$
 
-## Bilinear perturbation
+before it applies norm bounds. Symbolic constants use proved monotonicity or
+polynomial arithmetic; they are not rational vector coefficients.
 
-For a continuous bilinear map `B`, the code proves
+The elliptic wrapper proves the required Hölder bounds for the forcing and drift
+terms. It then uses the supplied energy and Sobolev bounds to obtain
 
-$$
-B(x,y)-B(x',y')=B(x-x',y)+B(x',y-y').
-$$
+$$G\le 2SF/\nu,\qquad U\le 2S^2F/\nu.$$
 
-Triangle inequality and the operator norm bound give
+It handles `G = 0` before cancelling a positive factor. The vector-valued version
+uses a bounded pairing for the drift. Membership, the energy inequality, the
+Sobolev constant, and smallness remain explicit inputs. Deriving an energy
+identity from a differential equation is outside this estimate block.
 
-$$
-\|B(x,y)-B(x',y')\|
-\le\|B\|\bigl(\|x-x'\|\|y\|+\|x'\|\|y-y'\|\bigr).
-$$
+## Fixed points
 
-The frontend recognizes this pattern. Tests instantiate it with mathlib's
-actual Hölder bilinear operator on bundled `Lp` spaces. The `HolderTriple` and
-normed-space exponent assumptions remain explicit in the Lean statement.
+A complete closed ball is invariant under the supplied map, and its Lipschitz
+constant is strictly below one. The wrapper applies mathlib's Banach theorem to
+the restricted map. The quadratic template uses radius `2*A` and
+`8*K*A ≤ 1`; a separate wrapper accepts any radius that passes both scalar checks.
 
-## An elliptic estimate block
+Uniqueness is on the certified ball. The same contraction estimate gives
+stability and residual bounds. Zero radius is checked directly and needs no
+division. Tests show why global uniqueness and a contraction constant of one
+would be invalid extensions.
 
-`elliptic_absorb` is a scalar theorem representing the last step of an energy
-argument. It assumes
+## Finite function norms
 
-$$
-U\le SG,\quad SB\le\nu/2,\quad
-\nu G^2\le FU+BGU,
-$$
+Real conversion requires `MemLp` or a finite extended-real bound. Tests reject
+an attempted finite conversion from the real-valued junk value alone.
+Interpolation uses a checked Hölder triple for the scaled endpoint exponents.
+The planner checks exact rational equations, including infinity endpoints.
+Nested `Lp` spaces fix the order of mixed norms.
 
-with $\nu>0$ and $S,F,B,G\ge0$, and proves
+## Quadratic proofs and tests
 
-$$
-G\le\frac{2SF}{\nu},\qquad
-U\le\frac{2S^2F}{\nu}.
-$$
+Hilbert search factors a rational symmetric matrix. It checks the full matrix
+identity and nonnegative weights. Lean then proves the sum-of-squares identity.
+The replay proof does not call the factor search. Two held-out mathlib identities
+check the public tactic after rule development.
 
-Monotonicity substitutes the Sobolev-type bound into both right-hand terms.
-The smallness inequality absorbs half the coercivity. The proof handles `G = 0`
-separately before cancelling a positive `G` in the remaining case.
-
-This theorem does not establish a Sobolev embedding, integrate by parts, or
-formalize an elliptic PDE. Those analytic estimates are inputs. The roadmap
-explains how the scalar quantities can arise from forcing, coefficient, function,
-and derivative norms in an actual PDE argument.
-
-## Quadratic fixed-point estimates
-
-Let $\Phi(u)=a+B(u,u)$, with $\|a\|\le A$, $A\ge0$, and
-$8\|B\|A\le1$. The checked ball estimate shows
-$\|u\|\le2A\Rightarrow\|\Phi(u)\|\le2A$. The checked contraction estimate
-shows, on this ball,
-
-$$
-\|\Phi(u)-\Phi(v)\|\le\tfrac12\|u-v\|.
-$$
-
-The radius `2*A` is a chosen template; the LP does not discover that nonlinear
-choice. A stability lemma turns
-$\|u-v\|\le\|a-b\|+\tfrac12\|u-v\|$ into
-$\|u-v\|\le2\|a-b\|$. These are estimate lemmas, not an existence or global
-uniqueness theorem. Applying Banach's fixed-point theorem on the complete closed
-ball, and proving its hypotheses at the function-space level, remains separate.
-
-## Finite `Lp` bridges
-
-`eLpNorm_le_of_lpNorm_le` requires `MemLp` before transporting a real-valued bound
-back to an extended-real norm. `lpNorm_le_of_eLpNorm_le` instead starts from a
-finite extended-real upper bound. The raw-function triangle wrapper retains the
-membership and `1 ≤ p` hypotheses required by the pinned mathlib API.
-
-A negative regression checks that `lpNorm f p μ = 0` alone does not justify
-`eLpNorm f p μ = 0`. Real-valued conversion can hide an infinite value; membership
-or finiteness must be established rather than inferred from that conversion.
-
-## What the tests do and do not prove
-
-Expected-success examples check usability and reconstruction. Expected-failure
-examples guard important boundaries. Forced LP examples prevent the old fallback
-from masking a broken new backend. The benchmark pairs test the same statements
-with source proofs and replacement proofs. None of these finite test collections
-establish frontend completeness or a speedup on all analysis proofs.
+Regression proofs check successful applications. Expected failures guard signs,
+strictness, family identity, missing premises, circular rules, and stale replay.
+These tests establish finite coverage, not universal frontend completeness or a
+speedup on all analytic proofs.

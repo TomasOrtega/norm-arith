@@ -1,130 +1,106 @@
-# Design and tradeoffs
+# Design
 
-## Goal
-
-`norm-arith` should turn proved analytic estimates into a short, checked proof of
-the estimate a mathematician wants next. Its core is generic norm arithmetic.
-The larger direction includes seminorms, operator estimates, products, Hölder
-and interpolation choices, and absorption of error terms in energy inequalities.
-
-Search discovers a derivation; Lean checks it. Keeping these responsibilities
-separate allows stronger search without accepting solver output as a proof.
+Search finds a candidate. Lean checks the proof. No optimizer output is accepted
+as a mathematical assumption.
 
 ## Modules
 
-| Module | Responsibility |
+| Module | Role |
 | --- | --- |
-| `NormArith.Certificate` | Proved sum, scalar-multiplication, and norm-certificate lemmas |
-| `NormArith.Search` | Exact rational elimination, small-support search, finite reference enumeration |
-| `NormArith.LP` | Rational LP encoding, exact simplex search, certificate validation and extraction |
-| `NormArith.Metric` | Bounded collection of proved distance constraints in pseudometric spaces |
-| `NormArith.Tactic` | Syntax, hypothesis selection, normalization, dispatch, proof reconstruction |
-| `NormArith.Seminorm` | Explicit seminorm facts and bounded `seminorm_arith` automation |
-| `NormArith.Analysis` | `analytic_estimate`, operator/absorption lemmas, finite-`Lp` adapters |
+| `Certificate`, `SeminormCertificate` | Elementary norm and seminorm proof lemmas |
+| `Reify` | Shared rational vector and scalar data |
+| `Search` | Short decompositions and finite reference enumeration |
+| `LP` | Exact supporting-functional encoding, simplex search, and extraction |
+| `Tactic`, `Metric` | Norm and distance frontends |
+| `Seminorm` | Separate LP blocks for exact seminorm expressions |
+| `Facts`, `Rules` | Explicit fact selection and bounded analytic rule search |
+| `Analysis` | Operators, products, Young's inequality, and absorption |
+| `Parameters`, `FunctionSpace` | Exact exponent choices and finite function estimates |
+| `FixedPoint` | Existence on a ball, uniqueness on that ball, and error bounds |
+| `Hilbert` | Rational quadratic forms and checked sums of squares |
+| `Replay`, `ReplayData` | Store and check a proof without repeating search |
+| `Realization` | Formal meaning of finite support constraints |
 
-`import NormArith` exposes the norm tactic. Analysis remains an explicit import,
-so a user needing norm arithmetic need not import the full analytic frontend.
-Tests and benchmarks are separate from the public library. Default builds do
-not request native precompilation of the whole dependency library; this avoids
-a large first-use build unrelated to importing the tactic.
+`import NormArith` exposes the core tactic. Function-space, fixed-point, Hilbert,
+and realization modules are optional. Runtime proof checking does not import the
+Hahn–Banach realization proof.
 
-## Norm pipeline
+## Arithmetic
 
-The frontend selects hypotheses, normalizes recognized metric notation, and
-specializes bounded local quantified estimates. Scalar, structural, and short
-decomposition searches handle easy goals. Harder affine norm goals go to the
-compact LP. Finite decomposition enumeration remains a fallback, including
-integer-safe certificates for additive groups.
+The norm frontend tries scalar arithmetic, structural bounds, and short vector
+decompositions first. It then tries the compact LP. Finite reference enumeration
+remains available for comparison and fallback.
 
 ```mermaid
-flowchart TD
-    A["Goal and selected facts"] --> B["Normalize and collect bounds"]
-    B --> C["Scalar and short searches"]
-    C -->|unresolved| D["Compact LP search"]
-    D -->|proposals| E["Lean certificate reconstruction"]
-    D -->|unknown| F["Finite reference search"]
-    F --> E
-    C -->|certificate| E
-    E --> G["Checked proof"]
+flowchart LR
+    A[Goal and selected facts] --> B[Normalize]
+    B --> C[Short search]
+    C --> D[Exact LP]
+    D --> E[Vector identities and scalar proof]
+    E --> F[Lean check]
 ```
 
-Supporting-functional coordinates exist only inside search. They are never
-asserted as unproved hypotheses. The LP result becomes rational vector
-decompositions; the frontend proves the actual vector identities and norm bounds,
-then invokes checked scalar arithmetic. The exact oracle comes from the pinned
-mathlib dependency. No external solver or floating-point tolerance is required.
+An LP support row is search data. It is never added to the Lean context as an
+assumption. The extractor recovers rational vector decompositions. The frontend
+proves each identity, uses triangle and homogeneity lemmas, and finishes with
+checked scalar arithmetic.
 
-## Why keep several strategies?
+Explicit seminorms use the same rational representation and LP solver. The family
+key includes the actual seminorm expression. A pullback along one linear map is
+distinct from a pullback along another map. Supplied vector equalities give zero
+observations for every relevant family. A zero seminorm value alone does not give
+a vector equality.
 
-| Approach | Advantage | Cost or limitation |
-| --- | --- | --- |
-| Structural bounds | Low overhead for obvious triangle estimates | Miss hidden decompositions |
-| Small-support rational search | Often finds short certificates | Deliberately small support budget |
-| Supporting-functional LP | Avoids enumerating candidate supports; handles coupled norm inequalities | Quadratic row count, rational coefficient growth, simplex overhead |
-| Finite reference enumeration | Fallback and independent algorithm for comparison | Number of supports can grow combinatorially |
-| Analytic theorem composition | Adds domain knowledge for products, operators, and absorption | Bounded and incomplete; needs the correct analytic hypotheses |
+The LP has a quadratic number of support rows. This bounds the encoding size,
+not the running time. Exact rational coefficients and Lean proof construction
+can still be expensive.
 
-A polynomial-size LP formulation does not make this simplex implementation
-polynomial-time or guarantee small proof terms. For easy examples, short search
-may be faster. Evaluation should include both easy examples and forced LP cases.
+## Analytic rules
 
-## Analytic frontend
+The frontend first adds a bounded set of proved structural estimates. It then
+tries registered theorems whose conclusions match the target. Each premise is
+proved by arithmetic or another registered rule. Search restores the previous
+state when a branch fails. A repeated target cannot justify itself.
 
-`analytic_estimate` collects a bounded set of checked norm, seminorm, and operator
-facts, recognizes bilinear perturbations, and tries norm and scalar automation.
-Its optional facts are additional proofs. `seminorm_arith [facts]` is also
-additive; `norm_arith [facts]` retains its selective semantics for norm premises.
+`@[analytic_rule]` supports global, local, and scoped rules. The default limits
+are six rules along a branch and 128 attempted applications. These limits and
+Lean's heartbeat budget can cause failure on a valid goal.
 
-Scalar products are not silently made linear with variable coefficients.
-Monotonicity and polynomial consequences are handled by checked analytic rules
-and `nlinarith`. Dedicated templates cover Young's inequality, absorption,
-small-drift scalar estimates, and quadratic contraction estimates.
+An explicit fact list restricts all later rule applications. Selected proofs
+are copied into the search context before omitted analytic assumptions are
+removed. Pure scalar comparisons remain available. The filter also checks
+proposition-valued classes so an omitted bound cannot return through an instance.
 
-The current layer does not search arbitrary theorem databases or automatically
-choose Sobolev embeddings, exchange mixed-norm order, or invent measurability,
-integrability, exponent, and smallness hypotheses.
+## Parameters and representations
 
-## Finite and extended-real norms
+Hölder planning uses rational reciprocal exponents. Zero represents infinity.
+Interpolation chooses a convex weight between fixed endpoints. Lean checks the
+chosen exponent equation, its range, and the applicable theorem instance.
+Membership and measurability are separate premises.
 
-Bundled spaces such as `Lp E p μ` use the norm frontend when the required instances
-exist. A raw `eLpNorm f p μ` lies in `ℝ≥0∞`; moving it to real arithmetic requires
-a finite bound or membership proof. Checked adapters keep these hypotheses
-visible. Different explicit seminorms remain different expressions. A bound
-`p x ≤ C * q x` is an analytic premise, not a consequence of their names. A zero
-seminorm does not imply its argument is zero.
+Raw `lpNorm` is not treated as a seminorm on all functions. Its conversion from
+`eLpNorm` needs finiteness or `MemLp`. Mixed norms use nested `Lp` spaces in a
+fixed order. The library does not exchange that order without a theorem.
 
-## Limits and diagnostics
+The elliptic wrapper uses supplied energy and Sobolev estimates. The fixed-point
+wrapper checks the ball and contraction conditions, then applies mathlib's
+Banach theorem. It states uniqueness on that ball.
 
-The LP configuration bounds observations, dimension, rows, and variables; other
-frontends bound term collection and specialization. Lean's heartbeat limit also
-applies. Failure can mean missing hypotheses, unsupported syntax, exhausted
-resources, or a false goal. This version does not return a feasible point as a
-countermodel. `norm_arith?` reports a successful search, and backend options allow
-direct LP regression checks independently of the fallback.
+## Replay and diagnostics
 
-Every successful result passes Lean's checker. Metaprogram tests also reject bad
-weights, malformed dimensions, and invalid strictness. Expected-failure examples
-guard explicit-fact selection, missing real homogeneity, and false analytic claims.
+The `?` forms report selected rules, decompositions, or parameters and return a
+proof that can be replayed without LP or rule search.
+Replay checks the data and its type in the current context. Changed premises or
+a changed target can invalidate it. Declared universe names and global theorem
+names are also part of the saved data. There is no fallback from replay to search.
+Hilbert replay gives explicit squares and uses only algebraic normalization.
 
-## Independent package and eventual mathlib contribution
+Failures distinguish unsupported inputs, missing proofs, and resource limits
+where the frontend can identify the cause. No failure is called a counterexample.
+The contradiction oracle does not return a feasible model.
 
-The package owns the `NormArith` namespace and imports pinned mathlib. It has no
-dependency-patching step. Consumers require this Git repository and import its
-public modules. A separate consumer project is part of release verification.
+## Package boundary
 
-Separating proof lemmas, theorem adapters, search, and frontend code makes a later
-mathlib contribution easier to review. It still requires discussion, dependency
-trimming, API and naming review, and tests against the then-current mathlib.
-No mathlib port or upstream patch is performed on this branch.
-
-## Keeping the layout simple
-
-Reusable implementation belongs in `NormArith/`, checked examples and failures
-in `NormArithTest/`, real-source pairs in `Benchmarks/`, and explanations here.
-Every new snippet needs provenance in the manifest. Synthetic stress tests must
-be labeled separately from mathlib-derived results. Update measured claims only
-after their checks run.
-
-Generated papers, duplicated census archives, machine-specific paths, and
-transient build output are excluded from the working tree. Earlier evidence is
-linked from [history](history.md).
+The package owns the `NormArith` namespace and uses pinned mathlib without
+patches. Tests, paired benchmarks, and a separate Git consumer check its public
+imports. A future mathlib contribution needs a separate API and dependency review.

@@ -99,7 +99,7 @@ were complete. The other cases are development examples.
 ```sh
 python3 scripts/benchmark_snippets.py --manifest Benchmarks/analytic.json --check
 python3 scripts/benchmark_snippets.py --manifest Benchmarks/analytic.json \
-  --pairs 3 --warmups 1 --output Benchmarks/analytic_results.json
+  --pairs 3 --warmups 1 --output Benchmarks/analytic-results.json
 ```
 
 These are per-use proof savings. The reusable rule implementation is additional

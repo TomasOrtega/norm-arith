@@ -1,9 +1,9 @@
 # Mathematics of the compact LP core
 
 This page explains the reduction behind the code. The certificate lemmas and
-applications are checked in Lean. The full semantic completeness argument below
-is a mathematical explanation, not a machine-checked completeness theorem for
-the bounded tactic.
+finite realization theorem are checked in Lean. See
+[Realization.lean](../NormArith/Realization.lean). This semantic theorem does not
+claim that the bounded tactic always finds a proof.
 
 ## Finite observations
 
@@ -122,10 +122,10 @@ even when a certificate exists.
 | A complex space with real rational combinations | Same argument when the necessary real-space instance is available |
 | Arbitrary complex coefficients | Outside this rational LP claim |
 | Additive groups without real homogeneity | Only certificates justified by group lemmas are allowed |
-| Several explicit seminorms | A separate-block mathematical realization exists; current frontend uses structural rules |
+| Several explicit seminorms | Separate blocks share the exact LP backend and a formal realization theorem |
 | Several genuine norms on a shared vector space | Additional kernel compatibility is needed; no blanket exactness claim |
 | Products, variable powers, Sobolev/interpolation structure | Need additional proved analytic rules |
-| Hilbert-specific quadratic inequalities | Need quadratic information beyond the generic norm LP |
+| Hilbert-specific quadratic inequalities | Handled by the optional rational sum-of-squares checker |
 
 Several arbitrary seminorms can be realized on a direct sum, each seminorm
 inspecting its own coordinate block. Genuine norms cannot simply ignore the
@@ -147,8 +147,8 @@ FD\le\frac\nu2D^2+\frac{F^2}{2\nu},\qquad
 E+\frac\nu2D^2\le\frac{F^2}{2\nu}.
 $$
 
-`NormArith.energy_absorb` checks this. The longer-term task is to discover such
-theorem and parameter choices while proving every side condition.
+`NormArith.energy_absorb` checks this. Registered analytic rules and exact
+parameter choices provide these steps within the stated search limits.
 
 ## Sources
 
@@ -157,4 +157,4 @@ Pinned mathlib sources:
 [linarith frontend](https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Tactic/Linarith/Frontend.lean),
 [Hahn–Banach](https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Module/HahnBanach.lean).
 The [roadmap](roadmap.md) includes the wider literature, PDE examples, exponent
-planning, and proposed later certificate layers.
+planning, and further research questions.

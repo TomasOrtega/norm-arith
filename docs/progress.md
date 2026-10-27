@@ -1,79 +1,80 @@
 # Progress
 
-This page describes the implemented feature branch. The larger proposal lives in
-[roadmap.md](roadmap.md); a design in that document is not automatically an
-implemented feature.
+The roadmap milestone gates are implemented for the bounded fragments below. Each row
+lists the supported features and tests for its acceptance gate. The research
+questions at the end of the roadmap remain open questions.
 
-## Working and checked
+## Roadmap gates
 
-| Area | Current implementation | Evidence |
+| Gate | Implemented result | Main checks |
 | --- | --- | --- |
-| Independent package | Pinned mathlib dependency; no mathlib patches; core and optional analysis imports | `lakefile.toml`, public modules |
-| Rational norm arithmetic | Existing structural, short-search, metric, and finite-reference paths retained | Core, Expansion, Metric, Tactic tests |
-| Compact LP | Typed support blocks, exact sparse simplex, strict/equality branches, rational extraction, checked reconstruction | LP tests, including forced backend calls |
-| Backend controls | `norm_arith.useLP`, `norm_arith.forceLP`, `trace.norm_arith.lp` | LP tests and synthetic benchmark pairs |
-| Explicit seminorms | Triangle, reverse triangle, homogeneity, multiple seminorms, supplied comparison bounds | Seminorm tests |
-| Analytic frontend | Structural facts, linear/bilinear operator bounds, bilinear perturbations, scalar finishing | Analysis tests |
-| Analytic templates | Young, energy absorption, coupled bounds, elliptic scalar absorption, quadratic ball/contraction estimates | Analysis lemmas and direct tactic examples |
-| Function-space bridges | Finite `eLpNorm`/`lpNorm` conversion, raw-function triangle, bundled Hölder examples | Analysis tests with explicit membership/exponent assumptions |
-| Real-source benchmarks | 20 paired standalone mathlib snippets, provenance, matching statements, accounting | `Benchmarks/manifest.json` and both proof directories |
-| Isolated backend workload | Five synthetic reference-versus-LP pairs, separate from source savings | `Benchmarks/backends.json` |
-| Measurement infrastructure | Fresh outputs, warmups, alternating order, retained failures and samples | Python runner and accounting tests |
-| Documentation | Brief README plus mathematics, proofs, design, results, history, full roadmap | This directory |
+| M0: baseline | Original sources, reports, dependency pin, and reference backend are retained | Existing 20 mathlib pairs and five backend pairs |
+| M1: certificates and realization | Elementary seminorm certificates; finite sup-norm realization; zero values, dependent atoms, relations, and several families | `NormArithTest.Realization` |
+| M2: compact LP and replay | Exact encoding and extraction; checked identities; strict and equality goals; stored proof graphs with no search fallback | `LP`, `LPAgreement`, `Replay`, and original core tests |
+| M3: seminorms | Shared LP for ordinary norms and seminorms; separate families; local relations; supplied bridges; linear-map pullbacks, sums, and maxima | `NormArithTest.Seminorm` |
+| M4: finite function norms | Bundled `Lp`, real `lpNorm`, and finite `eLpNorm` bridges; membership and infinity endpoints | `Analysis` and `FunctionSpace` tests |
+| M5: analytic rules | Registered theorem search, operator and product bounds, Young, scalar energy, and coupled absorption | `Analysis` and `Rules` tests |
+| M6: exponents and elliptic estimate | Exact rational exponent and weight choices; L2/L6 product bound; scalar and vector-valued drift estimates with supplied energy and Sobolev bounds | `Parameters` and `FunctionSpace` tests |
+| M7: fixed points | Ball invariance, contraction, Banach existence, uniqueness on the ball, custom radii, zero radius, stability, and residual bounds | `NormArithTest.FixedPoint` |
+| M8: corpus extensions | Nested `Lp` Hölder and rational Hilbert sums of squares | Two held-out analytic pairs and `HilbertHeldOut` |
 
-The central build checks ten regression modules containing 146 `example`
-declarations, 55 `#guard` assertions, and 34 expected-failure checks. Those counts
-describe source constructs, not independent mathematical coverage percentages.
-The new analytic/seminorm modules contribute 29 examples, including five expected
-rejections. The LP module includes direct encoder/oracle tests and forced frontend
-tests so a successful fallback cannot hide a broken LP integration.
+The compact LP is compared with complete support enumeration on 25 small rational
+problems. Each problem also checks that a stronger, false bound is rejected.
+Forced backend tests prevent the short search from hiding an LP failure.
 
-## Verification snapshot (27 October 2026)
+## Public interfaces
 
-- `lake build --wfail NormArith NormArithTest` completed successfully.
-- All ten Python benchmark-accounting tests passed.
-- All 240 mathlib-snippet and 60 backend timing samples compiled successfully.
-- A separate temporary Lake project fetched the published Git package and
-  compiled all three README examples with the core and analytic imports.
-- The clean GitHub [CI run for the measured implementation](https://github.com/TomasOrtega/norm-arith/actions/runs/40534845298)
-  passed its build, regression, accounting, snippet, and README checks.
+- `norm_arith` and `seminorm_arith` prove rational-linear estimates.
+- `analytic_estimate` composes supplied facts and `@[analytic_rule]` theorems.
+- `choose_holder` and `choose_interpolation` find exact arithmetic witnesses.
+- `lp_interpolate` applies the finite interpolation theorem with the chosen weight.
+  `lp_interpolate?` reports that weight and offers checked replay.
+- `hilbert_arith` checks rational quadratic estimates in real inner-product spaces.
+- `norm_arith?` and `analytic_estimate?` report selected rules or decompositions and offer checked replay code. Set
+  `norm_arith.replayText true` to print the full code in a command-line run.
+- `hilbert_arith?` offers explicit squares and algebraic normalization.
 
-The measured Lean implementation is commit
-`0e35741a42c721537674a0a1c8bd9334f787c70d`. Subsequent report, documentation, and
-consumer-check changes do not alter those Lean sources. Raw reports retain
-the source hashes. CI also checks the synthetic backends and downstream Git
-consumer on future runs.
+A fact list selects the analytic premises for all later search. Pure scalar
+comparisons and the listed structural classes remain available. Custom classes
+that contain bounds must be selected through their proofs or bound projections.
+Without a list, the full local context is available.
 
-## Explicit limits
+## Scope
 
-The LP defaults bound observations to 48, vector atoms to 64, support rows to
-6000, and scalar/function variable slots to 4096. Lean's heartbeat limit also
-applies. These are implementation budgets, not mathematical restrictions on the
-semantic reduction. Search failure means unknown.
+The formal realization theorem is for real rational-coefficient observations.
+It does not prove completeness of the bounded tactic or provide a feasible-model
+solver. Real coefficient combinations in complex spaces work when Lean supplies
+the required real-space instances; no separate complex realization theorem is
+claimed.
 
-Explicit seminorm automation uses bounded structural facts; it is not yet an
-exact multiple-seminorm LP frontend. Analytic automation uses a fixed set of
-templates and scalar tactics. It does not discover the analytic hypotheses of
-a PDE theorem. The current quadratic templates establish estimates, not a
-fixed-point existence theorem. The full semantic realization argument is written
-out in Markdown; only certificate reconstruction and its applications are
-machine-checked here.
+The LP defaults allow 48 observations, 64 vector atoms, 6000 support rows, and
+4096 variable slots. Analytic search defaults to depth six and 128 rule attempts.
+Hilbert search allows 24 vector atoms. Lean's heartbeat budget also applies.
 
-## Next milestones
+The elliptic example takes the energy inequality and a valid Sobolev bridge as
+inputs. It proves the Hölder and absorption steps. It does not derive the energy
+identity from a PDE. The fixed-point result is local to its certified ball.
+Mixed norms keep their stated order. The Hilbert tactic handles rational
+quadratic forms, without a general semidefinite optimizer.
 
-| Priority | Work | Completion criterion |
-| --- | --- | --- |
-| 1 | Evaluate and tune LP scheduling | More source workloads; sparse and dense stress cases; measure proof reconstruction separately from search |
-| 2 | Shared norm/seminorm observation frontend | Exact seminorm blocks with common vector relations; expected-failure coverage for incompatible norm assumptions |
-| 3 | Analytic rule registration and search | Explicit side-condition obligations, bounded composition, reproducible proof explanations |
-| 4 | Hölder and interpolation exponent planning | Exact rational witness search; theorem-backed endpoint and membership checks |
-| 5 | Mixed-norm and integral adapters | Correct norm order, measurability and finiteness; genuine function-space benchmark examples |
-| 6 | Larger PDE estimate blocks | Formal analytic premises and checked elliptic/fixed-point applications, with measured surrounding proof costs |
-| 7 | Optional Hilbert quadratic certificates | Rational Gram/PSD certificates, checked independently of LP search |
-| 8 | Formal semantic completeness and countermodels | Lean realization theorem and verified model extraction; distinguish relaxation witnesses from genuine counterexamples |
-| Later | mathlib contribution | API/dependency review and agreement on upstream scope; no port is underway on this branch |
+Countermodel extraction, arbitrary complex coefficients, quasi-norm rule packs,
+nonlinear time selection, and an upstream mathlib contribution remain separate
+extensions. None is required by the completed bounded APIs above.
 
-The aim is fewer routine proof lines with predictable checking costs. A feature
-is promoted from the roadmap only after its actual API and examples compile.
-Runtime claims belong on the [results page](results.md), with the corresponding
-raw data and workload definition.
+## Verification
+
+The final code at `cd9083f` passed:
+
+- `lake build --wfail NormArith NormArithTest`.
+- All 17 Python runner tests.
+- All 20 original mathlib pairs and all five backend pairs.
+- All five analytic pairs, including all 40 timing samples.
+- Both cross-file replay captures and all 24 core timing samples.
+- All six README examples in a separate project using this commit as a local Git dependency.
+
+The repository has no `prek` configuration. The configured Lean check treats
+warnings as errors. Documentation links and `git diff --check` also passed.
+
+The [results page](results.md) records measured costs, helper source size, and
+limits. Earlier reports and failed trial runs remain available. The code was
+not tuned after the final held-out measurements.

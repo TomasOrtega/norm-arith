@@ -2,7 +2,7 @@
 
 **Design proposal for norm-arith**  
 **Date:** 27 October 2026  
-**Status:** Design reference. See [progress.md](progress.md) for implemented and tested capabilities, and [results.md](results.md) for measurements. The baseline described below is the pre-feature-branch implementation. Proposed syntax and later modules remain design sketches unless the progress page marks them complete.
+**Status:** Implemented for the bounded APIs recorded in [progress.md](progress.md). See [results.md](results.md) for measurements. This document keeps the original design and its open research questions. The baseline below is the pre-feature-branch implementation; proposed names are mapped to the actual public modules on the progress page.
 
 ## 1. Objective
 
