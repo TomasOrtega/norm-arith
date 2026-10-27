@@ -16,3 +16,5 @@ import NormArithTest.Hilbert
 import NormArithTest.HilbertHeldOut
 import NormArithTest.LPAgreement
 import NormArithTest.Replay
+import NormArithTest.Rules
+import NormArithTest.Uniform

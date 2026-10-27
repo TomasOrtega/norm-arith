@@ -12,7 +12,7 @@ variable {X : Type*} [NormedAddCommGroup X] [NormedSpace ℝ X] [CompleteSpace X
 example (B : X →L[ℝ] X →L[ℝ] X) (a : X) (A : ℝ)
     (hA : 0 ≤ A) (ha : ‖a‖ ≤ A) (hsmall : 8 * ‖B‖ * A ≤ 1) :
     ∃! u, ‖u‖ ≤ 2 * A ∧ a + B u u = u := by
-  exact quadratic_existsUnique_of_opNorm B a hA ha hsmall
+  analytic_estimate
 
 example (B : X →L[ℝ] X →L[ℝ] X) (a : X) (A K : ℝ)
     (hA : 0 ≤ A) (hK : 0 ≤ K)

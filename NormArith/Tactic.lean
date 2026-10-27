@@ -26,7 +26,7 @@ certificate. Functional blocks are enabled only for real normed spaces. The
 reference fallback enumerates independent supports among observed norm arguments.
 Its per-target defaults allow 10000 subsets and 10000 results; exhaustion is
 unknown. Every path uses the same checked vector identity and norm certificates,
-then mathlib's exact `linarith` backend. `norm_arith?` reports successful search.
+then mathlib's exact `linarith` backend. `norm_arith?` reports selected decompositions and offers checked replay.
 
 Integer certificates and bounded signed pairs also work in seminormed additive
 groups, with weaker guarantees. The upper-bound extension accepts opaque scalar
@@ -690,8 +690,8 @@ syntax (name := normArithExplainAuto) "norm_arith?" : tactic
 
 elab_rules : tactic
   | `(tactic| norm_arith [$hs,*]) => run (some hs.getElems) false
-  | `(tactic| norm_arith? [$hs,*]) => withReplay true (run (some hs.getElems) false)
+  | `(tactic| norm_arith? [$hs,*]) => withReplay true (run (some hs.getElems) true)
   | `(tactic| norm_arith) => run none false
-  | `(tactic| norm_arith?) => withReplay true (run none false)
+  | `(tactic| norm_arith?) => withReplay true (run none true)
 
 end NormArith

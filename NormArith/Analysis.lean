@@ -2,6 +2,8 @@ module
 
 public import NormArith.Tactic
 public import NormArith.Seminorm
+public import NormArith.Rules
+public meta import NormArith.Facts
 public import Mathlib.Analysis.Normed.Operator.Bilinear
 public import Mathlib.MeasureTheory.Function.LpSeminorm.LpNorm
 public import Mathlib.MeasureTheory.Function.Holder
@@ -12,21 +14,19 @@ public meta import Lean
 /-!
 # Checked analytic estimates
 
-`analytic_estimate` is a bounded, proof-producing frontend for norm and explicit
-seminorm estimates. It adds structural norm bounds and continuous-linear-map
-application bounds, recognizes differences of bilinear applications, and uses
-`norm_arith`, `linarith`, or `nlinarith` to finish the scalar problem.
-It also tries a small fixed collection of checked Young, energy-absorption,
-elliptic-estimate, and quadratic-perturbation templates. A template succeeds only
-when its premises are proved from the local context.
+`analytic_estimate` combines proved norm, seminorm, operator, and scalar bounds.
+It applies registered analytic theorems and checks every premise. Search has
+explicit depth and application limits.
 
-`analytic_estimate [facts]` adds proved analytic input to the local context. The
-facts may include operator estimates, Hölder inequalities, or Sobolev estimates.
-The tactic does not manufacture those analytic assumptions.
+`analytic_estimate [facts]` selects its analytic premises. Local scalar
+comparisons remain available. Membership, exponent, and domain assumptions must
+be supplied when a theorem needs them. The tactic does not invent these facts.
 
-This module also exposes checked Young/absorption and finite-`Lp` bridge lemmas.
-The arithmetic frontend is incomplete and bounded. Its nonlinear finishing step
-is not a claim that arbitrary analytic estimates reduce to linear programming.
+`analytic_estimate?` reports the checked estimate and the selected theorem names,
+then offers a proof that can be replayed without search.
+
+This module includes Young, absorption, and finite-`Lp` bridge lemmas. More
+function-space and fixed-point rules are available through optional imports.
 -/
 
 public section
@@ -209,6 +209,10 @@ theorem finite_lp_add (hf : MemLp f p μ) (hp : 1 ≤ p) :
 
 end LpAdapters
 
+attribute [analytic_rule] young_mul energy_absorb elliptic_absorb_from_energy
+  quadratic_ball_bound quadratic_contraction_bound eLpNorm_le_of_lpNorm_le
+  lpNorm_le_of_eLpNorm_le finite_lp_add
+
 end NormArith
 
 public meta section
@@ -281,42 +285,39 @@ private def constraints (inputs : Array Expr) : MetaM (Array Expr) := do
   let (_, state) ← (inputs.forM collect).run {}
   return state.facts
 
-/-- Try a fixed finite set of analytic templates. All generated premises must
-close with ordinary checked arithmetic or local assumptions. -/
-private def tryTemplates (explain : Bool) : TacticM Bool := do
-  for name in #[``NormArith.young_mul, ``NormArith.energy_absorb,
-      ``NormArith.elliptic_absorb_from_energy, ``NormArith.quadratic_ball_bound,
-      ``NormArith.quadratic_contraction_bound] do
-    let saved ← saveState
-    try
-      let rule := mkIdent name
-      evalTactic (← `(tactic| (apply $rule:term <;>
-        first | assumption | positivity | linarith | nlinarith)))
-      if (← getGoals).isEmpty then
-        if explain then logInfo m!"analytic_estimate applied checked template {name}"
-        return true
-      saved.restore
-    catch _ => saved.restore
-  return false
-
-private def run (hints : Array (TSyntax `term)) (explain : Bool) : TacticM Unit :=
-  focusAndDone <| withoutRecover do
-    SeminormSupport.addHints hints
+private def run (hints : Option (Array (TSyntax `term))) (explain : Bool) : TacticM Unit :=
+  withReplay explain <| focusAndDone <| withoutRecover do
+    let originalGoal ← getMainGoal
+    selectContext hints
     if (← getGoals).isEmpty then return
     let inputs ← SeminormSupport.contextInputs
     let facts ← withMainContext do
-      return (← constraints inputs) ++ (← SeminormSupport.constraints inputs)
+      return (← constraints inputs) ++ (← SeminormSupport.constraints inputs false)
     for proof in facts do
       if (← getGoals).isEmpty then return
       SeminormSupport.noteFact proof
-    if explain then logInfo m!"analytic_estimate added {facts.size} checked structural facts"
-    if ← tryTemplates explain then return
-    evalTactic (← `(tactic| first
-      | assumption
-      | positivity
-      | norm_arith
-      | linarith
-      | nlinarith))
+    applyAnalyticRules
+    if explain then
+      let proof ← instantiateMVars (mkMVar originalGoal)
+      let rules := analyticRules.getState (← getEnv) ++
+        #[``NormArith.linear_apply_bound, ``NormArith.bilinear_apply_bound,
+          ``NormArith.bilinear_sub_bound]
+      let used := rules.filter fun name => (proof.find? (·.isConstOf name)).isSome
+      originalGoal.withContext do
+        let target ← originalGoal.getType
+        let mut parameters : Array Name := #[]
+        let mut premises : Array Name := #[]
+        for decl in ← getLCtx do
+          if decl.isImplementationDetail then continue
+          let occurs := fun (e : Expr) => (e.find? (· == decl.toExpr)).isSome
+          if decl.type.isConstOf ``Real && occurs target then
+            parameters := parameters.push decl.userName
+          if (← isProp decl.type) && occurs proof then
+            premises := premises.push decl.userName
+        logInfo m!"Checked estimate: {target}"
+        unless parameters.isEmpty do logInfo m!"Scalar parameters: {parameters.toList}"
+        unless premises.isEmpty do logInfo m!"Premises used: {premises.toList}"
+      unless used.isEmpty do logInfo m!"Analytic theorems: {used.toList}"
 
 syntax (name := analyticEstimate) "analytic_estimate" : tactic
 syntax (name := analyticEstimateHints) "analytic_estimate" "[" term,* "]" : tactic
@@ -324,9 +325,9 @@ syntax (name := analyticEstimateExplain) "analytic_estimate?" : tactic
 syntax (name := analyticEstimateExplainHints) "analytic_estimate?" "[" term,* "]" : tactic
 
 elab_rules : tactic
-  | `(tactic| analytic_estimate) => run #[] false
-  | `(tactic| analytic_estimate [$hs,*]) => run hs.getElems false
-  | `(tactic| analytic_estimate?) => run #[] true
-  | `(tactic| analytic_estimate? [$hs,*]) => run hs.getElems true
+  | `(tactic| analytic_estimate) => run none false
+  | `(tactic| analytic_estimate [$hs,*]) => run (some hs.getElems) false
+  | `(tactic| analytic_estimate?) => run none true
+  | `(tactic| analytic_estimate? [$hs,*]) => run (some hs.getElems) true
 
 end NormArith.AnalyticSupport

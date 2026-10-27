@@ -94,15 +94,15 @@ variable {α E F G : Type*} [MeasurableSpace α]
 example (f g : α → E) (hf : MemLp f p μ) (hp : 1 ≤ p)
     (A B : ℝ) (hA : lpNorm f p μ ≤ A) (hB : lpNorm g p μ ≤ B) :
     lpNorm (f + g) p μ ≤ A + B := by
-  analytic_estimate [finite_lp_add (g := g) hf hp]
+  analytic_estimate [finite_lp_add (g := g) hf hp, hA, hB]
 
 example (f : α → E) (hf : MemLp f p μ) (A : ℝ)
     (hA : lpNorm f p μ ≤ A) : eLpNorm f p μ ≤ ENNReal.ofReal A := by
-  exact eLpNorm_le_of_lpNorm_le hf hA
+  analytic_estimate
 
 example (f : α → E) (A : ℝ≥0)
     (hA : eLpNorm f p μ ≤ (A : ℝ≥0∞)) : lpNorm f p μ ≤ (A : ℝ) := by
-  exact lpNorm_le_of_eLpNorm_le hA
+  analytic_estimate
 
 -- The finite conversion must not infer finiteness from the real-valued junk value.
 example (f : α → E) (h : lpNorm f p μ = 0) : True := by
@@ -126,3 +126,17 @@ example (B : E →L[ℝ] F →L[ℝ] G)
   analytic_estimate
 
 end Lp
+
+-- An explicit list must not use an omitted norm premise.
+example {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+    (x : E) (a : ℝ) (hidden : ‖x‖ ≤ a) : True := by
+  fail_if_success
+    have : ‖x‖ ≤ a := by analytic_estimate []
+  trivial
+
+-- A rule cannot use an omitted comparison through a quantified wrapper.
+example {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+    (T : E →L[ℝ] E) (x : E) (a : ℝ) (hidden : ∀ y, ‖T y‖ ≤ a) : True := by
+  fail_if_success
+    have : ‖T x‖ ≤ a := by analytic_estimate []
+  trivial

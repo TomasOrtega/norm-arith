@@ -177,6 +177,10 @@ theorem quadratic_zero_radius (B : X →L[𝕜] X →L[𝕜] X) :
   intro u hu
   exact norm_eq_zero.mp (le_antisymm hu.1 (norm_nonneg u))
 
+attribute [analytic_rule] quadratic_existsUnique_of_opNorm quadratic_zero_radius
+
+attribute [analytic_rule] quadratic_existsUnique_of_opNorm
+
 end Quadratic
 
 end NormArith
