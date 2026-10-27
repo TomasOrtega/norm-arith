@@ -2,6 +2,7 @@ module
 
 public meta import Lean.Meta.Tactic.TryThis
 public meta import Lean.Elab.Tactic.Basic
+public meta import Lean.Meta.Transform
 public meta import NormArith.ReplayData
 
 /-! Proof suggestions contain checked expression graphs. Replay does not run search. -/
@@ -16,14 +17,30 @@ namespace NormArith
 
 open Lean Meta Elab Tactic
 
+/-- Keep proofs independent of declarations made during tactic search. -/
+private partial def inlineAuxiliaryDeclarations (original : Environment) (proof : Expr)
+    (active : NameSet := {}) : CoreM Expr :=
+  Core.transform proof (pre := fun e => do
+    let .const name levels := e | return .continue
+    if original.contains name then return .done e
+    if active.contains name then
+      throwError "cannot replay cyclic generated declaration {name}"
+    let info ← getConstInfo name
+    let some value := info.value? (allowOpaque := true)
+      | throwError "cannot replay generated declaration {name}: no proof body is available"
+    return .done (← inlineAuxiliaryDeclarations original
+      (value.instantiateLevelParams info.levelParams levels) (active.insert name)))
+
 /-- Save the original goal so generated local facts stay inside the proof term. -/
 def withReplay (enabled : Bool) (action : TacticM Unit) : TacticM Unit := do
   if !enabled then return ← action
   let goal ← getMainGoal
   let reference ← getRef
   let saved ← saveState
+  let originalEnvironment ← getEnv
   action
   let proof ← instantiateMVars (mkMVar goal)
+  let proof ← inlineAuxiliaryDeclarations originalEnvironment proof
   let text ← goal.withContext <| Replay.encode proof
   let literal := Syntax.mkStrLit text
   let suggestion ← `(tactic| norm_arith_replay $literal:str)

@@ -1,7 +1,7 @@
 module
 
 import NormArith.Analysis
-import NormArith.Replay
+public meta import NormArith.Replay
 public meta import NormArith.ReplayData
 public meta import Lean
 
@@ -17,6 +17,16 @@ example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
 
 example (a b ε : ℝ) (hε : 0 < ε) : a * b ≤ ε * a ^ 2 + b ^ 2 / (4 * ε) := by
   analytic_estimate?
+
+-- LP reconstruction can create auxiliary theorems through `abel`.
+set_option maxHeartbeats 4000000 in
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E]
+    (x y u v : E) (F G A B : ℝ)
+    (hx : ‖x + y‖ ≤ F + ‖u‖ / 4)
+    (hu : ‖u + v‖ ≤ G + ‖x‖ / 2)
+    (hy : ‖y‖ ≤ A) (hv : ‖v‖ ≤ B) :
+    7 * ‖x‖ ≤ 8 * F + 8 * A + 2 * G + 2 * B := by
+  set_option norm_arith.forceLP true in norm_arith? [hx, hu, hy, hv]
 
 example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x y : E) :
     ‖x + y‖ ≤ ‖x‖ + ‖y‖ ∧ True := by
@@ -93,3 +103,30 @@ elab "check_replay_hygiene " value:term : tactic => withMainContext do
 example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x : E) :
     ‖(2 : ℝ) • x‖ = 2 * ‖x‖ := by
   check_replay_hygiene (by simpa using norm_smul (2 : ℝ) x)
+
+-- Nested helper theorems have their own universe parameter names.
+elab "check_replay_auxiliaries " value:term : tactic => withMainContext do
+  NormArith.withReplay true do
+    let value ← Term.elabTermAndSynthesize value none
+    let type ← inferType value
+    let level ← getLevel type
+    let inner ← mkFreshUserName `replayInner
+    let outer ← mkFreshUserName `replayOuter
+    let (helperType, helperProof) ← withLocalDeclD `α (.sort (.param `inner_u)) fun α =>
+      withLocalDeclD `x α fun x => do
+        return (← mkForallFVars #[α, x] (← mkEq x x),
+          ← mkLambdaFVars #[α, x] (← mkEqRefl x))
+    addDecl <| .thmDecl {
+      name := inner, levelParams := [`inner_u], type := helperType, value := helperProof }
+    addDecl <| .thmDecl {
+      name := outer, levelParams := [`outer_u]
+      type := helperType.instantiateLevelParams [`inner_u] [.param `outer_u]
+      value := mkConst inner [.param `outer_u] }
+    let proof := mkApp2 (mkConst outer [level]) type value
+    unless ← isDefEq (← inferType proof) (← getMainTarget) do
+      throwError "helper proof does not match the goal"
+    (← getMainGoal).assign proof
+    replaceMainGoal []
+
+example {α : Sort u} (x : α) : x = x := by
+  check_replay_auxiliaries x
