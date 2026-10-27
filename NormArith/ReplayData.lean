@@ -8,8 +8,9 @@ public meta import Lean.Data.Json
 # Exact proof graphs
 
 Replay data contains expressions, not tactic programs. Each graph edge points to
-an earlier node. Local facts use their names and occurrence numbers. The kernel
-checks the decoded proof. No arithmetic or analytic search is used.
+an earlier node. Local facts use names without macro scopes and occurrence
+numbers. The kernel checks the decoded proof. No arithmetic or analytic search
+is used.
 -/
 
 public meta section
@@ -79,12 +80,13 @@ private partial def encodeExpr (input : Expr) : StateT EncodeState MetaM Nat := 
     | .bvar i => pure <| Json.arr #[toJson (0 : Nat), toJson i]
     | .fvar id => do
       let decl ← liftM <| id.getDecl
+      let name := decl.userName.eraseMacroScopes
       let mut occurrence := 0
       let context ← liftM (getLCtx : MetaM LocalContext)
       for other in context do
         if other.fvarId == id then break
-        if other.userName == decl.userName then occurrence := occurrence + 1
-      pure <| Json.arr #[toJson (1 : Nat), encodeName decl.userName, toJson occurrence]
+        if other.userName.eraseMacroScopes == name then occurrence := occurrence + 1
+      pure <| Json.arr #[toJson (1 : Nat), encodeName name, toJson occurrence]
     | .sort u => pure <| Json.arr #[toJson (2 : Nat), encodeLevel u]
     | .const n us => pure <| Json.arr #[toJson (3 : Nat), encodeName n,
         Json.arr (us.toArray.map encodeLevel)]
@@ -128,7 +130,7 @@ private def reference (nodes : Array Expr) (j : Json) : MetaM Expr := do
 private def localReference (name : Name) (occurrence : Nat) : MetaM Expr := do
   let mut found := 0
   for decl in ← getLCtx do
-    if decl.userName != name then continue
+    if decl.userName.eraseMacroScopes != name then continue
     if found == occurrence then return decl.toExpr
     found := found + 1
   throwError "stale replay: local premise {name} is missing"

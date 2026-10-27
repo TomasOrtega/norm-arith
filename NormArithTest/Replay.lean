@@ -72,3 +72,24 @@ example (p : Prop) (h : p) : p ∧ p := by
 
 example (p q : Prop) (h : p ∧ q) : p := by
   check_replay_term h.1
+
+-- Module-local macro scopes change when a saved proof moves to another file.
+elab "check_replay_hygiene " value:term : tactic => withMainContext do
+  let proof ← Term.elabTermAndSynthesize value (some (← getMainTarget))
+  let context ← getLCtx
+  let rename (moduleName : Name) (decl : LocalDecl) : LocalDecl :=
+    let base := if decl.binderInfo.isInstImplicit then `inst else decl.userName.eraseMacroScopes
+    decl.setUserName (Lean.addMacroScope moduleName base (decl.index + 1))
+  let capture := context.modifyLocalDecls (rename `CaptureModule)
+  let replay := context.modifyLocalDecls (rename `ReplayModule)
+  let instances ← getLocalInstances
+  let encoded ← withLCtx capture instances <| NormArith.Replay.encode proof
+  let decoded ← withLCtx replay instances <| NormArith.Replay.decode encoded
+  unless ← isDefEq (← inferType decoded) (← getMainTarget) do
+    throwError "changing macro scopes changed the replay type"
+  (← getMainGoal).assign decoded
+  replaceMainGoal []
+
+example {E : Type*} [SeminormedAddCommGroup E] [NormedSpace ℝ E] (x : E) :
+    ‖(2 : ℝ) • x‖ = 2 * ‖x‖ := by
+  check_replay_hygiene (by simpa using norm_smul (2 : ℝ) x)
