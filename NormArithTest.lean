@@ -11,3 +11,4 @@ import NormArithTest.Metric
 import NormArithTest.Seminorm
 import NormArithTest.Analysis
 import NormArithTest.FixedPoint
+import NormArithTest.Realization
