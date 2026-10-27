@@ -7,26 +7,26 @@ the bounded tactic.
 
 ## Finite observations
 
-Fix atoms \(x_1,\ldots,x_d\) and observed rational combinations
+Fix atoms $x_1,\ldots,x_d$ and observed rational combinations
 
-\[
+$$
 v_i=\sum_{k=1}^{d}a_{ik}x_k,\qquad a_{ik}\in\mathbb Q,
 \quad i=1,\ldots,m.
-\]
+$$
 
-Let \(r_i\) denote the proposed value of \(\lVert v_i\rVert\). Scalar hypotheses
+Let $r_i$ denote the proposed value of $\lVert v_i\rVert$. Scalar hypotheses
 and the negated goal are affine comparisons in these variables and additional
-scalar atoms. The matrix \(A=(a_{ik})\) is fixed data; a product of unknowns is
+scalar atoms. The matrix $A=(a_{ik})$ is fixed data; a product of unknowns is
 not an LP coefficient.
 
-Introduce one functional row \(f_i\in\mathbb R^d\) for each observation:
+Introduce one functional row $f_i\in\mathbb R^d$ for each observation:
 
-\[
+$$
 r_i\ge0,\qquad f_i\cdot a_i=r_i,\qquad
 -r_j\le f_i\cdot a_j\le r_j\quad(1\le i,j\le m).
-\]
+$$
 
-This has \(m+md\) norm/function variables and \(O(m^2)\) support constraints.
+This has $m+md$ norm/function variables and $O(m^2)$ support constraints.
 Extra scalar atoms add variables. Different ambient spaces have separate blocks.
 
 ## Necessity and finite realization
@@ -39,20 +39,20 @@ checking uses only finite triangle and homogeneity proofs.
 
 Conversely, given feasible rows, put
 
-\[
+$$
 x_k=(f_{1k},\ldots,f_{mk})\in\ell_\infty^m.
-\]
+$$
 
-Coordinate \(i\) of \(v_j\) is \(f_i\cdot a_j\). Every coordinate is bounded
-in absolute value by \(r_j\), and coordinate \(j\) equals \(r_j\). Therefore
+Coordinate $i$ of $v_j$ is $f_i\cdot a_j$. Every coordinate is bounded
+in absolute value by $r_j$, and coordinate $j$ equals $r_j$. Therefore
 
-\[
+$$
 \lVert v_j\rVert_\infty=\max_i|f_i\cdot a_j|=r_j.
-\]
+$$
 
 The finite constraints characterize observable values when the normed space
 may vary. Rational feasible data yield a rational finite-dimensional realization.
-For a required vector relation \(e=0\), a zero-norm observation forces every
+For a required vector relation $e=0$, a zero-norm observation forces every
 functional to vanish on its coordinate vector, so the relation holds in this
 realization. The frontend derives such zero observations from Lean equalities.
 
@@ -60,46 +60,46 @@ realization. The frontend derives such zero observations from Lean equalities.
 
 The code uses one anchor and two support rows:
 
-\[
+$$
 r_i-f_i\cdot a_i\le0,\qquad
 f_i\cdot a_j-r_j\le0,\qquad
 -f_i\cdot a_j-r_j\le0.
-\]
+$$
 
-The support row with \(j=i\) supplies the opposite anchor, giving equality.
+The support row with $j=i$ supplies the opposite anchor, giving equality.
 Nonnegativity is included separately. Rational denominators are cleared by a
 positive common multiple; the extractor retains that scale factor.
 
 Mathlib's sparse simplex oracle returns nonnegative integer multipliers. The
 code rechecks exact coefficient cancellation and a positively weighted strict
-row. A valid extra row \(-1<0\) allows this convention to certify a positive
+row. A valid extra row $-1<0$ allows this convention to certify a positive
 constant contradiction arising entirely from weak input constraints.
 
-To prove \(L\le0\), negate with \(-L<0\). To prove \(L<0\), negate with
-\(-L\le0\). Equality needs both strict refutation branches. Strict and weak
+To prove $L\le0$, negate with $-L<0$. To prove $L<0$, negate with
+$-L\le0$. Equality needs both strict refutation branches. Strict and weak
 comparisons must remain distinct.
 
 ## Eliminate the auxiliary functionals
 
-For functional block \(i\), let its restored rational multipliers be
-\(\alpha_i\ge0\) on the anchor and \(\beta^+_{ij},\beta^-_{ij}\ge0\) on the
+For functional block $i$, let its restored rational multipliers be
+$\alpha_i\ge0$ on the anchor and $\beta^+_{ij},\beta^-_{ij}\ge0$ on the
 support rows. Functional-coordinate cancellation gives
 
-\[
+$$
 \alpha_i a_i=\sum_j(\beta^+_{ij}-\beta^-_{ij})a_j.
-\]
+$$
 
-For \(\alpha_i>0\), set
-\(c_{ij}=(\beta^+_{ij}-\beta^-_{ij})/\alpha_i\). Lean checks the vector identity
-\(v_i=\sum_j c_{ij}v_j\) and proves
+For $\alpha_i>0$, set
+$c_{ij}=(\beta^+_{ij}-\beta^-_{ij})/\alpha_i$. Lean checks the vector identity
+$v_i=\sum_j c_{ij}v_j$ and proves
 
-\[
+$$
 \lVert v_i\rVert\le\sum_j|c_{ij}|\lVert v_j\rVert
 \le\frac1{\alpha_i}\sum_j(\beta^+_{ij}+\beta^-_{ij})\lVert v_j\rVert.
-\]
+$$
 
 The first bound is at least as strong as the scalar contribution used by the LP,
-since \(|u-v|\le u+v\) for nonnegative \(u,v\). A block with \(\alpha_i=0\)
+since $|u-v|\le u+v$ for nonnegative $u,v$. A block with $\alpha_i=0$
 contributes only a consequence of norm nonnegativity; it is skipped without
 division. The final goal is proved from original Lean hypotheses and checked
 norm certificates. No LP support assumption becomes a new axiom.
@@ -140,12 +140,12 @@ Hölder and interpolation require their exponent and membership hypotheses.
 Young's inequality transforms a product into powers that fit an absorption
 budget. These are theorem applications, not consequences of making all norm
 values independent LP variables. For example, from
-\(E+\nu D^2\le FD\) and \(\nu>0\),
+$E+\nu D^2\le FD$ and $\nu>0$,
 
-\[
+$$
 FD\le\frac\nu2D^2+\frac{F^2}{2\nu},\qquad
 E+\frac\nu2D^2\le\frac{F^2}{2\nu}.
-\]
+$$
 
 `NormArith.energy_absorb` checks this. The longer-term task is to discover such
 theorem and parameter choices while proving every side condition.

@@ -28,6 +28,22 @@ The new analytic/seminorm modules contribute 29 examples, including five expecte
 rejections. The LP module includes direct encoder/oracle tests and forced frontend
 tests so a successful fallback cannot hide a broken LP integration.
 
+## Verification snapshot (27 October 2026)
+
+- `lake build --wfail NormArith NormArithTest` completed successfully.
+- All ten Python benchmark-accounting tests passed.
+- All 240 mathlib-snippet and 60 backend timing samples compiled successfully.
+- A separate temporary Lake project fetched the published Git package and
+  compiled all three README examples with the core and analytic imports.
+- The clean GitHub [CI run for the measured implementation](https://github.com/TomasOrtega/norm-arith/actions/runs/40534845298)
+  passed its build, regression, accounting, snippet, and README checks.
+
+The measured Lean implementation is commit
+`0e35741a42c721537674a0a1c8bd9334f787c70d`. Subsequent report, documentation, and
+consumer-check changes do not alter those Lean sources. Raw reports retain
+the source hashes. CI also checks the synthetic backends and downstream Git
+consumer on future runs.
+
 ## Explicit limits
 
 The LP defaults bound observations to 48, vector atoms to 64, support rows to

@@ -42,7 +42,7 @@ comments but include imports, declarations, statements, and supporting code.
 An extra `import NormArith` is charged in each standalone replacement. The runner
 checks matching statements, unique markers, and source-theorem reuse.
 
-Each timed sample starts a new `lake env lean --wfail` process and writes fresh
+Each timed sample starts a new `lake env lean -DwarningAsError=true` process and writes fresh
 `.olean` and `.ilean` files. Warmups precede recorded pairs, and the baseline/tactic
 order alternates. Times include process startup, imports, elaboration, tactic
 search, kernel checking, and output writing. They exclude dependency builds and
@@ -53,6 +53,24 @@ The suite measures the public tactic against original proofs. Easy examples
 may use structural or short search without reaching the LP. These measurements
 therefore do not isolate the LP's effect. Synthetic backend comparisons, when
 reported, have their own manifest, directories, and results.
+
+## Compare the backends
+
+The five synthetic cases use the same statements and heartbeat limits. The
+baseline sets `norm_arith.useLP` to false; the LP version sets
+`norm_arith.forceLP` to true. Shared preprocessing remains enabled. These goals
+exercise the backend, including four-, six-, and eight-source decompositions and
+a dense eight-source example.
+
+```sh
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json --check
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json \
+  --pairs 5 --warmups 1 --output Benchmarks/backend_results.json
+```
+
+See [backend_results.md](backend_results.md) for timings. These are synthetic
+algorithm comparisons, and their code-line counts are excluded from the mathlib
+source-savings headline.
 
 ## Add a case
 

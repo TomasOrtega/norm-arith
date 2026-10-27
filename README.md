@@ -80,6 +80,10 @@ mean **unknown**, not a counterexample. [Progress](docs/progress.md) distinguish
 working features from proposals; [results](docs/results.md) records measured
 proof-size and compilation costs, including slower cases.
 
+The current 20-snippet workload saves 56 net lines and takes 11.6% longer to
+compile in fresh processes. The five-case backend comparison shows no aggregate
+LP speedup. These are starting measurements for further development.
+
 ## Build, test, and measure
 
 With [elan](https://github.com/leanprover/elan) installed:
@@ -88,6 +92,7 @@ With [elan](https://github.com/leanprover/elan) installed:
 lake exe cache get
 lake build --wfail NormArith NormArithTest
 python3 -m unittest discover -s scripts
+python3 scripts/check_consumer.py
 python3 scripts/benchmark_snippets.py --check
 python3 scripts/benchmark_snippets.py --pairs 5 --warmups 1
 ```

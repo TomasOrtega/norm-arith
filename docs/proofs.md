@@ -26,15 +26,15 @@ The original context and these proved bounds must entail the original goal.
 
 `NormArith.young_mul` proves, for real `a`, `b` and positive `ε`,
 
-\[
+$$
 ab\le\varepsilon a^2+\frac{b^2}{4\varepsilon}.
-\]
+$$
 
-It starts from the nonnegative square \((2\varepsilon a-b)^2\), clears a
+It starts from the nonnegative square $(2\varepsilon a-b)^2$, clears a
 positive denominator, and uses checked polynomial arithmetic. No sign restriction
-on `a` or `b` is needed. `energy_absorb` applies it with \(\varepsilon=\nu/2\)
-to turn \(E+\nu A^2\le FA\) into
-\(E+(\nu/2)A^2\le F^2/(2\nu)\).
+on `a` or `b` is needed. `energy_absorb` applies it with $\varepsilon=\nu/2$
+to turn $E+\nu A^2\le FA$ into
+$E+(\nu/2)A^2\le F^2/(2\nu)$.
 
 `absorb` uses `0 ≤ A`, `θ ≤ q`, `q < 1` and `A ≤ B + θ*A` to conclude
 `A ≤ B/(1-q)`. The strict positivity of the denominator is part of the proof.
@@ -43,28 +43,28 @@ when the available coefficient is one.
 
 For coupled linear estimates,
 
-\[
+$$
 A\le F+\tfrac14B,\qquad B\le G+\tfrac12A,
-\]
+$$
 
 the checked conclusions are
-\(A\le8F/7+2G/7\) and \(B\le4F/7+8G/7\). This is scalar linear arithmetic;
+$A\le8F/7+2G/7$ and $B\le4F/7+8G/7$. This is scalar linear arithmetic;
 it does not need a nonlinear optimizer.
 
 ## Bilinear perturbation
 
 For a continuous bilinear map `B`, the code proves
 
-\[
+$$
 B(x,y)-B(x',y')=B(x-x',y)+B(x',y-y').
-\]
+$$
 
 Triangle inequality and the operator norm bound give
 
-\[
+$$
 \|B(x,y)-B(x',y')\|
 \le\|B\|\bigl(\|x-x'\|\|y\|+\|x'\|\|y-y'\|\bigr).
-\]
+$$
 
 The frontend recognizes this pattern. Tests instantiate it with mathlib's
 actual Hölder bilinear operator on bundled `Lp` spaces. The `HolderTriple` and
@@ -75,17 +75,17 @@ normed-space exponent assumptions remain explicit in the Lean statement.
 `elliptic_absorb` is a scalar theorem representing the last step of an energy
 argument. It assumes
 
-\[
+$$
 U\le SG,\quad SB\le\nu/2,\quad
 \nu G^2\le FU+BGU,
-\]
+$$
 
-with \(\nu>0\) and \(S,F,B,G\ge0\), and proves
+with $\nu>0$ and $S,F,B,G\ge0$, and proves
 
-\[
+$$
 G\le\frac{2SF}{\nu},\qquad
 U\le\frac{2S^2F}{\nu}.
-\]
+$$
 
 Monotonicity substitutes the Sobolev-type bound into both right-hand terms.
 The smallness inequality absorbs half the coercivity. The proof handles `G = 0`
@@ -98,19 +98,19 @@ and derivative norms in an actual PDE argument.
 
 ## Quadratic fixed-point estimates
 
-Let \(\Phi(u)=a+B(u,u)\), with \(\|a\|\le A\), \(A\ge0\), and
-\(8\|B\|A\le1\). The checked ball estimate shows
-\(\|u\|\le2A\Rightarrow\|\Phi(u)\|\le2A\). The checked contraction estimate
+Let $\Phi(u)=a+B(u,u)$, with $\|a\|\le A$, $A\ge0$, and
+$8\|B\|A\le1$. The checked ball estimate shows
+$\|u\|\le2A\Rightarrow\|\Phi(u)\|\le2A$. The checked contraction estimate
 shows, on this ball,
 
-\[
+$$
 \|\Phi(u)-\Phi(v)\|\le\tfrac12\|u-v\|.
-\]
+$$
 
 The radius `2*A` is a chosen template; the LP does not discover that nonlinear
 choice. A stability lemma turns
-\(\|u-v\|\le\|a-b\|+\tfrac12\|u-v\|\) into
-\(\|u-v\|\le2\|a-b\|\). These are estimate lemmas, not an existence or global
+$\|u-v\|\le\|a-b\|+\tfrac12\|u-v\|$ into
+$\|u-v\|\le2\|a-b\|$. These are estimate lemmas, not an existence or global
 uniqueness theorem. Applying Banach's fixed-point theorem on the complete closed
 ball, and proving its hypotheses at the function-space level, remains separate.
 

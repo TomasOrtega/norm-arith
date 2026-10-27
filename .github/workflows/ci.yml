@@ -28,5 +28,9 @@ jobs:
         run: python3 -m unittest discover -s scripts
       - name: Check both versions of every standalone snippet
         run: python3 scripts/benchmark_snippets.py --check
+      - name: Check both backends on synthetic cases
+        run: python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json --check
+      - name: Check downstream Git package imports
+        run: python3 scripts/check_consumer.py --revision "$GITHUB_SHA"
       - name: Enforce brief README
         run: python3 -c 'from pathlib import Path; n = len(Path("README.md").read_text().splitlines()); assert n <= 200, f"README has {n} lines (limit 200)"'
