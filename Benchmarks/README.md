@@ -87,3 +87,38 @@ source-savings headline.
 
 Synthetic tests belong in a separate workload. A short generic vector analogue
 is useful, but should never be called an unchanged formalization of a PDE theorem.
+
+## Analytic composition
+
+The five pairs in [analytic.json](analytic.json) compare manual composition with
+public tactics. Both variants can use the same checked primitive lemmas. Counts
+include imports, membership assumptions, and local exponent instances.
+Interpolation and mixed-norm exponents were held out until the generic rules
+were complete. The other cases are development examples.
+
+```sh
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/analytic.json --check
+python3 scripts/benchmark_snippets.py --manifest Benchmarks/analytic.json \
+  --pairs 3 --warmups 1 --output Benchmarks/analytic_results.json
+```
+
+These are per-use proof savings. The reusable rule implementation is additional
+source. Report its cost separately. These examples do not count as mathlib source
+replacements or as a complete PDE formalization.
+
+## Search, reconstruction, and replay
+
+```sh
+python3 scripts/profile_core.py --pairs 3 --warmups 1
+```
+
+The runner compares the reference backend, forced LP, and saved proof replay.
+It rotates order and starts a fresh Lean process for each sample. LP traces give
+oracle search and proof reconstruction time. Reconstruction includes the final
+scalar proof. Replay time includes decoding and checking; it is not isolated
+kernel time. Whole compilation includes imports and output writing.
+
+Reports also record proof graph bytes, graph nodes, output size, peak process
+memory when available, source hashes, and all failed samples. A changed-source
+run is rejected. Build first and pass `--no-build` when measuring an already
+checked version. Do not edit or build the same modules during a timing run.

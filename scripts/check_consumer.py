@@ -3,7 +3,7 @@
 
 The temporary consumer is removed afterwards. Dependency checkouts and builds
 are retained in this repository's .lake/packages cache, including norm-arith's
-separate Git checkout. The requested revision must be available from GitHub.
+separate Git checkout. The requested revision must be available in the selected Git repository.
 """
 
 from __future__ import annotations
@@ -41,6 +41,7 @@ def readme_examples() -> tuple[str, int]:
     count = sum(len(re.findall(r"^example\b", body, re.MULTILINE)) for body in bodies)
     if count == 0 or not {"import NormArith", "import NormArith.Analysis"} <= set(imports):
         raise ValueError("README must contain examples importing both package entry points")
+    imports.append("import NormArith.Realization")
     source = "module\n\n" + "\n".join(dict.fromkeys(imports)) + "\n\n"
     return source + "\n\n".join(bodies) + "\n", count
 
@@ -49,6 +50,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lake", default="lake", help="Lake executable (default: lake on PATH)")
     parser.add_argument("--revision", help="Git revision to fetch (default: current Git HEAD)")
+    parser.add_argument("--repository", default=REMOTE,
+                        help="Git URL or local repository path (default: the public GitHub repository)")
     args = parser.parse_args()
     revision = args.revision or subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
@@ -57,7 +60,7 @@ def main() -> None:
     source, count = readme_examples()
     packages = ROOT / ".lake" / "packages"
     packages.mkdir(parents=True, exist_ok=True)
-    print(f"Checking {count} README examples against {REMOTE} at {revision}", flush=True)
+    print(f"Checking {count} README examples against {args.repository} at {revision}", flush=True)
     with tempfile.TemporaryDirectory(prefix="norm-arith-consumer-") as temporary:
         consumer = Path(temporary)
         (consumer / "lean-toolchain").write_text(
@@ -68,14 +71,14 @@ def main() -> None:
             'defaultTargets = ["Consumer"]\n'
             f'packagesDir = {json.dumps(str(packages))}\n\n'
             '[[require]]\nname = "norm-arith"\n'
-            f'git = {json.dumps(REMOTE)}\nrev = {json.dumps(revision)}\n\n'
+            f'git = {json.dumps(args.repository)}\nrev = {json.dumps(revision)}\n\n'
             '[[lean_lib]]\nname = "Consumer"\n', encoding="utf-8")
         run([lake, "update"], consumer)
         manifest = json.loads((consumer / "lake-manifest.json").read_text(encoding="utf-8"))
         # Lake serializes a hyphenated Lean name with identifier quotation.
         matches = [p for p in manifest["packages"]
                    if p.get("name") in {"norm-arith", "«norm-arith»"}
-                   and p.get("type") == "git" and p.get("url") == REMOTE]
+                   and p.get("type") == "git" and p.get("url") == args.repository]
         if len(matches) != 1:
             raise RuntimeError("consumer did not resolve norm-arith as the requested Git package")
         package = matches[0]

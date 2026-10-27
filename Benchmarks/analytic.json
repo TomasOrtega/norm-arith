@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "workload": "analytic composition and parameter planning",
+  "description": "Five standalone pairs compare manual composition with public tactics using the same checked analytic primitives. These are new examples, not extracted mathlib proofs or full PDE formalizations. Shared library lemmas are available to both variants. All local setup, side-condition instances, and imports are included in line counts. Interpolation and Mixed were held out until their generic rules were complete; the other three are development examples. No rules were tuned on the held-out cases.",
+  "show_source_savings": true,
+  "mathlib_commit": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "cases": [
+    {
+      "id": "Interpolation",
+      "kind": "held-out composition",
+      "description": "L3/L12 to L6 interpolation. These exponents were chosen after the generic planner and interpolation rule were complete.",
+      "baseline": "Benchmarks/AnalyticBaseline/Interpolation.lean",
+      "tactic": "Benchmarks/Analytic/Interpolation.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "Product",
+      "kind": "development example",
+      "description": "Compose two finite L2/L6 interpolation bounds with L4 times L4 into L2. Membership is part of the statement.",
+      "baseline": "Benchmarks/AnalyticBaseline/Product.lean",
+      "tactic": "Benchmarks/Analytic/Product.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "Elliptic",
+      "kind": "development example",
+      "description": "Scalar drift function-space estimate from supplied energy and Sobolev bounds. This does not derive a PDE or prove the Sobolev theorem.",
+      "baseline": "Benchmarks/AnalyticBaseline/Elliptic.lean",
+      "tactic": "Benchmarks/Analytic/Elliptic.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "Mixed",
+      "kind": "held-out composition",
+      "description": "Nested L3(L4) times L6(L4) into L2(L2). These exponents were chosen after the generic mixed rule was complete. The norm order is fixed.",
+      "baseline": "Benchmarks/AnalyticBaseline/Mixed.lean",
+      "tactic": "Benchmarks/Analytic/Mixed.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "FixedPoint",
+      "kind": "development example",
+      "description": "Existence and uniqueness on the radius 2A ball. Both proofs use the shared closed-ball fixed-point interface; A=0 is allowed.",
+      "baseline": "Benchmarks/AnalyticBaseline/FixedPoint.lean",
+      "tactic": "Benchmarks/Analytic/FixedPoint.lean",
+      "forbidden_identifiers": []
+    }
+  ]
+}
