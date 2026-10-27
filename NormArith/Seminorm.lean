@@ -4,18 +4,20 @@ public import Mathlib.Analysis.Normed.Module.Seminorm.Basic
 public import Mathlib.Tactic.Linarith
 public import Mathlib.Tactic.NormNum
 public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.Module
 public meta import Lean
+public meta import NormArith.Facts
 
 /-!
 # Arithmetic with explicit seminorms
 
-`seminorm_arith` adds checked nonnegativity, triangle, reverse-triangle, and
-homogeneity facts for the explicit seminorm expressions occurring in the goal
-and local hypotheses. It then calls exact scalar arithmetic. Several different
-seminorms may occur in the same goal. They remain distinct scalar expressions.
+`seminorm_arith` first tries structural seminorm bounds and scalar arithmetic.
+Its fallback uses the same exact LP backend as `norm_arith`. Each real seminorm
+has a separate supporting-functional block. Local vector equalities are shared.
 
-`seminorm_arith [h₁, h₂]` adds the listed facts to the local context. Unlike the
-selective fact syntax of `norm_arith`, this syntax is additive.
+`seminorm_arith [h₁, h₂]` selects analytic premises. Local scalar comparisons
+remain available. A supplied universal comparison is specialized at observed
+vectors. Distinct seminorms are never identified without a checked equality.
 
 The frontend is deliberately bounded and incomplete. It does not synthesize
 embeddings between seminorms, and failure is not a mathematical counterexample.
@@ -59,9 +61,32 @@ theorem seminorm_sub_right_le (p : Seminorm 𝕜 E) (x y : E) :
   have h := seminorm_sub_le p x (x - y)
   simpa only [sub_sub_cancel, add_comm] using h
 
+theorem seminorm_sub_of_eq (p : Seminorm 𝕜 E) {x y : E} (h : x = y) :
+    p (x - y) = 0 := by simp [h]
+
+theorem seminorm_bound_zero (p : Seminorm 𝕜 E) : p 0 ≤ 0 := by simp
+
+theorem seminorm_bound_add (p : Seminorm 𝕜 E) {x y : E} {a b : ℝ}
+    (hx : p x ≤ a) (hy : p y ≤ b) : p (x + y) ≤ a + b :=
+  (seminorm_add_le p x y).trans (add_le_add hx hy)
+
+theorem seminorm_bound_smul (p : Seminorm 𝕜 E) (c : 𝕜) {x : E} {b : ℝ}
+    (hx : p x ≤ b) : p (c • x) ≤ ‖c‖ * b := by
+  rw [seminorm_smul_eq]
+  exact mul_le_mul_of_nonneg_left hx (norm_nonneg c)
+
+theorem seminorm_bound_of_eq (p : Seminorm 𝕜 E) {x y : E} {b : ℝ}
+    (hxy : x = y) (hy : p y ≤ b) : p x ≤ b := by simpa only [hxy] using hy
+
 end NormArith
 
 public meta section
+
+register_option seminorm_arith.forceLP : Bool := {
+  defValue := false
+  descr := "Require the compact LP backend for a seminorm estimate." }
+
+initialize Lean.registerTraceClass `seminorm_arith.lp
 
 namespace NormArith.SeminormSupport
 
@@ -150,21 +175,153 @@ def contextInputs : TacticM (Array Expr) := withMainContext do
       inputs := inputs.push decl.type
   return inputs
 
-private def run (hints : Array (TSyntax `term)) : TacticM Unit :=
+private partial def observations (input : Expr) : StateT (Array Expr) MetaM Unit := do
+  let e := (← liftM (zetaReduce input)).consumeMData
+  if (← liftM (application? e)).isSome then
+    unless (← get).contains e do modify (·.push e)
+    return
+  for arg in e.getAppArgs do observations arg
+
+private def allObservations : TacticM (Array Expr) := withMainContext do
+  return (← ((← contextInputs).forM observations).run #[]).2
+
+private def contextFacts : TacticM (Array Expr) := withMainContext do
+  let mut facts := #[]
+  for decl in ← getLCtx do
+    if !decl.isImplementationDetail && (← isProp decl.type) then
+      facts := facts.push decl.toExpr
+  return facts
+
+/-- Only established inputs are used to specialize a universal bridge. -/
+private def specializeBounds : TacticM Unit := withMainContext do
+  let inputs ← contextFacts
+  let terms ← allObservations
+  let mut seen : Array Expr := #[]
+  for h in inputs do
+    for term in terms do
+      let some (_, x) ← application? term | continue
+      let type ← whnf (← inferType h)
+      unless type.isForall do continue
+      unless ← isDefEq type.bindingDomain! (← inferType x) do continue
+      let proof := mkApp h x
+      let conclusion ← inferType proof
+      if conclusion.isForall || seen.contains conclusion then continue
+      seen := seen.push conclusion
+      noteFact proof
+
+private def addRelations : TacticM Unit := withMainContext do
+  let facts ← contextFacts
+  let terms ← allObservations
+  let mut families : Array Expr := #[]
+  for term in terms do
+    let some (p, _) ← withMainContext (application? term) | continue
+    unless families.contains p do families := families.push p
+  for h in facts do
+    for p in families do
+      let type := (← inferType h).consumeMData
+      unless type.isAppOf ``Eq do continue
+      let saved ← saveState
+      try
+        let proof ← mkAppM ``seminorm_sub_of_eq #[p, h]
+        unless proof.hasMVar do noteFact proof
+      catch _ => saved.restore
+
+private def scalarComparison (type : Expr) : MetaM Bool := do
+  unless type.isAppOf ``LE.le || type.isAppOf ``LT.lt || type.isAppOf ``Eq ||
+      type.isAppOf ``GE.ge || type.isAppOf ``GT.gt do return false
+  let some (a, _) := lastTwo? type | return false
+  return ← isDefEq (← inferType a) (mkConst ``Real)
+
+private def ratSyntax (q : Rat) : TacticM (TSyntax `term) := do
+  let magnitude : TSyntax `term := ⟨Syntax.mkNumLit (toString q.num.natAbs)⟩
+  let numerator ← if q.num < 0 then `(-$magnitude) else pure magnitude
+  let denominator : TSyntax `term := ⟨Syntax.mkNumLit (toString q.den)⟩
+  `((($numerator : ℝ) / ($denominator : ℝ)))
+
+private def addCertificate (terms : Array Expr) (proposal : LP.Proposal) : TacticM Unit :=
+  withMainContext <| Term.withoutErrToSorry do
+    let some (p, target) ← application? terms[proposal.target]! |
+      throwError "expected a seminorm observation"
+    let pSyntax ← Term.exprToSyntax p
+    let mut combination? : Option (TSyntax `term × TSyntax `term) := none
+    for i in [:terms.size] do
+      let c := proposal.coefficients[i]!
+      if c == 0 then continue
+      let some (sourceP, source) ← application? terms[i]! |
+        throwError "expected a seminorm source"
+      unless ← isDefEq p sourceP do throwError "certificate mixes seminorm families"
+      let sourceSyntax ← Term.exprToSyntax source
+      let coefficient ← ratSyntax c
+      let multiple ← `($coefficient • $sourceSyntax)
+      let bound ← `(seminorm_bound_smul $pSyntax $coefficient (le_refl ($pSyntax $sourceSyntax)))
+      combination? ← match combination? with
+        | none => pure (some (multiple, bound))
+        | some (v, h) => pure (some (← `($multiple + $v),
+            ← `(seminorm_bound_add $pSyntax $bound $h)))
+    let (combination, bound) ← match combination? with
+      | some pair => pure pair
+      | none => do
+        let space ← Term.exprToSyntax (← inferType target)
+        pure (← `((0 : $space)), ← `(seminorm_bound_zero $pSyntax))
+    let combinationExpr ← Term.elabTermAndSynthesize combination (some (← inferType target))
+    let identity ← Term.elabTermAndSynthesize (← `(by module))
+      (some (← mkEq target combinationExpr))
+    let boundProof ← Term.elabTermAndSynthesize bound none
+    noteFact (← mkAppM ``seminorm_bound_of_eq #[p, identity, boundProof])
+
+/-- Search data is checked again with seminorm lemmas and actual vector identities. -/
+private def compactLP : TacticM Unit := withMainContext do
+  let terms ← allObservations
+  if terms.isEmpty then throwError "no explicit seminorm observations"
+  let pairs : Array (Expr × Expr) ← terms.mapM fun term => do
+    let some pair ← application? term | throwError "expected a seminorm observation"
+    return pair
+  let mut groups := #[]
+  for (p, _) in pairs do
+    let mut group := #[]
+    let type ← inferType p
+    if type.getAppArgs[0]!.isConstOf ``Real then
+      for i in [:pairs.size] do
+        if ← isDefEq p pairs[i]!.1 then group := group.push i
+    groups := groups.push group
+  let vectorReification : StateT (Array Expr) MetaM (Array Reify.Form) :=
+    pairs.mapM fun pair => Reify.linearize pair.2
+  let (forms, atoms) ← vectorReification.run #[]
+  let columns := forms.map (Reify.dense atoms.size)
+  let facts ← (← contextFacts).filterM fun h => do scalarComparison (← inferType h)
+  let target ← getMainTarget
+  let reification : StateT (Array Expr) MetaM (Array LP.Row × LP.Row) := do
+    let rows ← facts.mapM fun h => do Reify.lpComparison (← liftM (inferType h))
+    return (rows, ← Reify.lpComparison target)
+  let ((rows, goal), _) ← reification.run terms
+  let mut proposals := #[]
+  for negated in Reify.lpNegations goal do
+    let result ← LP.propose columns groups (rows.push negated)
+    trace[seminorm_arith.lp] "{result.rowCount} rows; {result.proposals.size} checked decompositions"
+    proposals := proposals ++ result.proposals
+  for proposal in proposals do addCertificate terms proposal
+  evalTactic (← `(tactic| linarith))
+
+private def run (hints : Option (Array (TSyntax `term))) : TacticM Unit :=
   focusAndDone <| withoutRecover do
-    addHints hints
+    selectContext hints
     if (← getGoals).isEmpty then return
     let facts ← withMainContext <| constraints (← contextInputs)
     for proof in facts do
       if (← getGoals).isEmpty then return
       noteFact proof
-    evalTactic (← `(tactic| first | assumption | positivity | linarith | nlinarith))
+    specializeBounds
+    addRelations
+    unless seminorm_arith.forceLP.get (← getOptions) do
+      evalTactic (← `(tactic| try first | assumption | positivity | linarith | nlinarith))
+      if (← getGoals).isEmpty then return
+    compactLP
 
 syntax (name := seminormArith) "seminorm_arith" : tactic
 syntax (name := seminormArithHints) "seminorm_arith" "[" term,* "]" : tactic
 
 elab_rules : tactic
-  | `(tactic| seminorm_arith) => run #[]
-  | `(tactic| seminorm_arith [$hs,*]) => run hs.getElems
+  | `(tactic| seminorm_arith) => run none
+  | `(tactic| seminorm_arith [$hs,*]) => run (some hs.getElems)
 
 end NormArith.SeminormSupport
