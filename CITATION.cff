@@ -1,18 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 type: software
-title: "norm-arith: A Lean tactic for norm estimates"
+title: "norm-arith: Certified automation for analytic estimates in Lean"
 authors:
   - family-names: Ortega
     given-names: Tomas
 repository-code: "https://github.com/TomasOrtega/norm-arith"
 url: "https://github.com/TomasOrtega/norm-arith"
-version: "0.1.0"
+version: "0.2.0"
 license: Apache-2.0
 abstract: >-
-  A Lean tactic for norm estimates whose useful vector decomposition is hidden.
-  Search proposes rational coefficients; Lean checks the vector identity and
-  norm certificate before exact scalar arithmetic closes the goal.
+  An independent Lean package for norm arithmetic and analytic estimates.
+  Exact search proposes certificates checked by Lean. The project includes
+  standalone proof benchmarks, mathematical documentation, and an extensible
+  architecture for seminorms, operator estimates, and PDE estimate composition.
 keywords:
   - Lean
   - formal verification

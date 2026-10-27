@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "mathlib_commit": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "source_project_commit": "177a21dfd81ef0e9be9188f91e8a39bea44fe4e4",
+  "description": "Selected standalone mathlib-derived estimates. Exact theorem copies, extracted local blocks, and adaptations are classified separately. This is not a census or a whole-file benchmark.",
+  "imports": "Each pair imports the same original source module and Mathlib.Tactic. The tactic variant additionally imports NormArith. Importing the source module supplies earlier lemmas and structures; neither proof may apply its source theorem to close the example.",
+  "metrics": "Nonblank noncomment physical lines. Proof-body markers exclude the common example statement and := by opener. All local preparation is inside the measured proof body. Whole-file counts include the extra tactic import.",
+  "cases": [
+    {
+      "id": "LatticeInf",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "theorem": "norm_inf_sub_inf_le_add_norm",
+        "lines": [
+          97,
+          108
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Order/Lattice.lean#L97-L108"
+      },
+      "adaptations": "Original statement and proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "norm_inf_sub_inf_le_add_norm"
+      ]
+    },
+    {
+      "id": "LatticeSup",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Order/Lattice.lean",
+        "theorem": "norm_sup_sub_sup_le_add_norm",
+        "lines": [
+          110,
+          121
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Order/Lattice.lean#L110-L121"
+      },
+      "adaptations": "Original statement and proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "norm_sup_sub_sup_le_add_norm"
+      ]
+    },
+    {
+      "id": "BoundedRange",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Normed.lean",
+        "theorem": "BoundedContinuousFunction.dist_le_two_norm'",
+        "lines": [
+          74,
+          79
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/ContinuousMap/Bounded/Normed.lean#L74-L79"
+      },
+      "adaptations": "Original statement and calc proof. The term-mode calc is placed inside a by block.",
+      "forbidden_identifiers": [
+        "dist_le_two_norm'"
+      ]
+    },
+    {
+      "id": "ComplexLogHalf",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "theorem": "Complex.norm_log_one_add_half_le_self",
+        "lines": [
+          212,
+          226
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean#L212-L226"
+      },
+      "adaptations": "Original statement and baseline proof. Supporting earlier logarithm estimate retained; its source theorem is not applied.",
+      "forbidden_identifiers": [
+        "norm_log_one_add_half_le_self"
+      ]
+    },
+    {
+      "id": "ComplexExpLipschitz",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Exp.lean",
+        "theorem": "Complex.locally_lipschitz_exp",
+        "lines": [
+          49,
+          64
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Exp.lean#L49-L64"
+      },
+      "adaptations": "Original statement and baseline proof. Earlier exp_bound_sq is an analytic input, not the source theorem itself.",
+      "forbidden_identifiers": [
+        "locally_lipschitz_exp"
+      ]
+    },
+    {
+      "id": "IntegrableOfNormSub",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Function/L1Space/Integrable.lean",
+        "theorem": "MeasureTheory.integrable_of_norm_sub_le",
+        "lines": [
+          609,
+          618
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Function/L1Space/Integrable.lean#L609-L618"
+      },
+      "adaptations": "Original statement and proof. Term-mode haveI/final application placed in by with exact on the final application; haveI is changed to have to satisfy the current proof-irrelevance style linter.",
+      "forbidden_identifiers": [
+        "integrable_of_norm_sub_le"
+      ]
+    },
+    {
+      "id": "LProjectionMul",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Module/MStructure.lean",
+        "theorem": "IsLprojection.mul",
+        "lines": [
+          135,
+          150
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Module/MStructure.lean#L135-L150"
+      },
+      "adaptations": "Original statement and baseline proof, with surrounding section variables explicit. The algebraic projection proof remains in both versions.",
+      "forbidden_identifiers": [
+        "IsLprojection.mul"
+      ]
+    },
+    {
+      "id": "UniformSmallLeft",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "theorem": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "lines": [
+          61,
+          63
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Convex/Uniform.lean#L61-L63"
+      },
+      "adaptations": "Lifted the branch's two local norm bounds and radius to explicit parameters; retained the original proof. Unused uniform-convexity context is not needed for this estimate.",
+      "forbidden_identifiers": [
+        "exists_forall_closed_ball_dist_add_le_two_sub"
+      ]
+    },
+    {
+      "id": "UniformSmallRight",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "theorem": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "lines": [
+          64,
+          66
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Convex/Uniform.lean#L64-L66"
+      },
+      "adaptations": "Lifted the symmetric branch's norm bounds and radius to parameters; retained the original proof.",
+      "forbidden_identifiers": [
+        "exists_forall_closed_ball_dist_add_le_two_sub"
+      ]
+    },
+    {
+      "id": "UniformDifference",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "theorem": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "lines": [
+          86,
+          89
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Convex/Uniform.lean#L86-L89"
+      },
+      "adaptations": "Lifted four vectors to explicit parameters. The original generic helper and estimate proof are unchanged.",
+      "forbidden_identifiers": [
+        "exists_forall_closed_ball_dist_add_le_two_sub"
+      ]
+    },
+    {
+      "id": "UniformSum",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Convex/Uniform.lean",
+        "theorem": "exists_forall_closed_ball_dist_add_le_two_sub",
+        "lines": [
+          91,
+          94
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Convex/Uniform.lean#L91-L94"
+      },
+      "adaptations": "Lifted the local sum-perturbation step with its four vectors; retained the original proof.",
+      "forbidden_identifiers": [
+        "exists_forall_closed_ball_dist_add_le_two_sub"
+      ]
+    },
+    {
+      "id": "DerivativeLipschitz",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Basic.lean",
+        "theorem": "HasFDerivAt.le_of_lip'",
+        "lines": [
+          903,
+          906
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Calculus/FDeriv/Basic.lean#L903-L906"
+      },
+      "adaptations": "Extracted the final pointwise estimate after filter_upwards. Differentiability and local Lipschitz assumptions are represented by the exact local bounds hy and hyC that the original proof already derived.",
+      "forbidden_identifiers": [
+        "HasFDerivAt.le_of_lip'"
+      ]
+    },
+    {
+      "id": "DerivativeThreeStep",
+      "kind": "adapted estimate",
+      "source": {
+        "path": "Mathlib/Analysis/Calculus/FDeriv/Measurable.lean",
+        "theorem": "FDerivMeasurableAux.D_subset_differentiable_set (operator comparison M)",
+        "lines": [
+          259,
+          266
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Calculus/FDeriv/Measurable.lean#L259-L266"
+      },
+      "adaptations": "Kept the original estimate, coefficients, indices, and calc proof. Abstracted the continuous-linear-map values to a seminormed group and specialized the scalar c to real; J1-J3 are exactly the three preceding local bounds.",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "BanachApproximation",
+      "kind": "adapted estimate",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Operator/Banach.lean",
+        "theorem": "ContinuousLinearMap.exists_approx_preimage_norm_le",
+        "lines": [
+          127,
+          134
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Operator/Banach.lean#L127-L134"
+      },
+      "adaptations": "Specialized the original semilinear map to real linear and inlined local x := x₁-x₂; retained the original two approximation premises and calc argument.",
+      "forbidden_identifiers": [
+        "exists_approx_preimage_norm_le"
+      ]
+    },
+    {
+      "id": "DualSeparationHalf",
+      "kind": "adapted estimate",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean",
+        "theorem": "MeasureTheory.ae_eq_zero_of_forall_dual_of_isSeparable",
+        "lines": [
+          97,
+          100
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Function/AEEqOfIntegral.lean#L97-L100"
+      },
+      "adaptations": "Extracted the local estimate I. Replaced the subtype-valued x by its underlying E value; the norm, distance premise, and original proof remain unchanged.",
+      "forbidden_identifiers": [
+        "ae_eq_zero_of_forall_dual_of_isSeparable"
+      ]
+    },
+    {
+      "id": "JacobianBall",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Function/Jacobian.lean",
+        "theorem": "ApproximatesLinearOn.norm_fderiv_sub_le",
+        "lines": [
+          511,
+          515
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Function/Jacobian.lean#L511-L515"
+      },
+      "adaptations": "Lifted the exact norm_a block and its closed-ball premise. The original proof does not use finite dimensionality or other surrounding Jacobian assumptions.",
+      "forbidden_identifiers": [
+        "norm_fderiv_sub_le"
+      ]
+    },
+    {
+      "id": "LpApproximationSum",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Measure/SeparableMeasure.lean",
+        "theorem": "MeasureTheory.Lp.SecondCountableTopology",
+        "lines": [
+          524,
+          528
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Measure/SeparableMeasure.lean#L524-L528"
+      },
+      "adaptations": "Lifted the local closure-under-addition estimate, retaining bundled Lp, MemLp.toLp, and both local error bounds. The block does not use p<∞, separability, or the construction of bf and bg.",
+      "forbidden_identifiers": [
+        "Lp.SecondCountableTopology"
+      ]
+    },
+    {
+      "id": "BoundedLimit",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Topology/ContinuousMap/Bounded/Basic.lean",
+        "theorem": "BoundedContinuousFunction.instCompleteSpace",
+        "lines": [
+          322,
+          325
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/ContinuousMap/Bounded/Basic.lean#L322-L325"
+      },
+      "adaptations": "Lifted the exact boundedness block and its already established hC/fF_bdd facts. Kept bounded continuous functions; completeness and convergence are not used within this block.",
+      "forbidden_identifiers": [
+        "instCompleteSpace"
+      ]
+    },
+    {
+      "id": "PolishTriangle",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Polish.lean",
+        "theorem": "TopologicalSpace.Opens.CompleteCopy.instMetricSpace",
+        "lines": [
+          193,
+          198
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Polish.lean#L193-L198"
+      },
+      "adaptations": "Lifted the exact triangle component of the metric construction. Both proofs explicitly use component distances and never apply dist_triangle to CompleteCopy itself.",
+      "forbidden_identifiers": [
+        "instMetricSpace"
+      ]
+    },
+    {
+      "id": "ComplexLogBasic",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "theorem": "Complex.norm_log_one_add_le",
+        "lines": [
+          206,
+          209
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean#L206-L209"
+      },
+      "adaptations": "Original statement and baseline proof. The earlier Taylor-remainder bound is retained as the analytic input.",
+      "forbidden_identifiers": [
+        "norm_log_one_add_le"
+      ]
+    }
+  ]
+}
+

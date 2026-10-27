@@ -1,0 +1,32 @@
+name: Lean and standalone snippets
+
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+          sh /tmp/elan-init.sh -y --no-modify-path --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Fetch pinned mathlib cache
+        run: lake exe cache get
+      - name: Build public modules and regression proofs
+        run: lake build --wfail NormArith NormArithTest
+      - name: Check benchmark accounting
+        run: python3 -m unittest discover -s scripts
+      - name: Check both versions of every standalone snippet
+        run: python3 scripts/benchmark_snippets.py --check
+      - name: Enforce brief README
+        run: python3 -c 'from pathlib import Path; n = len(Path("README.md").read_text().splitlines()); assert n <= 200, f"README has {n} lines (limit 200)"'

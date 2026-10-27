@@ -1,4 +1,0 @@
-{
-  "source": "Python os.cpu_count()",
-  "logical_processors": 14
-}

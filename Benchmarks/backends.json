@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "workload": "synthetic backend comparison",
+  "description": "Same checked statements under the retained reference path and forced compact LP. These cases are separate from the mathlib extraction corpus; no source-line savings are claimed. All cases, including failures and timeouts, remain in the report.",
+  "show_source_savings": false,
+  "mathlib_commit": "2f3c7c8a8949b04a32f9303f59163acffb766996",
+  "cases": [
+    {
+      "id": "RationalChain4",
+      "kind": "synthetic",
+      "description": "A triangular rational identity requiring all 4 source norm terms; source support cannot be shortened.",
+      "baseline": "Benchmarks/BackendBaseline/RationalChain4.lean",
+      "tactic": "Benchmarks/BackendLP/RationalChain4.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "RationalChain6",
+      "kind": "synthetic",
+      "description": "A triangular rational identity requiring all 6 source norm terms; source support cannot be shortened.",
+      "baseline": "Benchmarks/BackendBaseline/RationalChain6.lean",
+      "tactic": "Benchmarks/BackendLP/RationalChain6.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "RationalChain8",
+      "kind": "synthetic",
+      "description": "A triangular rational identity requiring all 8 source norm terms; source support cannot be shortened.",
+      "baseline": "Benchmarks/BackendBaseline/RationalChain8.lean",
+      "tactic": "Benchmarks/BackendLP/RationalChain8.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "CoupledErrors",
+      "kind": "synthetic",
+      "description": "Two coupled bounds require separate reverse-triangle certificates before joint scalar absorption.",
+      "baseline": "Benchmarks/BackendBaseline/CoupledErrors.lean",
+      "tactic": "Benchmarks/BackendLP/CoupledErrors.lean",
+      "forbidden_identifiers": []
+    },
+    {
+      "id": "DenseEight",
+      "kind": "synthetic",
+      "description": "Dense Walsh-Hadamard coordinate observations; the target needs eight independent source terms.",
+      "baseline": "Benchmarks/BackendBaseline/DenseEight.lean",
+      "tactic": "Benchmarks/BackendLP/DenseEight.lean",
+      "forbidden_identifiers": []
+    }
+  ]
+}

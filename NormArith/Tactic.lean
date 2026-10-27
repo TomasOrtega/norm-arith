@@ -7,6 +7,7 @@ public import Mathlib.Tactic.NormNum
 public meta import Lean
 public meta import NormArith.Search
 public meta import NormArith.Metric
+public meta import NormArith.LP
 
 /-!
 # Checked norm arithmetic
@@ -17,8 +18,10 @@ handles rational vector combinations and affine scalar comparisons, including
 strict inequalities, equalities, and distances. Vector equalities supply checked
 zero-norm constraints.
 
-Structural bounds and a short decomposition search run first. The reference
-fallback enumerates independent supports among all observed norm arguments.
+Structural bounds and a short decomposition search run first. A compact exact
+LP then proposes only the norm decompositions used by its contradiction
+certificate. Functional blocks are enabled only for real normed spaces. The
+reference fallback enumerates independent supports among observed norm arguments.
 Its per-target defaults allow 10000 subsets and 10000 results; exhaustion is
 unknown. Every path uses the same checked vector identity and norm certificates,
 then mathlib's exact `linarith` backend. `norm_arith?` reports successful search.
@@ -36,6 +39,16 @@ This extension is separate from the normed-space core and its completeness claim
 -/
 
 public meta section
+
+register_option norm_arith.useLP : Bool := {
+  defValue := true
+  descr := "Enable compact LP search before reference norm-decomposition enumeration." }
+
+register_option norm_arith.forceLP : Bool := {
+  defValue := false
+  descr := "Require a compact LP certificate, bypassing cheap solvers and reference enumeration." }
+
+initialize Lean.registerTraceClass `norm_arith.lp
 
 namespace NormArith
 
@@ -511,6 +524,100 @@ private def addConstraint (sources : Array Source) (target : Expr)
   if (← getGoals).isEmpty then return ← mkConst' ``True.intro
   withMainContext <| Term.elabTermAndSynthesize name none
 
+/-- Reify affine scalar expressions for the untrusted LP search. The first
+atoms are the observed norms. Opaque scalar expressions remain separate atoms;
+all resulting consequences are checked again against the actual Lean terms. -/
+private partial def lpScalarForm (input : Expr) : StateT (Array Expr) MetaM Form := do
+  let e := (← liftM (zetaReduce input)).consumeMData
+  if let some q := scalar? e then return #[(0, q)]
+  if e.isAppOf ``Neg.neg then
+    return scale (-1) (← lpScalarForm e.getAppArgs.back!)
+  if let some (a, b) := lastTwo? e then
+    if e.isAppOf ``HAdd.hAdd then
+      return (← lpScalarForm a) ++ (← lpScalarForm b)
+    if e.isAppOf ``HSub.hSub then
+      return (← lpScalarForm a) ++ scale (-1) (← lpScalarForm b)
+    if e.isAppOf ``HMul.hMul then
+      if let some q := scalar? a then return scale q (← lpScalarForm b)
+      if let some q := scalar? b then return scale q (← lpScalarForm a)
+    if e.isAppOf ``HDiv.hDiv then
+      if let some q := scalar? b then
+        if q != 0 then return scale (1 / q) (← lpScalarForm a)
+  let atoms ← get
+  for i in [:atoms.size] do
+    if atoms[i]! == e || (← liftM (isDefEq atoms[i]! e)) then return #[(i + 1, 1)]
+  set (atoms.push e)
+  return #[(atoms.size + 1, 1)]
+
+private def lpComparison (input : Expr) : StateT (Array Expr) MetaM LP.Row := do
+  let reduced ← liftM (zetaReduce input)
+  -- Do not reduce `LE.le`/`LT.lt`: on concrete reals whnf unfolds the
+  -- comparison into its implementation instead of retaining the relation head.
+  let e := reduced.consumeMData
+  let some (a, b) := lastTwo? e | throwError "norm_arith LP: expected a scalar comparison"
+  let str ← if e.isAppOf ``Eq then pure Mathlib.Ineq.eq
+    else if e.isAppOf ``LT.lt || e.isAppOf ``GT.gt then pure Mathlib.Ineq.lt
+    else if e.isAppOf ``LE.le || e.isAppOf ``GE.ge then pure Mathlib.Ineq.le
+    else throwError "norm_arith LP: unsupported comparison"
+  let coefficients := (← lpScalarForm a) ++ scale (-1) (← lpScalarForm b)
+  let coefficients := if e.isAppOf ``GE.ge || e.isAppOf ``GT.gt then
+      scale (-1) coefficients else coefficients
+  return { str, coeffs := coefficients }
+
+/-- An equality conclusion has two refutation branches. They share all scalar
+atoms and their selected hypotheses, but their certificates are searched separately. -/
+private def lpNegations (row : LP.Row) : Array LP.Row :=
+  let opposite := row.coeffs.map fun (i, q) => (i, -q)
+  if row.str == .eq then
+    #[{ str := .lt, coeffs := row.coeffs }, { str := .lt, coeffs := opposite }]
+  else if row.str == .lt then #[{ str := .le, coeffs := opposite }]
+  else #[{ str := .lt, coeffs := opposite }]
+
+private def tryCompactLP (norms : Array Expr) (columns : Array (Array Rat))
+    (facts : Array Expr) (explain : Bool) : TacticM Bool := do
+  let saved ← saveState
+  try
+    let mut groups : Array (Array Nat) := #[]
+    for i in [:norms.size] do
+      let space ← inferType norms[i]!
+      let mut group := #[]
+      if ← hasRealSpace space then
+        for j in [:norms.size] do
+          if ← isDefEq space (← inferType norms[j]!) then group := group.push j
+      groups := groups.push group
+    if groups.all Array.isEmpty then return false
+    let normTerms ← norms.mapM fun v => mkAppM ``Norm.norm #[v]
+    let goal ← getMainTarget
+    let reification : StateT (Array Expr) MetaM (Array LP.Row × LP.Row) := do
+      let rows ← facts.mapM fun h => do lpComparison (← liftM (inferType h))
+      return (rows, ← lpComparison goal)
+    let ((rows, target), _) ← reification.run normTerms
+    let mut proposals : Array LP.Proposal := #[]
+    for negated in lpNegations target do
+      let result ← LP.propose columns groups (rows.push negated)
+      trace[norm_arith.lp] "LP rows: {result.rowCount}, variables: {result.variableCount}, proposals: {repr result.proposals}"
+      proposals := proposals ++ result.proposals
+    let mut certificates := facts
+    for proposal in proposals do
+      let group := groups[proposal.target]!
+      let sources ← group.mapM fun j => do
+        let n ← mkAppM ``Norm.norm #[norms[j]!]
+        return { vector := norms[j]!, proof := ← mkAppM ``le_refl #[n] : Source }
+      let proof ← addConstraint sources norms[proposal.target]!
+        (group.map fun j => proposal.coefficients[j]!)
+      if (← getGoals).isEmpty then return true
+      certificates := certificates.push proof
+    if ← tryLinear certificates then
+      if explain then
+        logInfo m!"norm_arith checked compact LP certificate: {proposals.size} norm decompositions"
+      return true
+    saved.restore
+    return false
+  catch e =>
+    trace[norm_arith.lp] "LP attempt failed: {e.toMessageData}"
+    saved.restore
+    return false
+
 private def tryUpperBound (sources : Array Source) (target : Expr)
     (comparisons : Array Expr) (explain : Bool) : TacticM Bool := do
   let reification : StateT (Array Expr) MetaM (Array Form × Form) := do
@@ -562,13 +669,14 @@ private def tryMetric (facts : Array Expr) (explain : Bool) : TacticM Bool := do
 
 private def run (hypotheses : Option (Array (TSyntax `term))) (explain : Bool) : TacticM Unit :=
   focusAndDone <| withoutRecover do
+    let forceLP := norm_arith.forceLP.get (← getOptions)
     let (initialFacts, fragment) ← withMainContext do
       let facts ← selectedFacts hypotheses
       let fragment ← goalFragment (← getMainTarget) facts
       if fragment == "outside_fragment" then
         throwError "norm_arith expects a real linear comparison with recognized norm or distance facts"
       pure (facts, fragment)
-    if fragment == "metric_extension" && (← tryMetric initialFacts explain) then return
+    if !forceLP && fragment == "metric_extension" && (← tryMetric initialFacts explain) then return
     evalTactic (← `(tactic| try simp only [dist_eq_norm]))
     if (← getGoals).isEmpty then return
     withMainContext do
@@ -600,10 +708,10 @@ private def run (hypotheses : Option (Array (TSyntax `term))) (explain : Bool) :
         pure result : StateT (Array Expr) MetaM (Array Expr)).run #[]).1
       comparisons := comparisons ++ orderFacts
       scalarFacts := scalarFacts ++ orderFacts
-      if ← tryLinear scalarFacts then return
+      if !forceLP && (← tryLinear scalarFacts) then return
       let sources ← upperSources comparisons
       let goal := (← getMainTarget).consumeMData
-      if goal.isAppOf ``LE.le then
+      if !forceLP && goal.isAppOf ``LE.le then
         if let some (a, _) := lastTwo? goal then
           if let some v := normArgument? a then
             let bound ← structuralBound v sources
@@ -635,7 +743,10 @@ private def run (hypotheses : Option (Array (TSyntax `term))) (explain : Bool) :
       let mut certificates := scalarFacts
       for v in norms do
         certificates := certificates.push (← mkAppM ``norm_nonneg #[v])
-      if ← tryLinear certificates then return
+      if !forceLP && (← tryLinear certificates) then return
+      if forceLP || norm_arith.useLP.get (← getOptions) then
+        if ← tryCompactLP norms columns certificates explain then return
+      if forceLP then throwError "norm_arith: compact LP search found no checked certificate"
       let mut exhausted := false
       let realCore ← isCoreGoal goal
       for i in [:norms.size] do

@@ -1,5 +1,0 @@
-{
-  "metric-bounded-closed-ball": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this.",
-  "metric-diameter-closed-ball": "NormArith imports this Mathlib module, so importing NormArith back into it creates a cycle; scratch metric-only import was too narrow to reveal this.",
-  "metric-contracting-tail": "combined_source_compile_failure: Mathlib/Topology/MetricSpace/Contracting.lean; source_sha256=078df008c514927dd5f581a458cf95f5d66823f5324173db816ddbd1bf4ebcc5; replacement_sha256=5b6cf87dbb05f5b79e356d35505e7f7c495ad1d894f4613a8da9e4d75a0f8845; selected ids rejected as one file-level set: metric-contracting-tail; command returned exit code 1; logs: /Users/to1717/Documents/GitHub/norm-arith/.lake/expansion-combined-verification-06/logs/Mathlib/Topology/MetricSpace/Contracting"
-}

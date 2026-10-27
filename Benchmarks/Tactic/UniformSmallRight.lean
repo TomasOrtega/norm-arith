@@ -1,0 +1,24 @@
+/-
+Copyright (c) 2022 Yaël Dillies. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Yaël Dillies
+-/
+/-
+Standalone extracted block from Mathlib/Analysis/Convex/Uniform.lean.
+Pinned source and adaptations: Benchmarks/manifest.json (UniformSmallRight).
+-/
+module
+
+import Mathlib.Analysis.Convex.Uniform
+import Mathlib.Tactic
+import NormArith
+
+variable {E : Type*} [SeminormedAddCommGroup E]
+
+-- BENCHMARK-STATEMENT
+example (x y : E) (δ' : ℝ) (hx : ‖x‖ ≤ 1) (hy' : ‖y‖ ≤ 1 - δ') :
+    ‖x + y‖ ≤ 2 - δ' := by
+  -- BENCHMARK-PROOF
+  norm_arith
+  -- BENCHMARK-END
+

@@ -1,8 +1,0 @@
-{
-  "argv": [
-    "/Users/to1717/.elan/bin/lean",
-    "--deps-json",
-    "/Users/to1717/Documents/GitHub/norm-arith/.lake/followup-analysis-hensel-02/sources/Mathlib/NumberTheory/Padics/Hensel.lean"
-  ],
-  "cwd": "/Users/to1717/Documents/GitHub/norm-arith"
-}

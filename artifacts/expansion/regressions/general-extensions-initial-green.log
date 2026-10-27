@@ -1,6 +1,0 @@
-ℹ [27246/27262] Replayed NormArithTest.Tactic
-info: NormArithTest/Tactic.lean:61:2: norm_arith checked decomposition coefficients: [1/2, 1/2]
-✔ [27256/27262] Built NormArithTest.Metric (1.3s)
-✔ [27258/27262] Built NormArithTest.Core (2.1s)
-✔ [27260/27262] Built NormArithTest (680ms)
-Build completed successfully (27262 jobs).

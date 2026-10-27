@@ -1,9 +1,0 @@
-NormArithTest/Metric.lean:7:59: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:9:27: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:11:54: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:12:59: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:13:46: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:14:37: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:15:39: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:19:2: error: norm_arith expects a real linear comparison with recognized norm or distance facts
-NormArithTest/Metric.lean:22:2: error: norm_arith expects a real linear comparison with recognized norm or distance facts
