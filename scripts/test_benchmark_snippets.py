@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from benchmark_snippets import code_lines, inspect_pair, snippet_parts, strip_comments, summarize, variant_order
+from benchmark_snippets import code_lines, inspect_pair, markdown_report, snippet_parts, strip_comments, summarize, variant_order
 
 
 class BenchmarkAccountingTests(unittest.TestCase):
@@ -98,6 +98,34 @@ class BenchmarkAccountingTests(unittest.TestCase):
         self.assertFalse(result["all_compilations_succeeded"])
         self.assertIsNone(result["ratio_of_median_totals"])
         self.assertEqual(result["net_code_lines_saved"], 1)
+
+    def test_report_savings_count_only_proof_bodies(self):
+        cases = [{"id": "A", "kind": "exact theorem"}]
+        metrics = {"A": {
+            "Baseline": {"code_lines": 8, "proof_lines": 3},
+            "Tactic": {"code_lines": 8, "proof_lines": 2},
+            "net_code_lines_saved": 0, "proof_lines_saved": 1,
+        }}
+        rows = [
+            {"phase": "measure", "pair": 0, "id": "A", "variant": variant,
+             "seconds": 1.0, "success": True}
+            for variant in ("Baseline", "Tactic")
+        ]
+        summary = summarize(cases, rows, metrics, 1)
+        summary["cases"][0]["tactic_link"] = "Tactic/A.lean"
+        report = markdown_report({
+            "created_at": "2026-10-28", "summary": summary,
+            "config": {"pairs": 1, "warmups": 0},
+            "workload": "test snippets", "description": "",
+            "manifest_link": "manifest.json", "result_filename": "results.json",
+            "show_source_savings": True,
+        })
+        self.assertIn("| Proof-body code lines | 3 | 2 | 1 |", report)
+        self.assertIn("| Proof lines saved |", report)
+        self.assertIn("| [A](Tactic/A.lean) | exact theorem | 3 → 2 | 1 |", report)
+        self.assertNotIn("Whole-snippet code lines", report)
+        self.assertNotIn("Net code saved", report)
+        self.assertIn("Imports are outside the proof-body counts", report)
 
 
 if __name__ == "__main__":

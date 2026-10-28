@@ -2,54 +2,30 @@
 
 ## Current mathlib corpus
 
-The corpus contains **65 paired snippets** from 49 mathlib modules: 48 complete
-theorem copies, 14 extracted blocks, and three adapted estimates. The latest
-24 additions contribute 20 complete theorems and four extracted blocks from
-24 previously unused source modules. Statements, baseline proofs, source spans,
-and attribution are recorded in [the manifest](../Benchmarks/manifest.json).
+The corpus contains **52 paired snippets** from 39 mathlib modules: 36 complete
+theorem copies, 13 extracted blocks, and three adapted estimates. Statements,
+baseline proofs, source spans, and attribution are recorded in
+[the manifest](../Benchmarks/manifest.json).
 
-New coverage includes asymptotics, Gaussian integrals, Weierstrass estimates,
-derivative slopes, multilinear composition, tensor products, completion,
-dominated convergence for series, characteristic functions, contractions,
-Gromov products, metric gluing, and the Kuratowski embedding.
+Proof bodies decrease from **365 to 245 lines**, saving **120 lines**. Of the
+52 pairs, 38 have shorter tactic proofs and 14 have equal proof-body line counts.
+Imports do not count toward savings; local preparation does. Thirteen pairs
+whose tactic proofs were longer have been removed from the previous 65-case
+corpus. The remaining Lean files are unchanged from that validated corpus.
 
-Proof bodies decrease from **460 to 360 lines**, and whole snippets from
-**923 to 888 lines**, including imports and preparation: 100 proof lines and
-35 net code lines saved. Longer tactic replacements remain in the corpus.
-All **130 files compile with warnings treated as errors**. This expansion was
-checked for correctness; the repeated timing reports below cover the earlier
-20-case and 41-case subsets, not the full 65-case corpus.
+Coverage includes asymptotics, Weierstrass estimates, multilinear composition,
+normed rings, affine spaces, characteristic functions, contractions, metric
+gluing, and the Kuratowski embedding. No aggregate timing result is reported for
+this filtered 52-case workload.
 
-## Measured 41-case expansion
+## Archived 41-case expansion
 
-This measured workload contains **41 paired snippets** from 25 source modules:
-28 complete theorem copies, 10 extracted local blocks, and three adapted
-estimates. The 21 additions include 20 complete theorems and one pointwise
-estimate for normed group homomorphisms. They retain the pinned source statements,
-baseline proofs, and attribution in
-[the frozen manifest](../Benchmarks/expanded-41.json).
-
-The new cases cover normed rings, affine spaces, bounded linear maps, convexity,
-circle maps, Gaussian cutoffs, logarithmic series and infinite products, metric
-chains and balls, and dominated finitely additive maps. Short source proofs and
-cases with longer tactic replacements are included.
-
-Across all 41 cases, proof bodies decrease from **235 to 143 lines** and whole
-snippets from **512 to 461 lines**, including the extra tactic import in each
-pair. These are 92 proof lines and 51 net code lines saved. The additions broaden
-coverage; their aggregate whole-snippet cost is five lines larger than their
-baselines.
-
-All **328 compilations passed**: one warmup and three measured passes of both
-variants. Median corpus totals are **106.918 s baseline** and **119.564 s tactic**,
-or 11.8% slower with the tactic. These descriptive measurements use the
-`fefd724` implementation and the expanded benchmark sources; recorded hashes
-match the files checked after the run.
-
-The expanded measurements are stored separately in
-[the report](../Benchmarks/expanded-results.md) and
-[raw samples](../Benchmarks/expanded-results.json). The original 20-case report
-and its measurements below are preserved.
+The earlier 41-case timing run included five pairs removed by the proof-length
+criterion. Its complete [report](https://github.com/TomasOrtega/norm-arith/blob/3c71795846c9d183a2dd1adc819ca53314088eb1/Benchmarks/expanded-results.md),
+[raw samples](https://github.com/TomasOrtega/norm-arith/blob/3c71795846c9d183a2dd1adc819ca53314088eb1/Benchmarks/expanded-results.json),
+and [manifest](https://github.com/TomasOrtega/norm-arith/blob/3c71795846c9d183a2dd1adc819ca53314088eb1/Benchmarks/expanded-41.json)
+remain in Git history. Those timings and the original 20-case measurements below
+describe their respective workloads, not the current filtered corpus.
 
 ## Roadmap implementation
 
@@ -134,17 +110,16 @@ The original measured implementation has two separate workloads:
   claim about mathlib.
 
 The source workload has **128 baseline proof-body lines and 52 replacement lines**:
-76 fewer lines, or 59.4%. Charging one extra tactic import in each standalone file
-leaves **56 net code lines saved**. Statements and all local preparation are
-included in whole-snippet accounting. The runner checks equality of the paired
-statements and rejects direct reuse of the theorem being replaced.
+76 fewer lines, or 59.4%. Imports are excluded from these savings; local
+preparation is included. The runner checks equality of the paired statements and
+rejects direct reuse of the theorem being replaced. Whole-file counts remain
+diagnostic metadata in the raw report.
 
 ## Measured source and compilation costs
 
 | Metric | Original proofs | Tactic proofs | Change |
 | --- | ---: | ---: | --- |
 | Proof-body code lines | 128 | 52 | 76 fewer (59.4%) |
-| Whole-snippet code lines | 266 | 210 | 56 fewer (21.1%) |
 | Median aggregate compilation time | 51.098 s | 57.040 s | Tactic takes 11.6% longer |
 
 The baseline/tactic time ratio is **0.896×**. Nineteen of twenty individual case
@@ -225,8 +200,8 @@ python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json \
 ```
 
 The snippet command measures the current mathlib corpus. To reproduce the
-41-case expansion, add `--manifest Benchmarks/expanded-41.json`. To select cases
-from other earlier reports, pass their identifiers with `--only`.
+archived 41-case expansion, use its historical checkout at `3c71795`. To select
+retained cases from earlier reports, pass their identifiers with `--only`.
 
 The original 20-case and backend reports measured implementation
 [`0e35741a42c721537674a0a1c8bd9334f787c70d`](https://github.com/TomasOrtega/norm-arith/commit/0e35741a42c721537674a0a1c8bd9334f787c70d),

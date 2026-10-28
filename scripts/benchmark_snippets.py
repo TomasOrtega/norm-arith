@@ -222,13 +222,13 @@ def markdown_report(report: dict) -> str:
     ]
     if report["show_source_savings"]:
         lines += [
-            "## Source size", "",
+            "## Proof size", "",
             "| Metric | Baseline | Tactic | Saved |", "| --- | ---: | ---: | ---: |",
             f"| Proof-body code lines | {result['baseline_proof_lines']} | {result['tactic_proof_lines']} | {result['proof_lines_saved']} |",
-            f"| Whole-snippet code lines | {result['baseline_code_lines']} | {result['tactic_code_lines']} | {result['net_code_lines_saved']} |", "",
-            "Counts exclude blank and comment-only lines. Proof bodies are delimited in every file. "
-            "Whole-snippet counts include imports, statements, and all preparation. "
-            "Imports and local preparation are counted in each file.", "",
+            "",
+            "Counts exclude blank and comment-only lines. Proof bodies are delimited in every file "
+            "and include local preparation. Imports are outside the proof-body counts and do not "
+            "affect reported savings. Whole-file counts remain diagnostic metadata in the raw JSON.", "",
         ]
     else:
         lines += ["The two variants run the same proof with different solver settings. "
@@ -249,7 +249,7 @@ def markdown_report(report: dict) -> str:
         "Times include process startup, imports, tactic execution, checking, and output writing. "
         "They exclude the separately recorded dependency-build/setup step. Background machine load is uncontrolled. "
         "These descriptive medians do not establish statistical significance.", "",
-        "| Snippet | Kind | Proof lines (old → new) | Net code saved | Baseline median (s) | Tactic median (s) | Ratio |",
+        "| Snippet | Kind | Proof lines (old → new) | Proof lines saved | Baseline median (s) | Tactic median (s) | Ratio |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
     ]
     for case in result["cases"]:
@@ -261,7 +261,7 @@ def markdown_report(report: dict) -> str:
         lines.append(
             f"| [{case['id']}]({case['tactic_link']}) | {case['kind']} | "
             f"{case['Baseline']['proof_lines']} → {case['Tactic']['proof_lines']} | "
-            f"{case['net_code_lines_saved']} | {old} | {new} | {ratio_text} |"
+            f"{case['proof_lines_saved']} | {old} | {new} | {ratio_text} |"
         )
     lines += ["", f"Raw samples, failures, source hashes, versions, and timing order are retained in "
               f"[{report['result_filename']}]({report['result_filename']}).", ""]

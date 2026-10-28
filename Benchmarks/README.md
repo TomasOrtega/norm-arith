@@ -17,13 +17,13 @@ literal local estimate blocks, and adapted estimates. Source authorship and
 Apache-2.0 attribution are retained. A proof may use its source module's lemmas,
 but may not solve the benchmark by invoking the theorem it is meant to replace.
 
-The mathlib corpus contains **65 pairs** from 49 source modules: 48 complete
-theorem copies, 14 extracted blocks, and three adapted estimates. The latest
-24 additions cover asymptotics, Gaussian and Weierstrass estimates, derivative
-slopes, multilinear composition, tensor products, completion, infinite series,
-characteristic functions, contractions, and metric constructions. The original
-20 cases and the first 21 additions remain included. Cases with longer tactic
-proofs are retained.
+The mathlib corpus contains **52 pairs** from 39 source modules: 36 complete
+theorem copies, 13 extracted blocks, and three adapted estimates. In 38 pairs the
+tactic proof is shorter; the other 14 have equal proof-body line counts. Imports
+do not count toward savings. Thirteen pairs with longer tactic proofs were
+removed. Coverage includes asymptotics, Weierstrass estimates, multilinear
+composition, normed rings, affine spaces, characteristic functions, contractions,
+and metric constructions.
 
 ## Run
 
@@ -37,22 +37,20 @@ python3 scripts/benchmark_snippets.py --pairs 3 --warmups 1 \
 
 Use `--only` with case identifiers for a subset, `--timeout` for each Lean
 invocation, `--lake` for an explicit Lake executable, and `--output` to keep a
-separate result. The measured 41-case expansion is recorded in
-[`expanded-results.md`](expanded-results.md), with raw samples in
-[`expanded-results.json`](expanded-results.json) and its frozen case definitions
-in [`expanded-41.json`](expanded-41.json). Add
-`--manifest Benchmarks/expanded-41.json` to repeat that workload. The command above
-keeps new timings in an ignored local directory and preserves the checked-in
-reports. The original 20-case reports are [`results.json`](results.json) and
+separate result. The command above keeps new timings in an ignored local
+directory and preserves the checked-in reports. The unfiltered 41-case run is
+archived in [Git history](https://github.com/TomasOrtega/norm-arith/tree/3c71795846c9d183a2dd1adc819ca53314088eb1/Benchmarks).
+It includes five subsequently removed pairs and does not measure the current
+corpus. The original 20-case reports are [`results.json`](results.json) and
 [`results.md`](results.md), which remain the runner's default output paths.
 Reports include all samples and failure outcomes.
 
 ## What is measured
 
-Proof-body counts use explicit markers. Whole-file counts exclude blanks and
-comments but include imports, declarations, statements, and supporting code.
-An extra `import NormArith` is charged in each standalone replacement. The runner
-checks matching statements, unique markers, and source-theorem reuse.
+Proof-body counts use explicit markers, exclude blanks and comments, and include
+all local preparation. Imports are outside those markers and do not affect
+reported savings. Raw JSON retains whole-file counts as diagnostic metadata.
+The runner checks matching statements, unique markers, and source-theorem reuse.
 
 Each timed sample starts a new `lake env lean -DwarningAsError=true` process and writes fresh
 `.olean` and `.ilean` files. Warmups precede recorded pairs, and the baseline/tactic
@@ -92,8 +90,9 @@ source-savings headline.
    mathematical hypothesis; describe abstractions or changed names.
 3. Copy the same statement into the tactic version and replace only the estimate
    proof. Include all setup and extra imports in that file.
-4. Add the manifest entry and forbidden source-theorem identifier. Run accounting
-   tests and compile both versions before recording timings.
+4. Keep the pair only if its tactic proof uses no more proof-body lines than the
+   baseline, excluding imports. Add the manifest entry and forbidden source-theorem
+   identifier. Run accounting tests and compile both versions before recording timings.
 5. Retain slower examples and failed runs. Explain exclusions before computing a
    summary; do not silently select only favorable results.
 

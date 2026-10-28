@@ -121,9 +121,9 @@ counterexample. General nonlinear parameter search, new PDE hypotheses, and
 arbitrary changes of mixed-norm order are outside the supported fragment.
 
 See [progress](docs/progress.md) for the roadmap gates and [results](docs/results.md)
-for measurements. The mathlib benchmark corpus contains 65 paired snippets,
-including 48 complete theorem statements. The results page distinguishes current
-source counts from the retained 20-case and 41-case timing reports.
+for measurements. The mathlib benchmark corpus contains 52 paired snippets,
+including 36 complete theorem statements. Every tactic proof is shorter or equal
+in proof-body line count; imports do not count toward savings.
 
 ## Build and check
 
