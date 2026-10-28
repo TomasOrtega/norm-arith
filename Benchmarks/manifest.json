@@ -343,7 +343,788 @@
       "forbidden_identifiers": [
         "norm_log_one_add_le"
       ]
+    },
+    {
+      "id": "RingSubMul",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Ring/Basic.lean",
+        "theorem": "norm_sub_mul_le",
+        "lines": [
+          451,
+          457
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Ring/Basic.lean#L451-L457"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit. The term-mode calc is placed inside a by block.",
+      "forbidden_identifiers": [
+        "norm_sub_mul_le"
+      ]
+    },
+    {
+      "id": "TorsorVSub",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/AddTorsor.lean",
+        "theorem": "dist_vsub_vsub_le",
+        "lines": [
+          161,
+          164
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/AddTorsor.lean#L161-L164"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_vsub_vsub_le"
+      ]
+    },
+    {
+      "id": "TorsorVAdd",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/AddTorsor.lean",
+        "theorem": "dist_vadd_vadd_le",
+        "lines": [
+          153,
+          155
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/AddTorsor.lean#L153-L155"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_vadd_vadd_le"
+      ]
+    },
+    {
+      "id": "BoundedLinearAdd",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Operator/BoundedLinearMaps.lean",
+        "theorem": "IsBoundedLinearMap.add",
+        "lines": [
+          140,
+          147
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Operator/BoundedLinearMaps.lean#L140-L147"
+      },
+      "adaptations": "Original statement and baseline proof. The term-mode destructuring and final application are placed inside a by block. The linearity construction remains in both versions.",
+      "forbidden_identifiers": [
+        "add"
+      ]
+    },
+    {
+      "id": "ConvexOnNorm",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Module/Convex.lean",
+        "theorem": "convexOn_norm",
+        "lines": [
+          43,
+          48
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Module/Convex.lean#L43-L48"
+      },
+      "adaptations": "Original statement and baseline proof. The term-mode constructor is placed inside a by block. Nonnegative scalar norm identities remain explicit analytic inputs in the tactic proof.",
+      "forbidden_identifiers": [
+        "convexOn_norm"
+      ]
+    },
+    {
+      "id": "NormedHomAdd",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/Hom.lean",
+        "theorem": "NormedAddGroupHom.add",
+        "lines": [
+          291,
+          296
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/Hom.lean#L291-L296"
+      },
+      "adaptations": "Lifted the pointwise estimate in the addition instance, retaining bundled normed group homomorphisms and the exact calc proof. The homomorphisms and input vector are explicit parameters.",
+      "forbidden_identifiers": [
+        "add"
+      ]
+    },
+    {
+      "id": "RingCommutator",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Ring/Basic.lean",
+        "theorem": "norm_commutator_units_sub_one_le",
+        "lines": [
+          472,
+          483
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Ring/Basic.lean#L472-L483"
+      },
+      "adaptations": "Original statement and baseline proof. The tactic version retains the multiplicative estimate and ring identities, replacing the central additive norm estimate. The term-mode calc is placed inside a by block.",
+      "forbidden_identifiers": [
+        "norm_commutator_units_sub_one_le"
+      ]
+    },
+    {
+      "id": "CircleMapBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
+        "theorem": "norm_circleMap_sub_le",
+        "lines": [
+          63,
+          66
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean#L63-L66"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "norm_circleMap_sub_le"
+      ]
+    },
+    {
+      "id": "CircleMapSeparation",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean",
+        "theorem": "exists_ball_forall_le_norm_circleMap_sub",
+        "lines": [
+          70,
+          82
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Complex/CircleMap.lean#L70-L82"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "exists_ball_forall_le_norm_circleMap_sub"
+      ]
+    },
+    {
+      "id": "GaussianCutoffDistance",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/MulExpNegMulSq.lean",
+        "theorem": "Real.dist_mulExpNegMulSq_le_two_mul_sqrt",
+        "lines": [
+          135,
+          139
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/MulExpNegMulSq.lean#L135-L139"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_mulExpNegMulSq_le_two_mul_sqrt"
+      ]
+    },
+    {
+      "id": "NormOneAddMultipliable",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
+        "theorem": "multipliable_norm_one_add_of_summable_norm",
+        "lines": [
+          131,
+          135
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Log/Summable.lean#L131-L135"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "multipliable_norm_one_add_of_summable_norm"
+      ]
+    },
+    {
+      "id": "LogNormSummable",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Log/Summable.lean",
+        "theorem": "Summable.summable_log_norm_one_add",
+        "lines": [
+          204,
+          212
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Log/Summable.lean#L204-L212"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "summable_log_norm_one_add"
+      ]
+    },
+    {
+      "id": "ComplexLogInverseBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+        "theorem": "Complex.norm_one_add_mul_inv_le",
+        "lines": [
+          117,
+          130
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean#L117-L130"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "norm_one_add_mul_inv_le"
+      ]
+    },
+    {
+      "id": "MetricTriangleFour",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "dist_triangle4",
+        "lines": [
+          221,
+          224
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L221-L224"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. Term-mode proof placed in a by block.",
+      "forbidden_identifiers": [
+        "dist_triangle4"
+      ]
+    },
+    {
+      "id": "MetricTriangleEight",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "dist_triangle8",
+        "lines": [
+          236,
+          242
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L236-L242"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_triangle8"
+      ]
+    },
+    {
+      "id": "MetricAbsDifference",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "abs_dist_sub_le",
+        "lines": [
+          246,
+          248
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L246-L248"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. Term-mode proof placed in a by block.",
+      "forbidden_identifiers": [
+        "abs_dist_sub_le"
+      ]
+    },
+    {
+      "id": "MetricClosedBallDisjoint",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "Metric.closedBall_disjoint_closedBall",
+        "lines": [
+          497,
+          500
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L497-L500"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. Term-mode proof placed in a by block.",
+      "forbidden_identifiers": [
+        "Metric.closedBall_disjoint_closedBall",
+        "closedBall_disjoint_closedBall"
+      ]
+    },
+    {
+      "id": "MetricBallExpansion",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "Metric.closedBall_subset_ball'",
+        "lines": [
+          559,
+          564
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L559-L564"
+      },
+      "adaptations": "Original statement and baseline calc proof, with the declaration renamed to example and section variables explicit. The source lambda is written using intro.",
+      "forbidden_identifiers": [
+        "Metric.closedBall_subset_ball'",
+        "closedBall_subset_ball'"
+      ]
+    },
+    {
+      "id": "MetricIntersectingBalls",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+        "theorem": "Metric.dist_lt_add_of_nonempty_closedBall_inter_ball",
+        "lines": [
+          573,
+          578
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Defs.lean#L573-L578"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. Term-mode proof placed in a by block.",
+      "forbidden_identifiers": [
+        "Metric.dist_lt_add_of_nonempty_closedBall_inter_ball",
+        "dist_lt_add_of_nonempty_closedBall_inter_ball"
+      ]
+    },
+    {
+      "id": "FinMeasAdditiveSum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "theorem": "MeasureTheory.DominatedFinMeasAdditive.add",
+        "lines": [
+          204,
+          208
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean#L204-L208"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "MeasureTheory.DominatedFinMeasAdditive.add"
+      ]
+    },
+    {
+      "id": "FinMeasAdditiveMeasureSum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean",
+        "theorem": "MeasureTheory.DominatedFinMeasAdditive.add_measure",
+        "lines": [
+          233,
+          246
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Integral/FinMeasAdditive.lean#L233-L246"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "MeasureTheory.DominatedFinMeasAdditive.add_measure"
+      ]
+    },
+    {
+      "id": "TensorProductDistance",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/InnerProductSpace/TensorProduct.lean",
+        "theorem": "TensorProduct.dist_tmul_le",
+        "lines": [
+          158,
+          160
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/InnerProductSpace/TensorProduct.lean#L158-L160"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_tmul_le"
+      ]
+    },
+    {
+      "id": "SameRayMaximum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Module/Extr.lean",
+        "theorem": "IsMaxFilter.norm_add_sameRay",
+        "lines": [
+          37,
+          39
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Module/Extr.lean#L37-L39"
+      },
+      "adaptations": "Original statement and baseline proof; the term-mode proof is placed in a by block. The same-ray norm identity is supplied to norm_arith.",
+      "forbidden_identifiers": [
+        "norm_add_sameRay"
+      ]
+    },
+    {
+      "id": "FinsetNormSum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/Basic.lean",
+        "theorem": "norm_sum_le",
+        "lines": [
+          799,
+          801
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/Basic.lean#L799-L801"
+      },
+      "adaptations": "Original statement and baseline proof; the term-mode proof is placed in a by block. Both proofs retain the finite-sum induction combinator; the tactic discharges its scalar base and norm-addition premises.",
+      "forbidden_identifiers": [
+        "norm_sum_le"
+      ]
+    },
+    {
+      "id": "RingMultiplicationDifference",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Ring/Lemmas.lean",
+        "theorem": "NonUnitalSeminormedRing.toContinuousMul",
+        "lines": [
+          163,
+          169
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Ring/Lemmas.lean#L163-L169"
+      },
+      "adaptations": "Lifted the pointwise multiplication estimate from the continuity instance, preserving both product arguments, the nonunital seminormed ring assumption, and the exact calc proof. The local universally quantified e becomes an explicit parameter.",
+      "forbidden_identifiers": [
+        "toContinuousMul"
+      ]
+    },
+    {
+      "id": "SquareZeroExtensionProduct",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Algebra/TrivSqZeroExt.lean",
+        "theorem": "TrivSqZeroExt.instL1SeminormedRing",
+        "lines": [
+          236,
+          245
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Algebra/TrivSqZeroExt.lean#L236-L245"
+      },
+      "adaptations": "Lifted the exact calc block after expanding the L1 norm in the square-zero extension ring instance. The two ring components and two module components are explicit parameters; both scalar actions and their boundedness/commutation instances are preserved. Unused auxiliary scalar-algebra assumptions are omitted.",
+      "forbidden_identifiers": [
+        "instL1SeminormedRing"
+      ]
+    },
+    {
+      "id": "CompletionKernelApproximation",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/HomCompletion.lean",
+        "theorem": "NormedAddGroupHom.ker_completion",
+        "lines": [
+          172,
+          177
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/HomCompletion.lean#L172-L177"
+      },
+      "adaptations": "Lifted the final approximation calc with its previously derived bounds. Retained the completion, bundled normed group homomorphism, and original vectors. Named the preceding anonymous operator bound hbound. Kernel membership and density hypotheses are not needed inside this estimate.",
+      "forbidden_identifiers": [
+        "ker_completion"
+      ]
+    },
+    {
+      "id": "ControlledClosureInitial",
+      "kind": "extracted block",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/ControlledClosure.lean",
+        "theorem": "controlled_closure_of_complete",
+        "lines": [
+          85,
+          93
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/ControlledClosure.lean#L85-L93"
+      },
+      "adaptations": "Lifted the exact hnorm₀ proof. The sequences u, v, and b, the target vector, the positive bound constant, and the two local norm estimates are explicit parameters. The construction of the sequences and completeness are not used by this block.",
+      "forbidden_identifiers": [
+        "controlled_closure_of_complete"
+      ]
+    },
+    {
+      "id": "TanneryDominatedConvergence",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Normed/Group/Tannery.lean",
+        "theorem": "tendsto_tsum_of_dominated_convergence",
+        "lines": [
+          46,
+          91
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Normed/Group/Tannery.lean#L46-L91"
+      },
+      "adaptations": "Original complete statement and baseline proof. Alignment whitespace in the calc is normalized, so the source whitespace-linter override is unnecessary. The tactic version retains the analytic convergence and infinite-tail bounds, combining the final three errors with norm_arith.",
+      "forbidden_identifiers": [
+        "tendsto_tsum_of_dominated_convergence"
+      ]
+    },
+    {
+      "id": "AsymptoticSum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Asymptotics/Arith.lean",
+        "theorem": "Asymptotics.IsBigOWith.add",
+        "lines": [
+          156,
+          162
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Asymptotics/Arith.lean#L156-L162"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "Asymptotics.IsBigOWith.add",
+        "add"
+      ]
+    },
+    {
+      "id": "AsymptoticSubAbsorption",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Asymptotics/Lemmas.lean",
+        "theorem": "Asymptotics.IsBigOWith.right_le_sub_of_lt_one",
+        "lines": [
+          621,
+          628
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Asymptotics/Lemmas.lean#L621-L628"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit. The term-mode proof is placed inside a by block.",
+      "forbidden_identifiers": [
+        "Asymptotics.IsBigOWith.right_le_sub_of_lt_one",
+        "right_le_sub_of_lt_one"
+      ]
+    },
+    {
+      "id": "AsymptoticEquivalentSMul",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean",
+        "theorem": "Asymptotics.IsEquivalent.smul",
+        "lines": [
+          231,
+          263
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Asymptotics/AsymptoticEquivalent.lean#L231-L263"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "Asymptotics.IsEquivalent.smul",
+        "smul"
+      ]
+    },
+    {
+      "id": "PositiveLogNormAdd",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Log/PosLog.lean",
+        "theorem": "Real.posLog_norm_add_le",
+        "lines": [
+          266,
+          269
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Log/PosLog.lean#L266-L269"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "Real.posLog_norm_add_le",
+        "posLog_norm_add_le"
+      ]
+    },
+    {
+      "id": "GaussianVerticalIntegral",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Gaussian/FourierTransform.lean",
+        "theorem": "GaussianFourier.verticalIntegral_norm_le",
+        "lines": [
+          70,
+          105
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Gaussian/FourierTransform.lean#L70-L105"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "GaussianFourier.verticalIntegral_norm_le",
+        "verticalIntegral_norm_le"
+      ]
+    },
+    {
+      "id": "WeierstrassSeriesBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean",
+        "theorem": "PeriodPair.weierstrassP_bound",
+        "lines": [
+          186,
+          212
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/SpecialFunctions/Elliptic/Weierstrass.lean#L186-L212"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "PeriodPair.weierstrassP_bound",
+        "weierstrassP_bound"
+      ]
+    },
+    {
+      "id": "DerivativeSlopeNorm",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Calculus/Deriv/Slope.lean",
+        "theorem": "HasDerivWithinAt.limsup_slope_norm_le",
+        "lines": [
+          271,
+          275
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Calculus/Deriv/Slope.lean#L271-L275"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "HasDerivWithinAt.limsup_slope_norm_le",
+        "limsup_slope_norm_le"
+      ]
+    },
+    {
+      "id": "MultilinearCompositionDifference",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean",
+        "theorem": "OrderedFinpartition.norm_compAlongOrderedFinpartition_sub_compAlongOrderedFinpartition_le",
+        "lines": [
+          848,
+          861
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Analysis/Calculus/ContDiff/FaaDiBruno.lean#L848-L861"
+      },
+      "adaptations": "Original statement and baseline proof, with declaration renamed to example and section variables explicit. The term-mode proof is placed inside a by block.",
+      "forbidden_identifiers": [
+        "OrderedFinpartition.norm_compAlongOrderedFinpartition_sub_compAlongOrderedFinpartition_le",
+        "norm_compAlongOrderedFinpartition_sub_compAlongOrderedFinpartition_le"
+      ]
+    },
+    {
+      "id": "GromovProductBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/GromovProduct.lean",
+        "theorem": "Metric.gromovProduct_le_dist_left",
+        "lines": [
+          52,
+          53
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/GromovProduct.lean#L52-L53"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "Metric.gromovProduct_le_dist_left",
+        "gromovProduct_le_dist_left"
+      ]
+    },
+    {
+      "id": "ContractingResidualDistance",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Contracting.lean",
+        "theorem": "ContractingWith.dist_inequality",
+        "lines": [
+          249,
+          254
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Contracting.lean#L249-L254"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. The term-mode suffices proof is placed inside a by block.",
+      "forbidden_identifiers": [
+        "ContractingWith.dist_inequality",
+        "dist_inequality"
+      ]
+    },
+    {
+      "id": "MetricDiameterBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Bounded.lean",
+        "theorem": "Metric.diam_le_of_subset_closedBall",
+        "lines": [
+          522,
+          528
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Bounded.lean#L522-L528"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit. The term-mode proof is placed in a by block.",
+      "forbidden_identifiers": [
+        "Metric.diam_le_of_subset_closedBall",
+        "diam_le_of_subset_closedBall"
+      ]
+    },
+    {
+      "id": "CauchySequenceBounded",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Cauchy.lean",
+        "theorem": "cauchySeq_bdd",
+        "lines": [
+          108,
+          118
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Cauchy.lean#L108-L118"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "cauchySeq_bdd"
+      ]
+    },
+    {
+      "id": "MetricPolygonSum",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Pseudo/Basic.lean",
+        "theorem": "dist_le_Ico_sum_dist",
+        "lines": [
+          31,
+          40
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Pseudo/Basic.lean#L31-L40"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "dist_le_Ico_sum_dist"
+      ]
+    },
+    {
+      "id": "ProbabilityCharFunBound",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/MeasureTheory/Measure/CharacteristicFunction/Basic.lean",
+        "theorem": "MeasureTheory.norm_one_sub_charFun_le_two",
+        "lines": [
+          180,
+          184
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/MeasureTheory/Measure/CharacteristicFunction/Basic.lean#L180-L184"
+      },
+      "adaptations": "Original statement and baseline calc proof, with the declaration renamed to example and section variables explicit. The term-mode proof is placed in a by block.",
+      "forbidden_identifiers": [
+        "MeasureTheory.norm_one_sub_charFun_le_two",
+        "norm_one_sub_charFun_le_two"
+      ]
+    },
+    {
+      "id": "MetricGluingTriangle",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Gluing.lean",
+        "theorem": "Metric.glueDist_triangle_inl_inr_inl",
+        "lines": [
+          125,
+          134
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Gluing.lean#L125-L134"
+      },
+      "adaptations": "Original private theorem statement and baseline proof, with the declaration renamed to example and section variables explicit. The glueDist definition is public; neither variant uses the private source theorem.",
+      "forbidden_identifiers": [
+        "Metric.glueDist_triangle_inl_inr_inl",
+        "glueDist_triangle_inl_inr_inl"
+      ]
+    },
+    {
+      "id": "KuratowskiContraction",
+      "kind": "exact theorem",
+      "source": {
+        "path": "Mathlib/Topology/MetricSpace/Kuratowski.lean",
+        "theorem": "KuratowskiEmbedding.embeddingOfSubset_dist_le",
+        "lines": [
+          51,
+          57
+        ],
+        "url": "https://github.com/leanprover-community/mathlib4/blob/2f3c7c8a8949b04a32f9303f59163acffb766996/Mathlib/Topology/MetricSpace/Kuratowski.lean#L51-L57"
+      },
+      "adaptations": "Original statement and baseline proof, with the declaration renamed to example and section variables explicit.",
+      "forbidden_identifiers": [
+        "KuratowskiEmbedding.embeddingOfSubset_dist_le",
+        "embeddingOfSubset_dist_le"
+      ]
     }
   ]
 }
-

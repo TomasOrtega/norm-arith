@@ -121,9 +121,9 @@ counterexample. General nonlinear parameter search, new PDE hypotheses, and
 arbitrary changes of mixed-norm order are outside the supported fragment.
 
 See [progress](docs/progress.md) for the roadmap gates and [results](docs/results.md)
-for measurements. The original 20-snippet measurements saved 56 net lines and
-compiled 11.6% more slowly. They describe the earlier measured commit, not a
-speed claim for all later features.
+for measurements. The mathlib benchmark corpus contains 65 paired snippets,
+including 48 complete theorem statements. The results page distinguishes current
+source counts from the retained 20-case and 41-case timing reports.
 
 ## Build and check
 

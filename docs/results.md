@@ -1,8 +1,59 @@
 # Results
 
+## Current mathlib corpus
+
+The corpus contains **65 paired snippets** from 49 mathlib modules: 48 complete
+theorem copies, 14 extracted blocks, and three adapted estimates. The latest
+24 additions contribute 20 complete theorems and four extracted blocks from
+24 previously unused source modules. Statements, baseline proofs, source spans,
+and attribution are recorded in [the manifest](../Benchmarks/manifest.json).
+
+New coverage includes asymptotics, Gaussian integrals, Weierstrass estimates,
+derivative slopes, multilinear composition, tensor products, completion,
+dominated convergence for series, characteristic functions, contractions,
+Gromov products, metric gluing, and the Kuratowski embedding.
+
+Proof bodies decrease from **460 to 360 lines**, and whole snippets from
+**923 to 888 lines**, including imports and preparation: 100 proof lines and
+35 net code lines saved. Longer tactic replacements remain in the corpus.
+All **130 files compile with warnings treated as errors**. This expansion was
+checked for correctness; the repeated timing reports below cover the earlier
+20-case and 41-case subsets, not the full 65-case corpus.
+
+## Measured 41-case expansion
+
+This measured workload contains **41 paired snippets** from 25 source modules:
+28 complete theorem copies, 10 extracted local blocks, and three adapted
+estimates. The 21 additions include 20 complete theorems and one pointwise
+estimate for normed group homomorphisms. They retain the pinned source statements,
+baseline proofs, and attribution in
+[the frozen manifest](../Benchmarks/expanded-41.json).
+
+The new cases cover normed rings, affine spaces, bounded linear maps, convexity,
+circle maps, Gaussian cutoffs, logarithmic series and infinite products, metric
+chains and balls, and dominated finitely additive maps. Short source proofs and
+cases with longer tactic replacements are included.
+
+Across all 41 cases, proof bodies decrease from **235 to 143 lines** and whole
+snippets from **512 to 461 lines**, including the extra tactic import in each
+pair. These are 92 proof lines and 51 net code lines saved. The additions broaden
+coverage; their aggregate whole-snippet cost is five lines larger than their
+baselines.
+
+All **328 compilations passed**: one warmup and three measured passes of both
+variants. Median corpus totals are **106.918 s baseline** and **119.564 s tactic**,
+or 11.8% slower with the tactic. These descriptive measurements use the
+`fefd724` implementation and the expanded benchmark sources; recorded hashes
+match the files checked after the run.
+
+The expanded measurements are stored separately in
+[the report](../Benchmarks/expanded-results.md) and
+[raw samples](../Benchmarks/expanded-results.json). The original 20-case report
+and its measurements below are preserved.
+
 ## Roadmap implementation
 
-The new measurements use implementation `cd9083f` and the unchanged Lean and
+The roadmap measurements use implementation `cd9083f` and the unchanged Lean and
 mathlib pins. Source hashes are stored with every report. The timings below are
 small descriptive samples, not a general speed claim.
 
@@ -76,7 +127,7 @@ The original measured implementation has two separate workloads:
 - **20 mathlib-derived pairs** compare original standalone proof blocks with the
   public tactic. Eight are complete theorem copies, nine are extracted local
   blocks, and three are explicit adaptations. All are pinned and attributed in
-  [the manifest](../Benchmarks/manifest.json).
+  [the current, expanded manifest](../Benchmarks/manifest.json).
 - **Five synthetic backend pairs** compare the retained reference path with a
   forced LP call on identical statements. They are defined in
   [their own manifest](../Benchmarks/backends.json) and make no source-line-saving
@@ -132,8 +183,8 @@ samples: [mathlib snippets](../Benchmarks/results.md),
 [backend comparison](../Benchmarks/backend_results.md), and
 [raw backend data](../Benchmarks/backend_results.json).
 
-Each report uses five recorded pairs after one warmup pass. Each sample launches
-Lean afresh with new output files. Compilation order alternates. Times include
+These original reports use five recorded pairs after one warmup pass. Each sample
+launches Lean afresh with new output files. Compilation order alternates. Times include
 startup, imports, elaboration, tactic execution, checking, and writing outputs.
 Dependencies are already built. The package uses its ordinary default build,
 without requesting native precompilation of all mathlib.
@@ -167,12 +218,17 @@ are not combined with this branch's measurements.
 lake exe cache get
 lake build --wfail NormArith NormArithTest
 python3 -m unittest discover -s scripts
-python3 scripts/benchmark_snippets.py --pairs 5 --warmups 1
+python3 scripts/benchmark_snippets.py --pairs 3 --warmups 1 \
+  --output Benchmarks/results/local/current.json
 python3 scripts/benchmark_snippets.py --manifest Benchmarks/backends.json \
   --pairs 5 --warmups 1 --output Benchmarks/backend_results.json
 ```
 
-The implementation measured here is
+The snippet command measures the current mathlib corpus. To reproduce the
+41-case expansion, add `--manifest Benchmarks/expanded-41.json`. To select cases
+from other earlier reports, pass their identifiers with `--only`.
+
+The original 20-case and backend reports measured implementation
 [`0e35741a42c721537674a0a1c8bd9334f787c70d`](https://github.com/TomasOrtega/norm-arith/commit/0e35741a42c721537674a0a1c8bd9334f787c70d),
 with Lean 4.36.0-rc1 and the pinned mathlib revision. The stored source hashes
 identify that implementation. Later roadmap changes use separate reports and

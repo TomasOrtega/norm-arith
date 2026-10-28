@@ -17,9 +17,13 @@ literal local estimate blocks, and adapted estimates. Source authorship and
 Apache-2.0 attribution are retained. A proof may use its source module's lemmas,
 but may not solve the benchmark by invoking the theorem it is meant to replace.
 
-The current domains include norm lattices, boundedness, derivative estimates,
-complex logarithms and exponentials, dual separation, a bundled `Lp` estimate,
-integrability, L-projections, and uniform-convergence estimate blocks.
+The mathlib corpus contains **65 pairs** from 49 source modules: 48 complete
+theorem copies, 14 extracted blocks, and three adapted estimates. The latest
+24 additions cover asymptotics, Gaussian and Weierstrass estimates, derivative
+slopes, multilinear composition, tensor products, completion, infinite series,
+characteristic functions, contractions, and metric constructions. The original
+20 cases and the first 21 additions remain included. Cases with longer tactic
+proofs are retained.
 
 ## Run
 
@@ -27,13 +31,21 @@ From the repository root, after `lake build --wfail NormArith NormArithTest`:
 
 ```sh
 python3 scripts/benchmark_snippets.py --check
-python3 scripts/benchmark_snippets.py --pairs 5 --warmups 1
+python3 scripts/benchmark_snippets.py --pairs 3 --warmups 1 \
+  --output Benchmarks/results/local/current.json
 ```
 
 Use `--only` with case identifiers for a subset, `--timeout` for each Lean
 invocation, `--lake` for an explicit Lake executable, and `--output` to keep a
-separate result. The default outputs are [`results.json`](results.json) and
-[`results.md`](results.md). Reports include all samples and failure outcomes.
+separate result. The measured 41-case expansion is recorded in
+[`expanded-results.md`](expanded-results.md), with raw samples in
+[`expanded-results.json`](expanded-results.json) and its frozen case definitions
+in [`expanded-41.json`](expanded-41.json). Add
+`--manifest Benchmarks/expanded-41.json` to repeat that workload. The command above
+keeps new timings in an ignored local directory and preserves the checked-in
+reports. The original 20-case reports are [`results.json`](results.json) and
+[`results.md`](results.md), which remain the runner's default output paths.
+Reports include all samples and failure outcomes.
 
 ## What is measured
 
